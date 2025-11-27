@@ -1,0 +1,11 @@
+version = 1
+
+[[annotations]]
+path = [
+    "REUSE.toml",
+    "README.md",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "shadLauncher 4 Project Project"
+SPDX-License-Identifier = "GPL-2.0-or-later"
+
