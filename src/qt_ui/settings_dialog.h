@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: Copyright 2025 shadLauncher4 Project
+// SPDX-FileCopyrightText: Copyright 2025 shadLauncher 4 Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once

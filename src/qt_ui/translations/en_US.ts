@@ -4,6 +4,186 @@
 <!DOCTYPE TS>
 <TS version="2.1" sourcelanguage="en_US">
 <context>
+    <name>CryptoManagerDialog</name>
+    <message>
+        <source>Crypto Key Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter Trophy Key (hex)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy Key:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status: Not loaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter %1 (hex)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Exponent1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Exponent2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Public Exponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Coefficient</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Modulus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prime 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prime 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Private Exponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fake Keyset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RSA key components for fake signing.
+All fields must be valid hex strings with even length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Debug Rif Keyset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pkg Derived Key3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RSA key components for package decryption.
+All fields must be valid hex strings with even length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load All Keys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save All Keys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No key file found or failed to load.
+Please enter your keys and save them.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Validation Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please fix invalid hex values before saving.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Success</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Keys saved successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to save keys!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status: All fields empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status: Invalid hex values</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status: Incomplete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status: Valid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only JSON files are supported.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to open file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>JSON Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid JSON format.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Keys successfully loaded from JSON!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Downloader</name>
     <message>
         <source>Please wait...</source>
@@ -112,10 +292,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Directory with your dumped DLC&apos;s</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Directory to install emulator versions</source>
         <translation type="unfinished"></translation>
     </message>
@@ -128,11 +304,35 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Directory with DLC&apos;s</source>
+        <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Error</source>
+        <source>Directory with DLCs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Directory with your dumped DLCs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The chosen location for dumped games is not valid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The chosen location for dumped DLCs is not valid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The DLC dump location could not be created.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The location for installing emulator versions is not valid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The emulator version location could not be created.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -348,6 +548,14 @@ Using local database.
     </message>
     <message>
         <source>&amp;SFO viewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;npbind.dat viewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Ttrophy Viewer</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -683,6 +891,121 @@ Notes:
         <source>Export GameList</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>General</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Graphics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Debug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Experimental</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Crypto Key Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>NpBindDialog</name>
+    <message>
+        <source>npbind.dat Viewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to parse npbind.dat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry Type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry Size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NPCommID:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy ID:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hex Data:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NPCommID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show regions:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export JSON</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Body #%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>JSON Files (*.json)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot write file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>JSON exported successfully.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QObject</name>
@@ -830,6 +1153,612 @@ Notes:
     </message>
     <message>
         <source>JSON (*.json);;CSV (*.csv);;HTML (*.html)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SettingsDialog</name>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>General</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio Device (general)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio Device (DS4 speaker)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>System</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Console Language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Volume</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Miscellaneous</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Splash Screen When Launching Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GUI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>General Frontend Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Discord Rich Presence</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GUI Language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Background Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Background Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Opacity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Title Music</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Play title music</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set the volume of the background music.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Game Compatibility</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update Compatibility Database On Startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update Compatibility Database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GUI Updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check for Updates at Startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Always Show Changelog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check for Updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Directory Scan Depth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Graphics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Graphics Device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable NULL GPU</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Video</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Display Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Windowed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fullscreen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fullscreen (Borderless)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Present Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mailbox (Vsync)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fifo (Vsync)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Immediate (No Vsync)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Window Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>W:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>H:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable HDR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FSR Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable FSR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable RCAS (sharpening)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RCAS Attenuation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disable Trophy Notification</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy Notification Position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bottom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Notification Duration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open the custom trophy images/sounds folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Portable User Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create Portable User Folder from Common User Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hide Cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hide Cursor Idle Timeout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>s</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Controller</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Motion Controls</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Background Controller Input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Microphone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>USB Device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Game Folders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DLC Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Browse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Home Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PS4 Sysmodules Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logger</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Logging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Separate Log Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>async</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sync</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log Filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load Presets...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Log Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Debug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Shaders Dumping</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Debug Dumping</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable RenderDoc Debugging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy GPU Buffers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Advanced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Collect Shaders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Crash Diagnostics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Host Debug Markers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guest Debug Markers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vulkan Validation (Requires Vulkan SDK)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Vulkan Validation Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Validation Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Core Validation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Sync Validation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable GPU-Assisted Validation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Experimental</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Experimental Features</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Readbacks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Readback Linear Images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Direct Memory Access</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Devkit Console Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable PS4 Neo Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set &quot;PSN signed-in&quot; to True</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set &quot;Network Connected&quot; to True</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Additional DMem Allocation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vblank Frequency</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Point your mouse at an option to display its description.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Directory to install games</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selected folder does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Duplicate Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This folder is already added.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select directory for DLC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select directory for home</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select directory for System modules</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This path does not exist on disk.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to save settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restore Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Are you sure you want to restore all settings to their default values?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SettingsDialogHelperTexts</name>
+    <message>
+        <source>Game Folders:\nThe list of folders to check for installed games.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add Folder:\nAdd a new folder to the list of game installation folders.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove Folder:\nRemove the selected folder from the list of game installation folders.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Browse:\nBrowse for a folder to set as the Home folder.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>System Modules Folder:\nThe folder where system modules are loaded from.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Browse:\nBrowse for a folder to set as the System Modules folder.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

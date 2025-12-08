@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameInstallDialog</class>
+ <widget class="QDialog" name="GameInstallDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>539</width>
+    <height>281</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>shadLauncher4 - Choose directory</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupGames">
+     <property name="title">
+      <string>Directory with games</string>
+     </property>
+     <layout class="QHBoxLayout" name="layoutGames">
+      <item>
+       <widget class="QLineEdit" name="editGamesDirectory"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnBrowseGames">
+        <property name="text">
+         <string>Browse</string>
+        </property>
+        <property name="icon">
+         <iconset theme="folder-open"/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupAddons">
+     <property name="title">
+      <string>Directory with DLCs</string>
+     </property>
+     <layout class="QHBoxLayout" name="layoutAddons">
+      <item>
+       <widget class="QLineEdit" name="editAddonsDirectory"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnBrowseAddons">
+        <property name="text">
+         <string>Browse</string>
+        </property>
+        <property name="icon">
+         <iconset theme="folder-open"/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupVersions">
+     <property name="title">
+      <string>Directory to install emulator versions</string>
+     </property>
+     <layout class="QHBoxLayout" name="layoutVersions">
+      <item>
+       <widget class="QLineEdit" name="editVersionDirectory"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnBrowseVersions">
+        <property name="text">
+         <string>Browse</string>
+        </property>
+        <property name="icon">
+         <iconset theme="folder-open"/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
