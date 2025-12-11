@@ -389,7 +389,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Firmware</source>
-      <translation type="unfinished">Firmware</translation>
+      <translation>Firmware</translation>
     </message>
     <message>
       <source>Show Firmwares</source>
@@ -732,7 +732,7 @@ Notes:
     </message>
     <message>
       <source>Pause</source>
-      <translation type="unfinished">Pause</translation>
+      <translation>Παύση</translation>
     </message>
     <message>
       <source>Start emulation</source>
@@ -776,7 +776,7 @@ Notes:
     </message>
     <message>
       <source>Show Tool Bar</source>
-      <translation type="unfinished">Show Tool Bar</translation>
+      <translation>Προβολή Μπάρας</translation>
     </message>
     <message>
       <source>Show Game Compatibility in Grid Mode</source>
