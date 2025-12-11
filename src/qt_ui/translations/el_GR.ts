@@ -389,7 +389,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Firmware</source>
-      <translation type="unfinished">Firmware</translation>
+      <translation/>
     </message>
     <message>
       <source>Show Firmwares</source>
