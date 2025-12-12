@@ -2,9 +2,15 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QtWidgets>
-#include <common/path_util.h>
+#include <SDL3/SDL_audio.h>
+#include <SDL3/SDL_init.h>
+// #include <VulkanDeviceLib.h>
+
+#include "background_music_player.h"
+#include "common/path_util.h"
 #include "core/emulator_settings.h"
 #include "game_info.h"
+#include "gui_application.h"
 #include "gui_settings.h"
 #include "settings_dialog.h"
 #include "settings_dialog_helper_texts.h"
@@ -46,7 +52,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     ui->setupUi(this);
 
     // TODO enable them once implemented
-    ui->generalTabContents->setVisible(false);
+    /* ui->generalTabContents->setVisible(false);
     ui->graphicsTabLayout->setVisible(false);
     ui->inputTabContents->setVisible(false);
     ui->logTabContents->setVisible(false);
@@ -56,7 +62,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     ui->GUIgroupBox->setVisible(false);
     ui->groupBox->setVisible(false);
     ui->CompatgroupBox->setVisible(false);
-    ui->updaterGroupBox->setVisible(false);
+    ui->updaterGroupBox->setVisible(false);*/
     // end of todo
 
     const SettingsDialogHelperTexts helptexts;
@@ -75,7 +81,9 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->browseSysmodulesButton, helptexts.settings.paths_sysmodulesDir_browse);
     SubscribeHelpText(ui->ScanDepthComboBox, helptexts.settings.general_scan_depth_combo);
 
+    PopulateComboBoxes();
     PathTabConnections();
+    OtherConnections();
     LoadValuesFromConfig();
     HandleButtonBox();
 }
@@ -191,6 +199,7 @@ void SettingsDialog::PathTabConnections() {
             item->setCheckState(item->checkState() == Qt::Checked ? Qt::Unchecked : Qt::Checked);
         }
     });
+
     // ------------------Addon Folder ----------------------------------------------------------
     connect(ui->browseDLCButton, &QPushButton::clicked, this, [this]() {
         const auto dlc_folder_path = m_emu_settings->GetAddonInstallDir();
@@ -235,8 +244,40 @@ void SettingsDialog::PathTabConnections() {
     });
 }
 
+// ---------------------------- Non-Path Connections ----------------------------
+void SettingsDialog::OtherConnections() {
+
+    // ------------------ General tab --------------------------------------------------------
+    connect(ui->horizontalVolumeSlider, &QSlider::valueChanged, [this](int value) {
+        ui->volumeText->setText(QString("%1%").arg(value));
+        // TODO: ingame volume adjustment with IPC
+    });
+
+    // ------------------ Gui tab --------------------------------------------------------
+    connect(ui->BGMVolumeSlider, &QSlider::valueChanged, this,
+            [](int value) { BackgroundMusicPlayer::getInstance().setVolume(value); });
+}
+
 // ---------------------------- Load from backend to UI ----------------------------
 void SettingsDialog::LoadValuesFromConfig() {
+
+    // ------------------ General tab --------------------------------------------------------
+    ui->showSplashCheckBox->setChecked(m_emu_settings->IsShowSplash());
+    ui->horizontalVolumeSlider->setValue(m_emu_settings->GetVolumeSlider());
+    ui->GenAudioComboBox->setCurrentText(
+        QString::fromStdString(m_emu_settings->GetMainOutputDevice()));
+    ui->DsAudioComboBox->setCurrentText(
+        QString::fromStdString(m_emu_settings->GetPadSpkOutputDevice()));
+
+    // ------------------ GUI tab --------------------------------------------------------
+    ui->discordRPCCheckbox->setChecked(m_emu_settings->IsDiscordRPCEnabled());
+    ui->playBGMCheckBox->setChecked(m_gui_settings->GetValue(GUI::game_list_play_bg).toBool());
+    ui->BGMVolumeSlider->setValue(m_gui_settings->GetValue(GUI::game_list_bg_volume).toInt());
+    ui->showBackgroundImageCheckBox->setChecked(
+        m_gui_settings->GetValue(GUI::game_list_showBackgroundImage).toBool());
+    ui->backgroundImageOpacitySlider->setValue(
+        m_gui_settings->GetValue(GUI::game_list_backgroundImageOpacity).toInt());
+
     // ------------------ Games Folder --------------------------------------------------------
     ui->gameFoldersListWidget->clear();
     const auto& dirs = m_emu_settings->GetAllGameInstallDirs();
@@ -310,6 +351,25 @@ void SettingsDialog::ApplyValuesToBackend() {
     std::vector<GameInstallDir> dirs;
     dirs.reserve(ui->gameFoldersListWidget->count());
 
+    // ------------------ General tab --------------------------------------------------------
+    m_emu_settings->SetShowSplash(ui->showSplashCheckBox->isChecked());
+    m_emu_settings->SetVolumeSlider(ui->horizontalVolumeSlider->value());
+    m_emu_settings->SetMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString());
+    m_emu_settings->SetPadSpkOutputDevice(ui->DsAudioComboBox->currentText().toStdString());
+
+    // ------------------ GUI tab --------------------------------------------------------
+    m_emu_settings->SetDiscordRPCEnabled(ui->discordRPCCheckbox->isChecked());
+
+    m_gui_settings->SetValue(GUI::general_directory_depth_scanning,
+                             ui->ScanDepthComboBox->currentIndex() + 1);
+    m_gui_settings->SetValue(GUI::game_list_play_bg, ui->playBGMCheckBox->isChecked());
+    m_gui_settings->SetValue(GUI::game_list_bg_volume, ui->BGMVolumeSlider->value());
+    m_gui_settings->SetValue(GUI::game_list_showBackgroundImage,
+                             ui->showBackgroundImageCheckBox->isChecked());
+    m_gui_settings->SetValue(GUI::game_list_backgroundImageOpacity,
+                             ui->backgroundImageOpacitySlider->value());
+
+    // ------------------ Paths tab --------------------------------------------------------
     for (int i = 0; i < ui->gameFoldersListWidget->count(); ++i) {
         auto* item = ui->gameFoldersListWidget->item(i);
         GameInstallDir d;
@@ -317,14 +377,11 @@ void SettingsDialog::ApplyValuesToBackend() {
         d.enabled = (item->checkState() == Qt::Checked);
         dirs.push_back(std::move(d));
     }
-
     m_emu_settings->SetAllGameInstallDirs(dirs);
     m_emu_settings->SetAddonInstallDir(Common::FS::PathFromQString(ui->currentDLCFolder->text()));
     m_emu_settings->SetHomeDir(Common::FS::PathFromQString(ui->currentHomePath->text()));
     m_emu_settings->SetSysModulesDir(
         Common::FS::PathFromQString(ui->currentSysmodulesPath->text()));
-    m_gui_settings->SetValue(GUI::general_directory_depth_scanning,
-                             ui->ScanDepthComboBox->currentIndex() + 1);
 }
 
 // ---------------------------- Button box handling ----------------------------
@@ -341,13 +398,11 @@ void SettingsDialog::HandleButtonBox() {
         if (button == applyBtn) {
             bool changed = IsGameFoldersChanged();
             if (changed) {
-                ApplyValuesToBackend();
                 emit GameFoldersChanged();
-            } else {
-                // still apply to backend to ensure exact structure (no-op if equal)
-                ApplyValuesToBackend();
             }
+
             // Note: Apply does not persist to disk by design.
+            ApplyValuesToBackend();
             return;
         }
 
@@ -355,12 +410,10 @@ void SettingsDialog::HandleButtonBox() {
         if (button == saveBtn) {
             bool changed = IsGameFoldersChanged();
             if (changed) {
-                ApplyValuesToBackend();
                 emit GameFoldersChanged();
-            } else {
-                ApplyValuesToBackend();
             }
 
+            ApplyValuesToBackend();
             if (!m_emu_settings->Save()) {
                 QMessageBox::warning(this, tr("Error"), tr("Failed to save settings."));
                 return;
@@ -406,4 +459,42 @@ void SettingsDialog::HandleButtonBox() {
 
     connect(ui->tabWidgetSettings, &QTabWidget::currentChanged, this,
             [this]() { ui->buttonBox->button(QDialogButtonBox::Close)->setFocus(); });
+}
+
+void SettingsDialog::PopulateComboBoxes() {
+    /* TODO
+    // GPU Devices
+    int deviceCount = GetVulkanDeviceCount();
+    char** names;
+    const int maxDeviceNameLength = 30;
+    GetVulkanDeviceNames(names, deviceCount, maxDeviceNameLength);
+    for (int i = 0; i < deviceCount; ++i) {
+        ui->graphicsAdapterBox->addItem(names[i]);
+    }
+    */
+
+    // Audio Playback Devices
+    ui->GenAudioComboBox->addItem(tr("Default Device"), "Default Device");
+    ui->DsAudioComboBox->addItem(tr("Default Device"), "Default Device");
+
+    SDL_InitSubSystem(SDL_INIT_AUDIO);
+    int count = 0;
+    SDL_AudioDeviceID* devices = SDL_GetAudioPlaybackDevices(&count);
+    if (devices) {
+        for (int i = 0; i < count; ++i) {
+            SDL_AudioDeviceID devId = devices[i];
+            const char* name = SDL_GetAudioDeviceName(devId);
+            if (name) {
+                QString qname = QString::fromUtf8(name);
+                ui->GenAudioComboBox->addItem(qname, QString::number(devId));
+                ui->DsAudioComboBox->addItem(qname, QString::number(devId));
+            }
+        }
+        SDL_free(devices);
+    } else {
+        qDebug() << "Error getting audio devices: " << SDL_GetError();
+    }
+
+    SDL_QuitSubSystem(SDL_INIT_AUDIO);
+    SDL_Quit();
 }
