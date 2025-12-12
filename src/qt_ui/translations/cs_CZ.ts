@@ -564,8 +564,8 @@ Using local database.
       <translation type="unfinished">&amp;npbind.dat viewer</translation>
     </message>
     <message>
-      <source>&amp;Ttrophy Viewer</source>
-      <translation type="unfinished">&amp;Ttrophy Viewer</translation>
+      <source>&amp;Trophy Viewer</source>
+      <translation type="unfinished">&amp;Trophy Viewer</translation>
     </message>
   </context>
   <context>
@@ -628,6 +628,13 @@ Notes:
     <message>
       <source>Last updated</source>
       <translation type="unfinished">Last updated</translation>
+    </message>
+  </context>
+  <context>
+    <name>IpcClient</name>
+    <message>
+      <source>Could not find the emulator executable</source>
+      <translation type="unfinished">Could not find the emulator executable</translation>
     </message>
   </context>
   <context>
@@ -954,6 +961,14 @@ Notes:
       <source>Crypto Key Manager</source>
       <translation type="unfinished">Crypto Key Manager</translation>
     </message>
+    <message>
+      <source>Version Manager</source>
+      <translation type="unfinished">Version Manager</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation type="unfinished">None</translation>
+    </message>
   </context>
   <context>
     <name>NpBindDialog</name>
@@ -1108,6 +1123,22 @@ Notes:
       <source>Type</source>
       <translation type="unfinished">Type</translation>
     </message>
+    <message>
+      <source>Version Activated</source>
+      <translation type="unfinished">Version Activated</translation>
+    </message>
+    <message>
+      <source>The selected version is now active.</source>
+      <translation type="unfinished">The selected version is now active.</translation>
+    </message>
+    <message>
+      <source>Copy Failed</source>
+      <translation type="unfinished">Copy Failed</translation>
+    </message>
+    <message>
+      <source>Unable to activate selected version.</source>
+      <translation type="unfinished">Unable to activate selected version.</translation>
+    </message>
   </context>
   <context>
     <name>SFOViewerDialog</name>
@@ -1205,14 +1236,6 @@ Notes:
       <translation type="unfinished">Audio Device (DS4 speaker)</translation>
     </message>
     <message>
-      <source>System</source>
-      <translation type="unfinished">System</translation>
-    </message>
-    <message>
-      <source>Console Language</source>
-      <translation type="unfinished">Console Language</translation>
-    </message>
-    <message>
       <source>Volume</source>
       <translation type="unfinished">Volume</translation>
     </message>
@@ -1229,16 +1252,8 @@ Notes:
       <translation type="unfinished">GUI</translation>
     </message>
     <message>
-      <source>General Frontend Settings</source>
-      <translation type="unfinished">General Frontend Settings</translation>
-    </message>
-    <message>
       <source>Enable Discord Rich Presence</source>
       <translation type="unfinished">Enable Discord Rich Presence</translation>
-    </message>
-    <message>
-      <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
     </message>
     <message>
       <source>Background Image</source>
@@ -1263,10 +1278,6 @@ Notes:
     <message>
       <source>Set the volume of the background music.</source>
       <translation type="unfinished">Set the volume of the background music.</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
     </message>
     <message>
       <source>Game Compatibility</source>
@@ -1748,6 +1759,18 @@ Notes:
       <source>Close</source>
       <translation type="unfinished">Close</translation>
     </message>
+    <message>
+      <source>Audio</source>
+      <translation type="unfinished">Audio</translation>
+    </message>
+    <message>
+      <source>Frontend Settings</source>
+      <translation type="unfinished">Frontend Settings</translation>
+    </message>
+    <message>
+      <source>Default Device</source>
+      <translation type="unfinished">Default Device</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
@@ -1889,6 +1912,263 @@ Notes:
     <message>
       <source>&amp;Open User Directory</source>
       <translation type="unfinished">&amp;Open User Directory</translation>
+    </message>
+  </context>
+  <context>
+    <name>VersionDialog</name>
+    <message>
+      <source>Version Manager</source>
+      <translation type="unfinished">Version Manager</translation>
+    </message>
+    <message>
+      <source>Path to save versions</source>
+      <translation type="unfinished">Path to save versions</translation>
+    </message>
+    <message>
+      <source>Browse</source>
+      <translation type="unfinished">Browse</translation>
+    </message>
+    <message>
+      <source>Installed</source>
+      <translation type="unfinished">Installed</translation>
+    </message>
+    <message>
+      <source>Selected</source>
+      <translation type="unfinished">Selected</translation>
+    </message>
+    <message>
+      <source>Version</source>
+      <translation type="unfinished">Version</translation>
+    </message>
+    <message>
+      <source>Codename</source>
+      <translation type="unfinished">Codename</translation>
+    </message>
+    <message>
+      <source>Date</source>
+      <translation type="unfinished">Date</translation>
+    </message>
+    <message>
+      <source>Add Custom</source>
+      <translation type="unfinished">Add Custom</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation type="unfinished">Delete</translation>
+    </message>
+    <message>
+      <source>Refresh List</source>
+      <translation type="unfinished">Refresh List</translation>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation type="unfinished">Download</translation>
+    </message>
+    <message>
+      <source>Check for Pre-release updates at startup</source>
+      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+    </message>
+    <message>
+      <source>Always Show Changelog</source>
+      <translation type="unfinished">Always Show Changelog</translation>
+    </message>
+    <message>
+      <source>Check for Pre-release Updates</source>
+      <translation type="unfinished">Check for Pre-release Updates</translation>
+    </message>
+    <message>
+      <source>Select the folder where the emulator versions will be installed</source>
+      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+    </message>
+    <message>
+      <source>Select executable</source>
+      <translation type="unfinished">Select executable</translation>
+    </message>
+    <message>
+      <source>Executable (*.exe)</source>
+      <translation type="unfinished">Executable (*.exe)</translation>
+    </message>
+    <message>
+      <source>Version name</source>
+      <translation type="unfinished">Version name</translation>
+    </message>
+    <message>
+      <source>Enter the name of this version as it appears in the list.</source>
+      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>A version with that name already exists.</source>
+      <translation type="unfinished">A version with that name already exists.</translation>
+    </message>
+    <message>
+      <source>Local</source>
+      <translation type="unfinished">Local</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation type="unfinished">Success</translation>
+    </message>
+    <message>
+      <source>Version added successfully.</source>
+      <translation type="unfinished">Version added successfully.</translation>
+    </message>
+    <message>
+      <source>No version selected. Please choose one from the list to delete.</source>
+      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder path.</source>
+      <translation type="unfinished">Failed to determine the folder path.</translation>
+    </message>
+    <message>
+      <source>Delete version</source>
+      <translation type="unfinished">Delete version</translation>
+    </message>
+    <message>
+      <source>Do you want to delete the version</source>
+      <translation type="unfinished">Do you want to delete the version</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder to remove.</source>
+      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation type="unfinished">Failed to delete folder.</translation>
+    </message>
+    <message>
+      <source>Checking for new emulator versions...</source>
+      <translation type="unfinished">Checking for new emulator versions...</translation>
+    </message>
+    <message>
+      <source>First you need to choose a location to save the versions in
+&apos;Path to save versions&apos;</source>
+      <translation type="unfinished">First you need to choose a location to save the versions in
+&apos;Path to save versions&apos;</translation>
+    </message>
+    <message>
+      <source>Confirm Download</source>
+      <translation type="unfinished">Confirm Download</translation>
+    </message>
+    <message>
+      <source>Do you want to download the version</source>
+      <translation type="unfinished">Do you want to download the version</translation>
+    </message>
+    <message>
+      <source>No files available for this platform.</source>
+      <translation type="unfinished">No files available for this platform.</translation>
+    </message>
+    <message>
+      <source>Downloading</source>
+      <translation type="unfinished">Downloading</translation>
+    </message>
+    <message>
+      <source>Error accessing GitHub</source>
+      <translation type="unfinished">Error accessing GitHub</translation>
+    </message>
+    <message>
+      <source>Version %1 has been downloaded and selected.</source>
+      <translation type="unfinished">Version %1 has been downloaded and selected.</translation>
+    </message>
+    <message>
+      <source>Failed to create zip extraction script</source>
+      <translation type="unfinished">Failed to create zip extraction script</translation>
+    </message>
+    <message>
+      <source>Cannot open cache file</source>
+      <translation type="unfinished">Cannot open cache file</translation>
+    </message>
+    <message>
+      <source>Cache file is corrupted</source>
+      <translation type="unfinished">Cache file is corrupted</translation>
+    </message>
+    <message>
+      <source>The GitHub API response is not a valid JSON array.</source>
+      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+    </message>
+    <message>
+      <source>Auto Updater - Emulator</source>
+      <translation type="unfinished">Auto Updater - Emulator</translation>
+    </message>
+    <message>
+      <source>You already have the latest pre-release version.</source>
+      <translation type="unfinished">You already have the latest pre-release version.</translation>
+    </message>
+    <message>
+      <source>Update Available (Emulator)</source>
+      <translation type="unfinished">Update Available (Emulator)</translation>
+    </message>
+    <message>
+      <source>Current Version</source>
+      <translation type="unfinished">Current Version</translation>
+    </message>
+    <message>
+      <source>Latest Version</source>
+      <translation type="unfinished">Latest Version</translation>
+    </message>
+    <message>
+      <source>Do you want to update?</source>
+      <translation type="unfinished">Do you want to update?</translation>
+    </message>
+    <message>
+      <source>Update</source>
+      <translation type="unfinished">Update</translation>
+    </message>
+    <message>
+      <source>No</source>
+      <translation type="unfinished">No</translation>
+    </message>
+    <message>
+      <source>Show Changelog</source>
+      <translation type="unfinished">Show Changelog</translation>
+    </message>
+    <message>
+      <source>Hide Changelog</source>
+      <translation type="unfinished">Hide Changelog</translation>
+    </message>
+    <message>
+      <source>Network error while fetching changelog</source>
+      <translation type="unfinished">Network error while fetching changelog</translation>
+    </message>
+    <message>
+      <source>Changes</source>
+      <translation type="unfinished">Changes</translation>
+    </message>
+    <message>
+      <source>No download URL found for the specified asset.</source>
+      <translation type="unfinished">No download URL found for the specified asset.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre-release (Nightly)</source>
+      <translation type="unfinished">Downloading Pre-release (Nightly)</translation>
+    </message>
+    <message>
+      <source>Network error while downloading</source>
+      <translation type="unfinished">Network error while downloading</translation>
+    </message>
+    <message>
+      <source>Extraction failure.</source>
+      <translation type="unfinished">Extraction failure.</translation>
+    </message>
+    <message>
+      <source>Complete installation</source>
+      <translation type="unfinished">Complete installation</translation>
+    </message>
+    <message>
+      <source>Pre-release (Nightly) updated successfully.</source>
+      <translation type="unfinished">Pre-release (Nightly) updated successfully.</translation>
+    </message>
+    <message>
+      <source>Failed to create the update script file</source>
+      <translation type="unfinished">Failed to create the update script file</translation>
     </message>
   </context>
 </TS>
