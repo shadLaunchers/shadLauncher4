@@ -57,7 +57,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <property name="usesScrollButtons">
       <bool>true</bool>
@@ -74,8 +74,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>506</height>
+         <width>946</width>
+         <height>505</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="generalTabVLayout" stretch="0">
@@ -87,7 +87,7 @@
           <property name="spacing">
            <number>6</number>
           </property>
-          <item row="0" column="2">
+          <item row="1" column="2">
            <layout class="QVBoxLayout" name="emulatorTabLayoutMiddle">
             <property name="leftMargin">
              <number>0</number>
@@ -99,45 +99,135 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QGroupBox" name="GenAudioGroupBox">
-              <property name="title">
-               <string>Audio Device (general)</string>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Orientation::Vertical</enum>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_8">
-               <item>
-                <widget class="QComboBox" name="GenAudioComboBox"/>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QGroupBox" name="DsSpeakerGroupBox">
-              <property name="title">
-               <string>Audio Device (DS4 speaker)</string>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_9">
-               <item>
-                <widget class="QComboBox" name="DsAudioComboBox"/>
-               </item>
-               <item>
-                <spacer name="verticalSpacer_3">
-                 <property name="orientation">
-                  <enum>Qt::Orientation::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </widget>
+             </spacer>
             </item>
            </layout>
           </item>
           <item row="0" column="0">
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="title">
+             <string>Audio</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_14">
+             <item>
+              <widget class="QGroupBox" name="volumeSliderElement">
+               <property name="title">
+                <string>Volume</string>
+               </property>
+               <layout class="QVBoxLayout" name="volumeLayout">
+                <item>
+                 <widget class="QScrollArea" name="scrollArea">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="toolTip">
+                   <string/>
+                  </property>
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>410</width>
+                     <height>68</height>
+                    </rect>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_6">
+                    <item>
+                     <widget class="QLineEdit" name="volumeText">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>60</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string notr="true">100%</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignmentFlag::AlignCenter</set>
+                      </property>
+                      <property name="readOnly">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QSlider" name="horizontalVolumeSlider">
+                      <property name="focusPolicy">
+                       <enum>Qt::FocusPolicy::StrongFocus</enum>
+                      </property>
+                      <property name="maximum">
+                       <number>500</number>
+                      </property>
+                      <property name="value">
+                       <number>100</number>
+                      </property>
+                      <property name="sliderPosition">
+                       <number>100</number>
+                      </property>
+                      <property name="orientation">
+                       <enum>Qt::Orientation::Horizontal</enum>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="GenAudioGroupBox">
+               <property name="title">
+                <string>Audio Device (general)</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_8">
+                <item>
+                 <widget class="QComboBox" name="GenAudioComboBox"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="DsSpeakerGroupBox">
+               <property name="title">
+                <string>Audio Device (DS4 speaker)</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_9">
+                <item>
+                 <widget class="QComboBox" name="DsAudioComboBox"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="2">
            <layout class="QVBoxLayout" name="systemTabLayoutLeft">
             <property name="spacing">
              <number>6</number>
@@ -146,192 +236,62 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QGroupBox" name="SystemSettings">
+             <widget class="QGroupBox" name="emulatorSettingsGroupBox">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
-              <property name="sizeIncrement">
-               <size>
-                <width>0</width>
-                <height>0</height>
-               </size>
-              </property>
               <property name="title">
-               <string>System</string>
+               <string>Miscellaneous</string>
               </property>
-              <layout class="QVBoxLayout" name="emuSettingsLayout">
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <layout class="QVBoxLayout" name="additionalSettingsVLayout" stretch="0">
+               <property name="spacing">
+                <number>6</number>
+               </property>
+               <property name="leftMargin">
+                <number>9</number>
+               </property>
+               <property name="topMargin">
+                <number>9</number>
+               </property>
+               <property name="rightMargin">
+                <number>9</number>
+               </property>
                <property name="bottomMargin">
-                <number>70</number>
+                <number>9</number>
                </property>
                <item>
-                <widget class="QGroupBox" name="consoleLanguageGroupBox">
-                 <property name="title">
-                  <string>Console Language</string>
+                <widget class="QCheckBox" name="showSplashCheckBox">
+                 <property name="text">
+                  <string>Show Splash Screen When Launching Game</string>
                  </property>
-                 <layout class="QVBoxLayout" name="settingsLayout">
-                  <item>
-                   <widget class="QComboBox" name="consoleLanguageComboBox"/>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="volumeSliderElement">
-                 <property name="title">
-                  <string>Volume</string>
-                 </property>
-                 <layout class="QVBoxLayout" name="volumeLayout">
-                  <item>
-                   <widget class="QScrollArea" name="scrollArea">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="toolTip">
-                     <string/>
-                    </property>
-                    <property name="widgetResizable">
-                     <bool>true</bool>
-                    </property>
-                    <widget class="QWidget" name="scrollAreaWidgetContents_2">
-                     <property name="geometry">
-                      <rect>
-                       <x>0</x>
-                       <y>0</y>
-                       <width>415</width>
-                       <height>69</height>
-                      </rect>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_6">
-                      <item>
-                       <widget class="QLineEdit" name="volumeText">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>60</width>
-                          <height>16777215</height>
-                         </size>
-                        </property>
-                        <property name="text">
-                         <string notr="true">100%</string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignmentFlag::AlignCenter</set>
-                        </property>
-                        <property name="readOnly">
-                         <bool>true</bool>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSlider" name="horizontalVolumeSlider">
-                        <property name="focusPolicy">
-                         <enum>Qt::FocusPolicy::StrongFocus</enum>
-                        </property>
-                        <property name="maximum">
-                         <number>500</number>
-                        </property>
-                        <property name="value">
-                         <number>100</number>
-                        </property>
-                        <property name="sliderPosition">
-                         <number>100</number>
-                        </property>
-                        <property name="orientation">
-                         <enum>Qt::Orientation::Horizontal</enum>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </widget>
-                  </item>
-                 </layout>
                 </widget>
                </item>
               </layout>
              </widget>
             </item>
+            <item>
+             <spacer name="verticalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Orientation::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
-          </item>
-          <item row="1" column="0">
-           <widget class="QGroupBox" name="emulatorSettingsGroupBox">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="title">
-             <string>Miscellaneous</string>
-            </property>
-            <property name="flat">
-             <bool>false</bool>
-            </property>
-            <property name="checkable">
-             <bool>false</bool>
-            </property>
-            <layout class="QVBoxLayout" name="additionalSettingsVLayout" stretch="0,0">
-             <property name="spacing">
-              <number>6</number>
-             </property>
-             <property name="leftMargin">
-              <number>9</number>
-             </property>
-             <property name="topMargin">
-              <number>9</number>
-             </property>
-             <property name="rightMargin">
-              <number>9</number>
-             </property>
-             <property name="bottomMargin">
-              <number>9</number>
-             </property>
-             <item>
-              <widget class="QCheckBox" name="showSplashCheckBox">
-               <property name="text">
-                <string>Show Splash Screen When Launching Game</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <spacer name="verticalSpacer_9">
-               <property name="orientation">
-                <enum>Qt::Orientation::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>40</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <spacer name="horizontalSpacer_9">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
           </item>
          </layout>
         </item>
@@ -350,8 +310,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>506</height>
+         <width>946</width>
+         <height>505</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -370,7 +330,7 @@
            <number>0</number>
           </property>
           <item>
-           <layout class="QVBoxLayout" name="GUITabLayoutMiddle" stretch="0,0,0">
+           <layout class="QVBoxLayout" name="GUITabLayoutMiddle" stretch="0,0">
             <property name="bottomMargin">
              <number>0</number>
             </property>
@@ -389,7 +349,7 @@
                </size>
               </property>
               <property name="title">
-               <string>General Frontend Settings</string>
+               <string>Frontend Settings</string>
               </property>
               <layout class="QVBoxLayout" name="GUILayout">
                <property name="topMargin">
@@ -403,18 +363,6 @@
                  <property name="text">
                   <string>Enable Discord Rich Presence</string>
                  </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="emulatorLanguageGroupBox">
-                 <property name="title">
-                  <string>GUI Language</string>
-                 </property>
-                 <layout class="QVBoxLayout" name="langSettingsLayout">
-                  <item>
-                   <widget class="QComboBox" name="emulatorLanguageComboBox"/>
-                  </item>
-                 </layout>
                 </widget>
                </item>
                <item>
@@ -630,44 +578,45 @@
                  </widget>
                 </widget>
                </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QGroupBox" name="groupBox">
-              <property name="title">
-               <string>Trophy Key</string>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_6">
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_trophyKey">
-                 <property name="bottomMargin">
-                  <number>0</number>
+                <widget class="QGroupBox" name="ScanDepthGroupBox">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
                  </property>
-                 <item>
-                  <widget class="QLabel" name="label_Trophy">
-                   <property name="text">
-                    <string>Trophy Key</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLineEdit" name="trophyKeyLineEdit">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <pointsize>10</pointsize>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
+                 <property name="title">
+                  <string>Directory Scan Depth</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="tabSettingsLayout">
+                  <item>
+                   <widget class="QComboBox" name="ScanDepthComboBox">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>1</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>2</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>3</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
                </item>
               </layout>
              </widget>
@@ -688,7 +637,7 @@
            </layout>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="CompatTabLayoutRight" stretch="0,0,0,0">
+           <layout class="QVBoxLayout" name="CompatTabLayoutRight" stretch="0,0,0">
             <property name="spacing">
              <number>6</number>
             </property>
@@ -842,46 +791,6 @@
              </widget>
             </item>
             <item>
-             <widget class="QGroupBox" name="ScanDepthGroupBox">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="title">
-               <string>Directory Scan Depth</string>
-              </property>
-              <layout class="QVBoxLayout" name="tabSettingsLayout">
-               <item>
-                <widget class="QComboBox" name="ScanDepthComboBox">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <item>
-                  <property name="text">
-                   <string>1</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>2</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>3</string>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
              <spacer name="verticalSpacer_5">
               <property name="orientation">
                <enum>Qt::Orientation::Vertical</enum>
@@ -913,8 +822,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>506</height>
+         <width>946</width>
+         <height>505</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="graphicsTabVLayout" stretch="0,0">
@@ -1277,8 +1186,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>506</height>
+         <width>946</width>
+         <height>505</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="userTabVLayout" stretch="0,0,1">
@@ -1544,8 +1453,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>506</height>
+         <width>946</width>
+         <height>505</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="inputTabVLayout" stretch="0,0,0,0">
@@ -1852,8 +1761,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>506</height>
+         <width>946</width>
+         <height>505</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="pathsTabLayout">
@@ -1996,8 +1905,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>274</height>
+         <width>946</width>
+         <height>299</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2142,8 +2051,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>389</height>
+         <width>946</width>
+         <height>418</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2372,8 +2281,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>374</height>
+         <width>946</width>
+         <height>388</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2637,8 +2546,6 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="../shadLauncher4.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

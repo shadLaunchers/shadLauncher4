@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: Copyright 2025 shadLauncher 4 Project
+// SPDX-FileCopyrightText: Copyright 2025 shadLauncher4 Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
@@ -43,8 +43,10 @@ private:
     void SubscribeHelpText(QObject* object, const QString& text);
     bool eventFilter(QObject* object, QEvent* event) override;
     void PathTabConnections();
+    void OtherConnections();
     void LoadValuesFromConfig();
     bool IsGameFoldersChanged() const;
     void HandleButtonBox();
     void ApplyValuesToBackend();
+    void PopulateComboBoxes();
 };
