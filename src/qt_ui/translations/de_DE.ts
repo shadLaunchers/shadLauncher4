@@ -7,17 +7,17 @@
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Kryptografie Schlüsselverwaltung</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>Trophäen-Schlüssel: Wird für die Entschlüsselung der Trophäen verwendet.
+Muss ein gültiger Hex-Wert mit gleicher Länge sein.</translation>
     </message>
     <message>
       <source>Enter Trophy Key (hex)</source>
-      <translation type="unfinished">Enter Trophy Key (hex)</translation>
+      <translation>Trophäen-Schlüssel (hex) eingeben</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
@@ -33,11 +33,11 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>%1:</source>
-      <translation type="unfinished">%1:</translation>
+      <translation>%1:</translation>
     </message>
     <message>
       <source>Enter %1 (hex)</source>
-      <translation type="unfinished">Enter %1 (hex)</translation>
+      <translation>%1 (hex) eingeben</translation>
     </message>
     <message>
       <source>Exponent1</source>
@@ -78,8 +78,8 @@ Must be a valid hex string with even length.</translation>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA-Schlüsselkomponenten für gefälschte Signatur.
+Alle Felder müssen gültige Hex-Werte mit gleicher Länge sein.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
@@ -88,8 +88,8 @@ All fields must be valid hex strings with even length.</translation>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA-Schlüsselkomponenten für Debug RIF-Dateien.
+Alle Felder müssen gültige Hex-Werte mit gleicher Länge sein.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
@@ -98,8 +98,8 @@ All fields must be valid hex strings with even length.</translation>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA-Schlüsselkomponenten für die Paketentschlüsselung.
+Alle Felder müssen gültige Hex-Werte mit gleicher Länge sein.</translation>
     </message>
     <message>
       <source>Load All Keys</source>
@@ -223,7 +223,7 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>Ingame</source>
-      <translation type="unfinished">Ingame</translation>
+      <translation>Im Spiel</translation>
     </message>
     <message>
       <source>Games that can reach gameplay but have issues</source>
@@ -322,11 +322,11 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>The chosen location for dumped games is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped games is not valid.</translation>
+      <translation>Der ausgewählte Ordner für die gedumpten Spiele ist ungültig.</translation>
     </message>
     <message>
       <source>The chosen location for dumped DLCs is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped DLCs is not valid.</translation>
+      <translation>Der ausgewählte Ordner für die gedumpten DLCs ist ungültig.</translation>
     </message>
     <message>
       <source>The DLC dump location could not be created.</source>
@@ -334,7 +334,7 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>The location for installing emulator versions is not valid.</source>
-      <translation type="unfinished">The location for installing emulator versions is not valid.</translation>
+      <translation>Der Ordner für die Installation der Emulator-Versionen ist ungültig.</translation>
     </message>
     <message>
       <source>The emulator version location could not be created.</source>
@@ -634,7 +634,7 @@ Notiz:
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Konnte die Emulator-Datei nicht finden</translation>
     </message>
   </context>
   <context>
@@ -695,7 +695,7 @@ Notiz:
     </message>
     <message>
       <source>Emulation</source>
-      <translation type="unfinished">Emulation</translation>
+      <translation>Emulation</translation>
     </message>
     <message>
       <source>Configuration</source>
@@ -951,15 +951,15 @@ Notiz:
     </message>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Kryptografie Schlüsselverwaltung</translation>
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Versionsverwaltung</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Keine</translation>
     </message>
   </context>
   <context>
@@ -986,7 +986,7 @@ Notiz:
     </message>
     <message>
       <source>NPCommID:</source>
-      <translation type="unfinished">NPCommID:</translation>
+      <translation>NPCommID:</translation>
     </message>
     <message>
       <source>Trophy ID:</source>
@@ -1022,7 +1022,7 @@ Notiz:
     </message>
     <message>
       <source>Body #%1</source>
-      <translation type="unfinished">Body #%1</translation>
+      <translation>Inhalt #%1</translation>
     </message>
     <message>
       <source>JSON Files (*.json)</source>
@@ -1117,19 +1117,19 @@ Notiz:
     </message>
     <message>
       <source>Version Activated</source>
-      <translation type="unfinished">Version Activated</translation>
+      <translation>Version aktiviert</translation>
     </message>
     <message>
       <source>The selected version is now active.</source>
-      <translation type="unfinished">The selected version is now active.</translation>
+      <translation>Die ausgewählte Version ist jetzt aktiv.</translation>
     </message>
     <message>
       <source>Copy Failed</source>
-      <translation type="unfinished">Copy Failed</translation>
+      <translation>Kopieren fehlgeschlagen</translation>
     </message>
     <message>
       <source>Unable to activate selected version.</source>
-      <translation type="unfinished">Unable to activate selected version.</translation>
+      <translation>Die ausgewählte Version konnte nicht aktiviert werden.</translation>
     </message>
   </context>
   <context>
@@ -1176,7 +1176,7 @@ Notiz:
     </message>
     <message>
       <source>Regex</source>
-      <translation type="unfinished">Regex</translation>
+      <translation>Regex</translation>
     </message>
     <message>
       <source>PSF Error</source>
@@ -1269,7 +1269,7 @@ Notiz:
     </message>
     <message>
       <source>Set the volume of the background music.</source>
-      <translation type="unfinished">Set the volume of the background music.</translation>
+      <translation>Legt die Lautstärke der Hintergrundmusik fest.</translation>
     </message>
     <message>
       <source>Game Compatibility</source>
@@ -1377,7 +1377,7 @@ Notiz:
     </message>
     <message>
       <source>Enable HDR</source>
-      <translation type="unfinished">Enable HDR</translation>
+      <translation>HDR aktivieren</translation>
     </message>
     <message>
       <source>FSR Settings</source>
@@ -1385,15 +1385,15 @@ Notiz:
     </message>
     <message>
       <source>Enable FSR</source>
-      <translation type="unfinished">Enable FSR</translation>
+      <translation>FSR aktivieren</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation type="unfinished">Enable RCAS (sharpening)</translation>
+      <translation>RCAS aktivieren (Schärfe)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
-      <translation type="unfinished">RCAS Attenuation:</translation>
+      <translation>RCAS Dämpfung:</translation>
     </message>
     <message>
       <source>User</source>
@@ -1409,7 +1409,7 @@ Notiz:
     </message>
     <message>
       <source>Disable Trophy Notification</source>
-      <translation type="unfinished">Disable Trophy Notification</translation>
+      <translation>Trophäen-Benachrichtigung deaktivieren</translation>
     </message>
     <message>
       <source>Trophy Notification Position</source>
@@ -1437,7 +1437,7 @@ Notiz:
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder</source>
-      <translation type="unfinished">Open the custom trophy images/sounds folder</translation>
+      <translation>Öffne den benutzerdefinierten Ordner für Trophäenbilder/Sounds</translation>
     </message>
     <message>
       <source>Portable User Folder</source>
@@ -1473,7 +1473,7 @@ Notiz:
     </message>
     <message>
       <source>Enable Motion Controls</source>
-      <translation type="unfinished">Enable Motion Controls</translation>
+      <translation>Bewegungssteuerung aktivieren</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
@@ -1565,151 +1565,151 @@ Notiz:
     </message>
     <message>
       <source>Enable Shaders Dumping</source>
-      <translation type="unfinished">Enable Shaders Dumping</translation>
+      <translation>Shader-Dumping aktivieren</translation>
     </message>
     <message>
       <source>Enable Debug Dumping</source>
-      <translation type="unfinished">Enable Debug Dumping</translation>
+      <translation>Debug-Dumping aktivieren</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging</source>
-      <translation type="unfinished">Enable RenderDoc Debugging</translation>
+      <translation>RenderDoc-Debugging aktivieren</translation>
     </message>
     <message>
       <source>Copy GPU Buffers</source>
-      <translation type="unfinished">Copy GPU Buffers</translation>
+      <translation>GPU-Puffer kopieren</translation>
     </message>
     <message>
       <source>Advanced</source>
-      <translation type="unfinished">Advanced</translation>
+      <translation>Erweitert</translation>
     </message>
     <message>
       <source>Collect Shaders</source>
-      <translation type="unfinished">Collect Shaders</translation>
+      <translation>Shader sammeln</translation>
     </message>
     <message>
       <source>Enable Crash Diagnostics</source>
-      <translation type="unfinished">Enable Crash Diagnostics</translation>
+      <translation>Absturz-Diagnose aktivieren</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
-      <translation type="unfinished">Host Debug Markers</translation>
+      <translation>Host-Debug-Markierer</translation>
     </message>
     <message>
       <source>Guest Debug Markers</source>
-      <translation type="unfinished">Guest Debug Markers</translation>
+      <translation>Guest-Debug-Markierer</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Vulkan Validation (Benötigt Vulkan SDK)</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers</translation>
+      <translation>Vulkan Validation Layers aktivieren</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Validation Layers</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Core Validation aktivieren</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>Sync Validation aktivieren</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>GPU-Assisted Validation aktivieren</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>Experimentel</translation>
     </message>
     <message>
       <source>Experimental Features</source>
-      <translation type="unfinished">Experimental Features</translation>
+      <translation>Experimentelle Funktionen</translation>
     </message>
     <message>
       <source>Enable Readbacks</source>
-      <translation type="unfinished">Enable Readbacks</translation>
+      <translation>Readback aktivieren</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images</source>
-      <translation type="unfinished">Enable Readback Linear Images</translation>
+      <translation>Readback Linear Images aktivieren</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
-      <translation type="unfinished">Enable Direct Memory Access</translation>
+      <translation>Direct Memory Access aktivieren</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
-      <translation type="unfinished">Enable Devkit Console Mode</translation>
+      <translation>Devkit Konsolen-Modus aktivieren</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
-      <translation type="unfinished">Enable PS4 Neo Mode</translation>
+      <translation>PS4 Neo-Modus aktivieren</translation>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation type="unfinished">Set &quot;PSN signed-in&quot; to True</translation>
+      <translation>Setze den PSN-Status als angemeldet</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
+      <translation>Setze die Netzwerkverbindung als verbunden</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>Zusätzliche DMem-Zuweisung</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation type="unfinished">Vblank Frequency</translation>
+      <translation>VBlank Frequenz</translation>
     </message>
     <message>
       <source>WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</source>
-      <translation type="unfinished">WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</translation>
+      <translation>WARNUNG: Diese Funktionen sind experimentell und sollten nur aktiviert werden, wenn ein Spiel es voraussetzt oder man dazu aufgefordert wird. Bitte frag im shadPS4 Discord Server nach, falls Fragen sind.</translation>
     </message>
     <message>
       <source>Point your mouse at an option to display its description.</source>
-      <translation type="unfinished">Point your mouse at an option to display its description.</translation>
+      <translation>Bewege die Maus über eine Option, um deren Beschreibung anzuzeigen.</translation>
     </message>
     <message>
       <source>Directory to install games</source>
-      <translation type="unfinished">Directory to install games</translation>
+      <translation>Verzeichnis zu den installierten Spielen</translation>
     </message>
     <message>
       <source>Invalid Path</source>
-      <translation type="unfinished">Invalid Path</translation>
+      <translation>Ungültiger Pfad</translation>
     </message>
     <message>
       <source>Selected folder does not exist.</source>
-      <translation type="unfinished">Selected folder does not exist.</translation>
+      <translation>Der ausgewählte Ordner existiert nicht.</translation>
     </message>
     <message>
       <source>Duplicate Path</source>
-      <translation type="unfinished">Duplicate Path</translation>
+      <translation>Doppelter Pfad</translation>
     </message>
     <message>
       <source>This folder is already added.</source>
-      <translation type="unfinished">This folder is already added.</translation>
+      <translation>Dieser Ordner wurde bereits hinzugefügt.</translation>
     </message>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>Ordner öffnen</translation>
     </message>
     <message>
       <source>Disable</source>
-      <translation type="unfinished">Disable</translation>
+      <translation>Deaktivieren</translation>
     </message>
     <message>
       <source>Enable</source>
-      <translation type="unfinished">Enable</translation>
+      <translation>Aktivieren</translation>
     </message>
     <message>
       <source>Select directory for DLC</source>
-      <translation type="unfinished">Select directory for DLC</translation>
+      <translation>Wähle ein Verzeichnis für DLCs</translation>
     </message>
     <message>
       <source>Select directory for home</source>
@@ -1717,23 +1717,23 @@ Notiz:
     </message>
     <message>
       <source>Select directory for System modules</source>
-      <translation type="unfinished">Select directory for System modules</translation>
+      <translation>Wähle ein Verzeichnis für Systemmodule</translation>
     </message>
     <message>
       <source>This path does not exist on disk.</source>
-      <translation type="unfinished">This path does not exist on disk.</translation>
+      <translation>Dieser Pfad existiert nicht auf dem Datenträger.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Fehler</translation>
     </message>
     <message>
       <source>Failed to save settings.</source>
-      <translation type="unfinished">Failed to save settings.</translation>
+      <translation>Fehler beim Speichern der Einstellungen.</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Standardeinstellungen wiederherstellen</translation>
     </message>
     <message>
       <source>Are you sure you want to restore all settings to their default values?</source>
@@ -1741,19 +1741,19 @@ Notiz:
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Speichern</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Übernehmen</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Schließen</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Audio</translation>
     </message>
     <message>
       <source>Frontend Settings</source>
@@ -1761,18 +1761,18 @@ Notiz:
     </message>
     <message>
       <source>Default Device</source>
-      <translation type="unfinished">Default Device</translation>
+      <translation>Standardgerät</translation>
     </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
     <message>
       <source>Game Folders:\nThe list of folders to check for installed games.</source>
-      <translation type="unfinished">Game Folders:\nThe list of folders to check for installed games.</translation>
+      <translation>Spieleordner:\nDie Liste der Ordner, in denen nach installierten Spielen gesucht wird.</translation>
     </message>
     <message>
       <source>Add Folder:\nAdd a new folder to the list of game installation folders.</source>
-      <translation type="unfinished">Add Folder:\nAdd a new folder to the list of game installation folders.</translation>
+      <translation>Ordner hinzufügen:\nFüge einen neuen Ordner zur Liste der Spielinstallationsordner hinzu.</translation>
     </message>
     <message>
       <source>Remove Folder:\nRemove the selected folder from the list of game installation folders.</source>
@@ -1780,11 +1780,11 @@ Notiz:
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>DLC-Pfad:\nDer Ordner, aus denen DLCs geladen werden können.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
+      <translation>Durchsuchen:\nLege einen Ordner für DLCs fest.</translation>
     </message>
     <message>
       <source>Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</source>
@@ -1796,11 +1796,11 @@ Notiz:
     </message>
     <message>
       <source>System Modules Folder:\nThe folder where system modules are loaded from.</source>
-      <translation type="unfinished">System Modules Folder:\nThe folder where system modules are loaded from.</translation>
+      <translation>PS4 sysmodules-Pfad:\nDer Ordner, aus denen die sysmodules der PS4 geladen werden können.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Modules folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the System Modules folder.</translation>
+      <translation>Durchsuchen:\nLege einen Ordner für sysmodules fest.</translation>
     </message>
     <message>
       <source>Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</source>
@@ -1910,7 +1910,7 @@ Notiz:
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Versionsverwaltung</translation>
     </message>
     <message>
       <source>Path to save versions</source>
@@ -1918,123 +1918,123 @@ Notiz:
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Durchsuchen</translation>
     </message>
     <message>
       <source>Installed</source>
-      <translation type="unfinished">Installed</translation>
+      <translation>Installiert</translation>
     </message>
     <message>
       <source>Selected</source>
-      <translation type="unfinished">Selected</translation>
+      <translation>Ausgewählt</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Version</translation>
     </message>
     <message>
       <source>Codename</source>
-      <translation type="unfinished">Codename</translation>
+      <translation>Codename</translation>
     </message>
     <message>
       <source>Date</source>
-      <translation type="unfinished">Date</translation>
+      <translation>Datum</translation>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation type="unfinished">Add Custom</translation>
+      <translation>Eigene hinzufügen</translation>
     </message>
     <message>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Löschen</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation type="unfinished">Refresh List</translation>
+      <translation>Liste aktualisieren</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation type="unfinished">Download</translation>
+      <translation>Download</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+      <translation>Beim Start nach Updates für Vorabversion suchen</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Changelog immer anzeigen</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation type="unfinished">Check for Pre-release Updates</translation>
+      <translation>Suche nach Updates für Vorabversion</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>Wähle einen Ordner, in denen die Emulator-Versionen installiert werden</translation>
     </message>
     <message>
       <source>Select executable</source>
-      <translation type="unfinished">Select executable</translation>
+      <translation>Ausführbare Datei auswählen</translation>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation type="unfinished">Executable (*.exe)</translation>
+      <translation>Ausführbare Datei (*.exe)</translation>
     </message>
     <message>
       <source>Version name</source>
-      <translation type="unfinished">Version name</translation>
+      <translation>Versionsname</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>Gebe einen Namen für diese Version an, wie er in der Liste angezeigt werden soll.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Fehler</translation>
     </message>
     <message>
       <source>A version with that name already exists.</source>
-      <translation type="unfinished">A version with that name already exists.</translation>
+      <translation>Eine Version mit diesem Namen existiert bereits.</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Lokal</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Erfolgreich</translation>
     </message>
     <message>
       <source>Version added successfully.</source>
-      <translation type="unfinished">Version added successfully.</translation>
+      <translation>Version wurde erfolgreich hinzugefügt.</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Keine Version ausgewählt. Bitte eine Version aus der Liste auswählen, die gelöscht werden soll.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation type="unfinished">Failed to determine the folder path.</translation>
+      <translation>Ordnerpfad konnte nicht ermittelt werden.</translation>
     </message>
     <message>
       <source>Delete version</source>
-      <translation type="unfinished">Delete version</translation>
+      <translation>Version löschen</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation type="unfinished">Do you want to delete the version</translation>
+      <translation>Soll die ausgewählte Version gelöscht werden</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>Der zu löschende Ordner konnte nicht ermittelt werden.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Ordner konnte nicht gelöscht werden.</translation>
     </message>
     <message>
       <source>Checking for new emulator versions...</source>
-      <translation type="unfinished">Checking for new emulator versions...</translation>
+      <translation>Suche nach neuen Emulator-Versionen...</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
@@ -2044,15 +2044,15 @@ Notiz:
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>Download bestätigen</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation type="unfinished">Do you want to download the version</translation>
+      <translation>Möchten Sie diese Version downloaden</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation type="unfinished">No files available for this platform.</translation>
+      <translation>Keine Dateien für diese Plattform verfügbar.</translation>
     </message>
     <message>
       <source>Downloading</source>
@@ -2060,15 +2060,15 @@ Notiz:
     </message>
     <message>
       <source>Error accessing GitHub</source>
-      <translation type="unfinished">Error accessing GitHub</translation>
+      <translation>Fehler beim Zugriff auf GitHub</translation>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
-      <translation type="unfinished">Version %1 has been downloaded and selected.</translation>
+      <translation>Version %1 wurde downgeloadet und ausgewählt.</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation type="unfinished">Failed to create zip extraction script</translation>
+      <translation>Fehler beim Erstellen des Zip-Extraktionsskripts</translation>
     </message>
     <message>
       <source>Cannot open cache file</source>
@@ -2080,63 +2080,63 @@ Notiz:
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+      <translation>Die GitHub-API-Antwort ist kein gültiges JSON-Array.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>Hash der neuesten Vorabversion konnte nicht abgerufen werden.</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
-      <translation type="unfinished">Auto Updater - Emulator</translation>
+      <translation>Automatische Updates - Emulator</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation type="unfinished">You already have the latest pre-release version.</translation>
+      <translation>Sie haben bereits die aktuellste Vorabversion.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
-      <translation type="unfinished">Update Available (Emulator)</translation>
+      <translation>Update verfügbar (Emulator)</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Aktuelle Version</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Neueste Version</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Möchten Sie updaten?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Update</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Nein</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>Changelog anzeigen</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>Changelog verbergen</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation type="unfinished">Network error while fetching changelog</translation>
+      <translation>Netzwerkfehler beim Abrufen des Changelogs</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Änderungen</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>Keine Download-URL für das ausgewählte Asset gefunden.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly)</source>
@@ -2144,23 +2144,23 @@ Notiz:
     </message>
     <message>
       <source>Network error while downloading</source>
-      <translation type="unfinished">Network error while downloading</translation>
+      <translation>Netzwerkfehler beim Download</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
-      <translation type="unfinished">Extraction failure.</translation>
+      <translation>Entpacken fehlgeschlagen.</translation>
     </message>
     <message>
       <source>Complete installation</source>
-      <translation type="unfinished">Complete installation</translation>
+      <translation>Installation abgeschlossen</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) updated successfully.</source>
-      <translation type="unfinished">Pre-release (Nightly) updated successfully.</translation>
+      <translation>Vorabversion (Nightly) erfolgreich upgedatet.</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation type="unfinished">Failed to create the update script file</translation>
+      <translation>Fehler beim Erstellen der Update-Skript-Datei</translation>
     </message>
   </context>
 </TS>
