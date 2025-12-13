@@ -1022,7 +1022,7 @@ Notat:
     </message>
     <message>
       <source>Body #%1</source>
-      <translation type="unfinished">Body #%1</translation>
+      <translation>Innhold #%1</translation>
     </message>
     <message>
       <source>JSON Files (*.json)</source>
