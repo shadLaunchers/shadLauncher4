@@ -2,7 +2,7 @@
 <!-- SPDX-FileCopyrightText: Copyright 2025 shadLauncher4 Project
      SPDX-License-Identifier: GPL-2.0-or-later -->
 <!DOCTYPE TS>
-<TS version="2.1" sourcelanguage="en_US" language="pt-BR">
+<TS version="2.1" sourcelanguage="en_US" language="hu">
   <context>
     <name>ChangelogDialog</name>
     <message>
@@ -392,7 +392,7 @@ All fields must be valid hex strings with even length.</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation>Fechar</translation>
+      <translation type="unfinished">Close</translation>
     </message>
     <message>
       <source>Warning</source>

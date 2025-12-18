@@ -2,7 +2,7 @@
 <!-- SPDX-FileCopyrightText: Copyright 2025 shadLauncher4 Project
      SPDX-License-Identifier: GPL-2.0-or-later -->
 <!DOCTYPE TS>
-<TS version="2.1" sourcelanguage="en_US" language="pt-BR">
+<TS version="2.1" sourcelanguage="en_US" language="uk">
   <context>
     <name>ChangelogDialog</name>
     <message>
@@ -392,7 +392,7 @@ All fields must be valid hex strings with even length.</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation>Fechar</translation>
+      <translation type="unfinished">Close</translation>
     </message>
     <message>
       <source>Warning</source>
@@ -960,11 +960,15 @@ Notes:
       <translation type="unfinished">
         <numerusform>%Ln day(s)</numerusform>
         <numerusform>%Ln day(s)</numerusform>
+        <numerusform>%Ln day(s)</numerusform>
+        <numerusform>%Ln day(s)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%Ln hour(s)</source>
       <translation type="unfinished">
+        <numerusform>%Ln hour(s)</numerusform>
+        <numerusform>%Ln hour(s)</numerusform>
         <numerusform>%Ln hour(s)</numerusform>
         <numerusform>%Ln hour(s)</numerusform>
       </translation>
@@ -974,11 +978,15 @@ Notes:
       <translation type="unfinished">
         <numerusform>%Ln minute(s)</numerusform>
         <numerusform>%Ln minute(s)</numerusform>
+        <numerusform>%Ln minute(s)</numerusform>
+        <numerusform>%Ln minute(s)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%Ln second(s)</source>
       <translation type="unfinished">
+        <numerusform>%Ln second(s)</numerusform>
+        <numerusform>%Ln second(s)</numerusform>
         <numerusform>%Ln second(s)</numerusform>
         <numerusform>%Ln second(s)</numerusform>
       </translation>

@@ -4,6 +4,295 @@
 <!DOCTYPE TS>
 <TS version="2.1" sourcelanguage="en_US" language="de">
   <context>
+    <name>ChangelogDialog</name>
+    <message>
+      <source>Changelog Viewer</source>
+      <translation type="unfinished">Changelog Viewer</translation>
+    </message>
+    <message>
+      <source>Search in changelog...</source>
+      <translation type="unfinished">Search in changelog...</translation>
+    </message>
+    <message>
+      <source>Copy</source>
+      <translation type="unfinished">Copy</translation>
+    </message>
+    <message>
+      <source>Export…</source>
+      <translation type="unfinished">Export…</translation>
+    </message>
+    <message>
+      <source>Export Changelog</source>
+      <translation type="unfinished">Export Changelog</translation>
+    </message>
+    <message>
+      <source>Changelog Error</source>
+      <translation type="unfinished">Changelog Error</translation>
+    </message>
+    <message>
+      <source>Failed to open changelog file:
+%1</source>
+      <translation type="unfinished">Failed to open changelog file:
+%1</translation>
+    </message>
+    <message>
+      <source>XML Error</source>
+      <translation type="unfinished">XML Error</translation>
+    </message>
+    <message>
+      <source>Parse error at line %1, column %2:
+%3</source>
+      <translation type="unfinished">Parse error at line %1, column %2:
+%3</translation>
+    </message>
+  </context>
+  <context>
+    <name>CheatsPatches</name>
+    <message>
+      <source>Cheats / Patches for </source>
+      <translation type="unfinished">Cheats / Patches for </translation>
+    </message>
+    <message>
+      <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
+      <translation type="unfinished">Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</translation>
+    </message>
+    <message>
+      <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
+      <translation type="unfinished">No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</translation>
+    </message>
+    <message>
+      <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
+      <translation type="unfinished">You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</translation>
+    </message>
+    <message>
+      <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</source>
+      <translation type="unfinished">Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</translation>
+    </message>
+    <message>
+      <source>No Image Available</source>
+      <translation type="unfinished">No Image Available</translation>
+    </message>
+    <message>
+      <source>Serial: </source>
+      <translation type="unfinished">Serial: </translation>
+    </message>
+    <message>
+      <source>Version: </source>
+      <translation type="unfinished">Version: </translation>
+    </message>
+    <message>
+      <source>Size: </source>
+      <translation type="unfinished">Size: </translation>
+    </message>
+    <message>
+      <source>Delete File</source>
+      <translation type="unfinished">Delete File</translation>
+    </message>
+    <message>
+      <source>No files selected.</source>
+      <translation type="unfinished">No files selected.</translation>
+    </message>
+    <message>
+      <source>You can delete the cheats you don&apos;t want after downloading them.</source>
+      <translation type="unfinished">You can delete the cheats you don&apos;t want after downloading them.</translation>
+    </message>
+    <message>
+      <source>Do you want to delete the selected file?\n%1</source>
+      <translation type="unfinished">Do you want to delete the selected file?\n%1</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>No patch selected.</source>
+      <translation type="unfinished">No patch selected.</translation>
+    </message>
+    <message>
+      <source>Unable to open files.json for reading.</source>
+      <translation type="unfinished">Unable to open files.json for reading.</translation>
+    </message>
+    <message>
+      <source>No patch file found for the current serial.</source>
+      <translation type="unfinished">No patch file found for the current serial.</translation>
+    </message>
+    <message>
+      <source>Unable to open the file for reading.</source>
+      <translation type="unfinished">Unable to open the file for reading.</translation>
+    </message>
+    <message>
+      <source>Unable to open the file for writing.</source>
+      <translation type="unfinished">Unable to open the file for writing.</translation>
+    </message>
+    <message>
+      <source>Failed to parse XML: </source>
+      <translation type="unfinished">Failed to parse XML: </translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation type="unfinished">Success</translation>
+    </message>
+    <message>
+      <source>Options saved successfully.</source>
+      <translation type="unfinished">Options saved successfully.</translation>
+    </message>
+    <message>
+      <source>Invalid Source</source>
+      <translation type="unfinished">Invalid Source</translation>
+    </message>
+    <message>
+      <source>Selected repository does not support cheats.</source>
+      <translation type="unfinished">Selected repository does not support cheats.</translation>
+    </message>
+    <message>
+      <source>Download Error</source>
+      <translation type="unfinished">Download Error</translation>
+    </message>
+    <message>
+      <source>Cheats Not Found</source>
+      <translation type="unfinished">Cheats Not Found</translation>
+    </message>
+    <message>
+      <source>Downloading cheat index...</source>
+      <translation type="unfinished">Downloading cheat index...</translation>
+    </message>
+    <message>
+      <source>Selected repository does not support patches.</source>
+      <translation type="unfinished">Selected repository does not support patches.</translation>
+    </message>
+    <message>
+      <source>Download Complete</source>
+      <translation type="unfinished">Download Complete</translation>
+    </message>
+    <message>
+      <source>Downloading patches...</source>
+      <translation type="unfinished">Downloading patches...</translation>
+    </message>
+    <message>
+      <source>Failed to open file:</source>
+      <translation type="unfinished">Failed to open file:</translation>
+    </message>
+    <message>
+      <source>XML ERROR:</source>
+      <translation type="unfinished">XML ERROR:</translation>
+    </message>
+    <message>
+      <source>The game is in version: %1</source>
+      <translation type="unfinished">The game is in version: %1</translation>
+    </message>
+    <message>
+      <source>The downloaded patch only works on version: %1</source>
+      <translation type="unfinished">The downloaded patch only works on version: %1</translation>
+    </message>
+    <message>
+      <source>You may need to update your game.</source>
+      <translation type="unfinished">You may need to update your game.</translation>
+    </message>
+    <message>
+      <source>Incompatibility Notice</source>
+      <translation type="unfinished">Incompatibility Notice</translation>
+    </message>
+    <message>
+      <source>Failed to open files.json for writing</source>
+      <translation type="unfinished">Failed to open files.json for writing</translation>
+    </message>
+    <message>
+      <source>Author: </source>
+      <translation type="unfinished">Author: </translation>
+    </message>
+    <message>
+      <source>Directory does not exist:</source>
+      <translation type="unfinished">Directory does not exist:</translation>
+    </message>
+    <message>
+      <source>Failed to open files.json for reading.</source>
+      <translation type="unfinished">Failed to open files.json for reading.</translation>
+    </message>
+    <message>
+      <source>Name:</source>
+      <translation type="unfinished">Name:</translation>
+    </message>
+    <message>
+      <source>Can&apos;t apply cheats before the game is started</source>
+      <translation type="unfinished">Can&apos;t apply cheats before the game is started</translation>
+    </message>
+  </context>
+  <context>
+    <name>CheatsPatchesDialog</name>
+    <message>
+      <source>Cheats / Patches</source>
+      <translation type="unfinished">Cheats / Patches</translation>
+    </message>
+    <message>
+      <source>Game Info</source>
+      <translation type="unfinished">Game Info</translation>
+    </message>
+    <message>
+      <source>No Image Available</source>
+      <translation type="unfinished">No Image Available</translation>
+    </message>
+    <message>
+      <source>Game Name</source>
+      <translation type="unfinished">Game Name</translation>
+    </message>
+    <message>
+      <source>Serial: </source>
+      <translation type="unfinished">Serial: </translation>
+    </message>
+    <message>
+      <source>Version: </source>
+      <translation type="unfinished">Version: </translation>
+    </message>
+    <message>
+      <source>Size: </source>
+      <translation type="unfinished">Size: </translation>
+    </message>
+    <message>
+      <source>Cheats/Patches are experimental. Use with caution...</source>
+      <translation type="unfinished">Cheats/Patches are experimental. Use with caution...</translation>
+    </message>
+    <message>
+      <source>Cheats</source>
+      <translation type="unfinished">Cheats</translation>
+    </message>
+    <message>
+      <source>Select Cheat File:</source>
+      <translation type="unfinished">Select Cheat File:</translation>
+    </message>
+    <message>
+      <source>Repository:</source>
+      <translation type="unfinished">Repository:</translation>
+    </message>
+    <message>
+      <source>Download Cheats</source>
+      <translation type="unfinished">Download Cheats</translation>
+    </message>
+    <message>
+      <source>Delete File</source>
+      <translation type="unfinished">Delete File</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation type="unfinished">Close</translation>
+    </message>
+    <message>
+      <source>Patches</source>
+      <translation type="unfinished">Patches</translation>
+    </message>
+    <message>
+      <source>Select Patch File:</source>
+      <translation type="unfinished">Select Patch File:</translation>
+    </message>
+    <message>
+      <source>Download Patches</source>
+      <translation type="unfinished">Download Patches</translation>
+    </message>
+    <message>
+      <source>Save</source>
+      <translation type="unfinished">Save</translation>
+    </message>
+  </context>
+  <context>
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
@@ -14,10 +303,6 @@
 Must be a valid hex string with even length.</source>
       <translation>Trophäen-Schlüssel: Wird für die Entschlüsselung der Trophäen verwendet.
 Muss ein gültiger Hex-Wert mit gleicher Länge sein.</translation>
-    </message>
-    <message>
-      <source>Enter Trophy Key (hex)</source>
-      <translation>Trophäen-Schlüssel (hex) eingeben</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
@@ -36,44 +321,40 @@ Muss ein gültiger Hex-Wert mit gleicher Länge sein.</translation>
       <translation>%1:</translation>
     </message>
     <message>
-      <source>Enter %1 (hex)</source>
-      <translation>%1 (hex) eingeben</translation>
-    </message>
-    <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>Exponent1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>Exponent2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>Öffentlicher Exponent</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Koeffizient</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>Modulo</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>Primzahl 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>Primzahl 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Privater Exponent</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>Falscher Schlüsselset</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
@@ -83,7 +364,7 @@ Alle Felder müssen gültige Hex-Werte mit gleicher Länge sein.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>Debug Rif Schlüsselset</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
@@ -93,7 +374,7 @@ Alle Felder müssen gültige Hex-Werte mit gleicher Länge sein.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>PKG-basierter Schlüssel 3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
@@ -125,11 +406,7 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
-    </message>
-    <message>
-      <source>Please fix invalid hex values before saving.</source>
-      <translation>Bitte korrigiere die ungültigen Hex-Werte vor dem Speichern.</translation>
+      <translation>Überprüfungsfehler</translation>
     </message>
     <message>
       <source>Success</source>
@@ -186,6 +463,22 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     <message>
       <source>Keys successfully loaded from JSON!</source>
       <translation>Schlüssel erfolgreich aus JSON geladen!</translation>
+    </message>
+    <message>
+      <source>Enter Trophy Key</source>
+      <translation type="unfinished">Enter Trophy Key</translation>
+    </message>
+    <message>
+      <source>Enter %1</source>
+      <translation type="unfinished">Enter %1</translation>
+    </message>
+    <message>
+      <source>Trophy Key contains invalid hex or has odd length.</source>
+      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+    </message>
+    <message>
+      <source>%1 contains invalid hex or has odd length.</source>
+      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
     </message>
   </context>
   <context>
@@ -330,7 +623,7 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>The DLC dump location could not be created.</source>
-      <translation type="unfinished">The DLC dump location could not be created.</translation>
+      <translation>Der Ordner für die DLC-Dumps konnte nicht erstellt werden.</translation>
     </message>
     <message>
       <source>The location for installing emulator versions is not valid.</source>
@@ -338,7 +631,7 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>The emulator version location could not be created.</source>
-      <translation type="unfinished">The emulator version location could not be created.</translation>
+      <translation>Der Ordner für die Emulator-Versionen konnte nicht erstellt werden.</translation>
     </message>
   </context>
   <context>
@@ -561,11 +854,15 @@ Benutze lokale Datenbank.
     </message>
     <message>
       <source>&amp;npbind.dat viewer</source>
-      <translation type="unfinished">&amp;npbind.dat viewer</translation>
+      <translation>&amp;npbind.dat anzeigen</translation>
     </message>
     <message>
       <source>&amp;Trophy Viewer</source>
-      <translation type="unfinished">&amp;Trophy Viewer</translation>
+      <translation>&amp;Trophäen anzeigen</translation>
+    </message>
+    <message>
+      <source>&amp;Cheats &amp; Patches</source>
+      <translation type="unfinished">&amp;Cheats &amp; Patches</translation>
     </message>
   </context>
   <context>
@@ -628,6 +925,25 @@ Notiz:
     <message>
       <source>Last updated</source>
       <translation>Leztes update</translation>
+    </message>
+  </context>
+  <context>
+    <name>InstallDirSelect</name>
+    <message>
+      <source>shadLauncher4 - Choose directory</source>
+      <translation type="unfinished">shadLauncher4 - Choose directory</translation>
+    </message>
+    <message>
+      <source>Select which directory you want to install to.</source>
+      <translation type="unfinished">Select which directory you want to install to.</translation>
+    </message>
+    <message>
+      <source>Install All Queued to Selected Folder</source>
+      <translation type="unfinished">Install All Queued to Selected Folder</translation>
+    </message>
+    <message>
+      <source>Delete PKG File on Install</source>
+      <translation type="unfinished">Delete PKG File on Install</translation>
     </message>
   </context>
   <context>
@@ -878,10 +1194,6 @@ Notiz:
       <translation>Versteckte Einträge anzeigen</translation>
     </message>
     <message>
-      <source>Add Games</source>
-      <translation>Spiele hinzufügen</translation>
-    </message>
-    <message>
       <source>Show Title Bars</source>
       <translation>Titleleiste anzeigen</translation>
     </message>
@@ -926,10 +1238,6 @@ Notiz:
       <translation>Grafik</translation>
     </message>
     <message>
-      <source>User</source>
-      <translation>Benutzer</translation>
-    </message>
-    <message>
       <source>Input</source>
       <translation>Eingabe</translation>
     </message>
@@ -961,12 +1269,92 @@ Notiz:
       <source>None</source>
       <translation>Keine</translation>
     </message>
+    <message>
+      <source>Install Packages (PKG)</source>
+      <translation type="unfinished">Install Packages (PKG)</translation>
+    </message>
+    <message>
+      <source>Install application from a .pkg file</source>
+      <translation type="unfinished">Install application from a .pkg file</translation>
+    </message>
+    <message>
+      <source>PKG File (*.PKG *.pkg)</source>
+      <translation type="unfinished">PKG File (*.PKG *.pkg)</translation>
+    </message>
+    <message>
+      <source>PKG ERROR</source>
+      <translation type="unfinished">PKG ERROR</translation>
+    </message>
+    <message>
+      <source>PKG Extraction</source>
+      <translation type="unfinished">PKG Extraction</translation>
+    </message>
+    <message>
+      <source>Patch detected!</source>
+      <translation type="unfinished">Patch detected!</translation>
+    </message>
+    <message>
+      <source>PKG and Game versions match: </source>
+      <translation type="unfinished">PKG and Game versions match: </translation>
+    </message>
+    <message>
+      <source>Would you like to overwrite?</source>
+      <translation type="unfinished">Would you like to overwrite?</translation>
+    </message>
+    <message>
+      <source>PKG Version %1 is older than installed version: </source>
+      <translation type="unfinished">PKG Version %1 is older than installed version: </translation>
+    </message>
+    <message>
+      <source>Game is installed: </source>
+      <translation type="unfinished">Game is installed: </translation>
+    </message>
+    <message>
+      <source>Would you like to install Patch: </source>
+      <translation type="unfinished">Would you like to install Patch: </translation>
+    </message>
+    <message>
+      <source>DLC Installation</source>
+      <translation type="unfinished">DLC Installation</translation>
+    </message>
+    <message>
+      <source>Would you like to install DLC: %1?</source>
+      <translation type="unfinished">Would you like to install DLC: %1?</translation>
+    </message>
+    <message>
+      <source>DLC already installed:</source>
+      <translation type="unfinished">DLC already installed:</translation>
+    </message>
+    <message>
+      <source>Game already installed</source>
+      <translation type="unfinished">Game already installed</translation>
+    </message>
+    <message>
+      <source>PKG is a patch or DLC, please install the game first!</source>
+      <translation type="unfinished">PKG is a patch or DLC, please install the game first!</translation>
+    </message>
+    <message>
+      <source>Extracting PKG %1/%2</source>
+      <translation type="unfinished">Extracting PKG %1/%2</translation>
+    </message>
+    <message>
+      <source>Extraction Finished</source>
+      <translation type="unfinished">Extraction Finished</translation>
+    </message>
+    <message>
+      <source>Game successfully installed at %1</source>
+      <translation type="unfinished">Game successfully installed at %1</translation>
+    </message>
+    <message>
+      <source>File doesn&apos;t appear to be a valid PKG file</source>
+      <translation type="unfinished">File doesn&apos;t appear to be a valid PKG file</translation>
+    </message>
   </context>
   <context>
     <name>NpBindDialog</name>
     <message>
       <source>npbind.dat Viewer</source>
-      <translation type="unfinished">npbind.dat Viewer</translation>
+      <translation>npbind.dat-Ansicht</translation>
     </message>
     <message>
       <source>Error</source>
@@ -978,11 +1366,11 @@ Notiz:
     </message>
     <message>
       <source>Entry Type:</source>
-      <translation type="unfinished">Entry Type:</translation>
+      <translation>Eintragstyp:</translation>
     </message>
     <message>
       <source>Entry Size:</source>
-      <translation type="unfinished">Entry Size:</translation>
+      <translation>Eintragsgröße:</translation>
     </message>
     <message>
       <source>NPCommID:</source>
@@ -1301,7 +1689,7 @@ Notiz:
     </message>
     <message>
       <source>Directory Scan Depth</source>
-      <translation type="unfinished">Directory Scan Depth</translation>
+      <translation>Verzeichnis-Scantiefe</translation>
     </message>
     <message>
       <source>1</source>
@@ -1396,14 +1784,6 @@ Notiz:
       <translation>RCAS Dämpfung:</translation>
     </message>
     <message>
-      <source>User</source>
-      <translation>Benutzer</translation>
-    </message>
-    <message>
-      <source>Username</source>
-      <translation>Benutzername</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>Trophäe</translation>
     </message>
@@ -1438,14 +1818,6 @@ Notiz:
     <message>
       <source>Open the custom trophy images/sounds folder</source>
       <translation>Öffne den benutzerdefinierten Ordner für Trophäenbilder/Sounds</translation>
-    </message>
-    <message>
-      <source>Portable User Folder</source>
-      <translation type="unfinished">Portable User Folder</translation>
-    </message>
-    <message>
-      <source>Create Portable User Folder from Common User Folder</source>
-      <translation type="unfinished">Create Portable User Folder from Common User Folder</translation>
     </message>
     <message>
       <source>Input</source>
@@ -1513,7 +1885,7 @@ Notiz:
     </message>
     <message>
       <source>Home Path</source>
-      <translation type="unfinished">Home Path</translation>
+      <translation>Benutzerdaten-Pfad</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
@@ -1713,7 +2085,7 @@ Notiz:
     </message>
     <message>
       <source>Select directory for home</source>
-      <translation type="unfinished">Select directory for home</translation>
+      <translation>Wähle ein Verzeichnis für Benutzerdaten</translation>
     </message>
     <message>
       <source>Select directory for System modules</source>
@@ -1737,7 +2109,7 @@ Notiz:
     </message>
     <message>
       <source>Are you sure you want to restore all settings to their default values?</source>
-      <translation type="unfinished">Are you sure you want to restore all settings to their default values?</translation>
+      <translation>Möchten Sie wirklich alle Einstellungen auf die Standardwerte zurücksetzen?</translation>
     </message>
     <message>
       <source>Save</source>
@@ -1757,11 +2129,23 @@ Notiz:
     </message>
     <message>
       <source>Frontend Settings</source>
-      <translation type="unfinished">Frontend Settings</translation>
+      <translation>Benutzeroberflächen Einstellungen</translation>
     </message>
     <message>
       <source>Default Device</source>
       <translation>Standardgerät</translation>
+    </message>
+    <message>
+      <source>PKG Installer</source>
+      <translation type="unfinished">PKG Installer</translation>
+    </message>
+    <message>
+      <source>Use Separate Update Folder</source>
+      <translation type="unfinished">Use Separate Update Folder</translation>
+    </message>
+    <message>
+      <source>Discord Rich Presence</source>
+      <translation type="unfinished">Discord Rich Presence</translation>
     </message>
   </context>
   <context>
@@ -1776,7 +2160,7 @@ Notiz:
     </message>
     <message>
       <source>Remove Folder:\nRemove the selected folder from the list of game installation folders.</source>
-      <translation type="unfinished">Remove Folder:\nRemove the selected folder from the list of game installation folders.</translation>
+      <translation>Ordner entfernen:\nEntfernt den ausgewählten Ordner von der Liste der Spielinstallationsordner.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
@@ -1788,11 +2172,11 @@ Notiz:
     </message>
     <message>
       <source>Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</source>
-      <translation type="unfinished">Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</translation>
+      <translation>Benutzerdatenordner:\nDer Ordner, wo der Emulator die Benutzerdaten wie Speicherdaten und Trophäen.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the Home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the Home folder.</translation>
+      <translation>Durchsuchen:\nLege einen Ordner für Benutzerdaten fest.</translation>
     </message>
     <message>
       <source>System Modules Folder:\nThe folder where system modules are loaded from.</source>
@@ -1804,7 +2188,7 @@ Notiz:
     </message>
     <message>
       <source>Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</source>
-      <translation type="unfinished">Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</translation>
+      <translation>Verzeichnis-Scantiefe:\nLegt die maximale Tiefe beim Scannen von Spielen in den angegebenen Spieleordner fest.\n1 bedeutet, dass eine Ebene der Unterordner gescannt wird und so weiter.</translation>
     </message>
   </context>
   <context>
@@ -1914,7 +2298,7 @@ Notiz:
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>Pfad zum Speichern der Versionen</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2039,8 +2423,8 @@ Notiz:
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>Es muss zuerst ein Pfad festgelegt werden zum Speichern der Versionen in
+&apos;Pfad zum Speichern der Versionen&apos;</translation>
     </message>
     <message>
       <source>Confirm Download</source>
@@ -2056,7 +2440,7 @@ Notiz:
     </message>
     <message>
       <source>Downloading</source>
-      <translation type="unfinished">Downloading</translation>
+      <translation>Wird downgeloadet</translation>
     </message>
     <message>
       <source>Error accessing GitHub</source>
@@ -2072,11 +2456,11 @@ Notiz:
     </message>
     <message>
       <source>Cannot open cache file</source>
-      <translation type="unfinished">Cannot open cache file</translation>
+      <translation>Kann die zwischengespeicherte Datei nicht öffnen</translation>
     </message>
     <message>
       <source>Cache file is corrupted</source>
-      <translation type="unfinished">Cache file is corrupted</translation>
+      <translation>Die zwischengespeicherte Datei ist beschädigt</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
@@ -2140,7 +2524,7 @@ Notiz:
     </message>
     <message>
       <source>Downloading Pre-release (Nightly)</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly)</translation>
+      <translation>Vorabversion (Nightly) wird downgeloadet</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
