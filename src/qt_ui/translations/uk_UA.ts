@@ -7,42 +7,42 @@
     <name>ChangelogDialog</name>
     <message>
       <source>Changelog Viewer</source>
-      <translation type="unfinished">Changelog Viewer</translation>
+      <translation>Перегляд списку змін</translation>
     </message>
     <message>
       <source>Search in changelog...</source>
-      <translation type="unfinished">Search in changelog...</translation>
+      <translation>Пошук у списку змін...</translation>
     </message>
     <message>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>Копіювати</translation>
     </message>
     <message>
       <source>Export…</source>
-      <translation type="unfinished">Export…</translation>
+      <translation>Експортування…</translation>
     </message>
     <message>
       <source>Export Changelog</source>
-      <translation type="unfinished">Export Changelog</translation>
+      <translation>Експортувати список змін</translation>
     </message>
     <message>
       <source>Changelog Error</source>
-      <translation type="unfinished">Changelog Error</translation>
+      <translation>Помилка списку змін</translation>
     </message>
     <message>
       <source>Failed to open changelog file:
 %1</source>
-      <translation type="unfinished">Failed to open changelog file:
+      <translation>Не вдалося відкрити файл списку змін:
 %1</translation>
     </message>
     <message>
       <source>XML Error</source>
-      <translation type="unfinished">XML Error</translation>
+      <translation>Помилка XML</translation>
     </message>
     <message>
       <source>Parse error at line %1, column %2:
 %3</source>
-      <translation type="unfinished">Parse error at line %1, column %2:
+      <translation>Помилка аналізу в %1 рядку, %2 стовпці:
 %3</translation>
     </message>
   </context>
@@ -50,75 +50,75 @@
     <name>CheatsPatches</name>
     <message>
       <source>Cheats / Patches for </source>
-      <translation type="unfinished">Cheats / Patches for </translation>
+      <translation>Чити / Патчі для </translation>
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation type="unfinished">Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</translation>
+      <translation>Чити / Патчі є експериментальними.\nВикористовуйте їх з обережністю.\n\nЗавантажуйте чити окремо, вибравши репозиторій і натиснувши кнопку завантаження.\nУ вкладці «Патчі» ви можете завантажити їх всі одночасно, вибрати ті, які хочете використовувати, і зберегти свій вибір.\n\nОскільки ми не розробляємо чити / патчі,\nпро проблеми повідомляйте автору чита.\n\nСтворили новий чит? Відвідайте:\n</translation>
     </message>
     <message>
       <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
-      <translation type="unfinished">No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</translation>
+      <translation>У цій версії вибраного репозиторію не знайдено читів для цієї гри. Спробуйте інший репозиторій або іншу версію гри.</translation>
     </message>
     <message>
       <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
-      <translation type="unfinished">You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</translation>
+      <translation>Ви успішно завантажили чити для цієї версії гри з вибраного репозиторію. Ви можете спробувати завантажити з іншого, якщо він доступний, його також можна буде використовувати, вибравши файл зі списку.</translation>
     </message>
     <message>
       <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</source>
-      <translation type="unfinished">Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</translation>
+      <translation>Патчі завантажено успішно! Всі патчі, доступні для всіх ігор, були завантажені, нема потреби завантажувати їх окремо для кожної гри, як це відбувається в «Читах». Якщо патч не з’являється, можливо, він не існує для конкретного серійного номера та версії гри.</translation>
     </message>
     <message>
       <source>No Image Available</source>
-      <translation type="unfinished">No Image Available</translation>
+      <translation>Зображення відсутнє</translation>
     </message>
     <message>
       <source>Serial: </source>
-      <translation type="unfinished">Serial: </translation>
+      <translation>Серійний номер: </translation>
     </message>
     <message>
       <source>Version: </source>
-      <translation type="unfinished">Version: </translation>
+      <translation>Версія: </translation>
     </message>
     <message>
       <source>Size: </source>
-      <translation type="unfinished">Size: </translation>
+      <translation>Розмір: </translation>
     </message>
     <message>
       <source>Delete File</source>
-      <translation type="unfinished">Delete File</translation>
+      <translation>Видалити файл</translation>
     </message>
     <message>
       <source>No files selected.</source>
-      <translation type="unfinished">No files selected.</translation>
+      <translation>Файли не вибрані.</translation>
     </message>
     <message>
       <source>You can delete the cheats you don&apos;t want after downloading them.</source>
-      <translation type="unfinished">You can delete the cheats you don&apos;t want after downloading them.</translation>
+      <translation>Ви можете видалити непотрібні чити після їхнього завантаження.</translation>
     </message>
     <message>
       <source>Do you want to delete the selected file?\n%1</source>
-      <translation type="unfinished">Do you want to delete the selected file?\n%1</translation>
+      <translation>Ви хочете видалити вибраний файл?\n%1</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>No patch selected.</source>
-      <translation type="unfinished">No patch selected.</translation>
+      <translation>Патч не вибрано.</translation>
     </message>
     <message>
       <source>Unable to open files.json for reading.</source>
-      <translation type="unfinished">Unable to open files.json for reading.</translation>
+      <translation>Не вдалось відкрити files.json для читання.</translation>
     </message>
     <message>
       <source>No patch file found for the current serial.</source>
-      <translation type="unfinished">No patch file found for the current serial.</translation>
+      <translation>Файл патча для поточного серійного номера не знайдено.</translation>
     </message>
     <message>
       <source>Unable to open the file for reading.</source>
-      <translation type="unfinished">Unable to open the file for reading.</translation>
+      <translation>Не вдалося відкрити файл для читання.</translation>
     </message>
     <message>
       <source>Unable to open the file for writing.</source>
