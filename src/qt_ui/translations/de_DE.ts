@@ -7,11 +7,11 @@
     <name>ChangelogDialog</name>
     <message>
       <source>Changelog Viewer</source>
-      <translation type="unfinished">Changelog Viewer</translation>
+      <translation>Changelog Ansicht</translation>
     </message>
     <message>
       <source>Search in changelog...</source>
-      <translation type="unfinished">Search in changelog...</translation>
+      <translation>Im Changelog suchen...</translation>
     </message>
     <message>
       <source>Copy</source>
@@ -42,7 +42,7 @@
     <message>
       <source>Parse error at line %1, column %2:
 %3</source>
-      <translation type="unfinished">Parse error at line %1, column %2:
+      <translation>Analyse-Fehler in Zeile %1, Spalte %2:
 %3</translation>
     </message>
   </context>
@@ -54,19 +54,19 @@
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation type="unfinished">Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</translation>
+      <translation>Cheats/Patches sind experimentell.\nMit Vorsicht verwenden.\n\nLade Cheats einzeln herunter nachdem die Quelle ausgewählt wurde und dann auf die Download-Button klickst.\nIn der Registerkarte Patches können alle Patches auf einmal downgeloadet werden, auswählen, welche verwendet werden sollen, und die Auswahl speichern.\n\nDa wir die Cheats/Patches nicht entwickeln,\nmeldet die Probleme an den Cheat-Ersteller.\n\nHast du einen neuen Cheat erstellt? Besuche:\n</translation>
     </message>
     <message>
       <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
-      <translation type="unfinished">No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</translation>
+      <translation>Keine Cheats für dieses Spiel, in dieser Version, in der ausgewählten Quelle gefunden. Versuche eine andere Quelle oder eine andere Version des Spiels.</translation>
     </message>
     <message>
       <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
-      <translation type="unfinished">You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</translation>
+      <translation>Cheats wurden erfolgreich für diese Version des Spiels, aus der ausgewählten Quelle, downgeloadet. Es kann auch aus anderen Quellen downgeloadet werden und wenn verfügbar, dann kann man auch diese nutzen, indem man die Datei aus der Liste auswählt.</translation>
     </message>
     <message>
       <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</source>
-      <translation type="unfinished">Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</translation>
+      <translation>Patches wurden erfolgreich downgeloadet! Alle Patches, die für alle Spiele verfügbar waren, wurden downgeloadet. Es ist nicht notwendig die einzeln für jedes Spiel zu downloaden wie es bei den Cheats der Fall ist. Wenn keine Patches angezeigt werden, dann ist es möglich, dass es für diese Seriennummer und Version des Spiels noch keine verfügbar sind.</translation>
     </message>
     <message>
       <source>No Image Available</source>
@@ -94,7 +94,7 @@
     </message>
     <message>
       <source>You can delete the cheats you don&apos;t want after downloading them.</source>
-      <translation type="unfinished">You can delete the cheats you don&apos;t want after downloading them.</translation>
+      <translation>Cheats die nicht mehr gebraucht werden, können nach dem Downloaden gelöscht werden.</translation>
     </message>
     <message>
       <source>Do you want to delete the selected file?\n%1</source>
@@ -110,7 +110,7 @@
     </message>
     <message>
       <source>Unable to open files.json for reading.</source>
-      <translation type="unfinished">Unable to open files.json for reading.</translation>
+      <translation>Kann files.json nicht zum Lesen öffnen.</translation>
     </message>
     <message>
       <source>No patch file found for the current serial.</source>
@@ -118,15 +118,15 @@
     </message>
     <message>
       <source>Unable to open the file for reading.</source>
-      <translation type="unfinished">Unable to open the file for reading.</translation>
+      <translation>Kann die Datei nicht zum Lesen öffnen.</translation>
     </message>
     <message>
       <source>Unable to open the file for writing.</source>
-      <translation type="unfinished">Unable to open the file for writing.</translation>
+      <translation>Kann die Datei nicht zum Schreiben öffnen.</translation>
     </message>
     <message>
       <source>Failed to parse XML: </source>
-      <translation type="unfinished">Failed to parse XML: </translation>
+      <translation>Fehler beim Analysieren der XML: </translation>
     </message>
     <message>
       <source>Success</source>
@@ -142,7 +142,7 @@
     </message>
     <message>
       <source>Selected repository does not support cheats.</source>
-      <translation type="unfinished">Selected repository does not support cheats.</translation>
+      <translation>Ausgewählte Quelle unterstützt keine Cheats.</translation>
     </message>
     <message>
       <source>Download Error</source>
@@ -154,11 +154,11 @@
     </message>
     <message>
       <source>Downloading cheat index...</source>
-      <translation type="unfinished">Downloading cheat index...</translation>
+      <translation>Cheat-Index wird downgeloadet...</translation>
     </message>
     <message>
       <source>Selected repository does not support patches.</source>
-      <translation type="unfinished">Selected repository does not support patches.</translation>
+      <translation>Ausgewählte Quelle unterstützt keine Patches.</translation>
     </message>
     <message>
       <source>Download Complete</source>
@@ -190,11 +190,11 @@
     </message>
     <message>
       <source>Incompatibility Notice</source>
-      <translation type="unfinished">Incompatibility Notice</translation>
+      <translation>Inkompatibilitätshinweis</translation>
     </message>
     <message>
       <source>Failed to open files.json for writing</source>
-      <translation type="unfinished">Failed to open files.json for writing</translation>
+      <translation>Kann files.json nicht zum Schreiben öffnen</translation>
     </message>
     <message>
       <source>Author: </source>
@@ -206,7 +206,7 @@
     </message>
     <message>
       <source>Failed to open files.json for reading.</source>
-      <translation type="unfinished">Failed to open files.json for reading.</translation>
+      <translation>Kann files.json nicht zum Lesen öffnen.</translation>
     </message>
     <message>
       <source>Name:</source>
@@ -225,7 +225,7 @@
     </message>
     <message>
       <source>Game Info</source>
-      <translation type="unfinished">Game Info</translation>
+      <translation>Spielinformationen</translation>
     </message>
     <message>
       <source>No Image Available</source>
@@ -233,7 +233,7 @@
     </message>
     <message>
       <source>Game Name</source>
-      <translation type="unfinished">Game Name</translation>
+      <translation>Spielname</translation>
     </message>
     <message>
       <source>Serial: </source>
@@ -257,11 +257,11 @@
     </message>
     <message>
       <source>Select Cheat File:</source>
-      <translation type="unfinished">Select Cheat File:</translation>
+      <translation>Wähle Cheat-Datei aus:</translation>
     </message>
     <message>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Quelle:</translation>
     </message>
     <message>
       <source>Download Cheats</source>
@@ -281,7 +281,7 @@
     </message>
     <message>
       <source>Select Patch File:</source>
-      <translation type="unfinished">Select Patch File:</translation>
+      <translation>Wähle Patch-Datei aus:</translation>
     </message>
     <message>
       <source>Download Patches</source>
@@ -935,15 +935,15 @@ Notiz:
     </message>
     <message>
       <source>Select which directory you want to install to.</source>
-      <translation type="unfinished">Select which directory you want to install to.</translation>
+      <translation>Wähle ein Verzeichnis aus für die Installation.</translation>
     </message>
     <message>
       <source>Install All Queued to Selected Folder</source>
-      <translation type="unfinished">Install All Queued to Selected Folder</translation>
+      <translation>Installiere alles aus der Warteschlange in den ausgewählten Ordner</translation>
     </message>
     <message>
       <source>Delete PKG File on Install</source>
-      <translation type="unfinished">Delete PKG File on Install</translation>
+      <translation>PKG-Datei nach der Installation löschen</translation>
     </message>
   </context>
   <context>
@@ -1299,7 +1299,7 @@ Notiz:
     </message>
     <message>
       <source>Would you like to overwrite?</source>
-      <translation type="unfinished">Would you like to overwrite?</translation>
+      <translation>Soll dies überschrieben werden?</translation>
     </message>
     <message>
       <source>PKG Version %1 is older than installed version: </source>
@@ -1311,7 +1311,7 @@ Notiz:
     </message>
     <message>
       <source>Would you like to install Patch: </source>
-      <translation type="unfinished">Would you like to install Patch: </translation>
+      <translation>Soll dieser Patch installiert werden: </translation>
     </message>
     <message>
       <source>DLC Installation</source>
@@ -1319,7 +1319,7 @@ Notiz:
     </message>
     <message>
       <source>Would you like to install DLC: %1?</source>
-      <translation type="unfinished">Would you like to install DLC: %1?</translation>
+      <translation>Soll dieses DLC installiert werden:%1?</translation>
     </message>
     <message>
       <source>DLC already installed:</source>
@@ -1343,7 +1343,7 @@ Notiz:
     </message>
     <message>
       <source>Game successfully installed at %1</source>
-      <translation type="unfinished">Game successfully installed at %1</translation>
+      <translation>Spiel wurde erfolgreich installiert in %1</translation>
     </message>
     <message>
       <source>File doesn&apos;t appear to be a valid PKG file</source>
@@ -2141,7 +2141,7 @@ Notiz:
     </message>
     <message>
       <source>Use Separate Update Folder</source>
-      <translation type="unfinished">Use Separate Update Folder</translation>
+      <translation>Separaten Updateordner verwenden</translation>
     </message>
     <message>
       <source>Discord Rich Presence</source>
