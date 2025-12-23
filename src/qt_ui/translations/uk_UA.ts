@@ -122,95 +122,95 @@
     </message>
     <message>
       <source>Unable to open the file for writing.</source>
-      <translation type="unfinished">Unable to open the file for writing.</translation>
+      <translation>Не вдалось відкрити файл для запису.</translation>
     </message>
     <message>
       <source>Failed to parse XML: </source>
-      <translation type="unfinished">Failed to parse XML: </translation>
+      <translation>Не вдалося розібрати XML: </translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Успіх</translation>
     </message>
     <message>
       <source>Options saved successfully.</source>
-      <translation type="unfinished">Options saved successfully.</translation>
+      <translation>Параметри успішно збережено.</translation>
     </message>
     <message>
       <source>Invalid Source</source>
-      <translation type="unfinished">Invalid Source</translation>
+      <translation>Неправильне джерело</translation>
     </message>
     <message>
       <source>Selected repository does not support cheats.</source>
-      <translation type="unfinished">Selected repository does not support cheats.</translation>
+      <translation>Вибраний репозиторій не підтримує чити.</translation>
     </message>
     <message>
       <source>Download Error</source>
-      <translation type="unfinished">Download Error</translation>
+      <translation>Помилка завантаження</translation>
     </message>
     <message>
       <source>Cheats Not Found</source>
-      <translation type="unfinished">Cheats Not Found</translation>
+      <translation>Читів не знайдено</translation>
     </message>
     <message>
       <source>Downloading cheat index...</source>
-      <translation type="unfinished">Downloading cheat index...</translation>
+      <translation>Завантаження індексу чита...</translation>
     </message>
     <message>
       <source>Selected repository does not support patches.</source>
-      <translation type="unfinished">Selected repository does not support patches.</translation>
+      <translation>Вибраний репозиторій не підтримує патчі.</translation>
     </message>
     <message>
       <source>Download Complete</source>
-      <translation type="unfinished">Download Complete</translation>
+      <translation>Завантаження завершено</translation>
     </message>
     <message>
       <source>Downloading patches...</source>
-      <translation type="unfinished">Downloading patches...</translation>
+      <translation>Завантаження патчів...</translation>
     </message>
     <message>
       <source>Failed to open file:</source>
-      <translation type="unfinished">Failed to open file:</translation>
+      <translation>Не вдалося відкрити файл:</translation>
     </message>
     <message>
       <source>XML ERROR:</source>
-      <translation type="unfinished">XML ERROR:</translation>
+      <translation>ПОМИЛКА XML:</translation>
     </message>
     <message>
       <source>The game is in version: %1</source>
-      <translation type="unfinished">The game is in version: %1</translation>
+      <translation>Версія гри: %1</translation>
     </message>
     <message>
       <source>The downloaded patch only works on version: %1</source>
-      <translation type="unfinished">The downloaded patch only works on version: %1</translation>
+      <translation>Завантажений патч працює лише на версії: %1</translation>
     </message>
     <message>
       <source>You may need to update your game.</source>
-      <translation type="unfinished">You may need to update your game.</translation>
+      <translation>Можливо, вам потрібно оновити гру.</translation>
     </message>
     <message>
       <source>Incompatibility Notice</source>
-      <translation type="unfinished">Incompatibility Notice</translation>
+      <translation>Повідомлення про несумісність</translation>
     </message>
     <message>
       <source>Failed to open files.json for writing</source>
-      <translation type="unfinished">Failed to open files.json for writing</translation>
+      <translation>Не вдалося відкрити files.json для запису</translation>
     </message>
     <message>
       <source>Author: </source>
-      <translation type="unfinished">Author: </translation>
+      <translation>Автор: </translation>
     </message>
     <message>
       <source>Directory does not exist:</source>
-      <translation type="unfinished">Directory does not exist:</translation>
+      <translation>Каталогу не існує:</translation>
     </message>
     <message>
       <source>Failed to open files.json for reading.</source>
-      <translation type="unfinished">Failed to open files.json for reading.</translation>
+      <translation>Не вдалося відкрити files.json для читання.</translation>
     </message>
     <message>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>Назва:</translation>
     </message>
     <message>
       <source>Can&apos;t apply cheats before the game is started</source>
@@ -430,215 +430,215 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation type="unfinished">Status: Invalid hex values</translation>
+      <translation>Статус: Недійсні шістнадцяткові значення</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>Статус: Незавершено</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>Статус: Дійсний</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>Недійсний файл</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>Підтримуються лише файли JSON.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation type="unfinished">Unable to open file.</translation>
+      <translation>Не вдається відкрити файл.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>Помилка JSON</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>Невірний формат JSON.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>Ключі успішно завантажені з JSON!</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>Введіть ключ трофея</translation>
     </message>
     <message>
       <source>Enter %1</source>
-      <translation type="unfinished">Enter %1</translation>
+      <translation>Введіть %1</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+      <translation>Ключ трофея містить недійсний шістнадцятковий код або має непарну довжину.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+      <translation>%1 містить недійсний шістнадцятковий код або має непарну довжину.</translation>
     </message>
   </context>
   <context>
     <name>Downloader</name>
     <message>
       <source>Please wait...</source>
-      <translation type="unfinished">Please wait...</translation>
+      <translation>Зачекайте...</translation>
     </message>
     <message>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Перервати</translation>
     </message>
     <message>
       <source>Local file missing after 304.</source>
-      <translation type="unfinished">Local file missing after 304.</translation>
+      <translation>Локальний файл відсутній після 304.</translation>
     </message>
     <message>
       <source>Unknown network error</source>
-      <translation type="unfinished">Unknown network error</translation>
+      <translation>Невідома мережева помилка</translation>
     </message>
     <message>
       <source>Cannot write output file.</source>
-      <translation type="unfinished">Cannot write output file.</translation>
+      <translation>Неможливо записати вихідний файл.</translation>
     </message>
   </context>
   <context>
     <name>GameCompatibility</name>
     <message>
       <source>Playable</source>
-      <translation type="unfinished">Playable</translation>
+      <translation>Грабельно</translation>
     </message>
     <message>
       <source>Games that can be run without any major issues</source>
-      <translation type="unfinished">Games that can be run without any major issues</translation>
+      <translation>Ігри, які можна запускати без будь-яких серйозних проблем</translation>
     </message>
     <message>
       <source>Ingame</source>
-      <translation type="unfinished">Ingame</translation>
+      <translation>У грі</translation>
     </message>
     <message>
       <source>Games that can reach gameplay but have issues</source>
-      <translation type="unfinished">Games that can reach gameplay but have issues</translation>
+      <translation>Ігри, які досягають ґеймплею, але мають проблеми</translation>
     </message>
     <message>
       <source>Menus</source>
-      <translation type="unfinished">Menus</translation>
+      <translation>У меню</translation>
     </message>
     <message>
       <source>Games that can reach the menu but freeze/crash when trying to proceed further</source>
-      <translation type="unfinished">Games that can reach the menu but freeze/crash when trying to proceed further</translation>
+      <translation>Ігри, які можуть зайти в меню, але зависають / вилітають при спробі продовжити</translation>
     </message>
     <message>
       <source>Boots</source>
-      <translation type="unfinished">Boots</translation>
+      <translation>Запускається</translation>
     </message>
     <message>
       <source>Games that show any visual/audio output but freeze/crash before reaching the menu</source>
-      <translation type="unfinished">Games that show any visual/audio output but freeze/crash before reaching the menu</translation>
+      <translation>Ігри, які показують будь-який візуальний / аудіовихід, але зависають / вилітають до досягнення меню</translation>
     </message>
     <message>
       <source>Nothing</source>
-      <translation type="unfinished">Nothing</translation>
+      <translation>Не працює</translation>
     </message>
     <message>
       <source>Games that crash when trying to launch or only show a black screen</source>
-      <translation type="unfinished">Games that crash when trying to launch or only show a black screen</translation>
+      <translation>Ігри, які вилітають при спробі запуску або показують тільки чорний екран</translation>
     </message>
     <message>
       <source>No results found</source>
-      <translation type="unfinished">No results found</translation>
+      <translation>Результатів не знайдено</translation>
     </message>
     <message>
       <source>There is no entry for this game or application in the compatibility database yet.</source>
-      <translation type="unfinished">There is no entry for this game or application in the compatibility database yet.</translation>
+      <translation>У базі даних сумісності ще немає запису про цю гру або застосунок.</translation>
     </message>
     <message>
       <source>Database missing</source>
-      <translation type="unfinished">Database missing</translation>
+      <translation>База даних відсутня</translation>
     </message>
     <message>
       <source>Retrieving...</source>
-      <translation type="unfinished">Retrieving...</translation>
+      <translation>Отримання...</translation>
     </message>
     <message>
       <source>Downloading the compatibility database. Please wait...</source>
-      <translation type="unfinished">Downloading the compatibility database. Please wait...</translation>
+      <translation>Завантаження бази даних сумісності. Зачекайте...</translation>
     </message>
     <message>
       <source>Downloading Compatibility Database</source>
-      <translation type="unfinished">Downloading Compatibility Database</translation>
+      <translation>Завантаження бази даних сумісності</translation>
     </message>
     <message>
       <source>Error Downloading Compatibility Database</source>
-      <translation type="unfinished">Error Downloading Compatibility Database</translation>
+      <translation>Помилка під час завантаження бази даних сумісності</translation>
     </message>
     <message>
       <source>Right click here and choose Compatibility -&gt; Update Database.</source>
-      <translation type="unfinished">Right click here and choose Compatibility -&gt; Update Database.</translation>
+      <translation>Клацніть тут правою кнопкою миші та виберіть «Сумісність» -&gt; «Оновити базу даних».</translation>
     </message>
   </context>
   <context>
     <name>GameInstallDialog</name>
     <message>
       <source>shadLauncher4 - Choose directory</source>
-      <translation type="unfinished">shadLauncher4 - Choose directory</translation>
+      <translation>shadPS4: Виберіть каталог</translation>
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Каталог з вашими скинутими іграми</translation>
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Каталог для встановлення версій емулятора</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Каталог з іграми</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Переглянути</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>Directory with DLCs</source>
-      <translation type="unfinished">Directory with DLCs</translation>
+      <translation>Каталог з доповненнями</translation>
     </message>
     <message>
       <source>Directory with your dumped DLCs</source>
-      <translation type="unfinished">Directory with your dumped DLCs</translation>
+      <translation>Каталог з вашими скинутими доповненнями</translation>
     </message>
     <message>
       <source>The chosen location for dumped games is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped games is not valid.</translation>
+      <translation>Неправильне вибране місце для скидання ігор.</translation>
     </message>
     <message>
       <source>The chosen location for dumped DLCs is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped DLCs is not valid.</translation>
+      <translation>Неправильне вибране місце для скидання доповнень.</translation>
     </message>
     <message>
       <source>The DLC dump location could not be created.</source>
-      <translation type="unfinished">The DLC dump location could not be created.</translation>
+      <translation>Не вдалося створити місце для скидання доповнень.</translation>
     </message>
     <message>
       <source>The location for installing emulator versions is not valid.</source>
-      <translation type="unfinished">The location for installing emulator versions is not valid.</translation>
+      <translation>Неприпустиме місце для встановлення емулятора.</translation>
     </message>
     <message>
       <source>The emulator version location could not be created.</source>
-      <translation type="unfinished">The emulator version location could not be created.</translation>
+      <translation>Не вдалося створити розташування версії емулятора.</translation>
     </message>
   </context>
   <context>
     <name>GameListFrame</name>
     <message>
       <source>Game List</source>
-      <translation type="unfinished">Game List</translation>
+      <translation>Список ігор</translation>
     </message>
     <message>
       <source>Icon</source>
@@ -850,19 +850,19 @@ Using local database.
     </message>
     <message>
       <source>&amp;SFO viewer</source>
-      <translation type="unfinished">&amp;SFO viewer</translation>
+      <translation>&amp;SFO-переглядач</translation>
     </message>
     <message>
       <source>&amp;npbind.dat viewer</source>
-      <translation type="unfinished">&amp;npbind.dat viewer</translation>
+      <translation>&amp;npbind.dat-переглядач</translation>
     </message>
     <message>
       <source>&amp;Trophy Viewer</source>
-      <translation type="unfinished">&amp;Trophy Viewer</translation>
+      <translation>&amp;Переглядач трофеїв</translation>
     </message>
     <message>
       <source>&amp;Cheats &amp; Patches</source>
-      <translation type="unfinished">&amp;Cheats &amp; Patches</translation>
+      <translation>&amp;Чити та патчі</translation>
     </message>
   </context>
   <context>
@@ -872,234 +872,234 @@ Using local database.
 
 Notes:
 %2</source>
-      <translation type="unfinished">%0 [%1]
+      <translation>%0 [%1]
 
-Notes:
+Примітки:
 %2</translation>
     </message>
     <message>
       <source>%0 [%1]</source>
-      <translation type="unfinished">%0 [%1]</translation>
+      <translation>%0 [%1]</translation>
     </message>
   </context>
   <context>
     <name>GameListTable</name>
     <message>
       <source>Unknown</source>
-      <translation type="unfinished">Unknown</translation>
+      <translation>Невідомо</translation>
     </message>
     <message>
       <source>%0 [%1]
 
 Notes:
 %2</source>
-      <translation type="unfinished">%0 [%1]
+      <translation>%0 [%1]
 
-Notes:
+Примітки:
 %2</translation>
     </message>
     <message>
       <source>Never played</source>
-      <translation type="unfinished">Never played</translation>
+      <translation>Ніколи не запускалась</translation>
     </message>
     <message>
       <source>Japan</source>
-      <translation type="unfinished">Japan</translation>
+      <translation>Японія</translation>
     </message>
     <message>
       <source>Europe</source>
-      <translation type="unfinished">Europe</translation>
+      <translation>Європа</translation>
     </message>
     <message>
       <source>USA</source>
-      <translation type="unfinished">USA</translation>
+      <translation>США</translation>
     </message>
     <message>
       <source>Asia</source>
-      <translation type="unfinished">Asia</translation>
+      <translation>Азія</translation>
     </message>
     <message>
       <source>World</source>
-      <translation type="unfinished">World</translation>
+      <translation>Світ</translation>
     </message>
     <message>
       <source>Last updated</source>
-      <translation type="unfinished">Last updated</translation>
+      <translation>Востаннє оновлено</translation>
     </message>
   </context>
   <context>
     <name>InstallDirSelect</name>
     <message>
       <source>shadLauncher4 - Choose directory</source>
-      <translation type="unfinished">shadLauncher4 - Choose directory</translation>
+      <translation>shadPS4: Оберіть каталог</translation>
     </message>
     <message>
       <source>Select which directory you want to install to.</source>
-      <translation type="unfinished">Select which directory you want to install to.</translation>
+      <translation>Виберіть каталог, в який ви хочете встановити.</translation>
     </message>
     <message>
       <source>Install All Queued to Selected Folder</source>
-      <translation type="unfinished">Install All Queued to Selected Folder</translation>
+      <translation>Встановити всі в черзі до вибраної теки</translation>
     </message>
     <message>
       <source>Delete PKG File on Install</source>
-      <translation type="unfinished">Delete PKG File on Install</translation>
+      <translation>Видалити файл PKG під час встановлення</translation>
     </message>
   </context>
   <context>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Не вдалося знайти виконуваний файл емулятора</translation>
     </message>
   </context>
   <context>
     <name>Localized</name>
     <message numerus="yes">
       <source>%Ln day(s)</source>
-      <translation type="unfinished">
-        <numerusform>%Ln day(s)</numerusform>
-        <numerusform>%Ln day(s)</numerusform>
-        <numerusform>%Ln day(s)</numerusform>
-        <numerusform>%Ln day(s)</numerusform>
+      <translation>
+        <numerusform>%Ln день</numerusform>
+        <numerusform>%Ln дні</numerusform>
+        <numerusform>%Ln днів</numerusform>
+        <numerusform>%Ln днів</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%Ln hour(s)</source>
-      <translation type="unfinished">
-        <numerusform>%Ln hour(s)</numerusform>
-        <numerusform>%Ln hour(s)</numerusform>
-        <numerusform>%Ln hour(s)</numerusform>
-        <numerusform>%Ln hour(s)</numerusform>
+      <translation>
+        <numerusform>%Ln година</numerusform>
+        <numerusform>%Ln години</numerusform>
+        <numerusform>%Ln годин</numerusform>
+        <numerusform>%Ln годин</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%Ln minute(s)</source>
-      <translation type="unfinished">
-        <numerusform>%Ln minute(s)</numerusform>
-        <numerusform>%Ln minute(s)</numerusform>
-        <numerusform>%Ln minute(s)</numerusform>
-        <numerusform>%Ln minute(s)</numerusform>
+      <translation>
+        <numerusform>%Ln хвилина</numerusform>
+        <numerusform>%Ln хвилини</numerusform>
+        <numerusform>%Ln хвилин</numerusform>
+        <numerusform>%Ln хвилин</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%Ln second(s)</source>
-      <translation type="unfinished">
-        <numerusform>%Ln second(s)</numerusform>
-        <numerusform>%Ln second(s)</numerusform>
-        <numerusform>%Ln second(s)</numerusform>
-        <numerusform>%Ln second(s)</numerusform>
+      <translation>
+        <numerusform>%Ln секунда</numerusform>
+        <numerusform>%Ln секунди</numerusform>
+        <numerusform>%Ln секунд</numerusform>
+        <numerusform>%Ln секунд</numerusform>
       </translation>
     </message>
     <message>
       <source>%0 and %1</source>
       <comment>Days and hours</comment>
-      <translation type="unfinished">%0 and %1</translation>
+      <translation>%0 та %1</translation>
     </message>
     <message>
       <source>%0 and %1</source>
       <comment>Hours and minutes</comment>
-      <translation type="unfinished">%0 and %1</translation>
+      <translation>%0 та %1</translation>
     </message>
     <message>
       <source>%0 and %1</source>
       <comment>Minutes and seconds</comment>
-      <translation type="unfinished">%0 and %1</translation>
+      <translation>%0 та %1</translation>
     </message>
   </context>
   <context>
     <name>MainWindow</name>
     <message>
       <source>Search...</source>
-      <translation type="unfinished">Search...</translation>
+      <translation>Пошук...</translation>
     </message>
     <message>
       <source>File</source>
-      <translation type="unfinished">File</translation>
+      <translation>Файл</translation>
     </message>
     <message>
       <source>Emulation</source>
-      <translation type="unfinished">Emulation</translation>
+      <translation>Емуляція</translation>
     </message>
     <message>
       <source>Configuration</source>
-      <translation type="unfinished">Configuration</translation>
+      <translation>Конфігурація</translation>
     </message>
     <message>
       <source>Manage</source>
-      <translation type="unfinished">Manage</translation>
+      <translation>Керувати</translation>
     </message>
     <message>
       <source>Utilities</source>
-      <translation type="unfinished">Utilities</translation>
+      <translation>Утиліти</translation>
     </message>
     <message>
       <source>View</source>
-      <translation type="unfinished">View</translation>
+      <translation>Переглянути</translation>
     </message>
     <message>
       <source>Game List Icons</source>
-      <translation type="unfinished">Game List Icons</translation>
+      <translation>Значки списку ігор</translation>
     </message>
     <message>
       <source>Game List Mode</source>
-      <translation type="unfinished">Game List Mode</translation>
+      <translation>Режим списку ігор</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Допомога</translation>
     </message>
     <message>
       <source>Language</source>
-      <translation type="unfinished">Language</translation>
+      <translation>Мова</translation>
     </message>
     <message>
       <source>Show tool bar</source>
-      <translation type="unfinished">Show tool bar</translation>
+      <translation>Показати панель інструментів</translation>
     </message>
     <message>
       <source>Open Game</source>
-      <translation type="unfinished">Open Game</translation>
+      <translation>Відкрити гру</translation>
     </message>
     <message>
       <source>Pause</source>
-      <translation type="unfinished">Pause</translation>
+      <translation>Призупинити</translation>
     </message>
     <message>
       <source>Start emulation</source>
-      <translation type="unfinished">Start emulation</translation>
+      <translation>Розпочати емуляцію</translation>
     </message>
     <message>
       <source>Stop</source>
-      <translation type="unfinished">Stop</translation>
+      <translation>Зупинити</translation>
     </message>
     <message>
       <source>Stop emulation</source>
-      <translation type="unfinished">Stop emulation</translation>
+      <translation>Зупинити емуляцію</translation>
     </message>
     <message>
       <source>GUI</source>
-      <translation type="unfinished">GUI</translation>
+      <translation>Інтерфейс</translation>
     </message>
     <message>
       <source>Configure GUI settings</source>
-      <translation type="unfinished">Configure GUI settings</translation>
+      <translation>Налаштування графічного інтерфейсу</translation>
     </message>
     <message>
       <source>Exit</source>
-      <translation type="unfinished">Exit</translation>
+      <translation>Вийти</translation>
     </message>
     <message>
       <source>Exit the application.</source>
-      <translation type="unfinished">Exit the application.</translation>
+      <translation>Вийти із застосунку.</translation>
     </message>
     <message>
       <source>User Accounts</source>
-      <translation type="unfinished">User Accounts</translation>
+      <translation>Облікові записи</translation>
     </message>
     <message>
       <source>Manage user accounts</source>
-      <translation type="unfinished">Manage user accounts</translation>
+      <translation>Керувати обліковими записами</translation>
     </message>
     <message>
       <source>Show Game List</source>
@@ -1303,134 +1303,134 @@ Notes:
     </message>
     <message>
       <source>PKG and Game versions match: </source>
-      <translation type="unfinished">PKG and Game versions match: </translation>
+      <translation>Версії PKG та гри збігаються: </translation>
     </message>
     <message>
       <source>Would you like to overwrite?</source>
-      <translation type="unfinished">Would you like to overwrite?</translation>
+      <translation>Бажаєте перезаписати?</translation>
     </message>
     <message>
       <source>PKG Version %1 is older than installed version: </source>
-      <translation type="unfinished">PKG Version %1 is older than installed version: </translation>
+      <translation>Версія PKG %1 старіша за встановлену версію: </translation>
     </message>
     <message>
       <source>Game is installed: </source>
-      <translation type="unfinished">Game is installed: </translation>
+      <translation>Встановлена гра: </translation>
     </message>
     <message>
       <source>Would you like to install Patch: </source>
-      <translation type="unfinished">Would you like to install Patch: </translation>
+      <translation>Бажаєте встановити патч: </translation>
     </message>
     <message>
       <source>DLC Installation</source>
-      <translation type="unfinished">DLC Installation</translation>
+      <translation>Встановлення доповнення</translation>
     </message>
     <message>
       <source>Would you like to install DLC: %1?</source>
-      <translation type="unfinished">Would you like to install DLC: %1?</translation>
+      <translation>Бажаєте встановити доповнення: %1?</translation>
     </message>
     <message>
       <source>DLC already installed:</source>
-      <translation type="unfinished">DLC already installed:</translation>
+      <translation>Доповнення вже встановлено:</translation>
     </message>
     <message>
       <source>Game already installed</source>
-      <translation type="unfinished">Game already installed</translation>
+      <translation>Гра вже встановлена</translation>
     </message>
     <message>
       <source>PKG is a patch or DLC, please install the game first!</source>
-      <translation type="unfinished">PKG is a patch or DLC, please install the game first!</translation>
+      <translation>PKG — це патч або доповнення, спочатку встановіть гру!</translation>
     </message>
     <message>
       <source>Extracting PKG %1/%2</source>
-      <translation type="unfinished">Extracting PKG %1/%2</translation>
+      <translation>Розпакування PKG %1/%2</translation>
     </message>
     <message>
       <source>Extraction Finished</source>
-      <translation type="unfinished">Extraction Finished</translation>
+      <translation>Розпакування завершено</translation>
     </message>
     <message>
       <source>Game successfully installed at %1</source>
-      <translation type="unfinished">Game successfully installed at %1</translation>
+      <translation>Гру успішно встановлено в %1</translation>
     </message>
     <message>
       <source>File doesn&apos;t appear to be a valid PKG file</source>
-      <translation type="unfinished">File doesn&apos;t appear to be a valid PKG file</translation>
+      <translation>Файл не є дійсним PKG-файлом</translation>
     </message>
   </context>
   <context>
     <name>NpBindDialog</name>
     <message>
       <source>npbind.dat Viewer</source>
-      <translation type="unfinished">npbind.dat Viewer</translation>
+      <translation>npbind.dat-переглядач</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>Failed to parse npbind.dat</source>
-      <translation type="unfinished">Failed to parse npbind.dat</translation>
+      <translation>Не вдалося обробити npbind.dat</translation>
     </message>
     <message>
       <source>Entry Type:</source>
-      <translation type="unfinished">Entry Type:</translation>
+      <translation>Тип запису:</translation>
     </message>
     <message>
       <source>Entry Size:</source>
-      <translation type="unfinished">Entry Size:</translation>
+      <translation>Розмір запису:</translation>
     </message>
     <message>
       <source>NPCommID:</source>
-      <translation type="unfinished">NPCommID:</translation>
+      <translation>NPCommID:</translation>
     </message>
     <message>
       <source>Trophy ID:</source>
-      <translation type="unfinished">Trophy ID:</translation>
+      <translation>ID трофею:</translation>
     </message>
     <message>
       <source>Hex Data:</source>
-      <translation type="unfinished">Hex Data:</translation>
+      <translation>Шістнадцяткові дані:</translation>
     </message>
     <message>
       <source>NPCommID</source>
-      <translation type="unfinished">NPCommID</translation>
+      <translation>NPCommID</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation type="unfinished">Trophy</translation>
+      <translation>Трофей</translation>
     </message>
     <message>
       <source>Unknown 1</source>
-      <translation type="unfinished">Unknown 1</translation>
+      <translation>Невідомо 1</translation>
     </message>
     <message>
       <source>Unknown 2</source>
-      <translation type="unfinished">Unknown 2</translation>
+      <translation>Невідомо 2</translation>
     </message>
     <message>
       <source>Show regions:</source>
-      <translation type="unfinished">Show regions:</translation>
+      <translation>Показати регіони:</translation>
     </message>
     <message>
       <source>Export JSON</source>
-      <translation type="unfinished">Export JSON</translation>
+      <translation>Експортувати JSON</translation>
     </message>
     <message>
       <source>Body #%1</source>
-      <translation type="unfinished">Body #%1</translation>
+      <translation>Тіло #%1</translation>
     </message>
     <message>
       <source>JSON Files (*.json)</source>
-      <translation type="unfinished">JSON Files (*.json)</translation>
+      <translation>JSON-файли (*.json)</translation>
     </message>
     <message>
       <source>Cannot write file</source>
-      <translation type="unfinished">Cannot write file</translation>
+      <translation>Неможливо записати файл</translation>
     </message>
     <message>
       <source>Done</source>
-      <translation type="unfinished">Done</translation>
+      <translation>Готово</translation>
     </message>
     <message>
       <source>JSON exported successfully.</source>
