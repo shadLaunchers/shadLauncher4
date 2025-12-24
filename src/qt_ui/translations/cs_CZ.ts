@@ -928,25 +928,6 @@ Notes:
     </message>
   </context>
   <context>
-    <name>InstallDirSelect</name>
-    <message>
-      <source>shadLauncher4 - Choose directory</source>
-      <translation type="unfinished">shadLauncher4 - Choose directory</translation>
-    </message>
-    <message>
-      <source>Select which directory you want to install to.</source>
-      <translation type="unfinished">Select which directory you want to install to.</translation>
-    </message>
-    <message>
-      <source>Install All Queued to Selected Folder</source>
-      <translation type="unfinished">Install All Queued to Selected Folder</translation>
-    </message>
-    <message>
-      <source>Delete PKG File on Install</source>
-      <translation type="unfinished">Delete PKG File on Install</translation>
-    </message>
-  </context>
-  <context>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
@@ -1435,6 +1416,51 @@ Notes:
     <message>
       <source>JSON exported successfully.</source>
       <translation type="unfinished">JSON exported successfully.</translation>
+    </message>
+  </context>
+  <context>
+    <name>PkgInstallDirSelectDialog</name>
+    <message>
+      <source>shadLauncher4 - Choose directory</source>
+      <translation type="unfinished">shadLauncher4 - Choose directory</translation>
+    </message>
+    <message>
+      <source>Select which directory you want to install to.</source>
+      <translation type="unfinished">Select which directory you want to install to.</translation>
+    </message>
+    <message>
+      <source>Name: 
+Serial: </source>
+      <translation type="unfinished">Name: 
+Serial: </translation>
+    </message>
+    <message>
+      <source>Browse...</source>
+      <translation type="unfinished">Browse...</translation>
+    </message>
+    <message>
+      <source>Install All Queued to Selected Folder</source>
+      <translation type="unfinished">Install All Queued to Selected Folder</translation>
+    </message>
+    <message>
+      <source>Delete PKG File on Install</source>
+      <translation type="unfinished">Delete PKG File on Install</translation>
+    </message>
+    <message>
+      <source>Select Directory</source>
+      <translation type="unfinished">Select Directory</translation>
+    </message>
+    <message>
+      <source>Name: %1
+Serial: %2</source>
+      <translation type="unfinished">Name: %1
+Serial: %2</translation>
+    </message>
+    <message>
+      <source>%1: %2 (%3)
+</source>
+      <translation type="unfinished">%1: %2 (%3)
+</translation>
     </message>
   </context>
   <context>
