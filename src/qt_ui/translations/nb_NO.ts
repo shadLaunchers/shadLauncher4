@@ -1414,44 +1414,44 @@ Notat:
     <name>PkgInstallDirSelectDialog</name>
     <message>
       <source>shadLauncher4 - Choose directory</source>
-      <translation type="unfinished">shadLauncher4 - Choose directory</translation>
+      <translation>shadLauncher4 – Velg mappe</translation>
     </message>
     <message>
       <source>Select which directory you want to install to.</source>
-      <translation type="unfinished">Select which directory you want to install to.</translation>
+      <translation>Velg hvilken mappe du vil installere til.</translation>
     </message>
     <message>
       <source>Name: 
 Serial: </source>
-      <translation type="unfinished">Name: 
-Serial: </translation>
+      <translation>Navn: 
+Serienummer: </translation>
     </message>
     <message>
       <source>Browse...</source>
-      <translation type="unfinished">Browse...</translation>
+      <translation>Bla gjennom …</translation>
     </message>
     <message>
       <source>Install All Queued to Selected Folder</source>
-      <translation type="unfinished">Install All Queued to Selected Folder</translation>
+      <translation>Installer alle i kø til den valgte mappa</translation>
     </message>
     <message>
       <source>Delete PKG File on Install</source>
-      <translation type="unfinished">Delete PKG File on Install</translation>
+      <translation>Slett PKG-fila ved installering</translation>
     </message>
     <message>
       <source>Select Directory</source>
-      <translation type="unfinished">Select Directory</translation>
+      <translation>Velg mappe</translation>
     </message>
     <message>
       <source>Name: %1
 Serial: %2</source>
-      <translation type="unfinished">Name: %1
-Serial: %2</translation>
+      <translation>Navn: %1
+Serienummer: %2</translation>
     </message>
     <message>
       <source>%1: %2 (%3)
 </source>
-      <translation type="unfinished">%1: %2 (%3)
+      <translation>%1: %2 (%3)
 </translation>
     </message>
   </context>
