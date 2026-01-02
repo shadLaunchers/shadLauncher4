@@ -981,6 +981,49 @@ Notat:
     </message>
   </context>
   <context>
+    <name>LogPresetsDialog</name>
+    <message>
+      <source>Log Filter Presets</source>
+      <translation type="unfinished">Log Filter Presets</translation>
+    </message>
+    <message>
+      <source>Comment</source>
+      <translation type="unfinished">Comment</translation>
+    </message>
+    <message>
+      <source>Filter</source>
+      <translation type="unfinished">Filter</translation>
+    </message>
+    <message>
+      <source>+</source>
+      <translation type="unfinished">+</translation>
+    </message>
+    <message>
+      <source>-</source>
+      <translation type="unfinished">-</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation type="unfinished">Load</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation type="unfinished">Close</translation>
+    </message>
+    <message>
+      <source>Add a new preset after the selected row</source>
+      <translation type="unfinished">Add a new preset after the selected row</translation>
+    </message>
+    <message>
+      <source>Remove selected presets</source>
+      <translation type="unfinished">Remove selected presets</translation>
+    </message>
+    <message>
+      <source>Load the selected preset</source>
+      <translation type="unfinished">Load the selected preset</translation>
+    </message>
+  </context>
+  <context>
     <name>MainWindow</name>
     <message>
       <source>Search...</source>
@@ -1330,6 +1373,26 @@ Notat:
       <source>File doesn&apos;t appear to be a valid PKG file</source>
       <translation>Fila ser ikke ut til å være en gyldig PKG-fil</translation>
     </message>
+    <message>
+      <source>No valid PKG decryption keys found. Please set them up in the Crypto Key Manager.</source>
+      <translation type="unfinished">No valid PKG decryption keys found. Please set them up in the Crypto Key Manager.</translation>
+    </message>
+    <message>
+      <source>No valid Fake PKG decryption keys found. Please set them up in the Crypto Key Manager.</source>
+      <translation type="unfinished">No valid Fake PKG decryption keys found. Please set them up in the Crypto Key Manager.</translation>
+    </message>
+    <message>
+      <source>PKG Install</source>
+      <translation type="unfinished">PKG Install</translation>
+    </message>
+    <message>
+      <source>No valid PKG files were found.</source>
+      <translation type="unfinished">No valid PKG files were found.</translation>
+    </message>
+    <message>
+      <source>Could not read SFO. Check log for details.</source>
+      <translation type="unfinished">Could not read SFO. Check log for details.</translation>
+    </message>
   </context>
   <context>
     <name>NpBindDialog</name>
@@ -1413,46 +1476,83 @@ Notat:
   <context>
     <name>PkgInstallDirSelectDialog</name>
     <message>
-      <source>shadLauncher4 - Choose directory</source>
-      <translation>shadLauncher4 – Velg mappe</translation>
+      <source>shadLauncher4 - Install PKG Files</source>
+      <translation type="unfinished">shadLauncher4 - Install PKG Files</translation>
     </message>
     <message>
-      <source>Select which directory you want to install to.</source>
-      <translation>Velg hvilken mappe du vil installere til.</translation>
+      <source>Select PKG files to install</source>
+      <translation type="unfinished">Select PKG files to install</translation>
     </message>
     <message>
-      <source>Name: 
-Serial: </source>
-      <translation>Navn: 
-Serienummer: </translation>
+      <source>Select All</source>
+      <translation type="unfinished">Select All</translation>
+    </message>
+    <message>
+      <source>Select None</source>
+      <translation type="unfinished">Select None</translation>
+    </message>
+    <message>
+      <source>Invert Selection</source>
+      <translation type="unfinished">Invert Selection</translation>
+    </message>
+    <message>
+      <source>Installation Directory</source>
+      <translation type="unfinished">Installation Directory</translation>
     </message>
     <message>
       <source>Browse...</source>
       <translation>Bla gjennom …</translation>
     </message>
     <message>
-      <source>Install All Queued to Selected Folder</source>
-      <translation>Installer alle i kø til den valgte mappa</translation>
-    </message>
-    <message>
-      <source>Delete PKG File on Install</source>
-      <translation>Slett PKG-fila ved installering</translation>
+      <source>Delete PKG files after successful installation</source>
+      <translation type="unfinished">Delete PKG files after successful installation</translation>
     </message>
     <message>
       <source>Select Directory</source>
       <translation>Velg mappe</translation>
     </message>
     <message>
-      <source>Name: %1
-Serial: %2</source>
-      <translation>Navn: %1
-Serienummer: %2</translation>
+      <source>Install Selected</source>
+      <translation type="unfinished">Install Selected</translation>
     </message>
     <message>
-      <source>%1: %2 (%3)
-</source>
-      <translation>%1: %2 (%3)
-</translation>
+      <source>No Selection</source>
+      <translation type="unfinished">No Selection</translation>
+    </message>
+    <message>
+      <source>Please select at least one game to install.</source>
+      <translation type="unfinished">Please select at least one game to install.</translation>
+    </message>
+    <message>
+      <source>No Directory</source>
+      <translation type="unfinished">No Directory</translation>
+    </message>
+    <message>
+      <source>Please select an installation directory.</source>
+      <translation type="unfinished">Please select an installation directory.</translation>
+    </message>
+  </context>
+  <context>
+    <name>PkgInstallModel</name>
+    <message>
+      <source>Install</source>
+      <translation type="unfinished">Install</translation>
+    </message>
+    <message>
+      <source>Title ID</source>
+      <translation type="unfinished">Title ID</translation>
+    </message>
+    <message>
+      <source>Game Name</source>
+      <translation type="unfinished">Game Name</translation>
+    </message>
+    <message>
+      <source>App Version</source>
+      <translation type="unfinished">App Version</translation>
+    </message>
+    <message>
+      <source>Category</source>
+      <translation type="unfinished">Category</translation>
     </message>
   </context>
   <context>
@@ -2172,6 +2272,54 @@ Serienummer: %2</translation>
     <message>
       <source>Discord Rich Presence</source>
       <translation>Discord Rich Presence</translation>
+    </message>
+    <message>
+      <source>Shader Cache</source>
+      <translation type="unfinished">Shader Cache</translation>
+    </message>
+    <message>
+      <source>Enable Shader Cache</source>
+      <translation type="unfinished">Enable Shader Cache</translation>
+    </message>
+    <message>
+      <source>Compress Shader Cache Files into Zip File</source>
+      <translation type="unfinished">Compress Shader Cache Files into Zip File</translation>
+    </message>
+    <message>
+      <source>Idle</source>
+      <translation type="unfinished">Idle</translation>
+    </message>
+    <message>
+      <source>Auto Select</source>
+      <translation type="unfinished">Auto Select</translation>
+    </message>
+    <message>
+      <source>Never</source>
+      <translation type="unfinished">Never</translation>
+    </message>
+    <message>
+      <source>Always</source>
+      <translation type="unfinished">Always</translation>
+    </message>
+    <message>
+      <source>Real USB Device</source>
+      <translation type="unfinished">Real USB Device</translation>
+    </message>
+    <message>
+      <source>Skylander Portal</source>
+      <translation type="unfinished">Skylander Portal</translation>
+    </message>
+    <message>
+      <source>Infinity Base</source>
+      <translation type="unfinished">Infinity Base</translation>
+    </message>
+    <message>
+      <source>Dimensions Toypad</source>
+      <translation type="unfinished">Dimensions Toypad</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation type="unfinished">None</translation>
     </message>
   </context>
   <context>
