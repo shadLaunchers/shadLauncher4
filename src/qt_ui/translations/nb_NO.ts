@@ -2330,7 +2330,7 @@ Notat:
     </message>
     <message>
       <source>Add Folder:\nAdd a new folder to the list of game installation folders.</source>
-      <translation>Legg til mappe:\nlegg til en ny mappe på lista av spillets installasjonsmapper.</translation>
+      <translation>Legg til mappe:\nlegg til ei ny mappe på lista av spillets installasjonsmapper.</translation>
     </message>
     <message>
       <source>Remove Folder:\nRemove the selected folder from the list of game installation folders.</source>
@@ -2342,7 +2342,7 @@ Notat:
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation>Bla gjennom:\nSøk etter en mappe å velges som stien til nedlastbart innhold.</translation>
+      <translation>Bla gjennom:\nSøk etter ei mappe å velges som stien til nedlastbart innhold.</translation>
     </message>
     <message>
       <source>Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</source>
@@ -2350,7 +2350,7 @@ Notat:
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the Home folder.</source>
-      <translation>Bla gjennom:\nSøk etter en mappe å velge for hjem.</translation>
+      <translation>Bla gjennom:\nSøk etter ei mappe å velge for hjem.</translation>
     </message>
     <message>
       <source>System Modules Folder:\nThe folder where system modules are loaded from.</source>
