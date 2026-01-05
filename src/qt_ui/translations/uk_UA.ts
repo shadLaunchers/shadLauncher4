@@ -662,191 +662,191 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Show Compatibility</source>
-      <translation type="unfinished">Show Compatibility</translation>
+      <translation>Показувати сумісність</translation>
     </message>
     <message>
       <source>Serial</source>
-      <translation type="unfinished">Serial</translation>
+      <translation>Серійний номер</translation>
     </message>
     <message>
       <source>Show Serials</source>
-      <translation type="unfinished">Show Serials</translation>
+      <translation>Показувати серійні номери</translation>
     </message>
     <message>
       <source>Region</source>
-      <translation type="unfinished">Region</translation>
+      <translation>Регіон</translation>
     </message>
     <message>
       <source>Show Regions</source>
-      <translation type="unfinished">Show Regions</translation>
+      <translation>Показувати регіони</translation>
     </message>
     <message>
       <source>Firmware</source>
-      <translation type="unfinished">Firmware</translation>
+      <translation>Прошивка</translation>
     </message>
     <message>
       <source>Show Firmwares</source>
-      <translation type="unfinished">Show Firmwares</translation>
+      <translation>Показувати прошивки</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Версія</translation>
     </message>
     <message>
       <source>Show Versions</source>
-      <translation type="unfinished">Show Versions</translation>
+      <translation>Показувати версії</translation>
     </message>
     <message>
       <source>Last Played</source>
-      <translation type="unfinished">Last Played</translation>
+      <translation>Востаннє зіграно</translation>
     </message>
     <message>
       <source>Show Last Played</source>
-      <translation type="unfinished">Show Last Played</translation>
+      <translation>Показувати «Востаннє зіграно»</translation>
     </message>
     <message>
       <source>Time Played</source>
-      <translation type="unfinished">Time Played</translation>
+      <translation>Час гри</translation>
     </message>
     <message>
       <source>Show Time Played</source>
-      <translation type="unfinished">Show Time Played</translation>
+      <translation>Показувати «Час гри»</translation>
     </message>
     <message>
       <source>Space On Disk</source>
-      <translation type="unfinished">Space On Disk</translation>
+      <translation>Потрібно місця</translation>
     </message>
     <message>
       <source>Show Space On Disk</source>
-      <translation type="unfinished">Show Space On Disk</translation>
+      <translation>Показувати «Потрібно місця»</translation>
     </message>
     <message>
       <source>Path</source>
-      <translation type="unfinished">Path</translation>
+      <translation>Шлях</translation>
     </message>
     <message>
       <source>Show Paths</source>
-      <translation type="unfinished">Show Paths</translation>
+      <translation>Показувати шлях</translation>
     </message>
     <message>
       <source>Loading games</source>
-      <translation type="unfinished">Loading games</translation>
+      <translation>Завантаження ігор</translation>
     </message>
     <message>
       <source>Loading games, please wait...</source>
-      <translation type="unfinished">Loading games, please wait...</translation>
+      <translation>Завантажуємо ігри, зачекайте...</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Скасувати</translation>
     </message>
     <message>
       <source>&amp;View Changelog</source>
-      <translation type="unfinished">&amp;View Changelog</translation>
+      <translation>&amp;Переглянути журнал змін</translation>
     </message>
     <message>
       <source>&amp;Copy Info</source>
-      <translation type="unfinished">&amp;Copy Info</translation>
+      <translation>&amp;Копіювати інформацію</translation>
     </message>
     <message>
       <source>&amp;Copy Name + Serial</source>
-      <translation type="unfinished">&amp;Copy Name + Serial</translation>
+      <translation>&amp;Копіювати назву + серійний номер</translation>
     </message>
     <message>
       <source>&amp;Copy Name</source>
-      <translation type="unfinished">&amp;Copy Name</translation>
+      <translation>&amp;Копіювати назву</translation>
     </message>
     <message>
       <source>&amp;Copy Serial</source>
-      <translation type="unfinished">&amp;Copy Serial</translation>
+      <translation>&amp;Копіювати серійний номер</translation>
     </message>
     <message>
       <source>&amp;Compatibility</source>
-      <translation type="unfinished">&amp;Compatibility</translation>
+      <translation>&amp;Сумісність</translation>
     </message>
     <message>
       <source>&amp;View Report</source>
-      <translation type="unfinished">&amp;View Report</translation>
+      <translation>&amp;Переглянути звіт</translation>
     </message>
     <message>
       <source>&amp;Submit Report</source>
-      <translation type="unfinished">&amp;Submit Report</translation>
+      <translation>&amp;Надіслати звіт</translation>
     </message>
     <message>
       <source>&amp;Update Database</source>
-      <translation type="unfinished">&amp;Update Database</translation>
+      <translation>&amp;Оновити базу даних</translation>
     </message>
     <message>
       <source>&amp;Manage Game</source>
-      <translation type="unfinished">&amp;Manage Game</translation>
+      <translation>&amp;Керувати грою</translation>
     </message>
     <message>
       <source>&amp;Hide From Game List</source>
-      <translation type="unfinished">&amp;Hide From Game List</translation>
+      <translation>&amp;Приховати зі списку ігор</translation>
     </message>
     <message>
       <source>&amp;Add/Edit Tooltip Notes</source>
-      <translation type="unfinished">&amp;Add/Edit Tooltip Notes</translation>
+      <translation>&amp;Додати / Редагувати нотатки щодо підказок</translation>
     </message>
     <message>
       <source>Edit Tooltip Notes</source>
-      <translation type="unfinished">Edit Tooltip Notes</translation>
+      <translation>Редагувати нотатки щодо підказок</translation>
     </message>
     <message>
       <source>%0
 %1</source>
-      <translation type="unfinished">%0
+      <translation>%0
 %1</translation>
     </message>
     <message>
       <source>Warning!</source>
-      <translation type="unfinished">Warning!</translation>
+      <translation>Попередження!</translation>
     </message>
     <message>
       <source>Failed to retrieve the online compatibility database!
 Using local database.
 
 %0</source>
-      <translation type="unfinished">Failed to retrieve the online compatibility database!
-Using local database.
+      <translation>Не вдалося отримати мережеву базу даних сумісності!
+Використовується локальна.
 
 %0</translation>
     </message>
     <message>
       <source>No Report Available</source>
-      <translation type="unfinished">No Report Available</translation>
+      <translation>Немає доступних звітів</translation>
     </message>
     <message>
       <source>There is no compatibility report available for this game.</source>
-      <translation type="unfinished">There is no compatibility report available for this game.</translation>
+      <translation>Для цієї гри немає звіту про сумісність.</translation>
     </message>
     <message>
       <source>&amp;Open Folder</source>
-      <translation type="unfinished">&amp;Open Folder</translation>
+      <translation>&amp;Відкрити теку</translation>
     </message>
     <message>
       <source>&amp;Open Game Folder</source>
-      <translation type="unfinished">&amp;Open Game Folder</translation>
+      <translation>&amp;Відкрити теку гри</translation>
     </message>
     <message>
       <source>&amp;Open Update Folder</source>
-      <translation type="unfinished">&amp;Open Update Folder</translation>
+      <translation>&amp;Відкрити теку оновлень</translation>
     </message>
     <message>
       <source>&amp;Open Log Folder</source>
-      <translation type="unfinished">&amp;Open Log Folder</translation>
+      <translation>&amp;Відкрити теку журналів</translation>
     </message>
     <message>
       <source>Log Not Found</source>
-      <translation type="unfinished">Log Not Found</translation>
+      <translation>Журнал не знайдено</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
-      <translation type="unfinished">No log file found for this game!</translation>
+      <translation>Файл звіту для цієї гри не знайдено!</translation>
     </message>
     <message>
       <source>Open Log Folder</source>
-      <translation type="unfinished">Open Log Folder</translation>
+      <translation>Відкрити теку журналів</translation>
     </message>
     <message>
       <source>&amp;SFO viewer</source>
@@ -992,43 +992,43 @@ Notes:
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation type="unfinished">Log Filter Presets</translation>
+      <translation>Шаблони фільтрів журналу</translation>
     </message>
     <message>
       <source>Comment</source>
-      <translation type="unfinished">Comment</translation>
+      <translation>Коментар</translation>
     </message>
     <message>
       <source>Filter</source>
-      <translation type="unfinished">Filter</translation>
+      <translation>Фільтр</translation>
     </message>
     <message>
       <source>+</source>
-      <translation type="unfinished">+</translation>
+      <translation>+</translation>
     </message>
     <message>
       <source>-</source>
-      <translation type="unfinished">-</translation>
+      <translation>-</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Завантажити</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Закрити</translation>
     </message>
     <message>
       <source>Add a new preset after the selected row</source>
-      <translation type="unfinished">Add a new preset after the selected row</translation>
+      <translation>Додати новий шаблон після вибраного рядка</translation>
     </message>
     <message>
       <source>Remove selected presets</source>
-      <translation type="unfinished">Remove selected presets</translation>
+      <translation>Вилучити вибрані шаблони</translation>
     </message>
     <message>
       <source>Load the selected preset</source>
-      <translation type="unfinished">Load the selected preset</translation>
+      <translation>Завантажити вибраний шаблон</translation>
     </message>
   </context>
   <context>
@@ -1127,203 +1127,203 @@ Notes:
     </message>
     <message>
       <source>Show Game List</source>
-      <translation type="unfinished">Show Game List</translation>
+      <translation>Показати список ігор</translation>
     </message>
     <message>
       <source>Show Tool Bar</source>
-      <translation type="unfinished">Show Tool Bar</translation>
+      <translation>Показати панель інструментів</translation>
     </message>
     <message>
       <source>Show Game Compatibility in Grid Mode</source>
-      <translation type="unfinished">Show Game Compatibility in Grid Mode</translation>
+      <translation>Показати сумісність ігор у режимі сітки</translation>
     </message>
     <message>
       <source>Game List Refresh</source>
-      <translation type="unfinished">Game List Refresh</translation>
+      <translation>Оновити список ігор</translation>
     </message>
     <message>
       <source>Tiny</source>
-      <translation type="unfinished">Tiny</translation>
+      <translation>Крихітна</translation>
     </message>
     <message>
       <source>Small</source>
-      <translation type="unfinished">Small</translation>
+      <translation>Маленька</translation>
     </message>
     <message>
       <source>Medium</source>
-      <translation type="unfinished">Medium</translation>
+      <translation>Середня</translation>
     </message>
     <message>
       <source>Large</source>
-      <translation type="unfinished">Large</translation>
+      <translation>Велика</translation>
     </message>
     <message>
       <source>List View</source>
-      <translation type="unfinished">List View</translation>
+      <translation>Показ списком</translation>
     </message>
     <message>
       <source>Grid View</source>
-      <translation type="unfinished">Grid View</translation>
+      <translation>Показ сіткою</translation>
     </message>
     <message>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>Перезапустити</translation>
     </message>
     <message>
       <source>Start</source>
-      <translation type="unfinished">Start</translation>
+      <translation>Розпочати</translation>
     </message>
     <message>
       <source>Settings</source>
-      <translation type="unfinished">Settings</translation>
+      <translation>Налаштування</translation>
     </message>
     <message>
       <source>Configure the emulator</source>
-      <translation type="unfinished">Configure the emulator</translation>
+      <translation>Налаштування емулятора</translation>
     </message>
     <message>
       <source>Controllers</source>
-      <translation type="unfinished">Controllers</translation>
+      <translation>Контролери</translation>
     </message>
     <message>
       <source>Configure controls</source>
-      <translation type="unfinished">Configure controls</translation>
+      <translation>Налаштувати керування</translation>
     </message>
     <message>
       <source>Full Screen</source>
-      <translation type="unfinished">Full Screen</translation>
+      <translation>На весь екран</translation>
     </message>
     <message>
       <source>Toggle fullscreen</source>
-      <translation type="unfinished">Toggle fullscreen</translation>
+      <translation>Увімк. / Вимк. повний екран</translation>
     </message>
     <message>
       <source>List</source>
-      <translation type="unfinished">List</translation>
+      <translation>Список</translation>
     </message>
     <message>
       <source>Switch to list mode</source>
-      <translation type="unfinished">Switch to list mode</translation>
+      <translation>Перемкнутися в режим списку</translation>
     </message>
     <message>
       <source>Grid</source>
-      <translation type="unfinished">Grid</translation>
+      <translation>Сітка</translation>
     </message>
     <message>
       <source>Switch to grid mode</source>
-      <translation type="unfinished">Switch to grid mode</translation>
+      <translation>Перемкнутися в режим сітки</translation>
     </message>
     <message>
       <source>Refresh</source>
-      <translation type="unfinished">Refresh</translation>
+      <translation>Оновити</translation>
     </message>
     <message>
       <source>Refresh gamelist</source>
-      <translation type="unfinished">Refresh gamelist</translation>
+      <translation>Оновити список ігор</translation>
     </message>
     <message>
       <source>Show Hidden Entries</source>
-      <translation type="unfinished">Show Hidden Entries</translation>
+      <translation>Показувати приховані записи</translation>
     </message>
     <message>
       <source>Show Title Bars</source>
-      <translation type="unfinished">Show Title Bars</translation>
+      <translation>Показувати заголовки вікон</translation>
     </message>
     <message>
       <source>English</source>
-      <translation type="unfinished">English</translation>
+      <translation>Англійська</translation>
     </message>
     <message>
       <source>Show Custom Icons</source>
-      <translation type="unfinished">Show Custom Icons</translation>
+      <translation>Показувати користувацькі значки</translation>
     </message>
     <message>
       <source>Play Hover Gifs</source>
-      <translation type="unfinished">Play Hover Gifs</translation>
+      <translation>Відтворити Gif-анімації</translation>
     </message>
     <message>
       <source>Prefer Game Data Icons</source>
-      <translation type="unfinished">Prefer Game Data Icons</translation>
+      <translation>Віддати перевагу значкам ігрових даних</translation>
     </message>
     <message>
       <source>shadLauncher4</source>
-      <translation type="unfinished">shadLauncher4</translation>
+      <translation>shadLauncher4</translation>
     </message>
     <message>
       <source>Exit shadLauncher4</source>
-      <translation type="unfinished">Exit shadLauncher4</translation>
+      <translation>Вийти з shadLauncher4</translation>
     </message>
     <message>
       <source>About shadLauncher4</source>
-      <translation type="unfinished">About shadLauncher4</translation>
+      <translation>Про shadLauncher4</translation>
     </message>
     <message>
       <source>Export GameList</source>
-      <translation type="unfinished">Export GameList</translation>
+      <translation>Експорт списку ігор</translation>
     </message>
     <message>
       <source>General</source>
-      <translation type="unfinished">General</translation>
+      <translation>Загальні</translation>
     </message>
     <message>
       <source>Graphics</source>
-      <translation type="unfinished">Graphics</translation>
+      <translation>Графіка</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>Введення</translation>
     </message>
     <message>
       <source>Paths</source>
-      <translation type="unfinished">Paths</translation>
+      <translation>Шляхи</translation>
     </message>
     <message>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Налагодження</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>Експериментальні</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Журнал</translation>
     </message>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Крипто-ключовий менеджер</translation>
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Керування версіями</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Нічого</translation>
     </message>
     <message>
       <source>Install Packages (PKG)</source>
-      <translation type="unfinished">Install Packages (PKG)</translation>
+      <translation>Встановити пакети (PKG)</translation>
     </message>
     <message>
       <source>Install application from a .pkg file</source>
-      <translation type="unfinished">Install application from a .pkg file</translation>
+      <translation>Встановити застосунок із файлу .pkg</translation>
     </message>
     <message>
       <source>PKG File (*.PKG *.pkg)</source>
-      <translation type="unfinished">PKG File (*.PKG *.pkg)</translation>
+      <translation>Файл PKG (*.PKG *.pkg)</translation>
     </message>
     <message>
       <source>PKG ERROR</source>
-      <translation type="unfinished">PKG ERROR</translation>
+      <translation>ПОМИЛКА PKG</translation>
     </message>
     <message>
       <source>PKG Extraction</source>
-      <translation type="unfinished">PKG Extraction</translation>
+      <translation>Розпакування PKG</translation>
     </message>
     <message>
       <source>Patch detected!</source>
-      <translation type="unfinished">Patch detected!</translation>
+      <translation>Виявлено патч!</translation>
     </message>
     <message>
       <source>PKG and Game versions match: </source>
@@ -1383,23 +1383,23 @@ Notes:
     </message>
     <message>
       <source>No valid PKG decryption keys found. Please set them up in the Crypto Key Manager.</source>
-      <translation type="unfinished">No valid PKG decryption keys found. Please set them up in the Crypto Key Manager.</translation>
+      <translation>Не знайдено дійсних ключів розшифрування PKG. Налаштуйте їх у крипто-ключовому менеджері.</translation>
     </message>
     <message>
       <source>No valid Fake PKG decryption keys found. Please set them up in the Crypto Key Manager.</source>
-      <translation type="unfinished">No valid Fake PKG decryption keys found. Please set them up in the Crypto Key Manager.</translation>
+      <translation>Не знайдено дійсних ключів розшифрування підробленого PKG. Налаштуйте їх у крипто-ключовому менеджері.</translation>
     </message>
     <message>
       <source>PKG Install</source>
-      <translation type="unfinished">PKG Install</translation>
+      <translation>Встановлення PKG</translation>
     </message>
     <message>
       <source>No valid PKG files were found.</source>
-      <translation type="unfinished">No valid PKG files were found.</translation>
+      <translation>Не знайдено дійсних файлів PKG.</translation>
     </message>
     <message>
       <source>Could not read SFO. Check log for details.</source>
-      <translation type="unfinished">Could not read SFO. Check log for details.</translation>
+      <translation>Не вдалося прочитати SFO. Перевірте журнал для отримання деталей.</translation>
     </message>
   </context>
   <context>
@@ -1478,1255 +1478,1255 @@ Notes:
     </message>
     <message>
       <source>JSON exported successfully.</source>
-      <translation type="unfinished">JSON exported successfully.</translation>
+      <translation>JSON успішно експортовано.</translation>
     </message>
   </context>
   <context>
     <name>PkgInstallDirSelectDialog</name>
     <message>
       <source>shadLauncher4 - Install PKG Files</source>
-      <translation type="unfinished">shadLauncher4 - Install PKG Files</translation>
+      <translation>shadLauncher4: встановити PKG-файли</translation>
     </message>
     <message>
       <source>Select PKG files to install</source>
-      <translation type="unfinished">Select PKG files to install</translation>
+      <translation>Виберіть PKG-файли для встановлення</translation>
     </message>
     <message>
       <source>Select All</source>
-      <translation type="unfinished">Select All</translation>
+      <translation>Вибрати всі</translation>
     </message>
     <message>
       <source>Select None</source>
-      <translation type="unfinished">Select None</translation>
+      <translation>Зняти вибране</translation>
     </message>
     <message>
       <source>Invert Selection</source>
-      <translation type="unfinished">Invert Selection</translation>
+      <translation>Інвертувати виділення</translation>
     </message>
     <message>
       <source>Installation Directory</source>
-      <translation type="unfinished">Installation Directory</translation>
+      <translation>Шлях встановлення</translation>
     </message>
     <message>
       <source>Browse...</source>
-      <translation type="unfinished">Browse...</translation>
+      <translation>Переглянути...</translation>
     </message>
     <message>
       <source>Delete PKG files after successful installation</source>
-      <translation type="unfinished">Delete PKG files after successful installation</translation>
+      <translation>Видалити PKG-файли після успішного встановлення</translation>
     </message>
     <message>
       <source>Select Directory</source>
-      <translation type="unfinished">Select Directory</translation>
+      <translation>Обрати каталог</translation>
     </message>
     <message>
       <source>Install Selected</source>
-      <translation type="unfinished">Install Selected</translation>
+      <translation>Встановити обране</translation>
     </message>
     <message>
       <source>No Selection</source>
-      <translation type="unfinished">No Selection</translation>
+      <translation>Нічого не виділено</translation>
     </message>
     <message>
       <source>Please select at least one game to install.</source>
-      <translation type="unfinished">Please select at least one game to install.</translation>
+      <translation>Виберіть принаймні одну гру для встановлення.</translation>
     </message>
     <message>
       <source>No Directory</source>
-      <translation type="unfinished">No Directory</translation>
+      <translation>Немає каталогу</translation>
     </message>
     <message>
       <source>Please select an installation directory.</source>
-      <translation type="unfinished">Please select an installation directory.</translation>
+      <translation>Виберіть каталог для встановлення.</translation>
     </message>
   </context>
   <context>
     <name>PkgInstallModel</name>
     <message>
       <source>Install</source>
-      <translation type="unfinished">Install</translation>
+      <translation>Встановити</translation>
     </message>
     <message>
       <source>Title ID</source>
-      <translation type="unfinished">Title ID</translation>
+      <translation>ID назви</translation>
     </message>
     <message>
       <source>Game Name</source>
-      <translation type="unfinished">Game Name</translation>
+      <translation>Назва гри</translation>
     </message>
     <message>
       <source>App Version</source>
-      <translation type="unfinished">App Version</translation>
+      <translation>Версія застосунку</translation>
     </message>
     <message>
       <source>Category</source>
-      <translation type="unfinished">Category</translation>
+      <translation>Категорія</translation>
     </message>
   </context>
   <context>
     <name>QObject</name>
     <message>
       <source>Export Game List</source>
-      <translation type="unfinished">Export Game List</translation>
+      <translation>Експортувати список ігор</translation>
     </message>
     <message>
       <source>Select export format:</source>
-      <translation type="unfinished">Select export format:</translation>
+      <translation>Виберіть формат експортування:</translation>
     </message>
     <message>
       <source>Sort by:</source>
-      <translation type="unfinished">Sort by:</translation>
+      <translation>Сортувати за:</translation>
     </message>
     <message>
       <source>Sort order:</source>
-      <translation type="unfinished">Sort order:</translation>
+      <translation>Порядок сортування:</translation>
     </message>
     <message>
       <source>Include compatibility info</source>
-      <translation type="unfinished">Include compatibility info</translation>
+      <translation>Включити інформацію про сумісність</translation>
     </message>
     <message>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>Експортувати</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Скасувати</translation>
     </message>
     <message>
       <source>Save Game List As</source>
-      <translation type="unfinished">Save Game List As</translation>
+      <translation>Зберегти список ігор як</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>Failed to create file:
 %1</source>
-      <translation type="unfinished">Failed to create file:
+      <translation>Не вдалося створити файл:
 %1</translation>
     </message>
     <message>
       <source>Game List Exported</source>
-      <translation type="unfinished">Game List Exported</translation>
+      <translation>Список ігор експортовано</translation>
     </message>
     <message>
       <source>Game list successfully exported to:
 %1</source>
-      <translation type="unfinished">Game list successfully exported to:
+      <translation>Список ігор успішно експортований до:
 %1</translation>
     </message>
     <message>
       <source>Exporting Game List</source>
-      <translation type="unfinished">Exporting Game List</translation>
+      <translation>Експортування списку ігор</translation>
     </message>
     <message>
       <source>Exporting games to CSV...</source>
-      <translation type="unfinished">Exporting games to CSV...</translation>
+      <translation>Експортування ігор до CSV...</translation>
     </message>
     <message>
       <source>Key</source>
-      <translation type="unfinished">Key</translation>
+      <translation>Ключ</translation>
     </message>
     <message>
       <source>Value</source>
-      <translation type="unfinished">Value</translation>
+      <translation>Значення</translation>
     </message>
     <message>
       <source>Type</source>
-      <translation type="unfinished">Type</translation>
+      <translation>Тип</translation>
     </message>
     <message>
       <source>Version Activated</source>
-      <translation type="unfinished">Version Activated</translation>
+      <translation>Версія активована</translation>
     </message>
     <message>
       <source>The selected version is now active.</source>
-      <translation type="unfinished">The selected version is now active.</translation>
+      <translation>Обрана версія активна.</translation>
     </message>
     <message>
       <source>Copy Failed</source>
-      <translation type="unfinished">Copy Failed</translation>
+      <translation>Не вдалося скопіювати</translation>
     </message>
     <message>
       <source>Unable to activate selected version.</source>
-      <translation type="unfinished">Unable to activate selected version.</translation>
+      <translation>Не вдалося активувати вибрану версію.</translation>
     </message>
   </context>
   <context>
     <name>SFOViewerDialog</name>
     <message>
       <source>PS4 SFO Viewer</source>
-      <translation type="unfinished">PS4 SFO Viewer</translation>
+      <translation>Перегляд SFO PS4</translation>
     </message>
     <message>
       <source>Reload</source>
-      <translation type="unfinished">Reload</translation>
+      <translation>Перезавантажити</translation>
     </message>
     <message>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>Експортувати</translation>
     </message>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>Відкрити теку</translation>
     </message>
     <message>
       <source>Copy Value</source>
-      <translation type="unfinished">Copy Value</translation>
+      <translation>Копіювати значення</translation>
     </message>
     <message>
       <source>Title: -</source>
-      <translation type="unfinished">Title: -</translation>
+      <translation>Назва: -</translation>
     </message>
     <message>
       <source>Title ID: -</source>
-      <translation type="unfinished">Title ID: -</translation>
+      <translation>ID назви: -</translation>
     </message>
     <message>
       <source>Version: -</source>
-      <translation type="unfinished">Version: -</translation>
+      <translation>Версія: -</translation>
     </message>
     <message>
       <source>Localized Titles</source>
-      <translation type="unfinished">Localized Titles</translation>
+      <translation>Локалізовані назви</translation>
     </message>
     <message>
       <source>Search...</source>
-      <translation type="unfinished">Search...</translation>
+      <translation>Пошук...</translation>
     </message>
     <message>
       <source>Regex</source>
-      <translation type="unfinished">Regex</translation>
+      <translation>Регулярний вираз</translation>
     </message>
     <message>
       <source>PSF Error</source>
-      <translation type="unfinished">PSF Error</translation>
+      <translation>Помилка PSF</translation>
     </message>
     <message>
       <source>Failed to load PSF file:
 %1</source>
-      <translation type="unfinished">Failed to load PSF file:
+      <translation>Не вдалося завантажити файл PSF:
 %1</translation>
     </message>
     <message>
       <source>Title: %1</source>
-      <translation type="unfinished">Title: %1</translation>
+      <translation>Назва: %1</translation>
     </message>
     <message>
       <source>Title ID: %1</source>
-      <translation type="unfinished">Title ID: %1</translation>
+      <translation>ID назви: %1</translation>
     </message>
     <message>
       <source>Version: %1</source>
-      <translation type="unfinished">Version: %1</translation>
+      <translation>Версія: %1</translation>
     </message>
     <message>
       <source>No Icon</source>
-      <translation type="unfinished">No Icon</translation>
+      <translation>Немає значка</translation>
     </message>
     <message>
       <source>JSON (*.json);;CSV (*.csv);;HTML (*.html)</source>
-      <translation type="unfinished">JSON (*.json);;CSV (*.csv);;HTML (*.html)</translation>
+      <translation>JSON (*.json);;CSV (*.csv);;HTML (*.html)</translation>
     </message>
   </context>
   <context>
     <name>SettingsDialog</name>
     <message>
       <source>Settings</source>
-      <translation type="unfinished">Settings</translation>
+      <translation>Налаштування</translation>
     </message>
     <message>
       <source>General</source>
-      <translation type="unfinished">General</translation>
+      <translation>Загальні</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation type="unfinished">Audio Device (general)</translation>
+      <translation>Аудіопристрій (загальний)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation type="unfinished">Audio Device (DS4 speaker)</translation>
+      <translation>Аудіопристрій (динамік DS4)</translation>
     </message>
     <message>
       <source>Volume</source>
-      <translation type="unfinished">Volume</translation>
+      <translation>Гучність</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
-      <translation type="unfinished">Miscellaneous</translation>
+      <translation>Різне</translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
-      <translation type="unfinished">Show Splash Screen When Launching Game</translation>
+      <translation>Показувати заставку при запуску гри</translation>
     </message>
     <message>
       <source>GUI</source>
-      <translation type="unfinished">GUI</translation>
+      <translation>Інтерфейс</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence</source>
-      <translation type="unfinished">Enable Discord Rich Presence</translation>
+      <translation>Увімкнути статус гри в Discord</translation>
     </message>
     <message>
       <source>Background Image</source>
-      <translation type="unfinished">Background Image</translation>
+      <translation>Фонове зображення</translation>
     </message>
     <message>
       <source>Show Background Image</source>
-      <translation type="unfinished">Show Background Image</translation>
+      <translation>Показувати фонове зображення</translation>
     </message>
     <message>
       <source>Opacity</source>
-      <translation type="unfinished">Opacity</translation>
+      <translation>Непрозорість</translation>
     </message>
     <message>
       <source>Title Music</source>
-      <translation type="unfinished">Title Music</translation>
+      <translation>Ігрова музика</translation>
     </message>
     <message>
       <source>Play title music</source>
-      <translation type="unfinished">Play title music</translation>
+      <translation>Відтворити ігрову музику</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
-      <translation type="unfinished">Set the volume of the background music.</translation>
+      <translation>Налаштування гучності фонової музики.</translation>
     </message>
     <message>
       <source>Game Compatibility</source>
-      <translation type="unfinished">Game Compatibility</translation>
+      <translation>Ігрова сумісність</translation>
     </message>
     <message>
       <source>Update Compatibility Database On Startup</source>
-      <translation type="unfinished">Update Compatibility Database On Startup</translation>
+      <translation>Оновлення даних ігрової сумісності під час запуску</translation>
     </message>
     <message>
       <source>Update Compatibility Database</source>
-      <translation type="unfinished">Update Compatibility Database</translation>
+      <translation>Оновити дані ігрової сумісності</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>Оновлення інтерфейсу</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation type="unfinished">Check for Updates at Startup</translation>
+      <translation>Перевіряти оновлення під час запуску</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Завжди показувати список змін</translation>
     </message>
     <message>
       <source>Check for Updates</source>
-      <translation type="unfinished">Check for Updates</translation>
+      <translation>Перевірити оновлення</translation>
     </message>
     <message>
       <source>Directory Scan Depth</source>
-      <translation type="unfinished">Directory Scan Depth</translation>
+      <translation>Глибина сканування каталогу</translation>
     </message>
     <message>
       <source>1</source>
-      <translation type="unfinished">1</translation>
+      <translation>1</translation>
     </message>
     <message>
       <source>2</source>
-      <translation type="unfinished">2</translation>
+      <translation>2</translation>
     </message>
     <message>
       <source>3</source>
-      <translation type="unfinished">3</translation>
+      <translation>3</translation>
     </message>
     <message>
       <source>Graphics</source>
-      <translation type="unfinished">Graphics</translation>
+      <translation>Графіка</translation>
     </message>
     <message>
       <source>Graphics Device</source>
-      <translation type="unfinished">Graphics Device</translation>
+      <translation>Графічний пристрій</translation>
     </message>
     <message>
       <source>Enable NULL GPU</source>
-      <translation type="unfinished">Enable NULL GPU</translation>
+      <translation>Увімкнути NULL GPU</translation>
     </message>
     <message>
       <source>Video</source>
-      <translation type="unfinished">Video</translation>
+      <translation>Відео</translation>
     </message>
     <message>
       <source>Display Mode</source>
-      <translation type="unfinished">Display Mode</translation>
+      <translation>Режим показу</translation>
     </message>
     <message>
       <source>Windowed</source>
-      <translation type="unfinished">Windowed</translation>
+      <translation>У вікні</translation>
     </message>
     <message>
       <source>Fullscreen</source>
-      <translation type="unfinished">Fullscreen</translation>
+      <translation>На весь екран</translation>
     </message>
     <message>
       <source>Fullscreen (Borderless)</source>
-      <translation type="unfinished">Fullscreen (Borderless)</translation>
+      <translation>На весь екран (без рамок)</translation>
     </message>
     <message>
       <source>Present Mode</source>
-      <translation type="unfinished">Present Mode</translation>
+      <translation>Режим презентації</translation>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
-      <translation type="unfinished">Mailbox (Vsync)</translation>
+      <translation>Поштова скринька (Верт. синхронізація)</translation>
     </message>
     <message>
       <source>Fifo (Vsync)</source>
-      <translation type="unfinished">Fifo (Vsync)</translation>
+      <translation>Fifo (Верт. синхронізація)</translation>
     </message>
     <message>
       <source>Immediate (No Vsync)</source>
-      <translation type="unfinished">Immediate (No Vsync)</translation>
+      <translation>Негайно (Без верт. синхронізації)</translation>
     </message>
     <message>
       <source>Window Size</source>
-      <translation type="unfinished">Window Size</translation>
+      <translation>Розмір вікна</translation>
     </message>
     <message>
       <source>W:</source>
-      <translation type="unfinished">W:</translation>
+      <translation>В:</translation>
     </message>
     <message>
       <source>H:</source>
-      <translation type="unfinished">H:</translation>
+      <translation>Ш:</translation>
     </message>
     <message>
       <source>Enable HDR</source>
-      <translation type="unfinished">Enable HDR</translation>
+      <translation>Увімкнути HDR</translation>
     </message>
     <message>
       <source>FSR Settings</source>
-      <translation type="unfinished">FSR Settings</translation>
+      <translation>Налаштування FSR</translation>
     </message>
     <message>
       <source>Enable FSR</source>
-      <translation type="unfinished">Enable FSR</translation>
+      <translation>Увімкнути FSR</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation type="unfinished">Enable RCAS (sharpening)</translation>
+      <translation>Увімкнути RCAS (гострота)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
-      <translation type="unfinished">RCAS Attenuation:</translation>
+      <translation>RCAS-затухання:</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation type="unfinished">Trophy</translation>
+      <translation>Трофеї</translation>
     </message>
     <message>
       <source>Disable Trophy Notification</source>
-      <translation type="unfinished">Disable Trophy Notification</translation>
+      <translation>Вимкнути сповіщення про отримання трофею</translation>
     </message>
     <message>
       <source>Trophy Notification Position</source>
-      <translation type="unfinished">Trophy Notification Position</translation>
+      <translation>Розміщення сповіщень про трофеї</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Ліворуч</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Праворуч</translation>
     </message>
     <message>
       <source>Top</source>
-      <translation type="unfinished">Top</translation>
+      <translation>Вгорі</translation>
     </message>
     <message>
       <source>Bottom</source>
-      <translation type="unfinished">Bottom</translation>
+      <translation>Внизу</translation>
     </message>
     <message>
       <source>Notification Duration</source>
-      <translation type="unfinished">Notification Duration</translation>
+      <translation>Тривалість сповіщення</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder</source>
-      <translation type="unfinished">Open the custom trophy images/sounds folder</translation>
+      <translation>Відкрити теку користувацьких зображень трофеїв / звуків</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>Введення</translation>
     </message>
     <message>
       <source>Cursor</source>
-      <translation type="unfinished">Cursor</translation>
+      <translation>Вказівник</translation>
     </message>
     <message>
       <source>Hide Cursor</source>
-      <translation type="unfinished">Hide Cursor</translation>
+      <translation>Приховати вказівник</translation>
     </message>
     <message>
       <source>Hide Cursor Idle Timeout</source>
-      <translation type="unfinished">Hide Cursor Idle Timeout</translation>
+      <translation>Приховувати вказівник при бездіяльності</translation>
     </message>
     <message>
       <source>s</source>
-      <translation type="unfinished">s</translation>
+      <translation>с</translation>
     </message>
     <message>
       <source>Controller</source>
-      <translation type="unfinished">Controller</translation>
+      <translation>Контролер</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
-      <translation type="unfinished">Enable Motion Controls</translation>
+      <translation>Увімкнути керування рухом</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
-      <translation type="unfinished">Enable Background Controller Input</translation>
+      <translation>Увімкнути введення з фонового контролера</translation>
     </message>
     <message>
       <source>Microphone</source>
-      <translation type="unfinished">Microphone</translation>
+      <translation>Мікрофон</translation>
     </message>
     <message>
       <source>USB Device</source>
-      <translation type="unfinished">USB Device</translation>
+      <translation>USB-пристрій</translation>
     </message>
     <message>
       <source>Paths</source>
-      <translation type="unfinished">Paths</translation>
+      <translation>Шляхи</translation>
     </message>
     <message>
       <source>Game Folders</source>
-      <translation type="unfinished">Game Folders</translation>
+      <translation>Ігрові теки</translation>
     </message>
     <message>
       <source>Add...</source>
-      <translation type="unfinished">Add...</translation>
+      <translation>Додати...</translation>
     </message>
     <message>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Видалити</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>Шлях до доповнення</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Переглянути</translation>
     </message>
     <message>
       <source>Home Path</source>
-      <translation type="unfinished">Home Path</translation>
+      <translation>Головний шлях</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>Шлях до системних модулів PS4</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Журнал</translation>
     </message>
     <message>
       <source>Logger</source>
-      <translation type="unfinished">Logger</translation>
+      <translation>Журналювання</translation>
     </message>
     <message>
       <source>Enable Logging</source>
-      <translation type="unfinished">Enable Logging</translation>
+      <translation>Увімкнути журналювання</translation>
     </message>
     <message>
       <source>Separate Log Files</source>
-      <translation type="unfinished">Separate Log Files</translation>
+      <translation>Окремі файли журналу</translation>
     </message>
     <message>
       <source>Log Type</source>
-      <translation type="unfinished">Log Type</translation>
+      <translation>Тип журналу</translation>
     </message>
     <message>
       <source>async</source>
-      <translation type="unfinished">async</translation>
+      <translation>асинхронний</translation>
     </message>
     <message>
       <source>sync</source>
-      <translation type="unfinished">sync</translation>
+      <translation>синхронний</translation>
     </message>
     <message>
       <source>Log Filter</source>
-      <translation type="unfinished">Log Filter</translation>
+      <translation>Фільтр журналу</translation>
     </message>
     <message>
       <source>Load Presets...</source>
-      <translation type="unfinished">Load Presets...</translation>
+      <translation>Завантажити шаблони...</translation>
     </message>
     <message>
       <source>Open Log Location</source>
-      <translation type="unfinished">Open Log Location</translation>
+      <translation>Відкрити місце розташування журналу</translation>
     </message>
     <message>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Налагодження</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping</source>
-      <translation type="unfinished">Enable Shaders Dumping</translation>
+      <translation>Увімкнути вивантаження шейдерів</translation>
     </message>
     <message>
       <source>Enable Debug Dumping</source>
-      <translation type="unfinished">Enable Debug Dumping</translation>
+      <translation>Увімкнути налагоджувальне вивантаження</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging</source>
-      <translation type="unfinished">Enable RenderDoc Debugging</translation>
+      <translation>Увімкнути налагодження RenderDoc</translation>
     </message>
     <message>
       <source>Copy GPU Buffers</source>
-      <translation type="unfinished">Copy GPU Buffers</translation>
+      <translation>Копіювати буфери GPU</translation>
     </message>
     <message>
       <source>Advanced</source>
-      <translation type="unfinished">Advanced</translation>
+      <translation>Розширені</translation>
     </message>
     <message>
       <source>Collect Shaders</source>
-      <translation type="unfinished">Collect Shaders</translation>
+      <translation>Збирати шейдери</translation>
     </message>
     <message>
       <source>Enable Crash Diagnostics</source>
-      <translation type="unfinished">Enable Crash Diagnostics</translation>
+      <translation>Увімкнути діагностику збоїв</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
-      <translation type="unfinished">Host Debug Markers</translation>
+      <translation>Маркери налагодження власника</translation>
     </message>
     <message>
       <source>Guest Debug Markers</source>
-      <translation type="unfinished">Guest Debug Markers</translation>
+      <translation>Маркери налагодження гостя</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Перевірка Vulkan (потребує Vulkan SDK)</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers</translation>
+      <translation>Увімкнути шари перевірки Vulkan</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Шари перевірки</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Увімкнути перевірку ядра</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>Увімкнути перевірку синхронізації</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>Увімкнути перевірку за допомогою GPU</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>Експериментальні</translation>
     </message>
     <message>
       <source>Experimental Features</source>
-      <translation type="unfinished">Experimental Features</translation>
+      <translation>Експериментальні функції</translation>
     </message>
     <message>
       <source>Enable Readbacks</source>
-      <translation type="unfinished">Enable Readbacks</translation>
+      <translation>Увімкнути зчитування</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images</source>
-      <translation type="unfinished">Enable Readback Linear Images</translation>
+      <translation>Увімкнути зчитування лінійних зображень</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
-      <translation type="unfinished">Enable Direct Memory Access</translation>
+      <translation>Увімкнути прямий доступ до пам’яті</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
-      <translation type="unfinished">Enable Devkit Console Mode</translation>
+      <translation>Увімкнути режим консолі для розробників</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
-      <translation type="unfinished">Enable PS4 Neo Mode</translation>
+      <translation>Увімкнути режим PS4 Neo</translation>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation type="unfinished">Set &quot;PSN signed-in&quot; to True</translation>
+      <translation>Використовувати емуляцію доступу до PSN</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
+      <translation>Використовувати емуляцію доступу до мережі</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>Додаткове виділення оперативної пам'яті</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation type="unfinished">Vblank Frequency</translation>
+      <translation>Частота Vblank</translation>
     </message>
     <message>
       <source>WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</source>
-      <translation type="unfinished">WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</translation>
+      <translation>ПОПЕРЕДЖЕННЯ: ці функції є експериментальними й не повинні бути ввімкнені, якщо вам не було сказано це зробити або якщо це не вимагається грою. Якщо у вас є питання, звертайтеся на сервер shadPS4 у Discord.</translation>
     </message>
     <message>
       <source>Point your mouse at an option to display its description.</source>
-      <translation type="unfinished">Point your mouse at an option to display its description.</translation>
+      <translation>Наведіть вказівник миші на параметр, щоби показати його опис.</translation>
     </message>
     <message>
       <source>Directory to install games</source>
-      <translation type="unfinished">Directory to install games</translation>
+      <translation>Тека для встановлення ігор</translation>
     </message>
     <message>
       <source>Invalid Path</source>
-      <translation type="unfinished">Invalid Path</translation>
+      <translation>Недійсний шлях</translation>
     </message>
     <message>
       <source>Selected folder does not exist.</source>
-      <translation type="unfinished">Selected folder does not exist.</translation>
+      <translation>Вибрана тека не існує.</translation>
     </message>
     <message>
       <source>Duplicate Path</source>
-      <translation type="unfinished">Duplicate Path</translation>
+      <translation>Дублювати шлях</translation>
     </message>
     <message>
       <source>This folder is already added.</source>
-      <translation type="unfinished">This folder is already added.</translation>
+      <translation>Ця тека вже додана.</translation>
     </message>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>Відкрити теку</translation>
     </message>
     <message>
       <source>Disable</source>
-      <translation type="unfinished">Disable</translation>
+      <translation>Вимкнути</translation>
     </message>
     <message>
       <source>Enable</source>
-      <translation type="unfinished">Enable</translation>
+      <translation>Увімкнути</translation>
     </message>
     <message>
       <source>Select directory for DLC</source>
-      <translation type="unfinished">Select directory for DLC</translation>
+      <translation>Виберіть каталог для доповнення</translation>
     </message>
     <message>
       <source>Select directory for home</source>
-      <translation type="unfinished">Select directory for home</translation>
+      <translation>Виберіть каталог для головної</translation>
     </message>
     <message>
       <source>Select directory for System modules</source>
-      <translation type="unfinished">Select directory for System modules</translation>
+      <translation>Виберіть каталог для системних модулів</translation>
     </message>
     <message>
       <source>This path does not exist on disk.</source>
-      <translation type="unfinished">This path does not exist on disk.</translation>
+      <translation>Цей шлях не існує на диску.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>Failed to save settings.</source>
-      <translation type="unfinished">Failed to save settings.</translation>
+      <translation>Не вдалося зберегти налаштування.</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Відновити до типових</translation>
     </message>
     <message>
       <source>Are you sure you want to restore all settings to their default values?</source>
-      <translation type="unfinished">Are you sure you want to restore all settings to their default values?</translation>
+      <translation>Упевнені, що хочете відновити всі налаштування до їхніх типових значень?</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Зберегти</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Застосувати</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Закрити</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Звук</translation>
     </message>
     <message>
       <source>Frontend Settings</source>
-      <translation type="unfinished">Frontend Settings</translation>
+      <translation>Налаштування інтерфейсу</translation>
     </message>
     <message>
       <source>Default Device</source>
-      <translation type="unfinished">Default Device</translation>
+      <translation>Типовий пристрій</translation>
     </message>
     <message>
       <source>PKG Installer</source>
-      <translation type="unfinished">PKG Installer</translation>
+      <translation>Встановлювач PKG</translation>
     </message>
     <message>
       <source>Use Separate Update Folder</source>
-      <translation type="unfinished">Use Separate Update Folder</translation>
+      <translation>Використовувати окрему теку оновлення</translation>
     </message>
     <message>
       <source>Discord Rich Presence</source>
-      <translation type="unfinished">Discord Rich Presence</translation>
+      <translation>Статус гри в Discord</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Кеш шейдерів</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>Увімкнути кеш шейдерів</translation>
     </message>
     <message>
       <source>Compress Shader Cache Files into Zip File</source>
-      <translation type="unfinished">Compress Shader Cache Files into Zip File</translation>
+      <translation>Стиснути файли кешу шейдерів у zip-файл</translation>
     </message>
     <message>
       <source>Idle</source>
-      <translation type="unfinished">Idle</translation>
+      <translation>При бездіяльності</translation>
     </message>
     <message>
       <source>Auto Select</source>
-      <translation type="unfinished">Auto Select</translation>
+      <translation>Автовибір</translation>
     </message>
     <message>
       <source>Never</source>
-      <translation type="unfinished">Never</translation>
+      <translation>Ніколи</translation>
     </message>
     <message>
       <source>Always</source>
-      <translation type="unfinished">Always</translation>
+      <translation>Завжди</translation>
     </message>
     <message>
       <source>Real USB Device</source>
-      <translation type="unfinished">Real USB Device</translation>
+      <translation>Реальний USB-пристрій</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation type="unfinished">Skylander Portal</translation>
+      <translation>Skylander Portal</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>Infinity Base</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>Dimensions Toypad</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Нічого</translation>
     </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
     <message>
       <source>Game Folders:\nThe list of folders to check for installed games.</source>
-      <translation type="unfinished">Game Folders:\nThe list of folders to check for installed games.</translation>
+      <translation>Ігрові теки:\nСписок тек, в яких слід перевірити наявність встановлених ігор.</translation>
     </message>
     <message>
       <source>Add Folder:\nAdd a new folder to the list of game installation folders.</source>
-      <translation type="unfinished">Add Folder:\nAdd a new folder to the list of game installation folders.</translation>
+      <translation>Додавання теки:\nДодавати нову теку до списку тек встановлення гри.</translation>
     </message>
     <message>
       <source>Remove Folder:\nRemove the selected folder from the list of game installation folders.</source>
-      <translation type="unfinished">Remove Folder:\nRemove the selected folder from the list of game installation folders.</translation>
+      <translation>Видалення теки:\nВидаляти вибрану теку зі списку тек встановлення гри.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>Шлях до доповнення:\nТека, з якої завантажується доповнення для гри.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
+      <translation>Перегляд:\nЗнайти теку, яку потрібно встановити як шлях до доповнення.</translation>
     </message>
     <message>
       <source>Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</source>
-      <translation type="unfinished">Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</translation>
+      <translation>Головна тека:\nТека, в якій емулятор зберігає дані користувача, такі як файли збереження та трофеї.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the Home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the Home folder.</translation>
+      <translation>Перегляд:\nЗнайти теку, яку потрібно встановити як головну теку.</translation>
     </message>
     <message>
       <source>System Modules Folder:\nThe folder where system modules are loaded from.</source>
-      <translation type="unfinished">System Modules Folder:\nThe folder where system modules are loaded from.</translation>
+      <translation>Тека системних модулів:\nТека, з якої завантажуються системні модулі.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Modules folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the System Modules folder.</translation>
+      <translation>Перегляд:\nЗнайти теку, яку потрібно встановити як теку системних модулів.</translation>
     </message>
     <message>
       <source>Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</source>
-      <translation type="unfinished">Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</translation>
+      <translation>Глибина сканування каталогу:\nВстановлення максимальної глибини сканування ігор у вказаних тека ігор.\n1 означає, що сканується один рівень підтек і так далі.</translation>
     </message>
   </context>
   <context>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>Керування користувачами</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>&amp;Створити користувача</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;Видалити користувача</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;Перейменувати користувача</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;Встановити як типового користувача</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;Встановити колір</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;Встановити порт контролера</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;Закрити</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>Не вдалося додати більше користувачів.</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>Створити нового користувача</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>ID нового користувача: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>Ім’я користувача (3-16 символів, букви, цифри, _, -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>Некоректне ім’я користувача</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+      <translation>Ім’я користувача має складатися з 3-16 символів та бути коректним.</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
-      <translation type="unfinished">Delete Confirmation</translation>
+      <translation>Підтвердити видалення</translation>
     </message>
     <message>
       <source>Delete user ID %1?</source>
-      <translation type="unfinished">Delete user ID %1?</translation>
+      <translation>Видалити ID користувача %1?</translation>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>Перейменувати користувача</translation>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>Старе ім’я користувача: %1</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>Встановити колір користувача</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>Виберіть колір:</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>Встановити порт контролера</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>Призначити порт (1-4) для цього користувача:</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;Відкрити каталог користувачів</translation>
     </message>
   </context>
   <context>
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Керування версіями</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>Шлях до збереження версій</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Переглянути</translation>
     </message>
     <message>
       <source>Installed</source>
-      <translation type="unfinished">Installed</translation>
+      <translation>Встановлені</translation>
     </message>
     <message>
       <source>Selected</source>
-      <translation type="unfinished">Selected</translation>
+      <translation>Вибрані</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Версія</translation>
     </message>
     <message>
       <source>Codename</source>
-      <translation type="unfinished">Codename</translation>
+      <translation>Кодова назва</translation>
     </message>
     <message>
       <source>Date</source>
-      <translation type="unfinished">Date</translation>
+      <translation>Дата</translation>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation type="unfinished">Add Custom</translation>
+      <translation>Додати власну</translation>
     </message>
     <message>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Видалити</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation type="unfinished">Refresh List</translation>
+      <translation>Оновити список</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation type="unfinished">Download</translation>
+      <translation>Завантажити</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+      <translation>Перевіряти наявність попередніх оновлень під час запуску</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Завжди показувати список змін</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation type="unfinished">Check for Pre-release Updates</translation>
+      <translation>Перевірка оновлень попередніх релізів</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>Виберіть теку, в якій будуть встановлені версії емулятора</translation>
     </message>
     <message>
       <source>Select executable</source>
-      <translation type="unfinished">Select executable</translation>
+      <translation>Вибрати виконуваний файл</translation>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation type="unfinished">Executable (*.exe)</translation>
+      <translation>Виконуваний файл (*.exe)</translation>
     </message>
     <message>
       <source>Version name</source>
-      <translation type="unfinished">Version name</translation>
+      <translation>Назва версії</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>Введіть назву цієї версії, як вона зазначена в списку.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>A version with that name already exists.</source>
-      <translation type="unfinished">A version with that name already exists.</translation>
+      <translation>Версія з такою назвою уже існує.</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Локальна</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Успіх</translation>
     </message>
     <message>
       <source>Version added successfully.</source>
-      <translation type="unfinished">Version added successfully.</translation>
+      <translation>Версію успішно додано.</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Немає вибраної версії. Виберіть одну зі списку для видалення.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation type="unfinished">Failed to determine the folder path.</translation>
+      <translation>Не вдалося визначити шлях до теки.</translation>
     </message>
     <message>
       <source>Delete version</source>
-      <translation type="unfinished">Delete version</translation>
+      <translation>Видалити версію</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation type="unfinished">Do you want to delete the version</translation>
+      <translation>Хочете видалити версію</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>Не вдалося визначити теку для видалення.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Не вдалося видалити теку.</translation>
     </message>
     <message>
       <source>Checking for new emulator versions...</source>
-      <translation type="unfinished">Checking for new emulator versions...</translation>
+      <translation>Перевірка нових версій емулятора...</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>Спочатку потрібно вибрати місце для збереження версій у
+«Шлях для збереження версій»</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>Підтвердити завантаження</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation type="unfinished">Do you want to download the version</translation>
+      <translation>Хочете завантажити версію</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation type="unfinished">No files available for this platform.</translation>
+      <translation>Немає доступних файлів для цієї платформи.</translation>
     </message>
     <message>
       <source>Downloading</source>
-      <translation type="unfinished">Downloading</translation>
+      <translation>Завантаження</translation>
     </message>
     <message>
       <source>Error accessing GitHub</source>
-      <translation type="unfinished">Error accessing GitHub</translation>
+      <translation>Помилка при отриманні доступу до GitHub</translation>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
-      <translation type="unfinished">Version %1 has been downloaded and selected.</translation>
+      <translation>Версія %1 була завантажена та вибрана.</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation type="unfinished">Failed to create zip extraction script</translation>
+      <translation>Не вдалося створити скрипт для розпакування zip-архіву</translation>
     </message>
     <message>
       <source>Cannot open cache file</source>
-      <translation type="unfinished">Cannot open cache file</translation>
+      <translation>Не вдалося відкрити файл кешу</translation>
     </message>
     <message>
       <source>Cache file is corrupted</source>
-      <translation type="unfinished">Cache file is corrupted</translation>
+      <translation>Файл кешу пошкоджено</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+      <translation>Відповідь GitHub API не є дійсним JSON-масивом.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>Не вдалося отримати хеш останнього попереднього релізу.</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
-      <translation type="unfinished">Auto Updater - Emulator</translation>
+      <translation>Автооновлення: емулятор</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation type="unfinished">You already have the latest pre-release version.</translation>
+      <translation>Ви вже маєте останню попередню версію.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
-      <translation type="unfinished">Update Available (Emulator)</translation>
+      <translation>Доступне оновлення (емулятор)</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Поточна версія</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Остання версія</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Бажаєте оновитися?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Оновитися</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Ні</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>Показати список змін</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>Приховати список змін</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation type="unfinished">Network error while fetching changelog</translation>
+      <translation>Помилка мережі під час отримання списку змін</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Зміни</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>Не знайдено URL-адреси для завантаження зазначеного ресурсу.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly)</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly)</translation>
+      <translation>Завантаження попереднього релізу (нічний)</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
-      <translation type="unfinished">Network error while downloading</translation>
+      <translation>Мережева помилка під час завантаження</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
-      <translation type="unfinished">Extraction failure.</translation>
+      <translation>Помилка видобування.</translation>
     </message>
     <message>
       <source>Complete installation</source>
-      <translation type="unfinished">Complete installation</translation>
+      <translation>Завершити встановлення</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) updated successfully.</source>
-      <translation type="unfinished">Pre-release (Nightly) updated successfully.</translation>
+      <translation>Попередня версія (нічна) успішно оновлена.</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation type="unfinished">Failed to create the update script file</translation>
+      <translation>Не вдалося створити файл скрипту оновлення</translation>
     </message>
   </context>
 </TS>
