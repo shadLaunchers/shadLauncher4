@@ -317,10 +317,6 @@ Muss ein gültiger Hex-Wert mit gleicher Länge sein.</translation>
       <translation>Trophäen-Schlüssel</translation>
     </message>
     <message>
-      <source>%1:</source>
-      <translation>%1:</translation>
-    </message>
-    <message>
       <source>Exponent1</source>
       <translation>Exponent1</translation>
     </message>
@@ -793,12 +789,6 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
       <translation>Tooltip Notizen bearbeiten</translation>
     </message>
     <message>
-      <source>%0
-%1</source>
-      <translation>%0
-%1</translation>
-    </message>
-    <message>
       <source>Warning!</source>
       <translation>Warnung!</translation>
     </message>
@@ -868,18 +858,8 @@ Benutze lokale Datenbank.
   <context>
     <name>GameListGrid</name>
     <message>
-      <source>%0 [%1]
-
-Notes:
-%2</source>
-      <translation>%0 [%1]
-
-Notiz:
-%2</translation>
-    </message>
-    <message>
-      <source>%0 [%1]</source>
-      <translation>%0 [%1]</translation>
+      <source>Notes:</source>
+      <translation type="unfinished">Notes:</translation>
     </message>
   </context>
   <context>
@@ -887,16 +867,6 @@ Notiz:
     <message>
       <source>Unknown</source>
       <translation>Unbekannt</translation>
-    </message>
-    <message>
-      <source>%0 [%1]
-
-Notes:
-%2</source>
-      <translation>%0 [%1]
-
-Notiz:
-%2</translation>
     </message>
     <message>
       <source>Never played</source>
@@ -925,6 +895,10 @@ Notiz:
     <message>
       <source>Last updated</source>
       <translation>Leztes update</translation>
+    </message>
+    <message>
+      <source>Notes:</source>
+      <translation type="unfinished">Notes:</translation>
     </message>
   </context>
   <context>
@@ -993,14 +967,6 @@ Notiz:
     <message>
       <source>Filter</source>
       <translation type="unfinished">Filter</translation>
-    </message>
-    <message>
-      <source>+</source>
-      <translation type="unfinished">+</translation>
-    </message>
-    <message>
-      <source>-</source>
-      <translation type="unfinished">-</translation>
     </message>
     <message>
       <source>Load</source>
@@ -1816,18 +1782,6 @@ Notiz:
     <message>
       <source>Directory Scan Depth</source>
       <translation>Verzeichnis-Scantiefe</translation>
-    </message>
-    <message>
-      <source>1</source>
-      <translation>1</translation>
-    </message>
-    <message>
-      <source>2</source>
-      <translation>2</translation>
-    </message>
-    <message>
-      <source>3</source>
-      <translation>3</translation>
     </message>
     <message>
       <source>Graphics</source>
