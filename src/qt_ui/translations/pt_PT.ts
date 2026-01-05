@@ -317,10 +317,6 @@ Must be a valid hex string with even length.</translation>
       <translation type="unfinished">Trophy Key</translation>
     </message>
     <message>
-      <source>%1:</source>
-      <translation type="unfinished">%1:</translation>
-    </message>
-    <message>
       <source>Exponent1</source>
       <translation type="unfinished">Exponent1</translation>
     </message>
@@ -793,12 +789,6 @@ Please enter your keys and save them.</translation>
       <translation>Editar Notas</translation>
     </message>
     <message>
-      <source>%0
-%1</source>
-      <translation type="unfinished">%0
-%1</translation>
-    </message>
-    <message>
       <source>Warning!</source>
       <translation>Aviso!</translation>
     </message>
@@ -868,18 +858,8 @@ A usar a base de dados local.
   <context>
     <name>GameListGrid</name>
     <message>
-      <source>%0 [%1]
-
-Notes:
-%2</source>
-      <translation>%0 [%1]
-
-Notas:
-%2</translation>
-    </message>
-    <message>
-      <source>%0 [%1]</source>
-      <translation type="unfinished">%0 [%1]</translation>
+      <source>Notes:</source>
+      <translation type="unfinished">Notes:</translation>
     </message>
   </context>
   <context>
@@ -887,16 +867,6 @@ Notas:
     <message>
       <source>Unknown</source>
       <translation>Desconhecido</translation>
-    </message>
-    <message>
-      <source>%0 [%1]
-
-Notes:
-%2</source>
-      <translation>%0 [%1]
-
-Notas:
-%2</translation>
     </message>
     <message>
       <source>Never played</source>
@@ -925,6 +895,10 @@ Notas:
     <message>
       <source>Last updated</source>
       <translation>Última atualização</translation>
+    </message>
+    <message>
+      <source>Notes:</source>
+      <translation type="unfinished">Notes:</translation>
     </message>
   </context>
   <context>
@@ -993,14 +967,6 @@ Notas:
     <message>
       <source>Filter</source>
       <translation type="unfinished">Filter</translation>
-    </message>
-    <message>
-      <source>+</source>
-      <translation type="unfinished">+</translation>
-    </message>
-    <message>
-      <source>-</source>
-      <translation type="unfinished">-</translation>
     </message>
     <message>
       <source>Load</source>
@@ -1816,18 +1782,6 @@ Notas:
     <message>
       <source>Directory Scan Depth</source>
       <translation type="unfinished">Directory Scan Depth</translation>
-    </message>
-    <message>
-      <source>1</source>
-      <translation type="unfinished">1</translation>
-    </message>
-    <message>
-      <source>2</source>
-      <translation type="unfinished">2</translation>
-    </message>
-    <message>
-      <source>3</source>
-      <translation type="unfinished">3</translation>
     </message>
     <message>
       <source>Graphics</source>
