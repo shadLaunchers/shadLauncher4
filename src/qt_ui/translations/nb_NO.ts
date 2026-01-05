@@ -317,10 +317,6 @@ Må være en gyldig sekskantede tekststreng med partallslengde.</translation>
       <translation>Trofénøkkel</translation>
     </message>
     <message>
-      <source>%1:</source>
-      <translation>%1:</translation>
-    </message>
-    <message>
       <source>Exponent1</source>
       <translation>Eksponent 1</translation>
     </message>
@@ -793,12 +789,6 @@ Skriv inn nøklene og lagre dem.</translation>
       <translation>Rediger hjelpebobler</translation>
     </message>
     <message>
-      <source>%0
-%1</source>
-      <translation>%0
-%1</translation>
-    </message>
-    <message>
       <source>Warning!</source>
       <translation>Advarsel!</translation>
     </message>
@@ -868,18 +858,8 @@ Bruker lokal database.
   <context>
     <name>GameListGrid</name>
     <message>
-      <source>%0 [%1]
-
-Notes:
-%2</source>
-      <translation>%0 [%1]
-
-Notat:
-%2</translation>
-    </message>
-    <message>
-      <source>%0 [%1]</source>
-      <translation>%0 [%1]</translation>
+      <source>Notes:</source>
+      <translation type="unfinished">Notes:</translation>
     </message>
   </context>
   <context>
@@ -887,16 +867,6 @@ Notat:
     <message>
       <source>Unknown</source>
       <translation>Ukjent</translation>
-    </message>
-    <message>
-      <source>%0 [%1]
-
-Notes:
-%2</source>
-      <translation>%0 [%1]
-
-Notat:
-%2</translation>
     </message>
     <message>
       <source>Never played</source>
@@ -925,6 +895,10 @@ Notat:
     <message>
       <source>Last updated</source>
       <translation>Sist oppdatert</translation>
+    </message>
+    <message>
+      <source>Notes:</source>
+      <translation type="unfinished">Notes:</translation>
     </message>
   </context>
   <context>
@@ -993,14 +967,6 @@ Notat:
     <message>
       <source>Filter</source>
       <translation>Filter</translation>
-    </message>
-    <message>
-      <source>+</source>
-      <translation>+</translation>
-    </message>
-    <message>
-      <source>-</source>
-      <translation>-</translation>
     </message>
     <message>
       <source>Load</source>
@@ -1816,18 +1782,6 @@ Notat:
     <message>
       <source>Directory Scan Depth</source>
       <translation>Søkingsdybde for sti</translation>
-    </message>
-    <message>
-      <source>1</source>
-      <translation>1</translation>
-    </message>
-    <message>
-      <source>2</source>
-      <translation>2</translation>
-    </message>
-    <message>
-      <source>3</source>
-      <translation>3</translation>
     </message>
     <message>
       <source>Graphics</source>
