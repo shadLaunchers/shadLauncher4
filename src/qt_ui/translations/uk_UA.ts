@@ -317,10 +317,6 @@ Must be a valid hex string with even length.</source>
       <translation>Ключ трофея</translation>
     </message>
     <message>
-      <source>%1:</source>
-      <translation>%1:</translation>
-    </message>
-    <message>
       <source>Exponent1</source>
       <translation>Експонент1</translation>
     </message>
@@ -793,12 +789,6 @@ Please enter your keys and save them.</source>
       <translation>Редагувати нотатки щодо підказок</translation>
     </message>
     <message>
-      <source>%0
-%1</source>
-      <translation>%0
-%1</translation>
-    </message>
-    <message>
       <source>Warning!</source>
       <translation>Попередження!</translation>
     </message>
@@ -868,18 +858,8 @@ Using local database.
   <context>
     <name>GameListGrid</name>
     <message>
-      <source>%0 [%1]
-
-Notes:
-%2</source>
-      <translation>%0 [%1]
-
-Примітки:
-%2</translation>
-    </message>
-    <message>
-      <source>%0 [%1]</source>
-      <translation>%0 [%1]</translation>
+      <source>Notes:</source>
+      <translation type="unfinished">Notes:</translation>
     </message>
   </context>
   <context>
@@ -887,16 +867,6 @@ Notes:
     <message>
       <source>Unknown</source>
       <translation>Невідомо</translation>
-    </message>
-    <message>
-      <source>%0 [%1]
-
-Notes:
-%2</source>
-      <translation>%0 [%1]
-
-Примітки:
-%2</translation>
     </message>
     <message>
       <source>Never played</source>
@@ -925,6 +895,10 @@ Notes:
     <message>
       <source>Last updated</source>
       <translation>Востаннє оновлено</translation>
+    </message>
+    <message>
+      <source>Notes:</source>
+      <translation type="unfinished">Notes:</translation>
     </message>
   </context>
   <context>
@@ -1001,14 +975,6 @@ Notes:
     <message>
       <source>Filter</source>
       <translation>Фільтр</translation>
-    </message>
-    <message>
-      <source>+</source>
-      <translation>+</translation>
-    </message>
-    <message>
-      <source>-</source>
-      <translation>-</translation>
     </message>
     <message>
       <source>Load</source>
@@ -1824,18 +1790,6 @@ Notes:
     <message>
       <source>Directory Scan Depth</source>
       <translation>Глибина сканування каталогу</translation>
-    </message>
-    <message>
-      <source>1</source>
-      <translation>1</translation>
-    </message>
-    <message>
-      <source>2</source>
-      <translation>2</translation>
-    </message>
-    <message>
-      <source>3</source>
-      <translation>3</translation>
     </message>
     <message>
       <source>Graphics</source>
