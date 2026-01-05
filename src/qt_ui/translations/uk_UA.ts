@@ -214,219 +214,219 @@
     </message>
     <message>
       <source>Can&apos;t apply cheats before the game is started</source>
-      <translation type="unfinished">Can&apos;t apply cheats before the game is started</translation>
+      <translation>Не можна застосовувати чити до початку гри</translation>
     </message>
   </context>
   <context>
     <name>CheatsPatchesDialog</name>
     <message>
       <source>Cheats / Patches</source>
-      <translation type="unfinished">Cheats / Patches</translation>
+      <translation>Чити / Патчі</translation>
     </message>
     <message>
       <source>Game Info</source>
-      <translation type="unfinished">Game Info</translation>
+      <translation>Інформація про гру</translation>
     </message>
     <message>
       <source>No Image Available</source>
-      <translation type="unfinished">No Image Available</translation>
+      <translation>Зображення відсутнє</translation>
     </message>
     <message>
       <source>Game Name</source>
-      <translation type="unfinished">Game Name</translation>
+      <translation>Назва гри</translation>
     </message>
     <message>
       <source>Serial: </source>
-      <translation type="unfinished">Serial: </translation>
+      <translation>Серійний номер: </translation>
     </message>
     <message>
       <source>Version: </source>
-      <translation type="unfinished">Version: </translation>
+      <translation>Версія: </translation>
     </message>
     <message>
       <source>Size: </source>
-      <translation type="unfinished">Size: </translation>
+      <translation>Розмір: </translation>
     </message>
     <message>
       <source>Cheats/Patches are experimental. Use with caution...</source>
-      <translation type="unfinished">Cheats/Patches are experimental. Use with caution...</translation>
+      <translation>Чити / Патчі експериментальні. Використовуйте з обережністю...</translation>
     </message>
     <message>
       <source>Cheats</source>
-      <translation type="unfinished">Cheats</translation>
+      <translation>Чити</translation>
     </message>
     <message>
       <source>Select Cheat File:</source>
-      <translation type="unfinished">Select Cheat File:</translation>
+      <translation>Виберіть файл з читом:</translation>
     </message>
     <message>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Репозиторій:</translation>
     </message>
     <message>
       <source>Download Cheats</source>
-      <translation type="unfinished">Download Cheats</translation>
+      <translation>Завантажити чити</translation>
     </message>
     <message>
       <source>Delete File</source>
-      <translation type="unfinished">Delete File</translation>
+      <translation>Видалити файл</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Закрити</translation>
     </message>
     <message>
       <source>Patches</source>
-      <translation type="unfinished">Patches</translation>
+      <translation>Патчі</translation>
     </message>
     <message>
       <source>Select Patch File:</source>
-      <translation type="unfinished">Select Patch File:</translation>
+      <translation>Виберіть файл патчу:</translation>
     </message>
     <message>
       <source>Download Patches</source>
-      <translation type="unfinished">Download Patches</translation>
+      <translation>Завантажити патчі</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Зберегти</translation>
     </message>
   </context>
   <context>
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Крипто-ключовий менеджер</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>Ключ трофея: використовується для розшифрування трофея.
+Повинен бути дійсним шістнадцятковим рядком із парною довжиною.</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>Ключ трофея:</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>Статус: не завантажено</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
+      <translation>Ключ трофея</translation>
     </message>
     <message>
       <source>%1:</source>
-      <translation type="unfinished">%1:</translation>
+      <translation>%1:</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>Експонент1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>Експонент2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>Публічний експонент</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Коефіцієнт</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>Модуль</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>Прайм 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>Прайм 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Приватний експонент</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>Підроблений набір клавіш</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Ключові компоненти RSA для підробленого підпису.
+Усі поля повинні бути дійсними шістнадцятковими рядками з парною довжиною.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>Набір ключів для Rif-налагодження</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Ключові компоненти RSA для налагодження файлів RIF.
+Усі поля повинні бути дійсними шістнадцятковими рядками з парною довжиною.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>Ключ із пакета 3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Ключові компоненти RSA для розшифрування пакета.
+Усі поля повинні бути дійсними шістнадцятковими рядками з парною довжиною.</translation>
     </message>
     <message>
       <source>Load All Keys</source>
-      <translation type="unfinished">Load All Keys</translation>
+      <translation>Завантажити всі ключі</translation>
     </message>
     <message>
       <source>Save All Keys</source>
-      <translation type="unfinished">Save All Keys</translation>
+      <translation>Зберегти всі ключі</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Закрити</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Попередження</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>Не знайдено файл ключів або не вдалося завантажити.
+Введіть свої ключі та збережіть їх.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>Помилка підтвердження</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Успіх</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation type="unfinished">Keys saved successfully!</translation>
+      <translation>Ключі успішно збережено!</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation type="unfinished">Failed to save keys!</translation>
+      <translation>Не вдалося зберегти ключі!</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>Статус: всі поля порожні</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
@@ -642,23 +642,23 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Icon</source>
-      <translation type="unfinished">Icon</translation>
+      <translation>Значок</translation>
     </message>
     <message>
       <source>Show Icons</source>
-      <translation type="unfinished">Show Icons</translation>
+      <translation>Показувати значки</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Назва</translation>
     </message>
     <message>
       <source>Show Names</source>
-      <translation type="unfinished">Show Names</translation>
+      <translation>Показувати назви</translation>
     </message>
     <message>
       <source>Compatibility</source>
-      <translation type="unfinished">Compatibility</translation>
+      <translation>Сумісність</translation>
     </message>
     <message>
       <source>Show Compatibility</source>
