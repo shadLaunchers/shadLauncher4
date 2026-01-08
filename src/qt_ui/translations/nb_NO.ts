@@ -859,7 +859,7 @@ Bruker lokal database.
     <name>GameListGrid</name>
     <message>
       <source>Notes:</source>
-      <translation type="unfinished">Notes:</translation>
+      <translation>Notater:</translation>
     </message>
   </context>
   <context>
@@ -898,7 +898,7 @@ Bruker lokal database.
     </message>
     <message>
       <source>Notes:</source>
-      <translation type="unfinished">Notes:</translation>
+      <translation>Notater:</translation>
     </message>
   </context>
   <context>
