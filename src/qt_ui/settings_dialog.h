@@ -56,11 +56,11 @@ private:
                                                            {tr("Idle"), HideCursorState::Idle},
                                                            {tr("Always"), HideCursorState::Always}};
 
-    const QMap<QString, UsbDevice> usbDeviceMap = {
-        {tr("Real USB Device"), UsbDevice::Real},
-        {tr("Skylander Portal"), UsbDevice::SkylanderPortal},
-        {tr("Infinity Base"), UsbDevice::InfinityBase},
-        {tr("Dimensions Toypad"), UsbDevice::DimensionsToypad}};
+    const QMap<QString, UsbBackendType> usbDeviceMap = {
+        {tr("Real USB Device"), UsbBackendType::Real},
+        {tr("Skylander Portal"), UsbBackendType::SkylandersPortal},
+        {tr("Infinity Base"), UsbBackendType::InfinityBase},
+        {tr("Dimensions Toypad"), UsbBackendType::DimensionsToypad}};
 
     const QMap<QString, QString> presentModeMap = {{tr("Mailbox (Vsync)"), "Mailbox"},
                                                    {tr("Fifo (Vsync)"), "Fifo"},

@@ -2258,6 +2258,10 @@ Using local database.
         <source>None</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Show Simple FPS Counter</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsDialogHelperTexts</name>
@@ -2299,6 +2303,18 @@ Using local database.
     </message>
     <message>
         <source>Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -52,20 +52,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
       m_gui_settings(std::move(gui_settings)), m_emu_settings(std::move(emu_settings)) {
     ui->setupUi(this);
 
-    // TODO enable them once implemented
-    /* ui->generalTabContents->setVisible(false);
-    ui->graphicsTabLayout->setVisible(false);
-    ui->inputTabContents->setVisible(false);
-    ui->logTabContents->setVisible(false);
-    ui->userTabContents->setVisible(false);
-    ui->experimentalTabContents->setVisible(false);
-    ui->debugTabContents->setVisible(false);
-    ui->GUIgroupBox->setVisible(false);
-    ui->groupBox->setVisible(false);
-    ui->CompatgroupBox->setVisible(false);
-    ui->updaterGroupBox->setVisible(false);*/
-    // end of todo
-
     const SettingsDialogHelperTexts helptexts;
     SubscribeHelpText(ui->gameFoldersGroupBox, helptexts.settings.paths_gameDir);
     SubscribeHelpText(ui->gameFoldersListWidget, helptexts.settings.paths_gameDir);
@@ -81,6 +67,9 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->currentSysmodulesPath, helptexts.settings.paths_sysmodulesDir);
     SubscribeHelpText(ui->browseSysmodulesButton, helptexts.settings.paths_sysmodulesDir_browse);
     SubscribeHelpText(ui->ScanDepthComboBox, helptexts.settings.general_scan_depth_combo);
+    SubscribeHelpText(ui->showSplashCheckBox, helptexts.settings.general_show_splash);
+    SubscribeHelpText(ui->horizontalVolumeSlider, helptexts.settings.general_volume_slider);
+    SubscribeHelpText(ui->disableTrophycheckBox, helptexts.settings.general_disable_trophy_popup);
 
     PopulateComboBoxes();
     PathTabConnections();
@@ -334,6 +323,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->radioButton_Right->setChecked(trophy_side == "right");
     ui->radioButton_Top->setChecked(trophy_side == "top");
     ui->radioButton_Bottom->setChecked(trophy_side == "bottom");
+    ui->showFpsCounterCheckBox->setChecked(m_emu_settings->IsShowFpsCounter());
 
     // ------------------ GUI tab --------------------------------------------------------
     ui->discordRPCCheckbox->setChecked(m_emu_settings->IsDiscordRPCEnabled());
@@ -384,7 +374,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     }
 
     ui->idleTimeoutSpinBox->setValue(m_emu_settings->GetCursorHideTimeout());
-    ui->usbComboBox->setCurrentIndex(m_emu_settings->GetUsbDevice());
+    ui->usbComboBox->setCurrentIndex(m_emu_settings->GetUsbDeviceBackend());
     ui->micComboBox->setCurrentText(QString::fromStdString(m_emu_settings->GetMicDevice()));
     ui->motionControlsCheckBox->setChecked(m_emu_settings->IsMotionControlsEnabled());
     ui->backgroundControllerCheckBox->setChecked(m_emu_settings->IsBackgroundControllerInput());
@@ -412,9 +402,9 @@ void SettingsDialog::LoadValuesFromConfig() {
                                           : ui->vkLayersGroupBox->setVisible(false);
 
     ui->collectShaderCheckBox->setChecked(m_emu_settings->IsShaderCollect());
-    ui->crashDiagnosticsCheckBox->setChecked(m_emu_settings->IsCrashDiagnosticEnabled());
-    ui->hostMarkersCheckBox->setChecked(m_emu_settings->IsHostMarkers());
-    ui->guestMarkersCheckBox->setChecked(m_emu_settings->IsGuestMarkers());
+    ui->crashDiagnosticsCheckBox->setChecked(m_emu_settings->IsVkCrashDiagnosticEnabled());
+    ui->hostMarkersCheckBox->setChecked(m_emu_settings->IsVkHostMarkersEnabled());
+    ui->guestMarkersCheckBox->setChecked(m_emu_settings->IsVkGuestMarkersEnabled());
 
     // ------------------ Experimental tab --------------------------------------------------------
     ui->readbacksCheckBox->setChecked(m_emu_settings->IsReadbacksEnabled());
@@ -426,7 +416,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->networkConnectedCheckBox->setChecked(m_emu_settings->IsConnectedToNetwork());
 
     ui->enableShaderCacheCheckBox->setChecked(m_emu_settings->IsPipelineCacheEnabled());
-    ui->archiveShaderCacheCheckBox->setChecked(m_emu_settings->IsPipelineCacheArchive());
+    ui->archiveShaderCacheCheckBox->setChecked(m_emu_settings->IsPipelineCacheArchived());
     ui->dmemSpinBox->setValue(m_emu_settings->GetExtraDmemInMBytes());
     ui->vblankSpinBox->setValue(m_emu_settings->GetVblankFrequency());
 
@@ -522,6 +512,7 @@ void SettingsDialog::ApplyValuesToBackend() {
         trophy_loc = "bottom";
     }
     m_emu_settings->SetTrophyNotificationSide(trophy_loc);
+    m_emu_settings->SetShowFpsCounter(ui->showFpsCounterCheckBox->isChecked());
 
     // ------------------ GUI tab --------------------------------------------------------
     m_emu_settings->SetDiscordRPCEnabled(ui->discordRPCCheckbox->isChecked());
@@ -565,7 +556,7 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetCursorState(cursorStateMap.value(ui->hideCursorComboBox->currentText()));
     m_emu_settings->SetCursorHideTimeout(ui->idleTimeoutSpinBox->value());
     m_emu_settings->SetMicDevice(ui->micComboBox->currentText().toStdString());
-    m_emu_settings->SetUsbDevice(ui->usbComboBox->currentIndex());
+    m_emu_settings->SetUsbDeviceBackend(ui->usbComboBox->currentIndex());
     m_emu_settings->SetMotionControlsEnabled(ui->motionControlsCheckBox->isChecked());
     m_emu_settings->SetBackgroundControllerInput(ui->backgroundControllerCheckBox->isChecked());
 
@@ -587,9 +578,9 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetVkValidationGpuEnabled(ui->vkGpuValidationCheckBox->isChecked());
 
     m_emu_settings->SetShaderCollect(ui->collectShaderCheckBox->isChecked());
-    m_emu_settings->SetCrashDiagnosticEnabled(ui->crashDiagnosticsCheckBox->isChecked());
-    m_emu_settings->SetHostMarkers(ui->hostMarkersCheckBox->isChecked());
-    m_emu_settings->SetGuestMarkers(ui->guestMarkersCheckBox->isChecked());
+    m_emu_settings->SetVkCrashDiagnosticEnabled(ui->crashDiagnosticsCheckBox->isChecked());
+    m_emu_settings->SetVkHostMarkersEnabled(ui->hostMarkersCheckBox->isChecked());
+    m_emu_settings->SetVkGuestMarkersEnabled(ui->guestMarkersCheckBox->isChecked());
 
     // ------------------ Experimental tab --------------------------------------------------------
     m_emu_settings->SetReadbacksEnabled(ui->readbacksCheckBox->isChecked());
@@ -601,7 +592,7 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetConnectedToNetwork(ui->networkConnectedCheckBox->isChecked());
 
     m_emu_settings->SetPipelineCacheEnabled(ui->enableShaderCacheCheckBox->isChecked());
-    m_emu_settings->SetPipelineCacheArchive(ui->archiveShaderCacheCheckBox->isChecked());
+    m_emu_settings->SetPipelineCacheArchived(ui->archiveShaderCacheCheckBox->isChecked());
     m_emu_settings->SetExtraDmemInMBytes(ui->dmemSpinBox->value());
     m_emu_settings->SetVblankFrequency(ui->vblankSpinBox->value());
 
@@ -634,11 +625,11 @@ void SettingsDialog::HandleButtonBox() {
         if (button == applyBtn) {
             bool changed = IsGameFoldersChanged();
             if (changed) {
+                ApplyValuesToBackend();
                 emit GameFoldersChanged();
+            } else {
+                ApplyValuesToBackend();
             }
-
-            // Note: Apply does not persist to disk by design.
-            ApplyValuesToBackend();
             return;
         }
 
@@ -646,10 +637,12 @@ void SettingsDialog::HandleButtonBox() {
         if (button == saveBtn) {
             bool changed = IsGameFoldersChanged();
             if (changed) {
+                ApplyValuesToBackend();
                 emit GameFoldersChanged();
+            } else {
+                ApplyValuesToBackend();
             }
 
-            ApplyValuesToBackend();
             if (!m_emu_settings->Save()) {
                 QMessageBox::warning(this, tr("Error"), tr("Failed to save settings."));
                 return;

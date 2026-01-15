@@ -16,6 +16,8 @@ public:
 
     bool IsGameRunning() const;
     void SetGameRunning(bool running);
+    bool IsAutoPatchesLoadEnabled() const;
+    void SetAutoPatchesLoadEnabled(bool enable);
 
 private:
     static std::shared_ptr<EmulatorState> s_instance;
@@ -23,4 +25,5 @@ private:
 
     // state variables
     bool m_running = false;
+    bool m_load_patches_auto = true;
 };

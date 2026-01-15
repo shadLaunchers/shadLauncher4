@@ -57,7 +57,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>7</number>
+      <number>1</number>
      </property>
      <property name="usesScrollButtons">
       <bool>true</bool>
@@ -74,8 +74,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>505</height>
+         <width>944</width>
+         <height>506</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="generalTabVLayout" stretch="0">
@@ -150,8 +150,8 @@
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>403</width>
-                     <height>68</height>
+                     <width>417</width>
+                     <height>69</height>
                     </rect>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -395,6 +395,13 @@
                  </property>
                 </widget>
                </item>
+               <item>
+                <widget class="QCheckBox" name="showFpsCounterCheckBox">
+                 <property name="text">
+                  <string>Show Simple FPS Counter</string>
+                 </property>
+                </widget>
+               </item>
               </layout>
              </widget>
             </item>
@@ -430,8 +437,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>505</height>
+         <width>944</width>
+         <height>506</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -932,8 +939,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>505</height>
+         <width>944</width>
+         <height>506</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="graphicsTabVLayout" stretch="0,0">
@@ -1296,8 +1303,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>505</height>
+         <width>944</width>
+         <height>506</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="inputTabVLayout" stretch="0,0">
@@ -1627,8 +1634,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>505</height>
+         <width>944</width>
+         <height>506</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="pathsTabLayout">
@@ -1771,8 +1778,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>240</height>
+         <width>944</width>
+         <height>222</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -1926,8 +1933,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>418</height>
+         <width>944</width>
+         <height>389</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2156,8 +2163,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>399</height>
+         <width>944</width>
+         <height>374</height>
         </rect>
        </property>
        <property name="sizePolicy">

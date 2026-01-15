@@ -14,6 +14,11 @@ public:
 
     const struct settings {
         // clang-format off
+        //general
+        const QString general_show_splash = tr("Show Splash Screen:\\nShows the game's splash screen (a special image) while the game is starting.");
+        const QString general_disable_trophy_popup= tr("Disable Trophy Pop-ups:\\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).");
+        const QString general_volume_slider = tr("Volume:\\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.");       
+        //paths
         const QString paths_gameDir = tr("Game Folders:\\nThe list of folders to check for installed games.");
         const QString paths_gameDir_add = tr("Add Folder:\\nAdd a new folder to the list of game installation folders.");
         const QString paths_gameDir_remove = tr("Remove Folder:\\nRemove the selected folder from the list of game installation folders.");

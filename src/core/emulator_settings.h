@@ -94,6 +94,8 @@ struct GeneralSettings {
     Setting<bool> show_splash{false};
     Setting<bool> connected_to_network{false};
     Setting<bool> discord_rpc_enabled{false};
+    Setting<bool> show_fps_counter{false};
+    Setting<int> console_language{1};
 
     // return a vector of override descriptors (runtime, but tiny)
     std::vector<OverrideItem> GetOverrideableFields() const {
@@ -122,7 +124,7 @@ NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(GeneralSettings, install_dirs, addon_install_
                                    extra_dmem_in_mbytes, psn_signed_in, trophy_popup_disabled,
                                    trophy_notification_duration, log_filter, log_type, show_splash,
                                    trophy_notification_side, connected_to_network,
-                                   discord_rpc_enabled)
+                                   discord_rpc_enabled, show_fps_counter, console_language)
 
 // -------------------------------
 // Debug settings
@@ -131,8 +133,7 @@ struct DebugSettings {
     Setting<bool> separate_logging_enabled{false}; // specific
     Setting<bool> debug_dump{false};               // specific
     Setting<bool> shader_collect{false};           // specific
-    Setting<bool> fps_color{true};
-    Setting<bool> log_enabled{true}; // specific
+    Setting<bool> log_enabled{true};               // specific
 
     std::vector<OverrideItem> GetOverrideableFields() const {
         return std::vector<OverrideItem>{
@@ -144,18 +145,18 @@ struct DebugSettings {
     }
 };
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(DebugSettings, separate_logging_enabled, debug_dump,
-                                   shader_collect, fps_color, log_enabled)
+                                   shader_collect, log_enabled)
 
 // -------------------------------
 // Input settings
 // -------------------------------
 enum HideCursorState : int { Never, Idle, Always };
-enum UsbDevice : int { Real, SkylanderPortal, InfinityBase, DimensionsToypad };
+enum UsbBackendType : int { Real, SkylandersPortal, InfinityBase, DimensionsToypad };
 
 struct InputSettings {
-    Setting<int> cursor_state{HideCursorState::Idle}; // specific
-    Setting<int> cursor_hide_timeout{5};              // specific
-    Setting<int> usb_device{UsbDevice::Real};         // specific
+    Setting<int> cursor_state{HideCursorState::Idle};      // specific
+    Setting<int> cursor_hide_timeout{5};                   // specific
+    Setting<int> usb_device_backend{UsbBackendType::Real}; // specific
     Setting<bool> use_special_pad{false};
     Setting<int> special_pad_class{1};
     Setting<bool> motion_controls_enabled{true}; // specific
@@ -168,17 +169,17 @@ struct InputSettings {
             make_override<InputSettings>("cursor_state", &InputSettings::cursor_state),
             make_override<InputSettings>("cursor_hide_timeout",
                                          &InputSettings::cursor_hide_timeout),
-            make_override<InputSettings>("usb_device", &InputSettings::usb_device),
+            make_override<InputSettings>("usb_device_backend", &InputSettings::usb_device_backend),
             make_override<InputSettings>("motion_controls_enabled",
                                          &InputSettings::motion_controls_enabled),
             make_override<InputSettings>("background_controller_input",
                                          &InputSettings::background_controller_input)};
     }
 };
-NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(InputSettings, cursor_state, cursor_hide_timeout, usb_device,
-                                   use_special_pad, special_pad_class, motion_controls_enabled,
-                                   use_unified_Input_Config, default_controller_id,
-                                   background_controller_input)
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(InputSettings, cursor_state, cursor_hide_timeout,
+                                   usb_device_backend, use_special_pad, special_pad_class,
+                                   motion_controls_enabled, use_unified_Input_Config,
+                                   default_controller_id, background_controller_input)
 // -------------------------------
 // Audio settings
 // -------------------------------
@@ -216,6 +217,7 @@ struct GPUSettings {
     Setting<bool> dump_shaders{false};
     Setting<bool> patch_shaders{false};
     Setting<u32> vblank_frequency{60};
+    Setting<bool> full_screen{false};
     Setting<std::string> full_screen_mode{"Windowed"};
     Setting<std::string> present_mode{"Mailbox"};
     Setting<bool> hdr_allowed{false};
@@ -227,6 +229,7 @@ struct GPUSettings {
         return std::vector<OverrideItem>{
             make_override<GPUSettings>("null_gpu", &GPUSettings::null_gpu),
             make_override<GPUSettings>("copy_gpu_buffers", &GPUSettings::copy_gpu_buffers),
+            make_override<GPUSettings>("full_screen", &GPUSettings::full_screen),
             make_override<GPUSettings>("full_screen_mode", &GPUSettings::full_screen_mode),
             make_override<GPUSettings>("present_mode", &GPUSettings::present_mode),
             make_override<GPUSettings>("window_height", &GPUSettings::window_height),
@@ -249,28 +252,26 @@ NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(GPUSettings, window_width, window_height, int
                                    internal_screen_height, null_gpu, copy_gpu_buffers,
                                    readbacks_enabled, readback_linear_images_enabled,
                                    direct_memory_access_enabled, dump_shaders, patch_shaders,
-                                   vblank_frequency, full_screen_mode, present_mode, hdr_allowed,
-                                   fsr_enabled, rcas_enabled, rcas_attenuation)
+                                   vblank_frequency, full_screen, full_screen_mode, present_mode,
+                                   hdr_allowed, fsr_enabled, rcas_enabled, rcas_attenuation)
 // -------------------------------
 // Vulkan settings
 // -------------------------------
 struct VulkanSettings {
     Setting<s32> gpu_id{-1};
-    Setting<bool> full_screen{false};
     Setting<bool> renderdoc_enabled{false};
     Setting<bool> vkvalidation_enabled{false};
     Setting<bool> vkvalidation_core_enabled{true};
     Setting<bool> vkvalidation_sync_enabled{false};
     Setting<bool> vkvalidation_gpu_enabled{false};
-    Setting<bool> crash_diagnostic_enabled{false};
-    Setting<bool> host_markers{false};
-    Setting<bool> guest_markers{false};
+    Setting<bool> vkcrash_diagnostic_enabled{false};
+    Setting<bool> vkhost_markers{false};
+    Setting<bool> vkguest_markers{false};
     Setting<bool> pipeline_cache_enabled{false};
-    Setting<bool> pipeline_cache_archive{false};
+    Setting<bool> pipeline_cache_archived{false};
     std::vector<OverrideItem> GetOverrideableFields() const {
         return std::vector<OverrideItem>{
             make_override<VulkanSettings>("gpu_id", &VulkanSettings::gpu_id),
-            make_override<VulkanSettings>("full_screen", &VulkanSettings::full_screen),
             make_override<VulkanSettings>("renderdoc_enabled", &VulkanSettings::renderdoc_enabled),
             make_override<VulkanSettings>("vkvalidation_enabled",
                                           &VulkanSettings::vkvalidation_enabled),
@@ -280,21 +281,22 @@ struct VulkanSettings {
                                           &VulkanSettings::vkvalidation_sync_enabled),
             make_override<VulkanSettings>("vkvalidation_gpu_enabled",
                                           &VulkanSettings::vkvalidation_gpu_enabled),
-            make_override<VulkanSettings>("crash_diagnostic_enabled",
-                                          &VulkanSettings::crash_diagnostic_enabled),
-            make_override<VulkanSettings>("host_markers", &VulkanSettings::host_markers),
-            make_override<VulkanSettings>("guest_markers", &VulkanSettings::guest_markers),
+            make_override<VulkanSettings>("vkcrash_diagnostic_enabled",
+                                          &VulkanSettings::vkcrash_diagnostic_enabled),
+            make_override<VulkanSettings>("vkhost_markers", &VulkanSettings::vkhost_markers),
+            make_override<VulkanSettings>("vkguest_markers", &VulkanSettings::vkguest_markers),
             make_override<VulkanSettings>("pipeline_cache_enabled",
                                           &VulkanSettings::pipeline_cache_enabled),
-            make_override<VulkanSettings>("pipeline_cache_archive",
-                                          &VulkanSettings::pipeline_cache_archive),
+            make_override<VulkanSettings>("pipeline_cache_archived",
+                                          &VulkanSettings::pipeline_cache_archived),
         };
     }
 };
-NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(VulkanSettings, gpu_id, full_screen, renderdoc_enabled,
-                                   vkvalidation_enabled, vkvalidation_core_enabled,
-                                   vkvalidation_sync_enabled, vkvalidation_gpu_enabled,
-                                   crash_diagnostic_enabled, host_markers, guest_markers)
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(VulkanSettings, gpu_id, renderdoc_enabled, vkvalidation_enabled,
+                                   vkvalidation_core_enabled, vkvalidation_sync_enabled,
+                                   vkvalidation_gpu_enabled, vkcrash_diagnostic_enabled,
+                                   vkhost_markers, vkguest_markers, pipeline_cache_enabled,
+                                   pipeline_cache_archived)
 // -------------------------------
 // User settings
 // -------------------------------
@@ -376,6 +378,11 @@ public:
     void Set##Name(const decltype(group.field.value)& v) {                                         \
         group.field.value = v;                                                                     \
     }
+#define SETTING_FORWARD_BOOL_READONLY(group, Name, field)                                          \
+    auto Is##Name() const {                                                                        \
+        return group.field.value;                                                                  \
+    }
+
     // General settings
     SETTING_FORWARD(m_general, VolumeSlider, volume_slider)
     SETTING_FORWARD_BOOL(m_general, Neo, neo_mode)
@@ -391,6 +398,8 @@ public:
     SETTING_FORWARD(m_general, LogType, log_type)
     SETTING_FORWARD_BOOL(m_general, ConnectedToNetwork, connected_to_network)
     SETTING_FORWARD_BOOL(m_general, DiscordRPCEnabled, discord_rpc_enabled)
+    SETTING_FORWARD_BOOL(m_general, ShowFpsCounter, show_fps_counter)
+    SETTING_FORWARD(m_general, ConsoleLanguage, console_language)
 
     // Audio settings
     SETTING_FORWARD(m_audio, MicDevice, mic_device)
@@ -407,6 +416,7 @@ public:
     SETTING_FORWARD_BOOL(m_gpu, NullGPU, null_gpu)
     SETTING_FORWARD_BOOL(m_gpu, DumpShaders, dump_shaders)
     SETTING_FORWARD_BOOL(m_gpu, CopyGpuBuffers, copy_gpu_buffers)
+    SETTING_FORWARD_BOOL(m_gpu, FullScreen, full_screen)
     SETTING_FORWARD(m_gpu, FullScreenMode, full_screen_mode)
     SETTING_FORWARD(m_gpu, PresentMode, present_mode)
     SETTING_FORWARD(m_gpu, WindowHeight, window_height)
@@ -420,28 +430,44 @@ public:
     SETTING_FORWARD_BOOL(m_gpu, ReadbacksEnabled, readbacks_enabled)
     SETTING_FORWARD_BOOL(m_gpu, ReadbackLinearImagesEnabled, readback_linear_images_enabled)
     SETTING_FORWARD_BOOL(m_gpu, DirectMemoryAccessEnabled, direct_memory_access_enabled)
-    SETTING_FORWARD(m_gpu, VblankFrequency, vblank_frequency)
+    SETTING_FORWARD_BOOL_READONLY(m_gpu, PatchShaders, patch_shaders)
+
+    u32 GetVblankFrequency() {
+        if (m_gpu.vblank_frequency.value < 60) {
+            m_gpu.vblank_frequency.value = 60;
+        }
+        return m_gpu.vblank_frequency.value;
+    }
+    void SetVblankFrequency(const u32& v) {
+        if (v < 60) {
+            m_gpu.vblank_frequency.value = 60;
+        } else {
+            m_gpu.vblank_frequency.value = v;
+        }
+    }
 
     // Input Settings
     SETTING_FORWARD(m_input, CursorState, cursor_state)
     SETTING_FORWARD(m_input, CursorHideTimeout, cursor_hide_timeout)
-    SETTING_FORWARD(m_input, UsbDevice, usb_device)
+    SETTING_FORWARD(m_input, UsbDeviceBackend, usb_device_backend)
     SETTING_FORWARD_BOOL(m_input, MotionControlsEnabled, motion_controls_enabled)
     SETTING_FORWARD_BOOL(m_input, BackgroundControllerInput, background_controller_input)
+    SETTING_FORWARD(m_input, DefaultControllerId, default_controller_id)
+    SETTING_FORWARD_BOOL(m_input, UsingSpecialPad, use_special_pad)
+    SETTING_FORWARD(m_input, SpecialPadClass, special_pad_class)
 
     // Vulkan settings
     SETTING_FORWARD(m_vulkan, GpuId, gpu_id)
-    SETTING_FORWARD_BOOL(m_vulkan, FullScreen, full_screen)
     SETTING_FORWARD_BOOL(m_vulkan, RenderdocEnabled, renderdoc_enabled)
     SETTING_FORWARD_BOOL(m_vulkan, VkValidationEnabled, vkvalidation_enabled)
     SETTING_FORWARD_BOOL(m_vulkan, VkValidationCoreEnabled, vkvalidation_core_enabled)
     SETTING_FORWARD_BOOL(m_vulkan, VkValidationSyncEnabled, vkvalidation_sync_enabled)
     SETTING_FORWARD_BOOL(m_vulkan, VkValidationGpuEnabled, vkvalidation_gpu_enabled)
-    SETTING_FORWARD_BOOL(m_vulkan, CrashDiagnosticEnabled, crash_diagnostic_enabled)
-    SETTING_FORWARD_BOOL(m_vulkan, HostMarkers, host_markers)
-    SETTING_FORWARD_BOOL(m_vulkan, GuestMarkers, guest_markers)
+    SETTING_FORWARD_BOOL(m_vulkan, VkCrashDiagnosticEnabled, vkcrash_diagnostic_enabled)
+    SETTING_FORWARD_BOOL(m_vulkan, VkHostMarkersEnabled, vkhost_markers)
+    SETTING_FORWARD_BOOL(m_vulkan, VkGuestMarkersEnabled, vkguest_markers)
     SETTING_FORWARD_BOOL(m_vulkan, PipelineCacheEnabled, pipeline_cache_enabled)
-    SETTING_FORWARD_BOOL(m_vulkan, PipelineCacheArchive, pipeline_cache_archive)
+    SETTING_FORWARD_BOOL(m_vulkan, PipelineCacheArchived, pipeline_cache_archived)
 
 #undef SETTING_FORWARD
 #undef SETTING_FORWARD_BOOL

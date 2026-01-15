@@ -28,3 +28,10 @@ bool EmulatorState::IsGameRunning() const {
 void EmulatorState::SetGameRunning(bool running) {
     m_running = running;
 }
+
+bool EmulatorState::IsAutoPatchesLoadEnabled() const {
+    return m_load_patches_auto;
+}
+void EmulatorState::SetAutoPatchesLoadEnabled(bool enable) {
+    m_load_patches_auto = enable;
+}
