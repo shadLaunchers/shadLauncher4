@@ -2275,6 +2275,10 @@ Bruker lokal database.
       <source>None</source>
       <translation>Ingen</translation>
     </message>
+    <message>
+      <source>Show Simple FPS Counter</source>
+      <translation>Vis en enkel FPS-viser</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
@@ -2317,6 +2321,18 @@ Bruker lokal database.
     <message>
       <source>Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</source>
       <translation>Søkingsdybde for sti:\nVelg maks dybden ved søking av spill i de valgte spillmappene.\n1 betyr ett nivå av undermappene søkes, og så videre.</translation>
+    </message>
+    <message>
+      <source>Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</source>
+      <translation>Vis velkomstbilde:\nViser spillets velkomstbilde (et spesialbilde) når spillet starter.</translation>
+    </message>
+    <message>
+      <source>Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</source>
+      <translation>Slå av trofévarsler:\nFjerner trofévarsler i spillet. Troféfremgang kan fortsatt vises ved hjelp av troféviseren (høyreklikk på spillet i hovedvinduet).</translation>
+    </message>
+    <message>
+      <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
+      <translation>Lydstyrke:\nJuster volum for spill på et globalt nivå, skalaen går fra 0-500 %, standarden er 100 %.</translation>
     </message>
   </context>
   <context>
