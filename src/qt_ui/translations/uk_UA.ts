@@ -859,7 +859,7 @@ Using local database.
     <name>GameListGrid</name>
     <message>
       <source>Notes:</source>
-      <translation type="unfinished">Notes:</translation>
+      <translation>Примітки:</translation>
     </message>
   </context>
   <context>
@@ -898,7 +898,7 @@ Using local database.
     </message>
     <message>
       <source>Notes:</source>
-      <translation type="unfinished">Notes:</translation>
+      <translation>Примітки:</translation>
     </message>
   </context>
   <context>
@@ -2285,7 +2285,7 @@ Using local database.
     </message>
     <message>
       <source>Show Simple FPS Counter</source>
-      <translation type="unfinished">Show Simple FPS Counter</translation>
+      <translation>Показувати простий лічильник к / с</translation>
     </message>
   </context>
   <context>
@@ -2332,15 +2332,15 @@ Using local database.
     </message>
     <message>
       <source>Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</source>
-      <translation type="unfinished">Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</translation>
+      <translation>Показувати заставку:\nПоказує заставку гри (спеціальне зображення) під час запуску гри.</translation>
     </message>
     <message>
       <source>Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</source>
-      <translation type="unfinished">Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</translation>
+      <translation>Вимкнути спливні вікна трофеїв:\nВимкнути сповіщення про трофеї в грі. Прогрес трофеїв можна перевіряти за допомогою «Перегляду трофеїв» (клацніть правою кнопкою миші на гру в головному вікні).</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation type="unfinished">Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</translation>
+      <translation>Гучність:\nНалаштування гучності для ігор на загальному рівні, діапазон від 0 до 500%, типово — 100%.</translation>
     </message>
   </context>
   <context>
