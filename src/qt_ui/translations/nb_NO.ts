@@ -1040,10 +1040,6 @@ Bruker lokal database.
       <translation>Vis verktøylinje</translation>
     </message>
     <message>
-      <source>Open Game</source>
-      <translation>Åpne spill</translation>
-    </message>
-    <message>
       <source>Pause</source>
       <translation>Pause</translation>
     </message>
@@ -1358,6 +1354,74 @@ Bruker lokal database.
     <message>
       <source>Could not read SFO. Check log for details.</source>
       <translation>Klarte ikke lese SFO. Les gjennom loggen for detaljer.</translation>
+    </message>
+    <message>
+      <source>Run Game</source>
+      <translation type="unfinished">Run Game</translation>
+    </message>
+    <message>
+      <source>Pause emulation</source>
+      <translation type="unfinished">Pause emulation</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>No game selected</source>
+      <translation type="unfinished">No game selected</translation>
+    </message>
+    <message>
+      <source>Eboot.bin file not found</source>
+      <translation type="unfinished">Eboot.bin file not found</translation>
+    </message>
+    <message>
+      <source>Game is already running!</source>
+      <translation type="unfinished">Game is already running!</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation type="unfinished">No Version Selected</translation>
+    </message>
+    <message>
+      <source>No emulator version was selected.
+The Version Manager menu will then open.
+Select an emulator version from the right panel.</source>
+      <translation type="unfinished">No emulator version was selected.
+The Version Manager menu will then open.
+Select an emulator version from the right panel.</translation>
+    </message>
+    <message>
+      <source>Could not find the emulator executable</source>
+      <translation type="unfinished">Could not find the emulator executable</translation>
+    </message>
+    <message>
+      <source>No Running Game</source>
+      <translation type="unfinished">No Running Game</translation>
+    </message>
+    <message>
+      <source>No running game to restart</source>
+      <translation type="unfinished">No running game to restart</translation>
+    </message>
+    <message>
+      <source>No running game to pause</source>
+      <translation type="unfinished">No running game to pause</translation>
+    </message>
+    <message>
+      <source>Resume</source>
+      <translation type="unfinished">Resume</translation>
+    </message>
+    <message>
+      <source>Resume emulation</source>
+      <translation type="unfinished">Resume emulation</translation>
+    </message>
+    <message>
+      <source>No running game to stop</source>
+      <translation type="unfinished">No running game to stop</translation>
+    </message>
+    <message>
+      <source>No running game to toggle fullscreen</source>
+      <translation type="unfinished">No running game to toggle fullscreen</translation>
     </message>
   </context>
   <context>
