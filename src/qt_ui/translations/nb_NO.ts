@@ -1357,71 +1357,71 @@ Bruker lokal database.
     </message>
     <message>
       <source>Run Game</source>
-      <translation type="unfinished">Run Game</translation>
+      <translation>Kjør spill</translation>
     </message>
     <message>
       <source>Pause emulation</source>
-      <translation type="unfinished">Pause emulation</translation>
+      <translation>Sett emulering på pause</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Feil</translation>
     </message>
     <message>
       <source>No game selected</source>
-      <translation type="unfinished">No game selected</translation>
+      <translation>Ingen spill valgt</translation>
     </message>
     <message>
       <source>Eboot.bin file not found</source>
-      <translation type="unfinished">Eboot.bin file not found</translation>
+      <translation>Fant ikke Eboot.bin-fila</translation>
     </message>
     <message>
       <source>Game is already running!</source>
-      <translation type="unfinished">Game is already running!</translation>
+      <translation>Spillet kjører allerede!</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Ingen versjon valgt</translation>
     </message>
     <message>
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>Ingen emulatorversjon ble valgt.
+Versjonsbehandling-menyen vil åpnes.
+Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Fant ikke emulator-programfila</translation>
     </message>
     <message>
       <source>No Running Game</source>
-      <translation type="unfinished">No Running Game</translation>
+      <translation>Ingen kjørende spill</translation>
     </message>
     <message>
       <source>No running game to restart</source>
-      <translation type="unfinished">No running game to restart</translation>
+      <translation>Ingen kjørende spill å starte på nytt</translation>
     </message>
     <message>
       <source>No running game to pause</source>
-      <translation type="unfinished">No running game to pause</translation>
+      <translation>Ingen kjørende spill å sette på pause</translation>
     </message>
     <message>
       <source>Resume</source>
-      <translation type="unfinished">Resume</translation>
+      <translation>Gjenoppta</translation>
     </message>
     <message>
       <source>Resume emulation</source>
-      <translation type="unfinished">Resume emulation</translation>
+      <translation>Gjenoppta emulering</translation>
     </message>
     <message>
       <source>No running game to stop</source>
-      <translation type="unfinished">No running game to stop</translation>
+      <translation>Ingen kjørende spill å avslutte</translation>
     </message>
     <message>
       <source>No running game to toggle fullscreen</source>
-      <translation type="unfinished">No running game to toggle fullscreen</translation>
+      <translation>Ingen kjørende spill å bytte til fullskjerm</translation>
     </message>
   </context>
   <context>
