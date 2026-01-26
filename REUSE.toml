@@ -3,12 +3,17 @@ version = 1
 [[annotations]]
 path = [
     "REUSE.toml",
-    "README.md",
-    "crowdin.yml",
+    "CMakeSettings.json",
+    "CMakePresets.json",
+    "CMakeWindowsPresets.json",
+    "src/shadLauncher4.rc",
+    ".github/workflows/scripts/update_translation.sh",
+    ".github/workflows/scripts/update_version.sh",
+    ".github/workflows/update_translation.yml",
+    ".gitignore",
     ".gitmodules",
-	"src/shadLauncher4.rc",
-	"src/shadLauncher4.qrc",
-	"src/images/shadLauncher4.ico",
+    "README.md",
+    "src/images/shadLauncher4.ico",
     "src/images/shadLauncher4.png",
     "src/images/grid.png",
     "src/images/list.png",
@@ -20,7 +25,10 @@ path = [
     "src/images/controllers.png",
     "src/images/restart.png",
     "src/images/pause.png",
-	"src/images/flag_china.png",
+    "src/qt_ui/translations/update_translation.sh",
+    "src/qt_ui/main_window.ui",
+    "src/shadLauncher4.qrc",
+    "src/images/flag_china.png",
     "src/images/flag_eu.png",
     "src/images/flag_jp.png",
     "src/images/flag_unk.png",
@@ -28,9 +36,13 @@ path = [
     "src/images/flag_world.png",
     "src/qt_ui/settings_dialog.ui",
     "src/qt_ui/game_install_dialog.ui",
-    "src/qt_ui/cheats_patches_dialog.ui"
+    "src/qt_ui/cheats_patches_dialog.ui",
 ]
 precedence = "aggregate"
-SPDX-FileCopyrightText = "shadLauncher4 Project"
+SPDX-FileCopyrightText = "shadPS5 Emulator Project"
 SPDX-License-Identifier = "GPL-2.0-or-later"
 
+[[annotations]]
+path = "dist/qt.conf"
+SPDX-FileCopyrightText = "shadPS5 Emulator Project"
+SPDX-License-Identifier = "GPL-2.0-or-later"
