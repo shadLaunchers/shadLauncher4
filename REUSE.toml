@@ -13,6 +13,7 @@ path = [
     ".gitignore",
     ".gitmodules",
     "README.md",
+    "crowdin.yml",
     "src/images/shadLauncher4.ico",
     "src/images/shadLauncher4.png",
     "src/images/grid.png",
