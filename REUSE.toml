@@ -5,6 +5,7 @@ path = [
     "REUSE.toml",
     "README.md",
     "crowdin.yml",
+    ".gitmodules",
 	"src/shadLauncher4.rc",
 	"src/shadLauncher4.qrc",
 	"src/images/shadLauncher4.ico",
