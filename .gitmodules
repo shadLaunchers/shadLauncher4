@@ -1,0 +1,19 @@
+[submodule "externals/staticwinlibs"]
+	path = externals/staticwinlibs
+	url = https://github.com/shadLaunchers/staticwinlibs.git
+	branch = main
+[submodule "externals/ext-json"]
+	path = externals/ext-json
+	url = https://github.com/shadexternals/ext-json.git
+	branch = develop
+[submodule "externals/ext-fmt"]
+	path = externals/ext-fmt
+	url = https://github.com/shadexternals/ext-fmt.git
+	branch = master
+[submodule "externals/ext-SDL"]
+	path = externals/ext-SDL
+	url = https://github.com/shadexternals/ext-SDL.git
+[submodule "externals/ext-libdeflate"]
+	path = externals/ext-libdeflate
+	url = https://github.com/shadexternals/ext-libdeflate.git
+	branch = master
