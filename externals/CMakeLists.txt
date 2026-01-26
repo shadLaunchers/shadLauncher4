@@ -23,7 +23,7 @@ add_subdirectory(ext-json)
 if (NOT TARGET SDL3::SDL3)
     set(SDL_TEST_LIBRARY OFF)
     set(SDL_PIPEWIRE OFF)
-    add_subdirectory(ext-sdl3)
+    add_subdirectory(ext-sdl)
 endif()
 
 #libdeflate
