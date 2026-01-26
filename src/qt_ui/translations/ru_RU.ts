@@ -934,6 +934,10 @@ Using local database.
       <source>&amp;Delete Shader Cache</source>
       <translation type="unfinished">&amp;Delete Shader Cache</translation>
     </message>
+    <message>
+      <source>Game Log</source>
+      <translation type="unfinished">Game Log</translation>
+    </message>
   </context>
   <context>
     <name>GameListGrid</name>
@@ -1510,6 +1514,10 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>No running game to toggle fullscreen</source>
       <translation type="unfinished">No running game to toggle fullscreen</translation>
+    </message>
+    <message>
+      <source>Show Game Log</source>
+      <translation type="unfinished">Show Game Log</translation>
     </message>
   </context>
   <context>
