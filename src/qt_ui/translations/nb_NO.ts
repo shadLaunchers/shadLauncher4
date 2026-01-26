@@ -934,6 +934,10 @@ Bruker lokal database.
       <source>&amp;Delete Shader Cache</source>
       <translation type="unfinished">&amp;Delete Shader Cache</translation>
     </message>
+    <message>
+      <source>Game Log</source>
+      <translation type="unfinished">Game Log</translation>
+    </message>
   </context>
   <context>
     <name>GameListGrid</name>
@@ -1502,6 +1506,10 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>No running game to toggle fullscreen</source>
       <translation>Ingen kjørende spill å bytte til fullskjerm</translation>
+    </message>
+    <message>
+      <source>Show Game Log</source>
+      <translation type="unfinished">Show Game Log</translation>
     </message>
   </context>
   <context>
