@@ -856,87 +856,87 @@ Bruker lokal database.
     </message>
     <message>
       <source>Game</source>
-      <translation type="unfinished">Game</translation>
+      <translation>Spill</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Feil</translation>
     </message>
     <message>
       <source>This game has no update to delete!</source>
-      <translation type="unfinished">This game has no update to delete!</translation>
+      <translation>Dette spillet har ingen oppdatering å slette!</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Oppdater</translation>
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation type="unfinished">This game has no DLC to delete!</translation>
+      <translation>Dette spillet har intet nedlastbart innhold å slette!</translation>
     </message>
     <message>
       <source>DLC</source>
-      <translation type="unfinished">DLC</translation>
+      <translation>Nedlastbart innhold</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
-      <translation type="unfinished">This game has no save data to delete!</translation>
+      <translation>Dette spillet har ingen lagret data å slette!</translation>
     </message>
     <message>
       <source>Save Data</source>
-      <translation type="unfinished">Save Data</translation>
+      <translation>Lagret data</translation>
     </message>
     <message>
       <source>This game has no Shader Cache to delete!</source>
-      <translation type="unfinished">This game has no Shader Cache to delete!</translation>
+      <translation>Dette spillet har ingen skyggelegger hurtiglager å slette!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Skyggelegger hurtiglager</translation>
     </message>
     <message>
       <source>Shader cache deleted successfully.</source>
-      <translation type="unfinished">Shader cache deleted successfully.</translation>
+      <translation>Slettet skyggelegger hurtiglager på vellykket vis.</translation>
     </message>
     <message>
       <source>Delete %1</source>
-      <translation type="unfinished">Delete %1</translation>
+      <translation>Slett %1</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s %2 directory?</translation>
+      <translation>Er du sikker på at du vil slette %1s %2-mappa?</translation>
     </message>
     <message>
       <source>&amp;Delete...</source>
-      <translation type="unfinished">&amp;Delete...</translation>
+      <translation>&amp;Slett …</translation>
     </message>
     <message>
       <source>&amp;Delete Game</source>
-      <translation type="unfinished">&amp;Delete Game</translation>
+      <translation>&amp;Slett spill</translation>
     </message>
     <message>
       <source>&amp;Delete Update</source>
-      <translation type="unfinished">&amp;Delete Update</translation>
+      <translation>&amp;Slett oppdatering</translation>
     </message>
     <message>
       <source>&amp;Delete Save Data</source>
-      <translation type="unfinished">&amp;Delete Save Data</translation>
+      <translation>&amp;Slett lagret data</translation>
     </message>
     <message>
       <source>&amp;Delete DLC </source>
-      <translation type="unfinished">&amp;Delete DLC </translation>
+      <translation>&amp;Slett nedlastbart innhold </translation>
     </message>
     <message>
       <source>&amp;Delete Trophy</source>
-      <translation type="unfinished">&amp;Delete Trophy</translation>
+      <translation>&amp;Slett trofé</translation>
     </message>
     <message>
       <source>&amp;Delete Shader Cache</source>
-      <translation type="unfinished">&amp;Delete Shader Cache</translation>
+      <translation>&amp;Slett skyggelegger hurtiglager</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Spill logg</translation>
     </message>
   </context>
   <context>
@@ -1509,7 +1509,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>Vis spill logg</translation>
     </message>
   </context>
   <context>
@@ -1766,12 +1766,12 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Executable does not exist:
 %1</source>
-      <translation type="unfinished">Executable does not exist:
+      <translation>Programfila finnes ikke:
 %1</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.</source>
-      <translation type="unfinished">Failed to copy executable to application directory.</translation>
+      <translation>Feil ved kopiering av programfila til programmappa.</translation>
     </message>
   </context>
   <context>
@@ -2830,83 +2830,83 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Executable (*)</source>
-      <translation type="unfinished">Executable (*)</translation>
+      <translation>Kjørbar (*)</translation>
     </message>
     <message>
       <source>Executable (*.*)</source>
-      <translation type="unfinished">Executable (*.*)</translation>
+      <translation>Kjørbar (*.*)</translation>
     </message>
     <message>
       <source>Version install path is not configured.</source>
-      <translation type="unfinished">Version install path is not configured.</translation>
+      <translation>Mappa for installering av versjoner er ikke satt opp.</translation>
     </message>
     <message>
       <source>Failed to copy executable into versions folder.</source>
-      <translation type="unfinished">Failed to copy executable into versions folder.</translation>
+      <translation>Feil ved kopiering av programfila til versjonsmappa.</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Advarsel</translation>
     </message>
     <message>
       <source>Failed to install executable into application directory.
 The custom build is still available under:
 %1</source>
-      <translation type="unfinished">Failed to install executable into application directory.
-The custom build is still available under:
+      <translation>Feil ved installering av programfila til programmappa.
+Den tilpassede versjonen er fremdeles tilgjengelig under:
 %1</translation>
     </message>
     <message>
       <source>Could not find executable in extracted files.</source>
-      <translation type="unfinished">Could not find executable in extracted files.</translation>
+      <translation>Klarte ikke finne programfila i de utpakkede filene.</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.
 The version has been saved to: %1</source>
-      <translation type="unfinished">Failed to copy executable to application directory.
-The version has been saved to: %1</translation>
+      <translation>Feil ved kopiering av programfila til programmappa.
+Versjonen har blitt lagret til: %1</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.
 The pre-release version has been saved to: %1</source>
-      <translation type="unfinished">Failed to copy executable to application directory.
-The pre-release version has been saved to: %1</translation>
+      <translation>Feil ved kopiering av programfila til programmappa.
+Forhåndsutgivelsen har blitt lagret til: %1</translation>
     </message>
     <message>
       <source>Custom version installed successfully:</source>
-      <translation type="unfinished">Custom version installed successfully:</translation>
+      <translation>Tilpasset versjon installert på vellykket vis:</translation>
     </message>
     <message>
       <source>1. Version folder:</source>
-      <translation type="unfinished">1. Version folder:</translation>
+      <translation>1. versjonsmappe:</translation>
     </message>
     <message>
       <source>2. Installed to:</source>
-      <translation type="unfinished">2. Installed to:</translation>
+      <translation>2. installert til:</translation>
     </message>
     <message>
       <source>ZIP extraction failed:</source>
-      <translation type="unfinished">ZIP extraction failed:</translation>
+      <translation>Feil ved ZIP-utpakking:</translation>
     </message>
     <message>
       <source>Executable not found in extracted files.</source>
-      <translation type="unfinished">Executable not found in extracted files.</translation>
+      <translation>Fant ikke programfila i de utpakkede filene.</translation>
     </message>
     <message>
       <source>Version %1 has been:</source>
-      <translation type="unfinished">Version %1 has been:</translation>
+      <translation>Versjon %1 har blitt:</translation>
     </message>
     <message>
       <source>1. Downloaded to:</source>
-      <translation type="unfinished">1. Downloaded to:</translation>
+      <translation>1. lastet ned til:</translation>
     </message>
     <message>
       <source>Extraction failure:</source>
-      <translation type="unfinished">Extraction failure:</translation>
+      <translation>Feil ved utpakking:</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) has been:</source>
-      <translation type="unfinished">Pre-release (Nightly) has been:</translation>
+      <translation>Forhåndsutgivelsen (nattlig) har blitt:</translation>
     </message>
   </context>
 </TS>
