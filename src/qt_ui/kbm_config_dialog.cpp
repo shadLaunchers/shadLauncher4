@@ -7,6 +7,7 @@
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#include "common/input.h"
 #include "common/path_util.h"
 #include "game_info.h"
 
@@ -43,13 +44,12 @@ EditorDialog::EditorDialog(std::shared_ptr<EmulatorSettings> emu_settings, QWidg
     loadInstalledGames();
 
     QCheckBox* unifiedInputCheckBox = new QCheckBox(tr("Use Per-Game configs"), this);
-    // TODO unifiedInputCheckBox->setChecked(!Config::GetUseUnifiedInputConfig());
+    unifiedInputCheckBox->setChecked(!m_emu_settings->IsUseUnifiedInputConfig());
 
     // Connect checkbox signal
-    connect(unifiedInputCheckBox, &QCheckBox::toggled, this, [](bool checked) {
-        // TODO Config::SetUseUnifiedInputConfig(!checked);
-        // TODO Config::save(Common::FS::GetUserPath(Common::FS::PathType::UserDir) /
-        // "config.toml");
+    connect(unifiedInputCheckBox, &QCheckBox::toggled, this, [this](bool checked) {
+        m_emu_settings->SetUseUnifiedInputConfig(!checked);
+        m_emu_settings->Save("");
     });
     // Create Save, Cancel, and Help buttons
     QPushButton* saveButton = new QPushButton("Save", this);
@@ -86,8 +86,7 @@ EditorDialog::EditorDialog(std::shared_ptr<EmulatorSettings> emu_settings, QWidg
 
 void EditorDialog::loadFile(QString game) {
 
-    // TODO const auto config_file = Config::GetFoolproofInputConfigFile(game.toStdString());
-    const auto config_file = "";
+    const auto config_file = Input::GetFoolproofInputConfigFile(game.toStdString());
     QFile file(config_file);
 
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -102,8 +101,7 @@ void EditorDialog::loadFile(QString game) {
 
 void EditorDialog::saveFile(QString game) {
 
-    // TODO const auto config_file = Config::GetFoolproofInputConfigFile(game.toStdString());
-    const auto config_file = "";
+    const auto config_file = Input::GetFoolproofInputConfigFile(game.toStdString());
     QFile file(config_file);
 
     if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
@@ -198,12 +196,10 @@ void EditorDialog::onResetToDefaultClicked() {
 
     if (reply == QMessageBox::Yes) {
         if (default_default) {
-            // TODO const auto default_file = Config::GetFoolproofInputConfigFile("default");
-            const auto default_file = "";
+            const auto default_file = Input::GetFoolproofInputConfigFile("default");
             std::filesystem::remove(default_file);
         }
-        // TODO const auto config_file = Config::GetFoolproofInputConfigFile("default");
-        const auto config_file = "";
+        const auto config_file = Input::GetFoolproofInputConfigFile("default");
         QFile file(config_file);
 
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -231,9 +227,11 @@ void EditorDialog::loadInstalledGames() {
         QDir parentFolder(installDir);
         QFileInfoList fileList = parentFolder.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
         for (const auto& fileInfo : fileList) {
-            if (fileInfo.isDir() && (!fileInfo.filePath().endsWith("-UPDATE") ||
-                                     !fileInfo.filePath().endsWith("-patch"))) {
-                gameComboBox->addItem(fileInfo.fileName()); // Add game name to combo box
+            if (fileInfo.isDir()) {
+                if (!fileInfo.filePath().endsWith("-UPDATE") &&
+                    !fileInfo.filePath().endsWith("-patch")) {
+                    gameComboBox->addItem(fileInfo.fileName()); // Add game name to combo box
+                }
             }
         }
     }
