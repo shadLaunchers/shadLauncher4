@@ -235,7 +235,7 @@ configure_file(
 )
 target_include_directories(shadLauncher4 PRIVATE ${CMAKE_BINARY_DIR}/generated)
 
-target_link_libraries(shadLauncher4 PRIVATE fmt::fmt Qt6::Widgets Qt6::Concurrent Qt6::Xml Qt6::Network Qt6::Multimedia nlohmann_json::nlohmann_json ntdll SDL3::SDL3 libdeflate_static vulkaninfowin)
+target_link_libraries(shadLauncher4 PRIVATE fmt::fmt Qt6::Widgets Qt6::Concurrent Qt6::Xml Qt6::Network Qt6::Multimedia nlohmann_json::nlohmann_json ntdll sdl3 libdeflate_static vulkaninfowin)
 
 target_sources(shadLauncher4 PRIVATE src/shadLauncher4.rc)
 target_sources(shadLauncher4 PRIVATE ${RESOURCE_FILES})
