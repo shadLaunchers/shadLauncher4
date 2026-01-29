@@ -19,12 +19,6 @@ endif()
 set(JSON_BuildTests OFF CACHE INTERNAL "")
 add_subdirectory(ext-json)
 
-# SDL3
-if (NOT TARGET SDL3::SDL3)
-    set(SDL_TEST_LIBRARY OFF)
-    set(SDL_PIPEWIRE OFF)
-    add_subdirectory(ext-sdl)
-endif()
 
 #libdeflate
 
@@ -40,4 +34,12 @@ add_subdirectory(ext-libdeflate)
 # staticwindlibs
 if (WIN32)
 add_subdirectory(staticwinlibs)
+else()
+# SDL3
+if (NOT TARGET SDL3::SDL3)
+    set(SDL_TEST_LIBRARY OFF)
+    set(SDL_PIPEWIRE OFF)
+    add_subdirectory(ext-sdl)
+endif()
+
 endif()
