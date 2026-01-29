@@ -1581,6 +1581,8 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
     QAction* compatibility_submit = compatibility_menu->addAction(tr("&Submit Report"));
     QAction* compatibility_update = compatibility_menu->addAction(tr("&Update Database"));
 
+    compatibility_view->setEnabled(gameinfo->compat.index<=4);   
+
     // Copy Menu Actions
     connect(copy_info, &QAction::triggered, this, [name, serial] {
         QApplication::clipboard()->setText(name % QStringLiteral(" [") % serial %
