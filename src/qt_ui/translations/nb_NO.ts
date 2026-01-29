@@ -32,7 +32,7 @@
     <message>
       <source>Failed to open changelog file:
 %1</source>
-      <translation>Klarte ikke åpne endringsloggfila:
+      <translation>Feil ved åpning av endringsloggfila:
 %1</translation>
     </message>
     <message>
@@ -170,7 +170,7 @@
     </message>
     <message>
       <source>Failed to open file:</source>
-      <translation>Klarte ikke åpne fila:</translation>
+      <translation>Feil ved åpning av fila:</translation>
     </message>
     <message>
       <source>XML ERROR:</source>
@@ -194,7 +194,7 @@
     </message>
     <message>
       <source>Failed to open files.json for writing</source>
-      <translation>Klarte ikke åpne files.json for skriving</translation>
+      <translation>Feil ved åpning av files.json for skriving</translation>
     </message>
     <message>
       <source>Author: </source>
@@ -206,7 +206,7 @@
     </message>
     <message>
       <source>Failed to open files.json for reading.</source>
-      <translation>Klarte ikke åpne files.json for lesing.</translation>
+      <translation>Feil ved åpning av files.json for lesing.</translation>
     </message>
     <message>
       <source>Name:</source>
@@ -797,7 +797,7 @@ Skriv inn nøklene og lagre dem.</translation>
 Using local database.
 
 %0</source>
-      <translation>Klarte ikke hente kompatibilitets databasen fra nettet!
+      <translation>Feil ved henting av kompatibilitets databasen fra nettet!
 Bruker lokal database.
 
 %0</translation>
@@ -1714,7 +1714,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Failed to create file:
 %1</source>
-      <translation>Klarte ikke opprette fil:
+      <translation>Feil ved opprettelse av fil:
 %1</translation>
     </message>
     <message>
@@ -1827,7 +1827,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Failed to load PSF file:
 %1</source>
-      <translation>Klarte ikke laste PSF-fil:
+      <translation>Feil ved lasting av PSF-fil:
 %1</translation>
     </message>
     <message>
@@ -2716,7 +2716,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation>Klarte ikke slette mappa.</translation>
+      <translation>Feil ved sletting av mappa.</translation>
     </message>
     <message>
       <source>Checking for new emulator versions...</source>
@@ -2818,7 +2818,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly)</source>
-      <translation>Laster ned forhåndsutgivelse (nattlig)</translation>
+      <translation>Laster ned forhåndsutgivelsen (nattlig)</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
