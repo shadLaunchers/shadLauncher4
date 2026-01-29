@@ -12,12 +12,12 @@ set_directory_properties(PROPERTIES
 
 # ---- fmt ----
 if(NOT TARGET fmt::fmt)
-    add_subdirectory(ext-fmt)
+    add_subdirectory(fmt)
 endif()
 
 # ---- nlohmann/json ----
 set(JSON_BuildTests OFF CACHE INTERNAL "")
-add_subdirectory(ext-json)
+add_subdirectory(json)
 
 
 #libdeflate
@@ -29,7 +29,7 @@ else()
     add_compile_options(-O3 -march=native)
 endif()
 
-add_subdirectory(ext-libdeflate)
+add_subdirectory(libdeflate)
 
 # staticwindlibs
 if (WIN32)
@@ -39,7 +39,7 @@ else()
 if (NOT TARGET SDL3::SDL3)
     set(SDL_TEST_LIBRARY OFF)
     set(SDL_PIPEWIRE OFF)
-    add_subdirectory(ext-sdl)
+    add_subdirectory(sdl3)
 endif()
 
 endif()

@@ -2,18 +2,18 @@
 	path = externals/staticwinlibs
 	url = https://github.com/shadLaunchers/staticwinlibs.git
 	branch = main
-[submodule "externals/ext-json"]
-	path = externals/ext-json
-	url = https://github.com/shadexternals/ext-json.git
+[submodule "externals/json"]
+	path = externals/json
+	url = https://github.com/shadexternals/json.git
 	branch = develop
-[submodule "externals/ext-fmt"]
-	path = externals/ext-fmt
-	url = https://github.com/shadexternals/ext-fmt.git
+[submodule "externals/fmt"]
+	path = externals/fmt
+	url = https://github.com/shadexternals/fmt.git
 	branch = master
-[submodule "externals/ext-SDL"]
-	path = externals/ext-SDL
-	url = https://github.com/shadexternals/ext-SDL.git
-[submodule "externals/ext-libdeflate"]
-	path = externals/ext-libdeflate
-	url = https://github.com/shadexternals/ext-libdeflate.git
+[submodule "externals/sdl3"]
+	path = externals/sdl3
+	url = https://github.com/shadexternals/sdl3.git
+[submodule "externals/libdeflate"]
+	path = externals/libdeflate
+	url = https://github.com/shadexternals/libdeflate.git
 	branch = master
