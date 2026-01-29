@@ -82,7 +82,8 @@ const GUISave compatibility_json_url =
             "download/compatibility_data.json");
 const GUISave compatibility_issues_url =
     GUISave(compatibility, "issues_url",
-            "https://github.com/shadps4-compatibility/shadps4-game-compatibility/issues/");
+            "https://github.com/shadps4-compatibility/shadps4-game-compatibility/");
+const GUISave compatibility_bypass_loganalyzer = GUISave(general, "bypass_loganalyzer", false);
 
 // main window settings
 const GUISave main_window_gamelist = GUISave(main_window, "gamelistVisible", true);

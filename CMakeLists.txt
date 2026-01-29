@@ -98,6 +98,8 @@ set(COMMON src/common/types.h
            src/common/zip_util.h
            src/common/input.cpp
            src/common/input.h
+           src/common/log_analyzer.cpp
+           src/common/log_analyzer.h
 )
 
 set(CORE src/core/user_manager.cpp

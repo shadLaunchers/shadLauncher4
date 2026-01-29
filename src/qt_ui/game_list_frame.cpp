@@ -46,6 +46,7 @@
 #include <windows.h>
 #include <winternl.h>
 #endif
+#include <common/log_analyzer.h>
 #include <common/path_util.h>
 #include "cheats_patches_dialog.h"
 #include "core/ipc/ipc_client.h"
@@ -1581,7 +1582,8 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
     QAction* compatibility_submit = compatibility_menu->addAction(tr("&Submit Report"));
     QAction* compatibility_update = compatibility_menu->addAction(tr("&Update Database"));
 
-    compatibility_view->setEnabled(gameinfo->compat.index<=4);   
+    compatibility_view->setEnabled(gameinfo->compat.index <=
+                                   4); // enable for status Playable to Nothing
 
     // Copy Menu Actions
     connect(copy_info, &QAction::triggered, this, [name, serial] {
@@ -1608,15 +1610,69 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
         if (gameinfo->compat.issue_number != "") {
             QDesktopServices::openUrl(
                 QUrl(m_gui_settings->GetValue(GUI::compatibility_issues_url).toString() +
-                     gameinfo->compat.issue_number));
+                     "issues/" + gameinfo->compat.issue_number));
         } else {
             QMessageBox::information(
                 this, tr("No Report Available"),
                 tr("There is no compatibility report available for this game."));
         }
     });
-    connect(compatibility_submit, &QAction::triggered, this, [this] {
-        // TODO
+    connect(compatibility_submit, &QAction::triggered, this, [this, current_game, gameinfo] {
+        std::filesystem::path log_file_path =
+            (Common::FS::GetUserPath(Common::FS::PathType::LogDir) /
+             (m_emu_settings->IsSeparateLoggingEnabled() ? current_game.serial + ".log"
+                                                         : "shad_log.txt"));
+        bool is_valid_file = LogAnalyzer::ProcessFile(log_file_path);
+        std::optional<std::string> report_result = std::nullopt;
+        if (is_valid_file) {
+            report_result = LogAnalyzer::CheckResults(current_game.serial);
+        }
+        if ((!is_valid_file || report_result.has_value()) &&
+            !m_gui_settings->GetValue(GUI::compatibility_bypass_loganalyzer).toBool()) {
+            QString error_string;
+            if (report_result.has_value()) {
+                error_string = QString::fromStdString(*report_result);
+            } else {
+                error_string =
+                    tr("The log is invalid, it either doesn't exist or log filters were used.");
+            }
+            QMessageBox msgBox(QMessageBox::Critical, tr("Error"),
+                               tr("Couldn't submit report, because the latest log for the "
+                                  "game failed on the following check, and therefore would be "
+                                  "an invalid report:") +
+                                   "\n" + error_string);
+            auto okButton = msgBox.addButton(tr("Ok"), QMessageBox::AcceptRole);
+            auto infoButton = msgBox.addButton(tr("Info"), QMessageBox::ActionRole);
+            msgBox.setEscapeButton(okButton);
+            msgBox.exec();
+            if (msgBox.clickedButton() == infoButton) {
+                QDesktopServices::openUrl(
+                    QUrl(m_gui_settings->GetValue(GUI::compatibility_issues_url).toString() +
+                         "?tab=readme-ov-file#rules"));
+            }
+            return;
+        }
+        if (gameinfo->compat.issue_number == "") {
+            QUrl url = QUrl(m_gui_settings->GetValue(GUI::compatibility_issues_url).toString() +
+                            "issues/new");
+            QUrlQuery query;
+            query.addQueryItem("template", QString("game_compatibility.yml"));
+            query.addQueryItem("title",
+                               QString("%1 - %2").arg(QString::fromStdString(current_game.serial),
+                                                      QString::fromStdString(current_game.name)));
+            query.addQueryItem("game-name", QString::fromStdString(current_game.name));
+            query.addQueryItem("game-serial", QString::fromStdString(current_game.serial));
+            query.addQueryItem("game-version", QString::fromStdString(current_game.app_ver));
+            query.addQueryItem("emulator-version",
+                               QString::fromStdString(*LogAnalyzer::entries[1]->GetParsedData()));
+            url.setQuery(query);
+
+            QDesktopServices::openUrl(url);
+        } else {
+            auto url_issues =
+                m_gui_settings->GetValue(GUI::compatibility_issues_url).toString() + "issues/";
+            QDesktopServices::openUrl(QUrl(url_issues + gameinfo->compat.issue_number));
+        }
     });
     connect(compatibility_update, &QAction::triggered, this,
             [this] { m_game_compat->RequestCompatibility(true); });
