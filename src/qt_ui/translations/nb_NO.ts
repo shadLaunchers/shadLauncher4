@@ -296,227 +296,227 @@
     <name>ControlSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation type="unfinished">Configure Controls</translation>
+      <translation>Kontrolleroppsett</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>Navigasjonsknapper</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Opp</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>Ikke tildelt</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Venstre</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Høyre</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>Ned</translation>
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation type="unfinished">L1 and L2</translation>
+      <translation>L1 og L2</translation>
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Venstre analog dødsone</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>Minste dødsone (standard: 2, max: 127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>Maks dødsone (standard: 127, max: 127)</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Venstre analog</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>Valg av oppsett</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>Felles oppsett</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation type="unfinished">Use per-game configs</translation>
+      <translation>Bruk oppsett per spill</translation>
     </message>
     <message>
       <source>Active Gamepad</source>
-      <translation type="unfinished">Active Gamepad</translation>
+      <translation>Kontroller i bruk</translation>
     </message>
     <message>
       <source>Gamepad ID</source>
-      <translation type="unfinished">Gamepad ID</translation>
+      <translation>Kontroller-ID</translation>
     </message>
     <message>
       <source>Default Gamepad</source>
-      <translation type="unfinished">Default Gamepad</translation>
+      <translation>Standardkontroller</translation>
     </message>
     <message>
       <source>No default selected</source>
-      <translation type="unfinished">No default selected</translation>
+      <translation>Ingen standard valgt</translation>
     </message>
     <message>
       <source>n/a</source>
-      <translation type="unfinished">n/a</translation>
+      <translation>Ikke tilgjengelig</translation>
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation type="unfinished">Set Active Gamepad as Default</translation>
+      <translation>Bruk gjeldende kontroller som standard</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation type="unfinished">Remove Default Gamepad</translation>
+      <translation>Fjern standardkontroller</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>Innstillinger</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Venstre berøringsplate</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Midt berøringsplate</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Høyre berøringsplate</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
-      <translation type="unfinished">Color Adjustment</translation>
+      <translation>Fargejustering</translation>
     </message>
     <message>
       <source>RED</source>
-      <translation type="unfinished">RED</translation>
+      <translation>RØD</translation>
     </message>
     <message>
       <source>GREEN</source>
-      <translation type="unfinished">GREEN</translation>
+      <translation>GRØNN</translation>
     </message>
     <message>
       <source>BLUE</source>
-      <translation type="unfinished">BLUE</translation>
+      <translation>BLÅ</translation>
     </message>
     <message>
       <source>Override Lightbar Color</source>
-      <translation type="unfinished">Override Lightbar Color</translation>
+      <translation>Overstyr farge på lyslista</translation>
     </message>
     <message>
       <source>Override Color</source>
-      <translation type="unfinished">Override Color</translation>
+      <translation>Overstyr farge</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>Handlingsknapper</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Triangel</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>Firkant</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>Sirkel</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>Kryss</translation>
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation type="unfinished">R1 and R2</translation>
+      <translation>R1 og R2</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Høyre analog dødsone</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>Høyre analog</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Tips: Fjern tildelinger med «høyre klikk»</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Lagre</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Bruk</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Gjenopprett standardinnstillinger</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Avbryt</translation>
     </message>
     <message>
       <source>ID: </source>
-      <translation type="unfinished">ID: </translation>
+      <translation>ID: </translation>
     </message>
     <message>
       <source>Default Controller Selected</source>
-      <translation type="unfinished">Default Controller Selected</translation>
+      <translation>Standardkontroller valgt</translation>
     </message>
     <message>
       <source>Active controller set as default</source>
-      <translation type="unfinished">Active controller set as default</translation>
+      <translation>Gjeldende kontroller satt som standard</translation>
     </message>
     <message>
       <source>Default Controller Removed</source>
-      <translation type="unfinished">Default Controller Removed</translation>
+      <translation>Fjernet standardkontroller</translation>
     </message>
     <message>
       <source>Default controller setting removed</source>
-      <translation type="unfinished">Default controller setting removed</translation>
+      <translation>Fjernet instillinger for standardkontroller</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Klarte ikke lagre</translation>
     </message>
     <message>
       <source>Cannot bind axis values more than once</source>
-      <translation type="unfinished">Cannot bind axis values more than once</translation>
+      <translation>Kan ikke tildele akseverdier mer enn en gang</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Kan ikke tildele samme inndata mer enn én gang. Dupliserte inndata tildeles følgende taster:
 
 %1</translation>
     </message>
     <message>
       <source>Press a button</source>
-      <translation type="unfinished">Press a button</translation>
+      <translation>Trykk på en knapp</translation>
     </message>
     <message>
       <source>Move analog stick</source>
-      <translation type="unfinished">Move analog stick</translation>
+      <translation>Flytt på analog stikke</translation>
     </message>
   </context>
   <context>
@@ -731,47 +731,47 @@ Skriv inn nøklene og lagre dem.</translation>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
-      <translation type="unfinished">Edit Keyboard + Mouse and Controller input bindings</translation>
+      <translation>Rediger oppsett for tastatur, mus og kontroller</translation>
     </message>
     <message>
       <source>Use Per-Game configs</source>
-      <translation type="unfinished">Use Per-Game configs</translation>
+      <translation>Bruk oppsett per spill</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Feil</translation>
     </message>
     <message>
       <source>Could not open the file for reading</source>
-      <translation type="unfinished">Could not open the file for reading</translation>
+      <translation>Klarte ikke åpne fila for lesing</translation>
     </message>
     <message>
       <source>Could not open the file for writing</source>
-      <translation type="unfinished">Could not open the file for writing</translation>
+      <translation>Klarte ikke åpne fila for skriving</translation>
     </message>
     <message>
       <source>Save Changes</source>
-      <translation type="unfinished">Save Changes</translation>
+      <translation>Lagre endringer</translation>
     </message>
     <message>
       <source>Do you want to save changes?</source>
-      <translation type="unfinished">Do you want to save changes?</translation>
+      <translation>Vil du lagre endringene?</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Hjelp</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation type="unfinished">Do you want to reset your custom default config to the original default config?</translation>
+      <translation>Vil du tilbakestille alle dine tilpassede innstillinger til standarden?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
-      <translation type="unfinished">Do you want to reset this config to your custom default config?</translation>
+      <translation>Vil du tilbakestille dette oppsettet til standard oppsett?</translation>
     </message>
     <message>
       <source>Reset to Default</source>
-      <translation type="unfinished">Reset to Default</translation>
+      <translation>Tilbakestill</translation>
     </message>
   </context>
   <context>
@@ -1214,19 +1214,19 @@ Bruker lokal database.
     </message>
     <message>
       <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
-      <translation type="unfinished">The log is invalid, it either doesn&apos;t exist or log filters were used.</translation>
+      <translation>Loggen er ugyldig, enten finnes den ikke, eller loggfilter ble tatt i bruk.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Klarte ikke sende rapport, fordi den nyeste loggen for spillet passerte ikke følgende kontroll, og derfor ville vært en ugyldig rapport:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Ok</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Info</translation>
     </message>
   </context>
   <context>
@@ -1279,114 +1279,114 @@ Bruker lokal database.
     <name>HelpDialog</name>
     <message>
       <source>Quickstart</source>
-      <translation type="unfinished">Quickstart</translation>
+      <translation>Hurtigstart</translation>
     </message>
     <message>
       <source>Syntax</source>
-      <translation type="unfinished">Syntax</translation>
+      <translation>Syntaks</translation>
     </message>
     <message>
       <source>Keybindings</source>
-      <translation type="unfinished">Keybindings</translation>
+      <translation>Hurtigtaster</translation>
     </message>
     <message>
       <source>Special Bindings</source>
-      <translation type="unfinished">Special Bindings</translation>
+      <translation>Spesielle hurtigtaster</translation>
     </message>
     <message>
       <source>FAQ</source>
-      <translation type="unfinished">FAQ</translation>
+      <translation>Ofte stilte spørsmål</translation>
     </message>
   </context>
   <context>
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation type="unfinished">Customize Hotkeys</translation>
+      <translation>Tilpass hurtigtaster</translation>
     </message>
     <message>
       <source>Controller Hotkeys</source>
-      <translation type="unfinished">Controller Hotkeys</translation>
+      <translation>Kontroller hurtigtaster</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
-      <translation type="unfinished">Show FPS Counter</translation>
+      <translation>Vis FPS-teller</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>Ikke tildelt</translation>
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation type="unfinished">Quit Emulation</translation>
+      <translation>Avslutt emulering</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>Last knappeoppsett på nytt</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
-      <translation type="unfinished">Toggle Fullscreen</translation>
+      <translation>Slå av/på fullskjerm</translation>
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation type="unfinished">Toggle Pause</translation>
+      <translation>Sett av/på pause</translation>
     </message>
     <message>
       <source>Keyboard Hotkeys</source>
-      <translation type="unfinished">Keyboard Hotkeys</translation>
+      <translation>Tastatur hurtigtaster</translation>
     </message>
     <message>
       <source>Renderdoc Capture (for debugging only)</source>
-      <translation type="unfinished">Renderdoc Capture (for debugging only)</translation>
+      <translation>RenderDoc opptak (kun for feilsøking)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>Slå av/på mus til styrespak emulering</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>Slå av/på mus til gyro emulering</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation type="unfinished">Tip: Up to three simultaneous inputs can be assigned for each hotkey</translation>
+      <translation>Tips: Opptil tre inndata kan tildeles hver funksjon.</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Tips: Fjern tildelinger med «høyre klikk»</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Lagre</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Bruk</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Avbryt</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Gjenopprett standardinnstillinger</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Klarte ikke lagre</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Kan ikke tildele samme inndata mer enn én gang. Dupliserte inndata tildeles følgende taster:
 
 %1</translation>
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation type="unfinished">Waiting for inputs</translation>
+      <translation>Venter på inndata</translation>
     </message>
   </context>
   <context>
@@ -1400,203 +1400,203 @@ Bruker lokal database.
     <name>KBMSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation type="unfinished">Configure Controls</translation>
+      <translation>Tastaturoppsett</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>Navigasjonsknapper</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Opp</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>Ikke tildelt</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Venstre</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Høyre</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>Ned</translation>
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation type="unfinished">Left Analog Halfmode</translation>
+      <translation>Venstre analog halvmodus</translation>
     </message>
     <message>
       <source>hold to move left stick at half-speed</source>
-      <translation type="unfinished">hold to move left stick at half-speed</translation>
+      <translation>Hold for å bevege venstre analog med halv hastighet</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Venstre analog</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>Valg av oppsett</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>Felles oppsett</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation type="unfinished">Use per-game configs</translation>
+      <translation>Bruk oppsett per spill</translation>
     </message>
     <message>
       <source>Copy from Common Config</source>
-      <translation type="unfinished">Copy from Common Config</translation>
+      <translation>Kopier fra felles oppsettet</translation>
     </message>
     <message>
       <source>Text Editor</source>
-      <translation type="unfinished">Text Editor</translation>
+      <translation>Skriveprogram</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Hjelp</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>Innstillinger</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Venstre berøringsplate</translation>
     </message>
     <message>
       <source>Mouse to Joystick</source>
-      <translation type="unfinished">Mouse to Joystick</translation>
+      <translation>Mus til styrespak</translation>
     </message>
     <message>
       <source>*press F7 ingame to activate</source>
-      <translation type="unfinished">*press F7 ingame to activate</translation>
+      <translation>Trykk F7 i spillet for å bruke</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Midt berøringsplate</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Høyre berøringsplate</translation>
     </message>
     <message>
       <source>Mouse Movement Parameters</source>
-      <translation type="unfinished">Mouse Movement Parameters</translation>
+      <translation>Oppsett av musebevegelse</translation>
     </message>
     <message>
       <source>Deadzone Offset (def 0.50):</source>
-      <translation type="unfinished">Deadzone Offset (def 0.50):</translation>
+      <translation>Dødsoneforskyvning (standard: 0,50):</translation>
     </message>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
-      <translation type="unfinished">Speed Multiplier (def 1.0):</translation>
+      <translation>Hastighetsmultiplikator (standard; 1,0):</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
-      <translation type="unfinished">Speed Offset (def 0.125):</translation>
+      <translation>Hastighetsforskyvning (standard: 0,125):</translation>
     </message>
     <message>
       <source>note: click Help Button/Special Keybindings for more information</source>
-      <translation type="unfinished">note: click Help Button/Special Keybindings for more information</translation>
+      <translation>Merk: Trykk på «Hjelp»-knappen for mer informasjon</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>Handlingsknapper</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Triangel</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>Firkant</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>Sirkel</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>Kryss</translation>
     </message>
     <message>
       <source>Right Analog Halfmode</source>
-      <translation type="unfinished">Right Analog Halfmode</translation>
+      <translation>Høyre analog halvmodus</translation>
     </message>
     <message>
       <source>hold to move right stick at half-speed</source>
-      <translation type="unfinished">hold to move right stick at half-speed</translation>
+      <translation>Hold for å bevege høyre analog med halv hastighet</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>Høyre analog</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Tips: Fjern tildelinger med «høyre klikk»</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Lagre</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Bruk</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Gjenopprett standardinnstillinger</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Avbryt</translation>
     </message>
     <message>
       <source>Common Config Selected</source>
-      <translation type="unfinished">Common Config Selected</translation>
+      <translation>Felles oppsett valgt</translation>
     </message>
     <message>
       <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation type="unfinished">This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</translation>
+      <translation>Denne knappen kopierer oppsettet fra felles oppsettet til den valgte profilen, og kan ikke brukes når den gjeldende brukte profilen er felles oppsettet.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
-      <translation type="unfinished">Copy values from Common Config</translation>
+      <translation>Kopier verdier fra felles oppsettet</translation>
     </message>
     <message>
       <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
-      <translation type="unfinished">Do you want to overwrite existing mappings with the mappings from the Common Config?</translation>
+      <translation>Vil du overskrive eksisterende valg av oppsett med felles oppsettet?</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Klarte ikke lagre</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Kan ikke tildele samme inndata mer enn én gang. Dupliserte inndata tildeles følgende taster:
 
 %1</translation>
     </message>
     <message>
       <source>Press a key</source>
-      <translation type="unfinished">Press a key</translation>
+      <translation>Trykk på en tast</translation>
     </message>
     <message>
       <source>Cannot set mapping</source>
-      <translation type="unfinished">Cannot set mapping</translation>
+      <translation>Klarte ikke tildele</translation>
     </message>
     <message>
       <source>Mousewheel cannot be mapped to stick outputs</source>
-      <translation type="unfinished">Mousewheel cannot be mapped to stick outputs</translation>
+      <translation>Musehjulet kan ikke tildeles analogstikkene</translation>
     </message>
   </context>
   <context>
@@ -2120,15 +2120,15 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Keyboard</source>
-      <translation type="unfinished">Keyboard</translation>
+      <translation>Tastatur</translation>
     </message>
     <message>
       <source>Configure Keyboard and Mouse</source>
-      <translation type="unfinished">Configure Keyboard and Mouse</translation>
+      <translation>Sett opp tastatur og mus</translation>
     </message>
     <message>
       <source>Configure Hotkeys</source>
-      <translation type="unfinished">Configure Hotkeys</translation>
+      <translation>Sett opp hurtigtaster</translation>
     </message>
   </context>
   <context>
