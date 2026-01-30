@@ -291,6 +291,231 @@
     </message>
 </context>
 <context>
+    <name>ControlSettings</name>
+    <message>
+        <source>Configure Controls</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>D-Pad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unmapped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>L1 and L2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left Stick Deadzone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Min Deadzone (def:2 max:127)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Max Deadzone (def:127 max:127)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left Stick</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Config Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Common Config</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use per-game configs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active Gamepad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gamepad ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default Gamepad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No default selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>n/a</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Active Gamepad as Default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove Default Gamepad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Touchpad Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Touchpad Center</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Touchpad Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Color Adjustment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RED</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GREEN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>BLUE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Override Lightbar Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Override Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Face Buttons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Triangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Circle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cross</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>R1 and R2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right Stick Deadzone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right Stick</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tip: Unmap inputs with right-click</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restore Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ID: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default Controller Selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active controller set as default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default Controller Removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default controller setting removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot bind axis values more than once</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Press a button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Move analog stick</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CryptoManagerDialog</name>
     <message>
         <source>Crypto Key Manager</source>
@@ -490,6 +715,53 @@ Please enter your keys and save them.</source>
     </message>
     <message>
         <source>Cannot write output file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>EditorDialog</name>
+    <message>
+        <source>Edit Keyboard + Mouse and Controller input bindings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use Per-Game configs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not open the file for reading</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not open the file for writing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you want to save changes?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you want to reset your custom default config to the original default config?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you want to reset this config to your custom default config?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset to Default</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -928,6 +1200,22 @@ Using local database.
         <source>Game Log</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ok</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GameListGrid</name>
@@ -976,9 +1264,322 @@ Using local database.
     </message>
 </context>
 <context>
+    <name>HelpDialog</name>
+    <message>
+        <source>Quickstart</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Syntax</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Keybindings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Special Bindings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FAQ</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Hotkeys</name>
+    <message>
+        <source>Customize Hotkeys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Controller Hotkeys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show FPS Counter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unmapped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Quit Emulation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reload Button Mappings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Toggle Fullscreen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Toggle Pause</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Keyboard Hotkeys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Renderdoc Capture (for debugging only)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Toggle Mouse to Joystick Emulation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Toggle Mouse to Gyro Emulation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tip: Unmap inputs with right-click</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restore Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Waiting for inputs</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>IpcClient</name>
     <message>
         <source>Could not find the emulator executable</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>KBMSettings</name>
+    <message>
+        <source>Configure Controls</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>D-Pad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unmapped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left Analog Halfmode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>hold to move left stick at half-speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left Stick</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Config Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Common Config</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use per-game configs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy from Common Config</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Touchpad Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mouse to Joystick</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>*press F7 ingame to activate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Touchpad Center</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Touchpad Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mouse Movement Parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deadzone Offset (def 0.50):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed Multiplier (def 1.0):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed Offset (def 0.125):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>note: click Help Button/Special Keybindings for more information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Face Buttons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Triangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Circle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cross</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right Analog Halfmode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>hold to move right stick at half-speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right Stick</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tip: Unmap inputs with right-click</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restore Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Common Config Selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy values from Common Config</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Press a key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot set mapping</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mousewheel cannot be mapped to stick outputs</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1493,6 +2094,18 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Show Game Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Keyboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Configure Keyboard and Mouse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Configure Hotkeys</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
