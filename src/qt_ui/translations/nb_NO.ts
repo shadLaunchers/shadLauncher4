@@ -392,7 +392,7 @@
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation>Midt berøringsplate</translation>
+      <translation>Midtre berøringsplate</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
@@ -1480,7 +1480,7 @@ Bruker lokal database.
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation>Midt berøringsplate</translation>
+      <translation>Midtre berøringsplate</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
