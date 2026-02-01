@@ -296,199 +296,199 @@
     <name>ControlSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation type="unfinished">Configure Controls</translation>
+      <translation>Configurar Controles</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>Direcional</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Cima</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>não mapeado</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Esquerda</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Direita</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>Baixo</translation>
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation type="unfinished">L1 and L2</translation>
+      <translation>L1 e L2</translation>
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Zona Morta do Analógico Esquerdo</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>Zona Morta Minima (pad:2 max:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>Zona Morta Máxima (pad:127 max:127)</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Analógico Esquerdo</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>Seleção de Configuração</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>Configuração Comum</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation type="unfinished">Use per-game configs</translation>
+      <translation>Usar configurações por jogo</translation>
     </message>
     <message>
       <source>Active Gamepad</source>
-      <translation type="unfinished">Active Gamepad</translation>
+      <translation>Controle Ativo</translation>
     </message>
     <message>
       <source>Gamepad ID</source>
-      <translation type="unfinished">Gamepad ID</translation>
+      <translation>ID do controle</translation>
     </message>
     <message>
       <source>Default Gamepad</source>
-      <translation type="unfinished">Default Gamepad</translation>
+      <translation>Controle Padrão</translation>
     </message>
     <message>
       <source>No default selected</source>
-      <translation type="unfinished">No default selected</translation>
+      <translation>Nenhum selecionado como padrão</translation>
     </message>
     <message>
       <source>n/a</source>
-      <translation type="unfinished">n/a</translation>
+      <translation>n/d</translation>
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation type="unfinished">Set Active Gamepad as Default</translation>
+      <translation>Defina o Controle Ativo como Padrão</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation type="unfinished">Remove Default Gamepad</translation>
+      <translation>Remover controle padrão</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>Opções</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Touchpad Esquerdo</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Centro do Touchpad</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Touchpad Direito</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
-      <translation type="unfinished">Color Adjustment</translation>
+      <translation>Ajuste de Cores</translation>
     </message>
     <message>
       <source>RED</source>
-      <translation type="unfinished">RED</translation>
+      <translation>VERMELHO</translation>
     </message>
     <message>
       <source>GREEN</source>
-      <translation type="unfinished">GREEN</translation>
+      <translation>VERDE</translation>
     </message>
     <message>
       <source>BLUE</source>
-      <translation type="unfinished">BLUE</translation>
+      <translation>AZUL</translation>
     </message>
     <message>
       <source>Override Lightbar Color</source>
-      <translation type="unfinished">Override Lightbar Color</translation>
+      <translation>Substituir Cor da Barra de Luz</translation>
     </message>
     <message>
       <source>Override Color</source>
-      <translation type="unfinished">Override Color</translation>
+      <translation>Substituir a Cor</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>Botões de Ação</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Triângulo</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>Quadrado</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>Círculo</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>Cruz</translation>
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation type="unfinished">R1 and R2</translation>
+      <translation>R1 e R2</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Zona Morta do Analógico Direito</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>Analógico Direito</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Dica: Desmapear entradas com botão direito</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Salvar</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Aplicar</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Restaurar Padrões</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>ID: </source>
-      <translation type="unfinished">ID: </translation>
+      <translation>ID: </translation>
     </message>
     <message>
       <source>Default Controller Selected</source>
-      <translation type="unfinished">Default Controller Selected</translation>
+      <translation>Controle Padrão Selecionado</translation>
     </message>
     <message>
       <source>Active controller set as default</source>
-      <translation type="unfinished">Active controller set as default</translation>
+      <translation>O Controle ativo foi definido como padrão</translation>
     </message>
     <message>
       <source>Default Controller Removed</source>
-      <translation type="unfinished">Default Controller Removed</translation>
+      <translation>Controle Padrão Removido</translation>
     </message>
     <message>
       <source>Default controller setting removed</source>
@@ -496,7 +496,7 @@
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Não foi possível salvar</translation>
     </message>
     <message>
       <source>Cannot bind axis values more than once</source>
@@ -516,7 +516,7 @@
     </message>
     <message>
       <source>Move analog stick</source>
-      <translation type="unfinished">Move analog stick</translation>
+      <translation>Mover analógico</translation>
     </message>
   </context>
   <context>
@@ -751,19 +751,19 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Save Changes</source>
-      <translation type="unfinished">Save Changes</translation>
+      <translation>Salvar Alterações</translation>
     </message>
     <message>
       <source>Do you want to save changes?</source>
-      <translation type="unfinished">Do you want to save changes?</translation>
+      <translation>Gostaria de salvar as alterações?</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Ajuda</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation type="unfinished">Do you want to reset your custom default config to the original default config?</translation>
+      <translation>Você gostaria de redefinir sua configuração padrão personalizada de volta para a configuração padrão original?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
@@ -1182,35 +1182,35 @@ Using local database.
     </message>
     <message>
       <source>&amp;Delete...</source>
-      <translation type="unfinished">&amp;Delete...</translation>
+      <translation>&amp;Excluir...</translation>
     </message>
     <message>
       <source>&amp;Delete Game</source>
-      <translation type="unfinished">&amp;Delete Game</translation>
+      <translation>&amp;Excluir Jogo</translation>
     </message>
     <message>
       <source>&amp;Delete Update</source>
-      <translation type="unfinished">&amp;Delete Update</translation>
+      <translation>&amp;Excluir Atualização</translation>
     </message>
     <message>
       <source>&amp;Delete Save Data</source>
-      <translation type="unfinished">&amp;Delete Save Data</translation>
+      <translation>&amp;Excluir Dados Salvos</translation>
     </message>
     <message>
       <source>&amp;Delete DLC </source>
-      <translation type="unfinished">&amp;Delete DLC </translation>
+      <translation>&amp;Excluir DLC </translation>
     </message>
     <message>
       <source>&amp;Delete Trophy</source>
-      <translation type="unfinished">&amp;Delete Trophy</translation>
+      <translation>&amp;Excluir Troféu</translation>
     </message>
     <message>
       <source>&amp;Delete Shader Cache</source>
-      <translation type="unfinished">&amp;Delete Shader Cache</translation>
+      <translation>&amp;Apagar Cache de Shader</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Registro do Jogo</translation>
     </message>
     <message>
       <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
