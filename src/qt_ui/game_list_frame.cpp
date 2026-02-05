@@ -823,20 +823,20 @@ void GameListFrame::OnRefreshFinished() {
             entry->info.update_path = other->info.path; // Store update path
 
             // --- Replace picture path if available ---
-            if (std::string pic_path = other->info.path + "/PIC1.PNG";
+            if (std::string pic_path = other->info.path + "/sce_sys/PIC1.PNG";
                 std::filesystem::is_regular_file(pic_path))
                 entry->info.pic_path = std::move(pic_path);
 
             // --- Replace icon path if available ---
-            if (std::string icon_path = other->info.path + "/" + localized_icon;
+            if (std::string icon_path = other->info.path + "/sce_sys/" + localized_icon;
                 std::filesystem::is_regular_file(icon_path))
                 entry->info.icon_path = std::move(icon_path);
-            else if (std::string icon_path = other->info.path + "/ICON0.PNG";
+            else if (std::string icon_path = other->info.path + "/sce_sys/ICON0.PNG";
                      std::filesystem::is_regular_file(icon_path))
                 entry->info.icon_path = std::move(icon_path);
 
             // --- Replace sound path if available ---
-            if (std::string snd0_path = other->info.path + "/snd0.at9";
+            if (std::string snd0_path = other->info.path + "/sce_sys/snd0.at9";
                 std::filesystem::is_regular_file(snd0_path))
                 entry->info.snd0_path = std::move(snd0_path);
         }
