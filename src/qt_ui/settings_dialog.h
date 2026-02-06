@@ -47,8 +47,8 @@ private:
         return (!m_custom_settings_from_global);
     }
 
-    std::shared_ptr<EmulatorSettings> m_game_specific_settings; 
-    std::shared_ptr<EmulatorSettings> m_emu_settings;          
+    std::shared_ptr<EmulatorSettings> m_game_specific_settings;
+    std::shared_ptr<EmulatorSettings> m_emu_settings;
     std::shared_ptr<EmulatorSettings> m_original_settings;
 
     // help texts

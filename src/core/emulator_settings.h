@@ -12,7 +12,7 @@
 #include <nlohmann/json.hpp>
 #include "common/types.h"
 #include "core/user_manager.h"
-
+#include "iostream"
 // -------------------------------
 // Generic Setting wrapper
 // -------------------------------
@@ -43,24 +43,38 @@ struct OverrideItem {
 // Helper factory: create an OverrideItem binding a pointer-to-member
 template <typename Struct, typename T>
 inline OverrideItem make_override(const char* key, Setting<T> Struct::* member) {
-    return OverrideItem{key, [member, key](void* base, const nlohmann::json& entry,
-                                           std::vector<std::string>& changed) {
-                            if (!entry.is_object())
-                                return;
+    return OverrideItem{
+        key,
+        [member, key](void* base, const nlohmann::json& entry, std::vector<std::string>& changed) {
+            std::cout << "[make_override] Processing key: " << key << std::endl;
+            std::cout << "[make_override] Entry JSON: " << entry.dump() << std::endl;
 
-                            Struct* obj = reinterpret_cast<Struct*>(base);
-                            Setting<T>& dst = obj->*member;
+            Struct* obj = reinterpret_cast<Struct*>(base);
+            Setting<T>& dst = obj->*member;
 
-                            Setting<T> tmp = entry.get<Setting<T>>();
+            try {
+                // Parse the value from JSON
+                T newValue = entry.get<T>();
 
-                            if (dst.value != tmp.value) {
-                                changed.push_back(std::string(key) + " ( " +
-                                                  nlohmann::json(dst.value).dump() + " → " +
-                                                  nlohmann::json(tmp.value).dump() + " )");
-                            }
+                std::cout << "[make_override] Parsed value: " << newValue << std::endl;
+                std::cout << "[make_override] Current value: " << dst.value << std::endl;
 
-                            dst.value = tmp.value;
-                        }};
+                if (dst.value != newValue) {
+                    std::ostringstream oss;
+                    oss << key << " ( " << dst.value << " → " << newValue << " )";
+                    changed.push_back(oss.str());
+                    std::cout << "[make_override] Recorded change: " << oss.str() << std::endl;
+                }
+
+                dst.value = newValue;
+                std::cout << "[make_override] Successfully updated " << key << std::endl;
+            } catch (const std::exception& e) {
+                std::cerr << "[make_override] ERROR parsing " << key << ": " << e.what()
+                          << std::endl;
+                std::cerr << "[make_override] Entry was: " << entry.dump() << std::endl;
+                std::cerr << "[make_override] Type name: " << entry.type_name() << std::endl;
+            }
+        }};
 }
 
 // -------------------------------

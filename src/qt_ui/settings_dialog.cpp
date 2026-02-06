@@ -61,39 +61,32 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
         m_game_serial = game->serial;
     }
 
-    if (IsGlobal()) {
+    // **STEP 1: Load settings FIRST, before setting up UI**
+    if (!IsGlobal() && m_custom_settings_from_global && !m_game_serial.empty()) {
+        // We need to load game-specific settings
+        m_original_settings = std::make_shared<EmulatorSettings>();
+        *m_original_settings = *m_emu_settings; // Backup original
+
+        // Create and load game-specific settings
+        m_game_specific_settings = std::make_shared<EmulatorSettings>();
+        m_game_specific_settings->Load("");            // Load global
+        m_game_specific_settings->Load(m_game_serial); // Apply overrides
+
+        // Use game-specific settings
+        m_emu_settings.swap(m_game_specific_settings);
+
+        this->setWindowTitle(tr("Custom Settings for %1 [%2]")
+                                 .arg(QString::fromStdString(m_current_game.name),
+                                      QString::fromStdString(m_game_serial)));
+        ui->customSettingsLabel->setVisible(true);
+    } else if (IsGlobal()) {
         this->setWindowTitle(tr("Global Settings"));
         ui->customSettingsLabel->setVisible(false);
         int index = ui->tabWidgetSettings->indexOf(ui->experimentalTab);
         ui->tabWidgetSettings->setTabVisible(index, false);
-    } else if (m_custom_settings_from_global) {
-        // Custom settings mode starting from global settings
-        this->setWindowTitle(tr("Custom Settings for %1 [%2] (Based on Global)")
-                                 .arg(QString::fromStdString(m_current_game.name),
-                                      QString::fromStdString(m_game_serial)));
-        ui->customSettingsLabel->setVisible(true);
-
-        // Backup original global settings BEFORE loading game overrides
-        m_original_settings = std::make_shared<EmulatorSettings>();
-        *m_original_settings = *m_emu_settings;
-
-        // Load game-specific overrides into the CURRENT settings object
-        if (!m_game_serial.empty()) {
-            // Create a fresh settings object for game-specific settings
-            m_game_specific_settings = std::make_shared<EmulatorSettings>();
-
-            // Load global settings first (as base)
-            m_game_specific_settings->Load("");
-
-            // Then apply game-specific overrides
-            m_game_specific_settings->Load(m_game_serial);
-
-            // Swap current settings to game-specific ones
-            m_emu_settings.swap(m_game_specific_settings);
-        }
-
     }
 
+    // **STEP 2: Now set up UI with the correct settings loaded**
     const SettingsDialogHelperTexts helptexts;
     SubscribeHelpText(ui->gameFoldersGroupBox, helptexts.settings.paths_gameDir);
     SubscribeHelpText(ui->gameFoldersListWidget, helptexts.settings.paths_gameDir);
@@ -117,13 +110,14 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     PathTabConnections();
     OtherConnections();
 
-    // Add override controls for custom settings modes
     if (!IsGlobal()) {
         MapUIControls();
         DisableNonOverrideableSettings();
     }
 
+    // **STEP 3: Load values into UI**
     LoadValuesFromConfig();
+
     HandleButtonBox();
 }
 
@@ -719,7 +713,7 @@ void SettingsDialog::HandleButtonBox() {
             return;
         }
 
-                if (button == restoreBtn) {
+        if (button == restoreBtn) {
             QString message =
                 IsGlobal()
                     ? tr("Are you sure you want to restore all settings to their default values?")
