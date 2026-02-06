@@ -61,7 +61,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
         m_game_serial = game->serial;
     }
 
-    // **STEP 1: Load settings FIRST, before setting up UI**
     if (!IsGlobal() && m_custom_settings_from_global && !m_game_serial.empty()) {
         // We need to load game-specific settings
         m_original_settings = std::make_shared<EmulatorSettings>();
@@ -86,7 +85,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
         ui->tabWidgetSettings->setTabVisible(index, false);
     }
 
-    // **STEP 2: Now set up UI with the correct settings loaded**
     const SettingsDialogHelperTexts helptexts;
     SubscribeHelpText(ui->gameFoldersGroupBox, helptexts.settings.paths_gameDir);
     SubscribeHelpText(ui->gameFoldersListWidget, helptexts.settings.paths_gameDir);
@@ -115,13 +113,31 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
         DisableNonOverrideableSettings();
     }
 
-    // **STEP 3: Load values into UI**
     LoadValuesFromConfig();
 
     HandleButtonBox();
 }
 
-SettingsDialog::~SettingsDialog() = default;
+SettingsDialog::~SettingsDialog() {
+    // Clean up game-specific settings when dialog closes
+    if (m_game_specific_settings) {
+        // If we swapped settings, swap them back
+        if (!IsGlobal() && m_custom_settings_from_global) {
+            if (m_original_settings) {
+                // Restore original settings
+                m_emu_settings.swap(m_game_specific_settings);
+            }
+        }
+
+        // Clear the shared_ptr
+        m_game_specific_settings.reset();
+    }
+
+    // Also clear original settings
+    if (m_original_settings) {
+        m_original_settings.reset();
+    }
+}
 
 void SettingsDialog::open() {
     QDialog::open();
