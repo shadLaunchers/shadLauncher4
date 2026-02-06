@@ -26,7 +26,7 @@ public:
                             std::shared_ptr<EmulatorSettings> emu_settings,
                             std::shared_ptr<IpcClient> ipc_client, int tab_index = 0,
                             QWidget* parent = nullptr, const GameInfo* game = nullptr,
-                            bool global = true);
+                            bool customFromGlobal = false, bool customFromDefault = false);
     ~SettingsDialog();
     void open() override;
 
@@ -40,8 +40,13 @@ private:
     std::shared_ptr<GUISettings> m_gui_settings;
     std::shared_ptr<EmulatorSettings> m_emu_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
-    bool is_global;
+    bool m_custom_settings_from_global;
+    bool m_custom_settigns_from_default;
+    GameInfo m_current_game; // Add current game info
 
+    bool IsGlobal() {
+        return (!m_custom_settings_from_global && !m_custom_settigns_from_default);
+    }
     // help texts
     QString m_description;
     QHash<QObject*, QString> m_descriptions;

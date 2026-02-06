@@ -49,11 +49,18 @@ inline bool operator!=(GameInstallDir const& a, GameInstallDir const& b) {
 SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
                                std::shared_ptr<EmulatorSettings> emu_settings,
                                std::shared_ptr<IpcClient> ipc_client, int tab_index,
-                               QWidget* parent, const GameInfo* game, bool global)
+                               QWidget* parent, const GameInfo* game, bool customFromGlobal,
+                               bool customFromDefault)
     : QDialog(parent), m_tab_index(tab_index), ui(new Ui::SettingsDialog),
       m_gui_settings(std::move(gui_settings)), m_emu_settings(std::move(emu_settings)),
-      m_ipc_client(ipc_client), is_global(global) {
+      m_ipc_client(ipc_client), m_custom_settings_from_global(customFromGlobal),
+      m_custom_settigns_from_default(customFromDefault) {
     ui->setupUi(this);
+
+    if (IsGlobal()) {
+        this->setWindowTitle(tr("Global Settings"));
+        ui->customSettingsLabel->setVisible(false);
+    }
 
     const SettingsDialogHelperTexts helptexts;
     SubscribeHelpText(ui->gameFoldersGroupBox, helptexts.settings.paths_gameDir);
@@ -245,7 +252,7 @@ void SettingsDialog::OtherConnections() {
         ui->volumeText->setText(QString("%1%").arg(value));
 
         if (EmulatorState::GetInstance()->IsGameRunning())
-            m_ipc_client->adjustVol(value, !is_global);
+            m_ipc_client->adjustVol(value, !IsGlobal());
     });
 
     connect(ui->OpenCustomTrophyLocationButton, &QPushButton::clicked, this, []() {
