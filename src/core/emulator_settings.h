@@ -364,6 +364,26 @@ private:
     static void PrintChangedSummary(const std::vector<std::string>& changed);
 
 public:
+    // Add these getters to access overrideable fields
+    std::vector<OverrideItem> GetGeneralOverrideableFields() const {
+        return m_general.GetOverrideableFields();
+    }
+    std::vector<OverrideItem> GetDebugOverrideableFields() const {
+        return m_debug.GetOverrideableFields();
+    }
+    std::vector<OverrideItem> GetInputOverrideableFields() const {
+        return m_input.GetOverrideableFields();
+    }
+    std::vector<OverrideItem> GetAudioOverrideableFields() const {
+        return m_audio.GetOverrideableFields();
+    }
+    std::vector<OverrideItem> GetGPUOverrideableFields() const {
+        return m_gpu.GetOverrideableFields();
+    }
+    std::vector<OverrideItem> GetVulkanOverrideableFields() const {
+        return m_vulkan.GetOverrideableFields();
+    }
+    std::vector<std::string> GetAllOverrideableKeys() const;
 #define SETTING_FORWARD(group, Name, field)                                                        \
     auto Get##Name() const {                                                                       \
         return group.field.value;                                                                  \

@@ -358,3 +358,22 @@ void EmulatorSettings::SetDefaultValues() {
     m_gpu = GPUSettings{};
     m_vulkan = VulkanSettings{};
 }
+
+std::vector<std::string> EmulatorSettings::GetAllOverrideableKeys() const {
+    std::vector<std::string> keys;
+
+    auto addKeys = [&keys](const std::vector<OverrideItem>& items) {
+        for (const auto& item : items) {
+            keys.push_back(item.key);
+        }
+    };
+
+    addKeys(m_general.GetOverrideableFields());
+    addKeys(m_debug.GetOverrideableFields());
+    addKeys(m_input.GetOverrideableFields());
+    addKeys(m_audio.GetOverrideableFields());
+    addKeys(m_gpu.GetOverrideableFields());
+    addKeys(m_vulkan.GetOverrideableFields());
+
+    return keys;
+}
