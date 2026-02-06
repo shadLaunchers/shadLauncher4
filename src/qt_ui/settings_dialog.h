@@ -26,7 +26,7 @@ public:
                             std::shared_ptr<EmulatorSettings> emu_settings,
                             std::shared_ptr<IpcClient> ipc_client, int tab_index = 0,
                             QWidget* parent = nullptr, const GameInfo* game = nullptr,
-                            bool global = true);
+                            bool customFromGlobal = false);
     ~SettingsDialog();
     void open() override;
 
@@ -38,9 +38,18 @@ private:
     int m_tab_index = 0;
     std::unique_ptr<Ui::SettingsDialog> ui;
     std::shared_ptr<GUISettings> m_gui_settings;
-    std::shared_ptr<EmulatorSettings> m_emu_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
-    bool is_global;
+    bool m_custom_settings_from_global;
+    GameInfo m_current_game;   // Add current game info
+    std::string m_game_serial; // Game serial number
+
+    bool IsGlobal() {
+        return (!m_custom_settings_from_global);
+    }
+
+    std::shared_ptr<EmulatorSettings> m_game_specific_settings;
+    std::shared_ptr<EmulatorSettings> m_emu_settings;
+    std::shared_ptr<EmulatorSettings> m_original_settings;
 
     // help texts
     QString m_description;
@@ -55,6 +64,9 @@ private:
     void HandleButtonBox();
     void ApplyValuesToBackend();
     void PopulateComboBoxes();
+    bool IsSettingOverrideable(const char* setting_key, const QString& setting_group) const;
+    void DisableNonOverrideableSettings();
+    void MapUIControls();
 
     const QMap<QString, HideCursorState> cursorStateMap = {{tr("Never"), HideCursorState::Never},
                                                            {tr("Idle"), HideCursorState::Idle},
@@ -79,4 +91,7 @@ private:
                                            {tr("Default Device"), "Default Device"}};
 
     const QMap<QString, QString> logTypeMap = {{tr("async"), "async"}, {tr("sync"), "sync"}};
+
+    // Map UI controls to their setting keys
+    QMap<QObject*, std::pair<const char*, QString>> m_uiSettingMap;
 };

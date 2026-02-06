@@ -256,100 +256,156 @@ bool EmulatorSettings::Save(const std::string& serial) const {
 // --------------------
 bool EmulatorSettings::Load(const std::string& serial) {
     try {
-        const std::filesystem::path userDir =
-            Common::FS::GetUserPath(Common::FS::PathType::UserDir);
-        const std::filesystem::path configPath = userDir / "config.json";
+        // If serial is empty, load ONLY global settings
+        if (serial.empty()) {
+            const std::filesystem::path userDir =
+                Common::FS::GetUserPath(Common::FS::PathType::UserDir);
+            const std::filesystem::path configPath = userDir / "config.json";
 
-        // Load global config if exists
-        if (std::ifstream globalIn{configPath}; globalIn.good()) {
-            json gj;
-            globalIn >> gj;
-            if (gj.contains("General")) {
-                json current = m_general;         // JSON from existing struct with all defaults
-                current.update(gj.at("General")); // merge only fields present in file
-                m_general = current.get<GeneralSettings>(); // convert back
+            std::cout << "[EmulatorSettings] Loading global settings from: " << configPath
+                      << std::endl;
+
+            // Load global config if exists
+            if (std::ifstream globalIn{configPath}; globalIn.good()) {
+                json gj;
+                globalIn >> gj;
+
+                std::cout << "[EmulatorSettings] Global config JSON size: " << gj.size()
+                          << std::endl;
+
+                if (gj.contains("General")) {
+                    json current = m_general;
+                    current.update(gj.at("General"));
+                    m_general = current.get<GeneralSettings>();
+                    std::cout << "[EmulatorSettings] Loaded General settings" << std::endl;
+                }
+                if (gj.contains("Debug")) {
+                    json current = m_debug;
+                    current.update(gj.at("Debug"));
+                    m_debug = current.get<DebugSettings>();
+                    std::cout << "[EmulatorSettings] Loaded Debug settings" << std::endl;
+                }
+                if (gj.contains("Input")) {
+                    json current = m_input;
+                    current.update(gj.at("Input"));
+                    m_input = current.get<InputSettings>();
+                    std::cout << "[EmulatorSettings] Loaded Input settings" << std::endl;
+                }
+                if (gj.contains("Audio")) {
+                    json current = m_audio;
+                    current.update(gj.at("Audio"));
+                    m_audio = current.get<AudioSettings>();
+                    std::cout << "[EmulatorSettings] Loaded Audio settings" << std::endl;
+                }
+                if (gj.contains("GPU")) {
+                    json current = m_gpu;
+                    current.update(gj.at("GPU"));
+                    m_gpu = current.get<GPUSettings>();
+                    std::cout << "[EmulatorSettings] Loaded GPU settings" << std::endl;
+                }
+                if (gj.contains("Vulkan")) {
+                    json current = m_vulkan;
+                    current.update(gj.at("Vulkan"));
+                    m_vulkan = current.get<VulkanSettings>();
+                    std::cout << "[EmulatorSettings] Loaded Vulkan settings" << std::endl;
+                }
+                if (gj.contains("Users")) {
+                    m_userManager.GetUsers() = gj.at("Users").get<Users>();
+                    std::cout << "[EmulatorSettings] Loaded Users" << std::endl;
+                }
+            } else {
+                std::cout << "[EmulatorSettings] Global config not found, setting defaults"
+                          << std::endl;
+                SetDefaultValues();
+                // ensure a default user exists
+                if (m_userManager.GetUsers().user.empty())
+                    m_userManager.GetUsers().user = m_userManager.CreateDefaultUser();
+                Save();
             }
-            if (gj.contains("Debug")) {
-                json current = m_debug;
-                current.update(gj.at("Debug"));
-                m_debug = current.get<DebugSettings>();
-            }
-            if (gj.contains("Input")) {
-                json current = m_input;
-                current.update(gj.at("Input"));
-                m_input = current.get<InputSettings>();
-            }
-            if (gj.contains("Audio")) {
-                json current = m_audio;
-                current.update(gj.at("Audio"));
-                m_audio = current.get<AudioSettings>();
-            }
-            if (gj.contains("GPU")) {
-                json current = m_gpu;
-                current.update(gj.at("GPU"));
-                m_gpu = current.get<GPUSettings>();
-            }
-            if (gj.contains("Vulkan")) {
-                json current = m_vulkan;
-                current.update(gj.at("Vulkan"));
-                m_vulkan = current.get<VulkanSettings>();
-            }
-            if (gj.contains("Users"))
-                m_userManager.GetUsers() = gj.at("Users").get<Users>();
-        } else {
-            SetDefaultValues();
-            // ensure a default user exists
-            if (m_userManager.GetUsers().user.empty())
-                m_userManager.GetUsers().user = m_userManager.CreateDefaultUser();
-            Save();
+
+            return true;
         }
+        // If serial is provided, ONLY apply game-specific overrides
+        // WITHOUT reloading global settings!
+        else {
+            std::cout << "[EmulatorSettings] Applying game-specific overrides for: " << serial
+                      << std::endl;
 
-        // Load per-game overrides and apply
-        if (!serial.empty()) {
             const std::filesystem::path gamePath =
                 Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) / (serial + ".json");
-            if (!std::filesystem::exists(gamePath))
+
+            std::cout << "[EmulatorSettings] Game config path: " << gamePath << std::endl;
+
+            if (!std::filesystem::exists(gamePath)) {
+                std::cout << "[EmulatorSettings] No game-specific config found" << std::endl;
                 return false;
+            }
 
             std::ifstream in(gamePath);
-            if (!in.is_open())
+            if (!in.is_open()) {
+                std::cerr << "[EmulatorSettings] Failed to open game config file" << std::endl;
                 return false;
+            }
 
             json gj;
             in >> gj;
 
+            std::cout << "[EmulatorSettings] Game config JSON: " << gj.dump(2) << std::endl;
+
             std::vector<std::string> changed;
 
             if (gj.contains("General")) {
+                std::cout << "[EmulatorSettings] Applying General overrides" << std::endl;
                 ApplyGroupOverrides<GeneralSettings>(m_general, gj.at("General"), changed);
             }
             if (gj.contains("Debug")) {
+                std::cout << "[EmulatorSettings] Applying Debug overrides" << std::endl;
                 ApplyGroupOverrides<DebugSettings>(m_debug, gj.at("Debug"), changed);
             }
             if (gj.contains("Input")) {
+                std::cout << "[EmulatorSettings] Applying Input overrides" << std::endl;
                 ApplyGroupOverrides<InputSettings>(m_input, gj.at("Input"), changed);
             }
             if (gj.contains("Audio")) {
+                std::cout << "[EmulatorSettings] Applying Audio overrides" << std::endl;
                 ApplyGroupOverrides<AudioSettings>(m_audio, gj.at("Audio"), changed);
             }
             if (gj.contains("GPU")) {
+                std::cout << "[EmulatorSettings] Applying GPU overrides" << std::endl;
                 ApplyGroupOverrides<GPUSettings>(m_gpu, gj.at("GPU"), changed);
+
+                // Debug: Print specific GPU values
+                auto gpuJson = gj["GPU"];
+                if (gpuJson.contains("fsr_enabled")) {
+                    std::cout << "[EmulatorSettings] GPU/fsr_enabled JSON: "
+                              << gpuJson["fsr_enabled"].dump() << std::endl;
+                }
+                if (gpuJson.contains("rcas_enabled")) {
+                    std::cout << "[EmulatorSettings] GPU/rcas_enabled JSON: "
+                              << gpuJson["rcas_enabled"].dump() << std::endl;
+                }
             }
             if (gj.contains("Vulkan")) {
+                std::cout << "[EmulatorSettings] Applying Vulkan overrides" << std::endl;
                 ApplyGroupOverrides<VulkanSettings>(m_vulkan, gj.at("Vulkan"), changed);
             }
 
             PrintChangedSummary(changed);
+
+            // Debug: Print current values after applying overrides
+            std::cout << "[EmulatorSettings] After applying overrides:" << std::endl;
+            std::cout << "  FSR Enabled: " << IsFsrEnabled() << std::endl;
+            std::cout << "  RCAS Enabled: " << IsRcasEnabled() << std::endl;
+            std::cout << "  Volume: " << GetVolumeSlider() << std::endl;
+            std::cout << "  Show Splash: " << IsShowSplash() << std::endl;
+
             return true;
         }
-
-        return true;
     } catch (const std::exception& e) {
         std::cerr << "Error loading settings: " << e.what() << std::endl;
         return false;
     }
 }
-
 void EmulatorSettings::SetDefaultValues() {
     m_general = GeneralSettings{};
     m_debug = DebugSettings{};
@@ -357,4 +413,23 @@ void EmulatorSettings::SetDefaultValues() {
     m_audio = AudioSettings{};
     m_gpu = GPUSettings{};
     m_vulkan = VulkanSettings{};
+}
+
+std::vector<std::string> EmulatorSettings::GetAllOverrideableKeys() const {
+    std::vector<std::string> keys;
+
+    auto addKeys = [&keys](const std::vector<OverrideItem>& items) {
+        for (const auto& item : items) {
+            keys.push_back(item.key);
+        }
+    };
+
+    addKeys(m_general.GetOverrideableFields());
+    addKeys(m_debug.GetOverrideableFields());
+    addKeys(m_input.GetOverrideableFields());
+    addKeys(m_audio.GetOverrideableFields());
+    addKeys(m_gpu.GetOverrideableFields());
+    addKeys(m_vulkan.GetOverrideableFields());
+
+    return keys;
 }
