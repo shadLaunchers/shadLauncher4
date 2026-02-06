@@ -38,7 +38,6 @@ private:
     int m_tab_index = 0;
     std::unique_ptr<Ui::SettingsDialog> ui;
     std::shared_ptr<GUISettings> m_gui_settings;
-    std::shared_ptr<EmulatorSettings> m_emu_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
     bool m_custom_settings_from_global;
     GameInfo m_current_game;   // Add current game info
@@ -47,7 +46,9 @@ private:
     bool IsGlobal() {
         return (!m_custom_settings_from_global);
     }
-    // Backup original settings (for restoration)
+
+    std::shared_ptr<EmulatorSettings> m_game_specific_settings; 
+    std::shared_ptr<EmulatorSettings> m_emu_settings;          
     std::shared_ptr<EmulatorSettings> m_original_settings;
 
     // help texts

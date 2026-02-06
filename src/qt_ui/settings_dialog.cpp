@@ -73,12 +73,23 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
                                       QString::fromStdString(m_game_serial)));
         ui->customSettingsLabel->setVisible(true);
 
-        // Backup original global settings
-        m_original_settings = std::make_shared<EmulatorSettings>(*m_emu_settings);
+        // Backup original global settings BEFORE loading game overrides
+        m_original_settings = std::make_shared<EmulatorSettings>();
+        *m_original_settings = *m_emu_settings;
 
-        // Then apply any existing game-specific overrides on top
+        // Load game-specific overrides into the CURRENT settings object
         if (!m_game_serial.empty()) {
-            m_emu_settings->Load(m_game_serial); // This will apply overrides if they exist
+            // Create a fresh settings object for game-specific settings
+            m_game_specific_settings = std::make_shared<EmulatorSettings>();
+
+            // Load global settings first (as base)
+            m_game_specific_settings->Load("");
+
+            // Then apply game-specific overrides
+            m_game_specific_settings->Load(m_game_serial);
+
+            // Swap current settings to game-specific ones
+            m_emu_settings.swap(m_game_specific_settings);
         }
 
     }
@@ -663,11 +674,20 @@ void SettingsDialog::HandleButtonBox() {
         // APPLY: update backend (memory) and emit only if changed
         if (button == applyBtn) {
             bool changed = IsGameFoldersChanged();
+            ApplyValuesToBackend();
+
             if (changed) {
-                ApplyValuesToBackend();
                 emit GameFoldersChanged();
-            } else {
-                ApplyValuesToBackend();
+            }
+
+            if (!IsGlobal()) {
+                // Save game-specific overrides immediately
+                if (!m_emu_settings->Save(m_game_serial)) {
+                    QMessageBox::warning(this, tr("Error"), tr("Failed to save game settings."));
+                } else {
+                    QMessageBox::information(this, tr("Settings Applied"),
+                                             tr("Game-specific settings have been saved."));
+                }
             }
             return;
         }
@@ -675,40 +695,75 @@ void SettingsDialog::HandleButtonBox() {
         // SAVE: apply, emit if changed, then persist and close
         if (button == saveBtn) {
             bool changed = IsGameFoldersChanged();
+            ApplyValuesToBackend();
+
             if (changed) {
-                ApplyValuesToBackend();
                 emit GameFoldersChanged();
-            } else {
-                ApplyValuesToBackend();
             }
 
-            if (!m_emu_settings->Save()) {
-                QMessageBox::warning(this, tr("Error"), tr("Failed to save settings."));
-                return;
+            if (IsGlobal()) {
+                // Save global settings
+                if (!m_emu_settings->Save()) {
+                    QMessageBox::warning(this, tr("Error"), tr("Failed to save global settings."));
+                    return;
+                }
+            } else {
+                // Save game-specific overrides
+                if (!m_emu_settings->Save(m_game_serial)) {
+                    QMessageBox::warning(this, tr("Error"), tr("Failed to save game settings."));
+                    return;
+                }
             }
+
             close();
             return;
         }
 
-        if (button == restoreBtn) {
-            const auto reply = QMessageBox::question(
-                this, tr("Restore Defaults"),
-                tr("Are you sure you want to restore all settings to their default values?"),
-                QMessageBox::Yes | QMessageBox::No);
+                if (button == restoreBtn) {
+            QString message =
+                IsGlobal()
+                    ? tr("Are you sure you want to restore all settings to their default values?")
+                    : tr("Are you sure you want to restore all settings to global defaults?\n"
+                         "This will remove all game-specific overrides.");
+
+            const auto reply = QMessageBox::question(this, tr("Restore Defaults"), message,
+                                                     QMessageBox::Yes | QMessageBox::No);
 
             if (reply != QMessageBox::Yes)
                 return;
 
-            // Snapshot before defaults
-            const auto before = m_emu_settings->GetAllGameInstallDirs();
-            m_emu_settings->SetDefaultValues();
-            const auto after = m_emu_settings->GetAllGameInstallDirs();
+            if (IsGlobal()) {
+                // Snapshot before defaults
+                const auto before = m_emu_settings->GetAllGameInstallDirs();
+                m_emu_settings->SetDefaultValues();
+                const auto after = m_emu_settings->GetAllGameInstallDirs();
 
-            // Update UI to reflect defaults
-            LoadValuesFromConfig();
+                // Update UI to reflect defaults
+                LoadValuesFromConfig();
 
-            if (before != after) {
-                emit GameFoldersChanged();
+                if (before != after) {
+                    emit GameFoldersChanged();
+                }
+            } else {
+                // For game-specific: restore to global settings
+                if (m_original_settings) {
+                    // Restore from backup
+                    *m_emu_settings = *m_original_settings;
+
+                    // Delete game-specific config file
+                    if (!m_game_serial.empty()) {
+                        const auto gamePath =
+                            Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
+                            (m_game_serial + ".json");
+                        std::filesystem::remove(gamePath);
+                    }
+
+                    // Update UI
+                    LoadValuesFromConfig();
+
+                    QMessageBox::information(this, tr("Settings Restored"),
+                                             tr("Game settings restored to global defaults."));
+                }
             }
             return;
         }
