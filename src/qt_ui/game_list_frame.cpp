@@ -50,6 +50,7 @@
 #include <common/path_util.h>
 #include "cheats_patches_dialog.h"
 #include "core/ipc/ipc_client.h"
+#include "settings_dialog.h"
 #include "sfo_viewer_dialog.h"
 
 GameListFrame::GameListFrame(std::shared_ptr<GUISettings> gui_settings,
@@ -1401,6 +1402,10 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
 
     QMenu menu;
 
+    QAction* configure = menu.addAction(
+        gameinfo->has_custom_config ? tr("&Change Custom Configuration")
+                                    : tr("&Create Custom Configuration From Global Settings"));
+
     // this will work only for separate updates install (-UPDATE or -patch folders)
     const std::string update_path = current_game.update_path;
     if (!update_path.empty()) {
@@ -1714,6 +1719,22 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
             Refresh();
         }
     });
+    auto configure_dialog = [this, current_game, gameinfo](bool create_cfg_from_global_cfg) {
+        SettingsDialog dlg(m_gui_settings, m_emu_settings, m_ipc_client, 0, this, &current_game,
+                           create_cfg_from_global_cfg);
+
+        /*connect(&dlg, &settings_dialog::EmuSettingsApplied, [this, gameinfo]() {
+            if (!gameinfo->has_custom_config) {
+                gameinfo->has_custom_config = true;
+                m_game_list_frame->ShowCustomConfigIcon(gameinfo);
+            }
+            Q_EMIT m_game_list_frame->NotifyEmuSettingsChange();
+        });*/
+
+        dlg.exec();
+    };
+    connect(configure, &QAction::triggered, this,
+            [configure_dialog = std::move(configure_dialog)]() { configure_dialog(true); });
 
     menu.exec(global_pos);
 }

@@ -26,7 +26,7 @@ public:
                             std::shared_ptr<EmulatorSettings> emu_settings,
                             std::shared_ptr<IpcClient> ipc_client, int tab_index = 0,
                             QWidget* parent = nullptr, const GameInfo* game = nullptr,
-                            bool customFromGlobal = false, bool customFromDefault = false);
+                            bool customFromGlobal = false);
     ~SettingsDialog();
     void open() override;
 
@@ -41,12 +41,15 @@ private:
     std::shared_ptr<EmulatorSettings> m_emu_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
     bool m_custom_settings_from_global;
-    bool m_custom_settigns_from_default;
-    GameInfo m_current_game; // Add current game info
+    GameInfo m_current_game;   // Add current game info
+    std::string m_game_serial; // Game serial number
 
     bool IsGlobal() {
-        return (!m_custom_settings_from_global && !m_custom_settigns_from_default);
+        return (!m_custom_settings_from_global);
     }
+    // Backup original settings (for restoration)
+    std::shared_ptr<EmulatorSettings> m_original_settings;
+
     // help texts
     QString m_description;
     QHash<QObject*, QString> m_descriptions;
@@ -60,6 +63,9 @@ private:
     void HandleButtonBox();
     void ApplyValuesToBackend();
     void PopulateComboBoxes();
+    bool IsSettingOverrideable(const char* setting_key, const QString& setting_group) const;
+    void DisableNonOverrideableSettings();
+    void MapUIControls();
 
     const QMap<QString, HideCursorState> cursorStateMap = {{tr("Never"), HideCursorState::Never},
                                                            {tr("Idle"), HideCursorState::Idle},
@@ -84,4 +90,7 @@ private:
                                            {tr("Default Device"), "Default Device"}};
 
     const QMap<QString, QString> logTypeMap = {{tr("async"), "async"}, {tr("sync"), "sync"}};
+
+    // Map UI controls to their setting keys
+    QMap<QObject*, std::pair<const char*, QString>> m_uiSettingMap;
 };

@@ -49,17 +49,38 @@ inline bool operator!=(GameInstallDir const& a, GameInstallDir const& b) {
 SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
                                std::shared_ptr<EmulatorSettings> emu_settings,
                                std::shared_ptr<IpcClient> ipc_client, int tab_index,
-                               QWidget* parent, const GameInfo* game, bool customFromGlobal,
-                               bool customFromDefault)
+                               QWidget* parent, const GameInfo* game, bool customFromGlobal)
     : QDialog(parent), m_tab_index(tab_index), ui(new Ui::SettingsDialog),
       m_gui_settings(std::move(gui_settings)), m_emu_settings(std::move(emu_settings)),
-      m_ipc_client(ipc_client), m_custom_settings_from_global(customFromGlobal),
-      m_custom_settigns_from_default(customFromDefault) {
+      m_ipc_client(ipc_client), m_custom_settings_from_global(customFromGlobal) {
     ui->setupUi(this);
+
+    // Store game info if provided
+    if (game) {
+        m_current_game = *game;
+        m_game_serial = game->serial;
+    }
 
     if (IsGlobal()) {
         this->setWindowTitle(tr("Global Settings"));
         ui->customSettingsLabel->setVisible(false);
+        int index = ui->tabWidgetSettings->indexOf(ui->experimentalTab);
+        ui->tabWidgetSettings->setTabVisible(index, false);
+    } else if (m_custom_settings_from_global) {
+        // Custom settings mode starting from global settings
+        this->setWindowTitle(tr("Custom Settings for %1 [%2] (Based on Global)")
+                                 .arg(QString::fromStdString(m_current_game.name),
+                                      QString::fromStdString(m_game_serial)));
+        ui->customSettingsLabel->setVisible(true);
+
+        // Backup original global settings
+        m_original_settings = std::make_shared<EmulatorSettings>(*m_emu_settings);
+
+        // Then apply any existing game-specific overrides on top
+        if (!m_game_serial.empty()) {
+            m_emu_settings->Load(m_game_serial); // This will apply overrides if they exist
+        }
+
     }
 
     const SettingsDialogHelperTexts helptexts;
@@ -84,6 +105,13 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     PopulateComboBoxes();
     PathTabConnections();
     OtherConnections();
+
+    // Add override controls for custom settings modes
+    if (!IsGlobal()) {
+        MapUIControls();
+        DisableNonOverrideableSettings();
+    }
+
     LoadValuesFromConfig();
     HandleButtonBox();
 }
@@ -767,4 +795,201 @@ void SettingsDialog::PopulateComboBoxes() {
     ui->usbComboBox->addItem(tr("Skylander Portal"));
     ui->usbComboBox->addItem(tr("Infinity Base"));
     ui->usbComboBox->addItem(tr("Dimensions Toypad"));
+}
+
+bool SettingsDialog::IsSettingOverrideable(const char* setting_key,
+                                           const QString& setting_group) const {
+    // Check if the setting is in the overrideable list for the given group
+    if (setting_group == "General") {
+        for (const auto& item : m_emu_settings->GetGeneralOverrideableFields()) {
+            if (std::string(item.key) == setting_key) {
+                return true;
+            }
+        }
+    } else if (setting_group == "Debug") {
+        for (const auto& item : m_emu_settings->GetDebugOverrideableFields()) {
+            if (std::string(item.key) == setting_key) {
+                return true;
+            }
+        }
+    } else if (setting_group == "Input") {
+        for (const auto& item : m_emu_settings->GetInputOverrideableFields()) {
+            if (std::string(item.key) == setting_key) {
+                return true;
+            }
+        }
+    } else if (setting_group == "Audio") {
+        for (const auto& item : m_emu_settings->GetAudioOverrideableFields()) {
+            if (std::string(item.key) == setting_key) {
+                return true;
+            }
+        }
+    } else if (setting_group == "GPU") {
+        for (const auto& item : m_emu_settings->GetGPUOverrideableFields()) {
+            if (std::string(item.key) == setting_key) {
+                return true;
+            }
+        }
+    } else if (setting_group == "Vulkan") {
+        for (const auto& item : m_emu_settings->GetVulkanOverrideableFields()) {
+            if (std::string(item.key) == setting_key) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+void SettingsDialog::MapUIControls() {
+    // General Settings
+    m_uiSettingMap[ui->showSplashCheckBox] = {"show_splash", "General"};
+    m_uiSettingMap[ui->horizontalVolumeSlider] = {"volume_slider", "General"};
+    m_uiSettingMap[ui->disableTrophycheckBox] = {"trophy_popup_disabled", "General"};
+    m_uiSettingMap[ui->popUpDurationSpinBox] = {"trophy_notification_duration", "General"};
+    m_uiSettingMap[ui->radioButton_Top] = {"trophy_notification_side", "General"};
+    m_uiSettingMap[ui->radioButton_Left] = {"trophy_notification_side", "General"};
+    m_uiSettingMap[ui->radioButton_Right] = {"trophy_notification_side", "General"};
+    m_uiSettingMap[ui->radioButton_Bottom] = {"trophy_notification_side", "General"};
+    m_uiSettingMap[ui->showFpsCounterCheckBox] = {"show_fps_counter", "General"};
+    m_uiSettingMap[ui->discordRPCCheckbox] = {"discord_rpc_enabled", "General"};
+
+    // Audio Settings
+    m_uiSettingMap[ui->GenAudioComboBox] = {"main_output_device", "Audio"};
+    m_uiSettingMap[ui->DsAudioComboBox] = {"padSpk_output_device", "Audio"};
+    m_uiSettingMap[ui->micComboBox] = {"mic_device", "Audio"};
+
+    // GPU Settings
+    m_uiSettingMap[ui->graphicsAdapterBox] = {"gpu_id", "Vulkan"}; // Note: This is in Vulkan group
+    m_uiSettingMap[ui->nullGpuCheckBox] = {"null_gpu", "GPU"};
+    m_uiSettingMap[ui->heightSpinBox] = {"window_height", "GPU"};
+    m_uiSettingMap[ui->widthSpinBox] = {"window_width", "GPU"};
+    m_uiSettingMap[ui->enableHDRCheckBox] = {"hdr_allowed", "GPU"};
+    m_uiSettingMap[ui->FSRCheckBox] = {"fsr_enabled", "GPU"};
+    m_uiSettingMap[ui->RCASCheckBox] = {"rcas_enabled", "GPU"};
+    m_uiSettingMap[ui->RCASSlider] = {"rcas_attenuation", "GPU"};
+    m_uiSettingMap[ui->dumpShadersCheckBox] = {"dump_shaders", "GPU"};
+    m_uiSettingMap[ui->copyGPUBuffersCheckBox] = {"copy_gpu_buffers", "GPU"};
+    m_uiSettingMap[ui->displayModeComboBox] = {"full_screen_mode", "GPU"};
+    m_uiSettingMap[ui->presentModeComboBox] = {"present_mode", "GPU"};
+    m_uiSettingMap[ui->readbacksCheckBox] = {"readbacks_enabled", "GPU"};
+    m_uiSettingMap[ui->readbackLinearImagesCheckBox] = {"readback_linear_images_enabled", "GPU"};
+    m_uiSettingMap[ui->dmaCheckBox] = {"direct_memory_access_enabled", "GPU"};
+
+    // Input Settings
+    m_uiSettingMap[ui->hideCursorComboBox] = {"cursor_state", "Input"};
+    m_uiSettingMap[ui->idleTimeoutSpinBox] = {"cursor_hide_timeout", "Input"};
+    m_uiSettingMap[ui->usbComboBox] = {"usb_device_backend", "Input"};
+    m_uiSettingMap[ui->motionControlsCheckBox] = {"motion_controls_enabled", "Input"};
+    m_uiSettingMap[ui->backgroundControllerCheckBox] = {"background_controller_input", "Input"};
+
+    // Debug Settings
+    m_uiSettingMap[ui->separateLogFilesCheckbox] = {"separate_logging_enabled", "Debug"};
+    m_uiSettingMap[ui->debugDump] = {"debug_dump", "Debug"};
+    m_uiSettingMap[ui->collectShaderCheckBox] = {"shader_collect", "Debug"};
+    m_uiSettingMap[ui->enableLoggingCheckBox] = {"log_enabled", "Debug"};
+    m_uiSettingMap[ui->logFilterLineEdit] = {"log_filter", "General"};
+    m_uiSettingMap[ui->logTypeComboBox] = {"log_type", "General"};
+
+    // Vulkan Settings
+    m_uiSettingMap[ui->rdocCheckBox] = {"renderdoc_enabled", "Vulkan"};
+    m_uiSettingMap[ui->vkValidationCheckBox] = {"vkvalidation_enabled", "Vulkan"};
+    m_uiSettingMap[ui->vkCoreValidationCheckBox] = {"vkvalidation_core_enabled", "Vulkan"};
+    m_uiSettingMap[ui->vkSyncValidationCheckBox] = {"vkvalidation_sync_enabled", "Vulkan"};
+    m_uiSettingMap[ui->vkGpuValidationCheckBox] = {"vkvalidation_gpu_enabled", "Vulkan"};
+    m_uiSettingMap[ui->crashDiagnosticsCheckBox] = {"vkcrash_diagnostic_enabled", "Vulkan"};
+    m_uiSettingMap[ui->hostMarkersCheckBox] = {"vkhost_markers", "Vulkan"};
+    m_uiSettingMap[ui->guestMarkersCheckBox] = {"vkguest_markers", "Vulkan"};
+    m_uiSettingMap[ui->enableShaderCacheCheckBox] = {"pipeline_cache_enabled", "Vulkan"};
+    m_uiSettingMap[ui->archiveShaderCacheCheckBox] = {"pipeline_cache_archived", "Vulkan"};
+
+    // Experimental/Other Settings
+    m_uiSettingMap[ui->devkitCheckBox] = {"dev_kit_mode", "General"};
+    m_uiSettingMap[ui->neoCheckBox] = {"neo_mode", "General"};
+    m_uiSettingMap[ui->psnSignInCheckBox] = {"psn_signed_in", "General"};
+    m_uiSettingMap[ui->networkConnectedCheckBox] = {"connected_to_network", "General"};
+    m_uiSettingMap[ui->dmemSpinBox] = {"extra_dmem_in_mbytes", "General"};
+    m_uiSettingMap[ui->vblankSpinBox] = {"vblank_frequency", "GPU"};
+}
+
+void SettingsDialog::DisableNonOverrideableSettings() {
+    if (m_game_serial.empty()) {
+        // Global settings dialog - don't disable anything
+        return;
+    }
+
+    // For game-specific settings dialog, disable non-overrideable controls
+    for (auto it = m_uiSettingMap.begin(); it != m_uiSettingMap.end(); ++it) {
+        QObject* control = it.key();
+        const char* setting_key = it.value().first;
+        const QString& setting_group = it.value().second;
+
+        if (!IsSettingOverrideable(setting_key, setting_group)) {
+            QWidget* widget = qobject_cast<QWidget*>(control);
+            if (widget) {
+                widget->setEnabled(false);
+                widget->setToolTip(tr("This setting cannot be overridden per-game. "
+                                      "Use global settings to change it."));
+
+                // For checkboxes and comboboxes, also set visual cue
+                QCheckBox* checkbox = qobject_cast<QCheckBox*>(control);
+                if (checkbox) {
+                    checkbox->setStyleSheet("QCheckBox:disabled { color: gray; }");
+                }
+
+                QComboBox* combo = qobject_cast<QComboBox*>(control);
+                if (combo) {
+                    combo->setStyleSheet("QComboBox:disabled { color: gray; }");
+                }
+
+                QSpinBox* spin = qobject_cast<QSpinBox*>(control);
+                if (spin) {
+                    spin->setStyleSheet("QSpinBox:disabled { color: gray; }");
+                }
+
+                QSlider* slider = qobject_cast<QSlider*>(control);
+                if (slider) {
+                    slider->setStyleSheet("QSlider:disabled { color: gray; }");
+                }
+            }
+        }
+    }
+
+    // Special handling for controls not directly mapped
+    // GUI-only controls (not in emulator settings)
+    QList<QObject*> guiOnlyControls = {ui->playBGMCheckBox,
+                                       ui->BGMVolumeSlider,
+                                       ui->showBackgroundImageCheckBox,
+                                       ui->backgroundImageOpacitySlider,
+                                       ui->checkCompatibilityOnStartupCheckBox,
+                                       ui->updaterCheckBox,
+                                       ui->changelogCheckBox,
+                                       ui->separateUpdateCheckBox,
+                                       ui->ScanDepthComboBox};
+
+    for (QObject* control : guiOnlyControls) {
+        QWidget* widget = qobject_cast<QWidget*>(control);
+        if (widget) {
+            widget->setEnabled(false);
+            widget->setToolTip(tr("GUI-only settings cannot be overridden per-game. "
+                                  "Use global settings to change them."));
+        }
+    }
+
+    // Path controls (always global)
+    QList<QObject*> pathControls = {
+        ui->gameFoldersListWidget, ui->addFolderButton,       ui->removeFolderButton,
+        ui->currentDLCFolder,      ui->browseDLCButton,       ui->currentHomePath,
+        ui->browseHomeButton,      ui->currentSysmodulesPath, ui->browseSysmodulesButton,
+        ui->gameFoldersGroupBox,   ui->dlcFolderGroupBox,     ui->homeGroupBox,
+        ui->sysmodulesGroupBox};
+
+    for (QObject* control : pathControls) {
+        QWidget* widget = qobject_cast<QWidget*>(control);
+        if (widget) {
+            widget->setEnabled(false);
+            widget->setToolTip(tr("Path settings cannot be overridden per-game. "
+                                  "Use global settings to change them."));
+        }
+    }
 }
