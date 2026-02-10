@@ -11,7 +11,11 @@ git fetch --tags --force
 latest_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "0.0.0")
 
 # Count commits since the latest tag
-commit_count=$(git rev-list "${latest_tag}"..HEAD --count)
+if git rev-parse "$latest_tag" >/dev/null 2>&1; then
+  commit_count=$(git rev-list "${latest_tag}..HEAD" --count)
+else
+  commit_count=$(git rev-list HEAD --count)
+fi
 
 # Short hash and date
 short_hash=$(git rev-parse --short HEAD)
