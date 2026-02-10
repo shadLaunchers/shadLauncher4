@@ -162,7 +162,7 @@ jobs:
       - name: Create pre-release
         uses: ncipollo/release-action@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.SHADPS4_TOKEN_REPO }}
           name: Pre-release-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
           tag: Pre-release-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.fullhash }}
           prerelease: true
@@ -170,17 +170,17 @@ jobs:
 
       - name: Get current pre-release date
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHADPS4_TOKEN_REPO: ${{ secrets.SHADPS4_TOKEN_REPO }}
         run: |
-          releases=$(curl -s -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/${{ github.repository }}/releases)
+          releases=$(curl -s -H "Authorization: token $SHADPS4_TOKEN_REPO" https://api.github.com/repos/${{ github.repository }}/releases)
           current=$(echo "$releases" | jq -r '.[] | select(.prerelease==true) | .published_at' | sort -r | head -n1)
           echo "CURRENT_PUBLISHED_AT=$current" >> $GITHUB_ENV
 
       - name: Delete old pre-releases and tags
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHADPS4_TOKEN_REPO: ${{ secrets.SHADPS4_TOKEN_REPO }}
         run: |
-          releases=$(curl -s -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/${{ github.repository }}/releases)
+          releases=$(curl -s -H "Authorization: token $SHADPS4_TOKEN_REPO" https://api.github.com/repos/${{ github.repository }}/releases)
           current_ts=$(date -d "$CURRENT_PUBLISHED_AT" +%s)
 
           echo "$releases" | jq -c '.[] | select(.prerelease==true)' | while read r; do
@@ -188,7 +188,7 @@ jobs:
             if [ "$release_ts" -lt "$current_ts" ]; then
               id=$(echo $r | jq -r .id)
               tag=$(echo $r | jq -r .tag_name)
-              curl -X DELETE -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/${{ github.repository }}/releases/$id
-              curl -X DELETE -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/${{ github.repository }}/git/refs/tags/$tag
+              curl -X DELETE -H "Authorization: token $SHADPS4_TOKEN_REPO" https://api.github.com/repos/${{ github.repository }}/releases/$id
+              curl -X DELETE -H "Authorization: token $SHADPS4_TOKEN_REPO" https://api.github.com/repos/${{ github.repository }}/git/refs/tags/$tag
             fi
           done
