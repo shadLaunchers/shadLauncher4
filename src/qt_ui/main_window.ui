@@ -163,7 +163,7 @@
      <x>0</x>
      <y>0</y>
      <width>1058</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <property name="contextMenuPolicy">
@@ -255,6 +255,7 @@
     <addaction name="separator"/>
     <addaction name="separator"/>
     <addaction name="aboutAct"/>
+    <addaction name="updaterAct"/>
    </widget>
    <widget class="QMenu" name="languageMenu">
     <property name="title">
@@ -391,6 +392,9 @@
    </property>
   </action>
   <action name="aboutAct">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::HelpAbout"/>
+   </property>
    <property name="text">
     <string>About shadLauncher4</string>
    </property>
@@ -725,6 +729,14 @@
   <action name="actionConfigure_Hotkeys">
    <property name="text">
     <string>Configure Hotkeys</string>
+   </property>
+  </action>
+  <action name="updaterAct">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::GoDown"/>
+   </property>
+   <property name="text">
+    <string>Check for Updates</string>
    </property>
   </action>
  </widget>

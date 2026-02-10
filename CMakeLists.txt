@@ -243,6 +243,8 @@ set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/hotkeys.ui
           src/qt_ui/sdl_event_wrapper.cpp
           src/qt_ui/sdl_event_wrapper.h
+          src/qt_ui/check_update.cpp
+          src/qt_ui/check_update.h
 )
 
 set(SOURCES ${COMMON} ${CORE} ${QT_UI} ${FILEFORMAT} ${LIBRARIES} ${TRANSLATIONS} src/game_info.h src/main.cpp)
