@@ -324,199 +324,199 @@
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation type="unfinished">L1 and L2</translation>
+      <translation>L1 і L2</translation>
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Мертва зона лівого стіку</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>Мінімальна мертва зона (тип.:2 макс.:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>Максимальна мертва зона (тип.:127 макс.:127)</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Лівий стік</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>Вибір конфігурації</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>Загальна конфігурація</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation type="unfinished">Use per-game configs</translation>
+      <translation>Використовувати ігрові конфігурації</translation>
     </message>
     <message>
       <source>Active Gamepad</source>
-      <translation type="unfinished">Active Gamepad</translation>
+      <translation>Активний контролер</translation>
     </message>
     <message>
       <source>Gamepad ID</source>
-      <translation type="unfinished">Gamepad ID</translation>
+      <translation>ID контролера</translation>
     </message>
     <message>
       <source>Default Gamepad</source>
-      <translation type="unfinished">Default Gamepad</translation>
+      <translation>Стандартний контролер</translation>
     </message>
     <message>
       <source>No default selected</source>
-      <translation type="unfinished">No default selected</translation>
+      <translation>Стандартний не вибрано</translation>
     </message>
     <message>
       <source>n/a</source>
-      <translation type="unfinished">n/a</translation>
+      <translation>н/д</translation>
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation type="unfinished">Set Active Gamepad as Default</translation>
+      <translation>Встановити активним стандартним контролером</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation type="unfinished">Remove Default Gamepad</translation>
+      <translation>Видалити стандартний контролер</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>Параметри</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Ліва сторона сенсору</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Середина сенсору</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Права сторона сенсору</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
-      <translation type="unfinished">Color Adjustment</translation>
+      <translation>Налаштування кольору</translation>
     </message>
     <message>
       <source>RED</source>
-      <translation type="unfinished">RED</translation>
+      <translation>ЧЕРВОНИЙ</translation>
     </message>
     <message>
       <source>GREEN</source>
-      <translation type="unfinished">GREEN</translation>
+      <translation>ЗЕЛЕНИЙ</translation>
     </message>
     <message>
       <source>BLUE</source>
-      <translation type="unfinished">BLUE</translation>
+      <translation>СИНІЙ</translation>
     </message>
     <message>
       <source>Override Lightbar Color</source>
-      <translation type="unfinished">Override Lightbar Color</translation>
+      <translation>Змінити колір підсвічування</translation>
     </message>
     <message>
       <source>Override Color</source>
-      <translation type="unfinished">Override Color</translation>
+      <translation>Змінити колір</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>Лицьові кнопки</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Трикутник</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>Квадрат</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>Коло</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>Хрест</translation>
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation type="unfinished">R1 and R2</translation>
+      <translation>R1 і R2</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Мертва зона правого стіку</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>Правий стік</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Підказка: скасувати прив'язку введення можна правою кнопкою миші</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Зберегти</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Застосувати</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Відновити до типових</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Скасувати</translation>
     </message>
     <message>
       <source>ID: </source>
-      <translation type="unfinished">ID: </translation>
+      <translation>ID: </translation>
     </message>
     <message>
       <source>Default Controller Selected</source>
-      <translation type="unfinished">Default Controller Selected</translation>
+      <translation>Вибрано стандартний контролер</translation>
     </message>
     <message>
       <source>Active controller set as default</source>
-      <translation type="unfinished">Active controller set as default</translation>
+      <translation>Активний контролер встановлено як стандартний</translation>
     </message>
     <message>
       <source>Default Controller Removed</source>
-      <translation type="unfinished">Default Controller Removed</translation>
+      <translation>Видалено стандартний контролер</translation>
     </message>
     <message>
       <source>Default controller setting removed</source>
-      <translation type="unfinished">Default controller setting removed</translation>
+      <translation>Стандартні налаштування контролера видалено</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Не вдалося зберегти</translation>
     </message>
     <message>
       <source>Cannot bind axis values more than once</source>
-      <translation type="unfinished">Cannot bind axis values more than once</translation>
+      <translation>Неможливо прив’язати значення осей більше одного разу</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Неможливо призначити одну й ту саму дію більше одного разу. Дублікати введення призначені для наступних кнопок:
 
 %1</translation>
     </message>
     <message>
       <source>Press a button</source>
-      <translation type="unfinished">Press a button</translation>
+      <translation>Натисніть кнопку</translation>
     </message>
     <message>
       <source>Move analog stick</source>
-      <translation type="unfinished">Move analog stick</translation>
+      <translation>Посунути аналоговий стік</translation>
     </message>
   </context>
   <context>
@@ -731,47 +731,47 @@ Please enter your keys and save them.</source>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
-      <translation type="unfinished">Edit Keyboard + Mouse and Controller input bindings</translation>
+      <translation>Редагування призначення клавіш для клавіатури + миші та контролера</translation>
     </message>
     <message>
       <source>Use Per-Game configs</source>
-      <translation type="unfinished">Use Per-Game configs</translation>
+      <translation>Використовувати ігрові конфігурації</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>Could not open the file for reading</source>
-      <translation type="unfinished">Could not open the file for reading</translation>
+      <translation>Не вдалося відкрити файл для читання</translation>
     </message>
     <message>
       <source>Could not open the file for writing</source>
-      <translation type="unfinished">Could not open the file for writing</translation>
+      <translation>Не вдалось відкрити файл для запису</translation>
     </message>
     <message>
       <source>Save Changes</source>
-      <translation type="unfinished">Save Changes</translation>
+      <translation>Зберегти зміни</translation>
     </message>
     <message>
       <source>Do you want to save changes?</source>
-      <translation type="unfinished">Do you want to save changes?</translation>
+      <translation>Бажаєте зберегти зміни?</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Допомога</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation type="unfinished">Do you want to reset your custom default config to the original default config?</translation>
+      <translation>Бажаєте скинути свої типові налаштування до початкової конфігурації?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
-      <translation type="unfinished">Do you want to reset this config to your custom default config?</translation>
+      <translation>Бажаєте скинути ці налаштування до вашої типової конфігурації?</translation>
     </message>
     <message>
       <source>Reset to Default</source>
-      <translation type="unfinished">Reset to Default</translation>
+      <translation>Відновити до типових</translation>
     </message>
   </context>
   <context>
@@ -1130,111 +1130,111 @@ Using local database.
     </message>
     <message>
       <source>Game</source>
-      <translation type="unfinished">Game</translation>
+      <translation>Гра</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>This game has no update to delete!</source>
-      <translation type="unfinished">This game has no update to delete!</translation>
+      <translation>Ця гра не має оновлень для видалення!</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Оновитися</translation>
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation type="unfinished">This game has no DLC to delete!</translation>
+      <translation>Ця гра не має доповнень для видалення!</translation>
     </message>
     <message>
       <source>DLC</source>
-      <translation type="unfinished">DLC</translation>
+      <translation>Доповнення</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
-      <translation type="unfinished">This game has no save data to delete!</translation>
+      <translation>Ця гра не містить збережень, які можна видалити!</translation>
     </message>
     <message>
       <source>Save Data</source>
-      <translation type="unfinished">Save Data</translation>
+      <translation>Зберегти дані</translation>
     </message>
     <message>
       <source>This game has no Shader Cache to delete!</source>
-      <translation type="unfinished">This game has no Shader Cache to delete!</translation>
+      <translation>У цій грі немає кешу шейдерів для видалення!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Кеш шейдерів</translation>
     </message>
     <message>
       <source>Shader cache deleted successfully.</source>
-      <translation type="unfinished">Shader cache deleted successfully.</translation>
+      <translation>Кеш шейдерів успішно видалено.</translation>
     </message>
     <message>
       <source>Delete %1</source>
-      <translation type="unfinished">Delete %1</translation>
+      <translation>Видалити %1</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s %2 directory?</translation>
+      <translation>Упевнені, що хочете видалити %1 з теки %2?</translation>
     </message>
     <message>
       <source>&amp;Delete...</source>
-      <translation type="unfinished">&amp;Delete...</translation>
+      <translation>&amp;Видалення...</translation>
     </message>
     <message>
       <source>&amp;Delete Game</source>
-      <translation type="unfinished">&amp;Delete Game</translation>
+      <translation>&amp;Видалити гру</translation>
     </message>
     <message>
       <source>&amp;Delete Update</source>
-      <translation type="unfinished">&amp;Delete Update</translation>
+      <translation>&amp;Видалити оновлення</translation>
     </message>
     <message>
       <source>&amp;Delete Save Data</source>
-      <translation type="unfinished">&amp;Delete Save Data</translation>
+      <translation>&amp;Видалити збереження</translation>
     </message>
     <message>
       <source>&amp;Delete DLC </source>
-      <translation type="unfinished">&amp;Delete DLC </translation>
+      <translation>&amp;Видалити доповнення </translation>
     </message>
     <message>
       <source>&amp;Delete Trophy</source>
-      <translation type="unfinished">&amp;Delete Trophy</translation>
+      <translation>&amp;Видалити трофей</translation>
     </message>
     <message>
       <source>&amp;Delete Shader Cache</source>
-      <translation type="unfinished">&amp;Delete Shader Cache</translation>
+      <translation>&amp;Видалити кеш шейдерів</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Ігровий журнал</translation>
     </message>
     <message>
       <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
-      <translation type="unfinished">The log is invalid, it either doesn&apos;t exist or log filters were used.</translation>
+      <translation>Журнал недійсний: він або не існує, або були використані фільтри журналів.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Не вдалося надіслати звіт, оскільки останній журнал гри не пройшов наступну перевірку, і тому вважатиметься недійсним звітом:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Гаразд</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Інформація</translation>
     </message>
     <message>
       <source>&amp;Change Custom Configuration</source>
-      <translation type="unfinished">&amp;Change Custom Configuration</translation>
+      <translation>&amp;Змінити користувацьку конфігурацію</translation>
     </message>
     <message>
       <source>&amp;Create Custom Configuration From Global Settings</source>
-      <translation type="unfinished">&amp;Create Custom Configuration From Global Settings</translation>
+      <translation>&amp;Створити користувацьку конфігурацію із глобальними налаштуваннями</translation>
     </message>
   </context>
   <context>
@@ -1287,122 +1287,122 @@ Using local database.
     <name>HelpDialog</name>
     <message>
       <source>Quickstart</source>
-      <translation type="unfinished">Quickstart</translation>
+      <translation>Швидкий старт</translation>
     </message>
     <message>
       <source>Syntax</source>
-      <translation type="unfinished">Syntax</translation>
+      <translation>Синтаксис</translation>
     </message>
     <message>
       <source>Keybindings</source>
-      <translation type="unfinished">Keybindings</translation>
+      <translation>Призначення клавіш</translation>
     </message>
     <message>
       <source>Special Bindings</source>
-      <translation type="unfinished">Special Bindings</translation>
+      <translation>Спеціальні прив'язки</translation>
     </message>
     <message>
       <source>FAQ</source>
-      <translation type="unfinished">FAQ</translation>
+      <translation>ЧаПи</translation>
     </message>
   </context>
   <context>
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation type="unfinished">Customize Hotkeys</translation>
+      <translation>Персоналізувати гарячі клавіші</translation>
     </message>
     <message>
       <source>Controller Hotkeys</source>
-      <translation type="unfinished">Controller Hotkeys</translation>
+      <translation>Гарячі клавіші контролера</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
-      <translation type="unfinished">Show FPS Counter</translation>
+      <translation>Показати лічильник к / с</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>не призначено</translation>
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation type="unfinished">Quit Emulation</translation>
+      <translation>Завершити емуляцію</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>Перезавантажити призначення кнопок</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
-      <translation type="unfinished">Toggle Fullscreen</translation>
+      <translation>Увімк. / Вимк. повний екран</translation>
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation type="unfinished">Toggle Pause</translation>
+      <translation>Відтворення / Пауза</translation>
     </message>
     <message>
       <source>Keyboard Hotkeys</source>
-      <translation type="unfinished">Keyboard Hotkeys</translation>
+      <translation>Гарячі клавіші</translation>
     </message>
     <message>
       <source>Renderdoc Capture (for debugging only)</source>
-      <translation type="unfinished">Renderdoc Capture (for debugging only)</translation>
+      <translation>Захоплення Renderdoc (лише для налагодження)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>Перемкнути мишу в емуляцію джойстика</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>Перемкнути мишу в емуляцію гіроскопа</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation type="unfinished">Tip: Up to three simultaneous inputs can be assigned for each hotkey</translation>
+      <translation>Підказка: для кожної гарячої клавіші можна призначити до трьох одночасних введень</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Підказка: відв’язати введення можна правою кнопкою миші</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Зберегти</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Застосувати</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Скасувати</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Відновити до типових</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Не вдалося зберегти</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Неможливо призначити одну й ту саму дію більше одного разу. Дублікати введення призначені для наступних кнопок:
 
 %1</translation>
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation type="unfinished">Waiting for inputs</translation>
+      <translation>Очікування на введення</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Збільшити гучність</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Зменшити гучність</translation>
     </message>
   </context>
   <context>
@@ -1416,119 +1416,119 @@ Using local database.
     <name>KBMSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation type="unfinished">Configure Controls</translation>
+      <translation>Налаштування керування</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>Хрестовина</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Вгору</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>не назначено</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Ліворуч</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Праворуч</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>Вниз</translation>
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation type="unfinished">Left Analog Halfmode</translation>
+      <translation>Напіврежим лівого аналогового стіку</translation>
     </message>
     <message>
       <source>hold to move left stick at half-speed</source>
-      <translation type="unfinished">hold to move left stick at half-speed</translation>
+      <translation>утримуйте щоб рухати лівий стік в половину швидкості</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Лівий стік</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>Вибір конфігурації</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>Загальна конфігурація</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation type="unfinished">Use per-game configs</translation>
+      <translation>Використовувати ігрові конфігурації</translation>
     </message>
     <message>
       <source>Copy from Common Config</source>
-      <translation type="unfinished">Copy from Common Config</translation>
+      <translation>Копіювати із Загальної конфігурації</translation>
     </message>
     <message>
       <source>Text Editor</source>
-      <translation type="unfinished">Text Editor</translation>
+      <translation>Текстовий редактор</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Допомога</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>Параметри</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Ліва сторона сенсору</translation>
     </message>
     <message>
       <source>Mouse to Joystick</source>
-      <translation type="unfinished">Mouse to Joystick</translation>
+      <translation>Миша в джойстик</translation>
     </message>
     <message>
       <source>*press F7 ingame to activate</source>
-      <translation type="unfinished">*press F7 ingame to activate</translation>
+      <translation>*натисніть F7 у грі для ввімкнення</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Середина сенсору</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Права сторона сенсору</translation>
     </message>
     <message>
       <source>Mouse Movement Parameters</source>
-      <translation type="unfinished">Mouse Movement Parameters</translation>
+      <translation>Параметри руху миші</translation>
     </message>
     <message>
       <source>Deadzone Offset (def 0.50):</source>
-      <translation type="unfinished">Deadzone Offset (def 0.50):</translation>
+      <translation>Зміщення мертвої зони (тип. 0,50):</translation>
     </message>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
-      <translation type="unfinished">Speed Multiplier (def 1.0):</translation>
+      <translation>Модифікатор швидкості (тип. 1,0):</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
-      <translation type="unfinished">Speed Offset (def 0.125):</translation>
+      <translation>Зміщення швидкості (тип. 0,125):</translation>
     </message>
     <message>
       <source>note: click Help Button/Special Keybindings for more information</source>
-      <translation type="unfinished">note: click Help Button/Special Keybindings for more information</translation>
+      <translation>примітка: натисніть кнопку Допомога / Спеціальне призначення клавіш для отримання додаткової інформації</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>Лицьові кнопки</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Трикутник</translation>
     </message>
     <message>
       <source>Square</source>
@@ -3116,23 +3116,23 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Settings Restored</source>
-      <translation type="unfinished">Settings Restored</translation>
+      <translation>Налаштування відновлено</translation>
     </message>
     <message>
       <source>Game settings restored to global defaults.</source>
-      <translation type="unfinished">Game settings restored to global defaults.</translation>
+      <translation>Налаштування гри відновлено до глобальних типових.</translation>
     </message>
     <message>
       <source>This setting cannot be overridden per-game. Use global settings to change it.</source>
-      <translation type="unfinished">This setting cannot be overridden per-game. Use global settings to change it.</translation>
+      <translation>Цей параметр не може бути перевизначений для кожної гри. Використовуйте глобальні налаштування для зміни.</translation>
     </message>
     <message>
       <source>GUI-only settings cannot be overridden per-game. Use global settings to change them.</source>
-      <translation type="unfinished">GUI-only settings cannot be overridden per-game. Use global settings to change them.</translation>
+      <translation>Налаштування, доступні лише через графічний інтерфейс, неможливо перевизначити для окремих ігор. Використовуйте глобальні налаштування, щоб змінити їх.</translation>
     </message>
     <message>
       <source>Path settings cannot be overridden per-game. Use global settings to change them.</source>
-      <translation type="unfinished">Path settings cannot be overridden per-game. Use global settings to change them.</translation>
+      <translation>Налаштування шляхів не можна змінити для окремих ігор. Використовуйте глобальні налаштування, щоб змінити їх.</translation>
     </message>
   </context>
   <context>
@@ -3523,83 +3523,83 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Executable (*)</source>
-      <translation type="unfinished">Executable (*)</translation>
+      <translation>Виконуваний файл (*)</translation>
     </message>
     <message>
       <source>Executable (*.*)</source>
-      <translation type="unfinished">Executable (*.*)</translation>
+      <translation>Виконуваний файл (*.*)</translation>
     </message>
     <message>
       <source>Version install path is not configured.</source>
-      <translation type="unfinished">Version install path is not configured.</translation>
+      <translation>Шлях встановлення версії не налаштований.</translation>
     </message>
     <message>
       <source>Failed to copy executable into versions folder.</source>
-      <translation type="unfinished">Failed to copy executable into versions folder.</translation>
+      <translation>Не вдалося скопіювати виконуваний файл у теку версій.</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Попередження</translation>
     </message>
     <message>
       <source>Failed to install executable into application directory.
 The custom build is still available under:
 %1</source>
-      <translation type="unfinished">Failed to install executable into application directory.
-The custom build is still available under:
+      <translation>Не вдалося встановити виконуваний файл у каталог застосунку.
+Спеціальна збірка все ще доступна за шляхом:
 %1</translation>
     </message>
     <message>
       <source>Could not find executable in extracted files.</source>
-      <translation type="unfinished">Could not find executable in extracted files.</translation>
+      <translation>Не вдалося знайти виконуваний файл у витягнутих файлах.</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.
 The version has been saved to: %1</source>
-      <translation type="unfinished">Failed to copy executable to application directory.
-The version has been saved to: %1</translation>
+      <translation>Не вдалося скопіювати виконуваний файл до каталогу застосунку.
+Версію було збережено за шляхом: %1</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.
 The pre-release version has been saved to: %1</source>
-      <translation type="unfinished">Failed to copy executable to application directory.
-The pre-release version has been saved to: %1</translation>
+      <translation>Не вдалося скопіювати виконуваний файл до каталогу застосунку.
+Попередню версію було збережено за шляхом: %1</translation>
     </message>
     <message>
       <source>Custom version installed successfully:</source>
-      <translation type="unfinished">Custom version installed successfully:</translation>
+      <translation>Користувацьку версію успішно встановлено:</translation>
     </message>
     <message>
       <source>1. Version folder:</source>
-      <translation type="unfinished">1. Version folder:</translation>
+      <translation>1. Версія теки:</translation>
     </message>
     <message>
       <source>2. Installed to:</source>
-      <translation type="unfinished">2. Installed to:</translation>
+      <translation>2. Встановлено до:</translation>
     </message>
     <message>
       <source>ZIP extraction failed:</source>
-      <translation type="unfinished">ZIP extraction failed:</translation>
+      <translation>Не вдалося витягнути ZIP:</translation>
     </message>
     <message>
       <source>Executable not found in extracted files.</source>
-      <translation type="unfinished">Executable not found in extracted files.</translation>
+      <translation>Виконуваний файл не знайдено у витягнутих файлах.</translation>
     </message>
     <message>
       <source>Version %1 has been:</source>
-      <translation type="unfinished">Version %1 has been:</translation>
+      <translation>Версію %1 було:</translation>
     </message>
     <message>
       <source>1. Downloaded to:</source>
-      <translation type="unfinished">1. Downloaded to:</translation>
+      <translation>1. Завантажено до:</translation>
     </message>
     <message>
       <source>Extraction failure:</source>
-      <translation type="unfinished">Extraction failure:</translation>
+      <translation>Помилка видобування:</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) has been:</source>
-      <translation type="unfinished">Pre-release (Nightly) has been:</translation>
+      <translation>Попередній реліз (Нічний) був:</translation>
     </message>
   </context>
 </TS>
