@@ -1274,6 +1274,22 @@ void GameListFrame::OnCompatFinished() {
     Refresh();
 }
 
+bool GameListFrame::RemoveCustomConfiguration(const QString& serial, const game_info& game) {
+    const auto path = Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
+                      (serial + ".json").toStdString();
+
+    std::error_code ec;
+    bool result = std::filesystem::remove(path, ec);
+
+    if (result && game) {
+        game->has_custom_config = false;
+    } else if (ec && ec.value() != ENOENT) {
+        result = false;
+    }
+
+    return result;
+}
+
 void GameListFrame::ShowContextMenu(const QPoint& pos) {
     QPoint global_pos;
     game_info gameinfo;
@@ -1622,8 +1638,17 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
             [serial] { QApplication::clipboard()->setText(serial); });
 
     // Delete Menu Actions
+
     connect(delete_game, &QAction::triggered, this, [=] { deleteHandler(DeleteType::Game); });
     connect(delete_update, &QAction::triggered, this, [=] { deleteHandler(DeleteType::Update); });
+    if (gameinfo->has_custom_config) {
+        QAction* remove_custom_config = delete_menu->addAction(tr("&Remove Custom Configuration"));
+        connect(remove_custom_config, &QAction::triggered, this, [this, serial, gameinfo]() {
+            if (RemoveCustomConfiguration(serial, gameinfo)) {
+                ShowCustomConfigIcon(gameinfo);
+            }
+        });
+    }
     connect(delete_save_data, &QAction::triggered, this,
             [=] { deleteHandler(DeleteType::SaveData); });
     connect(delete_DLC, &QAction::triggered, this, [=] { deleteHandler(DeleteType::DLC); });

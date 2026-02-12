@@ -61,6 +61,7 @@ public:
     const std::vector<game_info>& GetGameInfo() const;
     void CheckCompatibilityAtStartup();
     void PlayBackgroundMusic(game_info game);
+    bool RemoveCustomConfiguration(const QString& serial, const game_info& game);
 
     QImage backgroundImage;
 public Q_SLOTS:
