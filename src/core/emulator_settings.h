@@ -259,6 +259,7 @@ struct GPUSettings {
                                        &GPUSettings::readback_linear_images_enabled),
             make_override<GPUSettings>("direct_memory_access_enabled",
                                        &GPUSettings::direct_memory_access_enabled),
+            make_override<GPUSettings>("vblank_frequency", &GPUSettings::vblank_frequency),
         };
     }
 };
