@@ -39,6 +39,7 @@ path = [
     "src/images/hotkey.png",
     "src/images/keyboard_icon.png",
     "src/images/ps4_controller.png",
+    "src/images/custom_config.png",
     "src/qt_ui/settings_dialog.ui",
     "src/qt_ui/game_install_dialog.ui",
     "src/qt_ui/cheats_patches_dialog.ui",

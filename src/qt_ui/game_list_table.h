@@ -26,7 +26,7 @@ public:
 
     void sort(u64 game_count, int sort_column, Qt::SortOrder col_sort_order);
 
-    void setCustomConfigIcon(const game_info& game);
+    void SetCustomConfigIcon(const game_info& game);
 
     void Populate(const std::vector<game_info>& game_data,
                   const std::map<QString, QString>& notes_map,

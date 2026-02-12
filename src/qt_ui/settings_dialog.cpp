@@ -726,6 +726,7 @@ void SettingsDialog::HandleButtonBox() {
             }
 
             close();
+            Q_EMIT EmuSettingsApplied();
             return;
         }
 
@@ -775,12 +776,14 @@ void SettingsDialog::HandleButtonBox() {
                                              tr("Game settings restored to global defaults."));
                 }
             }
+            Q_EMIT EmuSettingsApplied();
             return;
         }
 
         // CLOSE
         if (button == closeBtn) {
             close();
+            Q_EMIT EmuSettingsApplied();
             return;
         }
     });

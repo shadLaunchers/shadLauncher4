@@ -33,6 +33,7 @@ public:
 signals:
     void GameFoldersChanged();
     void CompatUpdateRequested();
+    void EmuSettingsApplied();
 
 private:
     int m_tab_index = 0;

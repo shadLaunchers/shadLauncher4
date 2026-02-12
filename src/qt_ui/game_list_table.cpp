@@ -171,7 +171,7 @@ void GameListTable::sort(u64 game_count, int sort_column, Qt::SortOrder col_sort
     resizeColumnToContents(static_cast<int>(GUI::GameListColumns::count) - 1);
 }
 
-void GameListTable::setCustomConfigIcon(const game_info& game) {
+void GameListTable::SetCustomConfigIcon(const game_info& game) {
     if (!game) {
         return;
     }
