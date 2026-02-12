@@ -76,6 +76,7 @@ bool ParseFilterRule(Filter& instance, Iterator begin, Iterator end) {
     CLS(Tty)                                                                                       \
     CLS(IPC)                                                                                       \
     CLS(KeyManager)                                                                                \
+    CLS(EmuSettings)                                                                               \
     CLS(Loader)
 
 // GetClassName is a macro defined by Windows.h, grrr...
