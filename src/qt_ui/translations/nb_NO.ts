@@ -488,11 +488,11 @@
     </message>
     <message>
       <source>Default Controller Removed</source>
-      <translation>Fjernet standardkontroller</translation>
+      <translation>Standardkontroller fjernet</translation>
     </message>
     <message>
       <source>Default controller setting removed</source>
-      <translation>Fjernet instillinger for standardkontroller</translation>
+      <translation>Instillinger for standardkontroller fjernet</translation>
     </message>
     <message>
       <source>Unable to Save</source>
@@ -1230,11 +1230,11 @@ Bruker lokal database.
     </message>
     <message>
       <source>&amp;Change Custom Configuration</source>
-      <translation type="unfinished">&amp;Change Custom Configuration</translation>
+      <translation>&amp;Endre tilpasset oppsett</translation>
     </message>
     <message>
       <source>&amp;Create Custom Configuration From Global Settings</source>
-      <translation type="unfinished">&amp;Create Custom Configuration From Global Settings</translation>
+      <translation>&amp;Lag tilpasset oppsett fra globale innstillinger</translation>
     </message>
   </context>
   <context>
@@ -1398,11 +1398,11 @@ Bruker lokal database.
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Øk lydstyrke</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Senk lydstyrke</translation>
     </message>
   </context>
   <context>
@@ -3074,57 +3074,57 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Some settings are disabled because they cannot be overridden per-game. These require global settings changes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Some settings are disabled because they cannot be overridden per-game. These require global settings changes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Noen innstillinger er slått av fordi de ikke kan overstyres for hvert enkelt spill. Disse krever endringer fra globale innstillinger.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <source>Custom Settings for %1 [%2]</source>
-      <translation type="unfinished">Custom Settings for %1 [%2]</translation>
+      <translation>Tilpassede innstillinger for %1 [%2]</translation>
     </message>
     <message>
       <source>Global Settings</source>
-      <translation type="unfinished">Global Settings</translation>
+      <translation>Globale innstillinger</translation>
     </message>
     <message>
       <source>Failed to save game settings.</source>
-      <translation type="unfinished">Failed to save game settings.</translation>
+      <translation>Feil ved lagring av spillinnstillinger.</translation>
     </message>
     <message>
       <source>Settings Applied</source>
-      <translation type="unfinished">Settings Applied</translation>
+      <translation>Tok i bruk innstillinger</translation>
     </message>
     <message>
       <source>Game-specific settings have been saved.</source>
-      <translation type="unfinished">Game-specific settings have been saved.</translation>
+      <translation>Innstillinger for enkelte spill er lagret.</translation>
     </message>
     <message>
       <source>Failed to save global settings.</source>
-      <translation type="unfinished">Failed to save global settings.</translation>
+      <translation>Feil ved lagring av globale innstillinger.</translation>
     </message>
     <message>
       <source>Are you sure you want to restore all settings to global defaults?
 This will remove all game-specific overrides.</source>
-      <translation type="unfinished">Are you sure you want to restore all settings to global defaults?
-This will remove all game-specific overrides.</translation>
+      <translation>Er du sikker på at du vil gjenopprette alle innstillinger til de globale standardene?
+Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Settings Restored</source>
-      <translation type="unfinished">Settings Restored</translation>
+      <translation>Innstillinger gjenopprettet</translation>
     </message>
     <message>
       <source>Game settings restored to global defaults.</source>
-      <translation type="unfinished">Game settings restored to global defaults.</translation>
+      <translation>Spillinnstillinger gjenopprettet til globale standarder.</translation>
     </message>
     <message>
       <source>This setting cannot be overridden per-game. Use global settings to change it.</source>
-      <translation type="unfinished">This setting cannot be overridden per-game. Use global settings to change it.</translation>
+      <translation>Denne innstillingen kan ikke overstyres for enkelte spill. Bruk globale innstillinger for å endre denne.</translation>
     </message>
     <message>
       <source>GUI-only settings cannot be overridden per-game. Use global settings to change them.</source>
-      <translation type="unfinished">GUI-only settings cannot be overridden per-game. Use global settings to change them.</translation>
+      <translation>Innstillinger for grensesnitt kan ikke overstyres for enkelte spill. Bruk globale innstillinger for å endre dem.</translation>
     </message>
     <message>
       <source>Path settings cannot be overridden per-game. Use global settings to change them.</source>
-      <translation type="unfinished">Path settings cannot be overridden per-game. Use global settings to change them.</translation>
+      <translation>Innstillinger for mapper kan ikke overstyres for enkelte spill. Bruk globale innstillinger for å endre dem.</translation>
     </message>
   </context>
   <context>
