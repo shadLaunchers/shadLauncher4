@@ -1238,7 +1238,7 @@ Bruker lokal database.
     </message>
     <message>
       <source>&amp;Remove Custom Configuration</source>
-      <translation type="unfinished">&amp;Remove Custom Configuration</translation>
+      <translation>&amp;Fjern tilpasset oppsett</translation>
     </message>
   </context>
   <context>
