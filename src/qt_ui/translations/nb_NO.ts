@@ -1236,6 +1236,10 @@ Bruker lokal database.
       <source>&amp;Create Custom Configuration From Global Settings</source>
       <translation>&amp;Lag tilpasset oppsett fra globale innstillinger</translation>
     </message>
+    <message>
+      <source>&amp;Remove Custom Configuration</source>
+      <translation type="unfinished">&amp;Remove Custom Configuration</translation>
+    </message>
   </context>
   <context>
     <name>GameListGrid</name>
