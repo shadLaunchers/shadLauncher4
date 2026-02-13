@@ -1236,6 +1236,10 @@ Using local database.
       <source>&amp;Create Custom Configuration From Global Settings</source>
       <translation>&amp;Створити користувацьку конфігурацію із глобальними налаштуваннями</translation>
     </message>
+    <message>
+      <source>&amp;Remove Custom Configuration</source>
+      <translation type="unfinished">&amp;Remove Custom Configuration</translation>
+    </message>
   </context>
   <context>
     <name>GameListGrid</name>
