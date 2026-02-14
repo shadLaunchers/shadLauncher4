@@ -3138,6 +3138,14 @@ This will remove all game-specific overrides.</translation>
       <source>Path settings cannot be overridden per-game. Use global settings to change them.</source>
       <translation>Налаштування шляхів не можна змінити для окремих ігор. Використовуйте глобальні налаштування, щоб змінити їх.</translation>
     </message>
+    <message>
+      <source>PS4 Fonts Path</source>
+      <translation type="unfinished">PS4 Fonts Path</translation>
+    </message>
+    <message>
+      <source>Select directory for System fonts</source>
+      <translation type="unfinished">Select directory for System fonts</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
@@ -3192,6 +3200,14 @@ This will remove all game-specific overrides.</translation>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
       <translation>Гучність:\nНалаштування гучності для ігор на загальному рівні, діапазон від 0 до 500%, типово — 100%.</translation>
+    </message>
+    <message>
+      <source>System Fonts Folder:\nThe folder where system fonts are loaded from.</source>
+      <translation type="unfinished">System Fonts Folder:\nThe folder where system fonts are loaded from.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the System Fonts folder.</source>
+      <translation type="unfinished">Browse:\nBrowse for a folder to set as the System Fonts folder.</translation>
     </message>
   </context>
   <context>
