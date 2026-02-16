@@ -24,6 +24,7 @@ enum class PathType {
     CheatsDir,          // Where cheats are stored.
     CustomTrophy,       // Where custom files for trophies are stored.
     CacheDir,           // Where pipeline and shader cache is stored.
+    FontsDir,           // Where dumped system fonts are stored.
 };
 
 // Sub-directories contained within a user data directory
@@ -38,6 +39,7 @@ constexpr auto CUSTOM_TROPHY = "custom_trophy";
 constexpr auto PATCHES_DIR = "patches";
 constexpr auto CHEATS_DIR = "cheats";
 constexpr auto CACHE_DIR = "cache";
+constexpr auto FONTS_DIR = "fonts";
 
 // Filenames
 constexpr auto LOG_FILE = "shadLauncher4.txt";

@@ -28,6 +28,8 @@ public:
         const QString paths_homeDir_browse = tr("Browse:\\nBrowse for a folder to set as the Home folder.");
         const QString paths_sysmodulesDir = tr("System Modules Folder:\\nThe folder where system modules are loaded from.");
         const QString paths_sysmodulesDir_browse = tr("Browse:\\nBrowse for a folder to set as the System Modules folder.");
+        const QString paths_fontsDir = tr("System Fonts Folder:\\nThe folder where system fonts are loaded from.");
+        const QString paths_fontsDir_browse = tr("Browse:\\nBrowse for a folder to set as the System Fonts folder.");
         //gui
         const QString general_scan_depth_combo = tr("Directory Scan Depth:\\nSet the maximum depth when scanning for games in the specified game folders.\\n1 means one level of subfolders is scanned, and so on.");
         // clang-format on

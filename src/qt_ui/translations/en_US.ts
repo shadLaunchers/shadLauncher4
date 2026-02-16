@@ -1216,6 +1216,18 @@ Using local database.
         <source>Info</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>&amp;Change Custom Configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Create Custom Configuration From Global Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Remove Custom Configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GameListGrid</name>
@@ -2943,10 +2955,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Failed to save settings.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Restore Defaults</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3042,6 +3050,71 @@ Select an emulator version from the right panel.</source>
         <source>Show Simple FPS Counter</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Some settings are disabled because they cannot be overridden per-game. These require global settings changes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom Settings for %1 [%2]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Global Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to save game settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Settings Applied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Game-specific settings have been saved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to save global settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Are you sure you want to restore all settings to global defaults?
+This will remove all game-specific overrides.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Settings Restored</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Game settings restored to global defaults.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This setting cannot be overridden per-game. Use global settings to change it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GUI-only settings cannot be overridden per-game. Use global settings to change them.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path settings cannot be overridden per-game. Use global settings to change them.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PS4 Fonts Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select directory for System fonts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Identical Log Grouped</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsDialogHelperTexts</name>
@@ -3095,6 +3168,14 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>System Fonts Folder:\nThe folder where system fonts are loaded from.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Browse:\nBrowse for a folder to set as the System Fonts folder.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

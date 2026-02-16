@@ -43,6 +43,7 @@ enum class Class : u8 {
     Tty,               ///< Debug output from emu
     IPC,               ///< IPC
     KeyManager,        ///< Key management system
+    EmuSettings,       /// Emulator settings system
     Count              ///< Total number of logging classes
 };
 

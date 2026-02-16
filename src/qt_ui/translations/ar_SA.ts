@@ -1228,6 +1228,18 @@ Using local database.
       <source>Info</source>
       <translation type="unfinished">Info</translation>
     </message>
+    <message>
+      <source>&amp;Change Custom Configuration</source>
+      <translation type="unfinished">&amp;Change Custom Configuration</translation>
+    </message>
+    <message>
+      <source>&amp;Create Custom Configuration From Global Settings</source>
+      <translation type="unfinished">&amp;Create Custom Configuration From Global Settings</translation>
+    </message>
+    <message>
+      <source>&amp;Remove Custom Configuration</source>
+      <translation type="unfinished">&amp;Remove Custom Configuration</translation>
+    </message>
   </context>
   <context>
     <name>GameListGrid</name>
@@ -2985,10 +2997,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Error</translation>
     </message>
     <message>
-      <source>Failed to save settings.</source>
-      <translation type="unfinished">Failed to save settings.</translation>
-    </message>
-    <message>
       <source>Restore Defaults</source>
       <translation type="unfinished">Restore Defaults</translation>
     </message>
@@ -3084,6 +3092,72 @@ Select an emulator version from the right panel.</translation>
       <source>Show Simple FPS Counter</source>
       <translation type="unfinished">Show Simple FPS Counter</translation>
     </message>
+    <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Some settings are disabled because they cannot be overridden per-game. These require global settings changes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Some settings are disabled because they cannot be overridden per-game. These require global settings changes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Custom Settings for %1 [%2]</source>
+      <translation type="unfinished">Custom Settings for %1 [%2]</translation>
+    </message>
+    <message>
+      <source>Global Settings</source>
+      <translation type="unfinished">Global Settings</translation>
+    </message>
+    <message>
+      <source>Failed to save game settings.</source>
+      <translation type="unfinished">Failed to save game settings.</translation>
+    </message>
+    <message>
+      <source>Settings Applied</source>
+      <translation type="unfinished">Settings Applied</translation>
+    </message>
+    <message>
+      <source>Game-specific settings have been saved.</source>
+      <translation type="unfinished">Game-specific settings have been saved.</translation>
+    </message>
+    <message>
+      <source>Failed to save global settings.</source>
+      <translation type="unfinished">Failed to save global settings.</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to restore all settings to global defaults?
+This will remove all game-specific overrides.</source>
+      <translation type="unfinished">Are you sure you want to restore all settings to global defaults?
+This will remove all game-specific overrides.</translation>
+    </message>
+    <message>
+      <source>Settings Restored</source>
+      <translation type="unfinished">Settings Restored</translation>
+    </message>
+    <message>
+      <source>Game settings restored to global defaults.</source>
+      <translation type="unfinished">Game settings restored to global defaults.</translation>
+    </message>
+    <message>
+      <source>This setting cannot be overridden per-game. Use global settings to change it.</source>
+      <translation type="unfinished">This setting cannot be overridden per-game. Use global settings to change it.</translation>
+    </message>
+    <message>
+      <source>GUI-only settings cannot be overridden per-game. Use global settings to change them.</source>
+      <translation type="unfinished">GUI-only settings cannot be overridden per-game. Use global settings to change them.</translation>
+    </message>
+    <message>
+      <source>Path settings cannot be overridden per-game. Use global settings to change them.</source>
+      <translation type="unfinished">Path settings cannot be overridden per-game. Use global settings to change them.</translation>
+    </message>
+    <message>
+      <source>PS4 Fonts Path</source>
+      <translation type="unfinished">PS4 Fonts Path</translation>
+    </message>
+    <message>
+      <source>Select directory for System fonts</source>
+      <translation type="unfinished">Select directory for System fonts</translation>
+    </message>
+    <message>
+      <source>Identical Log Grouped</source>
+      <translation type="unfinished">Identical Log Grouped</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
@@ -3138,6 +3212,14 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
       <translation type="unfinished">Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</translation>
+    </message>
+    <message>
+      <source>System Fonts Folder:\nThe folder where system fonts are loaded from.</source>
+      <translation type="unfinished">System Fonts Folder:\nThe folder where system fonts are loaded from.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the System Fonts folder.</source>
+      <translation type="unfinished">Browse:\nBrowse for a folder to set as the System Fonts folder.</translation>
     </message>
   </context>
   <context>

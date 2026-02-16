@@ -55,11 +55,13 @@ public:
     void RepaintIcons(const bool& from_settings = false);
     /** Resize Gamelist Icons to size given by slider position */
     void ResizeIcons(const int& slider_pos);
+    void ShowCustomConfigIcon(const game_info& game);
     void SetShowHidden(bool show);
     bool IsEntryVisible(const game_info& game, bool search_fallback = false) const;
     const std::vector<game_info>& GetGameInfo() const;
     void CheckCompatibilityAtStartup();
     void PlayBackgroundMusic(game_info game);
+    bool RemoveCustomConfiguration(const QString& serial, const game_info& game);
 
     QImage backgroundImage;
 public Q_SLOTS:
