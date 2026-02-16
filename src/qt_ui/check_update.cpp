@@ -314,7 +314,7 @@ void CheckUpdate::requestChangelog(const QString& currentRev, const QString& lat
                     if (!changes.isEmpty()) {
                         changes += "<br>";
                     }
-                    changes += "&nbsp;&nbsp;&nbsp;&nbsp;• " + message;
+                    changes += "&nbsp;&nbsp;&nbsp;&nbsp;â€¢ " + message;
                 }
 
                 // Update the text field with the changelog
