@@ -3142,6 +3142,10 @@ This will remove all game-specific overrides.</translation>
       <source>Select directory for System fonts</source>
       <translation type="unfinished">Select directory for System fonts</translation>
     </message>
+    <message>
+      <source>Identical Log Grouped</source>
+      <translation type="unfinished">Identical Log Grouped</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
