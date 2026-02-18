@@ -23,13 +23,15 @@
 #include <QVBoxLayout>
 #include <common/path_util.h>
 // #include <common/scm_rev.h>
+
 #include "check_update.h"
+#include "gui_settings.h"
 
 using namespace Common::FS;
 
-CheckUpdate::CheckUpdate(std::shared_ptr<EmulatorSettings> settings, bool showMessage,
+CheckUpdate::CheckUpdate(std::shared_ptr<GUISettings> gui_settings, bool showMessage,
                          QWidget* parent)
-    : QDialog(parent), m_settings(std::move(settings)),
+    : QDialog(parent), m_gui_settings(std::move(gui_settings)),
       networkManager(new QNetworkAccessManager(this)) {
 
     setWindowTitle(tr("Auto Updater - GUI"));
@@ -247,7 +249,7 @@ void CheckUpdate::setupUI(const QString& downloadUrl, const QString& latestDate,
                     }
                 });
 
-        if (m_settings->IsShowChangeLog()) {
+        if (m_gui_settings->GetValue(GUI::general_show_changelog).toBool()) {
             requestChangelog(currentRev, latestRev, downloadUrl, latestDate, currentDate);
             textField->setVisible(true);
             toggleButton->setText(tr("Hide Changelog"));
@@ -264,11 +266,11 @@ void CheckUpdate::setupUI(const QString& downloadUrl, const QString& latestDate,
 
     connect(noButton, &QPushButton::clicked, this, [this]() { close(); });
 
-    autoUpdateCheckBox->setChecked(m_settings->IsCheckForUpdates());
+    autoUpdateCheckBox->setChecked(
+        m_gui_settings->GetValue(GUI::general_check_gui_updates).toBool());
 
     connect(autoUpdateCheckBox, &QCheckBox::checkStateChanged, this, [this](Qt::CheckState state) {
-        m_settings->SetCheckForUpdates(state == Qt::Checked);
-        m_settings->Save();
+        m_gui_settings->SetValue(GUI::general_check_gui_updates, state == Qt::Checked);
     });
 
     setLayout(layout);

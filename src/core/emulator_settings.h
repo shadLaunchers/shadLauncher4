@@ -104,8 +104,6 @@ struct GeneralSettings {
     Setting<bool> trophy_popup_disabled{false};
     Setting<double> trophy_notification_duration{6.0};
     Setting<std::string> trophy_notification_side{"right"};
-    Setting<bool> check_for_updates{false};
-    Setting<bool> show_change_log{false};
     Setting<std::string> log_filter{""};
     Setting<std::string> log_type{"sync"};
     Setting<bool> show_splash{false};
@@ -144,8 +142,8 @@ NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(GeneralSettings, install_dirs, addon_install_
                                    extra_dmem_in_mbytes, psn_signed_in, trophy_popup_disabled,
                                    trophy_notification_duration, log_filter, log_type, show_splash,
                                    identical_log_grouped, trophy_notification_side,
-                                   check_for_updates, show_change_log, connected_to_network,
-                                   discord_rpc_enabled, show_fps_counter, console_language)
+                                   connected_to_network, discord_rpc_enabled, show_fps_counter,
+                                   console_language)
 
 // -------------------------------
 // Debug settings
@@ -445,8 +443,6 @@ public:
     SETTING_FORWARD_BOOL(m_general, DiscordRPCEnabled, discord_rpc_enabled)
     SETTING_FORWARD_BOOL(m_general, ShowFpsCounter, show_fps_counter)
     SETTING_FORWARD(m_general, ConsoleLanguage, console_language)
-    SETTING_FORWARD_BOOL(m_general, CheckForUpdates, check_for_updates)
-    SETTING_FORWARD_BOOL(m_general, ShowChangeLog, show_change_log)
 
     // Audio settings
     SETTING_FORWARD(m_audio, MicDevice, mic_device)

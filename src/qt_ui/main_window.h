@@ -72,7 +72,6 @@ private:
     void configureGuiFromSettings();
     void createDockWindows();
     void createActions();
-    void CheckUpdateMain(bool checkSave);
     void createConnects();
     void LoadVersionComboBox();
     void updateLanguageActions(const QStringList& language_codes, const QString& language_code);

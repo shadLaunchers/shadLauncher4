@@ -14,6 +14,9 @@
 #include "gui_application.h"
 #include "gui_settings.h"
 #include "log_presets_dialog.h"
+// #ifdef ENABLE_UPDATER
+#include "qt_ui/check_update.h"
+// #endif
 #include "settings_dialog.h"
 #include "settings_dialog_helper_texts.h"
 #include "ui_settings_dialog.h"
@@ -334,6 +337,11 @@ void SettingsDialog::OtherConnections() {
     // ------------------ Gui tab --------------------------------------------------------
     connect(ui->BGMVolumeSlider, &QSlider::valueChanged, this,
             [](int value) { BackgroundMusicPlayer::getInstance().SetVolume(value); });
+
+    connect(ui->checkUpdateButton, &QPushButton::clicked, this, [this]() {
+        auto checkUpdate = new CheckUpdate(m_gui_settings, true);
+        checkUpdate->exec();
+    });
 
     // ------------------ Graphics tab --------------------------------------------------------
     connect(ui->RCASSlider, &QSlider::valueChanged, [this](int value) {

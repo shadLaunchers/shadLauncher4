@@ -9,14 +9,17 @@
 #include <QDialog>
 #include <QNetworkAccessManager>
 #include <QPushButton>
+
 #include "core/emulator_settings.h"
+#include "gui_settings.h"
 
 class CheckUpdate : public QDialog {
     Q_OBJECT
 
 public:
-    explicit CheckUpdate(std::shared_ptr<EmulatorSettings> settings, bool showMessage,
+    explicit CheckUpdate(std::shared_ptr<GUISettings> gui_settings, bool showMessage,
                          QWidget* parent = nullptr);
+
     ~CheckUpdate();
 
 private slots:
@@ -38,7 +41,7 @@ private:
 
     QNetworkAccessManager* networkManager{nullptr};
 
-    std::shared_ptr<EmulatorSettings> m_settings;
+    std::shared_ptr<GUISettings> m_gui_settings;
 };
 
 #endif // CHECKUPDATE_H

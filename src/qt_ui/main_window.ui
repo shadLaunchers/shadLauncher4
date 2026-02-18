@@ -254,8 +254,8 @@
     </property>
     <addaction name="separator"/>
     <addaction name="separator"/>
-    <addaction name="aboutAct"/>
     <addaction name="updaterAct"/>
+    <addaction name="aboutAct"/>
    </widget>
    <widget class="QMenu" name="languageMenu">
     <property name="title">

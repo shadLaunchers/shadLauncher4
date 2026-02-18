@@ -23,7 +23,9 @@
 #include "pkg_install_dir_select_dialog.h"
 #include "pkg_install_model.h"
 #include "progress_dialog.h"
+// #ifdef ENABLE_UPDATER
 #include "qt_ui/check_update.h"
+// #endif
 #include "settings_dialog.h"
 #include "ui_main_window.h"
 #include "user_manager_dialog.h"
@@ -70,12 +72,6 @@ bool MainWindow::init() {
     m_game_list_frame->Refresh(true);
     m_game_list_frame->CheckCompatibilityAtStartup();
 
-    LoadVersionComboBox();
-    if (m_gui_settings->GetValue(GUI::version_manager_checkOnStartup).toBool()) {
-        auto versionDialog = new VersionDialog(m_gui_settings, this);
-        versionDialog->checkUpdatePre(false);
-    }
-
     // Expandable spacer to push elements to the right (Version Manager)
     QWidget* expandingSpacer = new QWidget(this);
     expandingSpacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
@@ -89,7 +85,17 @@ bool MainWindow::init() {
     ui->toolBar->addWidget(versionContainer);
     LoadVersionComboBox();
 
-    CheckUpdateMain(true);
+    // Check Update Emu
+    if (m_gui_settings->GetValue(GUI::version_manager_checkOnStartup).toBool()) {
+        auto versionDialog = new VersionDialog(m_gui_settings, this);
+        versionDialog->checkUpdatePre(false);
+    }
+
+    // Check Update Gui
+    if (m_gui_settings->GetValue(GUI::general_check_gui_updates).toBool()) {
+        auto* checkUpdate = new CheckUpdate(m_gui_settings, false, this);
+        checkUpdate->exec();
+    }
 
     return true;
 }
@@ -106,16 +112,6 @@ void MainWindow::createActions() {
     m_list_mode_act_group = new QActionGroup(this);
     m_list_mode_act_group->addAction(ui->setlistModeListAct);
     m_list_mode_act_group->addAction(ui->setlistModeGridAct);
-}
-
-void MainWindow::CheckUpdateMain(bool checkSave) {
-    if (checkSave) {
-        if (m_emu_settings->IsCheckForUpdates()) {
-            return;
-        }
-    }
-    auto* checkUpdate = new CheckUpdate(m_emu_settings, false, this);
-    checkUpdate->exec();
 }
 
 void MainWindow::createConnects() {
@@ -329,7 +325,7 @@ void MainWindow::createConnects() {
             &GameListFrame::PrintLog);
 
     connect(ui->updaterAct, &QAction::triggered, this, [this] {
-        auto* checkUpdate = new CheckUpdate(m_emu_settings, true, this);
+        auto* checkUpdate = new CheckUpdate(m_gui_settings, true, this);
         checkUpdate->exec();
     });
 }
