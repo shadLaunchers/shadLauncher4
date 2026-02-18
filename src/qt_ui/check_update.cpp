@@ -23,6 +23,7 @@
 #include <QVBoxLayout>
 #include <common/path_util.h>
 // #include <common/scm_rev.h>
+#include <common/zip_util.h>
 
 #include "check_update.h"
 #include "gui_settings.h"
@@ -383,9 +384,9 @@ void CheckUpdate::DownloadUpdate(const QString& url) {
 #ifdef Q_OS_WIN
         QString tempDownloadPath =
             QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) +
-            "/Temp/temp_download_update";
+            "/Temp/temp_download_update_gui";
 #else
-        QString tempDownloadPath = userPath + "/temp_download_update";
+        QString tempDownloadPath = userPath + "/temp_download_update_gui";
 #endif
         QDir dir(tempDownloadPath);
         if (!dir.exists()) {
@@ -412,187 +413,87 @@ void CheckUpdate::DownloadUpdate(const QString& url) {
 }
 
 void CheckUpdate::Install() {
-    QString userPath;
-    Common::FS::PathToQString(userPath, Common::FS::GetUserPath(Common::FS::PathType::UserDir));
+    QString tempDirPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) +
+                          "/Temp/temp_download_update_gui";
 
     QString rootPath;
     Common::FS::PathToQString(rootPath, std::filesystem::current_path());
 
-    QString tempDirPath = userPath + "/temp_download_update";
-    QString startingUpdate = tr("Starting Update...");
+    // 1. Extract the ZIP file
+    try {
+        QString zipFilePath = tempDirPath + "/temp_download_update.zip";
+        Zip::Extract(zipFilePath, tempDirPath);
 
-    QString binaryStartingUpdate;
-    for (QChar c : startingUpdate) {
-        binaryStartingUpdate.append(QString::number(c.unicode(), 2).rightJustified(16, '0'));
+        // Delete the ZIP file after extraction.
+        QFile::remove(zipFilePath);
+
+    } catch (const std::exception& e) {
+        QMessageBox::warning(this, tr("Error"),
+                             tr("Failed to extract the update ZIP:\n") + e.what());
+        return;
     }
 
+    // 2. Creates a PowerShell/Bash script to copy files and launch the launcher.
+    QString scriptFileName = tempDirPath + "/update.ps1";
     QString scriptContent;
-    QString scriptFileName;
-    QStringList arguments;
-    QString processCommand;
 
 #ifdef Q_OS_WIN
-    // On windows, overwrite tempDirPath with AppData/Roaming/shadps4/Temp folder
-    // due to PowerShell Expand-Archive not being able to handle correctly
-    // paths in square brackets (ie: ./[shadps4])
-    tempDirPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) +
-                  "/Temp/temp_download_update";
-
-    // Windows Batch Script
-    scriptFileName = tempDirPath + "/update.ps1";
-    scriptContent = QStringLiteral(
-        "Set-ExecutionPolicy Bypass -Scope Process -Force\n"
-        "$binaryStartingUpdate = '%1'\n"
-        "$chars = @()\n"
-        "for ($i = 0; $i -lt $binaryStartingUpdate.Length; $i += 16) {\n"
-        "    $chars += [char]([convert]::ToInt32($binaryStartingUpdate.Substring($i, 16), 2))\n"
-        "}\n"
-        "$startingUpdate = -join $chars\n"
-        "Write-Output $startingUpdate\n"
-        "Expand-Archive -Path '%2\\temp_download_update.zip' -DestinationPath '%2' -Force\n"
-        "Start-Sleep -Seconds 3\n"
-        "Copy-Item -Recurse -Force '%2\\*' '%3\\'\n"
-        "Start-Sleep -Seconds 2\n"
-        "Remove-Item -Force -LiteralPath '%3\\update.ps1'\n"
-        "Remove-Item -Force -LiteralPath '%3\\temp_download_update.zip'\n"
-        "Remove-Item -Recurse -Force '%2'\n"
-        "Start-Process -FilePath '%3\\shadLauncher4.exe' "
-        "-WorkingDirectory ([WildcardPattern]::Escape('%3'))\n");
-    arguments << "-ExecutionPolicy"
-              << "Bypass"
-              << "-File" << scriptFileName;
-    processCommand = "powershell.exe";
-
-#elif defined(Q_OS_LINUX)
-    // Linux Shell Script
-    scriptFileName = tempDirPath + "/update.sh";
-    scriptContent = QStringLiteral(
-        "#!/bin/bash\n"
-        "check_unzip() {\n"
-        "    if ! command -v unzip &> /dev/null && ! command -v 7z &> /dev/null; then\n"
-        "        echo \"Neither 'unzip' nor '7z' is installed.\"\n"
-        "        read -p \"Would you like to install 'unzip'? (y/n): \" response\n"
-        "        if [[ \"$response\" == \"y\" || \"$response\" == \"Y\" ]]; then\n"
-        "            if [[ -f /etc/os-release ]]; then\n"
-        "                . /etc/os-release\n"
-        "                case \"$ID\" in\n"
-        "                    ubuntu|debian)\n"
-        "                        sudo apt-get install unzip -y\n"
-        "                        ;;\n"
-        "                    fedora|redhat)\n"
-        "                        sudo dnf install unzip -y\n"
-        "                        ;;\n"
-        "                    *)\n"
-        "                        echo \"Unsupported distribution for automatic installation.\"\n"
-        "                        exit 1\n"
-        "                        ;;\n"
-        "                esac\n"
-        "            else\n"
-        "                echo \"Could not identify the distribution.\"\n"
-        "                exit 1\n"
-        "            fi\n"
-        "        else\n"
-        "            echo \"At least one of 'unzip' or '7z' is required to continue. The process "
-        "will be terminated.\"\n"
-        "            exit 1\n"
-        "        fi\n"
-        "    fi\n"
-        "}\n"
-        "extract_file() {\n"
-        "    if command -v unzip &> /dev/null; then\n"
-        "        unzip -o \"%2/temp_download_update.zip\" -d \"%2/\"\n"
-        "    elif command -v 7z &> /dev/null; then\n"
-        "        7z x \"%2/temp_download_update.zip\" -o\"%2/\" -y\n"
-        "    else\n"
-        "        echo \"No suitable extraction tool found.\"\n"
-        "        exit 1\n"
-        "    fi\n"
-        "}\n"
-        "main() {\n"
-        "    check_unzip\n"
-        "    echo \"%1\"\n"
-        "    sleep 2\n"
-        "    extract_file\n"
-        "    sleep 2\n"
-        "    if pgrep -f \"shadLauncher4-qt.AppImage\" > /dev/null; then\n"
-        "        pkill -f \"shadLauncher4-qt.AppImage\"\n"
-        "        sleep 2\n"
-        "    fi\n"
-        "    cp -r \"%2/\"* \"%3/\"\n"
-        "    sleep 2\n"
-        "    rm \"%3/update.sh\"\n"
-        "    rm \"%3/temp_download_update.zip\"\n"
-        "    chmod +x \"%3/shadLauncher4-qt.AppImage\"\n"
-        "    rm -r \"%2\"\n"
-        "    cd \"%3\" && ./shadLauncher4-qt.AppImage\n"
-        "}\n"
-        "main\n");
-    arguments << scriptFileName;
-    processCommand = "bash";
-
-#elif defined(Q_OS_MAC)
-    // macOS Shell Script
-    scriptFileName = tempDirPath + "/update.sh";
-    scriptContent = QStringLiteral(
-        "#!/bin/bash\n"
-        "check_tools() {\n"
-        "    if ! command -v unzip &> /dev/null && ! command -v tar &> /dev/null; then\n"
-        "        echo \"Neither 'unzip' nor 'tar' is installed.\"\n"
-        "        read -p \"Would you like to install 'unzip'? (y/n): \" response\n"
-        "        if [[ \"$response\" == \"y\" || \"$response\" == \"Y\" ]]; then\n"
-        "            echo \"Please install 'unzip' using Homebrew or another package manager.\"\n"
-        "            exit 1\n"
-        "        else\n"
-        "            echo \"At least one of 'unzip' or 'tar' is required to continue. The process "
-        "will be terminated.\"\n"
-        "            exit 1\n"
-        "        fi\n"
-        "    fi\n"
-        "}\n"
-        "check_tools\n"
-        "echo \"%1\"\n"
-        "sleep 2\n"
-        "unzip -o \"%2/temp_download_update.zip\" -d \"%2/\"\n"
-        "sleep 2\n"
-        "tar -xzf \"%2/shadLauncher4-macos-qt.tar.gz\" -C \"%3\"\n"
-        "sleep 2\n"
-        "rm \"%3/update.sh\"\n"
-        "chmod +x \"%3/shadps4.app/Contents/MacOS/shadps4\"\n"
-        "open \"%3/shadLauncher4.app\"\n"
-        "rm -r \"%2\"\n");
-
-    arguments << scriptFileName;
-    processCommand = "bash";
-
-#else
-    QMessageBox::warning(this, tr("Error"), "Unsupported operating system.");
-    return;
-#endif
+    scriptContent = QString("Copy-Item -Path '%1\\*' -Destination '%2\\' -Recurse -Force\n"
+                            "Start-Sleep -Milliseconds 500\n"
+                            "Start-Process powershell -ArgumentList \"-Command Remove-Item -Force "
+                            "-LiteralPath '%2\\\\update.ps1'\" -WindowStyle Hidden\n"
+                            "Start-Process -FilePath '%2\\shadLauncher4.exe'\n"
+                            "Remove-Item -Recurse -Force '%1'\n")
+                        .arg(tempDirPath, rootPath);
 
     QFile scriptFile(scriptFileName);
-    if (scriptFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        QTextStream out(&scriptFile);
-        scriptFile.write("\xEF\xBB\xBF");
-#ifdef Q_OS_WIN
-        out << scriptContent.arg(binaryStartingUpdate).arg(tempDirPath).arg(rootPath);
-#endif
-#if defined(Q_OS_LINUX) || defined(Q_OS_MAC)
-        out << scriptContent.arg(startingUpdate).arg(tempDirPath).arg(rootPath);
-#endif
-        scriptFile.close();
-
-// Make the script executable on Unix-like systems
-#if defined(Q_OS_LINUX) || defined(Q_OS_MAC)
-        scriptFile.setPermissions(QFileDevice::ExeOwner | QFileDevice::ReadOwner |
-                                  QFileDevice::WriteOwner);
-#endif
-
-        QProcess::startDetached(processCommand, arguments);
-
-        exit(EXIT_SUCCESS);
-    } else {
-        QMessageBox::warning(
-            this, tr("Error"),
-            QString(tr("Failed to create the update script file") + ":\n" + scriptFileName));
+    if (!scriptFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QMessageBox::warning(this, tr("Error"),
+                             tr("Failed to create update script:\n") + scriptFileName);
+        return;
     }
+    QTextStream out(&scriptFile);
+    out << scriptContent;
+    scriptFile.close();
+
+    QStringList arguments;
+    arguments << "-ExecutionPolicy" << "Bypass" << "-File" << scriptFileName;
+    QString processCommand = "powershell.exe";
+
+#elif defined(Q_OS_LINUX) || defined(Q_OS_MAC)
+    // Unix-like (Linux/macOS)
+    scriptFileName = tempDirPath + "/update.sh";
+    scriptContent = QString("#!/bin/bash\n"
+                            "cp -r '%1/'* '%2/'\n"
+                            "rm -r '%1'\n"
+                            "chmod +x '%2/shadLauncher4-qt.AppImage'\n"
+                            "(sh -c \"sleep 1; rm -f '%2/update.sh'\") &\n"
+                            "cd '%2' && ./shadLauncher4-qt.AppImage\n")
+                        .arg(tempDirPath, rootPath);
+
+    QFile scriptFile(scriptFileName);
+    if (!scriptFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QMessageBox::warning(this, tr("Error"),
+                             tr("Failed to create update script:\n") + scriptFileName);
+        return;
+    }
+    QTextStream out(&scriptFile);
+    out << scriptContent;
+    scriptFile.close();
+
+    scriptFile.setPermissions(QFileDevice::ExeOwner | QFileDevice::ReadOwner |
+                              QFileDevice::WriteOwner);
+
+    QStringList arguments;
+    arguments << scriptFileName;
+    QString processCommand = "bash";
+#endif
+
+    // 3. Starts the script and closes the current shadLauncher4
+    if (!QProcess::startDetached(processCommand, arguments)) {
+        QMessageBox::warning(this, tr("Error"), tr("Failed to start update process."));
+        return;
+    }
+
+    exit(EXIT_SUCCESS);
 }
