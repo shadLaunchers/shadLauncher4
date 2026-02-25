@@ -428,7 +428,7 @@ preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation>Gumbi Lica</translation>
+      <translation>Tipke Lica</translation>
     </message>
     <message>
       <source>Triangle</source>
@@ -510,13 +510,13 @@ preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation>Nedopušteno vezanje bilo kojeg unosa više od jedanput. Dvostruki unosi mapirani na sljedeću gumbe:
+      <translation>Nedopušteno vezanje bilo kojeg unosa više od jedanput. Dvostruki unosi mapirani na sljedeće tipke:
 
 %1</translation>
     </message>
     <message>
       <source>Press a button</source>
-      <translation>Pritisni gumb</translation>
+      <translation>Pritisnite gumb</translation>
     </message>
     <message>
       <source>Move analog stick</source>
@@ -1304,7 +1304,7 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>Keybindings</source>
-      <translation>Tipkovničke kratice</translation>
+      <translation>Tipkovnička vezanja</translation>
     </message>
     <message>
       <source>Special Bindings</source>
@@ -1339,7 +1339,7 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation>Ponovno Učitaj Mapiranja Gumba</translation>
+      <translation>Ponovno Učitaj Mapiranja Tipki</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
@@ -1359,7 +1359,7 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation>Uključi Emulaciju Miša u Kontroler</translation>
+      <translation>Uključi Emulaciju Miša u Joystick</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
@@ -1397,21 +1397,21 @@ sam izvještaj ne bi postao nevaljan:</translation>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation>Nije moguće vezat jedinstveni unos više odjedanput. Dvostruki unosi mapirani:
+      <translation>Nije moguće vezat jedinstveni unos više odjedanput. Dvostruki unosi mapirani na sljedeće tipke:
 
 %1</translation>
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation>Čekanje na unos</translation>
+      <translation>Čekanje na unose</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation>Glasnoća Više</translation>
+      <translation>Glasnoća Viša</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation>Glasnoća Niže</translation>
+      <translation>Glasnoća Niža</translation>
     </message>
   </context>
   <context>
@@ -1481,7 +1481,7 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>Text Editor</source>
-      <translation>Tekstualni Urednik</translation>
+      <translation>Uređivač Teksta</translation>
     </message>
     <message>
       <source>Help</source>
@@ -1529,11 +1529,11 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>note: click Help Button/Special Keybindings for more information</source>
-      <translation>bilješka: kliknite Gumb Pomoć/Posebna Vezanja za više informacija</translation>
+      <translation>napomena: kliknite Gumb Pomoć/Posebna Vezanja za više informacija</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation>Gumbi Lica</translation>
+      <translation>Tipke Lica</translation>
     </message>
     <message>
       <source>Triangle</source>
@@ -1607,13 +1607,13 @@ sam izvještaj ne bi postao nevaljan:</translation>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation>Ne mogu vezat ni niti jedan unos više odjedanput. Dvostruki unosi mapirani na sljedeće gumbe:
+      <translation>Ne mogu vezat niti jedan unos više odjedanput. Dvostruki unosi mapirani na sljedeće gumbe:
 
 %1</translation>
     </message>
     <message>
       <source>Press a key</source>
-      <translation>Pritisni gumb</translation>
+      <translation>Pritisnite gumb</translation>
     </message>
     <message>
       <source>Cannot set mapping</source>
@@ -1621,7 +1621,7 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>Mousewheel cannot be mapped to stick outputs</source>
-      <translation>Kotačić miša se ne može vezat kao izlaze na palici</translation>
+      <translation>Kotačić miša se ne može vezat kao izlazi na palici</translation>
     </message>
   </context>
   <context>
@@ -2583,7 +2583,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation>Uvijek Prikaži Zapisnik Promjena</translation>
+      <translation>Uvijek Prikaži Dnevnik Izmjena</translation>
     </message>
     <message>
       <source>Check for Updates</source>
@@ -3370,7 +3370,7 @@ To će ukloniti sve igri-specifične postavke.</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation>Uvijek Prikaži Zapisnik</translation>
+      <translation>Uvijek Prikaži Dnevnik Izmjena</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
@@ -3515,15 +3515,15 @@ To će ukloniti sve igri-specifične postavke.</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation>Prikaži Zapisnik</translation>
+      <translation>Prikaži Dnevnik Izmjena</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation>Sakrij Zapisnik</translation>
+      <translation>Sakrij Dnevnik Izmjena</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation>Mrežna pogreška prilikom preuzimanja zapisnika</translation>
+      <translation>Mrežna pogreška prilikom preuzimanja dnevnika izmjena</translation>
     </message>
     <message>
       <source>Changes</source>
