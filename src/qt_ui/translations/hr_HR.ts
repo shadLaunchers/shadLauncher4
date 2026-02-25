@@ -368,11 +368,11 @@ preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici
     </message>
     <message>
       <source>Default Gamepad</source>
-      <translation>Glavni Kontroler</translation>
+      <translation>Zadani Kontroler</translation>
     </message>
     <message>
       <source>No default selected</source>
-      <translation>Nije izabran glavni kontroler</translation>
+      <translation>Nije izabran zadani kontroler</translation>
     </message>
     <message>
       <source>n/a</source>
@@ -380,11 +380,11 @@ preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation>Postavi Aktivni Kontroler kao Glavni</translation>
+      <translation>Postavi Aktivni Kontroler kao Zadani</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation>Ukloni Glavni Kontroler</translation>
+      <translation>Ukloni Zadani Kontroler</translation>
     </message>
     <message>
       <source>Options</source>
@@ -472,7 +472,7 @@ preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>Vrati Tvorničke Postavke</translation>
+      <translation>Vrati Zadane Postavke</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -484,19 +484,19 @@ preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici
     </message>
     <message>
       <source>Default Controller Selected</source>
-      <translation>Glavni Kontroler Izabran</translation>
+      <translation>Zadani Kontroler Izabran</translation>
     </message>
     <message>
       <source>Active controller set as default</source>
-      <translation>Aktivni kontroler postavljen kao glavni</translation>
+      <translation>Aktivni kontroler postavljen kao zadani</translation>
     </message>
     <message>
       <source>Default Controller Removed</source>
-      <translation>Glavni Kontroler Uklonjen</translation>
+      <translation>Zadani Kontroler Uklonjen</translation>
     </message>
     <message>
       <source>Default controller setting removed</source>
-      <translation>Postavke glavnog kontrolera uklonjene</translation>
+      <translation>Postavke zadanog kontrolera uklonjene</translation>
     </message>
     <message>
       <source>Unable to Save</source>
@@ -767,7 +767,7 @@ Molimo unesite vlastite ključeve i spremite ih.</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation>Želite li resetirati vaše proizvoljne postavke na tvorničke postavke?</translation>
+      <translation>Želite li resetirati vaše proizvoljne postavke na zadane postavke?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
@@ -873,7 +873,7 @@ Molimo unesite vlastite ključeve i spremite ih.</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation>Pregled</translation>
+      <translation>Potraži</translation>
     </message>
     <message>
       <source>Error</source>
@@ -1387,7 +1387,7 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>Povrati Tvorničke Postavke</translation>
+      <translation>Povrati Zadane Postavke</translation>
     </message>
     <message>
       <source>Unable to Save</source>
@@ -1577,7 +1577,7 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>Vrati Tvorničke Postavke</translation>
+      <translation>Vrati Zadane Postavke</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -2267,7 +2267,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Browse...</source>
-      <translation>Pregled...</translation>
+      <translation>Potraži...</translation>
     </message>
     <message>
       <source>Delete PKG files after successful installation</source>
@@ -2771,7 +2771,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation>Pregled</translation>
+      <translation>Potraži</translation>
     </message>
     <message>
       <source>Home Path</source>
@@ -2991,7 +2991,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Vrati Zadane Postavke</translation>
     </message>
     <message>
       <source>Are you sure you want to restore all settings to their default values?</source>
@@ -3075,7 +3075,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>Dimensions Toypad</translation>
     </message>
     <message>
       <source>None</source>
@@ -3164,355 +3164,354 @@ To će ukloniti sve igri-specifične postavke.</translation>
     </message>
     <message>
       <source>Remove Folder:\nRemove the selected folder from the list of game installation folders.</source>
-      <translation type="unfinished">Remove Folder:\nRemove the selected folder from the list of game installation folders.</translation>
+      <translation>Ukloni mapu:\nUkloni izabranu mapu s liste mapa za instalaciju igara.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>DLC Putanja:\nMapa iz koje se DLC igre učitava.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
+      <translation>Potraži:\nPotraži mapu za postavljanje u DLC putanju.</translation>
     </message>
     <message>
       <source>Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</source>
-      <translation type="unfinished">Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</translation>
+      <translation>Kućna mapa:\nMapa gdje emulator pohranjuje korisničke podatke kao datoteke spremanja i trofeje.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the Home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the Home folder.</translation>
+      <translation>Potraži:\nPotraži mapu za postavljanje u Kućnu mapu.</translation>
     </message>
     <message>
       <source>System Modules Folder:\nThe folder where system modules are loaded from.</source>
-      <translation type="unfinished">System Modules Folder:\nThe folder where system modules are loaded from.</translation>
+      <translation>Mapa Sistemskih Modula:\nMapa iz koje se učitavaju sistemski moduli.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Modules folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the System Modules folder.</translation>
+      <translation>Potraži:\nPotraži mapu za postavljanje u mapu Sistemskih modula.</translation>
     </message>
     <message>
       <source>Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</source>
-      <translation type="unfinished">Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</translation>
+      <translation>Dubina Skeniranja Mapa:\nPostavi maksimalnu dubinu tijekom skeniranja igri u izabranim mapama igri.\n1 znači jedna razina podmapa je skenirana, itd.</translation>
     </message>
     <message>
       <source>Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</source>
-      <translation type="unfinished">Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</translation>
+      <translation>Prikaži Početni Ekran:\nPrikazuje početni ekran igre (posebnu sliku) za vrijeme pokretanja igre.</translation>
     </message>
     <message>
       <source>Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</source>
-      <translation type="unfinished">Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</translation>
+      <translation>Onemogući Pop-upove Trofeja:\nOnemogućavanje obavijesti o trofejima unutar igre. Napredak uz Trofeje se još može pratit korištenjem Preglednika Trofeja (desni-klik na glavni prozor igre).</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation type="unfinished">Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</translation>
+      <translation>Glasnoća:\nPodešavanje glasnoće za igre na globalnoj razini, raspon se kreće od 0-500% uz zadanu vrijednost od 100%.</translation>
     </message>
     <message>
       <source>System Fonts Folder:\nThe folder where system fonts are loaded from.</source>
-      <translation type="unfinished">System Fonts Folder:\nThe folder where system fonts are loaded from.</translation>
+      <translation>Mapa Sistemskih Fontova:\nMapa iz koje se sistemski fontovi učitavaju.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Fonts folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the System Fonts folder.</translation>
+      <translation>Potraži:\nPotraži mapu za postavljanje u mapu Sistemskih Fontova.</translation>
     </message>
   </context>
   <context>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>Upravitelj Korisnika</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>&amp;Kreiraj Korisnika</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;Izbriši Korisnika</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;Preimenuj Korisnika</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;Postavi Zadanog Korisnika</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;Postavi boju</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;Postavi Port Kontrolera</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;Zatvori</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>Nije moguće dodat više korisnika.</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>Kreiraj Novog Korisnika</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>ID Novog Korisnika: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>Korisničko Ime (3–16 znakova, slova, brojevi, _, -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>Nevaljano korisničko ime</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+      <translation>Korisničko Ime mora sadržavati valjanih 3–16 znakova.</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
-      <translation type="unfinished">Delete Confirmation</translation>
+      <translation>Izbrisati Potvrde</translation>
     </message>
     <message>
       <source>Delete user ID %1?</source>
-      <translation type="unfinished">Delete user ID %1?</translation>
+      <translation>Obriši korisnički ID %1?</translation>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>Preimenuj Korisnika</translation>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>Staro Korisničko Ime: %1</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>Postavi Korisničku Boju</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>Izaberi boju:</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>Postavi Port Kontrolera</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>Dodijeli port(1-4) ovom korisniku:</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;Otvori Korisničku Mapu</translation>
     </message>
   </context>
   <context>
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Upravitelj Verzija</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>Putanja za spremanje verzija</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Potraži</translation>
     </message>
     <message>
       <source>Installed</source>
-      <translation type="unfinished">Installed</translation>
+      <translation>Instalirano</translation>
     </message>
     <message>
       <source>Selected</source>
-      <translation type="unfinished">Selected</translation>
+      <translation>Odabrano</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Verzija</translation>
     </message>
     <message>
       <source>Codename</source>
-      <translation type="unfinished">Codename</translation>
+      <translation>Radni naziv</translation>
     </message>
     <message>
       <source>Date</source>
-      <translation type="unfinished">Date</translation>
+      <translation>Datum</translation>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation type="unfinished">Add Custom</translation>
+      <translation>Dodaj Proizvoljno</translation>
     </message>
     <message>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Izbriši</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation type="unfinished">Refresh List</translation>
+      <translation>Osvježi Listu</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation type="unfinished">Download</translation>
+      <translation>Preuzmi</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+      <translation>Provjeri za ažuracije Pred-izdanja prilikom pokretanja</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Uvijek Prikaži Zapisnik</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation type="unfinished">Check for Pre-release Updates</translation>
+      <translation>Provjeri za Ažuriranja Pred-izdanja</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>Odaberi mapu u koju će se instalirat verzije emulatora</translation>
     </message>
     <message>
       <source>Select executable</source>
-      <translation type="unfinished">Select executable</translation>
+      <translation>Izaberi Izvršnu datoteku</translation>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation type="unfinished">Executable (*.exe)</translation>
+      <translation>Izvršna datoteka (*.exe)</translation>
     </message>
     <message>
       <source>Version name</source>
-      <translation type="unfinished">Version name</translation>
+      <translation>Naziv Verzije</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>Unesite naziv ove verzije prema tome kako se pojavi na listi.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>A version with that name already exists.</source>
-      <translation type="unfinished">A version with that name already exists.</translation>
+      <translation>Verzija s time imenom već postoji.</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Lokalno</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Uspjeh</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Nijedna verzije nije odabrana. Molimo izaberite jednu s liste za brisanje.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation type="unfinished">Failed to determine the folder path.</translation>
+      <translation>Neuspješna procjena putanje mape.</translation>
     </message>
     <message>
       <source>Delete version</source>
-      <translation type="unfinished">Delete version</translation>
+      <translation>Obriši verziju</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation type="unfinished">Do you want to delete the version</translation>
+      <translation>Želite li obrisati verziju</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>Neuspješno procjenjivanje mape za uklanjanje.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Neuspješno brisanje mape.</translation>
     </message>
     <message>
       <source>Checking for new emulator versions...</source>
-      <translation type="unfinished">Checking for new emulator versions...</translation>
+      <translation>Provjeravanje novih verzija emulatora...</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>Najprije trebate izabrati lokaciju spremanja u &apos;Putanja spremanja verzija&apos;</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>Potvrdite Preuzimanje</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation type="unfinished">Do you want to download the version</translation>
+      <translation>Želite li preuzeti verziju</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation type="unfinished">No files available for this platform.</translation>
+      <translation>Nema datoteka dostupnih za ovu platformu.</translation>
     </message>
     <message>
       <source>Downloading</source>
-      <translation type="unfinished">Downloading</translation>
+      <translation>Preuzimanje</translation>
     </message>
     <message>
       <source>Error accessing GitHub</source>
-      <translation type="unfinished">Error accessing GitHub</translation>
+      <translation>Greška u pristupu GitHubu</translation>
     </message>
     <message>
       <source>Cannot open cache file</source>
-      <translation type="unfinished">Cannot open cache file</translation>
+      <translation>Ne mogu otvoriti cache datoteku</translation>
     </message>
     <message>
       <source>Cache file is corrupted</source>
-      <translation type="unfinished">Cache file is corrupted</translation>
+      <translation>Cache datoteka je oštećena</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+      <translation>GitHub API odgovor nije valjano JSON polje.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>Neuspješno preuzimanje hash zadnjeg pred-izdanja.</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
-      <translation type="unfinished">Auto Updater - Emulator</translation>
+      <translation>Auto Aktualizator - Emulator</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation type="unfinished">You already have the latest pre-release version.</translation>
+      <translation>Već imate zadnju verziju pred-izdanja.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
-      <translation type="unfinished">Update Available (Emulator)</translation>
+      <translation>Ažuriranje Dostupno (Emulator)</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Trenutna Verzija</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Zadnja Verzija</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Želite li ažurirat?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Ažuriranje</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Ne</translation>
     </message>
     <message>
       <source>Show Changelog</source>
