@@ -1613,7 +1613,7 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>Press a key</source>
-      <translation type="unfinished">Press a key</translation>
+      <translation>Pritisni gumb</translation>
     </message>
     <message>
       <source>Cannot set mapping</source>
@@ -1621,115 +1621,115 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>Mousewheel cannot be mapped to stick outputs</source>
-      <translation type="unfinished">Mousewheel cannot be mapped to stick outputs</translation>
+      <translation>Kotačić miša se ne može vezat kao izlaze na palici</translation>
     </message>
   </context>
   <context>
     <name>Localized</name>
     <message numerus="yes">
       <source>%Ln day(s)</source>
-      <translation type="unfinished">
-        <numerusform>%Ln day(s)</numerusform>
-        <numerusform>%Ln day(s)</numerusform>
-        <numerusform>%Ln day(s)</numerusform>
+      <translation>
+        <numerusform>%Ln dan</numerusform>
+        <numerusform>%Ln dan(a)</numerusform>
+        <numerusform>%Ln dan(a)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%Ln hour(s)</source>
-      <translation type="unfinished">
-        <numerusform>%Ln hour(s)</numerusform>
-        <numerusform>%Ln hour(s)</numerusform>
-        <numerusform>%Ln hour(s)</numerusform>
+      <translation>
+        <numerusform>%Ln sat</numerusform>
+        <numerusform>%Ln sat(i)</numerusform>
+        <numerusform>%Ln sat(i)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%Ln minute(s)</source>
-      <translation type="unfinished">
-        <numerusform>%Ln minute(s)</numerusform>
-        <numerusform>%Ln minute(s)</numerusform>
-        <numerusform>%Ln minute(s)</numerusform>
+      <translation>
+        <numerusform>%Ln minuta</numerusform>
+        <numerusform>%Ln minut(e)</numerusform>
+        <numerusform>%Ln minut(i)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%Ln second(s)</source>
-      <translation type="unfinished">
-        <numerusform>%Ln second(s)</numerusform>
-        <numerusform>%Ln second(s)</numerusform>
-        <numerusform>%Ln second(s)</numerusform>
+      <translation>
+        <numerusform>%Ln sekund(a)</numerusform>
+        <numerusform>%Ln sekund(i)</numerusform>
+        <numerusform>%Ln sekund(i)</numerusform>
       </translation>
     </message>
     <message>
       <source>%0 and %1</source>
       <comment>Days and hours</comment>
-      <translation type="unfinished">%0 and %1</translation>
+      <translation>%0 i %1</translation>
     </message>
     <message>
       <source>%0 and %1</source>
       <comment>Hours and minutes</comment>
-      <translation type="unfinished">%0 and %1</translation>
+      <translation>%0 i %1</translation>
     </message>
     <message>
       <source>%0 and %1</source>
       <comment>Minutes and seconds</comment>
-      <translation type="unfinished">%0 and %1</translation>
+      <translation>%0 i %1</translation>
     </message>
   </context>
   <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation type="unfinished">Log Filter Presets</translation>
+      <translation>Pretpostavke Filtera Zapisnika</translation>
     </message>
     <message>
       <source>Comment</source>
-      <translation type="unfinished">Comment</translation>
+      <translation>Komentar</translation>
     </message>
     <message>
       <source>Filter</source>
-      <translation type="unfinished">Filter</translation>
+      <translation>Filtar</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Učitaj</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Zatvori</translation>
     </message>
     <message>
       <source>Add a new preset after the selected row</source>
-      <translation type="unfinished">Add a new preset after the selected row</translation>
+      <translation>Dodaj novu pretpostavku nakon odabranog retka</translation>
     </message>
     <message>
       <source>Remove selected presets</source>
-      <translation type="unfinished">Remove selected presets</translation>
+      <translation>Ukloni izabrane pretpostavke</translation>
     </message>
     <message>
       <source>Load the selected preset</source>
-      <translation type="unfinished">Load the selected preset</translation>
+      <translation>Učitaj izabrane pretpostavke</translation>
     </message>
   </context>
   <context>
     <name>MainWindow</name>
     <message>
       <source>Search...</source>
-      <translation type="unfinished">Search...</translation>
+      <translation>Pretraži...</translation>
     </message>
     <message>
       <source>File</source>
-      <translation type="unfinished">File</translation>
+      <translation>Datoteka</translation>
     </message>
     <message>
       <source>Emulation</source>
-      <translation type="unfinished">Emulation</translation>
+      <translation>Emulacija</translation>
     </message>
     <message>
       <source>Configuration</source>
-      <translation type="unfinished">Configuration</translation>
+      <translation>Konfiguracija</translation>
     </message>
     <message>
       <source>Manage</source>
-      <translation type="unfinished">Manage</translation>
+      <translation>Upravljanje</translation>
     </message>
     <message>
       <source>Utilities</source>
@@ -1929,7 +1929,7 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>About shadLauncher4</source>
-      <translation type="unfinished">About shadLauncher4</translation>
+      <translation>O shadLauncher4-u</translation>
     </message>
     <message>
       <source>Export GameList</source>
@@ -1937,99 +1937,99 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>General</source>
-      <translation type="unfinished">General</translation>
+      <translation>Općenito</translation>
     </message>
     <message>
       <source>Graphics</source>
-      <translation type="unfinished">Graphics</translation>
+      <translation>Grafika</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>Unos</translation>
     </message>
     <message>
       <source>Paths</source>
-      <translation type="unfinished">Paths</translation>
+      <translation>Putanje</translation>
     </message>
     <message>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Debug</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>Eksperimentalno</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Zapisnik</translation>
     </message>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Upravitelj Kripto Ključeva</translation>
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Upravitelj Verzija</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Ništa</translation>
     </message>
     <message>
       <source>Install Packages (PKG)</source>
-      <translation type="unfinished">Install Packages (PKG)</translation>
+      <translation>Instaliranje Paketa (PKG)</translation>
     </message>
     <message>
       <source>Install application from a .pkg file</source>
-      <translation type="unfinished">Install application from a .pkg file</translation>
+      <translation>Instaliranje aplikacije iz .pkg datoteke</translation>
     </message>
     <message>
       <source>PKG File (*.PKG *.pkg)</source>
-      <translation type="unfinished">PKG File (*.PKG *.pkg)</translation>
+      <translation>PKG Datoteka (*.PKG *.pkg)</translation>
     </message>
     <message>
       <source>PKG ERROR</source>
-      <translation type="unfinished">PKG ERROR</translation>
+      <translation>PKG GREŠKA</translation>
     </message>
     <message>
       <source>PKG Extraction</source>
-      <translation type="unfinished">PKG Extraction</translation>
+      <translation>PKG Izvoz</translation>
     </message>
     <message>
       <source>Patch detected!</source>
-      <translation type="unfinished">Patch detected!</translation>
+      <translation>Zakrpa detektirana!</translation>
     </message>
     <message>
       <source>PKG and Game versions match: </source>
-      <translation type="unfinished">PKG and Game versions match: </translation>
+      <translation>PKG i verzije Igre odgovaraju: </translation>
     </message>
     <message>
       <source>Would you like to overwrite?</source>
-      <translation type="unfinished">Would you like to overwrite?</translation>
+      <translation>Želite li spremiti preko postojeće datoteke?</translation>
     </message>
     <message>
       <source>PKG Version %1 is older than installed version: </source>
-      <translation type="unfinished">PKG Version %1 is older than installed version: </translation>
+      <translation>PKG Verzija %1 je starija od instalirane verzije: </translation>
     </message>
     <message>
       <source>Game is installed: </source>
-      <translation type="unfinished">Game is installed: </translation>
+      <translation>Igra je instalirana: </translation>
     </message>
     <message>
       <source>Would you like to install Patch: </source>
-      <translation type="unfinished">Would you like to install Patch: </translation>
+      <translation>Želite li instalirati Zakrpu: </translation>
     </message>
     <message>
       <source>DLC Installation</source>
-      <translation type="unfinished">DLC Installation</translation>
+      <translation>DLC Instalacija</translation>
     </message>
     <message>
       <source>Would you like to install DLC: %1?</source>
-      <translation type="unfinished">Would you like to install DLC: %1?</translation>
+      <translation>Želite li instalirati DLC: %1?</translation>
     </message>
     <message>
       <source>DLC already installed:</source>
-      <translation type="unfinished">DLC already installed:</translation>
+      <translation>DLC je već instaliran:</translation>
     </message>
     <message>
       <source>Game already installed</source>
