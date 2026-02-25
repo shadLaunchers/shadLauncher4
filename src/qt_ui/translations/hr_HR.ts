@@ -716,137 +716,137 @@ Molimo unesite vlastite ključeve i spremite ih.</translation>
     </message>
     <message>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Prekini</translation>
     </message>
     <message>
       <source>Local file missing after 304.</source>
-      <translation type="unfinished">Local file missing after 304.</translation>
+      <translation>Lokalna datoteka nedostaje nakon 304.</translation>
     </message>
     <message>
       <source>Unknown network error</source>
-      <translation type="unfinished">Unknown network error</translation>
+      <translation>Nepoznata mrežna pogreška</translation>
     </message>
     <message>
       <source>Cannot write output file.</source>
-      <translation type="unfinished">Cannot write output file.</translation>
+      <translation>Nemoguće pisati u izlaznu datoteku.</translation>
     </message>
   </context>
   <context>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
-      <translation type="unfinished">Edit Keyboard + Mouse and Controller input bindings</translation>
+      <translation>Uredi Tipkovnica + Miš i Kontroler unose mapiranja</translation>
     </message>
     <message>
       <source>Use Per-Game configs</source>
-      <translation type="unfinished">Use Per-Game configs</translation>
+      <translation>Koristi Po-Igri konfiguracije</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Could not open the file for reading</source>
-      <translation type="unfinished">Could not open the file for reading</translation>
+      <translation>Nije moguće otvoriti datoteku za čitanje</translation>
     </message>
     <message>
       <source>Could not open the file for writing</source>
-      <translation type="unfinished">Could not open the file for writing</translation>
+      <translation>Nije moguće otvoriti datoteku za pisanje</translation>
     </message>
     <message>
       <source>Save Changes</source>
-      <translation type="unfinished">Save Changes</translation>
+      <translation>Spremi Izmjene</translation>
     </message>
     <message>
       <source>Do you want to save changes?</source>
-      <translation type="unfinished">Do you want to save changes?</translation>
+      <translation>Želite li spremiti izmjene?</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Pomoć</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation type="unfinished">Do you want to reset your custom default config to the original default config?</translation>
+      <translation>Želite li resetirati vaše proizvoljne postavke na tvorničke postavke?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
-      <translation type="unfinished">Do you want to reset this config to your custom default config?</translation>
+      <translation>Želite li resetirat ovu konfiguraciju na vlastitu proizvoljnu konfiguraciju?</translation>
     </message>
     <message>
       <source>Reset to Default</source>
-      <translation type="unfinished">Reset to Default</translation>
+      <translation>Resetiraj na Tvorničke postavke</translation>
     </message>
   </context>
   <context>
     <name>GameCompatibility</name>
     <message>
       <source>Playable</source>
-      <translation type="unfinished">Playable</translation>
+      <translation>Igrivo</translation>
     </message>
     <message>
       <source>Games that can be run without any major issues</source>
-      <translation type="unfinished">Games that can be run without any major issues</translation>
+      <translation>Igre koje se mogu pokrenut bez većih poteškoća</translation>
     </message>
     <message>
       <source>Ingame</source>
-      <translation type="unfinished">Ingame</translation>
+      <translation>Ingame</translation>
     </message>
     <message>
       <source>Games that can reach gameplay but have issues</source>
-      <translation type="unfinished">Games that can reach gameplay but have issues</translation>
+      <translation>Igre koje su igrive no uz poteškoće</translation>
     </message>
     <message>
       <source>Menus</source>
-      <translation type="unfinished">Menus</translation>
+      <translation>Izbornici</translation>
     </message>
     <message>
       <source>Games that can reach the menu but freeze/crash when trying to proceed further</source>
-      <translation type="unfinished">Games that can reach the menu but freeze/crash when trying to proceed further</translation>
+      <translation>Igre koje je moguće pokrenut do izbornika no ne bez smrzavanja/rušenja nakon</translation>
     </message>
     <message>
       <source>Boots</source>
-      <translation type="unfinished">Boots</translation>
+      <translation>Pokretljivo</translation>
     </message>
     <message>
       <source>Games that show any visual/audio output but freeze/crash before reaching the menu</source>
-      <translation type="unfinished">Games that show any visual/audio output but freeze/crash before reaching the menu</translation>
+      <translation>Igre koje pokazuju bilo koji vizualni/audio znak no smrznu/sruše prije prikaza izbornika</translation>
     </message>
     <message>
       <source>Nothing</source>
-      <translation type="unfinished">Nothing</translation>
+      <translation>Ništa</translation>
     </message>
     <message>
       <source>Games that crash when trying to launch or only show a black screen</source>
-      <translation type="unfinished">Games that crash when trying to launch or only show a black screen</translation>
+      <translation>Igre koje se sruše prilikom pokretanja ili samo pokažu crni ekran</translation>
     </message>
     <message>
       <source>No results found</source>
-      <translation type="unfinished">No results found</translation>
+      <translation>Nema pronađenih rezultata</translation>
     </message>
     <message>
       <source>There is no entry for this game or application in the compatibility database yet.</source>
-      <translation type="unfinished">There is no entry for this game or application in the compatibility database yet.</translation>
+      <translation>Nema još unosa za ovu igru u bazi kompatibilnosti.</translation>
     </message>
     <message>
       <source>Database missing</source>
-      <translation type="unfinished">Database missing</translation>
+      <translation>Baza nedostaje</translation>
     </message>
     <message>
       <source>Retrieving...</source>
-      <translation type="unfinished">Retrieving...</translation>
+      <translation>Preuzimam...</translation>
     </message>
     <message>
       <source>Downloading the compatibility database. Please wait...</source>
-      <translation type="unfinished">Downloading the compatibility database. Please wait...</translation>
+      <translation>Preuzimanje baze kompatibilnosti. Molim pričekajte...</translation>
     </message>
     <message>
       <source>Downloading Compatibility Database</source>
-      <translation type="unfinished">Downloading Compatibility Database</translation>
+      <translation>Preuzimanje baze kompatibilnosti</translation>
     </message>
     <message>
       <source>Error Downloading Compatibility Database</source>
-      <translation type="unfinished">Error Downloading Compatibility Database</translation>
+      <translation>Greška Preuzimanja Baze Kompatibilnosti</translation>
     </message>
     <message>
       <source>Right click here and choose Compatibility -&gt; Update Database.</source>
@@ -1056,7 +1056,7 @@ Molimo unesite vlastite ključeve i spremite ih.</translation>
     </message>
     <message>
       <source>&amp;Hide From Game List</source>
-      <translation>&amp;Sakrij Od Liste Igara</translation>
+      <translation>&amp;Sakrij s Liste Igara</translation>
     </message>
     <message>
       <source>&amp;Add/Edit Tooltip Notes</source>
@@ -1222,127 +1222,128 @@ Koristim lokalnu bazu.
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Neuspješno podnošenje izvještaja, jer je zadnji zapisnik igre pao na dotičnoj provjeri, kako 
+sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Ok</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Informacije</translation>
     </message>
     <message>
       <source>&amp;Change Custom Configuration</source>
-      <translation type="unfinished">&amp;Change Custom Configuration</translation>
+      <translation>&amp;Promijeni Proizvoljnu Konfiguraciju</translation>
     </message>
     <message>
       <source>&amp;Create Custom Configuration From Global Settings</source>
-      <translation type="unfinished">&amp;Create Custom Configuration From Global Settings</translation>
+      <translation>&amp;Promijeni Proizvoljnu Konfiguraciju iz Globalnih Postavki</translation>
     </message>
     <message>
       <source>&amp;Remove Custom Configuration</source>
-      <translation type="unfinished">&amp;Remove Custom Configuration</translation>
+      <translation>&amp;Ukloni Proizvoljnu Konfiguraciju</translation>
     </message>
   </context>
   <context>
     <name>GameListGrid</name>
     <message>
       <source>Notes:</source>
-      <translation type="unfinished">Notes:</translation>
+      <translation>Zabilješke:</translation>
     </message>
   </context>
   <context>
     <name>GameListTable</name>
     <message>
       <source>Unknown</source>
-      <translation type="unfinished">Unknown</translation>
+      <translation>Nepoznato</translation>
     </message>
     <message>
       <source>Never played</source>
-      <translation type="unfinished">Never played</translation>
+      <translation>Nikada igrano</translation>
     </message>
     <message>
       <source>Japan</source>
-      <translation type="unfinished">Japan</translation>
+      <translation>Japan</translation>
     </message>
     <message>
       <source>Europe</source>
-      <translation type="unfinished">Europe</translation>
+      <translation>Europa</translation>
     </message>
     <message>
       <source>USA</source>
-      <translation type="unfinished">USA</translation>
+      <translation>Sjedinjene Američke Države</translation>
     </message>
     <message>
       <source>Asia</source>
-      <translation type="unfinished">Asia</translation>
+      <translation>Azija</translation>
     </message>
     <message>
       <source>World</source>
-      <translation type="unfinished">World</translation>
+      <translation>Svijet</translation>
     </message>
     <message>
       <source>Last updated</source>
-      <translation type="unfinished">Last updated</translation>
+      <translation>Zadnje Ažurirano</translation>
     </message>
     <message>
       <source>Notes:</source>
-      <translation type="unfinished">Notes:</translation>
+      <translation>Bilješke:</translation>
     </message>
   </context>
   <context>
     <name>HelpDialog</name>
     <message>
       <source>Quickstart</source>
-      <translation type="unfinished">Quickstart</translation>
+      <translation>Brzi vodič</translation>
     </message>
     <message>
       <source>Syntax</source>
-      <translation type="unfinished">Syntax</translation>
+      <translation>Sintaksa</translation>
     </message>
     <message>
       <source>Keybindings</source>
-      <translation type="unfinished">Keybindings</translation>
+      <translation>Tipkovničke kratice</translation>
     </message>
     <message>
       <source>Special Bindings</source>
-      <translation type="unfinished">Special Bindings</translation>
+      <translation>Specijalna Vezivanja</translation>
     </message>
     <message>
       <source>FAQ</source>
-      <translation type="unfinished">FAQ</translation>
+      <translation>FAQ</translation>
     </message>
   </context>
   <context>
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation type="unfinished">Customize Hotkeys</translation>
+      <translation>Uredi Kratice</translation>
     </message>
     <message>
       <source>Controller Hotkeys</source>
-      <translation type="unfinished">Controller Hotkeys</translation>
+      <translation>Kratice Kontrolera</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
-      <translation type="unfinished">Show FPS Counter</translation>
+      <translation>Prikaz FPS Brojača</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>nemapirano</translation>
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation type="unfinished">Quit Emulation</translation>
+      <translation>Završi Emulaciju</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>Ponovno Učitaj Mapiranja Gumba</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
-      <translation type="unfinished">Toggle Fullscreen</translation>
+      <translation>Prikaz Preko Cijelog Ekrana</translation>
     </message>
     <message>
       <source>Toggle Pause</source>
@@ -1396,217 +1397,217 @@ Koristim lokalnu bazu.
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Nije moguće vezat jedinstveni unos više odjedanput. Dvostruki unosi mapirani:
 
 %1</translation>
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation type="unfinished">Waiting for inputs</translation>
+      <translation>Čekanje na unos</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Glasnoća Više</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Glasnoća Niže</translation>
     </message>
   </context>
   <context>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Nepronađena izvršna datoteka emulatora</translation>
     </message>
   </context>
   <context>
     <name>KBMSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation type="unfinished">Configure Controls</translation>
+      <translation>Konfiguriraj Kontrole</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>D-Pad</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Gore</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>nemapirano</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Lijevo</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Desno</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>Dolje</translation>
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation type="unfinished">Left Analog Halfmode</translation>
+      <translation>Lijevi Analogni Polumod</translation>
     </message>
     <message>
       <source>hold to move left stick at half-speed</source>
-      <translation type="unfinished">hold to move left stick at half-speed</translation>
+      <translation>pritisnite i pomičite lijevu palicu na pola-brzine</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Lijeva Palica</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>Izbor Konfiguracije</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>Zajednička Konfiguracija</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation type="unfinished">Use per-game configs</translation>
+      <translation>Koristi konfiguracije po-igri</translation>
     </message>
     <message>
       <source>Copy from Common Config</source>
-      <translation type="unfinished">Copy from Common Config</translation>
+      <translation>Kopiranje iz zajedničkih konfiguracija</translation>
     </message>
     <message>
       <source>Text Editor</source>
-      <translation type="unfinished">Text Editor</translation>
+      <translation>Tekstualni Urednik</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Pomoć</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>Opcije</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Postolje Lijevo</translation>
     </message>
     <message>
       <source>Mouse to Joystick</source>
-      <translation type="unfinished">Mouse to Joystick</translation>
+      <translation>Miš na Joystick</translation>
     </message>
     <message>
       <source>*press F7 ingame to activate</source>
-      <translation type="unfinished">*press F7 ingame to activate</translation>
+      <translation>*pritisni F7 unutar igre za aktivaciju</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Postolje Centar</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Postolje Desno</translation>
     </message>
     <message>
       <source>Mouse Movement Parameters</source>
-      <translation type="unfinished">Mouse Movement Parameters</translation>
+      <translation>Miš Parametri Kretanja</translation>
     </message>
     <message>
       <source>Deadzone Offset (def 0.50):</source>
-      <translation type="unfinished">Deadzone Offset (def 0.50):</translation>
+      <translation>Deadzone Offset (def 0,50):</translation>
     </message>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
-      <translation type="unfinished">Speed Multiplier (def 1.0):</translation>
+      <translation>Množitelj Brzine (def 1,0):</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
-      <translation type="unfinished">Speed Offset (def 0.125):</translation>
+      <translation>Brzina Offset(0,125):</translation>
     </message>
     <message>
       <source>note: click Help Button/Special Keybindings for more information</source>
-      <translation type="unfinished">note: click Help Button/Special Keybindings for more information</translation>
+      <translation>bilješka: kliknite Gumb Pomoć/Posebna Vezanja za više informacija</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>Gumbi Lica</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Trokut</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>Kvadrat</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>Krug</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>Križić</translation>
     </message>
     <message>
       <source>Right Analog Halfmode</source>
-      <translation type="unfinished">Right Analog Halfmode</translation>
+      <translation>Desni Analogni Polumod</translation>
     </message>
     <message>
       <source>hold to move right stick at half-speed</source>
-      <translation type="unfinished">hold to move right stick at half-speed</translation>
+      <translation>pritisni za pomak desne palice na pola-brzine</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>Desna Palica</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Pomoć: Odmapiraj unos s desnim-klikom</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Spremi</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Primijeni</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Vrati Tvorničke Postavke</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Poništi</translation>
     </message>
     <message>
       <source>Common Config Selected</source>
-      <translation type="unfinished">Common Config Selected</translation>
+      <translation>Zajednička konfiguracija Izabrana</translation>
     </message>
     <message>
       <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation type="unfinished">This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</translation>
+      <translation>Ovaj gumb kopira mapiranja iz zajedničke Konfiguracije na trenutno izabrani profil, i ne može se koristiti kad je trenutno izabran profil Zajednička Konfiguracija.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
-      <translation type="unfinished">Copy values from Common Config</translation>
+      <translation>Kopiraj vrijednosti iz Zajedničke Konfiguracije</translation>
     </message>
     <message>
       <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
-      <translation type="unfinished">Do you want to overwrite existing mappings with the mappings from the Common Config?</translation>
+      <translation>Želite li prepisati postojeća mapiranja s mapiranjima iz Zajedničke Konfiguracije?</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Ne mogu Spremit</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Ne mogu vezat ni niti jedan unos više odjedanput. Dvostruki unosi mapirani na sljedeće gumbe:
 
 %1</translation>
     </message>
