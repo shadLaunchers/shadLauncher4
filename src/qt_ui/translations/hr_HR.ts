@@ -7,19 +7,19 @@
     <name>ChangelogDialog</name>
     <message>
       <source>Changelog Viewer</source>
-      <translation type="unfinished">Changelog Viewer</translation>
+      <translation>Dnevnik izmjena</translation>
     </message>
     <message>
       <source>Search in changelog...</source>
-      <translation type="unfinished">Search in changelog...</translation>
+      <translation>Traži u dnevniku izmjena...</translation>
     </message>
     <message>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>Kopiraj</translation>
     </message>
     <message>
       <source>Export…</source>
-      <translation type="unfinished">Export…</translation>
+      <translation>Izvoz…</translation>
     </message>
     <message>
       <source>Export Changelog</source>
@@ -32,8 +32,7 @@
     <message>
       <source>Failed to open changelog file:
 %1</source>
-      <translation type="unfinished">Failed to open changelog file:
-%1</translation>
+      <translation>Neuspješno otvaranje datoteke dnevnika izmjena</translation>
     </message>
     <message>
       <source>XML Error</source>
