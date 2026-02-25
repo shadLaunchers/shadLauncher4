@@ -158,27 +158,27 @@ preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici
     </message>
     <message>
       <source>Downloading cheat index...</source>
-      <translation type="unfinished">Downloading cheat index...</translation>
+      <translation>Preuzimanje indeksa šifri...</translation>
     </message>
     <message>
       <source>Selected repository does not support patches.</source>
-      <translation type="unfinished">Selected repository does not support patches.</translation>
+      <translation>Odabrani repozitorij ne podržava zakrpe.</translation>
     </message>
     <message>
       <source>Download Complete</source>
-      <translation type="unfinished">Download Complete</translation>
+      <translation>Preuzimanje Završeno</translation>
     </message>
     <message>
       <source>Downloading patches...</source>
-      <translation type="unfinished">Downloading patches...</translation>
+      <translation>Preuzimanje zakrpi...</translation>
     </message>
     <message>
       <source>Failed to open file:</source>
-      <translation type="unfinished">Failed to open file:</translation>
+      <translation>Neuspješno otvaranje datoteke:</translation>
     </message>
     <message>
       <source>XML ERROR:</source>
-      <translation type="unfinished">XML ERROR:</translation>
+      <translation>XML POGREŠKA:</translation>
     </message>
     <message>
       <source>The game is in version: %1</source>
