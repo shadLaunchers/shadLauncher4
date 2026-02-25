@@ -533,7 +533,7 @@ preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
       <translation>Trofej Ključ: Koristi se za dekripciju trofeja.
-Mora biti valjani heksadecimalni string jednake duljine.</translation>
+Mora biti valjani hex string jednake duljine.</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
@@ -541,178 +541,178 @@ Mora biti valjani heksadecimalni string jednake duljine.</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>Status: Nije učitano</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
+      <translation>Trofej Ključ</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>Eksponent1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>Eksponent2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>Javni Eksponent</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Koeficijent</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>Modulo</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>Prim 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>Prim 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Privatni Eksponent</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>Pseudo Ključevi</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA komponente ključa za pseudo potpisivanje.
+Sva polja moraju bit valjani hex stringovi jednake duljine.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>Debugiraj Rif Ključeve</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA komponente ključa za debug RIF datoteka.
+Sva polja moraju bit valjani hex stringovi jednake duljine.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>Pkg Izvedeni Ključ3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA komponente ključa za paketnu dekripciju.
+Sva polja moraju bit valjani hex stringovi jednake duljine.</translation>
     </message>
     <message>
       <source>Load All Keys</source>
-      <translation type="unfinished">Load All Keys</translation>
+      <translation>Učitaj Sve Ključeve</translation>
     </message>
     <message>
       <source>Save All Keys</source>
-      <translation type="unfinished">Save All Keys</translation>
+      <translation>Spremi Sve Ključeve</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Zatvori</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Upozorenje</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>Nema pronađenih datoteki ključeva ili greška u učitanju.
+Molimo unesite vlastite ključeve i spremite ih.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>Greška u Potvrdi</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Uspješno</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation type="unfinished">Keys saved successfully!</translation>
+      <translation>Ključevi spremljeni uspješno!</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation type="unfinished">Failed to save keys!</translation>
+      <translation>Neuspješno spremanje ključeva!</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>Status: Sva polja prazna</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation type="unfinished">Status: Invalid hex values</translation>
+      <translation>Status: Nevaljane hex vrijednosti</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>Status: Nedovršeno</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>Status: Valjano</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>Nevaljane Datoteke</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>Samo JSON datoteke su podržane.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation type="unfinished">Unable to open file.</translation>
+      <translation>Neuspješno otvaranje datoteke.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>JSON Greška</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>Nevaljani JSON format.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>Ključevi uspješno učitani iz JSON-a!</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>Unesite Ključ Trofeja</translation>
     </message>
     <message>
       <source>Enter %1</source>
-      <translation type="unfinished">Enter %1</translation>
+      <translation>Unesi %1</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+      <translation>Ključ Trofeja sadrži nevaljanu ili ima neparnu duljinu.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+      <translation>%1 sadrži nevaljanu hex ili ima neparnu duljinu.</translation>
     </message>
   </context>
   <context>
     <name>Downloader</name>
     <message>
       <source>Please wait...</source>
-      <translation type="unfinished">Please wait...</translation>
+      <translation>Molim pričekajte...</translation>
     </message>
     <message>
       <source>Abort</source>
@@ -850,375 +850,375 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Right click here and choose Compatibility -&gt; Update Database.</source>
-      <translation type="unfinished">Right click here and choose Compatibility -&gt; Update Database.</translation>
+      <translation>Desni klik ovdje i odabir Kompatibilnost -&gt; Ažuriranje Baze.</translation>
     </message>
   </context>
   <context>
     <name>GameInstallDialog</name>
     <message>
       <source>shadLauncher4 - Choose directory</source>
-      <translation type="unfinished">shadLauncher4 - Choose directory</translation>
+      <translation>shadLauncher4 - Izbor mape</translation>
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Mape s dumpanim igrama</translation>
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Mapa za instalaciju verzija emulatora</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Mapa s igrama</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Pregled</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Directory with DLCs</source>
-      <translation type="unfinished">Directory with DLCs</translation>
+      <translation>Mapa s DLC-ima</translation>
     </message>
     <message>
       <source>Directory with your dumped DLCs</source>
-      <translation type="unfinished">Directory with your dumped DLCs</translation>
+      <translation>Mapa s dumpanim DLC-ima</translation>
     </message>
     <message>
       <source>The chosen location for dumped games is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped games is not valid.</translation>
+      <translation>Izabrana lokacija za dumpane igre nije valjana.</translation>
     </message>
     <message>
       <source>The chosen location for dumped DLCs is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped DLCs is not valid.</translation>
+      <translation>Izabrana lokacija s dumpanim DLC-ima nije valjana.</translation>
     </message>
     <message>
       <source>The DLC dump location could not be created.</source>
-      <translation type="unfinished">The DLC dump location could not be created.</translation>
+      <translation>DLC dump lokaciju nije moguće kreirat.</translation>
     </message>
     <message>
       <source>The location for installing emulator versions is not valid.</source>
-      <translation type="unfinished">The location for installing emulator versions is not valid.</translation>
+      <translation>Lokacija za instalaciju verzija emulatora nije valjana.</translation>
     </message>
     <message>
       <source>The emulator version location could not be created.</source>
-      <translation type="unfinished">The emulator version location could not be created.</translation>
+      <translation>Lokaciju verzija emulatora nije moguće kreirat.</translation>
     </message>
   </context>
   <context>
     <name>GameListFrame</name>
     <message>
       <source>Game List</source>
-      <translation type="unfinished">Game List</translation>
+      <translation>Lista Igara</translation>
     </message>
     <message>
       <source>Icon</source>
-      <translation type="unfinished">Icon</translation>
+      <translation>Ikona</translation>
     </message>
     <message>
       <source>Show Icons</source>
-      <translation type="unfinished">Show Icons</translation>
+      <translation>Prikaz Ikona</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Ime</translation>
     </message>
     <message>
       <source>Show Names</source>
-      <translation type="unfinished">Show Names</translation>
+      <translation>Prikaži Imena</translation>
     </message>
     <message>
       <source>Compatibility</source>
-      <translation type="unfinished">Compatibility</translation>
+      <translation>Kompatibilnost</translation>
     </message>
     <message>
       <source>Show Compatibility</source>
-      <translation type="unfinished">Show Compatibility</translation>
+      <translation>Prikaži Kompatibilnost</translation>
     </message>
     <message>
       <source>Serial</source>
-      <translation type="unfinished">Serial</translation>
+      <translation>Serijski broj</translation>
     </message>
     <message>
       <source>Show Serials</source>
-      <translation type="unfinished">Show Serials</translation>
+      <translation>Prikaži Serijske Brojeve</translation>
     </message>
     <message>
       <source>Region</source>
-      <translation type="unfinished">Region</translation>
+      <translation>Regija</translation>
     </message>
     <message>
       <source>Show Regions</source>
-      <translation type="unfinished">Show Regions</translation>
+      <translation>Prikaži Regije</translation>
     </message>
     <message>
       <source>Firmware</source>
-      <translation type="unfinished">Firmware</translation>
+      <translation>Firmware</translation>
     </message>
     <message>
       <source>Show Firmwares</source>
-      <translation type="unfinished">Show Firmwares</translation>
+      <translation>Prikaži Firmware-e</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Verzija</translation>
     </message>
     <message>
       <source>Show Versions</source>
-      <translation type="unfinished">Show Versions</translation>
+      <translation>Prikaži Verzije</translation>
     </message>
     <message>
       <source>Last Played</source>
-      <translation type="unfinished">Last Played</translation>
+      <translation>Zadnje Igrano</translation>
     </message>
     <message>
       <source>Show Last Played</source>
-      <translation type="unfinished">Show Last Played</translation>
+      <translation>Prikaz Zadnjeg Igranja</translation>
     </message>
     <message>
       <source>Time Played</source>
-      <translation type="unfinished">Time Played</translation>
+      <translation>Duljina Igranja</translation>
     </message>
     <message>
       <source>Show Time Played</source>
-      <translation type="unfinished">Show Time Played</translation>
+      <translation>Prikaz Duljine Igranja</translation>
     </message>
     <message>
       <source>Space On Disk</source>
-      <translation type="unfinished">Space On Disk</translation>
+      <translation>Prostor Na Disku</translation>
     </message>
     <message>
       <source>Show Space On Disk</source>
-      <translation type="unfinished">Show Space On Disk</translation>
+      <translation>Prikaz Prostora Na Disku</translation>
     </message>
     <message>
       <source>Path</source>
-      <translation type="unfinished">Path</translation>
+      <translation>Putanja</translation>
     </message>
     <message>
       <source>Show Paths</source>
-      <translation type="unfinished">Show Paths</translation>
+      <translation>Prikaz Putanja</translation>
     </message>
     <message>
       <source>Loading games</source>
-      <translation type="unfinished">Loading games</translation>
+      <translation>Učitavanje igara</translation>
     </message>
     <message>
       <source>Loading games, please wait...</source>
-      <translation type="unfinished">Loading games, please wait...</translation>
+      <translation>Učitavanje igara, molim pričekajte...</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Poništi</translation>
     </message>
     <message>
       <source>&amp;View Changelog</source>
-      <translation type="unfinished">&amp;View Changelog</translation>
+      <translation>&amp;Pogledaj Dnevnik Izmjena</translation>
     </message>
     <message>
       <source>&amp;Copy Info</source>
-      <translation type="unfinished">&amp;Copy Info</translation>
+      <translation>&amp;Kopiranje Informacija</translation>
     </message>
     <message>
       <source>&amp;Copy Name + Serial</source>
-      <translation type="unfinished">&amp;Copy Name + Serial</translation>
+      <translation>&amp;Kopiranje Imena + Serijski Broj</translation>
     </message>
     <message>
       <source>&amp;Copy Name</source>
-      <translation type="unfinished">&amp;Copy Name</translation>
+      <translation>&amp;Kopiraj Ime</translation>
     </message>
     <message>
       <source>&amp;Copy Serial</source>
-      <translation type="unfinished">&amp;Copy Serial</translation>
+      <translation>&amp;Kopiraj Serijski Broj</translation>
     </message>
     <message>
       <source>&amp;Compatibility</source>
-      <translation type="unfinished">&amp;Compatibility</translation>
+      <translation>&amp;Kompatibilnost</translation>
     </message>
     <message>
       <source>&amp;View Report</source>
-      <translation type="unfinished">&amp;View Report</translation>
+      <translation>&amp;Vidi Izvještaj</translation>
     </message>
     <message>
       <source>&amp;Submit Report</source>
-      <translation type="unfinished">&amp;Submit Report</translation>
+      <translation>&amp;Podnesi Izvještaj</translation>
     </message>
     <message>
       <source>&amp;Update Database</source>
-      <translation type="unfinished">&amp;Update Database</translation>
+      <translation>&amp;Ažuriraj Bazu</translation>
     </message>
     <message>
       <source>&amp;Manage Game</source>
-      <translation type="unfinished">&amp;Manage Game</translation>
+      <translation>&amp;Upravljanje Igrom</translation>
     </message>
     <message>
       <source>&amp;Hide From Game List</source>
-      <translation type="unfinished">&amp;Hide From Game List</translation>
+      <translation>&amp;Sakrij Od Liste Igara</translation>
     </message>
     <message>
       <source>&amp;Add/Edit Tooltip Notes</source>
-      <translation type="unfinished">&amp;Add/Edit Tooltip Notes</translation>
+      <translation>&amp;Dodaj/Uredi Tooltip Zabilješke</translation>
     </message>
     <message>
       <source>Edit Tooltip Notes</source>
-      <translation type="unfinished">Edit Tooltip Notes</translation>
+      <translation>Uredi Tooltip Zabilješke</translation>
     </message>
     <message>
       <source>Warning!</source>
-      <translation type="unfinished">Warning!</translation>
+      <translation>Upozorenje!</translation>
     </message>
     <message>
       <source>Failed to retrieve the online compatibility database!
 Using local database.
 
 %0</source>
-      <translation type="unfinished">Failed to retrieve the online compatibility database!
-Using local database.
+      <translation>Neuspješno zaprimanje online baze kompatibilnosti!
+Koristim lokalnu bazu.
 
 %0</translation>
     </message>
     <message>
       <source>No Report Available</source>
-      <translation type="unfinished">No Report Available</translation>
+      <translation>Nema Dostupnog Izvještaja</translation>
     </message>
     <message>
       <source>There is no compatibility report available for this game.</source>
-      <translation type="unfinished">There is no compatibility report available for this game.</translation>
+      <translation>Nema izvještaja o kompatibilnosti dostupnih za ovu igru.</translation>
     </message>
     <message>
       <source>&amp;Open Folder</source>
-      <translation type="unfinished">&amp;Open Folder</translation>
+      <translation>&amp;Otvori Mapu</translation>
     </message>
     <message>
       <source>&amp;Open Game Folder</source>
-      <translation type="unfinished">&amp;Open Game Folder</translation>
+      <translation>&amp;Otvori Mapu Igre</translation>
     </message>
     <message>
       <source>&amp;Open Update Folder</source>
-      <translation type="unfinished">&amp;Open Update Folder</translation>
+      <translation>&amp;Otvori Mapu Ažuriranja</translation>
     </message>
     <message>
       <source>&amp;Open Log Folder</source>
-      <translation type="unfinished">&amp;Open Log Folder</translation>
+      <translation>&amp;Otvori Mapu Zapisnika</translation>
     </message>
     <message>
       <source>Log Not Found</source>
-      <translation type="unfinished">Log Not Found</translation>
+      <translation>Zapisnik nije pronađen</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
-      <translation type="unfinished">No log file found for this game!</translation>
+      <translation>Nema pronađenog zapisnika za ovu igru!</translation>
     </message>
     <message>
       <source>Open Log Folder</source>
-      <translation type="unfinished">Open Log Folder</translation>
+      <translation>Otvori Mapu Zapisnika</translation>
     </message>
     <message>
       <source>&amp;SFO viewer</source>
-      <translation type="unfinished">&amp;SFO viewer</translation>
+      <translation>&amp;SFO preglednik</translation>
     </message>
     <message>
       <source>&amp;npbind.dat viewer</source>
-      <translation type="unfinished">&amp;npbind.dat viewer</translation>
+      <translation>&amp;npbind.dat preglednik</translation>
     </message>
     <message>
       <source>&amp;Trophy Viewer</source>
-      <translation type="unfinished">&amp;Trophy Viewer</translation>
+      <translation>&amp;Preglednik Trofeja</translation>
     </message>
     <message>
       <source>&amp;Cheats &amp; Patches</source>
-      <translation type="unfinished">&amp;Cheats &amp; Patches</translation>
+      <translation>&amp;Šifre i Zakrpe</translation>
     </message>
     <message>
       <source>Game</source>
-      <translation type="unfinished">Game</translation>
+      <translation>Igra</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>This game has no update to delete!</source>
-      <translation type="unfinished">This game has no update to delete!</translation>
+      <translation>Igra nema ažuriranja za brisanje!</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Ažuriraj</translation>
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation type="unfinished">This game has no DLC to delete!</translation>
+      <translation>Ova igra nema DLC za brisanje!</translation>
     </message>
     <message>
       <source>DLC</source>
-      <translation type="unfinished">DLC</translation>
+      <translation>DLC</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
-      <translation type="unfinished">This game has no save data to delete!</translation>
+      <translation>Ova igra nema podataka o spremanju za obrisati!</translation>
     </message>
     <message>
       <source>Save Data</source>
-      <translation type="unfinished">Save Data</translation>
+      <translation>Spremi Podatke</translation>
     </message>
     <message>
       <source>This game has no Shader Cache to delete!</source>
-      <translation type="unfinished">This game has no Shader Cache to delete!</translation>
+      <translation>Ova igra nema Shader Cache za brisanje!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Shader Cache</translation>
     </message>
     <message>
       <source>Shader cache deleted successfully.</source>
-      <translation type="unfinished">Shader cache deleted successfully.</translation>
+      <translation>Shader cache izbrisan uspješno.</translation>
     </message>
     <message>
       <source>Delete %1</source>
-      <translation type="unfinished">Delete %1</translation>
+      <translation>Izbriši %1</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s %2 directory?</translation>
+      <translation>Jeste li sigurni da želite izbrisat %1 %2 mapu?</translation>
     </message>
     <message>
       <source>&amp;Delete...</source>
-      <translation type="unfinished">&amp;Delete...</translation>
+      <translation>&amp;Izbriši...</translation>
     </message>
     <message>
       <source>&amp;Delete Game</source>
-      <translation type="unfinished">&amp;Delete Game</translation>
+      <translation>&amp;Izbriši Igru</translation>
     </message>
     <message>
       <source>&amp;Delete Update</source>
-      <translation type="unfinished">&amp;Delete Update</translation>
+      <translation>&amp;Izbriši Ažuriranje</translation>
     </message>
     <message>
       <source>&amp;Delete Save Data</source>
-      <translation type="unfinished">&amp;Delete Save Data</translation>
+      <translation>&amp;Izbriši Spremanja</translation>
     </message>
     <message>
       <source>&amp;Delete DLC </source>
-      <translation type="unfinished">&amp;Delete DLC </translation>
+      <translation>&amp;Izbriši DLC </translation>
     </message>
     <message>
       <source>&amp;Delete Trophy</source>
-      <translation type="unfinished">&amp;Delete Trophy</translation>
+      <translation>&amp;Izbriši Trofej</translation>
     </message>
     <message>
       <source>&amp;Delete Shader Cache</source>
-      <translation type="unfinished">&amp;Delete Shader Cache</translation>
+      <translation>&amp;Izbriši Shader Cache</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Dnevnik/Zapisnik Igre</translation>
     </message>
     <message>
       <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
-      <translation type="unfinished">The log is invalid, it either doesn&apos;t exist or log filters were used.</translation>
+      <translation>Zapisnik nije valjan, ne postoji ili je uključen filtar za zapisnik.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
@@ -1346,51 +1346,51 @@ Using local database.
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation type="unfinished">Toggle Pause</translation>
+      <translation>Uključi Pauzu</translation>
     </message>
     <message>
       <source>Keyboard Hotkeys</source>
-      <translation type="unfinished">Keyboard Hotkeys</translation>
+      <translation>Tipkovničke Kratice</translation>
     </message>
     <message>
       <source>Renderdoc Capture (for debugging only)</source>
-      <translation type="unfinished">Renderdoc Capture (for debugging only)</translation>
+      <translation>Renderdoc Snimanje (samo za debuggiranje)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>Uključi Emulaciju Miša u Kontroler</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>Uključi Emulaciju Miša u Žiro</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation type="unfinished">Tip: Up to three simultaneous inputs can be assigned for each hotkey</translation>
+      <translation>Pomoć: Do tri istovremena unosa mogu bit dodijeljena za svaku tipku kratice</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Pomoć: Odmapiraj unose s desnim-klikom</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Spremi</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Primijeni</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Poništi</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Povrati Tvorničke Postavke</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Spremanje Nije moguće</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
