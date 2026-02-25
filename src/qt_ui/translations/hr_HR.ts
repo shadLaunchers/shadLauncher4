@@ -23,25 +23,26 @@
     </message>
     <message>
       <source>Export Changelog</source>
-      <translation type="unfinished">Export Changelog</translation>
+      <translation>Izvezi dnevnik izmjena</translation>
     </message>
     <message>
       <source>Changelog Error</source>
-      <translation type="unfinished">Changelog Error</translation>
+      <translation>Greška u dnevniku izmjena</translation>
     </message>
     <message>
       <source>Failed to open changelog file:
 %1</source>
-      <translation>Neuspješno otvaranje datoteke dnevnika izmjena</translation>
+      <translation>Neuspješno otvaranje dnevnika izmjena: 
+%1</translation>
     </message>
     <message>
       <source>XML Error</source>
-      <translation type="unfinished">XML Error</translation>
+      <translation>XML Pogreška</translation>
     </message>
     <message>
       <source>Parse error at line %1, column %2:
 %3</source>
-      <translation type="unfinished">Parse error at line %1, column %2:
+      <translation>Parsiraj pogrešku na liniji %1, stupac %2:
 %3</translation>
     </message>
   </context>
@@ -49,107 +50,111 @@
     <name>CheatsPatches</name>
     <message>
       <source>Cheats / Patches for </source>
-      <translation type="unfinished">Cheats / Patches for </translation>
+      <translation>Šifre / Zakrpe za </translation>
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation type="unfinished">Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</translation>
+      <translation>Šifre/Zakrpe su eksperimentalne.\nKoristite uz upozorenje.\n\nPreuzmite 
+šifre pojedinačno odabravši iz repozitorija i klikom na gumb preuzimanje.\nNa kartici Zakrpe, možete preuzeti sve zakrpe odjednom, izaberite one koje vam odgovaraju, pa spremite svoj odabir.\n\nS obzirom da mi ne razvijamo Šifre/Zakrpe,\nmolimo da se za probleme obratite njihovim autorima.\n\nProizveli ste novu
+Šifru? Posjetite:\n</translation>
     </message>
     <message>
       <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
-      <translation type="unfinished">No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</translation>
+      <translation>Nema pronađenih Šifri za ovu igru u verziji odabranog repozitorija,probajte drugi repozitorij ili drugu verziju ove igre.</translation>
     </message>
     <message>
       <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
-      <translation type="unfinished">You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</translation>
+      <translation>Uspješno ste preuzeli šifre za ovu verziju igre iz izabranog repozitorija. Probajte preuzeti s drugog repozitorija, ukoliko je dostupno također je moguće iste odabrati izborom datoteke šifri sa liste.</translation>
     </message>
     <message>
       <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</source>
-      <translation type="unfinished">Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</translation>
+      <translation>Zakrpe Uspješno Preuzete! Sve zakrpe dostupne za sve igre su 
+preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici 
+Šifre. Ako se zakrpa ne prikaže, moguće je da ne postoji za specifični serijski broj i verziju igre.</translation>
     </message>
     <message>
       <source>No Image Available</source>
-      <translation type="unfinished">No Image Available</translation>
+      <translation>Nema dostupnih slika</translation>
     </message>
     <message>
       <source>Serial: </source>
-      <translation type="unfinished">Serial: </translation>
+      <translation>Serijski broj: </translation>
     </message>
     <message>
       <source>Version: </source>
-      <translation type="unfinished">Version: </translation>
+      <translation>Verzija: </translation>
     </message>
     <message>
       <source>Size: </source>
-      <translation type="unfinished">Size: </translation>
+      <translation>Veličina: </translation>
     </message>
     <message>
       <source>Delete File</source>
-      <translation type="unfinished">Delete File</translation>
+      <translation>Izbriši Datoteku</translation>
     </message>
     <message>
       <source>No files selected.</source>
-      <translation type="unfinished">No files selected.</translation>
+      <translation>Nema izabranih datoteka.</translation>
     </message>
     <message>
       <source>You can delete the cheats you don&apos;t want after downloading them.</source>
-      <translation type="unfinished">You can delete the cheats you don&apos;t want after downloading them.</translation>
+      <translation>Možete obrisati šifre koje više ne želite nakon preuzimanja.</translation>
     </message>
     <message>
       <source>Do you want to delete the selected file?\n%1</source>
-      <translation type="unfinished">Do you want to delete the selected file?\n%1</translation>
+      <translation>Želite li izbrisati odabranu datoteku?\n%1</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Pogreška</translation>
     </message>
     <message>
       <source>No patch selected.</source>
-      <translation type="unfinished">No patch selected.</translation>
+      <translation>Zakrpa nije izabrana.</translation>
     </message>
     <message>
       <source>Unable to open files.json for reading.</source>
-      <translation type="unfinished">Unable to open files.json for reading.</translation>
+      <translation>Neuspješno otvaranje files.json za čitanje.</translation>
     </message>
     <message>
       <source>No patch file found for the current serial.</source>
-      <translation type="unfinished">No patch file found for the current serial.</translation>
+      <translation>Zakrpe nisu pronađene za trenutni serijski broj.</translation>
     </message>
     <message>
       <source>Unable to open the file for reading.</source>
-      <translation type="unfinished">Unable to open the file for reading.</translation>
+      <translation>Neuspješno otvaranje datoteka za čitanje.</translation>
     </message>
     <message>
       <source>Unable to open the file for writing.</source>
-      <translation type="unfinished">Unable to open the file for writing.</translation>
+      <translation>Neuspješno otvaranje datoteka za pisanje.</translation>
     </message>
     <message>
       <source>Failed to parse XML: </source>
-      <translation type="unfinished">Failed to parse XML: </translation>
+      <translation>Neuspješno parsiranje XML-a: </translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Uspjeh</translation>
     </message>
     <message>
       <source>Options saved successfully.</source>
-      <translation type="unfinished">Options saved successfully.</translation>
+      <translation>Opcije spremljene uspješno.</translation>
     </message>
     <message>
       <source>Invalid Source</source>
-      <translation type="unfinished">Invalid Source</translation>
+      <translation>Nevažeći Izvor</translation>
     </message>
     <message>
       <source>Selected repository does not support cheats.</source>
-      <translation type="unfinished">Selected repository does not support cheats.</translation>
+      <translation>Izabrani repozitorij ne podržava Šifre.</translation>
     </message>
     <message>
       <source>Download Error</source>
-      <translation type="unfinished">Download Error</translation>
+      <translation>Greška u Preuzimanju</translation>
     </message>
     <message>
       <source>Cheats Not Found</source>
-      <translation type="unfinished">Cheats Not Found</translation>
+      <translation>Šifre Nisu Pronađene</translation>
     </message>
     <message>
       <source>Downloading cheat index...</source>
