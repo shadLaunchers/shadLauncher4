@@ -2164,176 +2164,176 @@ Izaberite verziju emulatora s desne liste.</translation>
     <name>NpBindDialog</name>
     <message>
       <source>npbind.dat Viewer</source>
-      <translation type="unfinished">npbind.dat Viewer</translation>
+      <translation>npbind.dat Preglednik</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Failed to parse npbind.dat</source>
-      <translation type="unfinished">Failed to parse npbind.dat</translation>
+      <translation>Neuspjeh u parsiranju npbind.dat</translation>
     </message>
     <message>
       <source>Entry Type:</source>
-      <translation type="unfinished">Entry Type:</translation>
+      <translation>Vrsta Unosa:</translation>
     </message>
     <message>
       <source>Entry Size:</source>
-      <translation type="unfinished">Entry Size:</translation>
+      <translation>Veličina Unosa:</translation>
     </message>
     <message>
       <source>NPCommID:</source>
-      <translation type="unfinished">NPCommID:</translation>
+      <translation>NPCommID:</translation>
     </message>
     <message>
       <source>Trophy ID:</source>
-      <translation type="unfinished">Trophy ID:</translation>
+      <translation>Trofej ID:</translation>
     </message>
     <message>
       <source>Hex Data:</source>
-      <translation type="unfinished">Hex Data:</translation>
+      <translation>Hex Podaci:</translation>
     </message>
     <message>
       <source>NPCommID</source>
-      <translation type="unfinished">NPCommID</translation>
+      <translation>NPCommID</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation type="unfinished">Trophy</translation>
+      <translation>Trofej</translation>
     </message>
     <message>
       <source>Unknown 1</source>
-      <translation type="unfinished">Unknown 1</translation>
+      <translation>Nepoznato 1</translation>
     </message>
     <message>
       <source>Unknown 2</source>
-      <translation type="unfinished">Unknown 2</translation>
+      <translation>Nepoznato 2</translation>
     </message>
     <message>
       <source>Show regions:</source>
-      <translation type="unfinished">Show regions:</translation>
+      <translation>Prikaz regija:</translation>
     </message>
     <message>
       <source>Export JSON</source>
-      <translation type="unfinished">Export JSON</translation>
+      <translation>Izvoz JSON-a</translation>
     </message>
     <message>
       <source>Body #%1</source>
-      <translation type="unfinished">Body #%1</translation>
+      <translation>Tijelo #%1</translation>
     </message>
     <message>
       <source>JSON Files (*.json)</source>
-      <translation type="unfinished">JSON Files (*.json)</translation>
+      <translation>JSON Datoteke (*.json)</translation>
     </message>
     <message>
       <source>Cannot write file</source>
-      <translation type="unfinished">Cannot write file</translation>
+      <translation>Ne mogu zapisati datoteku</translation>
     </message>
     <message>
       <source>Done</source>
-      <translation type="unfinished">Done</translation>
+      <translation>Gotovo</translation>
     </message>
     <message>
       <source>JSON exported successfully.</source>
-      <translation type="unfinished">JSON exported successfully.</translation>
+      <translation>JSON izvezen uspješno.</translation>
     </message>
   </context>
   <context>
     <name>PkgInstallDirSelectDialog</name>
     <message>
       <source>shadLauncher4 - Install PKG Files</source>
-      <translation type="unfinished">shadLauncher4 - Install PKG Files</translation>
+      <translation>shadLauncher4 - Instalacija PKG Datoteka</translation>
     </message>
     <message>
       <source>Select PKG files to install</source>
-      <translation type="unfinished">Select PKG files to install</translation>
+      <translation>Izaberi PKG datoteke za instalaciju</translation>
     </message>
     <message>
       <source>Select All</source>
-      <translation type="unfinished">Select All</translation>
+      <translation>Odaberi Sve</translation>
     </message>
     <message>
       <source>Select None</source>
-      <translation type="unfinished">Select None</translation>
+      <translation>Odaberi Ništa</translation>
     </message>
     <message>
       <source>Invert Selection</source>
-      <translation type="unfinished">Invert Selection</translation>
+      <translation>Obrni Izbor</translation>
     </message>
     <message>
       <source>Installation Directory</source>
-      <translation type="unfinished">Installation Directory</translation>
+      <translation>Instalacijska Mapa</translation>
     </message>
     <message>
       <source>Browse...</source>
-      <translation type="unfinished">Browse...</translation>
+      <translation>Pregled...</translation>
     </message>
     <message>
       <source>Delete PKG files after successful installation</source>
-      <translation type="unfinished">Delete PKG files after successful installation</translation>
+      <translation>Izbriši PKG datoteke nakon uspješne instalacije</translation>
     </message>
     <message>
       <source>Select Directory</source>
-      <translation type="unfinished">Select Directory</translation>
+      <translation>Izbor Mape</translation>
     </message>
     <message>
       <source>Install Selected</source>
-      <translation type="unfinished">Install Selected</translation>
+      <translation>Instaliraj Odabrano</translation>
     </message>
     <message>
       <source>No Selection</source>
-      <translation type="unfinished">No Selection</translation>
+      <translation>Nema Odabira</translation>
     </message>
     <message>
       <source>Please select at least one game to install.</source>
-      <translation type="unfinished">Please select at least one game to install.</translation>
+      <translation>Molim odaberite barem jednu igru za instalaciju.</translation>
     </message>
     <message>
       <source>No Directory</source>
-      <translation type="unfinished">No Directory</translation>
+      <translation>Nema Mape</translation>
     </message>
     <message>
       <source>Please select an installation directory.</source>
-      <translation type="unfinished">Please select an installation directory.</translation>
+      <translation>Molim odaberite instalacijsku mapu.</translation>
     </message>
   </context>
   <context>
     <name>PkgInstallModel</name>
     <message>
       <source>Install</source>
-      <translation type="unfinished">Install</translation>
+      <translation>Instaliraj</translation>
     </message>
     <message>
       <source>Title ID</source>
-      <translation type="unfinished">Title ID</translation>
+      <translation>Naslov ID</translation>
     </message>
     <message>
       <source>Game Name</source>
-      <translation type="unfinished">Game Name</translation>
+      <translation>Naziv Igre</translation>
     </message>
     <message>
       <source>App Version</source>
-      <translation type="unfinished">App Version</translation>
+      <translation>App Verzija</translation>
     </message>
     <message>
       <source>Category</source>
-      <translation type="unfinished">Category</translation>
+      <translation>Kategorija</translation>
     </message>
   </context>
   <context>
     <name>QObject</name>
     <message>
       <source>Export Game List</source>
-      <translation type="unfinished">Export Game List</translation>
+      <translation>Izvoz Liste Igara</translation>
     </message>
     <message>
       <source>Select export format:</source>
-      <translation type="unfinished">Select export format:</translation>
+      <translation>Odaberite format izvoza:</translation>
     </message>
     <message>
       <source>Sort by:</source>
-      <translation type="unfinished">Sort by:</translation>
+      <translation>Redoslijed prema:</translation>
     </message>
     <message>
       <source>Sort order:</source>
@@ -2551,203 +2551,203 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Title Music</source>
-      <translation type="unfinished">Title Music</translation>
+      <translation>Naslovna Glazba</translation>
     </message>
     <message>
       <source>Play title music</source>
-      <translation type="unfinished">Play title music</translation>
+      <translation>Reproduciraj naslovnu glazbu</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
-      <translation type="unfinished">Set the volume of the background music.</translation>
+      <translation>Postavi glasnoću pozadinske glazbe.</translation>
     </message>
     <message>
       <source>Game Compatibility</source>
-      <translation type="unfinished">Game Compatibility</translation>
+      <translation>Kompatibilnosti Igre</translation>
     </message>
     <message>
       <source>Update Compatibility Database On Startup</source>
-      <translation type="unfinished">Update Compatibility Database On Startup</translation>
+      <translation>Ažuriraj Bazu Kompatibilnosti Prilikom Pokretanja</translation>
     </message>
     <message>
       <source>Update Compatibility Database</source>
-      <translation type="unfinished">Update Compatibility Database</translation>
+      <translation>Ažuriraj Bazu Kompatibilnosti</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>GUI Ažuriranja</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation type="unfinished">Check for Updates at Startup</translation>
+      <translation>Provjeri Ažuriranja prilikom Pokretanja</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Uvijek Prikaži Zapisnik Promjena</translation>
     </message>
     <message>
       <source>Check for Updates</source>
-      <translation type="unfinished">Check for Updates</translation>
+      <translation>Provjeri Ažuriranja</translation>
     </message>
     <message>
       <source>Directory Scan Depth</source>
-      <translation type="unfinished">Directory Scan Depth</translation>
+      <translation>Dubina Skeniranja Mape</translation>
     </message>
     <message>
       <source>Graphics</source>
-      <translation type="unfinished">Graphics</translation>
+      <translation>Grafika</translation>
     </message>
     <message>
       <source>Graphics Device</source>
-      <translation type="unfinished">Graphics Device</translation>
+      <translation>Grafička Kartica</translation>
     </message>
     <message>
       <source>Enable NULL GPU</source>
-      <translation type="unfinished">Enable NULL GPU</translation>
+      <translation>Omogući NULL GPU</translation>
     </message>
     <message>
       <source>Video</source>
-      <translation type="unfinished">Video</translation>
+      <translation>Video</translation>
     </message>
     <message>
       <source>Display Mode</source>
-      <translation type="unfinished">Display Mode</translation>
+      <translation>Mod Prikaza</translation>
     </message>
     <message>
       <source>Windowed</source>
-      <translation type="unfinished">Windowed</translation>
+      <translation>U Prozoru</translation>
     </message>
     <message>
       <source>Fullscreen</source>
-      <translation type="unfinished">Fullscreen</translation>
+      <translation>Cijeli zaslon</translation>
     </message>
     <message>
       <source>Fullscreen (Borderless)</source>
-      <translation type="unfinished">Fullscreen (Borderless)</translation>
+      <translation>Cijeli zaslon (Bez okvira)</translation>
     </message>
     <message>
       <source>Present Mode</source>
-      <translation type="unfinished">Present Mode</translation>
+      <translation>Prezentacijski Mod</translation>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
-      <translation type="unfinished">Mailbox (Vsync)</translation>
+      <translation>Mailbox (Vsync)</translation>
     </message>
     <message>
       <source>Fifo (Vsync)</source>
-      <translation type="unfinished">Fifo (Vsync)</translation>
+      <translation>Fifo (Vsync)</translation>
     </message>
     <message>
       <source>Immediate (No Vsync)</source>
-      <translation type="unfinished">Immediate (No Vsync)</translation>
+      <translation>Trenutno (Bez Vsynca)</translation>
     </message>
     <message>
       <source>Window Size</source>
-      <translation type="unfinished">Window Size</translation>
+      <translation>Veličina Prozora</translation>
     </message>
     <message>
       <source>W:</source>
-      <translation type="unfinished">W:</translation>
+      <translation>W:</translation>
     </message>
     <message>
       <source>H:</source>
-      <translation type="unfinished">H:</translation>
+      <translation>H:</translation>
     </message>
     <message>
       <source>Enable HDR</source>
-      <translation type="unfinished">Enable HDR</translation>
+      <translation>Omogući HDR</translation>
     </message>
     <message>
       <source>FSR Settings</source>
-      <translation type="unfinished">FSR Settings</translation>
+      <translation>FSR Postavke</translation>
     </message>
     <message>
       <source>Enable FSR</source>
-      <translation type="unfinished">Enable FSR</translation>
+      <translation>Omogući FSR</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation type="unfinished">Enable RCAS (sharpening)</translation>
+      <translation>Omogući RCAS (izoštravanje)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
-      <translation type="unfinished">RCAS Attenuation:</translation>
+      <translation>RCAS Atenuacija:</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation type="unfinished">Trophy</translation>
+      <translation>Trofej</translation>
     </message>
     <message>
       <source>Disable Trophy Notification</source>
-      <translation type="unfinished">Disable Trophy Notification</translation>
+      <translation>Onemogući Obavijest o Trofeju</translation>
     </message>
     <message>
       <source>Trophy Notification Position</source>
-      <translation type="unfinished">Trophy Notification Position</translation>
+      <translation>Pozicija Obavijesti o Trofeju</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Lijevo</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Desno</translation>
     </message>
     <message>
       <source>Top</source>
-      <translation type="unfinished">Top</translation>
+      <translation>Gore</translation>
     </message>
     <message>
       <source>Bottom</source>
-      <translation type="unfinished">Bottom</translation>
+      <translation>Dolje</translation>
     </message>
     <message>
       <source>Notification Duration</source>
-      <translation type="unfinished">Notification Duration</translation>
+      <translation>Trajanje Obavijesti</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder</source>
-      <translation type="unfinished">Open the custom trophy images/sounds folder</translation>
+      <translation>Otvori mapu proizvoljnih slika/zvukova</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>Unos</translation>
     </message>
     <message>
       <source>Cursor</source>
-      <translation type="unfinished">Cursor</translation>
+      <translation>Pokazivač</translation>
     </message>
     <message>
       <source>Hide Cursor</source>
-      <translation type="unfinished">Hide Cursor</translation>
+      <translation>Sakrij Pokazivač</translation>
     </message>
     <message>
       <source>Hide Cursor Idle Timeout</source>
-      <translation type="unfinished">Hide Cursor Idle Timeout</translation>
+      <translation>Vrijeme Trajanje Prikrivenog Pokazivača</translation>
     </message>
     <message>
       <source>s</source>
-      <translation type="unfinished">s</translation>
+      <translation>s</translation>
     </message>
     <message>
       <source>Controller</source>
-      <translation type="unfinished">Controller</translation>
+      <translation>Kontroler</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
-      <translation type="unfinished">Enable Motion Controls</translation>
+      <translation>Omogući Kontrole Pokreta</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
-      <translation type="unfinished">Enable Background Controller Input</translation>
+      <translation>Omogući Unos Pozadinskim Kontrolerom</translation>
     </message>
     <message>
       <source>Microphone</source>
-      <translation type="unfinished">Microphone</translation>
+      <translation>Mikrofon</translation>
     </message>
     <message>
       <source>USB Device</source>
-      <translation type="unfinished">USB Device</translation>
+      <translation>USB uređaj</translation>
     </message>
     <message>
       <source>Paths</source>
@@ -2951,43 +2951,43 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Duplicate Path</source>
-      <translation type="unfinished">Duplicate Path</translation>
+      <translation>Dvostruka Putanja</translation>
     </message>
     <message>
       <source>This folder is already added.</source>
-      <translation type="unfinished">This folder is already added.</translation>
+      <translation>Ova je mapa već dodana.</translation>
     </message>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>Otvori Mapu</translation>
     </message>
     <message>
       <source>Disable</source>
-      <translation type="unfinished">Disable</translation>
+      <translation>Onemogući</translation>
     </message>
     <message>
       <source>Enable</source>
-      <translation type="unfinished">Enable</translation>
+      <translation>Omogući</translation>
     </message>
     <message>
       <source>Select directory for DLC</source>
-      <translation type="unfinished">Select directory for DLC</translation>
+      <translation>Izaberi Mapu za DLC</translation>
     </message>
     <message>
       <source>Select directory for home</source>
-      <translation type="unfinished">Select directory for home</translation>
+      <translation>Izaberi kućnu Mapu</translation>
     </message>
     <message>
       <source>Select directory for System modules</source>
-      <translation type="unfinished">Select directory for System modules</translation>
+      <translation>Izaberi mapu za Sistemske module</translation>
     </message>
     <message>
       <source>This path does not exist on disk.</source>
-      <translation type="unfinished">This path does not exist on disk.</translation>
+      <translation>Ova putanja ne postoji na disku.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
@@ -2995,83 +2995,83 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Are you sure you want to restore all settings to their default values?</source>
-      <translation type="unfinished">Are you sure you want to restore all settings to their default values?</translation>
+      <translation>Jeste li sigurni da sve postavke želite vratit na njihove zadane vrijednosti?</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Spremi</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Primijeni</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Zatvori</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Zvuk</translation>
     </message>
     <message>
       <source>Frontend Settings</source>
-      <translation type="unfinished">Frontend Settings</translation>
+      <translation>Postavke Sučelja</translation>
     </message>
     <message>
       <source>Default Device</source>
-      <translation type="unfinished">Default Device</translation>
+      <translation>Zadani Uređaj</translation>
     </message>
     <message>
       <source>PKG Installer</source>
-      <translation type="unfinished">PKG Installer</translation>
+      <translation>PKG Installer</translation>
     </message>
     <message>
       <source>Use Separate Update Folder</source>
-      <translation type="unfinished">Use Separate Update Folder</translation>
+      <translation>Koristi Odvojenu Mapu Ažuracija</translation>
     </message>
     <message>
       <source>Discord Rich Presence</source>
-      <translation type="unfinished">Discord Rich Presence</translation>
+      <translation>Obogaćena Discord Prisutnost</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Shader Cache</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>Omogući Shader Cache</translation>
     </message>
     <message>
       <source>Compress Shader Cache Files into Zip File</source>
-      <translation type="unfinished">Compress Shader Cache Files into Zip File</translation>
+      <translation>Komprimiraj Shader Cache datoteke u Zip Datoteku</translation>
     </message>
     <message>
       <source>Idle</source>
-      <translation type="unfinished">Idle</translation>
+      <translation>Idle</translation>
     </message>
     <message>
       <source>Auto Select</source>
-      <translation type="unfinished">Auto Select</translation>
+      <translation>Auto Odabir</translation>
     </message>
     <message>
       <source>Never</source>
-      <translation type="unfinished">Never</translation>
+      <translation>Nikada</translation>
     </message>
     <message>
       <source>Always</source>
-      <translation type="unfinished">Always</translation>
+      <translation>Uvijek</translation>
     </message>
     <message>
       <source>Real USB Device</source>
-      <translation type="unfinished">Real USB Device</translation>
+      <translation>Pravi USB Uređaj</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation type="unfinished">Skylander Portal</translation>
+      <translation>Skylander Portal</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>Infinity Base</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
@@ -3079,88 +3079,88 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Ništa</translation>
     </message>
     <message>
       <source>Show Simple FPS Counter</source>
-      <translation type="unfinished">Show Simple FPS Counter</translation>
+      <translation>Prikaži jednostavan brojač FPS-a</translation>
     </message>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Some settings are disabled because they cannot be overridden per-game. These require global settings changes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Some settings are disabled because they cannot be overridden per-game. These require global settings changes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Neke su postavke onemogućene jer ih nije moguće prekoračiti po-igri. One zahtijevaju izmjene na razini globalnih postavki.&lt;/html&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;</translation>
     </message>
     <message>
       <source>Custom Settings for %1 [%2]</source>
-      <translation type="unfinished">Custom Settings for %1 [%2]</translation>
+      <translation>Proizvoljne Postavke na %1 [%2]</translation>
     </message>
     <message>
       <source>Global Settings</source>
-      <translation type="unfinished">Global Settings</translation>
+      <translation>Globalne Postavke</translation>
     </message>
     <message>
       <source>Failed to save game settings.</source>
-      <translation type="unfinished">Failed to save game settings.</translation>
+      <translation>Neuspjelo spremanje postavki igre.</translation>
     </message>
     <message>
       <source>Settings Applied</source>
-      <translation type="unfinished">Settings Applied</translation>
+      <translation>Postavke Primijenjene</translation>
     </message>
     <message>
       <source>Game-specific settings have been saved.</source>
-      <translation type="unfinished">Game-specific settings have been saved.</translation>
+      <translation>Igri-specifične postavke su spremljene.</translation>
     </message>
     <message>
       <source>Failed to save global settings.</source>
-      <translation type="unfinished">Failed to save global settings.</translation>
+      <translation>Neuspjelo spremanje globalnih postavki.</translation>
     </message>
     <message>
       <source>Are you sure you want to restore all settings to global defaults?
 This will remove all game-specific overrides.</source>
-      <translation type="unfinished">Are you sure you want to restore all settings to global defaults?
-This will remove all game-specific overrides.</translation>
+      <translation>Jeste li sigurni da sve postavke želite vratit na globalne zadane?
+To će ukloniti sve igri-specifične postavke.</translation>
     </message>
     <message>
       <source>Settings Restored</source>
-      <translation type="unfinished">Settings Restored</translation>
+      <translation>Postavke Vraćene</translation>
     </message>
     <message>
       <source>Game settings restored to global defaults.</source>
-      <translation type="unfinished">Game settings restored to global defaults.</translation>
+      <translation>Postavke Igre vraćene na globalne zadane.</translation>
     </message>
     <message>
       <source>This setting cannot be overridden per-game. Use global settings to change it.</source>
-      <translation type="unfinished">This setting cannot be overridden per-game. Use global settings to change it.</translation>
+      <translation>Ova postavka ne može se prekoračit po igri. Upotrijebite globalne postavke za njihovu izmjenu.</translation>
     </message>
     <message>
       <source>GUI-only settings cannot be overridden per-game. Use global settings to change them.</source>
-      <translation type="unfinished">GUI-only settings cannot be overridden per-game. Use global settings to change them.</translation>
+      <translation>GUI-isključive postavke ne mogu se prekoračit prema igri. Upotrijebite globalne postavke za njihovu izmjenu.</translation>
     </message>
     <message>
       <source>Path settings cannot be overridden per-game. Use global settings to change them.</source>
-      <translation type="unfinished">Path settings cannot be overridden per-game. Use global settings to change them.</translation>
+      <translation>Potavke putanje postavke ne mogu se prekoračit prema igri. Upotrijebite globalne postavke za njihovu izmjenu.</translation>
     </message>
     <message>
       <source>PS4 Fonts Path</source>
-      <translation type="unfinished">PS4 Fonts Path</translation>
+      <translation>PS4 Putanje Fontova</translation>
     </message>
     <message>
       <source>Select directory for System fonts</source>
-      <translation type="unfinished">Select directory for System fonts</translation>
+      <translation>Izaberi mapu za Sistemske fontove</translation>
     </message>
     <message>
       <source>Identical Log Grouped</source>
-      <translation type="unfinished">Identical Log Grouped</translation>
+      <translation>Identični Zapisnik Grupiran</translation>
     </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
     <message>
       <source>Game Folders:\nThe list of folders to check for installed games.</source>
-      <translation type="unfinished">Game Folders:\nThe list of folders to check for installed games.</translation>
+      <translation>Mape Igri:\n Lista mapa za provjeru instaliranih igara.</translation>
     </message>
     <message>
       <source>Add Folder:\nAdd a new folder to the list of game installation folders.</source>
-      <translation type="unfinished">Add Folder:\nAdd a new folder to the list of game installation folders.</translation>
+      <translation>Dodaj Mapu:\n Dodaj novu mapu na listu mapa za instalaciju igara.</translation>
     </message>
     <message>
       <source>Remove Folder:\nRemove the selected folder from the list of game installation folders.</source>
