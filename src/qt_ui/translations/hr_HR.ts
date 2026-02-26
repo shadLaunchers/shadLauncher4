@@ -3172,7 +3172,7 @@ To će ukloniti sve igri-specifične postavke.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation>Potraži:\nPotraži mapu za postavljanje u DLC putanju.</translation>
+      <translation>Potraži:\nPotraži mapu za postavljanje kao DLC putanje.</translation>
     </message>
     <message>
       <source>Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</source>
@@ -3535,7 +3535,7 @@ To će ukloniti sve igri-specifične postavke.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly)</source>
-      <translation>Preuzimanje Pred-izadnja (Noćno)</translation>
+      <translation>Preuzimanje Pred-izdanja (Noćna)</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
@@ -3623,7 +3623,7 @@ Verzija Pred-izdanja spremljena je na:%1</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) has been:</source>
-      <translation>Pred-izdanje (Noću) je:</translation>
+      <translation>Pred-izdanje (Noćna) je:</translation>
     </message>
   </context>
 </TS>
