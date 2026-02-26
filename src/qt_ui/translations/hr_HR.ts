@@ -2543,7 +2543,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Show Background Image</source>
-      <translation>Prikži Pozadinsku Sliku</translation>
+      <translation>Prikaži Pozadinsku Sliku</translation>
     </message>
     <message>
       <source>Opacity</source>
@@ -2723,7 +2723,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Hide Cursor Idle Timeout</source>
-      <translation>Vrijeme Trajanje Prikrivenog Pokazivača</translation>
+      <translation>Vrijeme Trajanja Prikrivanja Pokazivača</translation>
     </message>
     <message>
       <source>s</source>
@@ -2787,7 +2787,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Logger</source>
-      <translation>Upisatelj</translation>
+      <translation>Zapisatelj</translation>
     </message>
     <message>
       <source>Enable Logging</source>
@@ -3047,7 +3047,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Idle</source>
-      <translation>Idle</translation>
+      <translation>Mirovanje</translation>
     </message>
     <message>
       <source>Auto Select</source>
