@@ -2775,7 +2775,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Home Path</source>
-      <translation>Kućna Putanja</translation>
+      <translation>Početna Putanja</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
@@ -2975,7 +2975,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Select directory for home</source>
-      <translation>Izaberi kućnu Mapu</translation>
+      <translation>Izaberi početnu Mapu</translation>
     </message>
     <message>
       <source>Select directory for System modules</source>
@@ -3176,11 +3176,11 @@ To će ukloniti sve igri-specifične postavke.</translation>
     </message>
     <message>
       <source>Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</source>
-      <translation>Kućna mapa:\nMapa gdje emulator pohranjuje korisničke podatke kao datoteke spremanja i trofeje.</translation>
+      <translation>Početna Mapa:\nMapa gdje emulator pohranjuje korisničke podatke kao datoteke spremanja i trofeje.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the Home folder.</source>
-      <translation>Potraži:\nPotraži mapu za postavljanje u Kućnu mapu.</translation>
+      <translation>Potraži:\nPotraži mapu za postavljanje u Početnu mapu.</translation>
     </message>
     <message>
       <source>System Modules Folder:\nThe folder where system modules are loaded from.</source>
