@@ -3463,7 +3463,7 @@ To će ukloniti sve igri-specifične postavke.</translation>
     </message>
     <message>
       <source>Error accessing GitHub</source>
-      <translation>Greška u pristupu GitHubu</translation>
+      <translation>Greška u pristupanju GitHubu</translation>
     </message>
     <message>
       <source>Cannot open cache file</source>
