@@ -897,7 +897,7 @@ Molimo unesite vlastite ključeve i spremite ih.</translation>
     </message>
     <message>
       <source>The DLC dump location could not be created.</source>
-      <translation>DLC dump lokaciju nije moguće kreirat.</translation>
+      <translation>DLC dump lokaciju nije moguće izradit.</translation>
     </message>
     <message>
       <source>The location for installing emulator versions is not valid.</source>
@@ -905,7 +905,7 @@ Molimo unesite vlastite ključeve i spremite ih.</translation>
     </message>
     <message>
       <source>The emulator version location could not be created.</source>
-      <translation>Lokaciju verzija emulatora nije moguće kreirat.</translation>
+      <translation>Lokaciju verzija emulatora nije moguće izradit.</translation>
     </message>
   </context>
   <context>
@@ -2362,7 +2362,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     <message>
       <source>Failed to create file:
 %1</source>
-      <translation>Neuspješno kreiranje datoteke:
+      <translation>Neuspješno izrađivanje datoteke:
 %1</translation>
     </message>
     <message>
@@ -2795,7 +2795,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Separate Log Files</source>
-      <translation>Razvoji Datoteke Zapisnika</translation>
+      <translation>Razdvoji Datoteke Zapisnika</translation>
     </message>
     <message>
       <source>Log Type</source>
@@ -2867,7 +2867,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers</source>
-      <translation>Omogući Vulkanove Slojeve Ovjere</translation>
+      <translation>Omogući Vulkan-ove Slojeve Ovjere</translation>
     </message>
     <message>
       <source>Validation Layers</source>
@@ -3223,7 +3223,7 @@ To će ukloniti sve igri-specifične postavke.</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation>&amp;Kreiraj Korisnika</translation>
+      <translation>&amp;Izradi Korisnika</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
@@ -3259,7 +3259,7 @@ To će ukloniti sve igri-specifične postavke.</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation>Kreiraj Novog Korisnika</translation>
+      <translation>Izradi Novog Korisnika</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
