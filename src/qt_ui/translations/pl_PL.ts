@@ -1240,6 +1240,34 @@ Using local database.
       <source>&amp;Remove Custom Configuration</source>
       <translation type="unfinished">&amp;Remove Custom Configuration</translation>
     </message>
+    <message>
+      <source>&amp;Create Desktop Shortcut</source>
+      <translation type="unfinished">&amp;Create Desktop Shortcut</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation type="unfinished">No Version Selected</translation>
+    </message>
+    <message>
+      <source>Select a version first</source>
+      <translation type="unfinished">Select a version first</translation>
+    </message>
+    <message>
+      <source>Shortcut creation</source>
+      <translation type="unfinished">Shortcut creation</translation>
+    </message>
+    <message>
+      <source>Shortcut created successfully!</source>
+      <translation type="unfinished">Shortcut created successfully!</translation>
+    </message>
+    <message>
+      <source>Error creating shortcut!</source>
+      <translation type="unfinished">Error creating shortcut!</translation>
+    </message>
+    <message>
+      <source>Failed to convert icon.</source>
+      <translation type="unfinished">Failed to convert icon.</translation>
+    </message>
   </context>
   <context>
     <name>GameListGrid</name>
@@ -2157,6 +2185,18 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Configure Hotkeys</source>
       <translation type="unfinished">Configure Hotkeys</translation>
+    </message>
+    <message>
+      <source>Run Emulator</source>
+      <translation type="unfinished">Run Emulator</translation>
+    </message>
+    <message>
+      <source>Emulator is already running!</source>
+      <translation type="unfinished">Emulator is already running!</translation>
+    </message>
+    <message>
+      <source>Invalid game argument provided</source>
+      <translation type="unfinished">Invalid game argument provided</translation>
     </message>
   </context>
   <context>
