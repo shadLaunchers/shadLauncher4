@@ -1247,31 +1247,31 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>&amp;Create Desktop Shortcut</source>
-      <translation type="unfinished">&amp;Create Desktop Shortcut</translation>
+      <translation>&amp;Postavi Prečac na Radnu Površinu</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Nijedna Verzija Odabrana</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Prvo izaberi verziju</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Izrada Prečaca</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Prečac izrađen uspješno!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Greška prilikom izrade prečaca!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Pogreška prilikom pretvorbe ikone.</translation>
     </message>
   </context>
   <context>
@@ -2189,15 +2189,15 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Pokreni Emulator</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>Emulator je već pokrenut!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Nevaljan argument igre unesen</translation>
     </message>
   </context>
   <context>
