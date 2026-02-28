@@ -1228,6 +1228,34 @@ Using local database.
         <source>&amp;Remove Custom Configuration</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>&amp;Create Desktop Shortcut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No Version Selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select a version first</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shortcut creation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shortcut created successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error creating shortcut!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to convert icon.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GameListGrid</name>
@@ -2126,6 +2154,18 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Configure Hotkeys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Run Emulator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Emulator is already running!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid game argument provided</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
