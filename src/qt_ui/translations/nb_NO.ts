@@ -1242,31 +1242,31 @@ Bruker lokal database.
     </message>
     <message>
       <source>&amp;Create Desktop Shortcut</source>
-      <translation type="unfinished">&amp;Create Desktop Shortcut</translation>
+      <translation>&amp;Lag snarvei på skrivebordet</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Ingen versjon valgt</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Velg en versjon først</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Opprettelse av snarvei</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Snarvei opprettet på vellykket vis!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Feil ved opprettelse av snarvei!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Klarte ikke konvertere ikon.</translation>
     </message>
   </context>
   <context>
@@ -2180,15 +2180,15 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Start emulator</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>Emulatoren kjører allerede!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Ugyldig spillargument oppgitt</translation>
     </message>
   </context>
   <context>
@@ -3172,15 +3172,15 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>PS4 Fonts Path</source>
-      <translation type="unfinished">PS4 Fonts Path</translation>
+      <translation>PS4-skriftmappe</translation>
     </message>
     <message>
       <source>Select directory for System fonts</source>
-      <translation type="unfinished">Select directory for System fonts</translation>
+      <translation>Velg mappe for systemskrifter</translation>
     </message>
     <message>
       <source>Identical Log Grouped</source>
-      <translation type="unfinished">Identical Log Grouped</translation>
+      <translation>Identisk gruppert logg</translation>
     </message>
   </context>
   <context>
@@ -3203,7 +3203,7 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation>Bla gjennom:\nSøk etter ei mappe å velges som stien til nedlastbart innhold.</translation>
+      <translation>Endre mappe:\nLet etter ei mappe for å angi den som stien for nedlastbart innhold.</translation>
     </message>
     <message>
       <source>Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</source>
@@ -3211,7 +3211,7 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the Home folder.</source>
-      <translation>Bla gjennom:\nSøk etter ei mappe å velge for hjem.</translation>
+      <translation>Endre mappe:\nLet etter ei mappe for å angi den som stien for hjem.</translation>
     </message>
     <message>
       <source>System Modules Folder:\nThe folder where system modules are loaded from.</source>
@@ -3219,7 +3219,7 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Modules folder.</source>
-      <translation>Endre mappe:\nBla gjennom for å finne mappa til systemmodulene.</translation>
+      <translation>Endre mappe:\nLet etter ei mappe for å angi den som stien for systemmodulene.</translation>
     </message>
     <message>
       <source>Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</source>
@@ -3239,11 +3239,11 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>System Fonts Folder:\nThe folder where system fonts are loaded from.</source>
-      <translation type="unfinished">System Fonts Folder:\nThe folder where system fonts are loaded from.</translation>
+      <translation>PS4-skriftmappe:\nMappa hvor systemskriftene lastes fra.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Fonts folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the System Fonts folder.</translation>
+      <translation>Endre mappe:\nLet etter ei mappe for å angi den som stien for systemskriftene.</translation>
     </message>
   </context>
   <context>
