@@ -33,7 +33,7 @@ public:
         //gui
         const QString general_scan_depth_combo = tr("Directory Scan Depth:\\nSet the maximum depth when scanning for games in the specified game folders.\\n1 means one level of subfolders is scanned, and so on.");
         //gpu
-        const QString gpu_readback_mode = tr("Readback Mode:\\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\\nDisabled is recommended option\\nRelaxed is same as Precised but uses less fence protection,but can give more fps\\nFor max compatibility use Precised mode for maximum compatibility where readbacks are neccesary");
+        const QString gpu_readback_mode = tr("Readback Mode:\\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\\nDisabled is recommended option\\nRelaxed is same as Precised but uses less fence protection,but can give more fps\\nPrecise mode should be used for maximum compatibility where readbacks are neccesary");
         // clang-format on
     } settings;
 };
