@@ -32,7 +32,7 @@
     <message>
       <source>Failed to open changelog file:
 %1</source>
-      <translation>Feil ved åpning av endringsloggfila:
+      <translation>Klarte ikke åpne endringsloggfila:
 %1</translation>
     </message>
     <message>
@@ -98,7 +98,7 @@
     </message>
     <message>
       <source>Do you want to delete the selected file?\n%1</source>
-      <translation>Ønsker du å slette den valgte fila?\n%1</translation>
+      <translation>Vil du slette den valgte fila?\n%1</translation>
     </message>
     <message>
       <source>Error</source>
@@ -126,7 +126,7 @@
     </message>
     <message>
       <source>Failed to parse XML: </source>
-      <translation>Feil ved tolkning av XML: </translation>
+      <translation>Klarte ikke tolke XML: </translation>
     </message>
     <message>
       <source>Success</source>
@@ -170,7 +170,7 @@
     </message>
     <message>
       <source>Failed to open file:</source>
-      <translation>Feil ved åpning av fila:</translation>
+      <translation>Klarte ikke åpne fila:</translation>
     </message>
     <message>
       <source>XML ERROR:</source>
@@ -194,7 +194,7 @@
     </message>
     <message>
       <source>Failed to open files.json for writing</source>
-      <translation>Feil ved åpning av files.json for skriving</translation>
+      <translation>Klarte ikke åpne files.json for skriving</translation>
     </message>
     <message>
       <source>Author: </source>
@@ -206,7 +206,7 @@
     </message>
     <message>
       <source>Failed to open files.json for reading.</source>
-      <translation>Feil ved åpning av files.json for lesing.</translation>
+      <translation>Klarte ikke åpne files.json for lesing.</translation>
     </message>
     <message>
       <source>Name:</source>
@@ -624,7 +624,7 @@ Alle felt må være en gyldig sekskantede tekststreng med partallslengde.</trans
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation>Feil ved lasting av nøkkelfila.
+      <translation>Klarte ikke laste nøkkelfila.
 Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
@@ -645,7 +645,7 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation>Feil ved lagring av nøklene.</translation>
+      <translation>Klarte ikke lagre nøklene.</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
@@ -1071,7 +1071,7 @@ Skriv inn nøklene og lagre dem.</translation>
 Using local database.
 
 %0</source>
-      <translation>Feil ved henting av kompatibilitets databasen fra nettet!
+      <translation>Klarte ikke hente kompatibilitets-databasen fra nettet!
 Bruker lokal database.
 
 %0</translation>
@@ -2203,7 +2203,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Failed to parse npbind.dat</source>
-      <translation>Feil ved tolkning av npbind.dat-fila</translation>
+      <translation>Klarte ikke tolke npbind.dat-fila</translation>
     </message>
     <message>
       <source>Entry Type:</source>
@@ -2393,7 +2393,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Failed to create file:
 %1</source>
-      <translation>Feil ved opprettelse av fil:
+      <translation>Klarte ikke opprette fil:
 %1</translation>
     </message>
     <message>
@@ -2450,7 +2450,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.</source>
-      <translation>Feil ved kopiering av programfila til programmappa.</translation>
+      <translation>Klarte ikke kopiere programfila til programmappa.</translation>
     </message>
   </context>
   <context>
@@ -2506,7 +2506,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Failed to load PSF file:
 %1</source>
-      <translation>Feil ved lasting av PSF-fil:
+      <translation>Klarte ikke laste PSF-fil:
 %1</translation>
     </message>
     <message>
@@ -3130,7 +3130,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Failed to save game settings.</source>
-      <translation>Feil ved lagring av spillinnstillinger.</translation>
+      <translation>Klarte ikke lagre spillinnstillinger.</translation>
     </message>
     <message>
       <source>Settings Applied</source>
@@ -3142,7 +3142,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Failed to save global settings.</source>
-      <translation>Feil ved lagring av globale innstillinger.</translation>
+      <translation>Klarte ikke lagre globale innstillinger.</translation>
     </message>
     <message>
       <source>Are you sure you want to restore all settings to global defaults?
@@ -3449,7 +3449,7 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation>Fant ikke stien til mappa.</translation>
+      <translation>Klarte ikke bestemme stien til mappa.</translation>
     </message>
     <message>
       <source>Delete version</source>
@@ -3457,7 +3457,7 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation>Ønsker du å slette den valgte versjonen</translation>
+      <translation>Vil du slette den valgte versjonen</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
@@ -3465,7 +3465,7 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation>Feil ved sletting av mappa.</translation>
+      <translation>Klarte ikke slette mappa.</translation>
     </message>
     <message>
       <source>Checking for new emulator versions...</source>
@@ -3483,7 +3483,7 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation>Ønsker du å laste ned versjonen</translation>
+      <translation>Vil du laste ned versjonen</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
@@ -3535,7 +3535,7 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation>Ønsker du å oppdatere?</translation>
+      <translation>Vil du oppdatere?</translation>
     </message>
     <message>
       <source>Update</source>
@@ -3591,7 +3591,7 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Failed to copy executable into versions folder.</source>
-      <translation>Feil ved kopiering av programfila til versjonsmappa.</translation>
+      <translation>Klarte ikke kopiere programfila til versjonsmappa.</translation>
     </message>
     <message>
       <source>Warning</source>
@@ -3601,7 +3601,7 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
       <source>Failed to install executable into application directory.
 The custom build is still available under:
 %1</source>
-      <translation>Feil ved installering av programfila til programmappa.
+      <translation>Klarte ikke installere programfila til programmappa.
 Den tilpassede versjonen er fremdeles tilgjengelig under:
 %1</translation>
     </message>
@@ -3612,13 +3612,13 @@ Den tilpassede versjonen er fremdeles tilgjengelig under:
     <message>
       <source>Failed to copy executable to application directory.
 The version has been saved to: %1</source>
-      <translation>Feil ved kopiering av programfila til programmappa.
+      <translation>Klarte ikke kopiere programfila til programmappa.
 Versjonen har blitt lagret til: %1</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.
 The pre-release version has been saved to: %1</source>
-      <translation>Feil ved kopiering av programfila til programmappa.
+      <translation>Klarte ikke kopiere programfila til programmappa.
 Forhåndsutgivelsen har blitt lagret til: %1</translation>
     </message>
     <message>
