@@ -105,6 +105,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->disableTrophycheckBox, helptexts.settings.general_disable_trophy_popup);
     SubscribeHelpText(ui->currentFontsPath, helptexts.settings.paths_fontsDir);
     SubscribeHelpText(ui->browseFontsButton, helptexts.settings.paths_fontsDir_browse);
+    SubscribeHelpText(ui->readbacksModeComboBox, helptexts.gpu.readback_mode);
 
     PopulateComboBoxes();
     PathTabConnections();

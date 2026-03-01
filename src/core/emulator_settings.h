@@ -272,7 +272,7 @@ NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(AudioSettings, mic_device, main_output_device
 // -------------------------------
 // GPU settings
 // -------------------------------
-enum GpuReadbacksMode : int { Disabled, Low, High };
+enum GpuReadbacksMode : int { Disabled, Relaxed, Precised };
 
 struct GPUSettings {
     Setting<u32> window_width{1280};
