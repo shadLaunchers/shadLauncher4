@@ -484,7 +484,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->guestMarkersCheckBox->setChecked(m_emu_settings->IsVkGuestMarkersEnabled());
 
     // ------------------ Experimental tab --------------------------------------------------------
-    ui->readbacksCheckBox->setChecked(m_emu_settings->IsReadbacksEnabled());
+    ui->readbacksModeComboBox->setCurrentIndex(m_emu_settings->GetReadbacksMode());
     ui->readbackLinearImagesCheckBox->setChecked(m_emu_settings->IsReadbackLinearImagesEnabled());
     ui->dmaCheckBox->setChecked(m_emu_settings->IsDirectMemoryAccessEnabled());
     ui->devkitCheckBox->setChecked(m_emu_settings->IsDevKit());
@@ -666,7 +666,7 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetVkGuestMarkersEnabled(ui->guestMarkersCheckBox->isChecked());
 
     // ------------------ Experimental tab --------------------------------------------------------
-    m_emu_settings->SetReadbacksEnabled(ui->readbacksCheckBox->isChecked());
+    m_emu_settings->SetReadbacksMode(ui->readbacksModeComboBox->currentIndex());
     m_emu_settings->SetReadbackLinearImagesEnabled(ui->readbackLinearImagesCheckBox->isChecked());
     m_emu_settings->SetDirectMemoryAccessEnabled(ui->dmaCheckBox->isChecked());
     m_emu_settings->SetDevKit(ui->devkitCheckBox->isChecked());
@@ -964,7 +964,7 @@ void SettingsDialog::MapUIControls() {
     m_uiSettingMap[ui->copyGPUBuffersCheckBox] = {"copy_gpu_buffers", "GPU"};
     m_uiSettingMap[ui->displayModeComboBox] = {"full_screen_mode", "GPU"};
     m_uiSettingMap[ui->presentModeComboBox] = {"present_mode", "GPU"};
-    m_uiSettingMap[ui->readbacksCheckBox] = {"readbacks_enabled", "GPU"};
+    m_uiSettingMap[ui->readbacksModeComboBox] = {"readbacks_mode", "GPU"};
     m_uiSettingMap[ui->readbackLinearImagesCheckBox] = {"readback_linear_images_enabled", "GPU"};
     m_uiSettingMap[ui->dmaCheckBox] = {"direct_memory_access_enabled", "GPU"};
 

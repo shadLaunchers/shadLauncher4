@@ -85,7 +85,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>7</number>
      </property>
      <property name="usesScrollButtons">
       <bool>true</bool>
@@ -102,7 +102,7 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
+         <width>946</width>
          <height>479</height>
         </rect>
        </property>
@@ -178,8 +178,8 @@
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>417</width>
-                     <height>69</height>
+                     <width>403</width>
+                     <height>68</height>
                     </rect>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -465,8 +465,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>482</height>
+         <width>946</width>
+         <height>479</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -967,8 +967,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>482</height>
+         <width>946</width>
+         <height>479</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="graphicsTabVLayout" stretch="0,0">
@@ -1331,8 +1331,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>482</height>
+         <width>946</width>
+         <height>479</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="inputTabVLayout" stretch="0,0">
@@ -1662,8 +1662,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>482</height>
+         <width>932</width>
+         <height>503</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="pathsTabLayout">
@@ -1791,7 +1791,7 @@
           </layout>
          </widget>
         </item>
-		<item>
+        <item>
          <widget class="QGroupBox" name="fontsGroupBox">
           <property name="title">
            <string>PS4 Fonts Path</string>
@@ -1833,8 +1833,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>222</height>
+         <width>946</width>
+         <height>271</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -1874,7 +1874,7 @@
                  </property>
                 </widget>
                </item>
-			   <item>
+               <item>
                 <widget class="QCheckBox" name="identicalLogGroupedCheckbox">
                  <property name="text">
                   <string>Identical Log Grouped</string>
@@ -1995,8 +1995,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>389</height>
+         <width>946</width>
+         <height>418</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2225,8 +2225,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>944</width>
-         <height>374</height>
+         <width>946</width>
+         <height>438</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2268,10 +2268,31 @@
                 <number>9</number>
                </property>
                <item>
-                <widget class="QCheckBox" name="readbacksCheckBox">
-                 <property name="text">
-                  <string>Enable Readbacks</string>
+                <widget class="QGroupBox" name="groupBox">
+                 <property name="title">
+                  <string>Readbacks Mode</string>
                  </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_15">
+                  <item>
+                   <widget class="QComboBox" name="readbacksModeComboBox">
+                    <item>
+                     <property name="text">
+                      <string>Disabled</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Low</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>High</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </item>
                <item>
