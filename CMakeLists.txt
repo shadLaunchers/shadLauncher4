@@ -18,6 +18,7 @@ message(STATUS "Building shadLauncher4 version: ${APP_VERSION}")
 string(REGEX MATCH "[0-9]+\\.[0-9]+\\.[0-9]+" NUMERIC_VERSION "${APP_VERSION}")
 project(shadLauncher4 VERSION ${NUMERIC_VERSION} LANGUAGES CXX)
 
+set(APP_IS_RELEASE false)
 
 option(ENABLE_UPDATER "Enables the options to updater" ON)
 
