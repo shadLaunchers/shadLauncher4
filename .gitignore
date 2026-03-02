@@ -2,3 +2,4 @@
 /Build/*
 /out/*
 /.idea/*
+/src/common/scm_rev.cpp

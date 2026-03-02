@@ -58,6 +58,14 @@ include_directories(src)
 
 qt_add_resources(RESOURCE_FILES src/shadLauncher4.qrc)
 
+# generate git revision information
+include("${CMAKE_CURRENT_SOURCE_DIR}/externals/cmake-modules/GetGitRevisionDescription.cmake")
+get_git_head_revision(GIT_REF_SPEC GIT_REV)
+git_describe(GIT_DESC --always --long --dirty)
+git_branch_name(GIT_BRANCH)
+string(TIMESTAMP BUILD_DATE "%Y-%m-%d %H:%M:%S")
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/common/scm_rev.cpp.in" "${CMAKE_CURRENT_BINARY_DIR}/src/common/scm_rev.cpp" @ONLY)
+
 set(COMMON src/common/types.h
            src/common/fs_util.cpp
            src/common/fs_util.h
@@ -109,6 +117,8 @@ set(COMMON src/common/types.h
            src/common/input.h
            src/common/log_analyzer.cpp
            src/common/log_analyzer.h
+           ${CMAKE_CURRENT_BINARY_DIR}/src/common/scm_rev.cpp
+           src/common/scm_rev.h
 )
 
 set(CORE src/core/user_manager.cpp

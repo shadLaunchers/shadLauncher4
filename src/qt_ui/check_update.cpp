@@ -22,7 +22,7 @@
 #include <QTextBrowser>
 #include <QVBoxLayout>
 #include <common/path_util.h>
-// #include <common/scm_rev.h>
+#include <common/scm_rev.h>
 #include <common/zip_util.h>
 
 #include "check_update.h"
@@ -138,11 +138,8 @@ tr("The Auto Updater allows up to 60 update checks per hour.\\nYou have reached 
             return;
         }
 
-        // QString currentRev = QString::fromStdString(Common::g_scm_rev);
-        // QString currentDate = Common::g_scm_date;
-        // test
-        QString currentRev = "55e70dedd9c2ac168e5a7c9cd62c80f28aa126f9";
-        QString currentDate = "2026-02-10";
+        QString currentRev = QString::fromStdString(Common::g_scm_rev);
+        QString currentDate = Common::g_scm_date;
 
         QDateTime dateTime = QDateTime::fromString(latestDate, Qt::ISODate);
         latestDate = dateTime.isValid() ? dateTime.toString("yyyy-MM-dd HH:mm:ss") : "Unknown date";
