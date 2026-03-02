@@ -45,7 +45,7 @@ path = [
     "src/qt_ui/cheats_patches_dialog.ui",
 ]
 precedence = "aggregate"
-SPDX-FileCopyrightText = "shadPS5 Emulator Project"
+SPDX-FileCopyrightText = "shadLauncher4 Project"
 SPDX-License-Identifier = "GPL-2.0-or-later"
 
 [[annotations]]
@@ -56,5 +56,5 @@ SPDX-License-Identifier = "BSL-1.0"
 
 [[annotations]]
 path = "dist/qt.conf"
-SPDX-FileCopyrightText = "shadPS5 Emulator Project"
+SPDX-FileCopyrightText = "shadLauncher4 Project"
 SPDX-License-Identifier = "GPL-2.0-or-later"
