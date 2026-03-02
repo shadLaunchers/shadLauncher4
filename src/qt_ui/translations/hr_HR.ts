@@ -2934,10 +2934,6 @@ Izaberite verziju emulatora s desne liste.</translation>
       <translation>Eksperimentalne Mogućnosti</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Omogući Readbackove</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Omogući Readback Linearne Slike</translation>
     </message>
@@ -3191,6 +3187,22 @@ To će ukloniti sve igri-specifične postavke.</translation>
       <source>Identical Log Grouped</source>
       <translation>Identični Zapisnik Grupiran</translation>
     </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation>Readbacks Mod</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation>Onemogućeno</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Opušteno</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Precizno</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
@@ -3253,6 +3265,10 @@ To će ukloniti sve igri-specifične postavke.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Fonts folder.</source>
       <translation>Potraži:\nPotraži mapu za postavljanje u mapu Sistemskih Fontova.</translation>
+    </message>
+    <message>
+      <source>Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</source>
+      <translation>Readbacks Mod:\nKontrolira kako emulator rukuje GPU povratne informacije. Omogućeno čini neke igre pokretljivijim.\nOnemogućeno je preporučeno.\nOpušteno je isto kao Precizno s manje zaštite, uz malo više fps-ova.\nPrecizni mod trebao bi se koristit za maksimalnu kompatibilnost gdje su readbackovi potrebni</translation>
     </message>
   </context>
   <context>
