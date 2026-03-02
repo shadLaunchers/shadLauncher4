@@ -338,6 +338,10 @@ void CheckUpdate::requestChangelog(const QString& currentRev, const QString& lat
                     newChanges += changes.mid(lastIndex);
                     changes = newChanges;
 
+                    QString linkCss =
+                        QStringLiteral("a { color: #1a73e8; text-decoration: underline; }");
+                    textField->document()->setDefaultStyleSheet(linkCss);
+
                     textField->setOpenExternalLinks(true);
                     textField->setHtml("<h2>" + tr("Changes") + ":</h2>" + changes);
                 }
