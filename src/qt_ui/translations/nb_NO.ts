@@ -2925,10 +2925,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Eksperimentelle funksjoner</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Bruk tilbakelesninger</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Bruk tilbakelesninger av lineære bilder</translation>
     </message>
@@ -3182,6 +3178,22 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
       <source>Identical Log Grouped</source>
       <translation>Identisk gruppert logg</translation>
     </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation type="unfinished">Readbacks Mode</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation type="unfinished">Disabled</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation type="unfinished">Relaxed</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation type="unfinished">Precise</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
@@ -3244,6 +3256,10 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Fonts folder.</source>
       <translation>Endre mappe:\nLet etter ei mappe for å angi den som stien for systemskriftene.</translation>
+    </message>
+    <message>
+      <source>Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</source>
+      <translation type="unfinished">Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</translation>
     </message>
   </context>
   <context>
