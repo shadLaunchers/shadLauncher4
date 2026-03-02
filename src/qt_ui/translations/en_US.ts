@@ -2899,10 +2899,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Enable Readbacks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Enable Readback Linear Images</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3155,6 +3151,22 @@ This will remove all game-specific overrides.</source>
         <source>Identical Log Grouped</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Readbacks Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Relaxed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Precise</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsDialogHelperTexts</name>
@@ -3216,6 +3228,10 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
         <source>Browse:\nBrowse for a folder to set as the System Fonts folder.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
