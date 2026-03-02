@@ -794,7 +794,7 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Menus</source>
-      <translation>I meny</translation>
+      <translation>Menyene</translation>
     </message>
     <message>
       <source>Games that can reach the menu but freeze/crash when trying to proceed further</source>
