@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QtConcurrent>
+#include <common/scm_rev.h>
 #include <common/string_util.h>
 #include <common/versions.h>
 #include <core/file_format/pkg.h>
@@ -62,7 +63,12 @@ bool MainWindow::init() {
     createConnects();
 
     setMinimumSize(350, minimumSizeHint().height()); // seems fine on win 10
-    setWindowTitle(QString("shadLauncher4 %1").arg(APP_VERSION));
+
+    if (Common::g_is_release) {
+        setWindowTitle(QString("shadLauncher4 %1").arg(APP_VERSION));
+    } else {
+        setWindowTitle(QString("%1").arg(APP_VERSION));
+    }
 
     Q_EMIT RequestGlobalStylesheetChange();
     configureGuiFromSettings();
