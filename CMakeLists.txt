@@ -18,9 +18,18 @@ message(STATUS "Building shadLauncher4 version: ${APP_VERSION}")
 string(REGEX MATCH "[0-9]+\\.[0-9]+\\.[0-9]+" NUMERIC_VERSION "${APP_VERSION}")
 project(shadLauncher4 VERSION ${NUMERIC_VERSION} LANGUAGES CXX)
 
+
+option(ENABLE_UPDATER "Enables the options to updater" ON)
+
+if(NOT GIT_REMOTE_URL_LOWER MATCHES "shadLaunchers/shadLauncher4" OR NOT GIT_BRANCH STREQUAL "main")
+    message(STATUS "not main, disabling auto update")
+    set(ENABLE_UPDATER OFF)
+endif()
+
 if(WIN32 AND NOT CMAKE_PREFIX_PATH)
     include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/DetectQtInstallation.cmake")
 endif ()
+
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Xml Network Multimedia)
 qt_standard_project_setup()
@@ -129,8 +138,13 @@ set(FILEFORMAT src/core/file_format/psf.cpp
                src/core/file_format/trp.h
 )
 
-set(LIBRARIES src/core/libraries/system/system_service.h
-)
+set(LIBRARIES src/core/libraries/system/system_service.h)
+
+if (ENABLE_UPDATER)
+    set(UPDATER src/qt_ui/check_update.cpp
+                src/qt_ui/check_update.h
+    )
+endif()
 
 set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/settings.h
@@ -215,11 +229,11 @@ set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/cheats_patches_dialog.cpp
           src/qt_ui/cheats_patches_dialog.h
           src/qt_ui/cheats_patches_dialog.ui
-	  src/qt_ui/background_music_player.cpp
+          src/qt_ui/background_music_player.cpp
           src/qt_ui/background_music_player.h
           src/qt_ui/cheats_patches_repository_config.h
           src/qt_ui/hex_plain_text_edit.h
-	  src/qt_ui/log_presets_dialog.cpp
+          src/qt_ui/log_presets_dialog.cpp
           src/qt_ui/log_presets_dialog.h
           src/qt_ui/pkg_install_dir_select_dialog.cpp
           src/qt_ui/pkg_install_dir_select_dialog.h
@@ -243,6 +257,7 @@ set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/hotkeys.ui
           src/qt_ui/sdl_event_wrapper.cpp
           src/qt_ui/sdl_event_wrapper.h
+          ${UPDATER}
 )
 
 set(SOURCES ${COMMON} ${CORE} ${QT_UI} ${FILEFORMAT} ${LIBRARIES} ${TRANSLATIONS} src/game_info.h src/main.cpp)
@@ -258,6 +273,9 @@ configure_file(
 target_include_directories(shadLauncher4 PRIVATE ${CMAKE_BINARY_DIR}/generated)
 
 target_link_libraries(shadLauncher4 PRIVATE fmt::fmt Qt6::Widgets Qt6::Concurrent Qt6::Xml Qt6::Network Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static)
+if (ENABLE_UPDATER)
+    add_definitions(-DENABLE_UPDATER)
+endif()
 if (WIN32)
 target_link_libraries(shadLauncher4 PRIVATE ntdll sdl3 vulkaninfowin)
 else()

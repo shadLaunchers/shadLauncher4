@@ -24,6 +24,9 @@
 #include "pkg_install_dir_select_dialog.h"
 #include "pkg_install_model.h"
 #include "progress_dialog.h"
+#ifdef ENABLE_UPDATER
+#include "qt_ui/check_update.h"
+#endif
 #include "settings_dialog.h"
 #include "ui_main_window.h"
 #include "user_manager_dialog.h"
@@ -70,12 +73,6 @@ bool MainWindow::init() {
     m_game_list_frame->Refresh(true);
     m_game_list_frame->CheckCompatibilityAtStartup();
 
-    LoadVersionComboBox();
-    if (m_gui_settings->GetValue(GUI::version_manager_checkOnStartup).toBool()) {
-        auto versionDialog = new VersionDialog(m_gui_settings, this);
-        versionDialog->checkUpdatePre(false);
-    }
-
     // Expandable spacer to push elements to the right (Version Manager)
     QWidget* expandingSpacer = new QWidget(this);
     expandingSpacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
@@ -89,6 +86,20 @@ bool MainWindow::init() {
     ui->toolBar->addWidget(versionContainer);
     LoadVersionComboBox();
     show();
+
+    // Check Update Emu
+    if (m_gui_settings->GetValue(GUI::version_manager_checkOnStartup).toBool()) {
+        auto versionDialog = new VersionDialog(m_gui_settings, this);
+        versionDialog->checkUpdatePre(false);
+    }
+
+    // Check Update Gui
+#ifdef ENABLE_UPDATER
+    if (m_gui_settings->GetValue(GUI::general_check_gui_updates).toBool()) {
+        auto* checkUpdate = new CheckUpdate(m_gui_settings, false, this);
+        checkUpdate->exec();
+    }
+#endif
 
     return true;
 }
@@ -316,6 +327,15 @@ void MainWindow::createConnects() {
 
     connect(m_ipc_client.get(), &IpcClient::LogEntrySent, m_game_list_frame,
             &GameListFrame::PrintLog);
+
+#ifdef ENABLE_UPDATER
+    connect(ui->updaterAct, &QAction::triggered, this, [this] {
+        auto* checkUpdate = new CheckUpdate(m_gui_settings, true, this);
+        checkUpdate->exec();
+    });
+#else
+    ui->updaterAct->setVisible(false);
+#endif
 }
 
 void MainWindow::LoadVersionComboBox() {
