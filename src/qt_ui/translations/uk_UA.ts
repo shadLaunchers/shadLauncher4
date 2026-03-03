@@ -1242,31 +1242,31 @@ Using local database.
     </message>
     <message>
       <source>&amp;Create Desktop Shortcut</source>
-      <translation type="unfinished">&amp;Create Desktop Shortcut</translation>
+      <translation>&amp;Створити ярлик на робочому столі</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Не вибрано жодної версії</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Спочатку виберіть версію</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Створення ярлика</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Ярлик успішно створено!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Помилка при створенні ярлика!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Не вдалося конвертувати значок.</translation>
     </message>
   </context>
   <context>
@@ -2188,15 +2188,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Запустити емулятор</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>Емулятор уже запущено!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Надано недійсний аргумент гри</translation>
     </message>
   </context>
   <context>
@@ -3188,19 +3188,19 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Readbacks Mode</source>
-      <translation type="unfinished">Readbacks Mode</translation>
+      <translation>Режим зворотного зчитування</translation>
     </message>
     <message>
       <source>Disabled</source>
-      <translation type="unfinished">Disabled</translation>
+      <translation>Вимкнено</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Розслаблено</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Точно</translation>
     </message>
   </context>
   <context>
@@ -3267,7 +3267,7 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</source>
-      <translation type="unfinished">Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</translation>
+      <translation>Режим зворотного зчитування:\nКерує тим, як емулятор обробляє зворотне зчитування з ГП. Увімкнення цього параметру покращує роботу деяких ігор.\nРекомендовано вибрати «Вимкнено»\nРежим «Розслаблено» такий самий, як і «Точний», але використовує менше бар'єрів захисту, що може дати більше к / с.\nДля максимальної сумісності, коли необхідно зчитувати дані, слід використовувати точний режим</translation>
     </message>
   </context>
   <context>
