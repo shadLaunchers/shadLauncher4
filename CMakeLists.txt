@@ -20,13 +20,6 @@ project(shadLauncher4 VERSION ${NUMERIC_VERSION} LANGUAGES CXX)
 
 set(APP_IS_RELEASE false)
 
-option(ENABLE_UPDATER "Enables the options to updater" ON)
-
-if(NOT GIT_REMOTE_URL_LOWER MATCHES "shadLaunchers/shadLauncher4" OR NOT GIT_BRANCH STREQUAL "main")
-    message(STATUS "not main, disabling auto update")
-    set(ENABLE_UPDATER OFF)
-endif()
-
 if(WIN32 AND NOT CMAKE_PREFIX_PATH)
     include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/DetectQtInstallation.cmake")
 endif ()
@@ -66,6 +59,53 @@ git_describe(GIT_DESC --always --long --dirty)
 git_branch_name(GIT_BRANCH)
 string(TIMESTAMP BUILD_DATE "%Y-%m-%d %H:%M:%S")
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/common/scm_rev.cpp.in" "${CMAKE_CURRENT_BINARY_DIR}/src/common/scm_rev.cpp" @ONLY)
+
+# Try to detect upstream
+execute_process(
+  COMMAND git rev-parse --abbrev-ref --symbolic-full-name @{u}
+  OUTPUT_VARIABLE GIT_REMOTE_NAME
+  RESULT_VARIABLE GIT_REMOTE_RESULT
+  ERROR_QUIET
+  OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+# Fallback for GitHub Actions
+if (GIT_REMOTE_RESULT OR GIT_REMOTE_NAME STREQUAL "")
+  set(GIT_REMOTE_NAME "origin")
+
+  if (DEFINED ENV{GITHUB_HEAD_REF} AND NOT "$ENV{GITHUB_HEAD_REF}" STREQUAL "")
+    set(GIT_BRANCH "$ENV{GITHUB_HEAD_REF}")
+  elseif (DEFINED ENV{GITHUB_REF} AND NOT "$ENV{GITHUB_REF}" STREQUAL "")
+    string(REGEX REPLACE "^refs/[^/]*/" "" GIT_BRANCH "$ENV{GITHUB_REF}")
+  elseif("${GIT_BRANCH}" STREQUAL "")
+    set(GIT_BRANCH "detached-head")
+  endif()
+else()
+  string(FIND "${GIT_REMOTE_NAME}" "/" INDEX)
+  if (INDEX GREATER -1)
+    string(SUBSTRING "${GIT_REMOTE_NAME}" 0 "${INDEX}" GIT_REMOTE_NAME)
+  endif()
+endif()
+
+# Get remote URL
+execute_process(
+  COMMAND git config --get remote.${GIT_REMOTE_NAME}.url
+  OUTPUT_VARIABLE GIT_REMOTE_URL
+  OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+message(STATUS "Remote name: ${GIT_REMOTE_NAME}")
+message(STATUS "Branch: ${GIT_BRANCH}")
+message(STATUS "Remote URL: ${GIT_REMOTE_URL}")
+
+option(ENABLE_UPDATER "Enables the options to updater" ON)
+
+string(TOLOWER "${GIT_REMOTE_URL}" GIT_REMOTE_URL_LOWER)
+
+if(NOT GIT_REMOTE_URL_LOWER MATCHES "shadlaunchers/shadlauncher4" OR NOT GIT_BRANCH STREQUAL "main")
+    message(STATUS "Not the expected branch or remote, disabling auto update")
+    set(ENABLE_UPDATER OFF)
+endif()
 
 set(COMMON src/common/types.h
            src/common/fs_util.cpp

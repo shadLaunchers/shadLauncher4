@@ -66,8 +66,7 @@ bool MainWindow::init() {
 
     setMinimumSize(350, minimumSizeHint().height()); // seems fine on win 10
 
-    // TODO: Adjust name for local builds
-    if (Common::g_is_release) {
+    if (Common::g_is_release || std::string(Common::g_scm_remote_url).empty()) {
         setWindowTitle(QString("shadLauncher4 %1").arg(APP_VERSION));
     } else {
         setWindowTitle(QString("%1").arg(APP_VERSION));
