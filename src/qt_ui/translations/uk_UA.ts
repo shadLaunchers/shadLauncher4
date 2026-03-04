@@ -296,111 +296,111 @@
     <name>CheckUpdate</name>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Автооновлення: інтерфейс</translation>
     </message>
     <message>
       <source>Auto Updater</source>
-      <translation type="unfinished">Auto Updater</translation>
+      <translation>Автооновлення</translation>
     </message>
     <message>
       <source>The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</source>
-      <translation type="unfinished">The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</translation>
+      <translation>Автооновлення дозволяє до 60 перевірок оновлень на годину.\nВи досягли цього ліміту. Спробуйте пізніше.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>Network error:</source>
-      <translation type="unfinished">Network error:</translation>
+      <translation>Мережева помилка:</translation>
     </message>
     <message>
       <source>Failed to parse update information.</source>
-      <translation type="unfinished">Failed to parse update information.</translation>
+      <translation>Не вдалося розібрати інформацію про оновлення.</translation>
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation type="unfinished">No pre-releases found.</translation>
+      <translation>Попередніх версій не знайдено.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>Не знайдено URL-адреси для завантаження зазначеного ресурсу.</translation>
     </message>
     <message>
       <source>Your version is already up to date!</source>
-      <translation type="unfinished">Your version is already up to date!</translation>
+      <translation>У вас актуальна версія!</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Доступне оновлення: інтерфейс</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Поточна версія</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Остання версія</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation type="unfinished">Check for Updates at Startup</translation>
+      <translation>Перевірка оновлень під час запуску</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Бажаєте оновитися?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Оновитися</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Ні</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>Показати журнал змін</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>Приховати журнал змін</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Журнал змін</translation>
     </message>
     <message>
       <source>Network error occurred while trying to access the URL</source>
-      <translation type="unfinished">Network error occurred while trying to access the URL</translation>
+      <translation>Сталася мережева помилка під час спроби доступу до URL</translation>
     </message>
     <message>
       <source>Download Complete</source>
-      <translation type="unfinished">Download Complete</translation>
+      <translation>Завантаження завершено</translation>
     </message>
     <message>
       <source>The update has been downloaded, press OK to install.</source>
-      <translation type="unfinished">The update has been downloaded, press OK to install.</translation>
+      <translation>Оновлення завантажено, натисніть «Гаразд» для встановлення.</translation>
     </message>
     <message>
       <source>Failed to save the update file at</source>
-      <translation type="unfinished">Failed to save the update file at</translation>
+      <translation>Не вдалося зберегти файл оновлення в</translation>
     </message>
     <message>
       <source>Failed to extract the update ZIP:
 </source>
-      <translation type="unfinished">Failed to extract the update ZIP:
+      <translation>Не вдалося витягти ZIP-архів оновлення:
 </translation>
     </message>
     <message>
       <source>Failed to create update script:
 </source>
-      <translation type="unfinished">Failed to create update script:
+      <translation>Не вдалося створити скрипт оновлення:
 </translation>
     </message>
     <message>
       <source>Failed to start update process.</source>
-      <translation type="unfinished">Failed to start update process.</translation>
+      <translation>Не вдалося розпочати процес оновлення.</translation>
     </message>
   </context>
   <context>
@@ -2311,7 +2311,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Check for Updates</source>
-      <translation type="unfinished">Check for Updates</translation>
+      <translation>Перевірити наявність оновлень</translation>
     </message>
   </context>
   <context>
