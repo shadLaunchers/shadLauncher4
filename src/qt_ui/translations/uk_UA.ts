@@ -293,6 +293,117 @@
     </message>
   </context>
   <context>
+    <name>CheckUpdate</name>
+    <message>
+      <source>Auto Updater - GUI</source>
+      <translation type="unfinished">Auto Updater - GUI</translation>
+    </message>
+    <message>
+      <source>Auto Updater</source>
+      <translation type="unfinished">Auto Updater</translation>
+    </message>
+    <message>
+      <source>The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</source>
+      <translation type="unfinished">The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>Network error:</source>
+      <translation type="unfinished">Network error:</translation>
+    </message>
+    <message>
+      <source>Failed to parse update information.</source>
+      <translation type="unfinished">Failed to parse update information.</translation>
+    </message>
+    <message>
+      <source>No pre-releases found.</source>
+      <translation type="unfinished">No pre-releases found.</translation>
+    </message>
+    <message>
+      <source>No download URL found for the specified asset.</source>
+      <translation type="unfinished">No download URL found for the specified asset.</translation>
+    </message>
+    <message>
+      <source>Your version is already up to date!</source>
+      <translation type="unfinished">Your version is already up to date!</translation>
+    </message>
+    <message>
+      <source>Update Available - GUI</source>
+      <translation type="unfinished">Update Available - GUI</translation>
+    </message>
+    <message>
+      <source>Current Version</source>
+      <translation type="unfinished">Current Version</translation>
+    </message>
+    <message>
+      <source>Latest Version</source>
+      <translation type="unfinished">Latest Version</translation>
+    </message>
+    <message>
+      <source>Check for Updates at Startup</source>
+      <translation type="unfinished">Check for Updates at Startup</translation>
+    </message>
+    <message>
+      <source>Do you want to update?</source>
+      <translation type="unfinished">Do you want to update?</translation>
+    </message>
+    <message>
+      <source>Update</source>
+      <translation type="unfinished">Update</translation>
+    </message>
+    <message>
+      <source>No</source>
+      <translation type="unfinished">No</translation>
+    </message>
+    <message>
+      <source>Show Changelog</source>
+      <translation type="unfinished">Show Changelog</translation>
+    </message>
+    <message>
+      <source>Hide Changelog</source>
+      <translation type="unfinished">Hide Changelog</translation>
+    </message>
+    <message>
+      <source>Changes</source>
+      <translation type="unfinished">Changes</translation>
+    </message>
+    <message>
+      <source>Network error occurred while trying to access the URL</source>
+      <translation type="unfinished">Network error occurred while trying to access the URL</translation>
+    </message>
+    <message>
+      <source>Download Complete</source>
+      <translation type="unfinished">Download Complete</translation>
+    </message>
+    <message>
+      <source>The update has been downloaded, press OK to install.</source>
+      <translation type="unfinished">The update has been downloaded, press OK to install.</translation>
+    </message>
+    <message>
+      <source>Failed to save the update file at</source>
+      <translation type="unfinished">Failed to save the update file at</translation>
+    </message>
+    <message>
+      <source>Failed to extract the update ZIP:
+</source>
+      <translation type="unfinished">Failed to extract the update ZIP:
+</translation>
+    </message>
+    <message>
+      <source>Failed to create update script:
+</source>
+      <translation type="unfinished">Failed to create update script:
+</translation>
+    </message>
+    <message>
+      <source>Failed to start update process.</source>
+      <translation type="unfinished">Failed to start update process.</translation>
+    </message>
+  </context>
+  <context>
     <name>ControlSettings</name>
     <message>
       <source>Configure Controls</source>
@@ -1242,31 +1353,31 @@ Using local database.
     </message>
     <message>
       <source>&amp;Create Desktop Shortcut</source>
-      <translation type="unfinished">&amp;Create Desktop Shortcut</translation>
+      <translation>&amp;Створити ярлик на робочому столі</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Не вибрано жодної версії</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Спочатку виберіть версію</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Створення ярлика</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Ярлик успішно створено!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Помилка при створенні ярлика!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Не вдалося конвертувати значок.</translation>
     </message>
   </context>
   <context>
@@ -2188,15 +2299,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Запустити емулятор</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>Емулятор уже запущено!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Надано недійсний аргумент гри</translation>
+    </message>
+    <message>
+      <source>Check for Updates</source>
+      <translation type="unfinished">Check for Updates</translation>
     </message>
   </context>
   <context>
@@ -3188,19 +3303,19 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Readbacks Mode</source>
-      <translation type="unfinished">Readbacks Mode</translation>
+      <translation>Режим зворотного зчитування</translation>
     </message>
     <message>
       <source>Disabled</source>
-      <translation type="unfinished">Disabled</translation>
+      <translation>Вимкнено</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Розслаблено</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Точно</translation>
     </message>
   </context>
   <context>
@@ -3267,7 +3382,7 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</source>
-      <translation type="unfinished">Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</translation>
+      <translation>Режим зворотного зчитування:\nКерує тим, як емулятор обробляє зворотне зчитування з ГП. Увімкнення цього параметру покращує роботу деяких ігор.\nРекомендовано вибрати «Вимкнено»\nРежим «Розслаблено» такий самий, як і «Точний», але використовує менше бар'єрів захисту, що може дати більше к / с.\nДля максимальної сумісності, коли необхідно зчитувати дані, слід використовувати точний режим</translation>
     </message>
   </context>
   <context>
