@@ -291,6 +291,115 @@
     </message>
 </context>
 <context>
+    <name>CheckUpdate</name>
+    <message>
+        <source>Auto Updater - GUI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Auto Updater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Network error:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to parse update information.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No pre-releases found.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No download URL found for the specified asset.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your version is already up to date!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update Available - GUI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Current Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Latest Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check for Updates at Startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you want to update?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Changelog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hide Changelog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Network error occurred while trying to access the URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Download Complete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The update has been downloaded, press OK to install.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to save the update file at</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to extract the update ZIP:
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create update script:
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to start update process.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ControlSettings</name>
     <message>
         <source>Configure Controls</source>
@@ -2166,6 +2275,10 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Invalid game argument provided</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check for Updates</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
