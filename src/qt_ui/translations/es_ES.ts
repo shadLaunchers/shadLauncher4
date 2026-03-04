@@ -293,6 +293,117 @@
     </message>
   </context>
   <context>
+    <name>CheckUpdate</name>
+    <message>
+      <source>Auto Updater - GUI</source>
+      <translation type="unfinished">Auto Updater - GUI</translation>
+    </message>
+    <message>
+      <source>Auto Updater</source>
+      <translation type="unfinished">Auto Updater</translation>
+    </message>
+    <message>
+      <source>The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</source>
+      <translation type="unfinished">The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>Network error:</source>
+      <translation type="unfinished">Network error:</translation>
+    </message>
+    <message>
+      <source>Failed to parse update information.</source>
+      <translation type="unfinished">Failed to parse update information.</translation>
+    </message>
+    <message>
+      <source>No pre-releases found.</source>
+      <translation type="unfinished">No pre-releases found.</translation>
+    </message>
+    <message>
+      <source>No download URL found for the specified asset.</source>
+      <translation type="unfinished">No download URL found for the specified asset.</translation>
+    </message>
+    <message>
+      <source>Your version is already up to date!</source>
+      <translation type="unfinished">Your version is already up to date!</translation>
+    </message>
+    <message>
+      <source>Update Available - GUI</source>
+      <translation type="unfinished">Update Available - GUI</translation>
+    </message>
+    <message>
+      <source>Current Version</source>
+      <translation type="unfinished">Current Version</translation>
+    </message>
+    <message>
+      <source>Latest Version</source>
+      <translation type="unfinished">Latest Version</translation>
+    </message>
+    <message>
+      <source>Check for Updates at Startup</source>
+      <translation type="unfinished">Check for Updates at Startup</translation>
+    </message>
+    <message>
+      <source>Do you want to update?</source>
+      <translation type="unfinished">Do you want to update?</translation>
+    </message>
+    <message>
+      <source>Update</source>
+      <translation type="unfinished">Update</translation>
+    </message>
+    <message>
+      <source>No</source>
+      <translation type="unfinished">No</translation>
+    </message>
+    <message>
+      <source>Show Changelog</source>
+      <translation type="unfinished">Show Changelog</translation>
+    </message>
+    <message>
+      <source>Hide Changelog</source>
+      <translation type="unfinished">Hide Changelog</translation>
+    </message>
+    <message>
+      <source>Changes</source>
+      <translation type="unfinished">Changes</translation>
+    </message>
+    <message>
+      <source>Network error occurred while trying to access the URL</source>
+      <translation type="unfinished">Network error occurred while trying to access the URL</translation>
+    </message>
+    <message>
+      <source>Download Complete</source>
+      <translation type="unfinished">Download Complete</translation>
+    </message>
+    <message>
+      <source>The update has been downloaded, press OK to install.</source>
+      <translation type="unfinished">The update has been downloaded, press OK to install.</translation>
+    </message>
+    <message>
+      <source>Failed to save the update file at</source>
+      <translation type="unfinished">Failed to save the update file at</translation>
+    </message>
+    <message>
+      <source>Failed to extract the update ZIP:
+</source>
+      <translation type="unfinished">Failed to extract the update ZIP:
+</translation>
+    </message>
+    <message>
+      <source>Failed to create update script:
+</source>
+      <translation type="unfinished">Failed to create update script:
+</translation>
+    </message>
+    <message>
+      <source>Failed to start update process.</source>
+      <translation type="unfinished">Failed to start update process.</translation>
+    </message>
+  </context>
+  <context>
     <name>ControlSettings</name>
     <message>
       <source>Configure Controls</source>
@@ -2189,6 +2300,10 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     <message>
       <source>Invalid game argument provided</source>
       <translation>Argumento de juego no válido</translation>
+    </message>
+    <message>
+      <source>Check for Updates</source>
+      <translation type="unfinished">Check for Updates</translation>
     </message>
   </context>
   <context>
