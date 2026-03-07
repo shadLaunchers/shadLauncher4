@@ -200,7 +200,6 @@ void MainWindow::createConnects() {
 
     // toolbar actions
     connect(ui->toolbar_start, &QAction::triggered, this, [this] {
-        m_emu_settings->SetConfigMode(ConfigMode::Default);
         MainWindow::StartGameWithArgs({});
     });
     connect(ui->toolbar_stop, &QAction::triggered, this, &MainWindow::StopGame);
@@ -329,10 +328,8 @@ void MainWindow::createConnects() {
     connect(this, &MainWindow::ExtractionFinished, this,
             [this]() { m_game_list_frame->Refresh(true); });
 
-    connect(m_game_list_frame, &GameListFrame::RequestBoot, this, [this](game_info game) {
-        m_emu_settings->SetConfigMode(ConfigMode::Default);
-        StartGameWithArgs(game, {});
-    });
+    connect(m_game_list_frame, &GameListFrame::RequestBoot, this,
+            [this](game_info game) { StartGameWithArgs(game); });
 
     connect(m_ipc_client.get(), &IpcClient::LogEntrySent, m_game_list_frame,
             &GameListFrame::PrintLog);

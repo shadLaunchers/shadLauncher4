@@ -1268,7 +1268,6 @@ void GameListFrame::DoubleClickedSlot(const game_info& game) {
         return;
     }
 
-    m_emu_settings->SetConfigMode(ConfigMode::Default);
     Q_EMIT RequestBoot(game);
 }
 
@@ -1447,20 +1446,19 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
     QMenu* launch_menu = menu.addMenu(tr("&Launch game"));
     QAction* launch_default = launch_menu->addAction(tr("&Launch game with current settings"));
     connect(launch_default, &QAction::triggered, this, [this, gameinfo] {
-        m_emu_settings->SetConfigMode(ConfigMode::Default);
         RequestBoot(gameinfo);
     });
 
     QAction* launch_clean = launch_menu->addAction(tr("&Launch game with default settings"));
     connect(launch_clean, &QAction::triggered, this, [this, gameinfo] {
-        m_emu_settings->SetConfigMode(ConfigMode::Clean);
-        RequestBoot(gameinfo);
+        QStringList args = {"--clean"};
+        RequestBoot(gameinfo, args);
     });
 
     QAction* launch_global = launch_menu->addAction(tr("&Launch game with global settings"));
     connect(launch_global, &QAction::triggered, this, [this, gameinfo] {
-        m_emu_settings->SetConfigMode(ConfigMode::Global);
-        RequestBoot(gameinfo);
+        QStringList args = {"--global"};
+        RequestBoot(gameinfo, args);
     });
 
     QAction* configure = menu.addAction(
