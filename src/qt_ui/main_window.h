@@ -59,7 +59,7 @@ public Q_SLOTS:
     void PauseGame();
     void StopGame();
     void ToggleFullscreen();
-    void StartEmulatorExecutable(QString emulatorArg, QString gameArg);
+    void StartEmulatorExecutable(QString emulatorArg, QString gameArg, QStringList passed_args);
 
 private Q_SLOTS:
     void saveWindowState() const;

@@ -1451,13 +1451,13 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
 
     QAction* launch_clean = launch_menu->addAction(tr("&Launch game with default settings"));
     connect(launch_clean, &QAction::triggered, this, [this, gameinfo] {
-        QStringList args = {"--clean"};
+        QStringList args = {"--config-clean"};
         RequestBoot(gameinfo, args);
     });
 
     QAction* launch_global = launch_menu->addAction(tr("&Launch game with global settings"));
     connect(launch_global, &QAction::triggered, this, [this, gameinfo] {
-        QStringList args = {"--global"};
+        QStringList args = {"--config-global"};
         RequestBoot(gameinfo, args);
     });
 
