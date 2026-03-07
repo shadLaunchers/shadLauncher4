@@ -1268,6 +1268,7 @@ void GameListFrame::DoubleClickedSlot(const game_info& game) {
         return;
     }
 
+    m_emu_settings->SetConfigMode(ConfigMode::Default);
     Q_EMIT RequestBoot(game);
 }
 
