@@ -47,7 +47,6 @@ MainWindow::MainWindow(std::shared_ptr<GUISettings> gui_settings,
 
     setAttribute(Qt::WA_DeleteOnClose);
 
-    std::shared_ptr<IpcClient> m_ipc_client = std::make_shared<IpcClient>();
     m_ipc_client->gameClosedFunc = [this]() { onGameClosed(); };
     m_ipc_client->restartEmulatorFunc = [this]() { RestartEmulator(); };
     m_ipc_client->startGameFunc = [this]() { RunGame(); };
@@ -200,8 +199,10 @@ void MainWindow::createConnects() {
     });
 
     // toolbar actions
-    connect(ui->toolbar_start, &QAction::triggered, this,
-            [this] { MainWindow::StartGameWithArgs({}); });
+    connect(ui->toolbar_start, &QAction::triggered, this, [this] {
+        m_emu_settings->SetConfigMode(ConfigMode::Default);
+        MainWindow::StartGameWithArgs({});
+    });
     connect(ui->toolbar_stop, &QAction::triggered, this, &MainWindow::StopGame);
     connect(ui->toolbar_refresh, &QAction::triggered, this,
             [this]() { m_game_list_frame->Refresh(true); });
@@ -328,8 +329,10 @@ void MainWindow::createConnects() {
     connect(this, &MainWindow::ExtractionFinished, this,
             [this]() { m_game_list_frame->Refresh(true); });
 
-    connect(m_game_list_frame, &GameListFrame::RequestBoot, this,
-            [this](game_info game) { StartGameWithArgs(game, {}); });
+    connect(m_game_list_frame, &GameListFrame::RequestBoot, this, [this](game_info game) {
+        m_emu_settings->SetConfigMode(ConfigMode::Default);
+        StartGameWithArgs(game, {});
+    });
 
     connect(m_ipc_client.get(), &IpcClient::LogEntrySent, m_game_list_frame,
             &GameListFrame::PrintLog);

@@ -40,6 +40,9 @@ public:
     bool init();
     void InstallDragDropPkgs(const std::vector<std::filesystem::path>& files);
     void InstallSinglePkg(std::filesystem::path file, int pkgNum, int nPkg);
+
+    std::shared_ptr<IpcClient> m_ipc_client;
+
 Q_SIGNALS:
     void requestLanguageChange(const QString& language);
     void RequestGlobalStylesheetChange();
@@ -90,7 +93,6 @@ private:
     QActionGroup* m_list_mode_act_group = nullptr;
 
     // IPC things
-    std::shared_ptr<IpcClient> m_ipc_client;
     game_info last_game_info;
     bool is_paused;
 };
