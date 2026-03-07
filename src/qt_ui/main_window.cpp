@@ -199,9 +199,8 @@ void MainWindow::createConnects() {
     });
 
     // toolbar actions
-    connect(ui->toolbar_start, &QAction::triggered, this, [this] {
-        MainWindow::StartGameWithArgs({});
-    });
+    connect(ui->toolbar_start, &QAction::triggered, this,
+            [this] { MainWindow::StartGameWithArgs({}); });
     connect(ui->toolbar_stop, &QAction::triggered, this, &MainWindow::StopGame);
     connect(ui->toolbar_refresh, &QAction::triggered, this,
             [this]() { m_game_list_frame->Refresh(true); });
