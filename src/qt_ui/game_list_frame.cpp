@@ -1445,9 +1445,7 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
 
     QMenu* launch_menu = menu.addMenu(tr("&Launch game"));
     QAction* launch_default = launch_menu->addAction(tr("&Launch game with current settings"));
-    connect(launch_default, &QAction::triggered, this, [this, gameinfo] {
-        RequestBoot(gameinfo);
-    });
+    connect(launch_default, &QAction::triggered, this, [this, gameinfo] { RequestBoot(gameinfo); });
 
     QAction* launch_clean = launch_menu->addAction(tr("&Launch game with default settings"));
     connect(launch_clean, &QAction::triggered, this, [this, gameinfo] {
