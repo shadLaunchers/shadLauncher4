@@ -93,7 +93,7 @@ Q_SIGNALS:
     void RequestIconSizeChange(const int& val);
     void Refreshed();
     void NotifyGameSelection(const game_info& game);
-    void RequestBoot(const game_info& game);
+    void RequestBoot(const game_info& game, QStringList args = {});
 
 protected:
     /** Override inherited method from Qt to allow signalling when close happened.*/

@@ -22,7 +22,7 @@ public:
     GUIApplication(int& argc, char** argv);
     ~GUIApplication();
 
-    bool init(QString emulator_arg = "", QString game_arg = "");
+    bool init(QString emulator_arg = "", QString game_arg = "", QStringList passed_args = {});
     static s32 getLanguageId();
     static QStringList getAvailableLanguageCodes();
 

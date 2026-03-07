@@ -47,7 +47,6 @@ MainWindow::MainWindow(std::shared_ptr<GUISettings> gui_settings,
 
     setAttribute(Qt::WA_DeleteOnClose);
 
-    std::shared_ptr<IpcClient> m_ipc_client = std::make_shared<IpcClient>();
     m_ipc_client->gameClosedFunc = [this]() { onGameClosed(); };
     m_ipc_client->restartEmulatorFunc = [this]() { RestartEmulator(); };
     m_ipc_client->startGameFunc = [this]() { RunGame(); };
@@ -329,7 +328,7 @@ void MainWindow::createConnects() {
             [this]() { m_game_list_frame->Refresh(true); });
 
     connect(m_game_list_frame, &GameListFrame::RequestBoot, this,
-            [this](game_info game) { StartGameWithArgs(game, {}); });
+            [this](game_info game, QStringList args) { StartGameWithArgs(game, args); });
 
     connect(m_ipc_client.get(), &IpcClient::LogEntrySent, m_game_list_frame,
             &GameListFrame::PrintLog);
@@ -1202,7 +1201,8 @@ void MainWindow::ToggleFullscreen() {
     m_ipc_client->toggleFullscreen();
 }
 
-void MainWindow::StartEmulatorExecutable(QString emulatorArg, QString gameArg) {
+void MainWindow::StartEmulatorExecutable(QString emulatorArg, QString gameArg,
+                                         QStringList passed_args) {
     if (EmulatorState::GetInstance()->IsGameRunning()) {
         QMessageBox::critical(nullptr, tr("Run Emulator"),
                               QString(tr("Emulator is already running!")));
@@ -1258,6 +1258,9 @@ void MainWindow::StartEmulatorExecutable(QString emulatorArg, QString gameArg) {
         QStringList game_args{"--game", QString::fromStdWString(gamePath.wstring())};
         args.append(game_args);
     }
+
+    if (!passed_args.isEmpty())
+        args.append(passed_args);
 
     QString emulatorPath;
     if (std::filesystem::exists(Common::FS::PathFromQString(emulatorArg))) {

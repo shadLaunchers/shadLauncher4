@@ -16,6 +16,7 @@ int main(int argc, char* argv[]) {
     QScopedPointer<QCoreApplication> app(new GUIApplication(argc, argv));
     GUIApplication* gui_app = qobject_cast<GUIApplication*>(app.data());
 
+    QStringList passed_args{};
     QString emulator_arg = "";
     QString game_arg = "";
 
@@ -31,7 +32,8 @@ int main(int argc, char* argv[]) {
                  "use, or 'default' for using the version selected in the config.\n"
                  "  -g, --game <ID|path>          Specify game to launch.\n"
                  "  -d                            Alias for '-e default'.\n"
-                 "  -h, --help                    Display this help message.\n";
+                 "  -h, --help                    Display this help message.\n"
+                 " -- ...                         Parameters passed to the emulator core.";
              QMessageBox::information(nullptr, "tr(shadLauncher4 command line options)", helpMsg);
              exit(0);
          }},
@@ -66,6 +68,15 @@ int main(int argc, char* argv[]) {
         auto it = arg_map.find(cur_arg);
         if (it != arg_map.end()) {
             it->second(i); // Call the associated lambda function
+        } else if (std::string(argv[i]) == "--") {
+            if (i + 1 == argc) {
+                std::cerr << "Warning: -- is set, but no emulator arguments are added!\n";
+                break;
+            }
+            for (int j = i + 1; j < argc; j++) {
+                passed_args.push_back(argv[j]);
+            }
+            break;
         } else {
             std::cerr << "Unknown argument: " << cur_arg << ", see --help for info.\n";
             return 1;
