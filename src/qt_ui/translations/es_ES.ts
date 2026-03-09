@@ -1381,19 +1381,19 @@ Se va a utilizar la base de datos local.
     </message>
     <message>
       <source>&amp;Launch game</source>
-      <translation type="unfinished">&amp;Launch game</translation>
+      <translation>&amp;Iniciar juego</translation>
     </message>
     <message>
       <source>&amp;Launch game with current settings</source>
-      <translation type="unfinished">&amp;Launch game with current settings</translation>
+      <translation>&amp;Iniciar juego con configuración actual</translation>
     </message>
     <message>
       <source>&amp;Launch game with default settings</source>
-      <translation type="unfinished">&amp;Launch game with default settings</translation>
+      <translation>&amp;Iniciar juego con configuración predeterminada</translation>
     </message>
     <message>
       <source>&amp;Launch game with global settings</source>
-      <translation type="unfinished">&amp;Launch game with global settings</translation>
+      <translation>&amp;Iniciar juego con configuración global</translation>
     </message>
   </context>
   <context>
