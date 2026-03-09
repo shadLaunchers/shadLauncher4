@@ -1365,6 +1365,22 @@ Using local database.
         <source>Failed to convert icon.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>&amp;Launch game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Launch game with current settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Launch game with default settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Launch game with global settings</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GameListGrid</name>
