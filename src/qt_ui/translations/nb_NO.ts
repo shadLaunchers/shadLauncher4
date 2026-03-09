@@ -1379,6 +1379,22 @@ Bruker lokal database.
       <source>Failed to convert icon.</source>
       <translation>Klarte ikke konvertere ikon.</translation>
     </message>
+    <message>
+      <source>&amp;Launch game</source>
+      <translation type="unfinished">&amp;Launch game</translation>
+    </message>
+    <message>
+      <source>&amp;Launch game with current settings</source>
+      <translation type="unfinished">&amp;Launch game with current settings</translation>
+    </message>
+    <message>
+      <source>&amp;Launch game with default settings</source>
+      <translation type="unfinished">&amp;Launch game with default settings</translation>
+    </message>
+    <message>
+      <source>&amp;Launch game with global settings</source>
+      <translation type="unfinished">&amp;Launch game with global settings</translation>
+    </message>
   </context>
   <context>
     <name>GameListGrid</name>
