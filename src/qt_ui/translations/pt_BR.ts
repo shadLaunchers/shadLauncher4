@@ -328,7 +328,7 @@
     </message>
     <message>
       <source>Your version is already up to date!</source>
-      <translation type="unfinished">Your version is already up to date!</translation>
+      <translation>Sua versão já está atualizada!</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
@@ -384,7 +384,7 @@
     </message>
     <message>
       <source>Failed to save the update file at</source>
-      <translation type="unfinished">Failed to save the update file at</translation>
+      <translation>Falha ao salvar o arquivo de atualização</translation>
     </message>
     <message>
       <source>Failed to extract the update ZIP:
@@ -603,7 +603,7 @@
     </message>
     <message>
       <source>Default controller setting removed</source>
-      <translation type="unfinished">Default controller setting removed</translation>
+      <translation>Configuração do controle padrão removida</translation>
     </message>
     <message>
       <source>Unable to Save</source>
@@ -708,7 +708,7 @@ Todos os campos devem ser strings hexadecimais válidas com comprimento par.</tr
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation>Pkg Derivado da Chave3</translation>
+      <translation>Chave3 do Pkg Derivado</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
@@ -842,7 +842,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
-      <translation type="unfinished">Edit Keyboard + Mouse and Controller input bindings</translation>
+      <translation>Editar associações de entrada do Teclado + Mouse e Controle</translation>
     </message>
     <message>
       <source>Use Per-Game configs</source>
@@ -1377,7 +1377,7 @@ Using local database.
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Falha ao converter o ícone.</translation>
     </message>
     <message>
       <source>&amp;Launch game</source>
@@ -1505,7 +1505,7 @@ Using local database.
     </message>
     <message>
       <source>Renderdoc Capture (for debugging only)</source>
-      <translation type="unfinished">Renderdoc Capture (for debugging only)</translation>
+      <translation>Captura de Renderdoc (apenas para depuração)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
@@ -1743,7 +1743,7 @@ Using local database.
     </message>
     <message>
       <source>Copy values from Common Config</source>
-      <translation type="unfinished">Copy values from Common Config</translation>
+      <translation>Copiar valores da Configuração Comum</translation>
     </message>
     <message>
       <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
@@ -1955,7 +1955,7 @@ Using local database.
     </message>
     <message>
       <source>Show Game Compatibility in Grid Mode</source>
-      <translation type="unfinished">Show Game Compatibility in Grid Mode</translation>
+      <translation>Mostrar Compatibilidade de Jogos no Modo Grade</translation>
     </message>
     <message>
       <source>Game List Refresh</source>
@@ -2203,11 +2203,11 @@ Using local database.
     </message>
     <message>
       <source>No valid PKG decryption keys found. Please set them up in the Crypto Key Manager.</source>
-      <translation type="unfinished">No valid PKG decryption keys found. Please set them up in the Crypto Key Manager.</translation>
+      <translation>Não foram encontradas chaves de descriptografia válidas para PKG. Por favor, configure-as no Gerenciador de Chaves Criptográficas.</translation>
     </message>
     <message>
       <source>No valid Fake PKG decryption keys found. Please set them up in the Crypto Key Manager.</source>
-      <translation type="unfinished">No valid Fake PKG decryption keys found. Please set them up in the Crypto Key Manager.</translation>
+      <translation>Não foram encontradas chaves de descriptografia válidas para PKG Falso. Por favor, configure-as no Gerenciador de Chaves Criptográficas.</translation>
     </message>
     <message>
       <source>PKG Install</source>
@@ -2215,7 +2215,7 @@ Using local database.
     </message>
     <message>
       <source>No valid PKG files were found.</source>
-      <translation type="unfinished">No valid PKG files were found.</translation>
+      <translation>Não foram encontrados arquivos PKG válidos.</translation>
     </message>
     <message>
       <source>Could not read SFO. Check log for details.</source>
@@ -2315,7 +2315,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Argumento de jogo inválido fornecido</translation>
     </message>
     <message>
       <source>Check for Updates</source>
@@ -2534,7 +2534,7 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Game list successfully exported to:
 %1</source>
-      <translation type="unfinished">Game list successfully exported to:
+      <translation>Lista de jogos exportada com sucesso em:
 %1</translation>
     </message>
     <message>
@@ -3257,7 +3257,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Failed to save game settings.</source>
-      <translation type="unfinished">Failed to save game settings.</translation>
+      <translation>Falha ao salvar as configurações do jogo.</translation>
     </message>
     <message>
       <source>Settings Applied</source>
