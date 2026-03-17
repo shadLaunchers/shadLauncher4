@@ -389,18 +389,18 @@
     <message>
       <source>Failed to extract the update ZIP:
 </source>
-      <translation type="unfinished">Failed to extract the update ZIP:
+      <translation>Falha ao extrair a atualização do ZIP:
 </translation>
     </message>
     <message>
       <source>Failed to create update script:
 </source>
-      <translation type="unfinished">Failed to create update script:
+      <translation>Falha ao criar o arquivo de script de atualização:
 </translation>
     </message>
     <message>
       <source>Failed to start update process.</source>
-      <translation type="unfinished">Failed to start update process.</translation>
+      <translation>Falha ao iniciar o processo de atualização.</translation>
     </message>
   </context>
   <context>
@@ -698,7 +698,7 @@ Todos os campos devem ser strings hexadecimais válidas com comprimento par.</tr
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>Depurar Redução do Conjunto de Chaves</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
@@ -854,11 +854,11 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Could not open the file for reading</source>
-      <translation type="unfinished">Could not open the file for reading</translation>
+      <translation>Não foi possível abrir o arquivo para leitura</translation>
     </message>
     <message>
       <source>Could not open the file for writing</source>
-      <translation type="unfinished">Could not open the file for writing</translation>
+      <translation>Não foi possível abrir o arquivo para gravação</translation>
     </message>
     <message>
       <source>Save Changes</source>
@@ -1489,7 +1489,7 @@ Using local database.
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>Recarregar Mapeamento de Botões</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
@@ -1553,7 +1553,7 @@ Using local database.
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation type="unfinished">Waiting for inputs</translation>
+      <translation>Aguardando pelas entradas</translation>
     </message>
     <message>
       <source>Volume Up</source>
@@ -1615,19 +1615,19 @@ Using local database.
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>Seleção de Configuração</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>Configuração Comum</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation type="unfinished">Use per-game configs</translation>
+      <translation>Usar configurações por jogo</translation>
     </message>
     <message>
       <source>Copy from Common Config</source>
-      <translation type="unfinished">Copy from Common Config</translation>
+      <translation>Copiar da Configuração Comum</translation>
     </message>
     <message>
       <source>Text Editor</source>
@@ -1643,11 +1643,11 @@ Using local database.
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Touchpad Esquerdo</translation>
     </message>
     <message>
       <source>Mouse to Joystick</source>
-      <translation type="unfinished">Mouse to Joystick</translation>
+      <translation>Mouse para Joystick</translation>
     </message>
     <message>
       <source>*press F7 ingame to activate</source>
@@ -1659,7 +1659,7 @@ Using local database.
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Touchpad Direito</translation>
     </message>
     <message>
       <source>Mouse Movement Parameters</source>
@@ -1735,7 +1735,7 @@ Using local database.
     </message>
     <message>
       <source>Common Config Selected</source>
-      <translation type="unfinished">Common Config Selected</translation>
+      <translation>Configuração Comum Selecionada</translation>
     </message>
     <message>
       <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
@@ -1771,7 +1771,7 @@ Using local database.
     </message>
     <message>
       <source>Mousewheel cannot be mapped to stick outputs</source>
-      <translation type="unfinished">Mousewheel cannot be mapped to stick outputs</translation>
+      <translation>A rolagem do mouse não pode ser mapeada para saídas do analógico</translation>
     </message>
   </context>
   <context>
@@ -2079,7 +2079,7 @@ Using local database.
     </message>
     <message>
       <source>Export GameList</source>
-      <translation type="unfinished">Export GameList</translation>
+      <translation>Exportar Lista de Jogos</translation>
     </message>
     <message>
       <source>General</source>
@@ -2243,7 +2243,7 @@ Using local database.
     </message>
     <message>
       <source>Game is already running!</source>
-      <translation type="unfinished">Game is already running!</translation>
+      <translation>O jogo já está em execução!</translation>
     </message>
     <message>
       <source>No Version Selected</source>
@@ -2299,11 +2299,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Configure Keyboard and Mouse</source>
-      <translation type="unfinished">Configure Keyboard and Mouse</translation>
+      <translation>Configurar Teclado e Mouse</translation>
     </message>
     <message>
       <source>Configure Hotkeys</source>
-      <translation type="unfinished">Configure Hotkeys</translation>
+      <translation>Configurar Teclas de Atalho</translation>
     </message>
     <message>
       <source>Run Emulator</source>
@@ -2311,7 +2311,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>O emulador já está em execução!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
@@ -2338,15 +2338,15 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Entry Type:</source>
-      <translation type="unfinished">Entry Type:</translation>
+      <translation>Tipo de Inscricão:</translation>
     </message>
     <message>
       <source>Entry Size:</source>
-      <translation type="unfinished">Entry Size:</translation>
+      <translation>Tamanho da Inscricão:</translation>
     </message>
     <message>
       <source>NPCommID:</source>
-      <translation type="unfinished">NPCommID:</translation>
+      <translation>NPCommID:</translation>
     </message>
     <message>
       <source>Trophy ID:</source>
@@ -2354,7 +2354,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Hex Data:</source>
-      <translation type="unfinished">Hex Data:</translation>
+      <translation>Dados Hexadecimais:</translation>
     </message>
     <message>
       <source>NPCommID</source>
@@ -2382,7 +2382,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Body #%1</source>
-      <translation type="unfinished">Body #%1</translation>
+      <translation>Conteúdo #%1</translation>
     </message>
     <message>
       <source>JSON Files (*.json)</source>
@@ -2445,7 +2445,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No Selection</source>
-      <translation type="unfinished">No Selection</translation>
+      <translation>Nada Selecionado</translation>
     </message>
     <message>
       <source>Please select at least one game to install.</source>
@@ -2468,7 +2468,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Title ID</source>
-      <translation type="unfinished">Title ID</translation>
+      <translation>ID do Título</translation>
     </message>
     <message>
       <source>Game Name</source>
@@ -2491,7 +2491,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Select export format:</source>
-      <translation type="unfinished">Select export format:</translation>
+      <translation>Selecione o formato para exportação:</translation>
     </message>
     <message>
       <source>Sort by:</source>
@@ -2503,7 +2503,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Include compatibility info</source>
-      <translation type="unfinished">Include compatibility info</translation>
+      <translation>Incluir informação de compatibilidade</translation>
     </message>
     <message>
       <source>Export</source>
@@ -2524,12 +2524,12 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Failed to create file:
 %1</source>
-      <translation type="unfinished">Failed to create file:
+      <translation>Falha ao criar arquivo: 
 %1</translation>
     </message>
     <message>
       <source>Game List Exported</source>
-      <translation type="unfinished">Game List Exported</translation>
+      <translation>Lista de Jogos Exportada</translation>
     </message>
     <message>
       <source>Game list successfully exported to:
@@ -2539,7 +2539,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Exporting Game List</source>
-      <translation type="unfinished">Exporting Game List</translation>
+      <translation>Exportando Lista de Jogos</translation>
     </message>
     <message>
       <source>Exporting games to CSV...</source>
@@ -2576,12 +2576,12 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Executable does not exist:
 %1</source>
-      <translation type="unfinished">Executable does not exist:
+      <translation>Executável não existe:
 %1</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.</source>
-      <translation type="unfinished">Failed to copy executable to application directory.</translation>
+      <translation>Falha ao copiar o executável para o diretório da aplicação.</translation>
     </message>
   </context>
   <context>
@@ -3245,11 +3245,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Some settings are disabled because they cannot be overridden per-game. These require global settings changes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Some settings are disabled because they cannot be overridden per-game. These require global settings changes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Algumas configurações estão desativadas porque não podem ser alteradas individualmente para cada jogo. Estas alterações exigem modificações nas configurações globais.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <source>Custom Settings for %1 [%2]</source>
-      <translation type="unfinished">Custom Settings for %1 [%2]</translation>
+      <translation>Configurações Personalizadas para %1 [%2]</translation>
     </message>
     <message>
       <source>Global Settings</source>
@@ -3303,7 +3303,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Select directory for System fonts</source>
-      <translation type="unfinished">Select directory for System fonts</translation>
+      <translation>Selecione o diretório para fontes do Sistema</translation>
     </message>
     <message>
       <source>Identical Log Grouped</source>
@@ -3738,7 +3738,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Failed to copy executable into versions folder.</source>
-      <translation type="unfinished">Failed to copy executable into versions folder.</translation>
+      <translation>Falha ao copiar o executável para a pasta de versões.</translation>
     </message>
     <message>
       <source>Warning</source>
@@ -3786,7 +3786,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Executable not found in extracted files.</source>
-      <translation type="unfinished">Executable not found in extracted files.</translation>
+      <translation>Executável não encontrado nos arquivos extraídos.</translation>
     </message>
     <message>
       <source>Version %1 has been:</source>
@@ -3798,7 +3798,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Extraction failure:</source>
-      <translation type="unfinished">Extraction failure:</translation>
+      <translation>Falha na extração:</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) has been:</source>
