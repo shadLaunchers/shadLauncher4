@@ -304,7 +304,7 @@
     </message>
     <message>
       <source>The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</source>
-      <translation type="unfinished">The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</translation>
+      <translation>O Atualizador Automático permite até 60 verificações de atualização por hora.\nVocê atingiu esse limite. Por favor, tente novamente mais tarde.</translation>
     </message>
     <message>
       <source>Error</source>
@@ -316,7 +316,7 @@
     </message>
     <message>
       <source>Failed to parse update information.</source>
-      <translation type="unfinished">Failed to parse update information.</translation>
+      <translation>Falha ao analisar as informações de atualização.</translation>
     </message>
     <message>
       <source>No pre-releases found.</source>
@@ -332,7 +332,7 @@
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Atualização Disponível - GUI</translation>
     </message>
     <message>
       <source>Current Version</source>
@@ -376,7 +376,7 @@
     </message>
     <message>
       <source>Download Complete</source>
-      <translation type="unfinished">Download Complete</translation>
+      <translation>Download Concluído</translation>
     </message>
     <message>
       <source>The update has been downloaded, press OK to install.</source>
@@ -1273,7 +1273,7 @@ Using local database.
     </message>
     <message>
       <source>This game has no Shader Cache to delete!</source>
-      <translation type="unfinished">This game has no Shader Cache to delete!</translation>
+      <translation>Este jogo não tem Cache de Shader para excluir!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
@@ -1281,7 +1281,7 @@ Using local database.
     </message>
     <message>
       <source>Shader cache deleted successfully.</source>
-      <translation type="unfinished">Shader cache deleted successfully.</translation>
+      <translation>Cache de Shader excluído com sucesso.</translation>
     </message>
     <message>
       <source>Delete %1</source>
@@ -1373,7 +1373,7 @@ Using local database.
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Erro ao criar atalho!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
@@ -2287,7 +2287,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No running game to toggle fullscreen</source>
-      <translation type="unfinished">No running game to toggle fullscreen</translation>
+      <translation>Nenhum jogo em execução para alternar tela cheia</translation>
     </message>
     <message>
       <source>Show Game Log</source>
@@ -3742,43 +3742,43 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Aviso</translation>
     </message>
     <message>
       <source>Failed to install executable into application directory.
 The custom build is still available under:
 %1</source>
-      <translation type="unfinished">Failed to install executable into application directory.
-The custom build is still available under:
+      <translation>Falha ao instalar o executável no diretório da aplicação.
+A compilação personalizada ainda está disponível em:
 %1</translation>
     </message>
     <message>
       <source>Could not find executable in extracted files.</source>
-      <translation type="unfinished">Could not find executable in extracted files.</translation>
+      <translation>Não foi possível encontrar o executável nos arquivos extraídos.</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.
 The version has been saved to: %1</source>
-      <translation type="unfinished">Failed to copy executable to application directory.
-The version has been saved to: %1</translation>
+      <translation>Falha ao copiar o executável para o diretório da aplicação.
+A versão de pré-lançamento foi salva em: %1</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.
 The pre-release version has been saved to: %1</source>
-      <translation type="unfinished">Failed to copy executable to application directory.
-The pre-release version has been saved to: %1</translation>
+      <translation>Falha ao copiar o executável para o diretório da aplicação.
+A versão de pré-lançamento foi salva em: %1</translation>
     </message>
     <message>
       <source>Custom version installed successfully:</source>
-      <translation type="unfinished">Custom version installed successfully:</translation>
+      <translation>Versão personalizada instalada com sucesso:</translation>
     </message>
     <message>
       <source>1. Version folder:</source>
-      <translation type="unfinished">1. Version folder:</translation>
+      <translation>1. Pasta de versão:</translation>
     </message>
     <message>
       <source>2. Installed to:</source>
-      <translation type="unfinished">2. Installed to:</translation>
+      <translation>2. Instalado em:</translation>
     </message>
     <message>
       <source>ZIP extraction failed:</source>
@@ -3790,11 +3790,11 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Version %1 has been:</source>
-      <translation type="unfinished">Version %1 has been:</translation>
+      <translation>Versão %1 foi:</translation>
     </message>
     <message>
       <source>1. Downloaded to:</source>
-      <translation type="unfinished">1. Downloaded to:</translation>
+      <translation>1. Baixado em:</translation>
     </message>
     <message>
       <source>Extraction failure:</source>
