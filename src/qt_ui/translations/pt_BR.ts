@@ -7,7 +7,7 @@
     <name>ChangelogDialog</name>
     <message>
       <source>Changelog Viewer</source>
-      <translation type="unfinished">Changelog Viewer</translation>
+      <translation>Visualizador de Alterações</translation>
     </message>
     <message>
       <source>Search in changelog...</source>
@@ -296,11 +296,11 @@
     <name>CheckUpdate</name>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Atualizador Automático - GUI</translation>
     </message>
     <message>
       <source>Auto Updater</source>
-      <translation type="unfinished">Auto Updater</translation>
+      <translation>Atualizador Automático</translation>
     </message>
     <message>
       <source>The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</source>
@@ -308,11 +308,11 @@
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>Network error:</source>
-      <translation type="unfinished">Network error:</translation>
+      <translation>Erro de rede:</translation>
     </message>
     <message>
       <source>Failed to parse update information.</source>
@@ -336,39 +336,39 @@
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Versão Atual</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Última Versão</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation type="unfinished">Check for Updates at Startup</translation>
+      <translation>Verificar por Atualizações ao Iniciar</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Deseja atualizar?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Atualizar</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Não</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>Mostrar Alterações</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>Ocultar Alterações</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Alterações</translation>
     </message>
     <message>
       <source>Network error occurred while trying to access the URL</source>
@@ -623,7 +623,7 @@
     </message>
     <message>
       <source>Press a button</source>
-      <translation type="unfinished">Press a button</translation>
+      <translation>Pressione um botão</translation>
     </message>
     <message>
       <source>Move analog stick</source>
@@ -668,19 +668,19 @@ Deve ser uma sequência hexadecimal válida com comprimento par.</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Coeficiente</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>Módulo</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>Primo 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>Primo 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
@@ -846,11 +846,11 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Use Per-Game configs</source>
-      <translation type="unfinished">Use Per-Game configs</translation>
+      <translation>Usar configurações por jogo</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>Could not open the file for reading</source>
@@ -882,7 +882,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Reset to Default</source>
-      <translation type="unfinished">Reset to Default</translation>
+      <translation>Redefinir ao Padrão</translation>
     </message>
   </context>
   <context>
@@ -1189,7 +1189,7 @@ Using local database.
     </message>
     <message>
       <source>No Report Available</source>
-      <translation type="unfinished">No Report Available</translation>
+      <translation>Nenhum Relatório Disponível</translation>
     </message>
     <message>
       <source>There is no compatibility report available for this game.</source>
@@ -1213,7 +1213,7 @@ Using local database.
     </message>
     <message>
       <source>Log Not Found</source>
-      <translation type="unfinished">Log Not Found</translation>
+      <translation>Registro Não Encontrado</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
@@ -1241,11 +1241,11 @@ Using local database.
     </message>
     <message>
       <source>Game</source>
-      <translation type="unfinished">Game</translation>
+      <translation>Jogo</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>This game has no update to delete!</source>
@@ -1253,23 +1253,23 @@ Using local database.
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Atualização</translation>
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation type="unfinished">This game has no DLC to delete!</translation>
+      <translation>Este jogo não tem DLC para excluir!</translation>
     </message>
     <message>
       <source>DLC</source>
-      <translation type="unfinished">DLC</translation>
+      <translation>DLC</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
-      <translation type="unfinished">This game has no save data to delete!</translation>
+      <translation>Este jogo não tem dados salvos para excluir!</translation>
     </message>
     <message>
       <source>Save Data</source>
-      <translation type="unfinished">Save Data</translation>
+      <translation>Dados Salvos</translation>
     </message>
     <message>
       <source>This game has no Shader Cache to delete!</source>
@@ -1277,7 +1277,7 @@ Using local database.
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Cache de Shader</translation>
     </message>
     <message>
       <source>Shader cache deleted successfully.</source>
@@ -1285,7 +1285,7 @@ Using local database.
     </message>
     <message>
       <source>Delete %1</source>
-      <translation type="unfinished">Delete %1</translation>
+      <translation>Excluir %1</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
@@ -1333,11 +1333,11 @@ Using local database.
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Ok</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Informações</translation>
     </message>
     <message>
       <source>&amp;Change Custom Configuration</source>
@@ -1357,15 +1357,15 @@ Using local database.
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Nenhuma Versão Selecionada</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Selecione uma versão primeiro</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Criação de atalho</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
@@ -1446,11 +1446,11 @@ Using local database.
     <name>HelpDialog</name>
     <message>
       <source>Quickstart</source>
-      <translation type="unfinished">Quickstart</translation>
+      <translation>Início Rápido</translation>
     </message>
     <message>
       <source>Syntax</source>
-      <translation type="unfinished">Syntax</translation>
+      <translation>Sintaxe</translation>
     </message>
     <message>
       <source>Keybindings</source>
@@ -1469,15 +1469,15 @@ Using local database.
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation type="unfinished">Customize Hotkeys</translation>
+      <translation>Personalizar Teclas de Atalho</translation>
     </message>
     <message>
       <source>Controller Hotkeys</source>
-      <translation type="unfinished">Controller Hotkeys</translation>
+      <translation>Teclas de Atalho do Controle</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
-      <translation type="unfinished">Show FPS Counter</translation>
+      <translation>Mostrar Contador de FPS</translation>
     </message>
     <message>
       <source>unmapped</source>
@@ -1485,7 +1485,7 @@ Using local database.
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation type="unfinished">Quit Emulation</translation>
+      <translation>Sair da Emulação</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
@@ -1493,15 +1493,15 @@ Using local database.
     </message>
     <message>
       <source>Toggle Fullscreen</source>
-      <translation type="unfinished">Toggle Fullscreen</translation>
+      <translation>Alternar Tela Cheia</translation>
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation type="unfinished">Toggle Pause</translation>
+      <translation>Alternar Pausa</translation>
     </message>
     <message>
       <source>Keyboard Hotkeys</source>
-      <translation type="unfinished">Keyboard Hotkeys</translation>
+      <translation>Teclas de Atalho do Teclado</translation>
     </message>
     <message>
       <source>Renderdoc Capture (for debugging only)</source>
@@ -1513,7 +1513,7 @@ Using local database.
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>Alternar o Mouse para Emulação do Giroscópio</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
@@ -1525,19 +1525,19 @@ Using local database.
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Salvar</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Aplicar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Restaurar Padrões</translation>
     </message>
     <message>
       <source>Unable to Save</source>
@@ -1557,11 +1557,11 @@ Using local database.
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Aumentar Volume</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Diminuir Volume</translation>
     </message>
   </context>
   <context>
@@ -1575,15 +1575,15 @@ Using local database.
     <name>KBMSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation type="unfinished">Configure Controls</translation>
+      <translation>Configurar Controles</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>Direcional</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Para Cima</translation>
     </message>
     <message>
       <source>unmapped</source>
@@ -1591,15 +1591,15 @@ Using local database.
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Esquerda</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Direita</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>Para Baixo</translation>
     </message>
     <message>
       <source>Left Analog Halfmode</source>
@@ -1631,15 +1631,15 @@ Using local database.
     </message>
     <message>
       <source>Text Editor</source>
-      <translation type="unfinished">Text Editor</translation>
+      <translation>Editor de Texto</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Ajuda</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>Opções</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
@@ -1683,23 +1683,23 @@ Using local database.
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>Botões de Ação</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Triângulo</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>Quadrado</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>Círculo</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>Cruz</translation>
     </message>
     <message>
       <source>Right Analog Halfmode</source>
@@ -1711,7 +1711,7 @@ Using local database.
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>Analógico Direito</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
@@ -1719,19 +1719,19 @@ Using local database.
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Salvar</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Aplicar</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Restaurar Padrões</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Common Config Selected</source>
@@ -1763,7 +1763,7 @@ Using local database.
     </message>
     <message>
       <source>Press a key</source>
-      <translation type="unfinished">Press a key</translation>
+      <translation>Aperte uma tecla</translation>
     </message>
     <message>
       <source>Cannot set mapping</source>
@@ -1935,11 +1935,11 @@ Using local database.
     </message>
     <message>
       <source>Exit the application.</source>
-      <translation type="unfinished">Exit the application.</translation>
+      <translation>Sair da aplicação.</translation>
     </message>
     <message>
       <source>User Accounts</source>
-      <translation type="unfinished">User Accounts</translation>
+      <translation>Contas de Usuários</translation>
     </message>
     <message>
       <source>Manage user accounts</source>
@@ -1951,7 +1951,7 @@ Using local database.
     </message>
     <message>
       <source>Show Tool Bar</source>
-      <translation type="unfinished">Show Tool Bar</translation>
+      <translation>Exibir Barra de Ferramentas</translation>
     </message>
     <message>
       <source>Show Game Compatibility in Grid Mode</source>
@@ -2015,7 +2015,7 @@ Using local database.
     </message>
     <message>
       <source>Toggle fullscreen</source>
-      <translation type="unfinished">Toggle fullscreen</translation>
+      <translation>Alternar tela cheia</translation>
     </message>
     <message>
       <source>List</source>
@@ -2039,7 +2039,7 @@ Using local database.
     </message>
     <message>
       <source>Refresh gamelist</source>
-      <translation type="unfinished">Refresh gamelist</translation>
+      <translation>Atualizar lista de jogos</translation>
     </message>
     <message>
       <source>Show Hidden Entries</source>
@@ -2047,35 +2047,35 @@ Using local database.
     </message>
     <message>
       <source>Show Title Bars</source>
-      <translation type="unfinished">Show Title Bars</translation>
+      <translation>Mostrar Barras de Título</translation>
     </message>
     <message>
       <source>English</source>
-      <translation type="unfinished">English</translation>
+      <translation>Inglês</translation>
     </message>
     <message>
       <source>Show Custom Icons</source>
-      <translation type="unfinished">Show Custom Icons</translation>
+      <translation>Mostrar Ícones Personalizados</translation>
     </message>
     <message>
       <source>Play Hover Gifs</source>
-      <translation type="unfinished">Play Hover Gifs</translation>
+      <translation>Reproduzir Gifs Animados</translation>
     </message>
     <message>
       <source>Prefer Game Data Icons</source>
-      <translation type="unfinished">Prefer Game Data Icons</translation>
+      <translation>Optar por Ícones de Dados do Jogo</translation>
     </message>
     <message>
       <source>shadLauncher4</source>
-      <translation type="unfinished">shadLauncher4</translation>
+      <translation>shadLauncher4</translation>
     </message>
     <message>
       <source>Exit shadLauncher4</source>
-      <translation type="unfinished">Exit shadLauncher4</translation>
+      <translation>Sair do shadLauncher4</translation>
     </message>
     <message>
       <source>About shadLauncher4</source>
-      <translation type="unfinished">About shadLauncher4</translation>
+      <translation>Sobre o shadLauncher4</translation>
     </message>
     <message>
       <source>Export GameList</source>
@@ -2107,7 +2107,7 @@ Using local database.
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Registro</translation>
     </message>
     <message>
       <source>Crypto Key Manager</source>
@@ -2211,7 +2211,7 @@ Using local database.
     </message>
     <message>
       <source>PKG Install</source>
-      <translation type="unfinished">PKG Install</translation>
+      <translation>Instalar PKG</translation>
     </message>
     <message>
       <source>No valid PKG files were found.</source>
@@ -2223,23 +2223,23 @@ Using local database.
     </message>
     <message>
       <source>Run Game</source>
-      <translation type="unfinished">Run Game</translation>
+      <translation>Executar Jogo</translation>
     </message>
     <message>
       <source>Pause emulation</source>
-      <translation type="unfinished">Pause emulation</translation>
+      <translation>Pausar emulação</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>No game selected</source>
-      <translation type="unfinished">No game selected</translation>
+      <translation>Nenhum jogo selecionado</translation>
     </message>
     <message>
       <source>Eboot.bin file not found</source>
-      <translation type="unfinished">Eboot.bin file not found</translation>
+      <translation>Arquivo Eboot.bin não encontrado</translation>
     </message>
     <message>
       <source>Game is already running!</source>
@@ -2247,7 +2247,7 @@ Using local database.
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Nenhuma Versão Selecionada</translation>
     </message>
     <message>
       <source>No emulator version was selected.
@@ -2275,11 +2275,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Resume</source>
-      <translation type="unfinished">Resume</translation>
+      <translation>Continuar</translation>
     </message>
     <message>
       <source>Resume emulation</source>
-      <translation type="unfinished">Resume emulation</translation>
+      <translation>Continuar a emulação</translation>
     </message>
     <message>
       <source>No running game to stop</source>
@@ -2295,7 +2295,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Keyboard</source>
-      <translation type="unfinished">Keyboard</translation>
+      <translation>Teclado</translation>
     </message>
     <message>
       <source>Configure Keyboard and Mouse</source>
@@ -2307,7 +2307,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Executar Emulador</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
@@ -2350,7 +2350,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Trophy ID:</source>
-      <translation type="unfinished">Trophy ID:</translation>
+      <translation>ID do Troféu:</translation>
     </message>
     <message>
       <source>Hex Data:</source>
@@ -2358,7 +2358,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>NPCommID</source>
-      <translation type="unfinished">NPCommID</translation>
+      <translation>NPCommID</translation>
     </message>
     <message>
       <source>Trophy</source>
@@ -2366,15 +2366,15 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Unknown 1</source>
-      <translation type="unfinished">Unknown 1</translation>
+      <translation>Desconhecido 1</translation>
     </message>
     <message>
       <source>Unknown 2</source>
-      <translation type="unfinished">Unknown 2</translation>
+      <translation>Desconhecido 2</translation>
     </message>
     <message>
       <source>Show regions:</source>
-      <translation type="unfinished">Show regions:</translation>
+      <translation>Mostrar regiões:</translation>
     </message>
     <message>
       <source>Export JSON</source>
@@ -2453,7 +2453,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No Directory</source>
-      <translation type="unfinished">No Directory</translation>
+      <translation>Nenhum Diretório</translation>
     </message>
     <message>
       <source>Please select an installation directory.</source>
@@ -2464,7 +2464,7 @@ Select an emulator version from the right panel.</translation>
     <name>PkgInstallModel</name>
     <message>
       <source>Install</source>
-      <translation type="unfinished">Install</translation>
+      <translation>Instalar</translation>
     </message>
     <message>
       <source>Title ID</source>
@@ -2472,22 +2472,22 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Game Name</source>
-      <translation type="unfinished">Game Name</translation>
+      <translation>Nome do Jogo</translation>
     </message>
     <message>
       <source>App Version</source>
-      <translation type="unfinished">App Version</translation>
+      <translation>Versão da Aplicação</translation>
     </message>
     <message>
       <source>Category</source>
-      <translation type="unfinished">Category</translation>
+      <translation>Categoria</translation>
     </message>
   </context>
   <context>
     <name>QObject</name>
     <message>
       <source>Export Game List</source>
-      <translation type="unfinished">Export Game List</translation>
+      <translation>Exportar Lista de Jogos</translation>
     </message>
     <message>
       <source>Select export format:</source>
@@ -2507,11 +2507,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>Exportar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Save Game List As</source>
@@ -2519,7 +2519,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>Failed to create file:
@@ -2567,7 +2567,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Copy Failed</source>
-      <translation type="unfinished">Copy Failed</translation>
+      <translation>Falha ao Copiar</translation>
     </message>
     <message>
       <source>Unable to activate selected version.</source>
@@ -2588,7 +2588,7 @@ Select an emulator version from the right panel.</translation>
     <name>SFOViewerDialog</name>
     <message>
       <source>PS4 SFO Viewer</source>
-      <translation type="unfinished">PS4 SFO Viewer</translation>
+      <translation>Visualizador de SFO do PS4</translation>
     </message>
     <message>
       <source>Reload</source>
@@ -2620,7 +2620,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Localized Titles</source>
-      <translation type="unfinished">Localized Titles</translation>
+      <translation>Títulos Localizados</translation>
     </message>
     <message>
       <source>Search...</source>
@@ -3253,7 +3253,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Global Settings</source>
-      <translation type="unfinished">Global Settings</translation>
+      <translation>Configurações Globais</translation>
     </message>
     <message>
       <source>Failed to save game settings.</source>
@@ -3279,7 +3279,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Settings Restored</source>
-      <translation type="unfinished">Settings Restored</translation>
+      <translation>Configurações Restauradas</translation>
     </message>
     <message>
       <source>Game settings restored to global defaults.</source>
@@ -3299,7 +3299,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>PS4 Fonts Path</source>
-      <translation type="unfinished">PS4 Fonts Path</translation>
+      <translation>Caminho de Fontes do PS4</translation>
     </message>
     <message>
       <source>Select directory for System fonts</source>
@@ -3311,19 +3311,19 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
-      <translation type="unfinished">Readbacks Mode</translation>
+      <translation>Modo Readbacks</translation>
     </message>
     <message>
       <source>Disabled</source>
-      <translation type="unfinished">Disabled</translation>
+      <translation>Desabilitado</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Atenuado</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Rigoroso</translation>
     </message>
   </context>
   <context>
@@ -3726,11 +3726,11 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Executable (*)</source>
-      <translation type="unfinished">Executable (*)</translation>
+      <translation>Executável (*)</translation>
     </message>
     <message>
       <source>Executable (*.*)</source>
-      <translation type="unfinished">Executable (*.*)</translation>
+      <translation>Executável (*.*)</translation>
     </message>
     <message>
       <source>Version install path is not configured.</source>
