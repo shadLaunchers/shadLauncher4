@@ -656,15 +656,15 @@ Deve ser uma sequência hexadecimal válida com comprimento par.</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>Expoente1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>Expoente2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>Expoente Público</translation>
     </message>
     <message>
       <source>Coefficient</source>
@@ -684,11 +684,11 @@ Deve ser uma sequência hexadecimal válida com comprimento par.</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Expoente Privado</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>Conjunto de Chaves Falsas</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
@@ -708,7 +708,7 @@ Todos os campos devem ser strings hexadecimais válidas com comprimento par.</tr
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>Pkg Derivado da Chave3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
@@ -1341,7 +1341,7 @@ Using local database.
     </message>
     <message>
       <source>&amp;Change Custom Configuration</source>
-      <translation type="unfinished">&amp;Change Custom Configuration</translation>
+      <translation>&amp;Alterar Configuração Personalizada</translation>
     </message>
     <message>
       <source>&amp;Create Custom Configuration From Global Settings</source>
@@ -1349,11 +1349,11 @@ Using local database.
     </message>
     <message>
       <source>&amp;Remove Custom Configuration</source>
-      <translation type="unfinished">&amp;Remove Custom Configuration</translation>
+      <translation>&amp;Remover Configuração Personalizada</translation>
     </message>
     <message>
       <source>&amp;Create Desktop Shortcut</source>
-      <translation type="unfinished">&amp;Create Desktop Shortcut</translation>
+      <translation>&amp;Criar Atalho na Área de Trabalho</translation>
     </message>
     <message>
       <source>No Version Selected</source>
@@ -1611,7 +1611,7 @@ Using local database.
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Analógico Esquerdo</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -1663,19 +1663,19 @@ Using local database.
     </message>
     <message>
       <source>Mouse Movement Parameters</source>
-      <translation type="unfinished">Mouse Movement Parameters</translation>
+      <translation>Parâmetros de Movimento do Mouse</translation>
     </message>
     <message>
       <source>Deadzone Offset (def 0.50):</source>
-      <translation type="unfinished">Deadzone Offset (def 0.50):</translation>
+      <translation>Deslocamento da Zona Morta (padrão 0,50):</translation>
     </message>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
-      <translation type="unfinished">Speed Multiplier (def 1.0):</translation>
+      <translation>Multiplicador de Velocidade (padrão 1,0):</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
-      <translation type="unfinished">Speed Offset (def 0.125):</translation>
+      <translation>Deslocamento de Velocidade (padrão 0,125):</translation>
     </message>
     <message>
       <source>note: click Help Button/Special Keybindings for more information</source>
@@ -1927,7 +1927,7 @@ Using local database.
     </message>
     <message>
       <source>Configure GUI settings</source>
-      <translation type="unfinished">Configure GUI settings</translation>
+      <translation>Configurar definições da GUI</translation>
     </message>
     <message>
       <source>Exit</source>
@@ -1943,7 +1943,7 @@ Using local database.
     </message>
     <message>
       <source>Manage user accounts</source>
-      <translation type="unfinished">Manage user accounts</translation>
+      <translation>Gerenciar contas de usuários</translation>
     </message>
     <message>
       <source>Show Game List</source>
@@ -2043,7 +2043,7 @@ Using local database.
     </message>
     <message>
       <source>Show Hidden Entries</source>
-      <translation type="unfinished">Show Hidden Entries</translation>
+      <translation>Mostrar Entradas Ocultas</translation>
     </message>
     <message>
       <source>Show Title Bars</source>
@@ -2263,15 +2263,15 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No Running Game</source>
-      <translation type="unfinished">No Running Game</translation>
+      <translation>Nenhum Jogo em Execução</translation>
     </message>
     <message>
       <source>No running game to restart</source>
-      <translation type="unfinished">No running game to restart</translation>
+      <translation>Nenhum jogo em execução para reiniciar</translation>
     </message>
     <message>
       <source>No running game to pause</source>
-      <translation type="unfinished">No running game to pause</translation>
+      <translation>Nenhum jogo em execução para pausar</translation>
     </message>
     <message>
       <source>Resume</source>
@@ -2291,7 +2291,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>Mostrar Registro do Jogo</translation>
     </message>
     <message>
       <source>Keyboard</source>
@@ -2495,7 +2495,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Sort by:</source>
-      <translation type="unfinished">Sort by:</translation>
+      <translation>Classificar por:</translation>
     </message>
     <message>
       <source>Sort order:</source>
@@ -2515,7 +2515,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Save Game List As</source>
-      <translation type="unfinished">Save Game List As</translation>
+      <translation>Salvar Lista de Jogos como</translation>
     </message>
     <message>
       <source>Error</source>
@@ -2559,7 +2559,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Version Activated</source>
-      <translation type="unfinished">Version Activated</translation>
+      <translation>Versão Ativada</translation>
     </message>
     <message>
       <source>The selected version is now active.</source>
@@ -3241,7 +3241,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Show Simple FPS Counter</source>
-      <translation type="unfinished">Show Simple FPS Counter</translation>
+      <translation>Mostrar Contador de FPS Simplificado</translation>
     </message>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Some settings are disabled because they cannot be overridden per-game. These require global settings changes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -3261,7 +3261,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Settings Applied</source>
-      <translation type="unfinished">Settings Applied</translation>
+      <translation>Configurações Aplicadas</translation>
     </message>
     <message>
       <source>Game-specific settings have been saved.</source>
@@ -3269,7 +3269,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Failed to save global settings.</source>
-      <translation type="unfinished">Failed to save global settings.</translation>
+      <translation>Falha ao salvar as configurações globais.</translation>
     </message>
     <message>
       <source>Are you sure you want to restore all settings to global defaults?
@@ -3307,7 +3307,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Identical Log Grouped</source>
-      <translation type="unfinished">Identical Log Grouped</translation>
+      <translation>Registro Idêntico Agrupado</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
@@ -3734,7 +3734,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Version install path is not configured.</source>
-      <translation type="unfinished">Version install path is not configured.</translation>
+      <translation>Caminho de instalação da versão não está configurado.</translation>
     </message>
     <message>
       <source>Failed to copy executable into versions folder.</source>
@@ -3782,7 +3782,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>ZIP extraction failed:</source>
-      <translation type="unfinished">ZIP extraction failed:</translation>
+      <translation>Falha na extração do ZIP:</translation>
     </message>
     <message>
       <source>Executable not found in extracted files.</source>
