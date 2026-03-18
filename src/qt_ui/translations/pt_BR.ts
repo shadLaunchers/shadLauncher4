@@ -7,11 +7,11 @@
     <name>ChangelogDialog</name>
     <message>
       <source>Changelog Viewer</source>
-      <translation>Visualizador de Alterações</translation>
+      <translation>Visualizador do Registro</translation>
     </message>
     <message>
       <source>Search in changelog...</source>
-      <translation type="unfinished">Search in changelog...</translation>
+      <translation>Procurar no registro...</translation>
     </message>
     <message>
       <source>Copy</source>
@@ -320,11 +320,11 @@
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation type="unfinished">No pre-releases found.</translation>
+      <translation>Nenhum pré-lançamento foi encontrado.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>Nenhuma URL de download encontrada para o recurso especificado.</translation>
     </message>
     <message>
       <source>Your version is already up to date!</source>
@@ -372,7 +372,7 @@
     </message>
     <message>
       <source>Network error occurred while trying to access the URL</source>
-      <translation type="unfinished">Network error occurred while trying to access the URL</translation>
+      <translation>Ocorreu um erro de rede ao tentar acessar a URL</translation>
     </message>
     <message>
       <source>Download Complete</source>
@@ -380,7 +380,7 @@
     </message>
     <message>
       <source>The update has been downloaded, press OK to install.</source>
-      <translation type="unfinished">The update has been downloaded, press OK to install.</translation>
+      <translation>A atualização foi baixada, pressione OK para instalar.</translation>
     </message>
     <message>
       <source>Failed to save the update file at</source>
@@ -611,13 +611,13 @@
     </message>
     <message>
       <source>Cannot bind axis values more than once</source>
-      <translation type="unfinished">Cannot bind axis values more than once</translation>
+      <translation>Não é possível vincular os valores do eixo mais de uma vez</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Não é possível atribuir a mesma entrada mais de uma vez. Entradas duplicadas foram mapeadas aos seguintes botões:
 
 %1</translation>
     </message>
@@ -846,7 +846,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Use Per-Game configs</source>
-      <translation>Usar configurações por jogo</translation>
+      <translation>Usar configurações por Jogo</translation>
     </message>
     <message>
       <source>Error</source>
@@ -878,7 +878,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
-      <translation type="unfinished">Do you want to reset this config to your custom default config?</translation>
+      <translation>Deseja redefinir esta configuração para sua configuração padrão personalizada?</translation>
     </message>
     <message>
       <source>Reset to Default</source>
@@ -957,7 +957,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Right click here and choose Compatibility -&gt; Update Database.</source>
-      <translation type="unfinished">Right click here and choose Compatibility -&gt; Update Database.</translation>
+      <translation>Clique com o botão direito aqui e escolha Compatibilidade -&gt; Atualizar Banco de Dados.</translation>
     </message>
   </context>
   <context>
@@ -996,23 +996,23 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>The chosen location for dumped games is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped games is not valid.</translation>
+      <translation>O local escolhido para jogos extraídos não é válido.</translation>
     </message>
     <message>
       <source>The chosen location for dumped DLCs is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped DLCs is not valid.</translation>
+      <translation>O local escolhido para DLCs extraídas não é válido.</translation>
     </message>
     <message>
       <source>The DLC dump location could not be created.</source>
-      <translation type="unfinished">The DLC dump location could not be created.</translation>
+      <translation>Não foi possível criar o local de extração da DLC.</translation>
     </message>
     <message>
       <source>The location for installing emulator versions is not valid.</source>
-      <translation type="unfinished">The location for installing emulator versions is not valid.</translation>
+      <translation>O local para a instalação de versões do emulador não é válido.</translation>
     </message>
     <message>
       <source>The emulator version location could not be created.</source>
-      <translation type="unfinished">The emulator version location could not be created.</translation>
+      <translation>Não foi possível criar o local da versão do emulador.</translation>
     </message>
   </context>
   <context>
@@ -1079,7 +1079,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Last Played</source>
-      <translation type="unfinished">Last Played</translation>
+      <translation>Jogado por Último</translation>
     </message>
     <message>
       <source>Show Last Played</source>
@@ -1167,11 +1167,11 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>&amp;Add/Edit Tooltip Notes</source>
-      <translation type="unfinished">&amp;Add/Edit Tooltip Notes</translation>
+      <translation>&amp;Adicionar/Editar Observações do Balão de Ajuda</translation>
     </message>
     <message>
       <source>Edit Tooltip Notes</source>
-      <translation type="unfinished">Edit Tooltip Notes</translation>
+      <translation>Editar Observações do Balão de Ajuda</translation>
     </message>
     <message>
       <source>Warning!</source>
@@ -1182,8 +1182,8 @@ Por favor, digite suas chaves e salve-as.</translation>
 Using local database.
 
 %0</source>
-      <translation type="unfinished">Failed to retrieve the online compatibility database!
-Using local database.
+      <translation>Falha ao recuperar o banco de dados de compatibilidade online!
+Utilizando o banco de dados local.
 
 %0</translation>
     </message>
@@ -1193,7 +1193,7 @@ Using local database.
     </message>
     <message>
       <source>There is no compatibility report available for this game.</source>
-      <translation type="unfinished">There is no compatibility report available for this game.</translation>
+      <translation>Não há relatório de compatibilidade disponível para este jogo.</translation>
     </message>
     <message>
       <source>&amp;Open Folder</source>
@@ -1249,7 +1249,7 @@ Using local database.
     </message>
     <message>
       <source>This game has no update to delete!</source>
-      <translation type="unfinished">This game has no update to delete!</translation>
+      <translation>Este jogo não tem atualização para excluir!</translation>
     </message>
     <message>
       <source>Update</source>
@@ -1289,7 +1289,7 @@ Using local database.
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s %2 directory?</translation>
+      <translation>Tem certeza que deseja excluir %1 do diretório %2?</translation>
     </message>
     <message>
       <source>&amp;Delete...</source>
@@ -1325,11 +1325,11 @@ Using local database.
     </message>
     <message>
       <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
-      <translation type="unfinished">The log is invalid, it either doesn&apos;t exist or log filters were used.</translation>
+      <translation>O registro é inválido; ou não existe ou foram utilizados filtros de registro.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Não foi possível enviar o relatório. Houve falha na verificação seguinte ao registro mais recente do jogo, e portanto, o relatório é inválido:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -1345,7 +1345,7 @@ Using local database.
     </message>
     <message>
       <source>&amp;Create Custom Configuration From Global Settings</source>
-      <translation type="unfinished">&amp;Create Custom Configuration From Global Settings</translation>
+      <translation>&amp;Criar Configuração Personalizada a partir das Configurações Globais</translation>
     </message>
     <message>
       <source>&amp;Remove Custom Configuration</source>
@@ -1369,7 +1369,7 @@ Using local database.
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Atalho criado com sucesso!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
@@ -1454,15 +1454,15 @@ Using local database.
     </message>
     <message>
       <source>Keybindings</source>
-      <translation type="unfinished">Keybindings</translation>
+      <translation>Mapeamento de Teclas</translation>
     </message>
     <message>
       <source>Special Bindings</source>
-      <translation type="unfinished">Special Bindings</translation>
+      <translation>Mapeamento Especial</translation>
     </message>
     <message>
       <source>FAQ</source>
-      <translation type="unfinished">FAQ</translation>
+      <translation>Perguntas Frequentes</translation>
     </message>
   </context>
   <context>
@@ -1481,7 +1481,7 @@ Using local database.
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>não mapeado</translation>
     </message>
     <message>
       <source>Quit Emulation</source>
@@ -1509,7 +1509,7 @@ Using local database.
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>Alternar o Mouse para Emulação do Joystick</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
@@ -1517,11 +1517,11 @@ Using local database.
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation type="unfinished">Tip: Up to three simultaneous inputs can be assigned for each hotkey</translation>
+      <translation>Dica: Até três entradas podem ser atribuídas para cada tecla de atalho</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Dica: Desmapeie entradas com o clique do botão direito</translation>
     </message>
     <message>
       <source>Save</source>
@@ -1541,13 +1541,13 @@ Using local database.
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Não foi Possível Salvar</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Não é possível atribuir a mesma entrada mais de uma vez. Entradas duplicadas foram mapeadas aos seguintes botões:
 
 %1</translation>
     </message>
@@ -1587,7 +1587,7 @@ Using local database.
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>não mapeado</translation>
     </message>
     <message>
       <source>Left</source>
@@ -1603,11 +1603,11 @@ Using local database.
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation type="unfinished">Left Analog Halfmode</translation>
+      <translation>Modo Metade no Analógico Esquerdo</translation>
     </message>
     <message>
       <source>hold to move left stick at half-speed</source>
-      <translation type="unfinished">hold to move left stick at half-speed</translation>
+      <translation>segure para mover o analógico esquerdo à meia velocidade</translation>
     </message>
     <message>
       <source>Left Stick</source>
@@ -1651,11 +1651,11 @@ Using local database.
     </message>
     <message>
       <source>*press F7 ingame to activate</source>
-      <translation type="unfinished">*press F7 ingame to activate</translation>
+      <translation>*pressione F7 no jogo para ativar</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Centro do Touchpad</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
@@ -1679,7 +1679,7 @@ Using local database.
     </message>
     <message>
       <source>note: click Help Button/Special Keybindings for more information</source>
-      <translation type="unfinished">note: click Help Button/Special Keybindings for more information</translation>
+      <translation>observação: clique no Botão de Ajuda/Mapeamento de Teclas Especiais para mais informações</translation>
     </message>
     <message>
       <source>Face Buttons</source>
@@ -1703,11 +1703,11 @@ Using local database.
     </message>
     <message>
       <source>Right Analog Halfmode</source>
-      <translation type="unfinished">Right Analog Halfmode</translation>
+      <translation>Modo Metade no Analógico Direito</translation>
     </message>
     <message>
       <source>hold to move right stick at half-speed</source>
-      <translation type="unfinished">hold to move right stick at half-speed</translation>
+      <translation>segure para mover o analógico direito à meia velocidade</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -1715,7 +1715,7 @@ Using local database.
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Dica: Desmapeie entradas com o clique do botão direito</translation>
     </message>
     <message>
       <source>Save</source>
@@ -1747,17 +1747,17 @@ Using local database.
     </message>
     <message>
       <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
-      <translation type="unfinished">Do you want to overwrite existing mappings with the mappings from the Common Config?</translation>
+      <translation>Deseja sobrescrever os mapeamentos existentes com os mapeamentos da Configuração Comum?</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Não foi Possível Salvar</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Não é possível atribuir a mesma entrada mais de uma vez. Entradas duplicadas foram mapeadas aos seguintes botões:
 
 %1</translation>
     </message>
@@ -2319,7 +2319,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Check for Updates</source>
-      <translation type="unfinished">Check for Updates</translation>
+      <translation>Verificar por Atualizações</translation>
     </message>
   </context>
   <context>
@@ -2499,7 +2499,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Sort order:</source>
-      <translation type="unfinished">Sort order:</translation>
+      <translation>Ordem de classificação:</translation>
     </message>
     <message>
       <source>Include compatibility info</source>
@@ -2571,7 +2571,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Unable to activate selected version.</source>
-      <translation type="unfinished">Unable to activate selected version.</translation>
+      <translation>Não foi possível ativar a versão selecionada.</translation>
     </message>
     <message>
       <source>Executable does not exist:
@@ -2937,7 +2937,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Home Path</source>
-      <translation type="unfinished">Home Path</translation>
+      <translation>Caminho Pasta Inicial</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
@@ -3153,7 +3153,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Are you sure you want to restore all settings to their default values?</source>
-      <translation type="unfinished">Are you sure you want to restore all settings to their default values?</translation>
+      <translation>Tem certeza que deseja restaurar todas as configurações para seus valores padrões?</translation>
     </message>
     <message>
       <source>Save</source>
@@ -3173,7 +3173,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Frontend Settings</source>
-      <translation type="unfinished">Frontend Settings</translation>
+      <translation>Configurações de Interface</translation>
     </message>
     <message>
       <source>Default Device</source>
@@ -3265,7 +3265,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Game-specific settings have been saved.</source>
-      <translation type="unfinished">Game-specific settings have been saved.</translation>
+      <translation>As configurações específicas do jogo foram salvas.</translation>
     </message>
     <message>
       <source>Failed to save global settings.</source>
@@ -3274,8 +3274,8 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Are you sure you want to restore all settings to global defaults?
 This will remove all game-specific overrides.</source>
-      <translation type="unfinished">Are you sure you want to restore all settings to global defaults?
-This will remove all game-specific overrides.</translation>
+      <translation>Tem certeza de que deseja restaurar todas as configurações para os padrões globais?
+Isso irá sobrescrever todas as configurações específicas do jogo.</translation>
     </message>
     <message>
       <source>Settings Restored</source>
@@ -3283,19 +3283,19 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Game settings restored to global defaults.</source>
-      <translation type="unfinished">Game settings restored to global defaults.</translation>
+      <translation>Configurações de jogo restauradas para padrões globais.</translation>
     </message>
     <message>
       <source>This setting cannot be overridden per-game. Use global settings to change it.</source>
-      <translation type="unfinished">This setting cannot be overridden per-game. Use global settings to change it.</translation>
+      <translation>Esta configuração não pode ser sobrescrita por jogo. Use as configurações globais para alterá-la.</translation>
     </message>
     <message>
       <source>GUI-only settings cannot be overridden per-game. Use global settings to change them.</source>
-      <translation type="unfinished">GUI-only settings cannot be overridden per-game. Use global settings to change them.</translation>
+      <translation>As configurações somente de Interface Gráfica do Usuário não pode ser sobrescrita por jogo. Use as configurações globais para alterá-la.</translation>
     </message>
     <message>
       <source>Path settings cannot be overridden per-game. Use global settings to change them.</source>
-      <translation type="unfinished">Path settings cannot be overridden per-game. Use global settings to change them.</translation>
+      <translation>A configuração de caminho não pode ser sobrescrita por jogo. Use as configurações globais para alterá-la.</translation>
     </message>
     <message>
       <source>PS4 Fonts Path</source>
@@ -3334,7 +3334,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Add Folder:\nAdd a new folder to the list of game installation folders.</source>
-      <translation type="unfinished">Add Folder:\nAdd a new folder to the list of game installation folders.</translation>
+      <translation>Adicionar Pasta:\nAdiciona uma nova pasta à lista de pastas de instalação do jogo.</translation>
     </message>
     <message>
       <source>Remove Folder:\nRemove the selected folder from the list of game installation folders.</source>
@@ -3354,43 +3354,43 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the Home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the Home folder.</translation>
+      <translation>Procurar:\nProcura uma pasta para definir como pasta Pessoal.</translation>
     </message>
     <message>
       <source>System Modules Folder:\nThe folder where system modules are loaded from.</source>
-      <translation type="unfinished">System Modules Folder:\nThe folder where system modules are loaded from.</translation>
+      <translation>Pasta de Módulos do Sistema:\nA pasta de onde os módulos do sistema são carregados.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Modules folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the System Modules folder.</translation>
+      <translation>Procurar:\nProcura uma pasta para definir como pasta de Módulos do Sistema.</translation>
     </message>
     <message>
       <source>Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</source>
-      <translation type="unfinished">Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</translation>
+      <translation>Profundidade da Varredura de Diretórios:\nDefine a profundidade máxima ao escanear jogos nas pastas de jogos especificadas.\n1 significa um nível de subpastas será verificado e assim por diante.</translation>
     </message>
     <message>
       <source>Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</source>
-      <translation type="unfinished">Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</translation>
+      <translation>Mostrar Tela Inicial:\nExibe a tela inicial do jogo (imagem especial) enquanto o jogo está iniciando.</translation>
     </message>
     <message>
       <source>Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</source>
-      <translation type="unfinished">Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</translation>
+      <translation>Desabilitar Notificações de Troféus:\nDesabilita as notificações de troféus em jogo. O progresso do troféu ainda pode ser rastreado usando o Visualizador de Troféus (clique com o botão direito sobre o jogo na janela principal).</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation type="unfinished">Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</translation>
+      <translation>Volume:\nAjusta o volume para os jogos no nível global, o intervalo vai de 0-500% sendo o padrão 100%.</translation>
     </message>
     <message>
       <source>System Fonts Folder:\nThe folder where system fonts are loaded from.</source>
-      <translation type="unfinished">System Fonts Folder:\nThe folder where system fonts are loaded from.</translation>
+      <translation>Pasta de Fontes do Sistema:\nA pasta de onde as fontes do sistema são carregadas.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Fonts folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the System Fonts folder.</translation>
+      <translation>Procurar:\nProcura uma pasta para definir como pasta de Fontes do Sistema.</translation>
     </message>
     <message>
       <source>Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</source>
-      <translation type="unfinished">Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</translation>
+      <translation>Modo Readback:\nControla como o emulador lida com as readbacks da GPU .Habilitado pode fazer alguns jogos funcionarem melhor.\nDesativado é opção recomendada\nAtenuado é o mesmo que Rigoroso, mas usa menos proteção de barreira e pode fornecer mais fps\nModo Rigoroso deve ser usado para máxima compatibilidade quando readbacks são necessários</translation>
     </message>
   </context>
   <context>
@@ -3714,7 +3714,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly)</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly)</translation>
+      <translation>Baixando pré-lançamento (Nightly)</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
@@ -3802,7 +3802,7 @@ A versão de pré-lançamento foi salva em: %1</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) has been:</source>
-      <translation type="unfinished">Pre-release (Nightly) has been:</translation>
+      <translation>Pré-lançamento (Nightly) foi:</translation>
     </message>
   </context>
 </TS>
