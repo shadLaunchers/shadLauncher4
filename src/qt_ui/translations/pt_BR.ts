@@ -3397,7 +3397,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation>Gerente de Usuário</translation>
+      <translation>Gerenciador de Usuário</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
