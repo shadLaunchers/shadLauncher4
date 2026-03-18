@@ -1381,19 +1381,19 @@ Using local database.
     </message>
     <message>
       <source>&amp;Launch game</source>
-      <translation type="unfinished">&amp;Launch game</translation>
+      <translation>&amp;Iniciar jogo</translation>
     </message>
     <message>
       <source>&amp;Launch game with current settings</source>
-      <translation type="unfinished">&amp;Launch game with current settings</translation>
+      <translation>&amp;Iniciar jogo com as configurações atuais</translation>
     </message>
     <message>
       <source>&amp;Launch game with default settings</source>
-      <translation type="unfinished">&amp;Launch game with default settings</translation>
+      <translation>&amp;Iniciar jogo com as configurações padrões</translation>
     </message>
     <message>
       <source>&amp;Launch game with global settings</source>
-      <translation type="unfinished">&amp;Launch game with global settings</translation>
+      <translation>&amp;Iniciar jogo com configurações globais</translation>
     </message>
   </context>
   <context>
@@ -1739,7 +1739,7 @@ Using local database.
     </message>
     <message>
       <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation type="unfinished">This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</translation>
+      <translation>Este botão copia os mapeamentos da Configuração Comum para o perfil atualmente selecionado e não pode ser usado quando o perfil atualmente selecionado é a Configuração Comum.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
@@ -1767,7 +1767,7 @@ Using local database.
     </message>
     <message>
       <source>Cannot set mapping</source>
-      <translation type="unfinished">Cannot set mapping</translation>
+      <translation>Não é possível definir o mapeamento</translation>
     </message>
     <message>
       <source>Mousewheel cannot be mapped to stick outputs</source>
@@ -2219,7 +2219,7 @@ Using local database.
     </message>
     <message>
       <source>Could not read SFO. Check log for details.</source>
-      <translation type="unfinished">Could not read SFO. Check log for details.</translation>
+      <translation>Não foi possível ler o SFO. Verifique o registro para detalhes.</translation>
     </message>
     <message>
       <source>Run Game</source>
@@ -2253,13 +2253,13 @@ Using local database.
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>Nenhuma versão do emulador foi selecionada.
+O menu do Gerenciador de Versões irá abrir.
+Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Não foi possível encontrar o executável do emulador</translation>
     </message>
     <message>
       <source>No Running Game</source>
@@ -2283,7 +2283,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No running game to stop</source>
-      <translation type="unfinished">No running game to stop</translation>
+      <translation>Nenhum jogo em execução para parar</translation>
     </message>
     <message>
       <source>No running game to toggle fullscreen</source>
@@ -2449,7 +2449,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Please select at least one game to install.</source>
-      <translation type="unfinished">Please select at least one game to install.</translation>
+      <translation>Por favor, selecione pelo menos um jogo para instalar.</translation>
     </message>
     <message>
       <source>No Directory</source>
@@ -2457,7 +2457,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Please select an installation directory.</source>
-      <translation type="unfinished">Please select an installation directory.</translation>
+      <translation>Por favor, selecione um diretório de instalação.</translation>
     </message>
   </context>
   <context>
@@ -2563,7 +2563,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>The selected version is now active.</source>
-      <translation type="unfinished">The selected version is now active.</translation>
+      <translation>A versão selecionada agora está ativa.</translation>
     </message>
     <message>
       <source>Copy Failed</source>
