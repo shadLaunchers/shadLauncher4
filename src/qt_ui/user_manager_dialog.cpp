@@ -10,7 +10,7 @@
 #include "user_manager_dialog.h"
 
 UserManagerDialog::UserManagerDialog(std::shared_ptr<GUISettings> gui_settings,
-                                     std::shared_ptr<EmulatorSettings> emulator_settings,
+                                     std::shared_ptr<EmulatorSettingsImpl> emulator_settings,
                                      QWidget* parent)
     : QDialog(parent), m_gui_settings(std::move(gui_settings)),
       m_emu_settings(std::move(emulator_settings)) {

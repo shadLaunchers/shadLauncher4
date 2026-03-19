@@ -26,7 +26,7 @@
 class GameListTable;
 class GameListGrid;
 class GUISettings;
-class EmulatorSettings;
+class EmulatorSettingsImpl;
 class PersistentSettings;
 class ProgressDialog;
 class IpcClient;
@@ -36,7 +36,7 @@ class GameListFrame : public CustomDockWidget {
 
 public:
     explicit GameListFrame(std::shared_ptr<GUISettings> gui_settings,
-                           std::shared_ptr<EmulatorSettings> emu_settings,
+                           std::shared_ptr<EmulatorSettingsImpl> emu_settings,
                            std::shared_ptr<PersistentSettings> persistent_settings,
                            std::shared_ptr<IpcClient> ipc_client, QWidget* parent = nullptr);
     ~GameListFrame();
@@ -112,7 +112,7 @@ private:
     static game_info GetGameInfoFromItem(const QTableWidgetItem* item);
     // Settings
     std::shared_ptr<GUISettings> m_gui_settings;
-    std::shared_ptr<EmulatorSettings> m_emu_settings;
+    std::shared_ptr<EmulatorSettingsImpl> m_emu_settings;
     std::shared_ptr<PersistentSettings> m_persistent_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
     // Objects

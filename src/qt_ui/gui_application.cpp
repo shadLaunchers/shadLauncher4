@@ -33,13 +33,13 @@ GUIApplication::~GUIApplication() {}
 
 bool GUIApplication::init(QString emulator_arg, QString game_arg, QStringList passed_args) {
     m_gui_settings = std::make_shared<GUISettings>();
-    m_emu_settings = std::make_shared<EmulatorSettings>();
+    m_emu_settings = std::make_shared<EmulatorSettingsImpl>();
     m_emu_settings->Load();
     m_persistent_settings = std::make_shared<PersistentSettings>();
     m_ipc_client = std::make_shared<IpcClient>();
     m_emu_state = std::make_shared<EmulatorState>();
     EmulatorState::SetInstance(m_emu_state);
-    EmulatorSettings::SetInstance(m_emu_settings); // initialize singleton instance
+    EmulatorSettingsImpl::SetInstance(m_emu_settings); // initialize singleton instance
     std::shared_ptr<KeyManager> m_key_manager = std::make_shared<KeyManager>();
     KeyManager::SetInstance(m_key_manager); // initialize singleton instance
     m_key_manager->LoadFromFile();          // load keys

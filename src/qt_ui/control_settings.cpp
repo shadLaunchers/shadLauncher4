@@ -16,7 +16,7 @@
 #include "ui_control_settings.h"
 
 ControlSettings::ControlSettings(std::vector<game_info> game_info,
-                                 std::shared_ptr<EmulatorSettings> emu_settings,
+                                 std::shared_ptr<EmulatorSettingsImpl> emu_settings,
                                  std::shared_ptr<IpcClient> ipc_client, bool isGameRunning,
                                  std::string GameRunningSerial, QWidget* parent)
     : QDialog(parent), m_emu_settings(std::move(emu_settings)), m_game_info(game_info),
