@@ -186,7 +186,7 @@ u32 UserManagerDialog::GetUserKey() const {
     if (!ok)
         return 0;
 
-    const auto& users = m_emu_settings->GetUserManager().GetAllUsers();
+    const auto& users = UserManagement.GetAllUsers();
     auto it =
         std::find_if(users.begin(), users.end(), [id](const User& u) { return u.user_id == id; });
     return (it != users.end()) ? id : 0;
@@ -230,7 +230,7 @@ void UserManagerDialog::OnUserCreate() {
         u.user_name = name.toStdString();
         u.user_color = 0;
         u.controller_port = -1;
-        manager.AddUser(u);
+        UserManagement.AddUser(u);
         UpdateTable();
         dialog.accept();
     });
@@ -279,7 +279,7 @@ void UserManagerDialog::OnUserRename() {
     QObject::connect(&buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
 
     if (dialog.exec() == QDialog::Accepted) {
-        manager.RenameUser(id, edit.text().trimmed().toStdString());
+        UserManagement.RenameUser(id, edit.text().trimmed().toStdString());
         UpdateTable();
     }
 }
@@ -328,7 +328,7 @@ void UserManagerDialog::OnUserSetControllerPort() {
                              1, 4, 1, &ok);
 
     if (ok) {
-        manager.SetControllerPort(user_id, new_port);
+        UserManagement.SetControllerPort(user_id, new_port);
         UpdateTable();
     }
 }

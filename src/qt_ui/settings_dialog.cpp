@@ -50,7 +50,7 @@ inline bool operator!=(GameInstallDir const& a, GameInstallDir const& b) {
 }
 
 SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
-                               std::shared_ptr<EmulatorSettings> emu_settings,
+                               std::shared_ptr<EmulatorSettingsImpl> emu_settings,
                                std::shared_ptr<IpcClient> ipc_client, int tab_index,
                                QWidget* parent, const GameInfo* game, bool customFromGlobal)
     : QDialog(parent), m_tab_index(tab_index), ui(new Ui::SettingsDialog),
@@ -66,11 +66,11 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
 
     if (!IsGlobal() && m_custom_settings_from_global && !m_game_serial.empty()) {
         // We need to load game-specific settings
-        m_original_settings = std::make_shared<EmulatorSettings>();
+        m_original_settings = std::make_shared<EmulatorSettingsImpl>();
         *m_original_settings = *m_emu_settings; // Backup original
 
         // Create and load game-specific settings
-        m_game_specific_settings = std::make_shared<EmulatorSettings>();
+        m_game_specific_settings = std::make_shared<EmulatorSettingsImpl>();
         m_game_specific_settings->Load("");            // Load global
         m_game_specific_settings->Load(m_game_serial); // Apply overrides
 
@@ -401,9 +401,9 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->showSplashCheckBox->setChecked(m_emu_settings->IsShowSplash());
     ui->horizontalVolumeSlider->setValue(m_emu_settings->GetVolumeSlider());
     ui->GenAudioComboBox->setCurrentText(
-        QString::fromStdString(m_emu_settings->GetMainOutputDevice()));
+        QString::fromStdString(m_emu_settings->GetSDLMainOutputDevice()));
     ui->DsAudioComboBox->setCurrentText(
-        QString::fromStdString(m_emu_settings->GetPadSpkOutputDevice()));
+        QString::fromStdString(m_emu_settings->GetSDLPadSpkOutputDevice()));
     ui->disableTrophycheckBox->setChecked(m_emu_settings->IsTrophyPopupDisabled());
     ui->popUpDurationSpinBox->setValue(m_emu_settings->GetTrophyNotificationDuration());
 
@@ -466,7 +466,7 @@ void SettingsDialog::LoadValuesFromConfig() {
 
     ui->idleTimeoutSpinBox->setValue(m_emu_settings->GetCursorHideTimeout());
     ui->usbComboBox->setCurrentIndex(m_emu_settings->GetUsbDeviceBackend());
-    ui->micComboBox->setCurrentText(QString::fromStdString(m_emu_settings->GetMicDevice()));
+    ui->micComboBox->setCurrentText(QString::fromStdString(m_emu_settings->GetSDLMicDevice()));
     ui->motionControlsCheckBox->setChecked(m_emu_settings->IsMotionControlsEnabled());
     ui->backgroundControllerCheckBox->setChecked(m_emu_settings->IsBackgroundControllerInput());
 
@@ -593,8 +593,8 @@ void SettingsDialog::ApplyValuesToBackend() {
     // ------------------ General tab --------------------------------------------------------
     m_emu_settings->SetShowSplash(ui->showSplashCheckBox->isChecked());
     m_emu_settings->SetVolumeSlider(ui->horizontalVolumeSlider->value());
-    m_emu_settings->SetMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString());
-    m_emu_settings->SetPadSpkOutputDevice(ui->DsAudioComboBox->currentText().toStdString());
+    m_emu_settings->SetSDLMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString());
+    m_emu_settings->SetSDLPadSpkOutputDevice(ui->DsAudioComboBox->currentText().toStdString());
     m_emu_settings->SetTrophyPopupDisabled(ui->disableTrophycheckBox->isChecked());
     m_emu_settings->SetTrophyNotificationDuration(ui->popUpDurationSpinBox->value());
 
@@ -654,7 +654,7 @@ void SettingsDialog::ApplyValuesToBackend() {
     // ------------------ Input tab --------------------------------------------------------
     m_emu_settings->SetCursorState(cursorStateMap.value(ui->hideCursorComboBox->currentText()));
     m_emu_settings->SetCursorHideTimeout(ui->idleTimeoutSpinBox->value());
-    m_emu_settings->SetMicDevice(ui->micComboBox->currentText().toStdString());
+    m_emu_settings->SetSDLMicDevice(ui->micComboBox->currentText().toStdString());
     m_emu_settings->SetUsbDeviceBackend(ui->usbComboBox->currentIndex());
     m_emu_settings->SetMotionControlsEnabled(ui->motionControlsCheckBox->isChecked());
     m_emu_settings->SetBackgroundControllerInput(ui->backgroundControllerCheckBox->isChecked());
