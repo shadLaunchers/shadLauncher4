@@ -26,6 +26,7 @@
 #include "core/emulator_settings.h"
 #include "core/file_format/psf.h"
 #include "core/ipc/ipc_client.h"
+#include "core/user_settings.h"
 #include "game_list_frame.h"
 #include "game_list_grid.h"
 #include "game_list_grid_item.h"
@@ -1617,7 +1618,7 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
     });
 
     QMenu* trophy_viewer = menu.addMenu(tr("&Trophy Viewer"));
-    const auto valid_users = m_emu_settings->GetUserManager().GetValidUsers();
+    const auto valid_users = UserSettingsImpl::GetInstance()->GetUserManager().GetValidUsers();
     for (const auto& user : valid_users) {
         QString user_label =
             QString("%1 (ID: %2)").arg(QString::fromStdString(user.user_name)).arg(user.user_id);

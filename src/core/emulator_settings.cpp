@@ -457,8 +457,9 @@ void EmulatorSettingsImpl::SetDefaultValues() {
     m_gpu = GPUSettings{};
     m_vulkan = VulkanSettings{};
 }
-#if 0
+
 bool EmulatorSettingsImpl::TransferSettings() {
+    /*
     toml::value og_data;
     json new_data = json::object();
     try {
@@ -626,10 +627,10 @@ bool EmulatorSettingsImpl::TransferSettings() {
             LOG_WARNING(EmuSettings, "Failed to transfer addon install directory: {}", e.what());
         }
     }
-
+    */
     return true;
 }
-#endif
+
 std::vector<std::string> EmulatorSettingsImpl::GetAllOverrideableKeys() const {
     std::vector<std::string> keys;
     auto addGroup = [&keys](const auto& fields) {

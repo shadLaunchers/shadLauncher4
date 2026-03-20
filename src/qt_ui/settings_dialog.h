@@ -10,6 +10,7 @@
 #include <memory>
 #include "core/emulator_settings.h"
 #include "core/ipc/ipc_client.h"
+#include "game_info.h"
 
 class GUISettings;
 class EmulatorSettingsImpl;

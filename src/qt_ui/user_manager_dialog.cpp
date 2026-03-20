@@ -3,8 +3,10 @@
 
 #include <QHeaderView>
 #include <QtWidgets>
-#include <common/path_util.h>
+
+#include "common/path_util.h"
 #include "core/emulator_settings.h"
+#include "core/user_settings.h"
 #include "gui_settings.h"
 #include "table_item_delegate.h"
 #include "user_manager_dialog.h"
@@ -72,7 +74,7 @@ UserManagerDialog::UserManagerDialog(std::shared_ptr<GUISettings> gui_settings,
     vbox_main->addLayout(hbox_buttons);
     setLayout(vbox_main);
 
-    m_active_user = m_emu_settings->GetUserManager().GetUsers().default_user_id;
+    m_active_user = UserSettingsImpl::GetInstance()->GetUserManager().GetDefaultUser().user_id;
     UpdateTable();
 
     restoreGeometry(m_gui_settings->GetValue(GUI::user_manager_geometry).toByteArray());
@@ -111,7 +113,7 @@ void UserManagerDialog::UpdateTable(bool mark_only) {
     QFont bold_font;
     bold_font.setBold(true);
 
-    auto& manager = m_emu_settings->GetUserManager();
+    auto& manager = UserSettingsImpl::GetInstance()->GetUserManager();
     const auto& users = manager.GetAllUsers();
 
     if (mark_only) {
@@ -152,9 +154,8 @@ void UserManagerDialog::UpdateTable(bool mark_only) {
         m_table->setItem(row, 2, color_item);
 
         // Controller port
-        QString controller_text = (u.controller_port >= 1 && u.controller_port <= 4)
-                                      ? QString::number(u.controller_port)
-                                      : "-";
+        QString controller_text =
+            (u.player_index >= 1 && u.player_index <= 4) ? QString::number(u.player_index) : "-";
         QTableWidgetItem* controller_item = new QTableWidgetItem(controller_text);
         controller_item->setFlags(controller_item->flags() & ~Qt::ItemIsEditable);
         m_table->setItem(row, 3, controller_item);
@@ -186,14 +187,14 @@ u32 UserManagerDialog::GetUserKey() const {
     if (!ok)
         return 0;
 
-    const auto& users = m_emu_settings->GetUserManager().GetAllUsers();
+    const auto& users = UserSettingsImpl::GetInstance()->GetUserManager().GetAllUsers();
     auto it =
         std::find_if(users.begin(), users.end(), [id](const User& u) { return u.user_id == id; });
     return (it != users.end()) ? id : 0;
 }
 
 void UserManagerDialog::OnUserCreate() {
-    auto& manager = m_emu_settings->GetUserManager();
+    auto& manager = UserSettingsImpl::GetInstance()->GetUserManager();
     int smallest = 1;
     for (auto& u : manager.GetAllUsers()) {
         if (u.user_id == smallest)
@@ -230,7 +231,7 @@ void UserManagerDialog::OnUserCreate() {
         u.user_id = smallest;
         u.user_name = name.toStdString();
         u.user_color = 0;
-        u.controller_port = -1;
+        u.player_index = -1;
         manager.AddUser(u);
         UpdateTable();
         dialog.accept();
@@ -243,7 +244,7 @@ void UserManagerDialog::OnUserRemove() {
     u32 id = GetUserKey();
     if (id == 0)
         return;
-    auto& manager = m_emu_settings->GetUserManager();
+    auto& manager = UserSettingsImpl::GetInstance()->GetUserManager();
     if (QMessageBox::question(this, tr("Delete Confirmation"), tr("Delete user ID %1?").arg(id),
                               QMessageBox::Yes | QMessageBox::No,
                               QMessageBox::No) == QMessageBox::Yes) {
@@ -256,7 +257,7 @@ void UserManagerDialog::OnUserRename() {
     u32 id = GetUserKey();
     if (id == 0)
         return;
-    auto& manager = m_emu_settings->GetUserManager();
+    auto& manager = UserSettingsImpl::GetInstance()->GetUserManager();
     User* user = manager.GetUserByID(id);
     if (!user)
         return;
@@ -291,7 +292,7 @@ void UserManagerDialog::OnUserSetDefault() {
     u32 id = GetUserKey();
     if (id == 0)
         return;
-    auto& manager = m_emu_settings->GetUserManager();
+    auto& manager = UserSettingsImpl::GetInstance()->GetUserManager();
     manager.SetDefaultUser(id);
     m_active_user = id;
     UpdateTable();
@@ -301,7 +302,7 @@ void UserManagerDialog::OnUserSetColor() {
     u32 id = GetUserKey();
     if (id == 0)
         return;
-    auto& manager = m_emu_settings->GetUserManager();
+    auto& manager = UserSettingsImpl::GetInstance()->GetUserManager();
     User* user = manager.GetUserByID(id);
     if (!user)
         return;
@@ -321,7 +322,7 @@ void UserManagerDialog::OnUserSetControllerPort() {
     if (user_id == 0)
         return;
 
-    auto& manager = m_emu_settings->GetUserManager();
+    auto& manager = UserSettingsImpl::GetInstance()->GetUserManager();
 
     // Current port of the selected user
     User* user = manager.GetUserByID(user_id);
@@ -331,7 +332,7 @@ void UserManagerDialog::OnUserSetControllerPort() {
     bool ok = false;
     int new_port =
         QInputDialog::getInt(this, tr("Set Controller Port"), tr("Assign port (1-4) to this user:"),
-                             user->controller_port > 0 ? user->controller_port : 1, // default
+                             user->player_index > 0 ? user->player_index : 1, // default
                              1, 4, 1, &ok);
 
     if (ok) {
