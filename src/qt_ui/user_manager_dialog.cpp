@@ -4,6 +4,7 @@
 #include <QHeaderView>
 #include <QtWidgets>
 #include <common/path_util.h>
+#include <core/user_settings.h>
 #include "core/emulator_settings.h"
 #include "gui_settings.h"
 #include "table_item_delegate.h"
@@ -72,7 +73,7 @@ UserManagerDialog::UserManagerDialog(std::shared_ptr<GUISettings> gui_settings,
     vbox_main->addLayout(hbox_buttons);
     setLayout(vbox_main);
 
-    m_active_user = m_emu_settings->GetUserManager().GetUsers().default_user_id;
+    m_active_user = UserManagement.GetUsers().default_user_id;
     UpdateTable();
 
     restoreGeometry(m_gui_settings->GetValue(GUI::user_manager_geometry).toByteArray());
@@ -111,8 +112,7 @@ void UserManagerDialog::UpdateTable(bool mark_only) {
     QFont bold_font;
     bold_font.setBold(true);
 
-    auto& manager = m_emu_settings->GetUserManager();
-    const auto& users = manager.GetAllUsers();
+    const auto& users = UserManagement.GetAllUsers();
 
     if (mark_only) {
         for (int i = 0; i < m_table->rowCount(); ++i) {
@@ -193,9 +193,8 @@ u32 UserManagerDialog::GetUserKey() const {
 }
 
 void UserManagerDialog::OnUserCreate() {
-    auto& manager = m_emu_settings->GetUserManager();
     int smallest = 1;
-    for (auto& u : manager.GetAllUsers()) {
+    for (auto& u : UserManagement.GetAllUsers()) {
         if (u.user_id == smallest)
             ++smallest;
         else
@@ -243,11 +242,10 @@ void UserManagerDialog::OnUserRemove() {
     u32 id = GetUserKey();
     if (id == 0)
         return;
-    auto& manager = m_emu_settings->GetUserManager();
     if (QMessageBox::question(this, tr("Delete Confirmation"), tr("Delete user ID %1?").arg(id),
                               QMessageBox::Yes | QMessageBox::No,
                               QMessageBox::No) == QMessageBox::Yes) {
-        manager.RemoveUser(id);
+        UserManagement.RemoveUser(id);
         UpdateTable();
     }
 }
@@ -256,8 +254,7 @@ void UserManagerDialog::OnUserRename() {
     u32 id = GetUserKey();
     if (id == 0)
         return;
-    auto& manager = m_emu_settings->GetUserManager();
-    User* user = manager.GetUserByID(id);
+    User* user = UserManagement.GetUserByID(id);
     if (!user)
         return;
 
@@ -291,8 +288,7 @@ void UserManagerDialog::OnUserSetDefault() {
     u32 id = GetUserKey();
     if (id == 0)
         return;
-    auto& manager = m_emu_settings->GetUserManager();
-    manager.SetDefaultUser(id);
+    UserManagement.SetDefaultUser(id);
     m_active_user = id;
     UpdateTable();
 }
@@ -301,8 +297,7 @@ void UserManagerDialog::OnUserSetColor() {
     u32 id = GetUserKey();
     if (id == 0)
         return;
-    auto& manager = m_emu_settings->GetUserManager();
-    User* user = manager.GetUserByID(id);
+    User* user = UserManagement.GetUserByID(id);
     if (!user)
         return;
 
@@ -321,10 +316,8 @@ void UserManagerDialog::OnUserSetControllerPort() {
     if (user_id == 0)
         return;
 
-    auto& manager = m_emu_settings->GetUserManager();
-
     // Current port of the selected user
-    User* user = manager.GetUserByID(user_id);
+    User* user = UserManagement.GetUserByID(user_id);
     if (!user)
         return;
 
@@ -388,8 +381,7 @@ void UserManagerDialog::ShowContextMenu(const QPoint& pos) {
 
     connect(show_dir_act, &QAction::triggered, this, [this, key]() {
         QString userDirPath;
-        Common::FS::PathToQString(userDirPath, EmulatorSettings.GetHomeDir() /
-                                                   std::to_string(key));
+        Common::FS::PathToQString(userDirPath, EmulatorSettings.GetHomeDir() / std::to_string(key));
         QDesktopServices::openUrl(QUrl::fromLocalFile(userDirPath));
     });
 

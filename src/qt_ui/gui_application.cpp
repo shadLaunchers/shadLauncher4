@@ -5,6 +5,7 @@
 #include <QDebug>
 #include <QStyleHints>
 #include <core/libraries/system/system_service.h>
+#include <core/user_settings.h>
 #include <qfontdatabase.h>
 #include <qlibraryinfo.h>
 #include <qregularexpression.h>
@@ -43,6 +44,7 @@ bool GUIApplication::init(QString emulator_arg, QString game_arg, QStringList pa
     std::shared_ptr<KeyManager> m_key_manager = std::make_shared<KeyManager>();
     KeyManager::SetInstance(m_key_manager); // initialize singleton instance
     m_key_manager->LoadFromFile();          // load keys
+    UserSettings.Load();
 
     m_main_window = new MainWindow(m_gui_settings, m_emu_settings, m_persistent_settings,
                                    m_ipc_client, nullptr);
