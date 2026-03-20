@@ -73,7 +73,7 @@ UserManagerDialog::UserManagerDialog(std::shared_ptr<GUISettings> gui_settings,
     vbox_main->addLayout(hbox_buttons);
     setLayout(vbox_main);
 
-    m_active_user = UserManagement.GetUsers().default_user_id;
+    m_active_user = UserManagement.GetDefaultUser().user_id;
     UpdateTable();
 
     restoreGeometry(m_gui_settings->GetValue(GUI::user_manager_geometry).toByteArray());
@@ -152,8 +152,8 @@ void UserManagerDialog::UpdateTable(bool mark_only) {
         m_table->setItem(row, 2, color_item);
 
         // Controller port
-        QString controller_text = (u.controller_port >= 1 && u.controller_port <= 4)
-                                      ? QString::number(u.controller_port)
+        QString controller_text = (u.player_index >= 1 && u.player_index <= 4)
+                                      ? QString::number(u.player_index)
                                       : "-";
         QTableWidgetItem* controller_item = new QTableWidgetItem(controller_text);
         controller_item->setFlags(controller_item->flags() & ~Qt::ItemIsEditable);
@@ -229,7 +229,7 @@ void UserManagerDialog::OnUserCreate() {
         u.user_id = smallest;
         u.user_name = name.toStdString();
         u.user_color = 0;
-        u.controller_port = -1;
+        u.player_index = -1;
         UserManagement.AddUser(u);
         UpdateTable();
         dialog.accept();
@@ -324,7 +324,7 @@ void UserManagerDialog::OnUserSetControllerPort() {
     bool ok = false;
     int new_port =
         QInputDialog::getInt(this, tr("Set Controller Port"), tr("Assign port (1-4) to this user:"),
-                             user->controller_port > 0 ? user->controller_port : 1, // default
+                             user->player_index > 0 ? user->player_index : 1, // default
                              1, 4, 1, &ok);
 
     if (ok) {

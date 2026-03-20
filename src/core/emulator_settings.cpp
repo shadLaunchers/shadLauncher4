@@ -358,6 +358,7 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
 
                 LOG_DEBUG(EmuSettings, "Global config loaded successfully");
             } else {
+#if 0
                 if (std::filesystem::exists(Common::FS::GetUserPath(Common::FS::PathType::UserDir) /
                                             "config.toml")) {
                     SDL_MessageBoxButtonData btns[2]{
@@ -389,6 +390,7 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
                         }
                     }
                 }
+#endif
                 LOG_DEBUG(EmuSettings, "Global config not found - using defaults");
                 SetDefaultValues();
                 Save();

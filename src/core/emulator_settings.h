@@ -420,8 +420,9 @@ public:
     bool Save(const std::string& serial = "");
     bool Load(const std::string& serial = "");
     void SetDefaultValues();
+#if 0
     bool TransferSettings();
-
+#endif
     // Config mode
     ConfigMode GetConfigMode() const {
         return m_configMode;
