@@ -7,42 +7,42 @@
     <name>ChangelogDialog</name>
     <message>
       <source>Changelog Viewer</source>
-      <translation type="unfinished">Changelog Viewer</translation>
+      <translation>Просмотр журнала изменений</translation>
     </message>
     <message>
       <source>Search in changelog...</source>
-      <translation type="unfinished">Search in changelog...</translation>
+      <translation>Поиск в журнале изменений...</translation>
     </message>
     <message>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>Копировать</translation>
     </message>
     <message>
       <source>Export…</source>
-      <translation type="unfinished">Export…</translation>
+      <translation>Экспортировать...</translation>
     </message>
     <message>
       <source>Export Changelog</source>
-      <translation type="unfinished">Export Changelog</translation>
+      <translation>Экспортировать журнал изменений</translation>
     </message>
     <message>
       <source>Changelog Error</source>
-      <translation type="unfinished">Changelog Error</translation>
+      <translation>Ошибка в журнале изменений</translation>
     </message>
     <message>
       <source>Failed to open changelog file:
 %1</source>
-      <translation type="unfinished">Failed to open changelog file:
+      <translation>Не удалось открыть файл журнала изменений:
 %1</translation>
     </message>
     <message>
       <source>XML Error</source>
-      <translation type="unfinished">XML Error</translation>
+      <translation>Ошибка XML</translation>
     </message>
     <message>
       <source>Parse error at line %1, column %2:
 %3</source>
-      <translation type="unfinished">Parse error at line %1, column %2:
+      <translation>Ошибка синтаксического анализа в строке %1, столбце %2:
 %3</translation>
     </message>
   </context>
@@ -50,1728 +50,1726 @@
     <name>CheatsPatches</name>
     <message>
       <source>Cheats / Patches for </source>
-      <translation type="unfinished">Cheats / Patches for </translation>
+      <translation>Читы и патчи для</translation>
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation type="unfinished">Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</translation>
+      <translation>Читы и патчи экспериментальны.\nИспользуйте с осторожностью.\n\nСкачивайте читы, выбрав репозиторий и нажав на кнопку загрузки.\nВо вкладке &quot;Патчи&quot; вы можете скачать все патчи сразу, выбирать какие вы хотите использовать, и сохранять выбор.\n\nПоскольку мы не разрабатываем читы/патчи,\nпожалуйста сообщайте о проблемах автору чита/патча.\n\nСоздали новый чит? Посетите:\n</translation>
     </message>
     <message>
       <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
-      <translation type="unfinished">No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</translation>
+      <translation>Читы не найдены для этой игры в выбранном репозитории. Попробуйте другой репозиторий или другую версию игры.</translation>
     </message>
     <message>
       <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
-      <translation type="unfinished">You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</translation>
+      <translation>Вы успешно скачали читы для этой версии игры из выбранного репозитория. Вы можете попробовать скачать из другого репозитория. Если он доступен, его также можно будет использовать, выбрав файл из списка.</translation>
     </message>
     <message>
       <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</source>
-      <translation type="unfinished">Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</translation>
+      <translation>Патчи успешно скачаны! Все доступные патчи для всех игр были скачаны, нет необходимости скачивать их по отдельности для каждой игры, как это происходит с читами. Если патч не появляется, возможно, его не существует для конкретного серийного номера и версии игры.</translation>
     </message>
     <message>
       <source>No Image Available</source>
-      <translation type="unfinished">No Image Available</translation>
+      <translation>Изображение недоступно</translation>
     </message>
     <message>
       <source>Serial: </source>
-      <translation type="unfinished">Serial: </translation>
+      <translation>Серийный номер: </translation>
     </message>
     <message>
       <source>Version: </source>
-      <translation type="unfinished">Version: </translation>
+      <translation>Версия: </translation>
     </message>
     <message>
       <source>Size: </source>
-      <translation type="unfinished">Size: </translation>
+      <translation>Размер: </translation>
     </message>
     <message>
       <source>Delete File</source>
-      <translation type="unfinished">Delete File</translation>
+      <translation>Удалить файл</translation>
     </message>
     <message>
       <source>No files selected.</source>
-      <translation type="unfinished">No files selected.</translation>
+      <translation>Файлы не выбраны.</translation>
     </message>
     <message>
       <source>You can delete the cheats you don&apos;t want after downloading them.</source>
-      <translation type="unfinished">You can delete the cheats you don&apos;t want after downloading them.</translation>
+      <translation>Вы можете удалить ненужные читы после их скачивания.</translation>
     </message>
     <message>
       <source>Do you want to delete the selected file?\n%1</source>
-      <translation type="unfinished">Do you want to delete the selected file?\n%1</translation>
+      <translation>Вы хотите удалить выбранный файл?\n%1</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Ошибка</translation>
     </message>
     <message>
       <source>No patch selected.</source>
-      <translation type="unfinished">No patch selected.</translation>
+      <translation>Патч не выбран.</translation>
     </message>
     <message>
       <source>Unable to open files.json for reading.</source>
-      <translation type="unfinished">Unable to open files.json for reading.</translation>
+      <translation>Не удалось открыть файл files.json для чтения.</translation>
     </message>
     <message>
       <source>No patch file found for the current serial.</source>
-      <translation type="unfinished">No patch file found for the current serial.</translation>
+      <translation>Не найден файл патча для текущего серийного номера.</translation>
     </message>
     <message>
       <source>Unable to open the file for reading.</source>
-      <translation type="unfinished">Unable to open the file for reading.</translation>
+      <translation>Не удалось открыть файл для чтения.</translation>
     </message>
     <message>
       <source>Unable to open the file for writing.</source>
-      <translation type="unfinished">Unable to open the file for writing.</translation>
+      <translation>Не удалось открыть файл для записи.</translation>
     </message>
     <message>
       <source>Failed to parse XML: </source>
-      <translation type="unfinished">Failed to parse XML: </translation>
+      <translation>Не удалось разобрать XML: </translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Успех</translation>
     </message>
     <message>
       <source>Options saved successfully.</source>
-      <translation type="unfinished">Options saved successfully.</translation>
+      <translation>Опции успешно сохранены.</translation>
     </message>
     <message>
       <source>Invalid Source</source>
-      <translation type="unfinished">Invalid Source</translation>
+      <translation>Неверный источник</translation>
     </message>
     <message>
       <source>Selected repository does not support cheats.</source>
-      <translation type="unfinished">Selected repository does not support cheats.</translation>
+      <translation>Выбранный репозиторий не поддерживает читы.</translation>
     </message>
     <message>
       <source>Download Error</source>
-      <translation type="unfinished">Download Error</translation>
+      <translation>Ошибка загрузки</translation>
     </message>
     <message>
       <source>Cheats Not Found</source>
-      <translation type="unfinished">Cheats Not Found</translation>
+      <translation>Читы не найдены</translation>
     </message>
     <message>
       <source>Downloading cheat index...</source>
-      <translation type="unfinished">Downloading cheat index...</translation>
+      <translation>Загрузка индекса читов...</translation>
     </message>
     <message>
       <source>Selected repository does not support patches.</source>
-      <translation type="unfinished">Selected repository does not support patches.</translation>
+      <translation>Выбранный репозиторий не поддерживает патчи.</translation>
     </message>
     <message>
       <source>Download Complete</source>
-      <translation type="unfinished">Download Complete</translation>
+      <translation>Скачивание завершено</translation>
     </message>
     <message>
       <source>Downloading patches...</source>
-      <translation type="unfinished">Downloading patches...</translation>
+      <translation>Загрузка патчей...</translation>
     </message>
     <message>
       <source>Failed to open file:</source>
-      <translation type="unfinished">Failed to open file:</translation>
+      <translation>Не удалось открыть файл:</translation>
     </message>
     <message>
       <source>XML ERROR:</source>
-      <translation type="unfinished">XML ERROR:</translation>
+      <translation>ОШИБКА XML:</translation>
     </message>
     <message>
       <source>The game is in version: %1</source>
-      <translation type="unfinished">The game is in version: %1</translation>
+      <translation>Игра в версии: %1</translation>
     </message>
     <message>
       <source>The downloaded patch only works on version: %1</source>
-      <translation type="unfinished">The downloaded patch only works on version: %1</translation>
+      <translation>Скачанный патч работает только на версии: %1</translation>
     </message>
     <message>
       <source>You may need to update your game.</source>
-      <translation type="unfinished">You may need to update your game.</translation>
+      <translation>Вам может понадобиться обновить игру.</translation>
     </message>
     <message>
       <source>Incompatibility Notice</source>
-      <translation type="unfinished">Incompatibility Notice</translation>
+      <translation>Уведомление о несовместимости</translation>
     </message>
     <message>
       <source>Failed to open files.json for writing</source>
-      <translation type="unfinished">Failed to open files.json for writing</translation>
+      <translation>Не удалось открыть файл files.json для записи</translation>
     </message>
     <message>
       <source>Author: </source>
-      <translation type="unfinished">Author: </translation>
+      <translation>Автор: </translation>
     </message>
     <message>
       <source>Directory does not exist:</source>
-      <translation type="unfinished">Directory does not exist:</translation>
+      <translation>Каталог не существует:</translation>
     </message>
     <message>
       <source>Failed to open files.json for reading.</source>
-      <translation type="unfinished">Failed to open files.json for reading.</translation>
+      <translation>Не удалось открыть файл files.json для чтения.</translation>
     </message>
     <message>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>Имя:</translation>
     </message>
     <message>
       <source>Can&apos;t apply cheats before the game is started</source>
-      <translation type="unfinished">Can&apos;t apply cheats before the game is started</translation>
+      <translation>Невозможно применить читы до начала игры</translation>
     </message>
   </context>
   <context>
     <name>CheatsPatchesDialog</name>
     <message>
       <source>Cheats / Patches</source>
-      <translation type="unfinished">Cheats / Patches</translation>
+      <translation>Читы / Патчи</translation>
     </message>
     <message>
       <source>Game Info</source>
-      <translation type="unfinished">Game Info</translation>
+      <translation>Информация об игре</translation>
     </message>
     <message>
       <source>No Image Available</source>
-      <translation type="unfinished">No Image Available</translation>
+      <translation>Изображение недоступно</translation>
     </message>
     <message>
       <source>Game Name</source>
-      <translation type="unfinished">Game Name</translation>
+      <translation>Название игры</translation>
     </message>
     <message>
       <source>Serial: </source>
-      <translation type="unfinished">Serial: </translation>
+      <translation>Серийный номер: </translation>
     </message>
     <message>
       <source>Version: </source>
-      <translation type="unfinished">Version: </translation>
+      <translation>Версия: </translation>
     </message>
     <message>
       <source>Size: </source>
-      <translation type="unfinished">Size: </translation>
+      <translation>Размер: </translation>
     </message>
     <message>
       <source>Cheats/Patches are experimental. Use with caution...</source>
-      <translation type="unfinished">Cheats/Patches are experimental. Use with caution...</translation>
+      <translation>Читы и патчи экспериментальны. Используйте с осторожностью.</translation>
     </message>
     <message>
       <source>Cheats</source>
-      <translation type="unfinished">Cheats</translation>
+      <translation>Читы</translation>
     </message>
     <message>
       <source>Select Cheat File:</source>
-      <translation type="unfinished">Select Cheat File:</translation>
+      <translation>Выберите файл чита:</translation>
     </message>
     <message>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Репозиторий:</translation>
     </message>
     <message>
       <source>Download Cheats</source>
-      <translation type="unfinished">Download Cheats</translation>
+      <translation>Скачать читы</translation>
     </message>
     <message>
       <source>Delete File</source>
-      <translation type="unfinished">Delete File</translation>
+      <translation>Удалить файл</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Закрыть</translation>
     </message>
     <message>
       <source>Patches</source>
-      <translation type="unfinished">Patches</translation>
+      <translation>Патчи</translation>
     </message>
     <message>
       <source>Select Patch File:</source>
-      <translation type="unfinished">Select Patch File:</translation>
+      <translation>Выберите файл патча:</translation>
     </message>
     <message>
       <source>Download Patches</source>
-      <translation type="unfinished">Download Patches</translation>
+      <translation>Скачать патчи</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Сохранить</translation>
     </message>
   </context>
   <context>
     <name>CheckUpdate</name>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Автообновление - Интерфейс</translation>
     </message>
     <message>
       <source>Auto Updater</source>
-      <translation type="unfinished">Auto Updater</translation>
+      <translation>Автообновление</translation>
     </message>
     <message>
       <source>The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</source>
-      <translation type="unfinished">The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</translation>
+      <translation>Автообновление позволяет выполнять до 60 проверок обновлений в час.\nВы достигли этого лимита. Пожалуйста, попробуйте позже.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Ошибка</translation>
     </message>
     <message>
       <source>Network error:</source>
-      <translation type="unfinished">Network error:</translation>
+      <translation>Сетевая ошибка:</translation>
     </message>
     <message>
       <source>Failed to parse update information.</source>
-      <translation type="unfinished">Failed to parse update information.</translation>
+      <translation>Не удалось разобрать информацию об обновлении.</translation>
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation type="unfinished">No pre-releases found.</translation>
+      <translation>Версий предрелиза не найдено.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>Не найден URL для загрузки указанного ресурса.</translation>
     </message>
     <message>
       <source>Your version is already up to date!</source>
-      <translation type="unfinished">Your version is already up to date!</translation>
+      <translation>Ваша версия уже обновлена!</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Доступно обновление - Интерфейс</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Текущая версия</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Последняя версия</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation type="unfinished">Check for Updates at Startup</translation>
+      <translation>Проверка при запуске</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Вы хотите обновиться?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Обновить</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Нет</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>Показать журнал изменений</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>Скрыть журнал изменений</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Журнал изменений</translation>
     </message>
     <message>
       <source>Network error occurred while trying to access the URL</source>
-      <translation type="unfinished">Network error occurred while trying to access the URL</translation>
+      <translation>Произошла сетевая ошибка при попытке доступа к URL</translation>
     </message>
     <message>
       <source>Download Complete</source>
-      <translation type="unfinished">Download Complete</translation>
+      <translation>Скачивание завершено</translation>
     </message>
     <message>
       <source>The update has been downloaded, press OK to install.</source>
-      <translation type="unfinished">The update has been downloaded, press OK to install.</translation>
+      <translation>Обновление загружено, нажмите OK для установки.</translation>
     </message>
     <message>
       <source>Failed to save the update file at</source>
-      <translation type="unfinished">Failed to save the update file at</translation>
+      <translation>Не удалось сохранить файл обновления в</translation>
     </message>
     <message>
       <source>Failed to extract the update ZIP:
 </source>
-      <translation type="unfinished">Failed to extract the update ZIP:
-</translation>
+      <translation>Не удалось распаковать ZIP-архив обновления:</translation>
     </message>
     <message>
       <source>Failed to create update script:
 </source>
-      <translation type="unfinished">Failed to create update script:
-</translation>
+      <translation>Не удалось создать файл скрипта обновления:</translation>
     </message>
     <message>
       <source>Failed to start update process.</source>
-      <translation type="unfinished">Failed to start update process.</translation>
+      <translation>Не удалось запустить процесс обновления.</translation>
     </message>
   </context>
   <context>
     <name>ControlSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation type="unfinished">Configure Controls</translation>
+      <translation>Настроить управление</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>Крестовина</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Вверх</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>не назначено</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Влево</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Вправо</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>Вниз</translation>
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation type="unfinished">L1 and L2</translation>
+      <translation>L1 и L2</translation>
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Мёртвая зона левого стика</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>Мин. мёртвая зона (по умолч:2 макс:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>Макс. мёртвая зона (по умолч:127 макс 127)</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Левый стик</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>Выбор конфигурации</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>Общая конфигурация</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation type="unfinished">Use per-game configs</translation>
+      <translation>Использовать настройки для каждой игры</translation>
     </message>
     <message>
       <source>Active Gamepad</source>
-      <translation type="unfinished">Active Gamepad</translation>
+      <translation>Текущий геймпад</translation>
     </message>
     <message>
       <source>Gamepad ID</source>
-      <translation type="unfinished">Gamepad ID</translation>
+      <translation>ID геймпада</translation>
     </message>
     <message>
       <source>Default Gamepad</source>
-      <translation type="unfinished">Default Gamepad</translation>
+      <translation>Геймпад по умолчанию</translation>
     </message>
     <message>
       <source>No default selected</source>
-      <translation type="unfinished">No default selected</translation>
+      <translation>Не выбран по умолчанию</translation>
     </message>
     <message>
       <source>n/a</source>
-      <translation type="unfinished">n/a</translation>
+      <translation>n/a</translation>
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation type="unfinished">Set Active Gamepad as Default</translation>
+      <translation>Выбрать текущий геймпад по умолчанию</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation type="unfinished">Remove Default Gamepad</translation>
+      <translation>Удалить геймпад по умолчанию</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>Options</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Тачпад слева</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Тачпад центр</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Тачпад справа</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
-      <translation type="unfinished">Color Adjustment</translation>
+      <translation>Настройка цвета</translation>
     </message>
     <message>
       <source>RED</source>
-      <translation type="unfinished">RED</translation>
+      <translation>КРАСНЫЙ</translation>
     </message>
     <message>
       <source>GREEN</source>
-      <translation type="unfinished">GREEN</translation>
+      <translation>ЗЕЛЁНЫЙ</translation>
     </message>
     <message>
       <source>BLUE</source>
-      <translation type="unfinished">BLUE</translation>
+      <translation>СИНИЙ</translation>
     </message>
     <message>
       <source>Override Lightbar Color</source>
-      <translation type="unfinished">Override Lightbar Color</translation>
+      <translation>Заменить цвет световой панели</translation>
     </message>
     <message>
       <source>Override Color</source>
-      <translation type="unfinished">Override Color</translation>
+      <translation>Заменить цвет</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>Кнопки действий</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Треугольник</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>Квадрат</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>Круг</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>Крест</translation>
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation type="unfinished">R1 and R2</translation>
+      <translation>R1 и R2</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Мёртвая зона правого стика</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>Правый стик</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Подсказка: Отмените назначение кнопок ввода щелчком правой кнопкой мыши</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Сохранить</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Применить</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>По умолчанию</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Отмена</translation>
     </message>
     <message>
       <source>ID: </source>
-      <translation type="unfinished">ID: </translation>
+      <translation>ID:</translation>
     </message>
     <message>
       <source>Default Controller Selected</source>
-      <translation type="unfinished">Default Controller Selected</translation>
+      <translation>Выбран контроллер по умолчанию</translation>
     </message>
     <message>
       <source>Active controller set as default</source>
-      <translation type="unfinished">Active controller set as default</translation>
+      <translation>Текущий контроллер выбран по умолчанию</translation>
     </message>
     <message>
       <source>Default Controller Removed</source>
-      <translation type="unfinished">Default Controller Removed</translation>
+      <translation>Контроллер по умолчанию удалён</translation>
     </message>
     <message>
       <source>Default controller setting removed</source>
-      <translation type="unfinished">Default controller setting removed</translation>
+      <translation>Настройки геймпада по умолчанию удалены</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Не удаётся сохранить</translation>
     </message>
     <message>
       <source>Cannot bind axis values more than once</source>
-      <translation type="unfinished">Cannot bind axis values more than once</translation>
+      <translation>Невозможно привязать значения оси более одного раза</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Невозможно привязать уникальный ввод более одного раза. Дублированные вводы назначены на следующие кнопки:
 
 %1</translation>
     </message>
     <message>
       <source>Press a button</source>
-      <translation type="unfinished">Press a button</translation>
+      <translation>Нажмите кнопку</translation>
     </message>
     <message>
       <source>Move analog stick</source>
-      <translation type="unfinished">Move analog stick</translation>
+      <translation>Двиньте аналоговый стик</translation>
     </message>
   </context>
   <context>
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Менеджер криптоключей</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>Ключ трофеев: используется для расшифровки трофеев.
+Должен представлять собой допустимую шестнадцатеричную строку четной длины.</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>Ключ трофеев:</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>Статус: Не загружено</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
+      <translation>Ключ трофеев</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>Exponent1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>Exponent2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>Public Exponent</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Коэффициент</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>Модуль</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>Prime 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>Prime 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Private Exponent</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>Поддельный набор ключей</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
+      <translation>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>Набор ключей Debug Rif</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Компоненты ключа RSA для отладочных RIF-файлов.
+Все поля должны быть допустимыми шестнадцатеричными строками четной длины.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>Pkg Derived Key3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Компоненты ключа RSA для расшифровки пакета.
+Все поля должны быть допустимыми шестнадцатеричными строками четной длины.</translation>
     </message>
     <message>
       <source>Load All Keys</source>
-      <translation type="unfinished">Load All Keys</translation>
+      <translation>Загрузить все ключи</translation>
     </message>
     <message>
       <source>Save All Keys</source>
-      <translation type="unfinished">Save All Keys</translation>
+      <translation>Сохранить все ключи</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Закрыть</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Предупреждение</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>Файл ключа не найден или не удалось загрузить.
+Пожалуйста, введите ваши ключи и сохраните их.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>Ошибка проверки</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Успех</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation type="unfinished">Keys saved successfully!</translation>
+      <translation>Ключи успешно сохранены!</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Ошибка</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation type="unfinished">Failed to save keys!</translation>
+      <translation>Не удалось сохранить ключи!</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>Статус: Все поля пусты</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation type="unfinished">Status: Invalid hex values</translation>
+      <translation>Статус: Недопустимые шестнадцатеричные значения</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>Статус: Незавершено</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>Статус: Действителен</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>Недействительный файл</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>Поддерживаются только файлы JSON.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation type="unfinished">Unable to open file.</translation>
+      <translation>Не удалось открыть файл.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>Ошибка JSON</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>Неверный формат JSON.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>Ключи успешно загружены из JSON!</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>Введите ключ трофея</translation>
     </message>
     <message>
       <source>Enter %1</source>
-      <translation type="unfinished">Enter %1</translation>
+      <translation>Ввод %1</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+      <translation>Ключ трофеев содержит недопустимые шестнадцатеричные значения или имеет нечетную длину.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+      <translation>%1 содержит недопустимое шестнадцатеричное значение или имеет нечетную длину.</translation>
     </message>
   </context>
   <context>
     <name>Downloader</name>
     <message>
       <source>Please wait...</source>
-      <translation type="unfinished">Please wait...</translation>
+      <translation>Пожалуйста, подождите...</translation>
     </message>
     <message>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Отмена</translation>
     </message>
     <message>
       <source>Local file missing after 304.</source>
-      <translation type="unfinished">Local file missing after 304.</translation>
+      <translation>Локальный файл отсутствует после ошибки 304.</translation>
     </message>
     <message>
       <source>Unknown network error</source>
-      <translation type="unfinished">Unknown network error</translation>
+      <translation>Неизвестная сетевая ошибка</translation>
     </message>
     <message>
       <source>Cannot write output file.</source>
-      <translation type="unfinished">Cannot write output file.</translation>
+      <translation>Невозможно записать выходной файл.</translation>
     </message>
   </context>
   <context>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
-      <translation type="unfinished">Edit Keyboard + Mouse and Controller input bindings</translation>
+      <translation>Редактирование привязок ввода с клавиатуры + мыши и контроллера</translation>
     </message>
     <message>
       <source>Use Per-Game configs</source>
-      <translation type="unfinished">Use Per-Game configs</translation>
+      <translation>Использовать настройки для каждой игры</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Ошибка</translation>
     </message>
     <message>
       <source>Could not open the file for reading</source>
-      <translation type="unfinished">Could not open the file for reading</translation>
+      <translation>Не удалось открыть файл для чтения</translation>
     </message>
     <message>
       <source>Could not open the file for writing</source>
-      <translation type="unfinished">Could not open the file for writing</translation>
+      <translation>Не удалось открыть файл для записи</translation>
     </message>
     <message>
       <source>Save Changes</source>
-      <translation type="unfinished">Save Changes</translation>
+      <translation>Сохранить изменения</translation>
     </message>
     <message>
       <source>Do you want to save changes?</source>
-      <translation type="unfinished">Do you want to save changes?</translation>
+      <translation>Хотите сохранить изменения?</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Помощь</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation type="unfinished">Do you want to reset your custom default config to the original default config?</translation>
+      <translation>Вы хотите сбросить вашу пользовательскую конфигурацию по умолчанию к первоначальной конфигурации по умолчанию?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
-      <translation type="unfinished">Do you want to reset this config to your custom default config?</translation>
+      <translation>Вы хотите сбросить эту конфигурацию до вашей пользовательской конфигурации по умолчанию?</translation>
     </message>
     <message>
       <source>Reset to Default</source>
-      <translation type="unfinished">Reset to Default</translation>
+      <translation>Сбросить по умолчанию</translation>
     </message>
   </context>
   <context>
     <name>GameCompatibility</name>
     <message>
       <source>Playable</source>
-      <translation type="unfinished">Playable</translation>
+      <translation>Играбельно</translation>
     </message>
     <message>
       <source>Games that can be run without any major issues</source>
-      <translation type="unfinished">Games that can be run without any major issues</translation>
+      <translation>Игры, которые можно запускать без каких-либо серьезных проблем.</translation>
     </message>
     <message>
       <source>Ingame</source>
-      <translation type="unfinished">Ingame</translation>
+      <translation>В игре</translation>
     </message>
     <message>
       <source>Games that can reach gameplay but have issues</source>
-      <translation type="unfinished">Games that can reach gameplay but have issues</translation>
+      <translation>Игры, которые могут обеспечить качественный геймплей, но имеют проблемы.</translation>
     </message>
     <message>
       <source>Menus</source>
-      <translation type="unfinished">Menus</translation>
+      <translation>В меню</translation>
     </message>
     <message>
       <source>Games that can reach the menu but freeze/crash when trying to proceed further</source>
-      <translation type="unfinished">Games that can reach the menu but freeze/crash when trying to proceed further</translation>
+      <translation>Игры, которые могут открыть меню, но зависают/вылетают при попытке продолжить.</translation>
     </message>
     <message>
       <source>Boots</source>
-      <translation type="unfinished">Boots</translation>
+      <translation>Запускается</translation>
     </message>
     <message>
       <source>Games that show any visual/audio output but freeze/crash before reaching the menu</source>
-      <translation type="unfinished">Games that show any visual/audio output but freeze/crash before reaching the menu</translation>
+      <translation>Игры, которые отображают какой-либо визуальный/звуковой вывод, но зависают/вылетают до того, как достигнут меню.</translation>
     </message>
     <message>
       <source>Nothing</source>
-      <translation type="unfinished">Nothing</translation>
+      <translation>Ничего</translation>
     </message>
     <message>
       <source>Games that crash when trying to launch or only show a black screen</source>
-      <translation type="unfinished">Games that crash when trying to launch or only show a black screen</translation>
+      <translation>Игры, которые вылетают при попытке запуска или показывают только черный экран.</translation>
     </message>
     <message>
       <source>No results found</source>
-      <translation type="unfinished">No results found</translation>
+      <translation>Результаты не найдены</translation>
     </message>
     <message>
       <source>There is no entry for this game or application in the compatibility database yet.</source>
-      <translation type="unfinished">There is no entry for this game or application in the compatibility database yet.</translation>
+      <translation>В базе данных совместимости пока нет информации об этой игре или приложении.</translation>
     </message>
     <message>
       <source>Database missing</source>
-      <translation type="unfinished">Database missing</translation>
+      <translation>База данных отсутствует</translation>
     </message>
     <message>
       <source>Retrieving...</source>
-      <translation type="unfinished">Retrieving...</translation>
+      <translation>Получение...</translation>
     </message>
     <message>
       <source>Downloading the compatibility database. Please wait...</source>
-      <translation type="unfinished">Downloading the compatibility database. Please wait...</translation>
+      <translation>Загрузка базы данных совместимости. Пожалуйста, подождите...</translation>
     </message>
     <message>
       <source>Downloading Compatibility Database</source>
-      <translation type="unfinished">Downloading Compatibility Database</translation>
+      <translation>Загрузка базы данных совместимости</translation>
     </message>
     <message>
       <source>Error Downloading Compatibility Database</source>
-      <translation type="unfinished">Error Downloading Compatibility Database</translation>
+      <translation>Ошибка при загрузке базы данных совместимости.</translation>
     </message>
     <message>
       <source>Right click here and choose Compatibility -&gt; Update Database.</source>
-      <translation type="unfinished">Right click here and choose Compatibility -&gt; Update Database.</translation>
+      <translation>Щелкните правой кнопкой мыши здесь и выберите Совместимость > Обновить базу данных.</translation>
     </message>
   </context>
   <context>
     <name>GameInstallDialog</name>
     <message>
       <source>shadLauncher4 - Choose directory</source>
-      <translation type="unfinished">shadLauncher4 - Choose directory</translation>
+      <translation>shadLauncher4 - Выберите каталог</translation>
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Каталог с вашими дампами игр</translation>
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Каталог для установки версий эмулятора</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Каталог с играми</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Обзор</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Ошибка</translation>
     </message>
     <message>
       <source>Directory with DLCs</source>
-      <translation type="unfinished">Directory with DLCs</translation>
+      <translation>Каталог с дополнениями (DLC)</translation>
     </message>
     <message>
       <source>Directory with your dumped DLCs</source>
-      <translation type="unfinished">Directory with your dumped DLCs</translation>
+      <translation>Каталог с вашими дампами DLC.</translation>
     </message>
     <message>
       <source>The chosen location for dumped games is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped games is not valid.</translation>
+      <translation>Выбранное место для сохранения дампов игр недействительно.</translation>
     </message>
     <message>
       <source>The chosen location for dumped DLCs is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped DLCs is not valid.</translation>
+      <translation>Выбранное место для сохранения DLC-файлов недопустимо.</translation>
     </message>
     <message>
       <source>The DLC dump location could not be created.</source>
-      <translation type="unfinished">The DLC dump location could not be created.</translation>
+      <translation>Не удалось создать папку для сохранения дампа DLC.</translation>
     </message>
     <message>
       <source>The location for installing emulator versions is not valid.</source>
-      <translation type="unfinished">The location for installing emulator versions is not valid.</translation>
+      <translation>Место для установки версий эмулятора указано неверно.</translation>
     </message>
     <message>
       <source>The emulator version location could not be created.</source>
-      <translation type="unfinished">The emulator version location could not be created.</translation>
+      <translation>Не удалось создать местоположение для версии эмулятора.</translation>
     </message>
   </context>
   <context>
     <name>GameListFrame</name>
     <message>
       <source>Game List</source>
-      <translation type="unfinished">Game List</translation>
+      <translation>Список игр</translation>
     </message>
     <message>
       <source>Icon</source>
-      <translation type="unfinished">Icon</translation>
+      <translation>Иконка</translation>
     </message>
     <message>
       <source>Show Icons</source>
-      <translation type="unfinished">Show Icons</translation>
+      <translation>Показывать иконки</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Название</translation>
     </message>
     <message>
       <source>Show Names</source>
-      <translation type="unfinished">Show Names</translation>
+      <translation>Показывать названия</translation>
     </message>
     <message>
       <source>Compatibility</source>
-      <translation type="unfinished">Compatibility</translation>
+      <translation>Совместимость</translation>
     </message>
     <message>
       <source>Show Compatibility</source>
-      <translation type="unfinished">Show Compatibility</translation>
+      <translation>Показывать совместимость</translation>
     </message>
     <message>
       <source>Serial</source>
-      <translation type="unfinished">Serial</translation>
+      <translation>Серийный номер</translation>
     </message>
     <message>
       <source>Show Serials</source>
-      <translation type="unfinished">Show Serials</translation>
+      <translation>Показывать серийный номер</translation>
     </message>
     <message>
       <source>Region</source>
-      <translation type="unfinished">Region</translation>
+      <translation>Регион</translation>
     </message>
     <message>
       <source>Show Regions</source>
-      <translation type="unfinished">Show Regions</translation>
+      <translation>Показывать регион</translation>
     </message>
     <message>
       <source>Firmware</source>
-      <translation type="unfinished">Firmware</translation>
+      <translation>Прошивка</translation>
     </message>
     <message>
       <source>Show Firmwares</source>
-      <translation type="unfinished">Show Firmwares</translation>
+      <translation>Показывать прошивку</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Версия</translation>
     </message>
     <message>
       <source>Show Versions</source>
-      <translation type="unfinished">Show Versions</translation>
+      <translation>Показывать версию</translation>
     </message>
     <message>
       <source>Last Played</source>
-      <translation type="unfinished">Last Played</translation>
+      <translation>Последний запуск</translation>
     </message>
     <message>
       <source>Show Last Played</source>
-      <translation type="unfinished">Show Last Played</translation>
+      <translation>Показывать последний запуск</translation>
     </message>
     <message>
       <source>Time Played</source>
-      <translation type="unfinished">Time Played</translation>
+      <translation>Время в игре</translation>
     </message>
     <message>
       <source>Show Time Played</source>
-      <translation type="unfinished">Show Time Played</translation>
+      <translation>Показывать время в игре</translation>
     </message>
     <message>
       <source>Space On Disk</source>
-      <translation type="unfinished">Space On Disk</translation>
+      <translation>Место на диске</translation>
     </message>
     <message>
       <source>Show Space On Disk</source>
-      <translation type="unfinished">Show Space On Disk</translation>
+      <translation>Показывать место на диске</translation>
     </message>
     <message>
       <source>Path</source>
-      <translation type="unfinished">Path</translation>
+      <translation>Путь</translation>
     </message>
     <message>
       <source>Show Paths</source>
-      <translation type="unfinished">Show Paths</translation>
+      <translation>Показывать путь</translation>
     </message>
     <message>
       <source>Loading games</source>
-      <translation type="unfinished">Loading games</translation>
+      <translation>Загрузка игр</translation>
     </message>
     <message>
       <source>Loading games, please wait...</source>
-      <translation type="unfinished">Loading games, please wait...</translation>
+      <translation>Загрузка игр, пожалуйста, подождите...</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Отмена</translation>
     </message>
     <message>
       <source>&amp;View Changelog</source>
-      <translation type="unfinished">&amp;View Changelog</translation>
+      <translation>&amp;Просмотреть журнал изменений</translation>
     </message>
     <message>
       <source>&amp;Copy Info</source>
-      <translation type="unfinished">&amp;Copy Info</translation>
+      <translation>&amp;Копировать информацию</translation>
     </message>
     <message>
       <source>&amp;Copy Name + Serial</source>
-      <translation type="unfinished">&amp;Copy Name + Serial</translation>
+      <translation>&amp;Копировать название + серийный номер</translation>
     </message>
     <message>
       <source>&amp;Copy Name</source>
-      <translation type="unfinished">&amp;Copy Name</translation>
+      <translation>&amp;Копировать название</translation>
     </message>
     <message>
       <source>&amp;Copy Serial</source>
-      <translation type="unfinished">&amp;Copy Serial</translation>
+      <translation>&amp;Копировать серийный номер</translation>
     </message>
     <message>
       <source>&amp;Compatibility</source>
-      <translation type="unfinished">&amp;Compatibility</translation>
+      <translation>&amp;Совместимость</translation>
     </message>
     <message>
       <source>&amp;View Report</source>
-      <translation type="unfinished">&amp;View Report</translation>
+      <translation>&amp;Просмотреть отчет</translation>
     </message>
     <message>
       <source>&amp;Submit Report</source>
-      <translation type="unfinished">&amp;Submit Report</translation>
+      <translation>&amp;Отправить отчет</translation>
     </message>
     <message>
       <source>&amp;Update Database</source>
-      <translation type="unfinished">&amp;Update Database</translation>
+      <translation>&amp;Обновить базу данных</translation>
     </message>
     <message>
       <source>&amp;Manage Game</source>
-      <translation type="unfinished">&amp;Manage Game</translation>
+      <translation>&amp;Управление игрой</translation>
     </message>
     <message>
       <source>&amp;Hide From Game List</source>
-      <translation type="unfinished">&amp;Hide From Game List</translation>
+      <translation>&amp;Скрыть из списка игр</translation>
     </message>
     <message>
       <source>&amp;Add/Edit Tooltip Notes</source>
-      <translation type="unfinished">&amp;Add/Edit Tooltip Notes</translation>
+      <translation>Добавить/изменить примечания к всплывающей подсказке</translation>
     </message>
     <message>
       <source>Edit Tooltip Notes</source>
-      <translation type="unfinished">Edit Tooltip Notes</translation>
+      <translation>Редактировать примечания к всплывающей подсказке</translation>
     </message>
     <message>
       <source>Warning!</source>
-      <translation type="unfinished">Warning!</translation>
+      <translation>Предупреждение!</translation>
     </message>
     <message>
       <source>Failed to retrieve the online compatibility database!
 Using local database.
 
 %0</source>
-      <translation type="unfinished">Failed to retrieve the online compatibility database!
-Using local database.
+      <translation>Не удалось получить доступ к онлайн-базе данных совместимости!
+Используется локальная база данных.
 
 %0</translation>
     </message>
     <message>
       <source>No Report Available</source>
-      <translation type="unfinished">No Report Available</translation>
+      <translation>Отчет недоступен</translation>
     </message>
     <message>
       <source>There is no compatibility report available for this game.</source>
-      <translation type="unfinished">There is no compatibility report available for this game.</translation>
+      <translation>Для этой игры нет доступных отчетов о совместимости.</translation>
     </message>
     <message>
       <source>&amp;Open Folder</source>
-      <translation type="unfinished">&amp;Open Folder</translation>
+      <translation>&amp;Открыть папку</translation>
     </message>
     <message>
       <source>&amp;Open Game Folder</source>
-      <translation type="unfinished">&amp;Open Game Folder</translation>
+      <translation>&amp;Открыть папку с игрой</translation>
     </message>
     <message>
       <source>&amp;Open Update Folder</source>
-      <translation type="unfinished">&amp;Open Update Folder</translation>
+      <translation>&amp;Открыть папку обновления</translation>
     </message>
     <message>
       <source>&amp;Open Log Folder</source>
-      <translation type="unfinished">&amp;Open Log Folder</translation>
+      <translation>&amp;Открыть папку журнала</translation>
     </message>
     <message>
       <source>Log Not Found</source>
-      <translation type="unfinished">Log Not Found</translation>
+      <translation>Журнал не найден</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
-      <translation type="unfinished">No log file found for this game!</translation>
+      <translation>Файл журнала для этой игры не найден!</translation>
     </message>
     <message>
       <source>Open Log Folder</source>
-      <translation type="unfinished">Open Log Folder</translation>
+      <translation>Открыть папку с журналами</translation>
     </message>
     <message>
       <source>&amp;SFO viewer</source>
-      <translation type="unfinished">&amp;SFO viewer</translation>
+      <translation>&amp;Просмотр SFO</translation>
     </message>
     <message>
       <source>&amp;npbind.dat viewer</source>
-      <translation type="unfinished">&amp;npbind.dat viewer</translation>
+      <translation>&amp;Просмотр npbind.dat</translation>
     </message>
     <message>
       <source>&amp;Trophy Viewer</source>
-      <translation type="unfinished">&amp;Trophy Viewer</translation>
+      <translation>&amp;Просмотр трофеев</translation>
     </message>
     <message>
       <source>&amp;Cheats &amp; Patches</source>
-      <translation type="unfinished">&amp;Cheats &amp; Patches</translation>
+      <translation>&amp;Читы и патчи</translation>
     </message>
     <message>
       <source>Game</source>
-      <translation type="unfinished">Game</translation>
+      <translation>Игра</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Ошибка</translation>
     </message>
     <message>
       <source>This game has no update to delete!</source>
-      <translation type="unfinished">This game has no update to delete!</translation>
+      <translation>У этой игры нет обновлений, которые можно было бы удалить!</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Обновление</translation>
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation type="unfinished">This game has no DLC to delete!</translation>
+      <translation>У этой игры нет DLC, которые можно было бы удалить!</translation>
     </message>
     <message>
       <source>DLC</source>
-      <translation type="unfinished">DLC</translation>
+      <translation>DLC</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
-      <translation type="unfinished">This game has no save data to delete!</translation>
+      <translation>У этой игры нет сохранений, которые можно было бы удалить!</translation>
     </message>
     <message>
       <source>Save Data</source>
-      <translation type="unfinished">Save Data</translation>
+      <translation>Сохранения</translation>
     </message>
     <message>
       <source>This game has no Shader Cache to delete!</source>
-      <translation type="unfinished">This game has no Shader Cache to delete!</translation>
+      <translation>У этой игры нет кэша шейдеров, который нужно удалять!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Кэш шейдеров</translation>
     </message>
     <message>
       <source>Shader cache deleted successfully.</source>
-      <translation type="unfinished">Shader cache deleted successfully.</translation>
+      <translation>Кэш шейдеров успешно удалён.</translation>
     </message>
     <message>
       <source>Delete %1</source>
-      <translation type="unfinished">Delete %1</translation>
+      <translation>Удалить %1</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s %2 directory?</translation>
+      <translation>Вы уверены, что хотите удалить каталог %1 %2?</translation>
     </message>
     <message>
       <source>&amp;Delete...</source>
-      <translation type="unfinished">&amp;Delete...</translation>
+      <translation>&amp;Удалить...</translation>
     </message>
     <message>
       <source>&amp;Delete Game</source>
-      <translation type="unfinished">&amp;Delete Game</translation>
+      <translation>&amp;Удалить игру</translation>
     </message>
     <message>
       <source>&amp;Delete Update</source>
-      <translation type="unfinished">&amp;Delete Update</translation>
+      <translation>&amp;Удалить обновление</translation>
     </message>
     <message>
       <source>&amp;Delete Save Data</source>
-      <translation type="unfinished">&amp;Delete Save Data</translation>
+      <translation>&amp;Удалить Сохранения</translation>
     </message>
     <message>
       <source>&amp;Delete DLC </source>
-      <translation type="unfinished">&amp;Delete DLC </translation>
+      <translation>&amp;Удалить DLC</translation>
     </message>
     <message>
       <source>&amp;Delete Trophy</source>
-      <translation type="unfinished">&amp;Delete Trophy</translation>
+      <translation>&amp;Удалить трофеи</translation>
     </message>
     <message>
       <source>&amp;Delete Shader Cache</source>
-      <translation type="unfinished">&amp;Delete Shader Cache</translation>
+      <translation>&amp;Удалить кэш шейдеров</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Журнал игры</translation>
     </message>
     <message>
       <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
-      <translation type="unfinished">The log is invalid, it either doesn&apos;t exist or log filters were used.</translation>
+      <translation>Журнал недействителен: либо он не существует, либо были использованы фильтры журнала.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Не удалось отправить отчет, поскольку последний лог игры не прошел следующую проверку и, следовательно, является недействительным отчетом:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Ок</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Информация</translation>
     </message>
     <message>
       <source>&amp;Change Custom Configuration</source>
-      <translation type="unfinished">&amp;Change Custom Configuration</translation>
+      <translation>&amp;Изменить индивидуальную конфигурацию</translation>
     </message>
     <message>
       <source>&amp;Create Custom Configuration From Global Settings</source>
-      <translation type="unfinished">&amp;Create Custom Configuration From Global Settings</translation>
+      <translation>&amp;Создать индивидуальную конфигурацию из глобальных настроек</translation>
     </message>
     <message>
       <source>&amp;Remove Custom Configuration</source>
-      <translation type="unfinished">&amp;Remove Custom Configuration</translation>
+      <translation>&amp;Удалить индивидуальную конфигурацию</translation>
     </message>
     <message>
       <source>&amp;Create Desktop Shortcut</source>
-      <translation type="unfinished">&amp;Create Desktop Shortcut</translation>
+      <translation>&amp;Создать ярлык на рабочем столе</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Версия не выбрана</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Сначала выберите версию</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Создание ярлыка</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Ярлык успешно создан!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Ошибка при создании ярлыка!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Не удалось преобразовать иконку.</translation>
     </message>
     <message>
       <source>&amp;Launch game</source>
-      <translation type="unfinished">&amp;Launch game</translation>
+      <translation>&amp;Запустить игру</translation>
     </message>
     <message>
       <source>&amp;Launch game with current settings</source>
-      <translation type="unfinished">&amp;Launch game with current settings</translation>
+      <translation>Запустить игру с текущими настройками</translation>
     </message>
     <message>
       <source>&amp;Launch game with default settings</source>
-      <translation type="unfinished">&amp;Launch game with default settings</translation>
+      <translation>Запустить игру с настройками по умолчанию</translation>
     </message>
     <message>
       <source>&amp;Launch game with global settings</source>
-      <translation type="unfinished">&amp;Launch game with global settings</translation>
+      <translation>Запустить игру с глобальными настройками</translation>
     </message>
   </context>
   <context>
     <name>GameListGrid</name>
     <message>
       <source>Notes:</source>
-      <translation type="unfinished">Notes:</translation>
+      <translation>Примечания:</translation>
     </message>
   </context>
   <context>
     <name>GameListTable</name>
     <message>
       <source>Unknown</source>
-      <translation type="unfinished">Unknown</translation>
+      <translation>Неизвестно</translation>
     </message>
     <message>
       <source>Never played</source>
-      <translation type="unfinished">Never played</translation>
+      <translation>Нет</translation>
     </message>
     <message>
       <source>Japan</source>
-      <translation type="unfinished">Japan</translation>
+      <translation>Япония</translation>
     </message>
     <message>
       <source>Europe</source>
-      <translation type="unfinished">Europe</translation>
+      <translation>Европа</translation>
     </message>
     <message>
       <source>USA</source>
-      <translation type="unfinished">USA</translation>
+      <translation>США</translation>
     </message>
     <message>
       <source>Asia</source>
-      <translation type="unfinished">Asia</translation>
+      <translation>Азия</translation>
     </message>
     <message>
       <source>World</source>
-      <translation type="unfinished">World</translation>
+      <translation>Мир</translation>
     </message>
     <message>
       <source>Last updated</source>
-      <translation type="unfinished">Last updated</translation>
+      <translation>Последнее обновление</translation>
     </message>
     <message>
       <source>Notes:</source>
-      <translation type="unfinished">Notes:</translation>
+      <translation>Примечания:</translation>
     </message>
   </context>
   <context>
     <name>HelpDialog</name>
     <message>
       <source>Quickstart</source>
-      <translation type="unfinished">Quickstart</translation>
+      <translation>Быстрый старт</translation>
     </message>
     <message>
       <source>Syntax</source>
-      <translation type="unfinished">Syntax</translation>
+      <translation>Синтаксис</translation>
     </message>
     <message>
       <source>Keybindings</source>
-      <translation type="unfinished">Keybindings</translation>
+      <translation>Назначение клавиш</translation>
     </message>
     <message>
       <source>Special Bindings</source>
-      <translation type="unfinished">Special Bindings</translation>
+      <translation>Особые назначения</translation>
     </message>
     <message>
       <source>FAQ</source>
-      <translation type="unfinished">FAQ</translation>
+      <translation>Часто задаваемые вопросы</translation>
     </message>
   </context>
   <context>
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation type="unfinished">Customize Hotkeys</translation>
+      <translation>Настройка горячих клавиш</translation>
     </message>
     <message>
       <source>Controller Hotkeys</source>
-      <translation type="unfinished">Controller Hotkeys</translation>
+      <translation>Горячие клавиши контроллера</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
-      <translation type="unfinished">Show FPS Counter</translation>
+      <translation>Показать счетчик FPS</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>не назначено</translation>
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation type="unfinished">Quit Emulation</translation>
+      <translation>Завершить эмуляцию</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>Перезагрузить назначения клавиш</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
-      <translation type="unfinished">Toggle Fullscreen</translation>
+      <translation>Переключить полноэкранный режим</translation>
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation type="unfinished">Toggle Pause</translation>
+      <translation>Переключить паузу</translation>
     </message>
     <message>
       <source>Keyboard Hotkeys</source>
-      <translation type="unfinished">Keyboard Hotkeys</translation>
+      <translation>Горячие клавиши клавиатуры</translation>
     </message>
     <message>
       <source>Renderdoc Capture (for debugging only)</source>
-      <translation type="unfinished">Renderdoc Capture (for debugging only)</translation>
+      <translation>Захват Renderdoc (только для отладки)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>Переключить мышь в эмуляцию джойстика</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>Переключить мышь в эмуляцию гироскопа</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation type="unfinished">Tip: Up to three simultaneous inputs can be assigned for each hotkey</translation>
+      <translation>Подсказка: для каждой горячей клавиши может быть назначено до трёх одновременных вводов</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Подсказка: Отмените назначение кнопок ввода щелчком правой кнопкой мыши</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Сохранить</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Применить</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Отмена</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>По умолчанию</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Не удаётся сохранить</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Невозможно привязать уникальный ввод более одного раза. Дублированные вводы назначены на следующие кнопки:
 
 %1</translation>
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation type="unfinished">Waiting for inputs</translation>
+      <translation>Ожидание ввода</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Увеличить громкость</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Уменьшить громкость</translation>
     </message>
   </context>
   <context>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Не удалось найти исполняемый файл эмулятора</translation>
     </message>
   </context>
   <context>
     <name>KBMSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation type="unfinished">Configure Controls</translation>
+      <translation>Настроить управление</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>Крестовина</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Вверх</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>не назначено</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Влево</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Вправо</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>Вниз</translation>
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation type="unfinished">Left Analog Halfmode</translation>
+      <translation>Левый стик вполовину</translation>
     </message>
     <message>
       <source>hold to move left stick at half-speed</source>
-      <translation type="unfinished">hold to move left stick at half-speed</translation>
+      <translation>удерживайте для перемещения левого стика вполовину меньше</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Левый стик</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>Выбор конфигурации</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>Общая конфигурация</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation type="unfinished">Use per-game configs</translation>
+      <translation>Использовать настройки для каждой игры</translation>
     </message>
     <message>
       <source>Copy from Common Config</source>
-      <translation type="unfinished">Copy from Common Config</translation>
+      <translation>Скопировать из общей конфигурации</translation>
     </message>
     <message>
       <source>Text Editor</source>
-      <translation type="unfinished">Text Editor</translation>
+      <translation>Текстовый редактор</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Помощь</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>Options</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Тачпад слева</translation>
     </message>
     <message>
       <source>Mouse to Joystick</source>
-      <translation type="unfinished">Mouse to Joystick</translation>
+      <translation>Мышь в джойстик</translation>
     </message>
     <message>
       <source>*press F7 ingame to activate</source>
-      <translation type="unfinished">*press F7 ingame to activate</translation>
+      <translation>*нажмите F7 в игре для активации</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Тачпад центр</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Тачпад справа</translation>
     </message>
     <message>
       <source>Mouse Movement Parameters</source>
-      <translation type="unfinished">Mouse Movement Parameters</translation>
+      <translation>Параметры движения мыши</translation>
     </message>
     <message>
       <source>Deadzone Offset (def 0.50):</source>
-      <translation type="unfinished">Deadzone Offset (def 0.50):</translation>
+      <translation>Смещение мёртвой зоны (по умолч 0.50)</translation>
     </message>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
-      <translation type="unfinished">Speed Multiplier (def 1.0):</translation>
+      <translation>Множитель скорости (по умолч 1.0)</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
-      <translation type="unfinished">Speed Offset (def 0.125):</translation>
+      <translation>Смещение скорости (по умолч 0.125):</translation>
     </message>
     <message>
       <source>note: click Help Button/Special Keybindings for more information</source>
-      <translation type="unfinished">note: click Help Button/Special Keybindings for more information</translation>
+      <translation>примечание: нажмите кнопку Помощь/Особые назначения для получения дополнительной информации</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>Кнопки действий</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Треугольник</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>Квадрат</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>Круг</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>Крест</translation>
     </message>
     <message>
       <source>Right Analog Halfmode</source>
-      <translation type="unfinished">Right Analog Halfmode</translation>
+      <translation>Правый стик вполовину</translation>
     </message>
     <message>
       <source>hold to move right stick at half-speed</source>
-      <translation type="unfinished">hold to move right stick at half-speed</translation>
+      <translation>удерживайте для перемещения правого стика вполовину меньше</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>Правый стик</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Подсказка: Отмените назначение кнопок ввода щелчком правой кнопкой мыши</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Сохранить</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Применить</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>По умолчанию</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Отмена</translation>
     </message>
     <message>
       <source>Common Config Selected</source>
-      <translation type="unfinished">Common Config Selected</translation>
+      <translation>Выбрана общая конфигурация</translation>
     </message>
     <message>
       <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation type="unfinished">This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</translation>
+      <translation>Эта кнопка копирует настройки из общей конфигурации в текущий выбранный профиль и не может быть использована, если текущий выбранный профиль - это общая конфигурация.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
-      <translation type="unfinished">Copy values from Common Config</translation>
+      <translation>Копировать значения из общей конфигурации</translation>
     </message>
     <message>
       <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
-      <translation type="unfinished">Do you want to overwrite existing mappings with the mappings from the Common Config?</translation>
+      <translation>Вы хотите перезаписать существующие настройки настройками из общей конфигурации?</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Не удаётся сохранить</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Невозможно привязать уникальный ввод более одного раза. Дублированные вводы назначены на следующие кнопки:
 
 %1</translation>
     </message>
     <message>
       <source>Press a key</source>
-      <translation type="unfinished">Press a key</translation>
+      <translation>Нажмите кнопку</translation>
     </message>
     <message>
       <source>Cannot set mapping</source>
-      <translation type="unfinished">Cannot set mapping</translation>
+      <translation>Не удаётся задать настройки</translation>
     </message>
     <message>
       <source>Mousewheel cannot be mapped to stick outputs</source>
-      <translation type="unfinished">Mousewheel cannot be mapped to stick outputs</translation>
+      <translation>Колесо не может быть назначено для вывода стиков</translation>
     </message>
   </context>
   <context>
@@ -1788,7 +1786,7 @@ Using local database.
     <message numerus="yes">
       <source>%Ln hour(s)</source>
       <translation type="unfinished">
-        <numerusform>%Ln hour(s)</numerusform>
+        <numerusform>%Ln дн</numerusform>
         <numerusform>%Ln hour(s)</numerusform>
         <numerusform>%Ln hour(s)</numerusform>
         <numerusform>%Ln hour(s)</numerusform>
@@ -1797,7 +1795,7 @@ Using local database.
     <message numerus="yes">
       <source>%Ln minute(s)</source>
       <translation type="unfinished">
-        <numerusform>%Ln minute(s)</numerusform>
+        <numerusform>%Ln мин</numerusform>
         <numerusform>%Ln minute(s)</numerusform>
         <numerusform>%Ln minute(s)</numerusform>
         <numerusform>%Ln minute(s)</numerusform>
@@ -1806,7 +1804,7 @@ Using local database.
     <message numerus="yes">
       <source>%Ln second(s)</source>
       <translation type="unfinished">
-        <numerusform>%Ln second(s)</numerusform>
+        <numerusform>%Ln сек</numerusform>
         <numerusform>%Ln second(s)</numerusform>
         <numerusform>%Ln second(s)</numerusform>
         <numerusform>%Ln second(s)</numerusform>
@@ -1815,538 +1813,538 @@ Using local database.
     <message>
       <source>%0 and %1</source>
       <comment>Days and hours</comment>
-      <translation type="unfinished">%0 and %1</translation>
+      <translation>%0 и %1</translation>
     </message>
     <message>
       <source>%0 and %1</source>
       <comment>Hours and minutes</comment>
-      <translation type="unfinished">%0 and %1</translation>
+      <translation>%0 и %1</translation>
     </message>
     <message>
       <source>%0 and %1</source>
       <comment>Minutes and seconds</comment>
-      <translation type="unfinished">%0 and %1</translation>
+      <translation>%0 и %1</translation>
     </message>
   </context>
   <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation type="unfinished">Log Filter Presets</translation>
+      <translation>Пресеты фильтра логов</translation>
     </message>
     <message>
       <source>Comment</source>
-      <translation type="unfinished">Comment</translation>
+      <translation>Комментарий</translation>
     </message>
     <message>
       <source>Filter</source>
-      <translation type="unfinished">Filter</translation>
+      <translation>Фильтр</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Загрузить</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Закрыть</translation>
     </message>
     <message>
       <source>Add a new preset after the selected row</source>
-      <translation type="unfinished">Add a new preset after the selected row</translation>
+      <translation>Добавить новый пресет после выбранной строки</translation>
     </message>
     <message>
       <source>Remove selected presets</source>
-      <translation type="unfinished">Remove selected presets</translation>
+      <translation>Удалить выбранный пресет</translation>
     </message>
     <message>
       <source>Load the selected preset</source>
-      <translation type="unfinished">Load the selected preset</translation>
+      <translation>Загрузить выбранный пресет</translation>
     </message>
   </context>
   <context>
     <name>MainWindow</name>
     <message>
       <source>Search...</source>
-      <translation type="unfinished">Search...</translation>
+      <translation>Поиск...</translation>
     </message>
     <message>
       <source>File</source>
-      <translation type="unfinished">File</translation>
+      <translation>Файл</translation>
     </message>
     <message>
       <source>Emulation</source>
-      <translation type="unfinished">Emulation</translation>
+      <translation>Эмуляция</translation>
     </message>
     <message>
       <source>Configuration</source>
-      <translation type="unfinished">Configuration</translation>
+      <translation>Конфигурация</translation>
     </message>
     <message>
       <source>Manage</source>
-      <translation type="unfinished">Manage</translation>
+      <translation>Управление</translation>
     </message>
     <message>
       <source>Utilities</source>
-      <translation type="unfinished">Utilities</translation>
+      <translation>Утилиты</translation>
     </message>
     <message>
       <source>View</source>
-      <translation type="unfinished">View</translation>
+      <translation>Вид</translation>
     </message>
     <message>
       <source>Game List Icons</source>
-      <translation type="unfinished">Game List Icons</translation>
+      <translation>Размер иконок списка игр</translation>
     </message>
     <message>
       <source>Game List Mode</source>
-      <translation type="unfinished">Game List Mode</translation>
+      <translation>Вид списка игр</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Помощь</translation>
     </message>
     <message>
       <source>Language</source>
-      <translation type="unfinished">Language</translation>
+      <translation>Язык</translation>
     </message>
     <message>
       <source>Show tool bar</source>
-      <translation type="unfinished">Show tool bar</translation>
+      <translation>Показывать панель инструментов</translation>
     </message>
     <message>
       <source>Pause</source>
-      <translation type="unfinished">Pause</translation>
+      <translation>Пауза</translation>
     </message>
     <message>
       <source>Start emulation</source>
-      <translation type="unfinished">Start emulation</translation>
+      <translation>Запустить эмуляцию</translation>
     </message>
     <message>
       <source>Stop</source>
-      <translation type="unfinished">Stop</translation>
+      <translation>Стоп</translation>
     </message>
     <message>
       <source>Stop emulation</source>
-      <translation type="unfinished">Stop emulation</translation>
+      <translation>Остановить эмуляцию</translation>
     </message>
     <message>
       <source>GUI</source>
-      <translation type="unfinished">GUI</translation>
+      <translation>Интерфейс</translation>
     </message>
     <message>
       <source>Configure GUI settings</source>
-      <translation type="unfinished">Configure GUI settings</translation>
+      <translation>Настройка параметров графического интерфейса пользователя</translation>
     </message>
     <message>
       <source>Exit</source>
-      <translation type="unfinished">Exit</translation>
+      <translation>Выход</translation>
     </message>
     <message>
       <source>Exit the application.</source>
-      <translation type="unfinished">Exit the application.</translation>
+      <translation>Выйти из приложения.</translation>
     </message>
     <message>
       <source>User Accounts</source>
-      <translation type="unfinished">User Accounts</translation>
+      <translation>Учетные записи пользователей</translation>
     </message>
     <message>
       <source>Manage user accounts</source>
-      <translation type="unfinished">Manage user accounts</translation>
+      <translation>Управление учетными записями пользователей</translation>
     </message>
     <message>
       <source>Show Game List</source>
-      <translation type="unfinished">Show Game List</translation>
+      <translation>Показывать список игр</translation>
     </message>
     <message>
       <source>Show Tool Bar</source>
-      <translation type="unfinished">Show Tool Bar</translation>
+      <translation>Показывать панель инструментов</translation>
     </message>
     <message>
       <source>Show Game Compatibility in Grid Mode</source>
-      <translation type="unfinished">Show Game Compatibility in Grid Mode</translation>
+      <translation>Показывать совместимость игр в режиме сетки</translation>
     </message>
     <message>
       <source>Game List Refresh</source>
-      <translation type="unfinished">Game List Refresh</translation>
+      <translation>Обновить список игр</translation>
     </message>
     <message>
       <source>Tiny</source>
-      <translation type="unfinished">Tiny</translation>
+      <translation>Крошечный</translation>
     </message>
     <message>
       <source>Small</source>
-      <translation type="unfinished">Small</translation>
+      <translation>Маленький</translation>
     </message>
     <message>
       <source>Medium</source>
-      <translation type="unfinished">Medium</translation>
+      <translation>Средний</translation>
     </message>
     <message>
       <source>Large</source>
-      <translation type="unfinished">Large</translation>
+      <translation>Большой</translation>
     </message>
     <message>
       <source>List View</source>
-      <translation type="unfinished">List View</translation>
+      <translation>Список</translation>
     </message>
     <message>
       <source>Grid View</source>
-      <translation type="unfinished">Grid View</translation>
+      <translation>Сетка</translation>
     </message>
     <message>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>Перезапустить</translation>
     </message>
     <message>
       <source>Start</source>
-      <translation type="unfinished">Start</translation>
+      <translation>Старт</translation>
     </message>
     <message>
       <source>Settings</source>
-      <translation type="unfinished">Settings</translation>
+      <translation>Настройки</translation>
     </message>
     <message>
       <source>Configure the emulator</source>
-      <translation type="unfinished">Configure the emulator</translation>
+      <translation>Настройка эмулятора</translation>
     </message>
     <message>
       <source>Controllers</source>
-      <translation type="unfinished">Controllers</translation>
+      <translation>Контроллеры</translation>
     </message>
     <message>
       <source>Configure controls</source>
-      <translation type="unfinished">Configure controls</translation>
+      <translation>Настройка элементов управления</translation>
     </message>
     <message>
       <source>Full Screen</source>
-      <translation type="unfinished">Full Screen</translation>
+      <translation>Полный экран</translation>
     </message>
     <message>
       <source>Toggle fullscreen</source>
-      <translation type="unfinished">Toggle fullscreen</translation>
+      <translation>Переключить полноэкранный режим</translation>
     </message>
     <message>
       <source>List</source>
-      <translation type="unfinished">List</translation>
+      <translation>Список</translation>
     </message>
     <message>
       <source>Switch to list mode</source>
-      <translation type="unfinished">Switch to list mode</translation>
+      <translation>Переключиться в режим списка</translation>
     </message>
     <message>
       <source>Grid</source>
-      <translation type="unfinished">Grid</translation>
+      <translation>Сетка</translation>
     </message>
     <message>
       <source>Switch to grid mode</source>
-      <translation type="unfinished">Switch to grid mode</translation>
+      <translation>Переключиться в режим сетки</translation>
     </message>
     <message>
       <source>Refresh</source>
-      <translation type="unfinished">Refresh</translation>
+      <translation>Обновить</translation>
     </message>
     <message>
       <source>Refresh gamelist</source>
-      <translation type="unfinished">Refresh gamelist</translation>
+      <translation>Обновить список игр</translation>
     </message>
     <message>
       <source>Show Hidden Entries</source>
-      <translation type="unfinished">Show Hidden Entries</translation>
+      <translation>Показать скрытые записи</translation>
     </message>
     <message>
       <source>Show Title Bars</source>
-      <translation type="unfinished">Show Title Bars</translation>
+      <translation>Показать заголовки</translation>
     </message>
     <message>
       <source>English</source>
-      <translation type="unfinished">English</translation>
+      <translation>Английский</translation>
     </message>
     <message>
       <source>Show Custom Icons</source>
-      <translation type="unfinished">Show Custom Icons</translation>
+      <translation>Показать пользовательские иконки</translation>
     </message>
     <message>
       <source>Play Hover Gifs</source>
-      <translation type="unfinished">Play Hover Gifs</translation>
+      <translation>Воспроизвести GIF-анимацию при наведении курсора</translation>
     </message>
     <message>
       <source>Prefer Game Data Icons</source>
-      <translation type="unfinished">Prefer Game Data Icons</translation>
+      <translation>Предпочтение иконкам игр</translation>
     </message>
     <message>
       <source>shadLauncher4</source>
-      <translation type="unfinished">shadLauncher4</translation>
+      <translation>shadLauncher4</translation>
     </message>
     <message>
       <source>Exit shadLauncher4</source>
-      <translation type="unfinished">Exit shadLauncher4</translation>
+      <translation>Выйти из shadLauncher4</translation>
     </message>
     <message>
       <source>About shadLauncher4</source>
-      <translation type="unfinished">About shadLauncher4</translation>
+      <translation>О shadLauncher4</translation>
     </message>
     <message>
       <source>Export GameList</source>
-      <translation type="unfinished">Export GameList</translation>
+      <translation>Экспорт списка игр</translation>
     </message>
     <message>
       <source>General</source>
-      <translation type="unfinished">General</translation>
+      <translation>Общее</translation>
     </message>
     <message>
       <source>Graphics</source>
-      <translation type="unfinished">Graphics</translation>
+      <translation>Графика</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>Ввод</translation>
     </message>
     <message>
       <source>Paths</source>
-      <translation type="unfinished">Paths</translation>
+      <translation>Пути</translation>
     </message>
     <message>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Отладка</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>Экспериментальное</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Лог</translation>
     </message>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Менеджер криптоключей</translation>
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Менеджер версий</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Нет</translation>
     </message>
     <message>
       <source>Install Packages (PKG)</source>
-      <translation type="unfinished">Install Packages (PKG)</translation>
+      <translation>Установка пакетов (PKG)</translation>
     </message>
     <message>
       <source>Install application from a .pkg file</source>
-      <translation type="unfinished">Install application from a .pkg file</translation>
+      <translation>Установка приложения из файла .pkg.</translation>
     </message>
     <message>
       <source>PKG File (*.PKG *.pkg)</source>
-      <translation type="unfinished">PKG File (*.PKG *.pkg)</translation>
+      <translation>Файл PKG (*.PKG *.pkg)</translation>
     </message>
     <message>
       <source>PKG ERROR</source>
-      <translation type="unfinished">PKG ERROR</translation>
+      <translation>ОШИБКА PKG</translation>
     </message>
     <message>
       <source>PKG Extraction</source>
-      <translation type="unfinished">PKG Extraction</translation>
+      <translation>Извлечение PKG</translation>
     </message>
     <message>
       <source>Patch detected!</source>
-      <translation type="unfinished">Patch detected!</translation>
+      <translation>Обнаружен патч!</translation>
     </message>
     <message>
       <source>PKG and Game versions match: </source>
-      <translation type="unfinished">PKG and Game versions match: </translation>
+      <translation>Версии PKG и игры совпадают:</translation>
     </message>
     <message>
       <source>Would you like to overwrite?</source>
-      <translation type="unfinished">Would you like to overwrite?</translation>
+      <translation>Вы хотите перезаписать данные?</translation>
     </message>
     <message>
       <source>PKG Version %1 is older than installed version: </source>
-      <translation type="unfinished">PKG Version %1 is older than installed version: </translation>
+      <translation>Версия PKG %1 старше установленной версии:</translation>
     </message>
     <message>
       <source>Game is installed: </source>
-      <translation type="unfinished">Game is installed: </translation>
+      <translation>Игра установлена:</translation>
     </message>
     <message>
       <source>Would you like to install Patch: </source>
-      <translation type="unfinished">Would you like to install Patch: </translation>
+      <translation>Хотите установить патч?</translation>
     </message>
     <message>
       <source>DLC Installation</source>
-      <translation type="unfinished">DLC Installation</translation>
+      <translation>Установка DLC</translation>
     </message>
     <message>
       <source>Would you like to install DLC: %1?</source>
-      <translation type="unfinished">Would you like to install DLC: %1?</translation>
+      <translation>Хотите установить DLC: %1?</translation>
     </message>
     <message>
       <source>DLC already installed:</source>
-      <translation type="unfinished">DLC already installed:</translation>
+      <translation>DLC уже установлено:</translation>
     </message>
     <message>
       <source>Game already installed</source>
-      <translation type="unfinished">Game already installed</translation>
+      <translation>Игра уже установлена.</translation>
     </message>
     <message>
       <source>PKG is a patch or DLC, please install the game first!</source>
-      <translation type="unfinished">PKG is a patch or DLC, please install the game first!</translation>
+      <translation>PKG является патчем или DLC, пожалуйста, сначала установите игру!</translation>
     </message>
     <message>
       <source>Extracting PKG %1/%2</source>
-      <translation type="unfinished">Extracting PKG %1/%2</translation>
+      <translation>Извлечение PKG %1/%2</translation>
     </message>
     <message>
       <source>Extraction Finished</source>
-      <translation type="unfinished">Extraction Finished</translation>
+      <translation>Извлечение завершено</translation>
     </message>
     <message>
       <source>Game successfully installed at %1</source>
-      <translation type="unfinished">Game successfully installed at %1</translation>
+      <translation>Игра успешно установлена ​​на %1</translation>
     </message>
     <message>
       <source>File doesn&apos;t appear to be a valid PKG file</source>
-      <translation type="unfinished">File doesn&apos;t appear to be a valid PKG file</translation>
+      <translation>Файл, по всей видимости, не является допустимым файлом PKG</translation>
     </message>
     <message>
       <source>No valid PKG decryption keys found. Please set them up in the Crypto Key Manager.</source>
-      <translation type="unfinished">No valid PKG decryption keys found. Please set them up in the Crypto Key Manager.</translation>
+      <translation>Не найдено действительных ключей расшифровки PKG. Пожалуйста, настройте их в менеджере криптографических ключей.</translation>
     </message>
     <message>
       <source>No valid Fake PKG decryption keys found. Please set them up in the Crypto Key Manager.</source>
-      <translation type="unfinished">No valid Fake PKG decryption keys found. Please set them up in the Crypto Key Manager.</translation>
+      <translation>Не найдено ни одного действительного ключа расшифровки поддельных PKG-файлов. Пожалуйста, настройте их в менеджере криптографических ключей.</translation>
     </message>
     <message>
       <source>PKG Install</source>
-      <translation type="unfinished">PKG Install</translation>
+      <translation>Установка PKG</translation>
     </message>
     <message>
       <source>No valid PKG files were found.</source>
-      <translation type="unfinished">No valid PKG files were found.</translation>
+      <translation>Не найдено ни одного действительного PKG-файла.</translation>
     </message>
     <message>
       <source>Could not read SFO. Check log for details.</source>
-      <translation type="unfinished">Could not read SFO. Check log for details.</translation>
+      <translation>Не удалось прочитать SFO. Подробности см. в журнале.</translation>
     </message>
     <message>
       <source>Run Game</source>
-      <translation type="unfinished">Run Game</translation>
+      <translation>Запустить игру</translation>
     </message>
     <message>
       <source>Pause emulation</source>
-      <translation type="unfinished">Pause emulation</translation>
+      <translation>Приостановить эмуляцию</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Ошибка</translation>
     </message>
     <message>
       <source>No game selected</source>
-      <translation type="unfinished">No game selected</translation>
+      <translation>Игра не выбрана</translation>
     </message>
     <message>
       <source>Eboot.bin file not found</source>
-      <translation type="unfinished">Eboot.bin file not found</translation>
+      <translation>Файл Eboot.bin не найден</translation>
     </message>
     <message>
       <source>Game is already running!</source>
-      <translation type="unfinished">Game is already running!</translation>
+      <translation>Игра уже запущена!</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Версия не выбрана</translation>
     </message>
     <message>
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>Версия эмулятора не была выбрана.
+Откроется меню «Менеджер версий».
+Выберите версию эмулятора на правой панели.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Не удалось найти исполняемый файл эмулятора</translation>
     </message>
     <message>
       <source>No Running Game</source>
-      <translation type="unfinished">No Running Game</translation>
+      <translation>Нет запущенной игры</translation>
     </message>
     <message>
       <source>No running game to restart</source>
-      <translation type="unfinished">No running game to restart</translation>
+      <translation>Нет запущенной игры для перезапуска</translation>
     </message>
     <message>
       <source>No running game to pause</source>
-      <translation type="unfinished">No running game to pause</translation>
+      <translation>Нет запущенной игры для паузы</translation>
     </message>
     <message>
       <source>Resume</source>
-      <translation type="unfinished">Resume</translation>
+      <translation>Возобновить</translation>
     </message>
     <message>
       <source>Resume emulation</source>
-      <translation type="unfinished">Resume emulation</translation>
+      <translation>Возобновить эмуляцию</translation>
     </message>
     <message>
       <source>No running game to stop</source>
-      <translation type="unfinished">No running game to stop</translation>
+      <translation>Нет запущенной игры для остановки</translation>
     </message>
     <message>
       <source>No running game to toggle fullscreen</source>
-      <translation type="unfinished">No running game to toggle fullscreen</translation>
+      <translation>Нет запущенной игры для переключения в полноэкранный режим</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>Показывать журнал игры</translation>
     </message>
     <message>
       <source>Keyboard</source>
-      <translation type="unfinished">Keyboard</translation>
+      <translation>Клавиатура</translation>
     </message>
     <message>
       <source>Configure Keyboard and Mouse</source>
-      <translation type="unfinished">Configure Keyboard and Mouse</translation>
+      <translation>Настройка клавиатуры и мыши</translation>
     </message>
     <message>
       <source>Configure Hotkeys</source>
-      <translation type="unfinished">Configure Hotkeys</translation>
+      <translation>Настройка горячих клавиш</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Запустить эмулятор</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>Эмулятор уже запущен!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Предоставлен недопустимый аргумент игры</translation>
     </message>
     <message>
       <source>Check for Updates</source>
-      <translation type="unfinished">Check for Updates</translation>
+      <translation>Проверить обновления</translation>
     </message>
   </context>
   <context>
     <name>NpBindDialog</name>
     <message>
       <source>npbind.dat Viewer</source>
-      <translation type="unfinished">npbind.dat Viewer</translation>
+      <translation>Просмотр npbind.dat</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Ошибка</translation>
     </message>
     <message>
       <source>Failed to parse npbind.dat</source>
-      <translation type="unfinished">Failed to parse npbind.dat</translation>
+      <translation>Не удалось разобрать файл npbind.dat</translation>
     </message>
     <message>
       <source>Entry Type:</source>
-      <translation type="unfinished">Entry Type:</translation>
+      <translation>Тип записи:</translation>
     </message>
     <message>
       <source>Entry Size:</source>
@@ -2398,30 +2396,30 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Cannot write file</source>
-      <translation type="unfinished">Cannot write file</translation>
+      <translation>Невозможно записать файл</translation>
     </message>
     <message>
       <source>Done</source>
-      <translation type="unfinished">Done</translation>
+      <translation>Готово</translation>
     </message>
     <message>
       <source>JSON exported successfully.</source>
-      <translation type="unfinished">JSON exported successfully.</translation>
+      <translation>Экспорт JSON-файла пройден успешно.</translation>
     </message>
   </context>
   <context>
     <name>PkgInstallDirSelectDialog</name>
     <message>
       <source>shadLauncher4 - Install PKG Files</source>
-      <translation type="unfinished">shadLauncher4 - Install PKG Files</translation>
+      <translation>shadLauncher4 - Установка PKG-файлов</translation>
     </message>
     <message>
       <source>Select PKG files to install</source>
-      <translation type="unfinished">Select PKG files to install</translation>
+      <translation>Выберите файлы PKG для установки</translation>
     </message>
     <message>
       <source>Select All</source>
-      <translation type="unfinished">Select All</translation>
+      <translation>Выбрать все</translation>
     </message>
     <message>
       <source>Select None</source>
@@ -2433,23 +2431,23 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Installation Directory</source>
-      <translation type="unfinished">Installation Directory</translation>
+      <translation>Каталог установки</translation>
     </message>
     <message>
       <source>Browse...</source>
-      <translation type="unfinished">Browse...</translation>
+      <translation>Обзор...</translation>
     </message>
     <message>
       <source>Delete PKG files after successful installation</source>
-      <translation type="unfinished">Delete PKG files after successful installation</translation>
+      <translation>Удалить файлы PKG после успешной установки</translation>
     </message>
     <message>
       <source>Select Directory</source>
-      <translation type="unfinished">Select Directory</translation>
+      <translation>Выберите каталог</translation>
     </message>
     <message>
       <source>Install Selected</source>
-      <translation type="unfinished">Install Selected</translation>
+      <translation>Установить выбранные</translation>
     </message>
     <message>
       <source>No Selection</source>
@@ -2457,7 +2455,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Please select at least one game to install.</source>
-      <translation type="unfinished">Please select at least one game to install.</translation>
+      <translation>Пожалуйста, выберите хотя бы одну игру для установки.</translation>
     </message>
     <message>
       <source>No Directory</source>
@@ -2465,7 +2463,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Please select an installation directory.</source>
-      <translation type="unfinished">Please select an installation directory.</translation>
+      <translation>Пожалуйста, выберите каталог установки.</translation>
     </message>
   </context>
   <context>
@@ -2519,7 +2517,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Отмена</translation>
     </message>
     <message>
       <source>Save Game List As</source>
@@ -2527,17 +2525,17 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Ошибка</translation>
     </message>
     <message>
       <source>Failed to create file:
 %1</source>
-      <translation type="unfinished">Failed to create file:
+      <translation>Не удалось создать файл:
 %1</translation>
     </message>
     <message>
       <source>Game List Exported</source>
-      <translation type="unfinished">Game List Exported</translation>
+      <translation>Список игр экспортирован</translation>
     </message>
     <message>
       <source>Game list successfully exported to:
@@ -2596,7 +2594,7 @@ Select an emulator version from the right panel.</translation>
     <name>SFOViewerDialog</name>
     <message>
       <source>PS4 SFO Viewer</source>
-      <translation type="unfinished">PS4 SFO Viewer</translation>
+      <translation>Просмотр PS4 SFO</translation>
     </message>
     <message>
       <source>Reload</source>

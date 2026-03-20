@@ -7,11 +7,11 @@
     <name>ChangelogDialog</name>
     <message>
       <source>Changelog Viewer</source>
-      <translation>Visualizador do Registro</translation>
+      <translation>Visualizador do Histórico de Alterações</translation>
     </message>
     <message>
       <source>Search in changelog...</source>
-      <translation>Procurar no registro...</translation>
+      <translation>Procurar no histórico de alterações...</translation>
     </message>
     <message>
       <source>Copy</source>
@@ -23,11 +23,11 @@
     </message>
     <message>
       <source>Export Changelog</source>
-      <translation>Exportar Mudanças</translation>
+      <translation>Exportar Histórico de Alterações</translation>
     </message>
     <message>
       <source>Changelog Error</source>
-      <translation>Erro no registro de alterações</translation>
+      <translation>Erro no Histórico de Alterações</translation>
     </message>
     <message>
       <source>Failed to open changelog file:
@@ -1123,7 +1123,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>&amp;View Changelog</source>
-      <translation>&amp;Visualizar lista de alterações</translation>
+      <translation>&amp;Visualizar Histórico de Alterações</translation>
     </message>
     <message>
       <source>&amp;Copy Info</source>
@@ -3548,7 +3548,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation>Sempre Mostrar o Histórico de Mudanças</translation>
+      <translation>Sempre Mostrar o Histórico de Alterações</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
@@ -3694,15 +3694,15 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation>Mostrar Mudanças</translation>
+      <translation>Mostrar Histórico de Alterações</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation>Ocultar Mudanças</translation>
+      <translation>Ocultar Histórico de Alterações</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation>Erro de rede ao obter o changelog</translation>
+      <translation>Erro de rede ao obter o histórico de alterações</translation>
     </message>
     <message>
       <source>Changes</source>
