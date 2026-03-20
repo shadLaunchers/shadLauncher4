@@ -152,9 +152,8 @@ void UserManagerDialog::UpdateTable(bool mark_only) {
         m_table->setItem(row, 2, color_item);
 
         // Controller port
-        QString controller_text = (u.player_index >= 1 && u.player_index <= 4)
-                                      ? QString::number(u.player_index)
-                                      : "-";
+        QString controller_text =
+            (u.player_index >= 1 && u.player_index <= 4) ? QString::number(u.player_index) : "-";
         QTableWidgetItem* controller_item = new QTableWidgetItem(controller_text);
         controller_item->setFlags(controller_item->flags() & ~Qt::ItemIsEditable);
         m_table->setItem(row, 3, controller_item);
