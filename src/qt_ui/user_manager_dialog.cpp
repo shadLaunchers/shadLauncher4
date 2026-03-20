@@ -389,8 +389,7 @@ void UserManagerDialog::ShowContextMenu(const QPoint& pos) {
 
     connect(show_dir_act, &QAction::triggered, this, [this, key]() {
         QString userDirPath;
-        Common::FS::PathToQString(userDirPath, EmulatorSettings.GetHomeDir() /
-                                                   std::to_string(key));
+        Common::FS::PathToQString(userDirPath, EmulatorSettings.GetHomeDir() / std::to_string(key));
         QDesktopServices::openUrl(QUrl::fromLocalFile(userDirPath));
     });
 
