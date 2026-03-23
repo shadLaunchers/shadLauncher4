@@ -2059,7 +2059,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>Play Hover Gifs</source>
-      <translation>Reproduzir Gifs Animados</translation>
+      <translation>Reproduzir Gifs Destacados</translation>
     </message>
     <message>
       <source>Prefer Game Data Icons</source>
