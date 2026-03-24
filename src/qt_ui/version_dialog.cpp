@@ -1134,6 +1134,11 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
         m_downloader, &Downloader::SignalDownloadFinished, this,
         [this, userPath, zipPath, appExePath, tagName]() {
             QString destFolder = QDir(userPath).filePath("Pre-release");
+            
+            // Remove existing folder if it exists to ensure clean install
+            if (QDir(destFolder).exists()) {
+                QDir(destFolder).removeRecursively();
+            }
 
             try {
                 Zip::Extract(zipPath, destFolder);
@@ -1189,8 +1194,8 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
                 return;
             }
 
+            // Backup existing executable
             if (QFile::exists(appExePath)) {
-                // Create backup of old executable
                 QString backupPath = appExePath + ".backup";
                 if (QFile::exists(backupPath)) {
                     QFile::remove(backupPath);
@@ -1213,37 +1218,36 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
 
             if (!copySuccess) {
                 QMessageBox::warning(this, tr("Error"),
-                                     // clang-format off
-tr("Failed to copy executable to application directory.\nThe pre-release version has been saved to: %1").arg(destFolder));
-                    // clang-format off
-                } else {
-                    QMessageBox::information(
-                        this, tr("Success"),
-                        tr("Pre-release (Nightly) has been:") + ("\n\n ") +
-                            tr("1. Downloaded to:") + QString(" %1\n\n ").arg(destFolder) +
-                            tr("2. Installed to:") + QString(" %1").arg(appExePath));
-                }
+                    tr("Failed to copy executable to application directory.\n"
+                       "The pre-release version has been saved to: %1").arg(destFolder));
+            } else {
+                QMessageBox::information(
+                    this, tr("Success"),
+                    tr("Pre-release (Nightly) has been:") + ("\n\n ") +
+                        tr("1. Downloaded to:") + QString(" %1\n\n ").arg(destFolder) +
+                        tr("2. Installed to:") + QString(" %1").arg(appExePath));
+            }
 
-                QRegularExpression re("-([a-fA-F0-9]{7,})$");
-                QRegularExpressionMatch match = re.match(tagName);
-                QString codename = match.hasMatch() ? match.captured(1) : "unknown";
+            QRegularExpression re("-([a-fA-F0-9]{7,})$");
+            QRegularExpressionMatch match = re.match(tagName);
+            QString codename = match.hasMatch() ? match.captured(1) : "unknown";
 
-                VersionManager::Version new_version{
-                    .name = "Pre-release (Nightly)",
-                    .path = versionExePath.toStdString(), // Keep version folder path
-                    .date = QLocale::system()
-                                .toString(QDate::currentDate(), QLocale::ShortFormat)
-                                .toStdString(),
-                    .codename = codename.toStdString(),
-                    .type = VersionManager::VersionType::Nightly,
-                };
+            VersionManager::Version new_version{
+                .name = "Pre-release (Nightly)",
+                .path = versionExePath.toStdString(),
+                .date = QLocale::system()
+                            .toString(QDate::currentDate(), QLocale::ShortFormat)
+                            .toStdString(),
+                .codename = codename.toStdString(),
+                .type = VersionManager::VersionType::Nightly,
+            };
 
-                // Update or add the pre-release version
-                VersionManager::UpdatePrerelease(new_version);
+            // Update or add the pre-release version
+            VersionManager::UpdatePrerelease(new_version);
 
-                // Also save the app directory path
-                m_gui_settings->SetValue(GUI::version_manager_versionSelected, versionExePath);
+            // Also save the app directory path
+            m_gui_settings->SetValue(GUI::version_manager_versionSelected, versionExePath);
 
-                LoadInstalledList();
-            });
+            LoadInstalledList();
+        });
 }
