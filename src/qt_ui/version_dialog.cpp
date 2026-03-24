@@ -118,6 +118,7 @@ VersionDialog::VersionDialog(std::shared_ptr<GUISettings> gui_settings, QWidget*
 
         QFileInfo fileInfo(filePath);
         QString fileExtension = fileInfo.suffix().toLower();
+        QString fileName = fileInfo.fileName();
 
         if (fileExtension == "zip") {
             isZipFile = true;
@@ -127,10 +128,26 @@ VersionDialog::VersionDialog(std::shared_ptr<GUISettings> gui_settings, QWidget*
 
         bool ok;
         QString version_name;
+        QString hash_part; // Store the hash part for display
 
         if (isZipFile) {
-            // For zip files, suggest the zip filename as the default version name
-            QString defaultName = fileInfo.completeBaseName();
+            // Check if this is a shadps4 zip file with the pattern: shadps4-*-*-YYYY-MM-DD-*.zip
+            QRegularExpression shadps4Regex(R"(shadps4-.*-(\d{4}-\d{2}-\d{2})-([a-f0-9]{7,})\.zip)",
+                                            QRegularExpression::CaseInsensitiveOption);
+            QRegularExpressionMatch match = shadps4Regex.match(fileName);
+
+            QString defaultName;
+            if (match.hasMatch()) {
+                // Extract the date portion and hash for folder name
+                QString datePart = match.captured(1);
+                hash_part = match.captured(2);
+                defaultName =
+                    QString("%1-%2").arg(datePart, hash_part.left(7)); // Use date and short hash
+            } else {
+                // For other zip files, use the zip filename without extension
+                defaultName = fileInfo.completeBaseName();
+            }
+
             version_name = QInputDialog::getText(
                 this, tr("Version name"),
                 tr("Enter the name of this version as it appears in the list."), QLineEdit::Normal,
@@ -163,33 +180,43 @@ VersionDialog::VersionDialog(std::shared_ptr<GUISettings> gui_settings, QWidget*
             return;
         }
 
+        // Create destination folder with version name
         QString destFolder = QDir(versionsRoot).filePath(version_name);
         QDir().mkpath(destFolder);
 
         QString versionExePath;
         bool installSuccess = false;
+        QString extractedHash = hash_part; // Store for later use
 
         if (isZipFile) {
             // Handle zip file extraction
             try {
-                // Extract zip to destination folder
-                Zip::Extract(filePath, destFolder);
+                // Check if this is a shadps4 zip file with the pattern we recognize
+                QRegularExpression shadps4Regex(
+                    R"(shadps4-.*-(\d{4}-\d{2}-\d{2})-([a-f0-9]{7,})\.zip)",
+                    QRegularExpression::CaseInsensitiveOption);
+                QRegularExpressionMatch match = shadps4Regex.match(fileName);
+                bool isShadps4Zip = match.hasMatch();
 
-                // Find the executable in the extracted folder
-                // Find the executable in the extracted folder
-                QDirIterator it(destFolder, QDirIterator::Subdirectories);
-                bool foundExe = false;
+                if (isShadps4Zip) {
+                    extractedHash = match.captured(2);
+                    // Extract everything to destFolder directly (keep all files)
+                    Zip::Extract(filePath, destFolder);
 
-                while (it.hasNext()) {
-                    it.next();
-                    QFileInfo fi = it.fileInfo();
+                    // Find the executable in the extracted folder
+                    QDirIterator it(destFolder, QDirIterator::Subdirectories);
+                    bool foundExe = false;
+
+                    while (it.hasNext()) {
+                        it.next();
+                        QFileInfo fi = it.fileInfo();
 
 #ifdef Q_OS_WIN
-                    if (fi.isFile() && fi.suffix().compare("exe", Qt::CaseInsensitive) == 0) {
-                        versionExePath = fi.absoluteFilePath();
-                        foundExe = true;
-                        break;
-                    }
+                        if (fi.isFile() && fi.suffix().compare("exe", Qt::CaseInsensitive) == 0) {
+                            versionExePath = fi.absoluteFilePath();
+                            foundExe = true;
+                            break;
+                        }
 #elif defined(Q_OS_LINUX)
                     if (fi.isFile() && fi.isExecutable() && !fi.fileName().contains('.')) {
                         versionExePath = fi.absoluteFilePath();
@@ -203,22 +230,22 @@ VersionDialog::VersionDialog(std::shared_ptr<GUISettings> gui_settings, QWidget*
                         break;
                     }
 #endif
-                }
+                    }
 
-                if (!foundExe) {
-                    // Try to find any executable file as fallback
-                    // Create a new iterator instead of reassigning
-                    QDirIterator it2(destFolder, QDirIterator::Subdirectories);
-                    while (it2.hasNext()) {
-                        it2.next();
-                        QFileInfo fi = it2.fileInfo();
+                    if (!foundExe) {
+                        // Try to find any executable file as fallback
+                        QDirIterator it2(destFolder, QDirIterator::Subdirectories);
+                        while (it2.hasNext()) {
+                            it2.next();
+                            QFileInfo fi = it2.fileInfo();
 #ifdef Q_OS_WIN
-                        if (fi.isFile() && (fi.suffix().compare("exe", Qt::CaseInsensitive) == 0 ||
-                                            fi.suffix().compare("bat", Qt::CaseInsensitive) == 0)) {
-                            versionExePath = fi.absoluteFilePath();
-                            foundExe = true;
-                            break;
-                        }
+                            if (fi.isFile() &&
+                                (fi.suffix().compare("exe", Qt::CaseInsensitive) == 0 ||
+                                 fi.suffix().compare("bat", Qt::CaseInsensitive) == 0)) {
+                                versionExePath = fi.absoluteFilePath();
+                                foundExe = true;
+                                break;
+                            }
 #else
                         if (fi.isFile() && fi.isExecutable()) {
                             versionExePath = fi.absoluteFilePath();
@@ -226,18 +253,86 @@ VersionDialog::VersionDialog(std::shared_ptr<GUISettings> gui_settings, QWidget*
                             break;
                         }
 #endif
+                        }
                     }
-                }
 
-                if (!foundExe || versionExePath.isEmpty()) {
-                    QMessageBox::critical(this, tr("Error"),
-                                          tr("No executable found in the extracted zip file."));
-                    // Clean up the extracted folder
-                    QDir(destFolder).removeRecursively();
-                    return;
-                }
+                    if (!foundExe || versionExePath.isEmpty()) {
+                        QMessageBox::critical(this, tr("Error"),
+                                              tr("No executable found in the extracted zip file."));
+                        // Clean up the extracted folder
+                        QDir(destFolder).removeRecursively();
+                        return;
+                    }
 
-                installSuccess = true;
+                    installSuccess = true;
+
+                } else {
+                    // Regular zip extraction
+                    Zip::Extract(filePath, destFolder);
+
+                    // Find the executable in the extracted folder
+                    QDirIterator it(destFolder, QDirIterator::Subdirectories);
+                    bool foundExe = false;
+
+                    while (it.hasNext()) {
+                        it.next();
+                        QFileInfo fi = it.fileInfo();
+
+#ifdef Q_OS_WIN
+                        if (fi.isFile() && fi.suffix().compare("exe", Qt::CaseInsensitive) == 0) {
+                            versionExePath = fi.absoluteFilePath();
+                            foundExe = true;
+                            break;
+                        }
+#elif defined(Q_OS_LINUX)
+                    if (fi.isFile() && fi.isExecutable() && !fi.fileName().contains('.')) {
+                        versionExePath = fi.absoluteFilePath();
+                        foundExe = true;
+                        break;
+                    }
+#elif defined(Q_OS_MACOS)
+                    if (fi.isFile() && fi.isExecutable() && fi.fileName() == "shadPS4") {
+                        versionExePath = fi.absoluteFilePath();
+                        foundExe = true;
+                        break;
+                    }
+#endif
+                    }
+
+                    if (!foundExe) {
+                        // Try to find any executable file as fallback
+                        QDirIterator it2(destFolder, QDirIterator::Subdirectories);
+                        while (it2.hasNext()) {
+                            it2.next();
+                            QFileInfo fi = it2.fileInfo();
+#ifdef Q_OS_WIN
+                            if (fi.isFile() &&
+                                (fi.suffix().compare("exe", Qt::CaseInsensitive) == 0 ||
+                                 fi.suffix().compare("bat", Qt::CaseInsensitive) == 0)) {
+                                versionExePath = fi.absoluteFilePath();
+                                foundExe = true;
+                                break;
+                            }
+#else
+                        if (fi.isFile() && fi.isExecutable()) {
+                            versionExePath = fi.absoluteFilePath();
+                            foundExe = true;
+                            break;
+                        }
+#endif
+                        }
+                    }
+
+                    if (!foundExe || versionExePath.isEmpty()) {
+                        QMessageBox::critical(this, tr("Error"),
+                                              tr("No executable found in the extracted zip file."));
+                        // Clean up the extracted folder
+                        QDir(destFolder).removeRecursively();
+                        return;
+                    }
+
+                    installSuccess = true;
+                }
 
             } catch (const std::exception& e) {
                 QMessageBox::critical(this, tr("Error"),
@@ -277,25 +372,31 @@ VersionDialog::VersionDialog(std::shared_ptr<GUISettings> gui_settings, QWidget*
             return;
         }
 
-        // ---- Copy to application directory (same as releases) ----
+        // ---- Copy everything to application directory ----
         QString appDir = QCoreApplication::applicationDirPath();
 
 #ifdef Q_OS_WIN
         QString appExePath = appDir + "/shadPS4.exe";
+        // On Windows, we need to copy all DLLs and other files to the app directory
+        QString appFolder = appDir;
 #elif defined(Q_OS_LINUX)
     QString appExePath = appDir + "/shadPS4";
+    QString appFolder = appDir;
 #elif defined(Q_OS_MACOS)
     QString appExePath = appDir + "/shadPS4.app/Contents/MacOS/shadPS4";
+    QString appFolder = appDir;
 #endif
 
         // Ask user if they want to install this version as the current one
         bool installAsCurrent = false;
         if (QMessageBox::question(this, tr("Install as Current Version"),
                                   tr("Do you want to install this version as the current version?\n"
-                                     "This will replace the existing emulator executable."),
+                                     "This will replace the existing emulator executable and copy "
+                                     "all necessary files."),
                                   QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes) {
             installAsCurrent = true;
 
+            // Create backup of existing executable
             if (QFile::exists(appExePath)) {
                 QString backupPath = appExePath + ".backup";
                 if (QFile::exists(backupPath))
@@ -303,19 +404,75 @@ VersionDialog::VersionDialog(std::shared_ptr<GUISettings> gui_settings, QWidget*
                 QFile::rename(appExePath, backupPath);
             }
 
-            if (!QFile::copy(versionExePath, appExePath)) {
-                QMessageBox::warning(this, tr("Warning"),
-                                     tr("Failed to install executable into application directory.\n"
-                                        "The custom build is still available under:\n%1")
-                                         .arg(destFolder));
-                installAsCurrent = false;
-            } else {
-#if defined(Q_OS_LINUX)
-                QFile(appExePath)
-                    .setPermissions(QFile::ReadOwner | QFile::WriteOwner | QFile::ExeOwner |
-                                    QFile::ReadGroup | QFile::ExeGroup | QFile::ReadOther |
-                                    QFile::ExeOther);
+            // For zip files (especially shadps4 builds), copy all files to the app directory
+            if (isZipFile) {
+                // Copy all files from destFolder to appFolder, preserving structure
+                QDirIterator it(destFolder, QDirIterator::Subdirectories);
+                bool copySuccess = true;
+
+                while (it.hasNext()) {
+                    it.next();
+                    QFileInfo fi = it.fileInfo();
+
+                    if (fi.isFile()) {
+                        // Calculate relative path from destFolder
+                        QString relativePath =
+                            QDir(destFolder).relativeFilePath(fi.absoluteFilePath());
+                        QString destPath = QDir(appFolder).filePath(relativePath);
+
+                        // Create destination directory if needed
+                        QDir().mkpath(QFileInfo(destPath).path());
+
+                        // Copy the file
+                        if (!QFile::copy(fi.absoluteFilePath(), destPath)) {
+                            copySuccess = false;
+                            qWarning()
+                                << "Failed to copy:" << fi.absoluteFilePath() << "to" << destPath;
+                        }
+                    }
+                }
+
+                if (!copySuccess) {
+                    QMessageBox::warning(
+                        this, tr("Warning"),
+                        tr("Some files could not be copied to the application directory.\n"
+                           "The version may not run correctly."));
+                }
+
+                // Ensure executable permissions on Linux/Mac
+#if defined(Q_OS_LINUX) || defined(Q_OS_MACOS)
+                if (QFile::exists(appExePath)) {
+                    QFile(appExePath)
+                        .setPermissions(QFile::ReadOwner | QFile::WriteOwner | QFile::ExeOwner |
+                                        QFile::ReadGroup | QFile::ExeGroup | QFile::ReadOther |
+                                        QFile::ExeOther);
+                }
 #endif
+
+                QMessageBox::information(this, tr("Success"),
+                                         tr("Version %1 has been installed with all files to:\n%2")
+                                             .arg(version_name, appFolder));
+
+            } else {
+                // For single executable files, just copy the executable
+                if (!QFile::copy(versionExePath, appExePath)) {
+                    QMessageBox::warning(
+                        this, tr("Warning"),
+                        tr("Failed to install executable into application directory.\n"
+                           "The custom build is still available under:\n%1")
+                            .arg(destFolder));
+                    installAsCurrent = false;
+                } else {
+#if defined(Q_OS_LINUX)
+                    QFile(appExePath)
+                        .setPermissions(QFile::ReadOwner | QFile::WriteOwner | QFile::ExeOwner |
+                                        QFile::ReadGroup | QFile::ExeGroup | QFile::ReadOther |
+                                        QFile::ExeOther);
+#endif
+                    QMessageBox::information(
+                        this, tr("Success"),
+                        tr("Version %1 has been installed to:\n%2").arg(version_name, appExePath));
+                }
             }
         }
 
@@ -326,7 +483,11 @@ VersionDialog::VersionDialog(std::shared_ptr<GUISettings> gui_settings, QWidget*
             .date = QLocale::system()
                         .toString(QDate::currentDate(), QLocale::ShortFormat)
                         .toStdString(),
-            .codename = isZipFile ? tr("Custom (ZIP)").toStdString() : tr("Local").toStdString(),
+            .codename = isZipFile
+                            ? (extractedHash.isEmpty()
+                                   ? tr("Custom (ZIP)").toStdString()
+                                   : QString("ZIP-%1").arg(extractedHash.left(7)).toStdString())
+                            : tr("Local").toStdString(),
             .type = VersionManager::VersionType::Custom,
         };
 
@@ -342,13 +503,17 @@ VersionDialog::VersionDialog(std::shared_ptr<GUISettings> gui_settings, QWidget*
 
         if (isZipFile) {
             successMessage += tr("2. Extracted from:") + QString(" %1\n\n ").arg(filePath);
-            successMessage += tr("3. Executable found:") + QString(" %1").arg(versionExePath);
+            successMessage += tr("3. Executable found:") + QString(" %1\n\n ").arg(versionExePath);
+            if (!extractedHash.isEmpty()) {
+                successMessage += tr("4. Build hash:") + QString(" %1").arg(extractedHash);
+            }
         } else {
             successMessage += tr("2. Installed to:") + QString(" %1").arg(versionExePath);
         }
 
         if (installAsCurrent) {
-            successMessage += tr("\n\n4. Set as current version.");
+            successMessage +=
+                tr("\n\nSet as current version with all files copied to app directory.");
         } else {
             successMessage += tr("\n\nTo use this version, select it from the installed list.");
         }
@@ -356,7 +521,6 @@ VersionDialog::VersionDialog(std::shared_ptr<GUISettings> gui_settings, QWidget*
         QMessageBox::information(this, tr("Success"), successMessage);
         LoadInstalledList();
     });
-
     connect(ui->deleteVersionButton, &QPushButton::clicked, this, [this]() {
         QTreeWidgetItem* selectedItem = ui->installedTreeWidget->currentItem();
         if (!selectedItem) {
