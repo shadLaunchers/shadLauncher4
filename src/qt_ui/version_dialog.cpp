@@ -483,11 +483,9 @@ VersionDialog::VersionDialog(std::shared_ptr<GUISettings> gui_settings, QWidget*
             .date = QLocale::system()
                         .toString(QDate::currentDate(), QLocale::ShortFormat)
                         .toStdString(),
-            .codename = isZipFile
-                            ? (extractedHash.isEmpty()
-                                   ? tr("Custom (ZIP)").toStdString()
-                                   : QString("ZIP-%1").arg(extractedHash.left(7)).toStdString())
-                            : tr("Local").toStdString(),
+            .codename = isZipFile ? (extractedHash.isEmpty() ? tr("Custom (ZIP)").toStdString()
+                                                             : extractedHash.left(7).toStdString())
+                                  : tr("Local").toStdString(),
             .type = VersionManager::VersionType::Custom,
         };
 
