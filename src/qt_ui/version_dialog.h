@@ -27,6 +27,7 @@ public:
     void checkUpdatePre(const bool showMessage);
     void DownloadListVersion();
     void InstallSelectedVersion();
+    void CopySelectedVersionToAppDir();
 
 private Q_SLOTS:
     void HandleResize(QResizeEvent* event);

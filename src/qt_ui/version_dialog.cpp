@@ -596,6 +596,11 @@ VersionDialog::VersionDialog(std::shared_ptr<GUISettings> gui_settings, QWidget*
             &VersionDialog::onItemChanged);
 
     connect(ui->updatePreButton, &QPushButton::clicked, this, [this]() { checkUpdatePre(true); });
+
+    connect(this, &QDialog::finished, this, [this](int result) {
+        Q_UNUSED(result);
+        CopySelectedVersionToAppDir();
+    });
 };
 
 VersionDialog::~VersionDialog() {
@@ -1554,4 +1559,53 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
 
             LoadInstalledList();
         });
+}
+
+void VersionDialog::CopySelectedVersionToAppDir() {
+    // Find the currently selected version from the installed list
+    QString selectedVersionPath;
+    
+    for (int row = 0; row < ui->installedTreeWidget->topLevelItemCount(); ++row) {
+        QTreeWidgetItem* item = ui->installedTreeWidget->topLevelItem(row);
+        if (item->checkState(0) == Qt::Checked) {
+            selectedVersionPath = item->text(4); // stored executable path
+            break;
+        }
+    }
+    
+    if (selectedVersionPath.isEmpty()) {
+        // No version selected in tree, try to get from settings
+        selectedVersionPath = m_gui_settings->GetValue(GUI::version_manager_versionSelected).toString();
+        
+        // Also try to find and check the item in tree if it exists
+        if (!selectedVersionPath.isEmpty()) {
+            for (int row = 0; row < ui->installedTreeWidget->topLevelItemCount(); ++row) {
+                QTreeWidgetItem* item = ui->installedTreeWidget->topLevelItem(row);
+                if (item->text(4) == selectedVersionPath) {
+                    item->setCheckState(0, Qt::Checked);
+                    break;
+                }
+            }
+        }
+    }
+    
+    if (!selectedVersionPath.isEmpty() && QFile::exists(selectedVersionPath)) {
+        qDebug() << "Copying selected version to app directory on dialog close:" << selectedVersionPath;
+        
+        if (!CopyExecutableToAppDir(selectedVersionPath, this)) {
+            qWarning() << "Failed to copy selected version to app directory on dialog close";
+            QMessageBox::warning(this, tr("Warning"),
+                                tr("Failed to copy the selected version to the application directory.\n"
+                                   "The version may not run correctly when launched."));
+        } else {
+            qDebug() << "Successfully copied version to app directory";
+        }
+    } else {
+        qDebug() << "No valid version selected to copy on dialog close";
+        if (selectedVersionPath.isEmpty()) {
+            qDebug() << "Selected version path is empty";
+        } else if (!QFile::exists(selectedVersionPath)) {
+            qDebug() << "Selected version file does not exist:" << selectedVersionPath;
+        }
+    }
 }
