@@ -768,7 +768,7 @@ void VersionDialog::PopulateDownloadTree() {
     QList<QTreeWidgetItem*> otherItems;
     bool foundPreRelease = false;
 
-    auto isVersionGreaterThan_0_5_0 = [](const QString& tagName) -> bool {
+    auto isVersionGreaterThan_0_16_0 = [](const QString& tagName) -> bool {
         QRegularExpression versionRegex(R"(v\.?(\d+)\.(\d+)\.(\d+))");
         QRegularExpressionMatch match = versionRegex.match(tagName);
         if (match.hasMatch()) {
@@ -776,7 +776,7 @@ void VersionDialog::PopulateDownloadTree() {
             int minor = match.captured(2).toInt();
             if (major > 0)
                 return true;
-            if (major == 0 && minor >= 5)
+            if (major == 0 && minor >= 16)
                 return true;
         }
         return false;
@@ -794,7 +794,7 @@ void VersionDialog::PopulateDownloadTree() {
             continue;
         }
 
-        if (isVersionGreaterThan_0_5_0(tagName)) {
+        if (isVersionGreaterThan_0_16_0(tagName)) {
             QTreeWidgetItem* item = new QTreeWidgetItem();
             item->setText(0, tagName);
             otherItems.append(item);
