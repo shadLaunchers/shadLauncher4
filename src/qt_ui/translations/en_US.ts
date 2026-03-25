@@ -3530,14 +3530,6 @@ This will remove all game-specific overrides.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Select executable</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Executable (*.exe)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Version name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3695,14 +3687,6 @@ This will remove all game-specific overrides.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Executable (*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Executable (*.*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Version install path is not configured.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3768,6 +3752,87 @@ The pre-release version has been saved to: %1</source>
     </message>
     <message>
         <source>Pre-release (Nightly) has been:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Executable (*.exe);;Zip Archive (*.zip)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Executable (*);;Zip Archive (*.zip)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Executable (*.*);;Zip Archive (*.zip)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select executable or zip file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No executable found in the extracted zip file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to extract zip file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Install as Current Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you want to install this version as the current version?
+This will replace the existing emulator executable and copy all necessary files.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Some files could not be copied to the application directory.
+The version may not run correctly.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version %1 has been installed with all files to:
+%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version %1 has been installed to:
+%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom (ZIP)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>2. Extracted from:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>3. Executable found:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>4. Build hash:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>
+
+Set as current version with all files copied to app directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>
+
+To use this version, select it from the installed list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to copy the selected version to the application directory.
+The version may not run correctly when launched.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
