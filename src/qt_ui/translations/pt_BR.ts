@@ -703,8 +703,8 @@ Todos os campos devem ser strings hexadecimais válidas com comprimento par.</tr
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation>Componentes de chave RSA para assinatura falsa.
-Todos os campos devem ser strings hexadecimais válidas com comprimento par.</translation>
+      <translation>Componentes de chave RSA para depurar arquivos RIF.
+Todos os campos devem ser textos hexadecimais válidos com comprimento par.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
