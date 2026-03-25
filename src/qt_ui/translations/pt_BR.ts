@@ -698,7 +698,7 @@ Todos os campos devem ser strings hexadecimais válidas com comprimento par.</tr
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation>Depurar Redução do Conjunto de Chaves</translation>
+      <translation>Depurar Conjunto de Chaves Rif</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
@@ -708,7 +708,7 @@ Todos os campos devem ser strings hexadecimais válidas com comprimento par.</tr
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation>Chave3 do Pkg Derivado</translation>
+      <translation>Chave3 Derivada do Pkg</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
@@ -3790,93 +3790,93 @@ A versão de pré-lançamento foi salva em: %1</translation>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
-      <translation type="unfinished">Executable (*.exe);;Zip Archive (*.zip)</translation>
+      <translation>Executável (*.exe);;Arquivo Zip (*.zip)</translation>
     </message>
     <message>
       <source>Executable (*);;Zip Archive (*.zip)</source>
-      <translation type="unfinished">Executable (*);;Zip Archive (*.zip)</translation>
+      <translation>Executável (*.exe);;Arquivo Zip (*.zip)</translation>
     </message>
     <message>
       <source>Executable (*.*);;Zip Archive (*.zip)</source>
-      <translation type="unfinished">Executable (*.*);;Zip Archive (*.zip)</translation>
+      <translation>Executável (*.exe);;Arquivo Zip (*.zip)</translation>
     </message>
     <message>
       <source>Select executable or zip file</source>
-      <translation type="unfinished">Select executable or zip file</translation>
+      <translation>Selecione um arquivo executável ou zip</translation>
     </message>
     <message>
       <source>No executable found in the extracted zip file.</source>
-      <translation type="unfinished">No executable found in the extracted zip file.</translation>
+      <translation>Nenhum executável encontrado no arquivo zip extraído.</translation>
     </message>
     <message>
       <source>Failed to extract zip file:</source>
-      <translation type="unfinished">Failed to extract zip file:</translation>
+      <translation>Falha ao extrair arquivo zip:</translation>
     </message>
     <message>
       <source>Install as Current Version</source>
-      <translation type="unfinished">Install as Current Version</translation>
+      <translation>Instalar como Versão Atual</translation>
     </message>
     <message>
       <source>Do you want to install this version as the current version?
 This will replace the existing emulator executable and copy all necessary files.</source>
-      <translation type="unfinished">Do you want to install this version as the current version?
-This will replace the existing emulator executable and copy all necessary files.</translation>
+      <translation>Deseja instalar esta versão como a versão atual?
+Isso substituirá o executável do emulador existente e copiará todos os arquivos necessários.</translation>
     </message>
     <message>
       <source>Some files could not be copied to the application directory.
 The version may not run correctly.</source>
-      <translation type="unfinished">Some files could not be copied to the application directory.
-The version may not run correctly.</translation>
+      <translation>Alguns arquivos não puderam ser copiados para o diretório do aplicativo.
+A versão pode não funcionar corretamente.</translation>
     </message>
     <message>
       <source>Version %1 has been installed with all files to:
 %2</source>
-      <translation type="unfinished">Version %1 has been installed with all files to:
+      <translation>A versão %1 foi instalada com todos os arquivos em:
 %2</translation>
     </message>
     <message>
       <source>Version %1 has been installed to:
 %2</source>
-      <translation type="unfinished">Version %1 has been installed to:
+      <translation>A versão %1 foi instalada em:
 %2</translation>
     </message>
     <message>
       <source>Custom (ZIP)</source>
-      <translation type="unfinished">Custom (ZIP)</translation>
+      <translation>Personalizado (ZIP)</translation>
     </message>
     <message>
       <source>2. Extracted from:</source>
-      <translation type="unfinished">2. Extracted from:</translation>
+      <translation>2. Extraído de:</translation>
     </message>
     <message>
       <source>3. Executable found:</source>
-      <translation type="unfinished">3. Executable found:</translation>
+      <translation>3. Executável encontrado:</translation>
     </message>
     <message>
       <source>4. Build hash:</source>
-      <translation type="unfinished">4. Build hash:</translation>
+      <translation>4. Hash da compilação:</translation>
     </message>
     <message>
       <source>
 
 Set as current version with all files copied to app directory.</source>
-      <translation type="unfinished">
+      <translation>
 
-Set as current version with all files copied to app directory.</translation>
+Define a versão atual com todos os arquivos copiados para o diretório do aplicativo.</translation>
     </message>
     <message>
       <source>
 
 To use this version, select it from the installed list.</source>
-      <translation type="unfinished">
+      <translation>
 
-To use this version, select it from the installed list.</translation>
+Para usar esta versão, selecione-a na lista de versões instaladas.</translation>
     </message>
     <message>
       <source>Failed to copy the selected version to the application directory.
 The version may not run correctly when launched.</source>
-      <translation type="unfinished">Failed to copy the selected version to the application directory.
-The version may not run correctly when launched.</translation>
+      <translation>Falha ao copiar a versão selecionada para o diretório do aplicativo.
+A versão pode não funcionar corretamente ao ser iniciada.</translation>
     </message>
   </context>
 </TS>
