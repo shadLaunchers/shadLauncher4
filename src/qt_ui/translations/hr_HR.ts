@@ -3568,14 +3568,6 @@ To će ukloniti sve igri-specifične postavke.</translation>
       <translation>Odaberi mapu u koju će se instalirat verzije emulatora</translation>
     </message>
     <message>
-      <source>Select executable</source>
-      <translation>Izaberi Izvršnu datoteku</translation>
-    </message>
-    <message>
-      <source>Executable (*.exe)</source>
-      <translation>Izvršna datoteka (*.exe)</translation>
-    </message>
-    <message>
       <source>Version name</source>
       <translation>Naziv Verzije</translation>
     </message>
@@ -3733,14 +3725,6 @@ To će ukloniti sve igri-specifične postavke.</translation>
       <translation>Ažuriraj.</translation>
     </message>
     <message>
-      <source>Executable (*)</source>
-      <translation>Izvršna (*)</translation>
-    </message>
-    <message>
-      <source>Executable (*.*)</source>
-      <translation>Izvršna (*.*)</translation>
-    </message>
-    <message>
       <source>Version install path is not configured.</source>
       <translation>Instalacijska putanja verzija nije konfigurirana.</translation>
     </message>
@@ -3811,6 +3795,96 @@ Verzija Pred-izdanja spremljena je na:%1</translation>
     <message>
       <source>Pre-release (Nightly) has been:</source>
       <translation>Pred-izdanje (Noćna) je:</translation>
+    </message>
+    <message>
+      <source>Executable (*.exe);;Zip Archive (*.zip)</source>
+      <translation type="unfinished">Executable (*.exe);;Zip Archive (*.zip)</translation>
+    </message>
+    <message>
+      <source>Executable (*);;Zip Archive (*.zip)</source>
+      <translation type="unfinished">Executable (*);;Zip Archive (*.zip)</translation>
+    </message>
+    <message>
+      <source>Executable (*.*);;Zip Archive (*.zip)</source>
+      <translation type="unfinished">Executable (*.*);;Zip Archive (*.zip)</translation>
+    </message>
+    <message>
+      <source>Select executable or zip file</source>
+      <translation type="unfinished">Select executable or zip file</translation>
+    </message>
+    <message>
+      <source>No executable found in the extracted zip file.</source>
+      <translation type="unfinished">No executable found in the extracted zip file.</translation>
+    </message>
+    <message>
+      <source>Failed to extract zip file:</source>
+      <translation type="unfinished">Failed to extract zip file:</translation>
+    </message>
+    <message>
+      <source>Install as Current Version</source>
+      <translation type="unfinished">Install as Current Version</translation>
+    </message>
+    <message>
+      <source>Do you want to install this version as the current version?
+This will replace the existing emulator executable and copy all necessary files.</source>
+      <translation type="unfinished">Do you want to install this version as the current version?
+This will replace the existing emulator executable and copy all necessary files.</translation>
+    </message>
+    <message>
+      <source>Some files could not be copied to the application directory.
+The version may not run correctly.</source>
+      <translation type="unfinished">Some files could not be copied to the application directory.
+The version may not run correctly.</translation>
+    </message>
+    <message>
+      <source>Version %1 has been installed with all files to:
+%2</source>
+      <translation type="unfinished">Version %1 has been installed with all files to:
+%2</translation>
+    </message>
+    <message>
+      <source>Version %1 has been installed to:
+%2</source>
+      <translation type="unfinished">Version %1 has been installed to:
+%2</translation>
+    </message>
+    <message>
+      <source>Custom (ZIP)</source>
+      <translation type="unfinished">Custom (ZIP)</translation>
+    </message>
+    <message>
+      <source>2. Extracted from:</source>
+      <translation type="unfinished">2. Extracted from:</translation>
+    </message>
+    <message>
+      <source>3. Executable found:</source>
+      <translation type="unfinished">3. Executable found:</translation>
+    </message>
+    <message>
+      <source>4. Build hash:</source>
+      <translation type="unfinished">4. Build hash:</translation>
+    </message>
+    <message>
+      <source>
+
+Set as current version with all files copied to app directory.</source>
+      <translation type="unfinished">
+
+Set as current version with all files copied to app directory.</translation>
+    </message>
+    <message>
+      <source>
+
+To use this version, select it from the installed list.</source>
+      <translation type="unfinished">
+
+To use this version, select it from the installed list.</translation>
+    </message>
+    <message>
+      <source>Failed to copy the selected version to the application directory.
+The version may not run correctly when launched.</source>
+      <translation type="unfinished">Failed to copy the selected version to the application directory.
+The version may not run correctly when launched.</translation>
     </message>
   </context>
 </TS>
