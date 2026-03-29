@@ -3790,93 +3790,93 @@ Se ha guardado la versión prelanzamiento en: %1</translation>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
-      <translation type="unfinished">Executable (*.exe);;Zip Archive (*.zip)</translation>
+      <translation>Ejecutable (*.exe);;Archivo ZIP (*.zip)</translation>
     </message>
     <message>
       <source>Executable (*);;Zip Archive (*.zip)</source>
-      <translation type="unfinished">Executable (*);;Zip Archive (*.zip)</translation>
+      <translation>Ejecutable (*);;Archivo ZIP (*.zip)</translation>
     </message>
     <message>
       <source>Executable (*.*);;Zip Archive (*.zip)</source>
-      <translation type="unfinished">Executable (*.*);;Zip Archive (*.zip)</translation>
+      <translation>Ejecutable (*.*);;Archivo ZIP (*.zip)</translation>
     </message>
     <message>
       <source>Select executable or zip file</source>
-      <translation type="unfinished">Select executable or zip file</translation>
+      <translation>Seleccionar ejecutable o archivo ZIP</translation>
     </message>
     <message>
       <source>No executable found in the extracted zip file.</source>
-      <translation type="unfinished">No executable found in the extracted zip file.</translation>
+      <translation>No se ha encontrado un ejecutable dentro del archivo ZIP extraído.</translation>
     </message>
     <message>
       <source>Failed to extract zip file:</source>
-      <translation type="unfinished">Failed to extract zip file:</translation>
+      <translation>Error al extraer el archivo ZIP:</translation>
     </message>
     <message>
       <source>Install as Current Version</source>
-      <translation type="unfinished">Install as Current Version</translation>
+      <translation>Instalar como versión actual</translation>
     </message>
     <message>
       <source>Do you want to install this version as the current version?
 This will replace the existing emulator executable and copy all necessary files.</source>
-      <translation type="unfinished">Do you want to install this version as the current version?
-This will replace the existing emulator executable and copy all necessary files.</translation>
+      <translation>¿Deseas instalar esta versión como la actual?
+Se sustituirá el ejecutable actual del emulador y se copiarán los archivos necesarios.</translation>
     </message>
     <message>
       <source>Some files could not be copied to the application directory.
 The version may not run correctly.</source>
-      <translation type="unfinished">Some files could not be copied to the application directory.
-The version may not run correctly.</translation>
+      <translation>No se han podido copiar algunos archivos en el directorio de la aplicación.
+Esta versión podría no ejecutarse correctamente.</translation>
     </message>
     <message>
       <source>Version %1 has been installed with all files to:
 %2</source>
-      <translation type="unfinished">Version %1 has been installed with all files to:
+      <translation>Se ha instalado la versión %1 con todos los archivos en:
 %2</translation>
     </message>
     <message>
       <source>Version %1 has been installed to:
 %2</source>
-      <translation type="unfinished">Version %1 has been installed to:
+      <translation>Se ha instalado la versión %1 en:
 %2</translation>
     </message>
     <message>
       <source>Custom (ZIP)</source>
-      <translation type="unfinished">Custom (ZIP)</translation>
+      <translation>Personalizada (ZIP)</translation>
     </message>
     <message>
       <source>2. Extracted from:</source>
-      <translation type="unfinished">2. Extracted from:</translation>
+      <translation>2. Extraída de:</translation>
     </message>
     <message>
       <source>3. Executable found:</source>
-      <translation type="unfinished">3. Executable found:</translation>
+      <translation>3. Ejecutable localizado:</translation>
     </message>
     <message>
       <source>4. Build hash:</source>
-      <translation type="unfinished">4. Build hash:</translation>
+      <translation>4. «Hash» de compilación:</translation>
     </message>
     <message>
       <source>
 
 Set as current version with all files copied to app directory.</source>
-      <translation type="unfinished">
+      <translation>
 
-Set as current version with all files copied to app directory.</translation>
+Se ha establecido esta versión como la actual y se han copiado todos los archivos en el directorio de la aplicación.</translation>
     </message>
     <message>
       <source>
 
 To use this version, select it from the installed list.</source>
-      <translation type="unfinished">
+      <translation>
 
-To use this version, select it from the installed list.</translation>
+Para utilizar esta versión, debes seleccionarla en la lista de versiones instaladas.</translation>
     </message>
     <message>
       <source>Failed to copy the selected version to the application directory.
 The version may not run correctly when launched.</source>
-      <translation type="unfinished">Failed to copy the selected version to the application directory.
-The version may not run correctly when launched.</translation>
+      <translation>Error al copiar la versión seleccionada al directorio de la aplicación.
+Esta versión podría no ejecutarse correctamente.</translation>
     </message>
   </context>
 </TS>
