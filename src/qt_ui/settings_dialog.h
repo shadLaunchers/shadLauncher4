@@ -68,6 +68,7 @@ private:
     bool IsSettingOverrideable(const char* setting_key, const QString& setting_group) const;
     void DisableNonOverrideableSettings();
     void MapUIControls();
+    void RefreshAudioDevices();
 
     const QMap<QString, HideCursorState> cursorStateMap = {{tr("Never"), HideCursorState::Never},
                                                            {tr("Idle"), HideCursorState::Idle},
@@ -92,6 +93,8 @@ private:
                                            {tr("Default Device"), "Default Device"}};
 
     const QMap<QString, QString> logTypeMap = {{tr("async"), "async"}, {tr("sync"), "sync"}};
+
+    const QMap<int, QString> audioBackendMap = {{0, "SDL"}, {1, "OpenAL"}};
 
     // Map UI controls to their setting keys
     QMap<QObject*, std::pair<const char*, QString>> m_uiSettingMap;

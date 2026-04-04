@@ -1,10 +1,14 @@
 ﻿// SPDX-FileCopyrightText: Copyright 2025-2026 shadLauncher4 Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <AL/al.h>
+#include <AL/alc.h>
 #include <QDesktopServices>
 #include <QtWidgets>
 #include <SDL3/SDL_audio.h>
+#include <SDL3/SDL_camera.h>
 #include <SDL3/SDL_init.h>
+
 #include "VulkanDeviceLib.h"
 #include "background_music_player.h"
 #include "common/path_util.h"
@@ -335,6 +339,10 @@ void SettingsDialog::OtherConnections() {
         QDesktopServices::openUrl(QUrl::fromLocalFile(userPath));
     });
 
+    // ------------------ Audio tab --------------------------------------------------------
+    connect(ui->audioBackendComboBox, &QComboBox::currentIndexChanged, this,
+            &SettingsDialog::RefreshAudioDevices);
+
     // ------------------ Gui tab --------------------------------------------------------
     connect(ui->BGMVolumeSlider, &QSlider::valueChanged, this,
             [](int value) { BackgroundMusicPlayer::getInstance().SetVolume(value); });
@@ -399,11 +407,6 @@ void SettingsDialog::LoadValuesFromConfig() {
 
     // ------------------ General tab --------------------------------------------------------
     ui->showSplashCheckBox->setChecked(m_emu_settings->IsShowSplash());
-    ui->horizontalVolumeSlider->setValue(m_emu_settings->GetVolumeSlider());
-    ui->GenAudioComboBox->setCurrentText(
-        QString::fromStdString(m_emu_settings->GetSDLMainOutputDevice()));
-    ui->DsAudioComboBox->setCurrentText(
-        QString::fromStdString(m_emu_settings->GetSDLPadSpkOutputDevice()));
     ui->disableTrophycheckBox->setChecked(m_emu_settings->IsTrophyPopupDisabled());
     ui->popUpDurationSpinBox->setValue(m_emu_settings->GetTrophyNotificationDuration());
 
@@ -413,6 +416,16 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->radioButton_Top->setChecked(trophy_side == "top");
     ui->radioButton_Bottom->setChecked(trophy_side == "bottom");
     ui->showFpsCounterCheckBox->setChecked(m_emu_settings->IsShowFpsCounter());
+
+    // ------------------ Audio tab --------------------------------------------------------
+    ui->horizontalVolumeSlider->setValue(m_emu_settings->GetVolumeSlider());
+    ui->GenAudioComboBox->setCurrentText(
+        QString::fromStdString(m_emu_settings->GetSDLMainOutputDevice()));
+    ui->DsAudioComboBox->setCurrentText(
+        QString::fromStdString(m_emu_settings->GetSDLPadSpkOutputDevice()));
+
+    ui->audioBackendComboBox->setCurrentText(audioBackendMap[EmulatorSettings.GetAudioBackend()]);
+    RefreshAudioDevices();
 
     // ------------------ GUI tab --------------------------------------------------------
     ui->discordRPCCheckbox->setChecked(m_emu_settings->IsDiscordRPCEnabled());
@@ -469,6 +482,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->micComboBox->setCurrentText(QString::fromStdString(m_emu_settings->GetSDLMicDevice()));
     ui->motionControlsCheckBox->setChecked(m_emu_settings->IsMotionControlsEnabled());
     ui->backgroundControllerCheckBox->setChecked(m_emu_settings->IsBackgroundControllerInput());
+    ui->cameraComboBox->setCurrentIndex(EmulatorSettings.GetCameraId() + 1);
 
     // ------------------ Log tab --------------------------------------------------------
     ui->logFilterLineEdit->setText(QString::fromStdString(m_emu_settings->GetLogFilter()));
@@ -594,11 +608,6 @@ void SettingsDialog::ApplyValuesToBackend() {
 
     // ------------------ General tab --------------------------------------------------------
     m_emu_settings->SetShowSplash(ui->showSplashCheckBox->isChecked(), is_specific);
-    m_emu_settings->SetVolumeSlider(ui->horizontalVolumeSlider->value(), is_specific);
-    m_emu_settings->SetSDLMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString(),
-                                           is_specific);
-    m_emu_settings->SetSDLPadSpkOutputDevice(ui->DsAudioComboBox->currentText().toStdString(),
-                                             is_specific);
     m_emu_settings->SetTrophyPopupDisabled(ui->disableTrophycheckBox->isChecked(), is_specific);
     m_emu_settings->SetTrophyNotificationDuration(ui->popUpDurationSpinBox->value(), is_specific);
 
@@ -614,6 +623,27 @@ void SettingsDialog::ApplyValuesToBackend() {
     }
     m_emu_settings->SetTrophyNotificationSide(trophy_loc, is_specific);
     m_emu_settings->SetShowFpsCounter(ui->showFpsCounterCheckBox->isChecked(), is_specific);
+
+    // ------------------ Audio tab --------------------------------------------------------
+    const std::string backend = ui->audioBackendComboBox->currentText().toStdString();
+    EmulatorSettings.SetAudioBackend(audioBackendMap.key(QString::fromStdString(backend)));
+
+    if (backend == "SDL") {
+        EmulatorSettings.SetSDLMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString(),
+                                                is_specific);
+        EmulatorSettings.SetSDLPadSpkOutputDevice(ui->DsAudioComboBox->currentText().toStdString(),
+                                                  is_specific);
+        EmulatorSettings.SetSDLMicDevice(ui->micComboBox->currentText().toStdString(), is_specific);
+    } else if (backend == "OpenAL") {
+        EmulatorSettings.SetOpenALMainOutputDevice(
+            ui->GenAudioComboBox->currentText().toStdString(), is_specific);
+        EmulatorSettings.SetOpenALPadSpkOutputDevice(
+            ui->DsAudioComboBox->currentText().toStdString(), is_specific);
+        EmulatorSettings.SetOpenALMicDevice(ui->micComboBox->currentText().toStdString(),
+                                            is_specific);
+    }
+
+    m_emu_settings->SetVolumeSlider(ui->horizontalVolumeSlider->value(), is_specific);
 
     // ------------------ GUI tab --------------------------------------------------------
     m_emu_settings->SetDiscordRPCEnabled(ui->discordRPCCheckbox->isChecked());
@@ -664,6 +694,7 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetMotionControlsEnabled(ui->motionControlsCheckBox->isChecked(), is_specific);
     m_emu_settings->SetBackgroundControllerInput(ui->backgroundControllerCheckBox->isChecked(),
                                                  is_specific);
+    EmulatorSettings.SetCameraId(ui->cameraComboBox->currentIndex() - 1, is_specific);
 
     // ------------------ Log tab --------------------------------------------------------
     m_emu_settings->SetLogFilter(ui->logFilterLineEdit->text().toStdString(), is_specific);
@@ -867,48 +898,26 @@ void SettingsDialog::PopulateComboBoxes() {
         delete[] names[i];
     }
 
+    // Camera
+    ui->cameraComboBox->addItem(tr("None"));
+    if (!SDL_Init(SDL_INIT_CAMERA)) {
+        LOG_ERROR(Config, "SDL_INIT_CAMERA failed: {}", SDL_GetError());
+    }
+
+    int count = 0;
+    SDL_CameraID* devices = SDL_GetCameras(&count);
+    if (devices) {
+        for (int i = 0; i < count; i++) {
+            const char* name = SDL_GetCameraName(devices[i]);
+            ui->cameraComboBox->addItem(name);
+        }
+        SDL_free(devices);
+    }
+
+    SDL_QuitSubSystem(SDL_INIT_CAMERA);
+
     // Audio Devices
-    SDL_InitSubSystem(SDL_INIT_AUDIO);
-
-    ui->GenAudioComboBox->addItem(tr("Default Device"), "Default Device");
-    ui->DsAudioComboBox->addItem(tr("Default Device"), "Default Device");
-    int playback_count = 0;
-    SDL_AudioDeviceID* pdevices = SDL_GetAudioPlaybackDevices(&playback_count);
-    if (pdevices) {
-        for (int i = 0; i < playback_count; ++i) {
-            SDL_AudioDeviceID devId = pdevices[i];
-            const char* name = SDL_GetAudioDeviceName(devId);
-            if (name) {
-                QString qname = QString::fromUtf8(name);
-                ui->GenAudioComboBox->addItem(qname, QString::number(devId));
-                ui->DsAudioComboBox->addItem(qname, QString::number(devId));
-            }
-        }
-        SDL_free(pdevices);
-    } else {
-        qDebug() << "Error getting audio devices: " << SDL_GetError();
-    }
-
-    ui->micComboBox->addItem(micMap.key("None"), "None");
-    ui->micComboBox->addItem(micMap.key("Default Device"), "Default Device");
-    int recording_count = 0;
-    SDL_AudioDeviceID* rdevices = SDL_GetAudioRecordingDevices(&recording_count);
-    if (rdevices) {
-        for (int i = 0; i < recording_count; ++i) {
-            SDL_AudioDeviceID devId = rdevices[i];
-            const char* name = SDL_GetAudioDeviceName(devId);
-            if (name) {
-                QString qname = QString::fromUtf8(name);
-                ui->micComboBox->addItem(qname, QString::number(devId));
-            }
-        }
-        SDL_free(rdevices);
-    } else {
-        qDebug() << "Erro SDL_GetAudioRecordingDevices:" << SDL_GetError();
-    }
-
-    SDL_QuitSubSystem(SDL_INIT_AUDIO);
-    SDL_Quit();
+    RefreshAudioDevices();
 
     // Other Settings
     ui->hideCursorComboBox->addItem(tr("Never"));
@@ -919,6 +928,108 @@ void SettingsDialog::PopulateComboBoxes() {
     ui->usbComboBox->addItem(tr("Skylander Portal"));
     ui->usbComboBox->addItem(tr("Infinity Base"));
     ui->usbComboBox->addItem(tr("Dimensions Toypad"));
+}
+
+void SettingsDialog::RefreshAudioDevices() {
+    // prevent device list from refreshing too fast
+    QThread::msleep(100);
+
+    ui->GenAudioComboBox->clear();
+    ui->DsAudioComboBox->clear();
+    ui->micComboBox->clear();
+
+    const QString backend = ui->audioBackendComboBox->currentText();
+
+    QStringList playbackDeviceList;
+    QStringList recordingDeviceList;
+
+    ui->micComboBox->addItem(micMap.key("None"), "None");
+    ui->micComboBox->addItem(micMap.key("Default Device"), "Default Device");
+    ui->GenAudioComboBox->addItem(tr("Default Device"), "Default Device");
+    ui->DsAudioComboBox->addItem(tr("Default Device"), "Default Device");
+
+    if (backend == "SDL") {
+        if (!SDL_Init(SDL_INIT_AUDIO)) {
+            LOG_ERROR(Config, "SDL_INIT_AUDIO failed: {}", SDL_GetError());
+        }
+
+        // Playback
+        int deviceCount;
+        SDL_AudioDeviceID* playbackDevices = SDL_GetAudioPlaybackDevices(&deviceCount);
+
+        if (!playbackDevices) {
+            LOG_ERROR(Config, "Unable to retrieve audio device list {}", SDL_GetError());
+            return;
+        }
+
+        for (int i = 0; i < deviceCount; ++i) {
+            const char* name = SDL_GetAudioDeviceName(playbackDevices[i]);
+            std::string name_string = std::string(name);
+            playbackDeviceList.append(QString::fromStdString(name_string));
+        }
+
+        SDL_free(playbackDevices);
+
+        // Mics
+        int count = 0;
+        SDL_AudioDeviceID* recordingDevices = SDL_GetAudioRecordingDevices(&count);
+        if (recordingDevices) {
+            for (int i = 0; i < count; ++i) {
+                SDL_AudioDeviceID devId = recordingDevices[i];
+                const char* name = SDL_GetAudioDeviceName(devId);
+                if (name) {
+                    QString qname = QString::fromUtf8(name);
+                    ui->micComboBox->addItem(qname, QString::number(devId));
+                }
+            }
+            SDL_free(recordingDevices);
+        } else {
+            qDebug() << "Error SDL_GetAudioRecordingDevices:" << SDL_GetError();
+        }
+    } else if (backend == "OpenAL") {
+        // Playback
+        const ALCchar* playbackdevices = alcGetString(NULL, ALC_ALL_DEVICES_SPECIFIER);
+        if (playbackdevices) {
+            while (*playbackdevices != '\0') {
+                playbackDeviceList.append(QString::fromUtf8(playbackdevices));
+                playbackdevices += strlen(playbackdevices) + 1;
+            }
+        }
+
+        // Mics
+        if (alcIsExtensionPresent(NULL, "ALC_ENUMERATION_EXT") == AL_TRUE) {
+            const ALCchar* recordingDevices = alcGetString(NULL, ALC_CAPTURE_DEVICE_SPECIFIER);
+
+            if (recordingDevices) {
+                while (*recordingDevices != '\0') {
+                    recordingDeviceList.append(QString::fromUtf8(recordingDevices));
+                    recordingDevices += strlen(recordingDevices) + 1;
+                }
+            }
+        }
+
+        SDL_QuitSubSystem(SDL_INIT_AUDIO);
+        SDL_Quit();
+    }
+
+    ui->DsAudioComboBox->addItems(playbackDeviceList);
+    ui->GenAudioComboBox->addItems(playbackDeviceList);
+    ui->micComboBox->addItems(recordingDeviceList);
+
+    if (backend == "SDL") {
+        ui->GenAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetSDLMainOutputDevice()));
+        ui->DsAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetSDLPadSpkOutputDevice()));
+        ui->micComboBox->setCurrentText(QString::fromStdString(EmulatorSettings.GetSDLMicDevice()));
+    } else if (backend == "OpenAL") {
+        ui->GenAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALMainOutputDevice()));
+        ui->DsAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALPadSpkOutputDevice()));
+        ui->micComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALMicDevice()));
+    }
 }
 
 bool SettingsDialog::IsSettingOverrideable(const char* setting_key,

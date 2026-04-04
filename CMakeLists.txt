@@ -25,6 +25,7 @@ if(WIN32 AND NOT CMAKE_PREFIX_PATH)
 endif ()
 
 
+find_package(OpenAL CONFIG)
 find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Xml Network Multimedia)
 qt_standard_project_setup()
 set(CMAKE_AUTORCC ON)
@@ -338,7 +339,7 @@ cmrc_add_resource_library(embedded-resources
         src/images/silver.png)
 target_link_libraries(shadLauncher4 PRIVATE res::embedded)
 
-target_link_libraries(shadLauncher4 PRIVATE fmt::fmt Qt6::Widgets Qt6::Concurrent Qt6::Xml Qt6::Network Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static)
+target_link_libraries(shadLauncher4 PRIVATE fmt::fmt Qt6::Widgets Qt6::Concurrent Qt6::Xml Qt6::Network Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL)
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
 endif()
