@@ -296,111 +296,110 @@
     <name>CheckUpdate</name>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Automatische Updates - Be­nut­zer­ober­flä­che</translation>
     </message>
     <message>
       <source>Auto Updater</source>
-      <translation type="unfinished">Auto Updater</translation>
+      <translation>Automatische Updates</translation>
     </message>
     <message>
       <source>The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</source>
-      <translation type="unfinished">The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</translation>
+      <translation>Der Automatische Updater erlaubt bis zu 60 Überprüfungen pro Stunde.\nDieses Limit wurde erreicht. Bitte versuche es später erneut.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Fehler</translation>
     </message>
     <message>
       <source>Network error:</source>
-      <translation type="unfinished">Network error:</translation>
+      <translation>Netzwerkfehler:</translation>
     </message>
     <message>
       <source>Failed to parse update information.</source>
-      <translation type="unfinished">Failed to parse update information.</translation>
+      <translation>Fehler beim Verarbeiten der Update-Informationen.</translation>
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation type="unfinished">No pre-releases found.</translation>
+      <translation>Keine Vorabversionen gefunden.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>Keine Download-URL für die ausgewählte Ressource gefunden.</translation>
     </message>
     <message>
       <source>Your version is already up to date!</source>
-      <translation type="unfinished">Your version is already up to date!</translation>
+      <translation>Ihre Version ist bereits aktuell!</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Update verfügbar - Be­nut­zer­ober­flä­che</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Aktuelle Version</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Neueste Version</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation type="unfinished">Check for Updates at Startup</translation>
+      <translation>Beim Start nach Updates suchen</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Möchten Sie updaten?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Update</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Nein</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>Changelog anzeigen</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>Changelog verbergen</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Änderungen</translation>
     </message>
     <message>
       <source>Network error occurred while trying to access the URL</source>
-      <translation type="unfinished">Network error occurred while trying to access the URL</translation>
+      <translation>Beim Zugriff auf die URL ist ein Netzwerkfehler aufgetreten</translation>
     </message>
     <message>
       <source>Download Complete</source>
-      <translation type="unfinished">Download Complete</translation>
+      <translation>Download abgeschlossen</translation>
     </message>
     <message>
       <source>The update has been downloaded, press OK to install.</source>
-      <translation type="unfinished">The update has been downloaded, press OK to install.</translation>
+      <translation>Das Update wurde downgeloadet, drücke OK zum Installieren.</translation>
     </message>
     <message>
       <source>Failed to save the update file at</source>
-      <translation type="unfinished">Failed to save the update file at</translation>
+      <translation>Fehler beim Speichern der Update-Datei unter</translation>
     </message>
     <message>
       <source>Failed to extract the update ZIP:
 </source>
-      <translation type="unfinished">Failed to extract the update ZIP:
+      <translation>Entpacken des ZIP Updates fehlgeschlagen:
 </translation>
     </message>
     <message>
       <source>Failed to create update script:
 </source>
-      <translation type="unfinished">Failed to create update script:
-</translation>
+      <translation>Fehler beim Erstellen des Update-Skripts:</translation>
     </message>
     <message>
       <source>Failed to start update process.</source>
-      <translation type="unfinished">Failed to start update process.</translation>
+      <translation>Fehler beim Starten des Update-Prozesses.</translation>
     </message>
   </context>
   <context>
@@ -1381,7 +1380,7 @@ Benutze lokale Datenbank.
     </message>
     <message>
       <source>&amp;Launch game</source>
-      <translation type="unfinished">&amp;Launch game</translation>
+      <translation>&amp;Spiel starten</translation>
     </message>
     <message>
       <source>&amp;Launch game with current settings</source>
@@ -1401,7 +1400,7 @@ Benutze lokale Datenbank.
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
-      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
+      <translation>Keine Spiele gefunden. Bitte füge zuerst deine Spiele zu deiner Bibliothek hinzu.</translation>
     </message>
   </context>
   <context>
@@ -2211,11 +2210,11 @@ Benutze lokale Datenbank.
     </message>
     <message>
       <source>No valid PKG decryption keys found. Please set them up in the Crypto Key Manager.</source>
-      <translation type="unfinished">No valid PKG decryption keys found. Please set them up in the Crypto Key Manager.</translation>
+      <translation>Keinen gültigen Schlüssel, für die PKG-Entschlüsselung, gefunden. Bitte richte die in der Kryptografie Schlüsselverwaltung ein.</translation>
     </message>
     <message>
       <source>No valid Fake PKG decryption keys found. Please set them up in the Crypto Key Manager.</source>
-      <translation type="unfinished">No valid Fake PKG decryption keys found. Please set them up in the Crypto Key Manager.</translation>
+      <translation>Keinen gültigen Fake Schlüssel, für die PKG-Entschlüsselung, gefunden. Bitte richte die in der Kryptografie Schlüsselverwaltung ein.</translation>
     </message>
     <message>
       <source>PKG Install</source>
@@ -2327,7 +2326,7 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     </message>
     <message>
       <source>Check for Updates</source>
-      <translation type="unfinished">Check for Updates</translation>
+      <translation>Auf Updates prüfen</translation>
     </message>
   </context>
   <context>
@@ -3257,7 +3256,7 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     </message>
     <message>
       <source>Custom Settings for %1 [%2]</source>
-      <translation type="unfinished">Custom Settings for %1 [%2]</translation>
+      <translation>Eigene Einstellungen für %1 [%2]</translation>
     </message>
     <message>
       <source>Global Settings</source>
@@ -3287,7 +3286,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Settings Restored</source>
-      <translation type="unfinished">Settings Restored</translation>
+      <translation>Einstellungen wiederhergestellt</translation>
     </message>
     <message>
       <source>Game settings restored to global defaults.</source>
@@ -3307,31 +3306,31 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>PS4 Fonts Path</source>
-      <translation type="unfinished">PS4 Fonts Path</translation>
+      <translation>PS4 Schriftarten-Pfad</translation>
     </message>
     <message>
       <source>Select directory for System fonts</source>
-      <translation type="unfinished">Select directory for System fonts</translation>
+      <translation>Wähle ein Verzeichnis für Systemschriftarten</translation>
     </message>
     <message>
       <source>Identical Log Grouped</source>
-      <translation type="unfinished">Identical Log Grouped</translation>
+      <translation>Identische Protokollzeilen gruppieren</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
-      <translation type="unfinished">Readbacks Mode</translation>
+      <translation>Readback-Modus</translation>
     </message>
     <message>
       <source>Disabled</source>
-      <translation type="unfinished">Disabled</translation>
+      <translation>Deaktiviert</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Gelockert</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Präzise</translation>
     </message>
   </context>
   <context>
@@ -3390,11 +3389,11 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>System Fonts Folder:\nThe folder where system fonts are loaded from.</source>
-      <translation type="unfinished">System Fonts Folder:\nThe folder where system fonts are loaded from.</translation>
+      <translation>PS4 Schriftarten-Pfad:\nDer Ordner, aus denen die Schriftarten der PS4 geladen werden können.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Fonts folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the System Fonts folder.</translation>
+      <translation>Durchsuchen:\nLege einen Ordner für die PS4 Schriftarten fest.</translation>
     </message>
     <message>
       <source>Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</source>
@@ -3405,7 +3404,7 @@ This will remove all game-specific overrides.</translation>
     <name>TrophyViewer</name>
     <message>
       <source>Progress</source>
-      <translation type="unfinished">Progress</translation>
+      <translation>Fortschritt</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
@@ -3413,19 +3412,19 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Select Game:</source>
-      <translation type="unfinished">Select Game:</translation>
+      <translation>Spiel auswählen:</translation>
     </message>
     <message>
       <source>Show Earned Trophies</source>
-      <translation type="unfinished">Show Earned Trophies</translation>
+      <translation>Verdiente Trophäen anzeigen</translation>
     </message>
     <message>
       <source>Show Not Earned Trophies</source>
-      <translation type="unfinished">Show Not Earned Trophies</translation>
+      <translation>Nicht verdiente Trophäen anzeigen</translation>
     </message>
     <message>
       <source>Show Hidden Trophies</source>
-      <translation type="unfinished">Show Hidden Trophies</translation>
+      <translation>Verborgene Trophäen anzeigen</translation>
     </message>
   </context>
   <context>
@@ -3789,7 +3788,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Custom version installed successfully:</source>
-      <translation type="unfinished">Custom version installed successfully:</translation>
+      <translation>Eigene Version erfolgreich installiert:</translation>
     </message>
     <message>
       <source>1. Version folder:</source>
@@ -3797,15 +3796,15 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>2. Installed to:</source>
-      <translation type="unfinished">2. Installed to:</translation>
+      <translation>2. Installiert nach:</translation>
     </message>
     <message>
       <source>ZIP extraction failed:</source>
-      <translation type="unfinished">ZIP extraction failed:</translation>
+      <translation>ZIP-Extraktion fehlgeschlagen:</translation>
     </message>
     <message>
       <source>Executable not found in extracted files.</source>
-      <translation type="unfinished">Executable not found in extracted files.</translation>
+      <translation>Ausführbare Datei wurde nicht in extrahierten Dateien gefunden.</translation>
     </message>
     <message>
       <source>Version %1 has been:</source>
@@ -3825,15 +3824,15 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
-      <translation type="unfinished">Executable (*.exe);;Zip Archive (*.zip)</translation>
+      <translation>Ausführbare Datei (*.exe);;Zip-Archiv (*.zip)</translation>
     </message>
     <message>
       <source>Executable (*);;Zip Archive (*.zip)</source>
-      <translation type="unfinished">Executable (*);;Zip Archive (*.zip)</translation>
+      <translation>Ausführbare Datei (*);;Zip-Archiv (*.zip)</translation>
     </message>
     <message>
       <source>Executable (*.*);;Zip Archive (*.zip)</source>
-      <translation type="unfinished">Executable (*.*);;Zip Archive (*.zip)</translation>
+      <translation>Ausführbare Datei (*.*);;Zip-Archiv (*.zip)</translation>
     </message>
     <message>
       <source>Select executable or zip file</source>
@@ -3845,7 +3844,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Failed to extract zip file:</source>
-      <translation type="unfinished">Failed to extract zip file:</translation>
+      <translation>Entpacken der Zip-Datei fehlgeschlagen:</translation>
     </message>
     <message>
       <source>Install as Current Version</source>
