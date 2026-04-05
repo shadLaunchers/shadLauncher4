@@ -1397,11 +1397,11 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Visualizador de Troféus</translation>
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
-      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
+      <translation>Nenhum jogo encontrado. Por favor, adicione os jogos à sua biblioteca primeiro.</translation>
     </message>
   </context>
   <context>
@@ -3405,27 +3405,27 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     <name>TrophyViewer</name>
     <message>
       <source>Progress</source>
-      <translation type="unfinished">Progress</translation>
+      <translation>Progresso</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Visualizador de Troféus</translation>
     </message>
     <message>
       <source>Select Game:</source>
-      <translation type="unfinished">Select Game:</translation>
+      <translation>Selecionar Jogo:</translation>
     </message>
     <message>
       <source>Show Earned Trophies</source>
-      <translation type="unfinished">Show Earned Trophies</translation>
+      <translation>Mostrar Troféus Conquistados</translation>
     </message>
     <message>
       <source>Show Not Earned Trophies</source>
-      <translation type="unfinished">Show Not Earned Trophies</translation>
+      <translation>Mostrar Troféus Não Conquistados</translation>
     </message>
     <message>
       <source>Show Hidden Trophies</source>
-      <translation type="unfinished">Show Hidden Trophies</translation>
+      <translation>Mostrar Troféus Ocultos</translation>
     </message>
   </context>
   <context>
@@ -3829,11 +3829,11 @@ A versão de pré-lançamento foi salva em: %1</translation>
     </message>
     <message>
       <source>Executable (*);;Zip Archive (*.zip)</source>
-      <translation>Executável (*.exe);;Arquivo Zip (*.zip)</translation>
+      <translation>Executável (*);;Arquivo Zip (*.zip)</translation>
     </message>
     <message>
       <source>Executable (*.*);;Zip Archive (*.zip)</source>
-      <translation>Executável (*.exe);;Arquivo Zip (*.zip)</translation>
+      <translation>Executável (*.*);;Arquivo Zip (*.zip)</translation>
     </message>
     <message>
       <source>Select executable or zip file</source>
