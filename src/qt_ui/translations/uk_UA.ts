@@ -1395,6 +1395,14 @@ Using local database.
       <source>&amp;Launch game with global settings</source>
       <translation>&amp;Запустити гру з глобальними параметрами</translation>
     </message>
+    <message>
+      <source>Trophy Viewer</source>
+      <translation type="unfinished">Trophy Viewer</translation>
+    </message>
+    <message>
+      <source>No games found. Please add your games to your library first.</source>
+      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
+    </message>
   </context>
   <context>
     <name>GameListGrid</name>
@@ -3399,6 +3407,33 @@ This will remove all game-specific overrides.</source>
     <message>
       <source>Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</source>
       <translation>Режим зворотного зчитування:\nКерує тим, як емулятор обробляє зворотне зчитування з ГП. Увімкнення цього параметру покращує роботу деяких ігор.\nРекомендовано вибрати «Вимкнено»\nРежим «Розслаблено» такий самий, як і «Точний», але використовує менше бар'єрів захисту, що може дати більше к / с.\nДля максимальної сумісності, коли необхідно зчитувати дані, слід використовувати точний режим</translation>
+    </message>
+  </context>
+  <context>
+    <name>TrophyViewer</name>
+    <message>
+      <source>Progress</source>
+      <translation type="unfinished">Progress</translation>
+    </message>
+    <message>
+      <source>Trophy Viewer</source>
+      <translation type="unfinished">Trophy Viewer</translation>
+    </message>
+    <message>
+      <source>Select Game:</source>
+      <translation type="unfinished">Select Game:</translation>
+    </message>
+    <message>
+      <source>Show Earned Trophies</source>
+      <translation type="unfinished">Show Earned Trophies</translation>
+    </message>
+    <message>
+      <source>Show Not Earned Trophies</source>
+      <translation type="unfinished">Show Not Earned Trophies</translation>
+    </message>
+    <message>
+      <source>Show Hidden Trophies</source>
+      <translation type="unfinished">Show Hidden Trophies</translation>
     </message>
   </context>
   <context>
