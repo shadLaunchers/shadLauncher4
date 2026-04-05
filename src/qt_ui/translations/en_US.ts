@@ -1381,6 +1381,14 @@ Using local database.
         <source>&amp;Launch game with global settings</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Trophy Viewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No games found. Please add your games to your library first.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GameListGrid</name>
@@ -3361,6 +3369,33 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
         <source>Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TrophyViewer</name>
+    <message>
+        <source>Progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy Viewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Game:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Earned Trophies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Not Earned Trophies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Hidden Trophies</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
