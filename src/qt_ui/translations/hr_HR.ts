@@ -3342,6 +3342,14 @@ To će ukloniti sve igri-specifične postavke.</translation>
       <source>Precise</source>
       <translation>Precizno</translation>
     </message>
+    <message>
+      <source>Audio Backend</source>
+      <translation type="unfinished">Audio Backend</translation>
+    </message>
+    <message>
+      <source>Camera Device</source>
+      <translation type="unfinished">Camera Device</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
