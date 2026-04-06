@@ -1397,11 +1397,11 @@ Se va a utilizar la base de datos local.
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Visualizador de trofeos</translation>
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
-      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
+      <translation>No se han encontrado juegos. Primero tienes que añadir tus juegos a la biblioteca.</translation>
     </message>
   </context>
   <context>
@@ -3335,11 +3335,11 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>«Back-end» de audio</translation>
     </message>
     <message>
       <source>Camera Device</source>
-      <translation type="unfinished">Camera Device</translation>
+      <translation>Dispositivo de cámara</translation>
     </message>
   </context>
   <context>
@@ -3413,27 +3413,27 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     <name>TrophyViewer</name>
     <message>
       <source>Progress</source>
-      <translation type="unfinished">Progress</translation>
+      <translation>Progreso</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Visualizador de trofeos</translation>
     </message>
     <message>
       <source>Select Game:</source>
-      <translation type="unfinished">Select Game:</translation>
+      <translation>Selecciona un juego:</translation>
     </message>
     <message>
       <source>Show Earned Trophies</source>
-      <translation type="unfinished">Show Earned Trophies</translation>
+      <translation>Mostrar trofeos ganados</translation>
     </message>
     <message>
       <source>Show Not Earned Trophies</source>
-      <translation type="unfinished">Show Not Earned Trophies</translation>
+      <translation>Mostrar trofeos no ganados</translation>
     </message>
     <message>
       <source>Show Hidden Trophies</source>
-      <translation type="unfinished">Show Hidden Trophies</translation>
+      <translation>Mostrar trofeos ocultos</translation>
     </message>
   </context>
   <context>
