@@ -3304,6 +3304,14 @@ This will remove all game-specific overrides.</source>
         <source>Precise</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Audio Backend</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Camera Device</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsDialogHelperTexts</name>
