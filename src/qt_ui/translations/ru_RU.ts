@@ -1395,11 +1395,11 @@ Using local database.
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Просмотр трофеев</translation>
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
-      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
+      <translation>Игры не найдены. Пожалуйста, сначала добавьте свои игры в библиотеку.</translation>
     </message>
   </context>
   <context>
@@ -3341,11 +3341,11 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Бэкенд аудио</translation>
     </message>
     <message>
       <source>Camera Device</source>
-      <translation type="unfinished">Camera Device</translation>
+      <translation>Камера</translation>
     </message>
   </context>
   <context>
@@ -3419,27 +3419,27 @@ This will remove all game-specific overrides.</source>
     <name>TrophyViewer</name>
     <message>
       <source>Progress</source>
-      <translation type="unfinished">Progress</translation>
+      <translation>Прогресс</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Просмотр трофеев</translation>
     </message>
     <message>
       <source>Select Game:</source>
-      <translation type="unfinished">Select Game:</translation>
+      <translation>Выберите игру:</translation>
     </message>
     <message>
       <source>Show Earned Trophies</source>
-      <translation type="unfinished">Show Earned Trophies</translation>
+      <translation>Показать заработанные трофеи</translation>
     </message>
     <message>
       <source>Show Not Earned Trophies</source>
-      <translation type="unfinished">Show Not Earned Trophies</translation>
+      <translation>Показать не заработанные трофеи</translation>
     </message>
     <message>
       <source>Show Hidden Trophies</source>
-      <translation type="unfinished">Show Hidden Trophies</translation>
+      <translation>Показать скрытые трофеи</translation>
     </message>
   </context>
   <context>
