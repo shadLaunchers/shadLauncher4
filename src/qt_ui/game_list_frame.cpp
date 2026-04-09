@@ -1619,9 +1619,8 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
                 [cheatsPatches]() { cheatsPatches->deleteLater(); });
     });
 
-    QMenu* trophy_viewer = menu.addMenu(tr("&Trophy Viewer"));
-    QAction* user_action = trophy_viewer->addAction("User 1");
-    connect(user_action, &QAction::triggered, this, [this, current_game] {
+    QAction* trophy_viewer = menu.addAction(tr("&Trophy Viewer"));
+    connect(trophy_viewer, &QAction::triggered, this, [this, current_game] {
         if (m_game_data.empty()) {
             QMessageBox::information(
                 this, tr("Trophy Viewer"),
