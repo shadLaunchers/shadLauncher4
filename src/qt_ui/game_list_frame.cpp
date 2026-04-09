@@ -1334,15 +1334,16 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
             dlc_path, m_emu_settings->GetAddonInstallDir() /
                           Common::FS::PathFromQString(game_path).parent_path().filename());
 
-        // TODO: Replace 1 with the user's number
+        std::string default_user_id =
+            std::to_string(UserSettings.GetUserManager().GetDefaultUser().user_id);
         QString save_data_path;
-        Common::FS::PathToQString(save_data_path,
-                                  Common::FS::GetUserPath(Common::FS::PathType::UserDir) /
-                                      "savedata" / "1" / gameinfo->info.serial);
+        Common::FS::PathToQString(save_data_path, EmulatorSettings.GetHomeDir() / default_user_id /
+                                                      "savedata" / gameinfo->info.save_dir);
 
         // QString trophy_path;
         // Common::FS::PathToQString(trophy_path,
-        //                           Common::FS::GetUserPath(Common::FS::PathType::MetaDataDir) /
+        //                           Common::FS::GetUserPath(Common::FS::PathType::MetaDataDir)
+        //                           /
         //                               gameinfo->info.serial / "TrophyFiles");
 
         switch (type) {
@@ -1619,9 +1620,8 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
                 [cheatsPatches]() { cheatsPatches->deleteLater(); });
     });
 
-    QMenu* trophy_viewer = menu.addMenu(tr("&Trophy Viewer"));
-    QAction* user_action = trophy_viewer->addAction("User 1");
-    connect(user_action, &QAction::triggered, this, [this, current_game] {
+    QAction* trophy_viewer = menu.addAction(tr("&Trophy Viewer"));
+    connect(trophy_viewer, &QAction::triggered, this, [this, current_game] {
         if (m_game_data.empty()) {
             QMessageBox::information(
                 this, tr("Trophy Viewer"),
