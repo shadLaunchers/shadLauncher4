@@ -3435,6 +3435,14 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
       <source>Show Hidden Trophies</source>
       <translation type="unfinished">Show Hidden Trophies</translation>
     </message>
+    <message>
+      <source>Select User:</source>
+      <translation type="unfinished">Select User:</translation>
+    </message>
+    <message>
+      <source>%1 trophies for %2</source>
+      <translation type="unfinished">%1 trophies for %2</translation>
+    </message>
   </context>
   <context>
     <name>UserManagerDialog</name>
