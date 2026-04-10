@@ -3406,6 +3406,14 @@ This will remove all game-specific overrides.</source>
         <source>Show Hidden Trophies</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Select User:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 trophies for %2</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>UserManagerDialog</name>
