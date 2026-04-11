@@ -1397,11 +1397,11 @@ Using local database.
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Переглядач трофеїв</translation>
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
-      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
+      <translation>Не знайдено жодної гри. Спочатку додайте свої ігри до бібліотеки.</translation>
     </message>
   </context>
   <context>
@@ -3343,11 +3343,11 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Аудіосистема</translation>
     </message>
     <message>
       <source>Camera Device</source>
-      <translation type="unfinished">Camera Device</translation>
+      <translation>Камера</translation>
     </message>
   </context>
   <context>
@@ -3421,35 +3421,35 @@ This will remove all game-specific overrides.</source>
     <name>TrophyViewer</name>
     <message>
       <source>Progress</source>
-      <translation type="unfinished">Progress</translation>
+      <translation>Прогрес</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Переглядач трофеїв</translation>
     </message>
     <message>
       <source>Select Game:</source>
-      <translation type="unfinished">Select Game:</translation>
+      <translation>Виберіть гру:</translation>
     </message>
     <message>
       <source>Show Earned Trophies</source>
-      <translation type="unfinished">Show Earned Trophies</translation>
+      <translation>Показати отримані трофеї</translation>
     </message>
     <message>
       <source>Show Not Earned Trophies</source>
-      <translation type="unfinished">Show Not Earned Trophies</translation>
+      <translation>Показати не отримані трофеї</translation>
     </message>
     <message>
       <source>Show Hidden Trophies</source>
-      <translation type="unfinished">Show Hidden Trophies</translation>
+      <translation>Показати приховані трофеї</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Виберіть користувача:</translation>
     </message>
     <message>
       <source>%1 trophies for %2</source>
-      <translation type="unfinished">%1 trophies for %2</translation>
+      <translation>%1 трофеїв для %2</translation>
     </message>
   </context>
   <context>
@@ -3849,93 +3849,93 @@ The pre-release version has been saved to: %1</source>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
-      <translation type="unfinished">Executable (*.exe);;Zip Archive (*.zip)</translation>
+      <translation>Виконуваний файл (*.exe);;Zip-архів (*.zip)</translation>
     </message>
     <message>
       <source>Executable (*);;Zip Archive (*.zip)</source>
-      <translation type="unfinished">Executable (*);;Zip Archive (*.zip)</translation>
+      <translation>Виконуваний файл (*);;Zip-архів (*.zip)</translation>
     </message>
     <message>
       <source>Executable (*.*);;Zip Archive (*.zip)</source>
-      <translation type="unfinished">Executable (*.*);;Zip Archive (*.zip)</translation>
+      <translation>Виконуваний файл (*.*);;Zip-архів (*.zip)</translation>
     </message>
     <message>
       <source>Select executable or zip file</source>
-      <translation type="unfinished">Select executable or zip file</translation>
+      <translation>Виберіть виконуваний або zip-файл</translation>
     </message>
     <message>
       <source>No executable found in the extracted zip file.</source>
-      <translation type="unfinished">No executable found in the extracted zip file.</translation>
+      <translation>Не знайдено виконуваних файлів у розпакованому zip-файлі.</translation>
     </message>
     <message>
       <source>Failed to extract zip file:</source>
-      <translation type="unfinished">Failed to extract zip file:</translation>
+      <translation>Не вдалося розпакувати zip-файл:</translation>
     </message>
     <message>
       <source>Install as Current Version</source>
-      <translation type="unfinished">Install as Current Version</translation>
+      <translation>Встановити як поточну версію</translation>
     </message>
     <message>
       <source>Do you want to install this version as the current version?
 This will replace the existing emulator executable and copy all necessary files.</source>
-      <translation type="unfinished">Do you want to install this version as the current version?
-This will replace the existing emulator executable and copy all necessary files.</translation>
+      <translation>Бажаєте встановити цю версію як поточну?
+Це замінить наявний виконуваний файл емулятора та скопіює всі необхідні файли.</translation>
     </message>
     <message>
       <source>Some files could not be copied to the application directory.
 The version may not run correctly.</source>
-      <translation type="unfinished">Some files could not be copied to the application directory.
-The version may not run correctly.</translation>
+      <translation>Деякі файли не вдалося скопіювати до каталогу застосунку.
+Можливо, ця версія працюватиме некоректно.</translation>
     </message>
     <message>
       <source>Version %1 has been installed with all files to:
 %2</source>
-      <translation type="unfinished">Version %1 has been installed with all files to:
+      <translation>Версію %1 було встановлено з усіма файлами до:
 %2</translation>
     </message>
     <message>
       <source>Version %1 has been installed to:
 %2</source>
-      <translation type="unfinished">Version %1 has been installed to:
+      <translation>Версію %1 було встановлено до:
 %2</translation>
     </message>
     <message>
       <source>Custom (ZIP)</source>
-      <translation type="unfinished">Custom (ZIP)</translation>
+      <translation>Користувацький (ZIP)</translation>
     </message>
     <message>
       <source>2. Extracted from:</source>
-      <translation type="unfinished">2. Extracted from:</translation>
+      <translation>2. Витягнуто з:</translation>
     </message>
     <message>
       <source>3. Executable found:</source>
-      <translation type="unfinished">3. Executable found:</translation>
+      <translation>3. Знайдено виконувальний файл:</translation>
     </message>
     <message>
       <source>4. Build hash:</source>
-      <translation type="unfinished">4. Build hash:</translation>
+      <translation>4. Хеш збірки:</translation>
     </message>
     <message>
       <source>
 
 Set as current version with all files copied to app directory.</source>
-      <translation type="unfinished">
+      <translation>
 
-Set as current version with all files copied to app directory.</translation>
+Встановити як поточну версію з копіюванням усіх файлів до каталогу застосунку.</translation>
     </message>
     <message>
       <source>
 
 To use this version, select it from the installed list.</source>
-      <translation type="unfinished">
+      <translation>
 
-To use this version, select it from the installed list.</translation>
+Щоби використовувати цю версію, виберіть її зі встановленого списку.</translation>
     </message>
     <message>
       <source>Failed to copy the selected version to the application directory.
 The version may not run correctly when launched.</source>
-      <translation type="unfinished">Failed to copy the selected version to the application directory.
-The version may not run correctly when launched.</translation>
+      <translation>Не вдалося скопіювати вибрану версію до каталогу застосунку.
+Можливо, версія працюватиме некоректно після запуску.</translation>
     </message>
   </context>
 </TS>
