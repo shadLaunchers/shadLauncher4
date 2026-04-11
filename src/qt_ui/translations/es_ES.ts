@@ -3435,6 +3435,14 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
       <source>Show Hidden Trophies</source>
       <translation>Mostrar trofeos ocultos</translation>
     </message>
+    <message>
+      <source>Select User:</source>
+      <translation type="unfinished">Select User:</translation>
+    </message>
+    <message>
+      <source>%1 trophies for %2</source>
+      <translation type="unfinished">%1 trophies for %2</translation>
+    </message>
   </context>
   <context>
     <name>UserManagerDialog</name>
