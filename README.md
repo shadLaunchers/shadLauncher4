@@ -58,7 +58,6 @@ cd shadLauncher4
 ---
 
 ### Linux
-## Additional prerequisites
 **Arch Linux**
 ```sh
 sudo pacman -S --needed \
