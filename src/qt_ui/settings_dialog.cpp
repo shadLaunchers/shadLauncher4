@@ -9,7 +9,53 @@
 #include <SDL3/SDL_camera.h>
 #include <SDL3/SDL_init.h>
 
+#ifdef _WIN32
 #include "VulkanDeviceLib.h"
+#else
+#include <cstring>
+#include <vector>
+#include <vulkan/vulkan.h>
+
+static int GetVulkanDeviceCount() {
+    VkApplicationInfo app{};
+    app.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+    app.apiVersion = VK_API_VERSION_1_0;
+    VkInstanceCreateInfo ci{};
+    ci.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+    ci.pApplicationInfo = &app;
+    VkInstance instance;
+    if (vkCreateInstance(&ci, nullptr, &instance) != VK_SUCCESS)
+        return 0;
+    uint32_t count = 0;
+    vkEnumeratePhysicalDevices(instance, &count, nullptr);
+    vkDestroyInstance(instance, nullptr);
+    return static_cast<int>(count);
+}
+
+static int GetVulkanDeviceNames(char** names, int maxDevices, int maxNameLength) {
+    VkApplicationInfo app{};
+    app.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+    app.apiVersion = VK_API_VERSION_1_0;
+    VkInstanceCreateInfo ci{};
+    ci.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+    ci.pApplicationInfo = &app;
+    VkInstance instance;
+    if (vkCreateInstance(&ci, nullptr, &instance) != VK_SUCCESS)
+        return 0;
+    uint32_t count = static_cast<uint32_t>(maxDevices);
+    std::vector<VkPhysicalDevice> devices(count);
+    vkEnumeratePhysicalDevices(instance, &count, devices.data());
+    for (uint32_t i = 0; i < count; ++i) {
+        VkPhysicalDeviceProperties props{};
+        vkGetPhysicalDeviceProperties(devices[i], &props);
+        std::strncpy(names[i], props.deviceName, static_cast<size_t>(maxNameLength) - 1);
+        names[i][maxNameLength - 1] = '\0';
+    }
+    vkDestroyInstance(instance, nullptr);
+    return static_cast<int>(count);
+}
+#endif
+
 #include "background_music_player.h"
 #include "common/path_util.h"
 #include "core/emulator_settings.h"

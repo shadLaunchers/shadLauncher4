@@ -1953,7 +1953,7 @@ void GameListFrame::requestShortcut(const GameInfo& currentInfo, QString emuPath
 #else
     linkPath =
         QStandardPaths::writableLocation(QStandardPaths::DesktopLocation) + "/" +
-        QString::fromStdString(selectedInfo.name).remove(QRegularExpression("[\\\\/:*?\"<>|]")) +
+        QString::fromStdString(currentInfo.name).remove(QRegularExpression("[\\\\/:*?\"<>|]")) +
         ".desktop";
 #endif
     // Convert the icon to .ico if necessary
@@ -1964,7 +1964,7 @@ void GameListFrame::requestShortcut(const GameInfo& currentInfo, QString emuPath
 #ifdef Q_OS_WIN
             if (createShortcutWin(linkPath, ebootPath, icoPath, exePath, emuPath)) {
 #else
-            if (createShortcutLinux(linkPath, selectedInfo.name, ebootPath, iconPath, emuPath)) {
+            if (createShortcutLinux(linkPath, currentInfo.name, ebootPath, iconPath, emuPath)) {
 #endif
                 QMessageBox::information(
                     nullptr, tr("Shortcut creation"),
@@ -1983,7 +1983,7 @@ void GameListFrame::requestShortcut(const GameInfo& currentInfo, QString emuPath
 #ifdef Q_OS_WIN
         if (createShortcutWin(linkPath, ebootPath, iconPath, exePath, emuPath)) {
 #else
-        if (createShortcutLinux(linkPath, selectedInfo.name, ebootPath, iconPath, emuPath)) {
+        if (createShortcutLinux(linkPath, currentInfo.name, ebootPath, iconPath, emuPath)) {
 #endif
             QMessageBox::information(
                 nullptr, tr("Shortcut creation"),
@@ -2037,6 +2037,35 @@ bool GameListFrame::createShortcutWin(const QString& linkPath, const QString& ta
     CoUninitialize();
 
     return SUCCEEDED(hres);
+}
+#else
+bool GameListFrame::createShortcutLinux(const QString& linkPath, const std::string& name,
+                                        const QString& targetPath, const QString& iconPath,
+                                        QString emuPath) {
+    QFile file(linkPath);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+        return false;
+
+    QString arguments;
+    if (emuPath.isEmpty())
+        arguments = QString("-d -g \"%1\"").arg(targetPath);
+    else
+        arguments = QString("-e \"%1\" -g \"%2\"").arg(emuPath, targetPath);
+
+    const QString exePath = QCoreApplication::applicationFilePath();
+
+    QTextStream out(&file);
+    out << "[Desktop Entry]\n";
+    out << "Type=Application\n";
+    out << "Name=" << QString::fromStdString(name) << "\n";
+    out << "Exec=" << exePath << " " << arguments << "\n";
+    out << "Icon=" << iconPath << "\n";
+    out << "Categories=Game;\n";
+    file.close();
+
+    // Mark the .desktop file executable
+    file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeGroup);
+    return true;
 }
 #endif
 

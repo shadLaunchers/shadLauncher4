@@ -2,11 +2,15 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <array>
-#include <Windows.h>
-#include <bcrypt.h>
+#include <stdexcept>
 #include "crypto.h"
 #include "key_manager.h"
 #include "picosha2.h"
+
+#ifdef _WIN32
+#include <Windows.h>
+#include <bcrypt.h>
+#include <intrin.h>
 
 template <typename TKeyset>
 static BCRYPT_KEY_HANDLE ImportRsaPrivateKey(const TKeyset& keyset) {
@@ -85,6 +89,110 @@ void Crypto::RSA2048Decrypt(std::span<u8, 32> dec_key, std::span<const u8, 256> 
 
     std::copy_n(plaintext.begin(), dec_key.size(), dec_key.begin());
 }
+
+#else // Linux / macOS
+#include <cpuid.h>
+#include <immintrin.h>
+#include <wmmintrin.h>
+#include <openssl/bn.h>
+#include <openssl/core_names.h>
+#include <openssl/evp.h>
+#include <openssl/param_build.h>
+#include <openssl/rsa.h>
+
+template <typename TKeyset>
+static EVP_PKEY* ImportRsaPrivateKey(const TKeyset& keyset) {
+    auto bn = [](const std::vector<u8>& v) {
+        return BN_bin2bn(v.data(), static_cast<int>(v.size()), nullptr);
+    };
+
+    BIGNUM* n  = bn(keyset.Modulus);
+    BIGNUM* e  = bn(keyset.PublicExponent);
+    BIGNUM* d  = bn(keyset.PrivateExponent);
+    BIGNUM* p  = bn(keyset.Prime1);
+    BIGNUM* q  = bn(keyset.Prime2);
+    BIGNUM* dp = bn(keyset.Exponent1);
+    BIGNUM* dq = bn(keyset.Exponent2);
+    BIGNUM* qi = bn(keyset.Coefficient);
+
+    if (!n || !e || !d || !p || !q || !dp || !dq || !qi) {
+        BN_free(n); BN_free(e); BN_free(d); BN_free(p);
+        BN_free(q); BN_free(dp); BN_free(dq); BN_free(qi);
+        throw std::runtime_error("BN_bin2bn failed for RSA key component");
+    }
+
+    OSSL_PARAM_BLD* bld = OSSL_PARAM_BLD_new();
+    OSSL_PARAM_BLD_push_BN(bld, OSSL_PKEY_PARAM_RSA_N, n);
+    OSSL_PARAM_BLD_push_BN(bld, OSSL_PKEY_PARAM_RSA_E, e);
+    OSSL_PARAM_BLD_push_BN(bld, OSSL_PKEY_PARAM_RSA_D, d);
+    OSSL_PARAM_BLD_push_BN(bld, OSSL_PKEY_PARAM_RSA_FACTOR1, p);
+    OSSL_PARAM_BLD_push_BN(bld, OSSL_PKEY_PARAM_RSA_FACTOR2, q);
+    OSSL_PARAM_BLD_push_BN(bld, OSSL_PKEY_PARAM_RSA_EXPONENT1, dp);
+    OSSL_PARAM_BLD_push_BN(bld, OSSL_PKEY_PARAM_RSA_EXPONENT2, dq);
+    OSSL_PARAM_BLD_push_BN(bld, OSSL_PKEY_PARAM_RSA_COEFFICIENT1, qi);
+    OSSL_PARAM* params = OSSL_PARAM_BLD_to_param(bld);
+    OSSL_PARAM_BLD_free(bld);
+    BN_free(n); BN_free(e); BN_free(d); BN_free(p);
+    BN_free(q); BN_free(dp); BN_free(dq); BN_free(qi);
+
+    if (!params)
+        throw std::runtime_error("OSSL_PARAM_BLD_to_param failed");
+
+    EVP_PKEY_CTX* ctx = EVP_PKEY_CTX_new_from_name(nullptr, "RSA", nullptr);
+    if (!ctx) {
+        OSSL_PARAM_free(params);
+        throw std::runtime_error("EVP_PKEY_CTX_new_from_name failed");
+    }
+    if (EVP_PKEY_fromdata_init(ctx) <= 0) {
+        EVP_PKEY_CTX_free(ctx);
+        OSSL_PARAM_free(params);
+        throw std::runtime_error("EVP_PKEY_fromdata_init failed");
+    }
+
+    EVP_PKEY* pkey = nullptr;
+    if (EVP_PKEY_fromdata(ctx, &pkey, EVP_PKEY_KEYPAIR, params) <= 0) {
+        EVP_PKEY_CTX_free(ctx);
+        OSSL_PARAM_free(params);
+        throw std::runtime_error("EVP_PKEY_fromdata failed");
+    }
+    EVP_PKEY_CTX_free(ctx);
+    OSSL_PARAM_free(params);
+    return pkey;
+}
+
+void Crypto::RSA2048Decrypt(std::span<u8, 32> dec_key, std::span<const u8, 256> ciphertext,
+                            bool is_dk3) {
+    EVP_PKEY* key = nullptr;
+    if (is_dk3) {
+        const auto& ks = KeyManager::GetInstance()->GetAllKeys().PkgDerivedKey3Keyset;
+        key = ImportRsaPrivateKey(ks);
+    } else {
+        const auto& ks = KeyManager::GetInstance()->GetAllKeys().FakeKeyset;
+        key = ImportRsaPrivateKey(ks);
+    }
+
+    EVP_PKEY_CTX* ctx = EVP_PKEY_CTX_new(key, nullptr);
+    EVP_PKEY_free(key);
+    if (!ctx)
+        throw std::runtime_error("EVP_PKEY_CTX_new failed");
+    if (EVP_PKEY_decrypt_init(ctx) <= 0 ||
+        EVP_PKEY_CTX_set_rsa_padding(ctx, RSA_PKCS1_PADDING) <= 0) {
+        EVP_PKEY_CTX_free(ctx);
+        throw std::runtime_error("RSA decrypt init failed");
+    }
+
+    std::array<u8, 256> plaintext{};
+    size_t outlen = plaintext.size();
+    if (EVP_PKEY_decrypt(ctx, plaintext.data(), &outlen, ciphertext.data(), ciphertext.size()) <=
+        0) {
+        EVP_PKEY_CTX_free(ctx);
+        throw std::runtime_error("RSA decrypt failed");
+    }
+    EVP_PKEY_CTX_free(ctx);
+
+    std::copy_n(plaintext.begin(), dec_key.size(), dec_key.begin());
+}
+#endif
 
 inline void xtsMult(__m128i& tweak) {
     // Shift tweak left by 1 bit (128-bit)
