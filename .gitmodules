@@ -8,12 +8,13 @@
 [submodule "externals/json"]
 	path = externals/json
 	url = https://github.com/shadexternals/json.git
-[submodule "externals/fmt"]
-	path = externals/fmt
-	url = https://github.com/shadexternals/fmt.git
 [submodule "externals/libdeflate"]
 	path = externals/libdeflate
 	url = https://github.com/shadexternals/libdeflate.git
 [submodule "externals/openal-soft"]
 	path = externals/openal-soft
 	url = https://github.com/shadexternals/openal-soft.git
+[submodule "externals/fmt"]
+	path = externals/fmt
+	url = https://github.com/shadexternals/fmt.git
+	branch = main
