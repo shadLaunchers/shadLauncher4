@@ -44,10 +44,8 @@ static void hexToBytes(const char* hex, unsigned char* dst) {
 
 bool TRP::Extract(const std::filesystem::path& trophyPath, int index, std::string npCommId,
                   const std::filesystem::path& outputPath, bool mergeBasePath) {
-
     std::filesystem::path trophyDir = trophyPath / "sce_sys/trophy";
-
-    if (!std::filesystem::exists(trophyDir)) {
+    if (!std::filesystem::exists(trophyDir) && !mergeBasePath) {
         LOG_WARNING(Common_Filesystem, "Trophy directory doesn't exist: {}", trophyDir.string());
         return false;
     }
@@ -59,6 +57,16 @@ bool TRP::Extract(const std::filesystem::path& trophyPath, int index, std::strin
         std::map<int, std::filesystem::path> trophyFileMap;
         std::filesystem::path trophyBaseDir;
 
+        if (std::filesystem::exists(trophyDir)) {
+            for (const auto& entry : std::filesystem::directory_iterator(trophyDir)) {
+                if (entry.is_regular_file() && entry.path().extension() == ".trp") {
+                    // standard filename: trophyXX.trp
+                    int fileIndex = std::stoi(entry.path().filename().string().substr(6, 2));
+                    trophyFileMap.insert({fileIndex, entry.path()});
+                }
+            }
+        }
+
         if (trophyPath.string().ends_with("-patch")) {
             trophyBaseDir = trophyPath.string().erase(trophyPath.string().length() - 6);
         } else if (trophyPath.string().ends_with("-UPDATE")) {
@@ -66,32 +74,23 @@ bool TRP::Extract(const std::filesystem::path& trophyPath, int index, std::strin
         }
 
         trophyBaseDir = trophyBaseDir / "sce_sys/trophy";
-
-        for (const auto& entry : std::filesystem::directory_iterator(trophyDir)) {
-            if (entry.is_regular_file() && entry.path().extension() == ".trp") {
-                // standard filename: trophyXX.trp
-                int index = std::stoi(entry.path().filename().string().substr(6, 2));
-                trophyFileMap.insert({index, entry.path()});
-            }
-        }
-
         if (std::filesystem::exists(trophyBaseDir)) {
             for (const auto& entry : std::filesystem::directory_iterator(trophyBaseDir)) {
                 if (entry.is_regular_file() && entry.path().extension() == ".trp") {
                     // standard filename: trophyXX.trp
                     bool skip = false;
-                    int index = std::stoi(entry.path().filename().string().substr(6, 2));
+                    int fileIndex = std::stoi(entry.path().filename().string().substr(6, 2));
 
                     // file already mapped
                     for (auto const& [key, value] : trophyFileMap) {
-                        if (key == index) {
+                        if (key == fileIndex) {
                             skip = true;
                             break;
                         }
                     }
 
                     if (!skip) {
-                        trophyFileMap.insert({index, entry.path()});
+                        trophyFileMap.insert({fileIndex, entry.path()});
                     }
                 }
             }
@@ -109,6 +108,12 @@ bool TRP::Extract(const std::filesystem::path& trophyPath, int index, std::strin
 
         // Sort files to ensure consistent ordering
         std::sort(trpFiles.begin(), trpFiles.end());
+    }
+
+    if (trpFiles.size() == 0) {
+        LOG_WARNING(Common_Filesystem, "No trophy file in game folder or base folder from ",
+                    trophyDir.string());
+        return false;
     }
 
     if (index >= trpFiles.size()) {
