@@ -3437,11 +3437,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Escolha o Usuário:</translation>
     </message>
     <message>
       <source>%1 trophies for %2</source>
-      <translation type="unfinished">%1 trophies for %2</translation>
+      <translation>%1 troféus para %2</translation>
     </message>
   </context>
   <context>
