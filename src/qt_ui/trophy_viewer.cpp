@@ -404,6 +404,10 @@ void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
 
         auto user_trophy_file = EmulatorSettings.GetHomeDir() / userId / "trophy" / filename;
         if (!std::filesystem::exists(user_trophy_file)) {
+            if (!std::filesystem::exists(user_trophy_file.parent_path())) {
+                std::filesystem::create_directories(user_trophy_file.parent_path());
+            }
+
             std::error_code discard;
             std::filesystem::copy_file(trophyFilesPath / "Xml" / "TROPCONF.XML", user_trophy_file,
                                        discard);
