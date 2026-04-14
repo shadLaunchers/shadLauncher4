@@ -1403,6 +1403,10 @@ Utilizando o banco de dados local.
       <source>No games found. Please add your games to your library first.</source>
       <translation>Nenhum jogo encontrado. Por favor, adicione os jogos à sua biblioteca primeiro.</translation>
     </message>
+    <message>
+      <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
+      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</translation>
+    </message>
   </context>
   <context>
     <name>GameListGrid</name>
@@ -3438,10 +3442,6 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     <message>
       <source>Select User:</source>
       <translation>Escolha o Usuário:</translation>
-    </message>
-    <message>
-      <source>%1 trophies for %2</source>
-      <translation>%1 troféus para %2</translation>
     </message>
   </context>
   <context>
