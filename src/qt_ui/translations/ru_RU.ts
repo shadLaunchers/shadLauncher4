@@ -1401,6 +1401,10 @@ Using local database.
       <source>No games found. Please add your games to your library first.</source>
       <translation>Игры не найдены. Пожалуйста, сначала добавьте свои игры в библиотеку.</translation>
     </message>
+    <message>
+      <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
+      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</translation>
+    </message>
   </context>
   <context>
     <name>GameListGrid</name>
@@ -3444,10 +3448,6 @@ This will remove all game-specific overrides.</source>
     <message>
       <source>Select User:</source>
       <translation type="unfinished">Select User:</translation>
-    </message>
-    <message>
-      <source>%1 trophies for %2</source>
-      <translation type="unfinished">%1 trophies for %2</translation>
     </message>
   </context>
   <context>

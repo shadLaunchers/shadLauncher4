@@ -1408,6 +1408,10 @@ sam izvještaj ne bi postao nevaljan:</translation>
       <source>No games found. Please add your games to your library first.</source>
       <translation type="unfinished">No games found. Please add your games to your library first.</translation>
     </message>
+    <message>
+      <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
+      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</translation>
+    </message>
   </context>
   <context>
     <name>GameListGrid</name>
@@ -3447,10 +3451,6 @@ To će ukloniti sve igri-specifične postavke.</translation>
     <message>
       <source>Select User:</source>
       <translation type="unfinished">Select User:</translation>
-    </message>
-    <message>
-      <source>%1 trophies for %2</source>
-      <translation type="unfinished">%1 trophies for %2</translation>
     </message>
   </context>
   <context>
