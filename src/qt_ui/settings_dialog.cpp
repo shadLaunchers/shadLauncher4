@@ -424,7 +424,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->DsAudioComboBox->setCurrentText(
         QString::fromStdString(m_emu_settings->GetSDLPadSpkOutputDevice()));
 
-    ui->audioBackendComboBox->setCurrentText(audioBackendMap[EmulatorSettings.GetAudioBackend()]);
+    ui->audioBackendComboBox->setCurrentIndex(EmulatorSettings.GetAudioBackend());
     RefreshAudioDevices();
 
     // ------------------ GUI tab --------------------------------------------------------
@@ -626,7 +626,7 @@ void SettingsDialog::ApplyValuesToBackend() {
 
     // ------------------ Audio tab --------------------------------------------------------
     const std::string backend = ui->audioBackendComboBox->currentText().toStdString();
-    EmulatorSettings.SetAudioBackend(audioBackendMap.key(QString::fromStdString(backend)));
+    EmulatorSettings.SetAudioBackend(ui->audioBackendComboBox->currentIndex());
 
     if (backend == "SDL") {
         EmulatorSettings.SetSDLMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString(),
