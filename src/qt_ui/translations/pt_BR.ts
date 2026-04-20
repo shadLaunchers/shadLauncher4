@@ -1405,7 +1405,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</translation>
+      <translation>É necessária uma chave de troféu para usar o Visualizador de Troféus. Você pode inseri-la clicando em Utilitários - Gerenciador de Chaves Criptográficas</translation>
     </message>
   </context>
   <context>
