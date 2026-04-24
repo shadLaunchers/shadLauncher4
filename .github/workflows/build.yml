@@ -150,9 +150,120 @@ jobs:
           name: shadLauncher4-win64-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
           path: shadLauncher4-win64-qt-*.zip
 
+  linux-qt:
+    runs-on: ubuntu-24.04
+    needs: get-info
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            cmake ninja-build clang \
+            libasound2-dev libpulse-dev \
+            libgl1-mesa-dev \
+            libxcb-cursor-dev \
+            libssl-dev \
+            libvulkan-dev
+
+      - name: Setup Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: 6.10.0
+          host: linux
+          target: desktop
+          arch: linux_gcc_64
+          archives: qtbase qttools
+          modules: qtmultimedia
+
+      - name: Run version script
+        run: .github/workflows/scripts/update_version.sh
+
+      - name: Read computed version
+        run: |
+          version=$(cat version.txt)
+          echo "APP_VERSION=$version" >> $GITHUB_ENV
+
+      - name: Cache CMake Configuration
+        uses: actions/cache@v4
+        env:
+          cache-name: ${{ runner.os }}-qt-ninja-cache-cmake-configuration
+        with:
+          path: ${{ github.workspace }}/build
+          key: ${{ env.cache-name }}-${{ hashFiles('**/CMakeLists.txt', 'cmake/**') }}
+          restore-keys: |
+            ${{ env.cache-name }}-
+
+      - name: Cache CMake Build
+        uses: hendrikmuhs/ccache-action@v1.2.19
+        env:
+          cache-name: ${{ runner.os }}-qt-cache-cmake-build
+        with:
+          append-timestamp: false
+          key: ${{ env.cache-name }}-${{ hashFiles('**/CMakeLists.txt', 'cmake/**') }}
+
+      - name: Configure CMake
+        run: |
+          cmake --fresh -G Ninja \
+            -B "${{ github.workspace }}/build" \
+            -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }} \
+            -DAPP_VERSION="${{ env.APP_VERSION }}" \
+            -DCMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE=ON \
+            -DCMAKE_C_COMPILER=clang \
+            -DCMAKE_CXX_COMPILER=clang++ \
+            -DCMAKE_C_COMPILER_LAUNCHER=ccache \
+            -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
+
+      - name: Build
+        run: cmake --build ${{ github.workspace }}/build --config ${{ env.BUILD_TYPE }} --parallel $(nproc)
+
+      - name: Deploy and Package
+        run: |
+          # Download linuxdeploy and Qt plugin to /tmp
+          wget -q -O /tmp/linuxdeploy.AppImage \
+            https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
+          wget -q -O /tmp/linuxdeploy-plugin-qt.AppImage \
+            https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage
+          chmod +x /tmp/linuxdeploy.AppImage /tmp/linuxdeploy-plugin-qt.AppImage
+
+          # Create minimal .desktop file
+          cat > /tmp/shadlauncher4.desktop << 'EOF'
+          [Desktop Entry]
+          Type=Application
+          Name=shadLauncher4
+          Exec=shadLauncher4
+          Icon=shadlauncher4
+          Categories=Game;
+          EOF
+
+          # Build AppImage
+          APPIMAGE_EXTRACT_AND_RUN=1 \
+          QMAKE=$(command -v qmake6 || command -v qmake) \
+          PATH="/tmp:$PATH" \
+          /tmp/linuxdeploy.AppImage \
+            --appdir AppDir \
+            --executable build/shadLauncher4 \
+            --desktop-file /tmp/shadlauncher4.desktop \
+            --icon-file src/images/shadLauncher4.png \
+            --plugin qt \
+            --output appimage
+
+          mv shadLauncher4-x86_64.AppImage \
+            shadLauncher4-linux-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}.AppImage
+
+      - name: Upload Linux Qt artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: shadLauncher4-linux-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
+          path: shadLauncher4-linux-qt-*.AppImage
+
   pre-release:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    needs: [get-info, windows-qt]
+    needs: [get-info, windows-qt, linux-qt]
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
@@ -168,7 +279,7 @@ jobs:
           tag: shadLauncher4-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.fullhash }}
           prerelease: true
           body: "Auto-generated release for the latest commit to main."
-          artifacts: artifacts/**/*.zip
+          artifacts: artifacts/**/*.zip,artifacts/**/*.AppImage
 
       - name: Get current pre-release date
         env:

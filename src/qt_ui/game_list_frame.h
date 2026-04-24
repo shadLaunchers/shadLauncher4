@@ -67,6 +67,9 @@ public:
 #ifdef _WIN32
     bool createShortcutWin(const QString& linkPath, const QString& targetPath,
                            const QString& iconPath, const QString& exePath, QString emuPath);
+#else
+    bool createShortcutLinux(const QString& linkPath, const std::string& name,
+                             const QString& targetPath, const QString& iconPath, QString emuPath);
 #endif
 
     QImage backgroundImage;

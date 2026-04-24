@@ -23,3 +23,72 @@ SPDX-License-Identifier: GPL-2.0-or-later
 </h1>
 
 Translations can be done in crowdin page : https://crowdin.com/project/shadlauncher4
+
+Clone the repository with submodules:
+
+```sh
+git clone --recursive https://github.com/shadLaunchers/shadLauncher4.git
+cd shadLauncher4
+```
+
+---
+## Building
+### Windows
+
+**Additional prerequisites:**
+
+- [Visual Studio 2026](https://visualstudio.microsoft.com/)
+- [LLVM/Clang](https://releases.llvm.org/)
+
+**Steps:**
+
+1. Configure:
+   ```bat
+   cmake --fresh -G Ninja ^
+     -B build ^
+     -DCMAKE_BUILD_TYPE=Release ^
+     -DCMAKE_C_COMPILER=clang-cl ^
+     -DCMAKE_CXX_COMPILER=clang-cl
+   ```
+   If Qt is not found automatically, add `-DCMAKE_PREFIX_PATH="C:/Qt/6.10.0/msvc2022_64"` (adjust to your install path).
+2. Build:
+   ```bat
+   cmake --build build --config Release --parallel
+   ```
+---
+
+### Linux
+**Arch Linux**
+```sh
+sudo pacman -S --needed \
+  clang cmake ninja \
+  qt6-base qt6-tools qt6-multimedia \
+  openssl \
+  vulkan-headers vulkan-icd-loader \
+  alsa-lib libpulse \
+  mesa
+```
+
+**Debian/Ubuntu**
+```sh
+sudo apt-get install -y \
+  clang cmake ninja-build \
+  libssl-dev \
+  libvulkan-dev \
+  libasound2-dev libpulse-dev \
+  libgl1-mesa-dev \
+  libxcb-cursor-dev
+```
+**Steps:**
+1. Configure:
+   ```sh
+   cmake --fresh -G Ninja \
+     -B build \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DCMAKE_C_COMPILER=clang \
+     -DCMAKE_CXX_COMPILER=clang++
+   ```
+2. Build:
+   ```sh
+   cmake --build build --parallel $(nproc)
+   ```
