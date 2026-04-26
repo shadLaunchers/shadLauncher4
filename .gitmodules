@@ -18,3 +18,7 @@
 	path = externals/fmt
 	url = https://github.com/shadexternals/fmt.git
 	branch = main
+[submodule "externals/spdlog"]
+	path = externals/spdlog
+	url = https://github.com/gabime/spdlog.git
+	branch = v2.x

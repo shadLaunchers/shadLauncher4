@@ -46,6 +46,11 @@ bool GUIApplication::init(QString emulator_arg, QString game_arg, QStringList pa
     m_key_manager->LoadFromFile();          // load keys
     UserSettings.Load();
 
+    Common::Log::Shutdown();
+    // Start configured log
+    Common::Log::g_should_append |= EmulatorSettings.IsLogAppend();
+    Common::Log::Setup("shadLauncher4.log");
+
     m_main_window = new MainWindow(m_gui_settings, m_emu_settings, m_persistent_settings,
                                    m_ipc_client, nullptr);
 

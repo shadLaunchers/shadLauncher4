@@ -1521,7 +1521,7 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
         QString logPath;
         Common::FS::PathToQString(logPath, Common::FS::GetUserPath(Common::FS::PathType::LogDir));
 
-        if (!m_emu_settings->IsSeparateLoggingEnabled()) {
+        if (!m_emu_settings->IsLogSeparate()) {
             // Open the entire log folder
             QDesktopServices::openUrl(QUrl::fromLocalFile(logPath));
             return;
@@ -1774,8 +1774,7 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
     connect(compatibility_submit, &QAction::triggered, this, [this, current_game, gameinfo] {
         std::filesystem::path log_file_path =
             (Common::FS::GetUserPath(Common::FS::PathType::LogDir) /
-             (m_emu_settings->IsSeparateLoggingEnabled() ? current_game.serial + ".log"
-                                                         : "shad_log.txt"));
+             (m_emu_settings->IsLogSeparate() ? current_game.serial + ".log" : "shad_log.txt"));
         bool is_valid_file = LogAnalyzer::ProcessFile(log_file_path);
         std::optional<std::string> report_result = std::nullopt;
         if (is_valid_file) {

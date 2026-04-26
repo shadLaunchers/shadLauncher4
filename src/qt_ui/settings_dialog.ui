@@ -85,7 +85,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>6</number>
      </property>
      <property name="usesScrollButtons">
       <bool>true</bool>
@@ -371,7 +371,7 @@
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>432</width>
+                      <width>424</width>
                       <height>68</height>
                      </rect>
                     </property>
@@ -1893,7 +1893,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>271</height>
+         <height>416</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -1915,6 +1915,12 @@
            <layout class="QVBoxLayout" name="loggerTabLayoutRight">
             <item>
              <widget class="QGroupBox" name="loggerGroupBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="title">
                <string>Logger</string>
               </property>
@@ -1927,6 +1933,13 @@
                 </widget>
                </item>
                <item>
+                <widget class="QPushButton" name="logOpenLocationButton">
+                 <property name="text">
+                  <string>Open Log Location</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
                 <widget class="QCheckBox" name="separateLogFilesCheckbox">
                  <property name="text">
                   <string>Separate Log Files</string>
@@ -1934,52 +1947,62 @@
                 </widget>
                </item>
                <item>
-                <widget class="QCheckBox" name="identicalLogGroupedCheckbox">
+                <widget class="QCheckBox" name="logSyncCheckBox">
                  <property name="text">
-                  <string>Identical Log Grouped</string>
+                  <string>Log Sync</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="OpenLogLocationButton">
+                <widget class="QCheckBox" name="logSkipDuplicateCheckBox">
                  <property name="text">
-                  <string>Open Log Location</string>
+                  <string>Log Skip Duplicate</string>
                  </property>
                 </widget>
                </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QGroupBox" name="logTypeGroupBox">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="title">
-               <string>Log Type</string>
-              </property>
-              <layout class="QVBoxLayout" name="logTypeBoxLayout">
                <item>
-                <widget class="QComboBox" name="logTypeComboBox">
-                 <item>
-                  <property name="text">
-                   <string>async</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>sync</string>
-                  </property>
-                 </item>
+                <widget class="QGroupBox" name="logMaxSkipDurationGroupBox">
+                 <property name="title">
+                  <string>Log Max Skip Duration</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_16">
+                  <item>
+                   <widget class="QSpinBox" name="logMaxSkipDurationLineEdit">
+                    <property name="suffix">
+                     <string> ms</string>
+                    </property>
+                    <property name="maximum">
+                     <number>9999999</number>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="logSizeLimitGroupBox">
+                 <property name="title">
+                  <string>Log Size Limit</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_19">
+                  <item>
+                   <widget class="QSpinBox" name="logSizeLimitLineEdit">
+                    <property name="suffix">
+                     <string> B</string>
+                    </property>
+                    <property name="maximum">
+                     <number>999999999</number>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="logAppendCheckBox">
+                 <property name="text">
+                  <string>Log Append</string>
+                 </property>
                 </widget>
                </item>
               </layout>
@@ -2021,6 +2044,41 @@
                </widget>
               </item>
              </layout>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="logTypeGroupBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Log Type</string>
+              </property>
+              <layout class="QVBoxLayout" name="logTypeBoxLayout">
+               <item>
+                <widget class="QComboBox" name="logTypeComboBox">
+                 <item>
+                  <property name="text">
+                   <string>wincolor</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>msvc</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </item>
             <item>
              <spacer name="verticalSpacer_9">

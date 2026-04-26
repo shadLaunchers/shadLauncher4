@@ -5,14 +5,14 @@
 #include <QApplication>
 #include <QMessageBox>
 
-#include "common/logging/backend.h"
 #include "common/logging/log.h"
 #include "qt_ui/gui_application.h"
 #include "qt_ui/stylesheets.h"
 
 int main(int argc, char* argv[]) {
-    Common::Log::Initialize();
-    Common::Log::Start();
+    // Start default log
+    Common::Log::Setup("shadLauncher4.log");
+
     QScopedPointer<QCoreApplication> app(new GUIApplication(argc, argv));
     GUIApplication* gui_app = qobject_cast<GUIApplication*>(app.data());
 
