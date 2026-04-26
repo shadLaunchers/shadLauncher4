@@ -10,6 +10,15 @@ set_directory_properties(PROPERTIES
     SYSTEM ON
 )
 
+# spdlog
+set(SPDLOG_NO_EXCEPTIONS ON)
+set(SPDLOG_DISABLE_GLOBAL_LOGGER ON)
+if (TARGET fmt::fmt)
+    set(SPDLOG_FMT_EXTERNAL ON)
+endif()
+add_subdirectory(spdlog EXCLUDE_FROM_ALL SYSTEM)
+target_compile_definitions(spdlog PUBLIC SPDLOG_FUNCTION=__func__)
+
 # ---- fmt ----
 if(NOT TARGET fmt::fmt)
 set(FMT_MODULE OFF)

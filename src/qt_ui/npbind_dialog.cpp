@@ -247,7 +247,7 @@ void NpBindDialog::updateHexView() {
     m_hexView->setHtml(formatHexWithRegions(m_combinedHex, m_currentRegions));
 
     // Update details
-    m_lblType->setText(QString("0x%1").arg(body.npcommid.type, 2, 16, QChar('0')).toUpper());
+    // m_lblType->setText(QString("0x%1").arg(body.npcommid.type, 2, 16, QChar('0')).toUpper());
     m_lblSize->setText(QString::number(body.npcommid.size));
     m_lblNPCommID->setText(QString::fromLatin1(
         reinterpret_cast<const char*>(body.npcommid.data.data()), (int)body.npcommid.data.size()));
@@ -267,7 +267,7 @@ void NpBindDialog::onExportJson() {
 
     QJsonObject root;
     QJsonObject hdr;
-    hdr["magic"] = QString("0x%1").arg(m_npfile.Header().magic, 8, 16, QChar('0'));
+    // hdr["magic"] = QString("0x%1").arg(m_npfile.Header().magic, 8, 16, QChar('0'));
     hdr["version"] = (int)m_npfile.Header().version;
     hdr["file_size"] = QString::number(m_npfile.Header().file_size);
     hdr["entry_size"] = QString::number(m_npfile.Header().entry_size);

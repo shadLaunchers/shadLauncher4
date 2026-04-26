@@ -33,6 +33,11 @@ GUIApplication::GUIApplication(int& argc, char** argv) : QApplication(argc, argv
 GUIApplication::~GUIApplication() {}
 
 bool GUIApplication::init(QString emulator_arg, QString game_arg, QStringList passed_args) {
+    Common::Log::Shutdown();
+    // Start configured log
+    Common::Log::g_should_append |= EmulatorSettings.IsLogAppend();
+    Common::Log::Setup("shadLauncher4.log");
+
     m_gui_settings = std::make_shared<GUISettings>();
     m_emu_settings = std::make_shared<EmulatorSettingsImpl>();
     m_emu_settings->Load();
