@@ -2976,14 +2976,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Tipo de Registro</translation>
     </message>
     <message>
-      <source>async</source>
-      <translation>assíncrono</translation>
-    </message>
-    <message>
-      <source>sync</source>
-      <translation>síncrono</translation>
-    </message>
-    <message>
       <source>Log Filter</source>
       <translation>Filtro do Registro</translation>
     </message>
@@ -3318,10 +3310,6 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
       <translation>Selecione o diretório para fontes do Sistema</translation>
     </message>
     <message>
-      <source>Identical Log Grouped</source>
-      <translation>Registro Idêntico Agrupado</translation>
-    </message>
-    <message>
       <source>Readbacks Mode</source>
       <translation>Modo Readbacks</translation>
     </message>
@@ -3344,6 +3332,42 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     <message>
       <source>Camera Device</source>
       <translation>Dispositivo de Câmera</translation>
+    </message>
+    <message>
+      <source>Log Sync</source>
+      <translation type="unfinished">Log Sync</translation>
+    </message>
+    <message>
+      <source>Log Skip Duplicate</source>
+      <translation type="unfinished">Log Skip Duplicate</translation>
+    </message>
+    <message>
+      <source>Log Max Skip Duration</source>
+      <translation type="unfinished">Log Max Skip Duration</translation>
+    </message>
+    <message>
+      <source> ms</source>
+      <translation type="unfinished"> ms</translation>
+    </message>
+    <message>
+      <source>Log Size Limit</source>
+      <translation type="unfinished">Log Size Limit</translation>
+    </message>
+    <message>
+      <source> B</source>
+      <translation type="unfinished"> B</translation>
+    </message>
+    <message>
+      <source>Log Append</source>
+      <translation type="unfinished">Log Append</translation>
+    </message>
+    <message>
+      <source>wincolor</source>
+      <translation type="unfinished">wincolor</translation>
+    </message>
+    <message>
+      <source>msvc</source>
+      <translation type="unfinished">msvc</translation>
     </message>
   </context>
   <context>
