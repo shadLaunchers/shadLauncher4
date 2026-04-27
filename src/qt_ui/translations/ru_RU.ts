@@ -2982,14 +2982,6 @@ Select an emulator version from the right panel.</source>
       <translation>Тип логов</translation>
     </message>
     <message>
-      <source>async</source>
-      <translation>асинхронный</translation>
-    </message>
-    <message>
-      <source>sync</source>
-      <translation>синхронный</translation>
-    </message>
-    <message>
       <source>Log Filter</source>
       <translation>Фильтр логов</translation>
     </message>
@@ -3324,10 +3316,6 @@ This will remove all game-specific overrides.</source>
       <translation>Выберите каталог для системных шрифтов.</translation>
     </message>
     <message>
-      <source>Identical Log Grouped</source>
-      <translation>Идентичные группы логов</translation>
-    </message>
-    <message>
       <source>Readbacks Mode</source>
       <translation>Режим обратного чтения</translation>
     </message>
@@ -3350,6 +3338,42 @@ This will remove all game-specific overrides.</source>
     <message>
       <source>Camera Device</source>
       <translation>Камера</translation>
+    </message>
+    <message>
+      <source>Log Sync</source>
+      <translation type="unfinished">Log Sync</translation>
+    </message>
+    <message>
+      <source>Log Skip Duplicate</source>
+      <translation type="unfinished">Log Skip Duplicate</translation>
+    </message>
+    <message>
+      <source>Log Max Skip Duration</source>
+      <translation type="unfinished">Log Max Skip Duration</translation>
+    </message>
+    <message>
+      <source> ms</source>
+      <translation type="unfinished"> ms</translation>
+    </message>
+    <message>
+      <source>Log Size Limit</source>
+      <translation type="unfinished">Log Size Limit</translation>
+    </message>
+    <message>
+      <source> B</source>
+      <translation type="unfinished"> B</translation>
+    </message>
+    <message>
+      <source>Log Append</source>
+      <translation type="unfinished">Log Append</translation>
+    </message>
+    <message>
+      <source>wincolor</source>
+      <translation type="unfinished">wincolor</translation>
+    </message>
+    <message>
+      <source>msvc</source>
+      <translation type="unfinished">msvc</translation>
     </message>
   </context>
   <context>
