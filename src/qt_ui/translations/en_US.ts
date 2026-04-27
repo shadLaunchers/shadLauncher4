@@ -2948,14 +2948,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>async</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>sync</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Log Filter</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3289,10 +3281,6 @@ This will remove all game-specific overrides.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Identical Log Grouped</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Readbacks Mode</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3314,6 +3302,42 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
         <source>Camera Device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log Sync</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log Skip Duplicate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log Max Skip Duration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> ms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log Size Limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log Append</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>wincolor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>msvc</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
