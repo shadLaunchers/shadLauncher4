@@ -22,6 +22,7 @@
 #ifdef ENABLE_UPDATER
 #include "qt_ui/check_update.h"
 #endif
+#include <iostream>
 #include "settings_dialog.h"
 #include "settings_dialog_helper_texts.h"
 #include "ui_settings_dialog.h"
