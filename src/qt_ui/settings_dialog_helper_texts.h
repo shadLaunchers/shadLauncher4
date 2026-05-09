@@ -30,6 +30,8 @@ public:
         const QString paths_sysmodulesDir_browse = tr("Browse:\\nBrowse for a folder to set as the System Modules folder.");
         const QString paths_fontsDir = tr("System Fonts Folder:\\nThe folder where system fonts are loaded from.");
         const QString paths_fontsDir_browse = tr("Browse:\\nBrowse for a folder to set as the System Fonts folder.");
+        //log
+        const QString log_filter = tr("Log Filter:\\nFilters the log to only print specific information.\\nExamples: \"Core:Debug\" \"Lib.Pad:Debug Common.Filesystem:Error\" \"*:Critical\"\\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.");
         //gui
         const QString general_scan_depth_combo = tr("Directory Scan Depth:\\nSet the maximum depth when scanning for games in the specified game folders.\\n1 means one level of subfolders is scanned, and so on.");
         //gpu

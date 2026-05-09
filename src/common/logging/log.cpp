@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <cstdlib>
+#include <iostream>
 #include <string>
 
 #include "common/assert.h"
@@ -10,6 +11,9 @@
 #include "common/logging/thread_name_formatter.h"
 #include "common/types.h"
 #include "core/emulator_settings.h"
+#ifdef _WIN32
+#include <Windows.h>
+#endif
 
 namespace Common::Log {
 bool g_should_append = false;
@@ -120,13 +124,49 @@ std::unordered_map<std::string_view, std::shared_ptr<spdlog::logger>> ALL_LOGGER
     {Class::Tty, nullptr},
 };
 
+template <typename T>
+static auto UpdateColorLevels(T sink) {
+#ifdef _WIN32
+    using LogColor = std::uint16_t;
+
+    const auto Grey = FOREGROUND_INTENSITY;
+    const auto Cyan = FOREGROUND_GREEN | FOREGROUND_BLUE;
+    const auto Bright_gray = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
+    const auto Bright_yellow = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+    const auto Bright_red = FOREGROUND_RED | FOREGROUND_INTENSITY;
+    const auto Bright_magenta = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+#else
+    using LogColor = std::string_view;
+
+#define ESC "\x1b"
+    const auto Grey = ESC "[1;30m";
+    const auto Cyan = ESC "[0;36m";
+    const auto Bright_gray = ESC "[0;37m";
+    const auto Bright_yellow = ESC "[1;33m";
+    const auto Bright_red = ESC "[1;31m";
+    const auto Bright_magenta = ESC "[1;35m";
+#undef ESC
+#endif
+
+    const std::unordered_map<spdlog::level, LogColor> colors{
+        {spdlog::level::trace, Grey},       {spdlog::level::debug, Cyan},
+        {spdlog::level::info, Bright_gray}, {spdlog::level::warn, Bright_yellow},
+        {spdlog::level::err, Bright_red},   {spdlog::level::critical, Bright_magenta}};
+
+    for (const auto& [level, color] : colors) {
+        sink->set_color(level, color);
+    }
+
+    return sink;
+}
+
 void Setup(std::string_view log_filename) {
     static bool already_registered = false;
 
     if (!already_registered) {
         already_registered = true;
         std::atexit(Shutdown);
-        std::at_quick_exit(Shutdown);
+        std::at_quick_exit(Flush);
     }
 
 #ifdef _WIN32
@@ -135,8 +175,9 @@ void Setup(std::string_view log_filename) {
     } else {
         g_console_sink = std::make_shared<spdlog::sinks::msvc_sink_mt>();
     }
+
 #else
-    g_console_sink = std::make_shared<spdlog_stdout>();
+    g_console_sink = UpdateColorLevels(std::make_shared<spdlog_stdout>(spdlog::color_mode::always));
 #endif
 
     g_console_sink->set_formatter(std::make_unique<thread_name_formatter>(UNLIMITED_SIZE));
@@ -160,12 +201,17 @@ void Setup(std::string_view log_filename) {
     std::unordered_map<std::string, spdlog::level> log_level_per_class;
 
     if (EmulatorSettings.IsLogEnable()) {
-        for (const auto class_level : std::views::split(EmulatorSettings.GetLogFilter(), ',')) {
+        for (const auto class_level : std::views::split(EmulatorSettings.GetLogFilter(), ' ')) {
             const auto class_level_pair =
-                std::views::split(class_level, '=') | std::ranges::to<std::vector<std::string>>();
+                std::views::split(class_level, ':') | std::ranges::to<std::vector<std::string>>();
 
-            if (class_level_pair.size() == 1) {
-                default_log_level = spdlog::level_from_str(class_level_pair.front() |
+            if (class_level_pair.size() != 2) {
+                std::cerr << "bad log filter provided" << std::endl;
+                continue;
+            }
+
+            if (class_level_pair.front()[0] == '*') {
+                default_log_level = spdlog::level_from_str(class_level_pair.back() |
                                                            std::ranges::to<std::string>());
             } else {
                 log_level_per_class[class_level_pair.front() | std::ranges::to<std::string>()] =
@@ -201,5 +247,15 @@ void Shutdown() {
 
     g_shad_file_sink.reset();
     g_console_sink.reset();
+}
+
+void Flush() {
+    if (g_shad_file_sink != nullptr) {
+        g_shad_file_sink->flush();
+    }
+
+    if (g_console_sink != nullptr) {
+        g_console_sink->flush();
+    }
 }
 } // namespace Common::Log
