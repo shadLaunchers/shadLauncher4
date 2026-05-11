@@ -1484,10 +1484,6 @@ Se va a utilizar la base de datos local.
       <translation>Personalizar atajos</translation>
     </message>
     <message>
-      <source>Controller Hotkeys</source>
-      <translation>Atajos de mando</translation>
-    </message>
-    <message>
       <source>Show FPS Counter</source>
       <translation>Mostrar contador de FPS</translation>
     </message>
@@ -1510,14 +1506,6 @@ Se va a utilizar la base de datos local.
     <message>
       <source>Toggle Pause</source>
       <translation>Alternar pausa</translation>
-    </message>
-    <message>
-      <source>Keyboard Hotkeys</source>
-      <translation>Atajos de teclado</translation>
-    </message>
-    <message>
-      <source>Renderdoc Capture (for debugging only)</source>
-      <translation>Captura de Renderdoc (solo para depuración)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
@@ -1574,6 +1562,26 @@ Se va a utilizar la base de datos local.
     <message>
       <source>Volume Down</source>
       <translation>Bajar volumen</translation>
+    </message>
+    <message>
+      <source>Hotkeys</source>
+      <translation type="unfinished">Hotkeys</translation>
+    </message>
+    <message>
+      <source>Placeholder</source>
+      <translation type="unfinished">Placeholder</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot</source>
+      <translation type="unfinished">Capture Screenshot</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot w/ Overlays</source>
+      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+    </message>
+    <message>
+      <source>Open Emulator Settings</source>
+      <translation type="unfinished">Open Emulator Settings</translation>
     </message>
   </context>
   <context>
@@ -3435,6 +3443,10 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     <message>
       <source>Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</source>
       <translation>Modo de lecturas diferidas:\nControla el modo con el que el emulador hará lecturas diferidas con la GPU. Activa esta opción para hacer que algunos juegos funcionen mejor.\nDesactivadas es la opción recomendada.\nRelajadas es igual que Precisas, pero tiene menos protecciones. Podría aumentar los FPS.\nEl modo preciso debería utilizarse para maximizar la compatibilidad en aquellos casos donde sea necesario controlar las lecturas diferidas.</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
     </message>
   </context>
   <context>
