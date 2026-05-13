@@ -1489,10 +1489,6 @@ sam izvještaj ne bi postao nevaljan:</translation>
       <translation>Uredi Kratice</translation>
     </message>
     <message>
-      <source>Controller Hotkeys</source>
-      <translation>Kratice Kontrolera</translation>
-    </message>
-    <message>
       <source>Show FPS Counter</source>
       <translation>Prikaz FPS Brojača</translation>
     </message>
@@ -1515,14 +1511,6 @@ sam izvještaj ne bi postao nevaljan:</translation>
     <message>
       <source>Toggle Pause</source>
       <translation>Uključi Pauzu</translation>
-    </message>
-    <message>
-      <source>Keyboard Hotkeys</source>
-      <translation>Tipkovničke Kratice</translation>
-    </message>
-    <message>
-      <source>Renderdoc Capture (for debugging only)</source>
-      <translation>Renderdoc Snimanje (samo za debuggiranje)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
@@ -1579,6 +1567,26 @@ sam izvještaj ne bi postao nevaljan:</translation>
     <message>
       <source>Volume Down</source>
       <translation>Glasnoća Niža</translation>
+    </message>
+    <message>
+      <source>Hotkeys</source>
+      <translation type="unfinished">Hotkeys</translation>
+    </message>
+    <message>
+      <source>Placeholder</source>
+      <translation type="unfinished">Placeholder</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot</source>
+      <translation type="unfinished">Capture Screenshot</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot w/ Overlays</source>
+      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+    </message>
+    <message>
+      <source>Open Emulator Settings</source>
+      <translation type="unfinished">Open Emulator Settings</translation>
     </message>
   </context>
   <context>
@@ -3444,6 +3452,10 @@ To će ukloniti sve igri-specifične postavke.</translation>
     <message>
       <source>Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</source>
       <translation>Readbacks Mod:\nKontrolira kako emulator rukuje GPU povratne informacije. Omogućeno čini neke igre pokretljivijim.\nOnemogućeno je preporučeno.\nOpušteno je isto kao Precizno s manje zaštite, uz malo više fps-ova.\nPrecizni mod trebao bi se koristit za maksimalnu kompatibilnost gdje su readbackovi potrebni</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
     </message>
   </context>
   <context>
