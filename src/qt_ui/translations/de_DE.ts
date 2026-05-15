@@ -1396,7 +1396,7 @@ Benutze lokale Datenbank.
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Trophäenansicht</translation>
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
@@ -1404,7 +1404,7 @@ Benutze lokale Datenbank.
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</translation>
+      <translation>Ein Trophäen-Schlüssel wird benötigt, um die Trophäenansicht verwenden zu können. Dies kann durch Klicken auf "Dienstprogramme" - "Kryptografie Schlüsselverwaltung" eingetragen werden</translation>
     </message>
   </context>
   <context>
@@ -1564,23 +1564,23 @@ Benutze lokale Datenbank.
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation type="unfinished">Hotkeys</translation>
+      <translation>Hotkeys</translation>
     </message>
     <message>
       <source>Placeholder</source>
-      <translation type="unfinished">Placeholder</translation>
+      <translation>Platzhalter</translation>
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation type="unfinished">Capture Screenshot</translation>
+      <translation>Screenshot aufnehmen</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
-      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+      <translation>Screenshot mit Overlays aufnehmen</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
-      <translation type="unfinished">Open Emulator Settings</translation>
+      <translation>Emulator-Einstellungen öffnen</translation>
     </message>
   </context>
   <context>
@@ -3334,7 +3334,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Audio Backend</translation>
     </message>
     <message>
       <source>Camera Device</source>
@@ -3342,39 +3342,39 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Log Sync</source>
-      <translation type="unfinished">Log Sync</translation>
+      <translation>Synchrones Protokoll</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation type="unfinished">Log Skip Duplicate</translation>
+      <translation>Doppelte Protokollzeilen überspringen</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation type="unfinished">Log Max Skip Duration</translation>
+      <translation>Max. Überspringdauer der Protokollzeilen</translation>
     </message>
     <message>
       <source> ms</source>
-      <translation type="unfinished"> ms</translation>
+      <translation> ms</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation type="unfinished">Log Size Limit</translation>
+      <translation>Protokollgrößenlimit</translation>
     </message>
     <message>
       <source> B</source>
-      <translation type="unfinished"> B</translation>
+      <translation> B</translation>
     </message>
     <message>
       <source>Log Append</source>
-      <translation type="unfinished">Log Append</translation>
+      <translation>Protokoll anhängen</translation>
     </message>
     <message>
       <source>wincolor</source>
-      <translation type="unfinished">wincolor</translation>
+      <translation>wincolor</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
   </context>
   <context>
@@ -3445,7 +3445,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
+      <translation>Protokoll-Filter:\nFiltert das Protokoll so, dass nur bestimmte Informationen ausgegeben werden.\nBeispiele: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\n Ebenen: Trace, Debug, Info, Warning, Error, Critical, Off - in dieser Reihenfolge, eine ausgewählte Ebene blendet alle niedrigeren Ebenen aus und zeigt alle höheren Ebenen an.</translation>
     </message>
   </context>
   <context>
@@ -3456,7 +3456,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Trophäenansicht</translation>
     </message>
     <message>
       <source>Select Game:</source>
@@ -3476,7 +3476,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Benutzer auswählen:</translation>
     </message>
   </context>
   <context>
@@ -3824,7 +3824,7 @@ The custom build is still available under:
     </message>
     <message>
       <source>Could not find executable in extracted files.</source>
-      <translation type="unfinished">Could not find executable in extracted files.</translation>
+      <translation>Konnte die ausführbare Datei nicht in den extrahierten Dateien finden.</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.
@@ -3844,7 +3844,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>1. Version folder:</source>
-      <translation type="unfinished">1. Version folder:</translation>
+      <translation>1. Versions-Ordner:</translation>
     </message>
     <message>
       <source>2. Installed to:</source>
@@ -3860,11 +3860,11 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Version %1 has been:</source>
-      <translation type="unfinished">Version %1 has been:</translation>
+      <translation>Version %1 wurde:</translation>
     </message>
     <message>
       <source>1. Downloaded to:</source>
-      <translation type="unfinished">1. Downloaded to:</translation>
+      <translation>1. Downgeloadet nach:</translation>
     </message>
     <message>
       <source>Extraction failure:</source>
@@ -3872,7 +3872,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) has been:</source>
-      <translation type="unfinished">Pre-release (Nightly) has been:</translation>
+      <translation>Vorabversion (Nightly) wurde:</translation>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
@@ -3888,7 +3888,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Select executable or zip file</source>
-      <translation type="unfinished">Select executable or zip file</translation>
+      <translation>Wähle eine ausführbare Datei oder Zip-Datei</translation>
     </message>
     <message>
       <source>No executable found in the extracted zip file.</source>
@@ -3900,7 +3900,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Install as Current Version</source>
-      <translation type="unfinished">Install as Current Version</translation>
+      <translation>Als aktuelle Version installieren</translation>
     </message>
     <message>
       <source>Do you want to install this version as the current version?
@@ -3917,30 +3917,30 @@ The version may not run correctly.</translation>
     <message>
       <source>Version %1 has been installed with all files to:
 %2</source>
-      <translation type="unfinished">Version %1 has been installed with all files to:
+      <translation>Version %1 wurde mit allen Dateien installiert nach:
 %2</translation>
     </message>
     <message>
       <source>Version %1 has been installed to:
 %2</source>
-      <translation type="unfinished">Version %1 has been installed to:
+      <translation>Version %1 wurde installiert nach:
 %2</translation>
     </message>
     <message>
       <source>Custom (ZIP)</source>
-      <translation type="unfinished">Custom (ZIP)</translation>
+      <translation>Benutzerdefiniert (ZIP)</translation>
     </message>
     <message>
       <source>2. Extracted from:</source>
-      <translation type="unfinished">2. Extracted from:</translation>
+      <translation>2. Entpackt von:</translation>
     </message>
     <message>
       <source>3. Executable found:</source>
-      <translation type="unfinished">3. Executable found:</translation>
+      <translation>3. Ausführbare Datei gefunden:</translation>
     </message>
     <message>
       <source>4. Build hash:</source>
-      <translation type="unfinished">4. Build hash:</translation>
+      <translation>4. Erstelle Hash:</translation>
     </message>
     <message>
       <source>
