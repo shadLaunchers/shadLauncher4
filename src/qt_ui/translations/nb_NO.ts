@@ -1397,15 +1397,15 @@ Bruker lokal database.
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Troféviser</translation>
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
-      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
+      <translation>Fant ingen spill. Legg til spillene dine i biblioteket først.</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</translation>
+      <translation>En trofénøkkel er nødvendig for å bruke troféviseren. Du kan skrive inn dette ved å trykke «Verktøy» → «Kryptonøkkel-behandler».</translation>
     </message>
   </context>
   <context>
@@ -1565,23 +1565,23 @@ Bruker lokal database.
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation type="unfinished">Hotkeys</translation>
+      <translation>Hurtigtaster</translation>
     </message>
     <message>
       <source>Placeholder</source>
-      <translation type="unfinished">Placeholder</translation>
+      <translation>Plassholder</translation>
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation type="unfinished">Capture Screenshot</translation>
+      <translation>Ta skjermbilde</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
-      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+      <translation>Ta skjermbilde med overlegg</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
-      <translation type="unfinished">Open Emulator Settings</translation>
+      <translation>Åpne emulator-innstillinger</translation>
     </message>
   </context>
   <context>
@@ -3335,47 +3335,47 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Lydmotor</translation>
     </message>
     <message>
       <source>Camera Device</source>
-      <translation type="unfinished">Camera Device</translation>
+      <translation>Kameraenhet</translation>
     </message>
     <message>
       <source>Log Sync</source>
-      <translation type="unfinished">Log Sync</translation>
+      <translation>Loggsynkronisering</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation type="unfinished">Log Skip Duplicate</translation>
+      <translation>Logghopp over duplikat</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation type="unfinished">Log Max Skip Duration</translation>
+      <translation>Maks. varighet for logghopping</translation>
     </message>
     <message>
       <source> ms</source>
-      <translation type="unfinished"> ms</translation>
+      <translation> ms</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation type="unfinished">Log Size Limit</translation>
+      <translation>Grense for loggstørrelse</translation>
     </message>
     <message>
       <source> B</source>
-      <translation type="unfinished"> B</translation>
+      <translation> B</translation>
     </message>
     <message>
       <source>Log Append</source>
-      <translation type="unfinished">Log Append</translation>
+      <translation>Tilføy i logg</translation>
     </message>
     <message>
       <source>wincolor</source>
-      <translation type="unfinished">wincolor</translation>
+      <translation>wincolor</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
   </context>
   <context>
@@ -3446,38 +3446,38 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
+      <translation>Loggfilter:\nFiltrerer loggen for å kun skrive ut spesifikk informasjon.\nEksempler: «Core:Debug» «Lib.Pad:Debug Common.Filesystem:Error» «*:Critical» \nNivåer: Trace, debug, info, warning, error, critical – i denne rekkefølgen, et spesifikt nivå demper alle tidligere nivåer i lista og loggfører alle nivåer etter det.</translation>
     </message>
   </context>
   <context>
     <name>TrophyViewer</name>
     <message>
       <source>Progress</source>
-      <translation type="unfinished">Progress</translation>
+      <translation>Fremdrift</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Troféviser</translation>
     </message>
     <message>
       <source>Select Game:</source>
-      <translation type="unfinished">Select Game:</translation>
+      <translation>Velg spill:</translation>
     </message>
     <message>
       <source>Show Earned Trophies</source>
-      <translation type="unfinished">Show Earned Trophies</translation>
+      <translation>Vis opptjente trofeer</translation>
     </message>
     <message>
       <source>Show Not Earned Trophies</source>
-      <translation type="unfinished">Show Not Earned Trophies</translation>
+      <translation>Vis ikke opptjente trofeer</translation>
     </message>
     <message>
       <source>Show Hidden Trophies</source>
-      <translation type="unfinished">Show Hidden Trophies</translation>
+      <translation>Vis skjulte trofeer</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Velg bruker:</translation>
     </message>
   </context>
   <context>
