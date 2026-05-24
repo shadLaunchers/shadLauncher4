@@ -46,9 +46,12 @@ private:
                           const QString& latestTag, QTextBrowser* outputView);
     void installPreReleaseByTag(const QString& tagName);
     void showDownloadDialog(const QString& tagName, const QString& downloadUrl);
+    void AddCustomExecutable(const QString& exePath);
     bool CopyExecutableToAppDir(const QString& sourceExe, QWidget* parent);
     Downloader* m_downloader = nullptr;
 
 protected:
     void resizeEvent(QResizeEvent* event) override;
+    void dragEnterEvent(QDragEnterEvent* event) override;
+    void dropEvent(QDropEvent* event) override;
 };
