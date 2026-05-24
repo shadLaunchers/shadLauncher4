@@ -1,6 +1,9 @@
 // SPDX-FileCopyrightText: Copyright 2025-2026 shadLauncher4 Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <QDir>
+#include <QFileInfoList>
+
 #include "common/path_util.h"
 #include "gui_settings.h"
 
@@ -8,6 +11,15 @@ namespace GUI {
 
 QString stylesheet;
 bool custom_stylesheet_active = false;
+
+QString GetThemesDir() {
+    const auto& themes_path = Common::FS::GetUserPath(Common::FS::PathType::ThemesDir);
+#ifdef _WIN32
+    return QString::fromStdWString(themes_path.wstring());
+#else
+    return QString::fromUtf8(themes_path.u8string().c_str());
+#endif
+}
 
 QString GetGameListColumnName(GameListColumns col) {
     switch (col) {
@@ -80,4 +92,29 @@ QString GUISettings::GetVersionExecutablePath(const QString& versionName) const 
     QString result;
     Common::FS::PathToQString(result, versionFolder / exeName);
     return result;
+}
+
+// Collect every "<name>.qss" file from the themes directory and return their
+// basenames (no extension, no path)
+QStringList GUISettings::GetStylesheetEntries() const {
+    const QStringList name_filter{QStringLiteral("*.qss")};
+
+    const auto collect = [&](const QString& dir_path) -> QStringList {
+        QStringList out;
+        const QDir dir(dir_path);
+        if (!dir.exists()) {
+            return out;
+        }
+        const QFileInfoList files = dir.entryInfoList(name_filter, QDir::Files);
+        out.reserve(files.size());
+        for (const QFileInfo& fi : files) {
+            out.append(fi.completeBaseName()); // "PS4 Dynamic.qss" -> "PS4 Dynamic"
+        }
+        return out;
+    };
+
+    QStringList res = collect(GUI::GetThemesDir());
+    res.removeDuplicates();
+    res.sort();
+    return res;
 }
