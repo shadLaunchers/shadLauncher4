@@ -47,6 +47,7 @@ path = [
     "src/qt_ui/settings_dialog.ui",
     "src/qt_ui/game_install_dialog.ui",
     "src/qt_ui/cheats_patches_dialog.ui",
+    "themes/*.*"
 ]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "shadLauncher4 Project"
