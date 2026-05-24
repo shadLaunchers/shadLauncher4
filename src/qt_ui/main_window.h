@@ -5,7 +5,9 @@
 
 #include <memory>
 #include <QActionGroup>
+#include <QHash>
 #include <QIcon>
+#include <QLabel>
 #include <QList>
 #include <QMainWindow>
 #include <QMimeData>
@@ -83,6 +85,12 @@ private:
     void RunGame();
     void onGameClosed();
     void RestartEmulator();
+
+    void CacheOriginalToolbarIcons();
+    void RepaintToolbarIcons();
+    QHash<QAction*, QIcon> m_original_toolbar_icons;
+    QLabel* m_toolbar_icon_color_label = nullptr;
+    QLabel* m_thumbnail_icon_color_label = nullptr;
 
     std::shared_ptr<GUISettings> m_gui_settings;
     std::shared_ptr<EmulatorSettingsImpl> m_emu_settings;

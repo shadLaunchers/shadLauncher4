@@ -142,6 +142,10 @@ jobs:
           move build/shadLauncher4.exe upload
           cp dist/qt.conf upload/qt.conf
           windeployqt --plugindir upload/qtplugins --no-compiler-runtime --no-system-d3d-compiler --no-system-dxc-compiler --dir upload upload/shadLauncher4.exe
+          New-Item -ItemType Directory -Force -Path upload/user/themes | Out-Null
+          if (Test-Path dist/themes) {
+            Copy-Item "dist/themes/*.qss" upload/user/themes/
+          }
           Compress-Archive -Path upload/* -DestinationPath shadLauncher4-win64-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}.zip
 
       - name: Upload Windows Qt artifact

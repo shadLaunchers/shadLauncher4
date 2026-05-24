@@ -475,6 +475,17 @@ void SettingsDialog::LoadValuesFromConfig() {
 
     // ------------------ GUI tab --------------------------------------------------------
     ui->discordRPCCheckbox->setChecked(m_emu_settings->IsDiscordRPCEnabled());
+    {
+        const QString current_theme =
+            m_gui_settings->GetValue(GUI::meta_currentStylesheet).toString();
+        const int idx = ui->themeComboBox->findData(current_theme);
+        if (idx >= 0) {
+            ui->themeComboBox->setCurrentIndex(idx);
+        } else {
+            ui->themeComboBox->addItem(current_theme + tr(" (missing)"), current_theme);
+            ui->themeComboBox->setCurrentIndex(ui->themeComboBox->count() - 1);
+        }
+    }
     ui->playBGMCheckBox->setChecked(m_gui_settings->GetValue(GUI::game_list_play_bg).toBool());
     ui->BGMVolumeSlider->setValue(m_gui_settings->GetValue(GUI::game_list_bg_volume).toInt());
     ui->showBackgroundImageCheckBox->setChecked(
@@ -705,6 +716,15 @@ void SettingsDialog::ApplyValuesToBackend() {
 
     // ------------------ GUI tab --------------------------------------------------------
     m_emu_settings->SetDiscordRPCEnabled(ui->discordRPCCheckbox->isChecked());
+
+    {
+        const QString new_theme = ui->themeComboBox->currentData().toString();
+        const QString prev_theme = m_gui_settings->GetValue(GUI::meta_currentStylesheet).toString();
+        if (!new_theme.isEmpty() && new_theme != prev_theme) {
+            m_gui_settings->SetValue(GUI::meta_currentStylesheet, new_theme);
+            emit ThemeChanged();
+        }
+    }
 
     m_gui_settings->SetValue(GUI::general_directory_depth_scanning,
                              ui->ScanDepthComboBox->currentIndex() + 1);
@@ -993,6 +1013,17 @@ void SettingsDialog::PopulateComboBoxes() {
     ui->usbComboBox->addItem(tr("Skylander Portal"));
     ui->usbComboBox->addItem(tr("Infinity Base"));
     ui->usbComboBox->addItem(tr("Dimensions Toypad"));
+
+    // Themes / stylesheets
+    ui->themeComboBox->addItem(tr("Default"), GUI::DefaultStylesheet);
+    ui->themeComboBox->addItem(tr("None"), GUI::NoStylesheet);
+    for (const QString& style : QStyleFactory::keys()) {
+        const QString display = GUI::NativeStylesheet + " (" + style + ")";
+        ui->themeComboBox->addItem(display, display);
+    }
+    for (const QString& entry : m_gui_settings->GetStylesheetEntries()) {
+        ui->themeComboBox->addItem(entry, entry);
+    }
 }
 
 void SettingsDialog::RefreshAudioDevices() {

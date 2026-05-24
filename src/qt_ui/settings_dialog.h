@@ -34,6 +34,7 @@ signals:
     void GameFoldersChanged();
     void CompatUpdateRequested();
     void EmuSettingsApplied();
+    void ThemeChanged();
 
 private:
     int m_tab_index = 0;

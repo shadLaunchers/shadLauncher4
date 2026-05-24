@@ -16,6 +16,12 @@ namespace GUI {
 extern QString stylesheet;
 extern bool custom_stylesheet_active;
 
+/** Returns the absolute path to the user themes directory (created by
+ *  path_util at startup). All .qss stylesheets dropped here are picked up
+ *  automatically by the theme combo and loader.
+ */
+QString GetThemesDir();
+
 enum CustomRoles {
     game_role = Qt::UserRole + 1337,
 };
@@ -150,6 +156,11 @@ public:
     void SetGamelistColVisibility(GUI::GameListColumns col, bool val) const;
 
     QString GetVersionExecutablePath(const QString& versionName) const;
+
+    /** Return the basenames (without ".qss") of every stylesheet found in any
+     *  searched location. Used to populate the theme picker in the settings UI.
+     */
+    QStringList GetStylesheetEntries() const;
 
 private:
     static GUISave GetGuiSaveForGameColumn(GUI::GameListColumns col);
