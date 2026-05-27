@@ -3385,6 +3385,26 @@ This will remove all game-specific overrides.</source>
       <source>msvc</source>
       <translation>msvc</translation>
     </message>
+    <message>
+      <source>Theme</source>
+      <translation type="unfinished">Theme</translation>
+    </message>
+    <message>
+      <source>Stylesheet:</source>
+      <translation type="unfinished">Stylesheet:</translation>
+    </message>
+    <message>
+      <source>Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</source>
+      <translation type="unfinished">Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</translation>
+    </message>
+    <message>
+      <source> (missing)</source>
+      <translation type="unfinished"> (missing)</translation>
+    </message>
+    <message>
+      <source>Default</source>
+      <translation type="unfinished">Default</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
