@@ -3395,7 +3395,7 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Default</source>
-      <translation>Predeterminado</translation>
+      <translation>Predeterminada</translation>
     </message>
   </context>
   <context>
