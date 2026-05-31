@@ -3379,23 +3379,23 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Theme</source>
-      <translation type="unfinished">Theme</translation>
+      <translation>Tema</translation>
     </message>
     <message>
       <source>Stylesheet:</source>
-      <translation type="unfinished">Stylesheet:</translation>
+      <translation>Stilsett:</translation>
     </message>
     <message>
       <source>Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</source>
-      <translation type="unfinished">Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</translation>
+      <translation>Slipp ei «.qss»-stillsettfil i «themes»-mappa i di brukerdatamappe for å legge til tilpassede temaer.</translation>
     </message>
     <message>
       <source> (missing)</source>
-      <translation type="unfinished"> (missing)</translation>
+      <translation> (mangler)</translation>
     </message>
     <message>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>Standard</translation>
     </message>
   </context>
   <context>
