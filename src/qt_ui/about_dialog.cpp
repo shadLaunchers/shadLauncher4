@@ -36,8 +36,8 @@ QString AboutDialog::RepositoryUrl() {
     }
     if (remote.startsWith("git@")) {
         QString url = remote;
-        url.remove(0, 4);            
-        url.replace(':', '/');       
+        url.remove(0, 4);
+        url.replace(':', '/');
         if (url.endsWith(".git")) {
             url.chop(4);
         }
@@ -72,8 +72,7 @@ AboutDialog::AboutDialog(QWidget* parent) : QDialog(parent) {
         name->setFont(f);
     }
 
-    const QString channel =
-        Common::g_is_release ? tr("Release") : tr("Development build");
+    const QString channel = Common::g_is_release ? tr("Release") : tr("Development build");
     auto* version = new QLabel(this);
     version->setObjectName("AboutDialog_version");
     version->setTextFormat(Qt::RichText);
@@ -84,8 +83,7 @@ AboutDialog::AboutDialog(QWidget* parent) : QDialog(parent) {
     build->setObjectName("AboutDialog_build");
     build->setTextFormat(Qt::RichText);
     build->setText(tr("Commit %1 &nbsp;&middot;&nbsp; branch %2<br>Built %3")
-                       .arg(ShortCommit(),
-                            QString::fromUtf8(Common::g_scm_branch),
+                       .arg(ShortCommit(), QString::fromUtf8(Common::g_scm_branch),
                             QString::fromUtf8(Common::g_scm_date)));
     {
         QFont f = build->font();
@@ -125,10 +123,9 @@ AboutDialog::AboutDialog(QWidget* parent) : QDialog(parent) {
     links->setObjectName("AboutDialog_links");
     links->setTextFormat(Qt::RichText);
     links->setOpenExternalLinks(true);
-    links->setText(
-        tr("<a href=\"%1\">GitHub repository</a> &nbsp;&middot;&nbsp; "
-           "<a href=\"%1/issues\">Report an issue</a>")
-            .arg(repo));
+    links->setText(tr("<a href=\"%1\">GitHub repository</a> &nbsp;&middot;&nbsp; "
+                      "<a href=\"%1/issues\">Report an issue</a>")
+                       .arg(repo));
 
     auto* credits = new QLabel(this);
     credits->setObjectName("AboutDialog_credits");
@@ -176,18 +173,17 @@ AboutDialog::AboutDialog(QWidget* parent) : QDialog(parent) {
 }
 
 QString AboutDialog::BuildInfoText() const {
-    const QString channel = Common::g_is_release ? QStringLiteral("release")
-                                                 : QStringLiteral("development");
-    return QStringLiteral(
-               "shadLauncher4 %1 (%2)\n"
-               "Commit:    %3\n"
-               "Branch:    %4\n"
-               "Built:     %5\n"
-               "Qt:        %6\n"
-               "OS:        %7\n"
-               "Arch:      %8")
-        .arg(QString::fromUtf8(APP_VERSION), channel,
-             QString::fromUtf8(Common::g_scm_rev), QString::fromUtf8(Common::g_scm_branch),
-             QString::fromUtf8(Common::g_scm_date), QString::fromUtf8(qVersion()),
-             QSysInfo::prettyProductName(), QSysInfo::currentCpuArchitecture());
+    const QString channel =
+        Common::g_is_release ? QStringLiteral("release") : QStringLiteral("development");
+    return QStringLiteral("shadLauncher4 %1 (%2)\n"
+                          "Commit:    %3\n"
+                          "Branch:    %4\n"
+                          "Built:     %5\n"
+                          "Qt:        %6\n"
+                          "OS:        %7\n"
+                          "Arch:      %8")
+        .arg(QString::fromUtf8(APP_VERSION), channel, QString::fromUtf8(Common::g_scm_rev),
+             QString::fromUtf8(Common::g_scm_branch), QString::fromUtf8(Common::g_scm_date),
+             QString::fromUtf8(qVersion()), QSysInfo::prettyProductName(),
+             QSysInfo::currentCpuArchitecture());
 }
