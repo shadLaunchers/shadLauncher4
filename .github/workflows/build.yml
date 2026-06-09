@@ -80,8 +80,8 @@ jobs:
           host: windows
           target: desktop
           arch: win64_msvc2022_64
-          archives: qtbase qttools
-          modules: qtmultimedia qtsvg
+          archives: qtbase qttools qtsvg
+          modules: qtmultimedia
 
       - name: Run version script
         shell: bash
