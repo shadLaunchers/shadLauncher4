@@ -313,7 +313,7 @@ void MainWindow::createConnects() {
     connect(ui->actionConfigInput, &QAction::triggered, this,
             [open_settings]() { open_settings(4); });
     connect(ui->actionConfigPaths, &QAction::triggered, this,
-            [open_settings]() { open_settings(54); });
+            [open_settings]() { open_settings(5); });
     connect(ui->actionConfigLog, &QAction::triggered, this,
             [open_settings]() { open_settings(6); });
     connect(ui->actionConfigDebug, &QAction::triggered, this,
