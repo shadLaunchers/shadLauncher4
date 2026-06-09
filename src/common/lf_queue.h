@@ -18,23 +18,22 @@ using u64 = std::uint64_t;
 using u32 = std::uint32_t;
 constexpr usz umax = static_cast<usz>(-1);
 
-// Simple unshrinkable array base for concurrent access. Only grows automatically.
-// T must be DefaultConstructible (constexpr default ctor recommended).
 template <typename T, usz N = std::max<usz>(256 / sizeof(T), 1)>
 class lf_array {
-    // Data (default-initialized)
+    // Inline storage for the first block.
     T m_data[N]{};
 
-    // Next array block (atomic pointer)
+    // Pointer to the next block. nullptr until growth installs one.
     std::atomic<lf_array*> m_next{nullptr};
 
 public:
     constexpr lf_array() = default;
 
     ~lf_array() {
-        // delete all subsequent blocks
-        for (auto ptr = m_next.load(std::memory_order_acquire); ptr;) {
-            auto next = ptr->m_next.load(std::memory_order_acquire);
+        // Iterative deletion to avoid stack overflow on very long chains.
+        // Each block's destructor would otherwise recurse via its own m_next.
+        for (auto* ptr = m_next.load(std::memory_order_acquire); ptr;) {
+            auto* next = ptr->m_next.load(std::memory_order_acquire);
             ptr->m_next.store(nullptr, std::memory_order_relaxed);
             delete ptr;
             ptr = next;
@@ -44,34 +43,25 @@ public:
     T& operator[](usz index) {
         lf_array* cur = this;
 
-        for (usz i = 0;; i += N) {
-            if (index - i < N) {
-                return cur->m_data[index - i];
-            }
+        for (usz base = 0;; base += N) {
+            if (index - base < N)
+                return cur->m_data[index - base];
 
             lf_array* next = cur->m_next.load(std::memory_order_acquire);
 
             if (!next) {
-                // Prevent too large jumps; mimic original ensure: allow up to 2 blocks from current
-                // If user asked for index > N*2 from this block, behaviour is undefined (we
-                // assert). Here we'll do a runtime check and attempt to allocate a single new
-                // block.
-                if (!(index - i < N * 2)) {
-                    // out of allowed range in original code; prefer to avoid uncontrolled growth
-                    throw std::out_of_range("lf_array: index too large from current growth policy");
-                }
+                if (!(index - base < N * 2))
+                    throw std::out_of_range("lf_array: index too far beyond current growth");
 
-                // Try to install a new block
-                lf_array* new_block = new lf_array();
-
+                lf_array* fresh = new lf_array();
                 lf_array* expected = nullptr;
-                if (cur->m_next.compare_exchange_strong(expected, new_block,
-                                                        std::memory_order_acq_rel,
+
+                if (cur->m_next.compare_exchange_strong(expected, fresh, std::memory_order_acq_rel,
                                                         std::memory_order_acquire)) {
-                    next = new_block;
+                    next = fresh;
                 } else {
-                    // someone else installed it
-                    delete new_block;
+                    // Lost the race; another thread installed first.
+                    delete fresh;
                     next = expected;
                 }
             }
@@ -80,9 +70,7 @@ public:
         }
     }
 
-    // for_each: invokes func(T&) for each element; if func returns non-void and a truthy value,
-    // returns pair(pointer-to-element, returned-value). If is_finite==false and list ends, allocate
-    // further blocks on demand.
+    // Apply func to each element across all currently-allocated blocks.
     template <typename F>
         requires(std::is_invocable_v<F, T&>)
     auto for_each(F&& func, bool is_finite = true) {
@@ -95,9 +83,8 @@ public:
                     std::invoke(func, cur->m_data[j]);
                 } else {
                     auto ret = std::invoke(func, cur->m_data[j]);
-                    if (ret) {
+                    if (ret)
                         return std::make_pair(std::addressof(cur->m_data[j]), std::move(ret));
-                    }
                 }
             }
 
@@ -105,15 +92,15 @@ public:
 
             if constexpr (!std::is_void_v<return_t>) {
                 if (!next && !is_finite) {
-                    // Try to install a new block if missing
-                    lf_array* new_block = new lf_array();
+                    lf_array* fresh = new lf_array();
                     lf_array* expected = nullptr;
-                    if (cur->m_next.compare_exchange_strong(expected, new_block,
+
+                    if (cur->m_next.compare_exchange_strong(expected, fresh,
                                                             std::memory_order_acq_rel,
                                                             std::memory_order_acquire)) {
-                        next = new_block;
+                        next = fresh;
                     } else {
-                        delete new_block;
+                        delete fresh;
                         next = expected;
                     }
                 }
@@ -122,22 +109,24 @@ public:
             cur = next;
         }
 
-        if constexpr (!std::is_void_v<return_t>) {
+        if constexpr (!std::is_void_v<return_t>)
             return std::make_pair(static_cast<T*>(nullptr), return_t());
-        }
     }
 
+    // Returns N * (number of allocated blocks). Note this is the
+    // capacity, not the number of elements actually written to — the
+    // array has no notion of "used" vs "default-constructed".
     u64 size() const {
-        u64 size_n = 0;
-        for (auto ptr = this; ptr; ptr = ptr->m_next.load(std::memory_order_acquire)) {
-            size_n += N;
-        }
-        return size_n;
+        u64 total = 0;
+        for (auto const* ptr = this; ptr; ptr = ptr->m_next.load(std::memory_order_acquire))
+            total += N;
+        return total;
     }
 };
 
-// Simple lock-free FIFO queue base built on lf_array. Uses 64-bit control word:
-// LSB 32-bit: push counter, MSB 32-bit: pop counter.
+// =============================================================================
+// lf_fifo<T, N>
+// =============================================================================
 template <typename T, usz N = std::max<usz>(256 / sizeof(T), 1)>
 class lf_fifo : public lf_array<T, N> {
     std::atomic<u64> m_ctrl{0};
@@ -145,43 +134,57 @@ class lf_fifo : public lf_array<T, N> {
 public:
     constexpr lf_fifo() = default;
 
-    // number of elements currently pushed but not popped (may wrap but using 32-bit deltas)
+    // Currently-occupied slot count.
     u32 size() const {
         const u64 ctrl = m_ctrl.load(std::memory_order_acquire);
         return static_cast<u32>(ctrl - (ctrl >> 32));
     }
 
-    // Acquire place for one or more elements: returns the starting index (push counter prior to
-    // addition)
+    // Reserve `count` slot(s); returns the first reserved slot index.
     u32 push_begin(u32 count = 1) {
         return static_cast<u32>(
             m_ctrl.fetch_add(static_cast<u64>(count), std::memory_order_acq_rel));
     }
 
-    // Get current pop position
+    // Current read cursor.
     u32 peek() const {
         return static_cast<u32>(m_ctrl.load(std::memory_order_acquire) >> 32);
     }
 
-    // Acknowledge processed element(s), return number of the next pop index (or 0 if cleaned)
+    // Mark `count` slot(s) as consumed. If push == pop after this,
+    // the control word is reset to zero (zero is returned in that case).
     u32 pop_end(u32 count = 1) {
-        while (true) {
-            u64 old = m_ctrl.load(std::memory_order_acquire);
-            u64 ctrl = old + (static_cast<u64>(count) << 32);
-            // if msb equals lsb (as 32-bit), we can reset to 0
-            if ((ctrl >> 32) == static_cast<u32>(ctrl)) {
-                ctrl = 0;
+        u64 old = m_ctrl.load(std::memory_order_acquire);
+        for (;;) {
+            u64 next = old + (static_cast<u64>(count) << 32);
+            // Reset when push == pop, freeing the 32-bit counter range.
+            if ((next >> 32) == static_cast<u32>(next))
+                next = 0;
+
+            if (m_ctrl.compare_exchange_weak(old, next, std::memory_order_acq_rel,
+                                             std::memory_order_acquire)) {
+                return static_cast<u32>(next >> 32);
             }
-            if (m_ctrl.compare_exchange_strong(old, ctrl, std::memory_order_acq_rel,
-                                               std::memory_order_acquire)) {
-                return static_cast<u32>(ctrl >> 32);
-            }
-            // otherwise retry with updated old
+            // `old` was refreshed by compare_exchange_weak; retry.
         }
     }
 };
 
-// Helper type: linked list element
+// =============================================================================
+// Forward declarations for lf_queue support types
+// =============================================================================
+template <typename T>
+class lf_queue_iterator;
+template <typename T>
+class lf_queue_slice;
+template <typename T>
+class lf_queue;
+template <typename T>
+class lf_bunch;
+
+// =============================================================================
+// lf_queue_item<T> — internal linked-list node
+// =============================================================================
 template <typename T>
 class lf_queue_item final {
     lf_queue_item* m_link = nullptr;
@@ -207,8 +210,10 @@ public:
     lf_queue_item& operator=(const lf_queue_item&) = delete;
 
     ~lf_queue_item() {
-        for (lf_queue_item* ptr = m_link; ptr;) {
-            auto next = ptr->m_link;
+        // Iterative cleanup. A single recursive ~lf_queue_item would
+        // recurse N times for an N-element chain and could overflow.
+        for (auto* ptr = m_link; ptr;) {
+            auto* next = ptr->m_link;
             ptr->m_link = nullptr;
             delete ptr;
             ptr = next;
@@ -216,7 +221,9 @@ public:
     }
 };
 
-// Forward iterator: non-owning pointer to the list element in lf_queue_slice<>
+// =============================================================================
+// lf_queue_iterator<T> — non-owning forward iterator
+// =============================================================================
 template <typename T>
 class lf_queue_iterator {
     lf_queue_item<T>* m_ptr = nullptr;
@@ -247,6 +254,7 @@ public:
         m_ptr = m_ptr->m_link;
         return *this;
     }
+
     lf_queue_iterator operator++(int) {
         lf_queue_iterator tmp = *this;
         ++(*this);
@@ -254,7 +262,9 @@ public:
     }
 };
 
-// Owning pointer to the linked list taken from the lf_queue<>
+// =============================================================================
+// lf_queue_slice<T> — owning view of a drained queue
+// =============================================================================
 template <typename T>
 class lf_queue_slice {
     lf_queue_item<T>* m_head = nullptr;
@@ -264,13 +274,13 @@ class lf_queue_slice {
 
 public:
     constexpr lf_queue_slice() = default;
+
     lf_queue_slice(const lf_queue_slice&) = delete;
+    lf_queue_slice& operator=(const lf_queue_slice&) = delete;
 
     lf_queue_slice(lf_queue_slice&& r) noexcept : m_head(r.m_head) {
         r.m_head = nullptr;
     }
-
-    lf_queue_slice& operator=(const lf_queue_slice&) = delete;
 
     lf_queue_slice& operator=(lf_queue_slice&& r) noexcept {
         if (this != &r) {
@@ -312,21 +322,21 @@ public:
 
     const T& operator[](usz index) const noexcept {
         lf_queue_iterator<T> it = begin();
-        while (index-- != umax)
+        while (--index != umax)
             ++it;
         return *it;
     }
 
     T& operator[](usz index) noexcept {
         lf_queue_iterator<T> it = begin();
-        while (index-- != umax)
+        while (--index != umax)
             ++it;
         return *it;
     }
 
     lf_queue_slice& pop_front() {
         if (m_head) {
-            auto old = m_head;
+            auto* old = m_head;
             m_head = m_head->m_link;
             old->m_link = nullptr;
             delete old;
@@ -335,7 +345,9 @@ public:
     }
 };
 
-// Linked list-based multi-producer queue (consumer drains entire queue)
+// =============================================================================
+// lf_queue<T> — MPSC linked-list queue
+// =============================================================================
 template <typename T>
 class lf_queue final {
 private:
@@ -349,36 +361,32 @@ private:
                   "fat_ptr must be trivially copyable for atomic operations");
 
     std::atomic<fat_ptr> m_head{fat_ptr{0, 0, 0}};
-    // Dedicated atomic for wait/notify (C++20 atomic wait/notify)
+
     std::atomic<u32> m_wait{0};
 
-    lf_queue_item<T>* load(fat_ptr value) const noexcept {
-        return reinterpret_cast<lf_queue_item<T>*>(static_cast<std::uintptr_t>(value.ptr));
+    static lf_queue_item<T>* load(fat_ptr v) noexcept {
+        return reinterpret_cast<lf_queue_item<T>*>(static_cast<std::uintptr_t>(v.ptr));
     }
 
-    // Extract all elements and reverse element order (FILO -> FIFO)
+    // Drain the head and reverse the chain in place, turning the
+    // FILO push order into FIFO consumption order.
     lf_queue_item<T>* reverse() noexcept {
-        fat_ptr empty{0, 0, 0};
-        fat_ptr old = m_head.load(std::memory_order_acquire);
-        if (old.ptr == 0)
+        fat_ptr taken = m_head.exchange(fat_ptr{0, 0, 0}, std::memory_order_acq_rel);
+        lf_queue_item<T>* head = load(taken);
+
+        if (!head)
             return nullptr;
 
-        if (m_head.exchange(empty, std::memory_order_acq_rel).ptr) {
-            lf_queue_item<T>* head = load(old);
-            if (!head)
-                return nullptr;
-
-            if (auto* prev = head->m_link) {
-                head->m_link = nullptr;
-                do {
-                    auto* pprev = prev->m_link;
-                    prev->m_link = head;
-                    head = std::exchange(prev, pprev);
-                } while (prev);
-            }
-            return head;
+        if (auto* prev = head->m_link) {
+            head->m_link = nullptr;
+            do {
+                auto* pprev = prev->m_link;
+                prev->m_link = head;
+                head = std::exchange(prev, pprev);
+            } while (prev);
         }
-        return nullptr;
+
+        return head;
     }
 
 public:
@@ -391,8 +399,11 @@ public:
     lf_queue& operator=(lf_queue&& other) noexcept {
         if (this == std::addressof(other))
             return *this;
-        auto old = m_head.exchange(other.m_head.exchange(fat_ptr{0, 0, 0}));
-        delete load(old);
+
+        // Take other's head, swap into ours, delete the (orphaned) old head.
+        auto stolen = other.m_head.exchange(fat_ptr{0, 0, 0}, std::memory_order_acq_rel);
+        auto ousted = m_head.exchange(stolen, std::memory_order_acq_rel);
+        delete load(ousted);
         return *this;
     }
 
@@ -400,11 +411,10 @@ public:
         delete load(m_head.load(std::memory_order_acquire));
     }
 
+    // Block until the queue is non-empty. No-op if already non-empty.
     void wait(std::nullptr_t = nullptr) noexcept {
-        if (!operator bool()) {
-            // wait on m_wait when value equals 0
+        if (!operator bool())
             m_wait.wait(0);
-        }
     }
 
     std::atomic<u32>& get_wait_atomic() noexcept {
@@ -419,51 +429,52 @@ public:
         return observe() != nullptr;
     }
 
+    // Push a new element constructed from args. Returns true if the
+    // queue was empty before this push (i.e. this is the wakeup edge).
     template <bool Notify = true, typename... Args>
     bool push(Args&&... args) {
-        fat_ptr old = m_head.load(std::memory_order_acquire);
-        auto item = new lf_queue_item<T>(load(old), std::forward<Args>(args)...);
+        auto* item = new lf_queue_item<T>(nullptr, std::forward<Args>(args)...);
 
-        // attempt to push at head
-        while (true) {
-            fat_ptr cur = m_head.load(std::memory_order_acquire);
+        fat_ptr cur = m_head.load(std::memory_order_acquire);
+        for (;;) {
             item->m_link = load(cur);
-            fat_ptr newv{reinterpret_cast<u64>(item), item != nullptr ? 1u : 0u, 0u};
-            if (m_head.compare_exchange_strong(cur, newv, std::memory_order_acq_rel,
-                                               std::memory_order_acquire)) {
-                // if queue was empty before push, notify waiters
-                if (cur.ptr == 0 && Notify) {
-                    m_wait.notify_one();
+            fat_ptr next{reinterpret_cast<u64>(item), 1u, 0u};
+
+            if (m_head.compare_exchange_weak(cur, next, std::memory_order_acq_rel,
+                                             std::memory_order_acquire)) {
+                const bool was_empty = (cur.ptr == 0);
+                if (was_empty) {
+                    // Bump the wait-atomic so wait()'s value-tagged
+                    // sleep wakes up.
+                    m_wait.fetch_add(1, std::memory_order_release);
+                    if constexpr (Notify)
+                        m_wait.notify_one();
                 }
-                return cur.ptr == 0;
+                return was_empty;
             }
-            // otherwise loop; m_head updated in cur
         }
     }
 
     void notify(bool force = false) {
-        if (force || operator bool()) {
+        if (force || operator bool())
             m_wait.notify_one();
-        }
     }
 
-    // Withdraw the list, supports range-for: for (auto&& x : q.pop_all()) ...
+    // Drain the queue. Use in range-for: `for (auto&& x : q.pop_all()) ...`
     lf_queue_slice<T> pop_all() {
         lf_queue_slice<T> result;
         result.m_head = reverse();
         return result;
     }
 
-    // Withdraw the list in reverse order (LIFO/FILO)
+    // Drain the queue in original push order (newest first).
     lf_queue_slice<T> pop_all_reversed() {
         lf_queue_slice<T> result;
-        fat_ptr empty{0, 0, 0};
-        fat_ptr old = m_head.exchange(empty, std::memory_order_acq_rel);
-        result.m_head = load(old);
+        fat_ptr taken = m_head.exchange(fat_ptr{0, 0, 0}, std::memory_order_acq_rel);
+        result.m_head = load(taken);
         return result;
     }
 
-    // Apply func(data) to each element, return the total length (counting)
     template <typename F>
     usz apply(F func) {
         usz count = 0;
@@ -475,7 +486,6 @@ public:
     }
 };
 
-// Concurrent linked list, elements remain until destroyed.
 template <typename T>
 class lf_bunch final {
     std::atomic<lf_queue_item<T>*> m_head{nullptr};
@@ -487,41 +497,40 @@ public:
         delete m_head.load(std::memory_order_acquire);
     }
 
-    // Add unconditionally
     template <typename... Args>
     T* push(Args&&... args) noexcept {
-        auto old = m_head.load(std::memory_order_acquire);
-        auto item = new lf_queue_item<T>(old, std::forward<Args>(args)...);
-        while (!m_head.compare_exchange_strong(old, item, std::memory_order_acq_rel,
-                                               std::memory_order_acquire)) {
-            item->m_link = old;
-        }
+        auto* item = new lf_queue_item<T>(nullptr, std::forward<Args>(args)...);
+
+        auto* expected = m_head.load(std::memory_order_acquire);
+        do {
+            item->m_link = expected;
+        } while (!m_head.compare_exchange_weak(expected, item, std::memory_order_acq_rel,
+                                               std::memory_order_acquire));
+
         return std::addressof(item->m_data);
     }
 
-    // Add if pred(item, all_items) is true for all existing items
     template <typename F, typename... Args>
     T* push_if(F pred, Args&&... args) noexcept {
-        auto old = m_head.load(std::memory_order_acquire);
-        lf_queue_item<T>* chk = old;
-        auto item = new lf_queue_item<T>(old, std::forward<Args>(args)...);
+        auto* expected = m_head.load(std::memory_order_acquire);
+        auto* item = new lf_queue_item<T>(expected, std::forward<Args>(args)...);
 
-        chk = nullptr;
+        lf_queue_item<T>* checked = nullptr;
+
         do {
-            item->m_link = old;
+            item->m_link = expected;
 
-            // Check all items in the queue
-            for (auto ptr = old; ptr != chk; ptr = ptr->m_link) {
-                if (!pred(item->m_data, ptr->m_data)) {
+            for (auto* p = expected; p != checked; p = p->m_link) {
+                if (!pred(item->m_data, p->m_data)) {
                     item->m_link = nullptr;
                     delete item;
                     return nullptr;
                 }
             }
 
-            chk = old;
-        } while (!m_head.compare_exchange_strong(old, item, std::memory_order_acq_rel,
-                                                 std::memory_order_acquire));
+            checked = expected;
+        } while (!m_head.compare_exchange_weak(expected, item, std::memory_order_acq_rel,
+                                               std::memory_order_acquire));
 
         return std::addressof(item->m_data);
     }
