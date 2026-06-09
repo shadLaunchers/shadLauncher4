@@ -10,10 +10,10 @@
 #include <core/file_format/pkg.h>
 #include <core/file_format/psf.h>
 
+#include "about_dialog.h"
 #include "background_music_player.h"
 #include "common/input.h"
 #include "common/path_util.h"
-#include "about_dialog.h"
 #include "control_settings.h"
 #include "core/emulator_settings.h"
 #include "core/emulator_state.h"
