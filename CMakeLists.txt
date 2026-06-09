@@ -311,6 +311,8 @@ set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/sdl_event_wrapper.h
           src/qt_ui/trophy_viewer.cpp
           src/qt_ui/trophy_viewer.h
+          src/qt_ui/about_dialog.cpp
+          src/qt_ui/about_dialog.h
           ${UPDATER}
 )
 
