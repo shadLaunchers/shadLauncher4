@@ -3379,23 +3379,23 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Theme</source>
-      <translation type="unfinished">Theme</translation>
+      <translation>Tema</translation>
     </message>
     <message>
       <source>Stylesheet:</source>
-      <translation type="unfinished">Stylesheet:</translation>
+      <translation>Hoja de estilo:</translation>
     </message>
     <message>
       <source>Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</source>
-      <translation type="unfinished">Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</translation>
+      <translation>Para añadir temas personalizados, arrastra archivos de hoja de estilos .qss a la carpeta «themes», dentro de tu directorio de datos de usuario.</translation>
     </message>
     <message>
       <source> (missing)</source>
-      <translation type="unfinished"> (missing)</translation>
+      <translation> (no presente)</translation>
     </message>
     <message>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>Predeterminada</translation>
     </message>
   </context>
   <context>
