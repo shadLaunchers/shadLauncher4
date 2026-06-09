@@ -213,6 +213,7 @@
     <addaction name="actionExport_GameList"/>
     <addaction name="actionCrypto_Key_Manager"/>
     <addaction name="actionConfigure_Hotkeys"/>
+    <addaction name="actionHostOverrides"/>
    </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
@@ -402,6 +403,18 @@
    </property>
    <property name="toolTip">
     <string>Manage user accounts</string>
+   </property>
+  </action>
+  <action name="actionHostOverrides">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/network.svg</normaloff>:/images/menu/network.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Network Host Overrides</string>
+   </property>
+   <property name="toolTip">
+    <string>Redirect game network traffic to another server</string>
    </property>
   </action>
   <action name="aboutAct">

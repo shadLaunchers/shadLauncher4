@@ -201,6 +201,10 @@ endif()
 set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/settings.h
           src/qt_ui/gui_save.h
+          src/qt_ui/about_dialog.cpp
+          src/qt_ui/about_dialog.h
+          src/qt_ui/host_overrides_dialog.cpp
+          src/qt_ui/host_overrides_dialog.h
           src/qt_ui/gui_settings.cpp
           src/qt_ui/gui_settings.h
           src/qt_ui/persistent_settings.cpp
@@ -311,8 +315,6 @@ set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/sdl_event_wrapper.h
           src/qt_ui/trophy_viewer.cpp
           src/qt_ui/trophy_viewer.h
-          src/qt_ui/about_dialog.cpp
-          src/qt_ui/about_dialog.h
           ${UPDATER}
 )
 

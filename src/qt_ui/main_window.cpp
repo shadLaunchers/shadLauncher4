@@ -22,6 +22,7 @@
 #include "game_list_exporter.h"
 #include "game_list_frame.h"
 #include "gui_settings.h"
+#include "host_overrides_dialog.h"
 #include "hotkeys.h"
 #include "kbm_gui.h"
 #include "main_window.h"
@@ -363,6 +364,11 @@ void MainWindow::createConnects() {
     connect(ui->aboutAct, &QAction::triggered, this, [this] {
         AboutDialog about(this);
         about.exec();
+    });
+
+    connect(ui->actionHostOverrides, &QAction::triggered, this, [this] {
+        HostOverridesDialog dlg(this);
+        dlg.exec();
     });
 }
 
