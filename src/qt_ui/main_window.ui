@@ -191,6 +191,7 @@
      <string>Configuration</string>
     </property>
     <addaction name="actionConfigGeneral"/>
+    <addaction name="actionConfigAudio"/>
     <addaction name="actionConfigGUI"/>
     <addaction name="actionConfigGraphics"/>
     <addaction name="actionConfigInput"/>
@@ -737,6 +738,11 @@
    </property>
    <property name="text">
     <string>Check for Updates</string>
+   </property>
+  </action>
+  <action name="actionConfigAudio">
+   <property name="text">
+    <string>Audio</string>
    </property>
   </action>
  </widget>

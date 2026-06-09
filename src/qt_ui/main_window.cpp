@@ -303,20 +303,22 @@ void MainWindow::createConnects() {
 
     connect(ui->actionConfigGeneral, &QAction::triggered, this,
             [open_settings]() { open_settings(0); });
-    connect(ui->actionConfigGUI, &QAction::triggered, this,
+    connect(ui->actionConfigAudio, &QAction::triggered, this,
             [open_settings]() { open_settings(1); });
-    connect(ui->actionConfigGraphics, &QAction::triggered, this,
+    connect(ui->actionConfigGUI, &QAction::triggered, this,
             [open_settings]() { open_settings(2); });
-    connect(ui->actionConfigInput, &QAction::triggered, this,
+    connect(ui->actionConfigGraphics, &QAction::triggered, this,
             [open_settings]() { open_settings(3); });
-    connect(ui->actionConfigPaths, &QAction::triggered, this,
+    connect(ui->actionConfigInput, &QAction::triggered, this,
             [open_settings]() { open_settings(4); });
+    connect(ui->actionConfigPaths, &QAction::triggered, this,
+            [open_settings]() { open_settings(54); });
     connect(ui->actionConfigLog, &QAction::triggered, this,
-            [open_settings]() { open_settings(5); });
-    connect(ui->actionConfigDebug, &QAction::triggered, this,
             [open_settings]() { open_settings(6); });
-    connect(ui->actionConfigExperimental, &QAction::triggered, this,
+    connect(ui->actionConfigDebug, &QAction::triggered, this,
             [open_settings]() { open_settings(7); });
+    connect(ui->actionConfigExperimental, &QAction::triggered, this,
+            [open_settings]() { open_settings(8); });
 
     connect(ui->bootGameAct, &QAction::triggered, this,
             [this] { MainWindow::StartGameWithArgs({}); });
