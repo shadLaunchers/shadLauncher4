@@ -28,7 +28,7 @@ endif ()
 
 
 find_package(OpenAL CONFIG)
-find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Xml Network Multimedia)
+find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Xml Network Multimedia Svg)
 qt_standard_project_setup()
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOMOC ON)
@@ -201,6 +201,10 @@ endif()
 set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/settings.h
           src/qt_ui/gui_save.h
+          src/qt_ui/about_dialog.cpp
+          src/qt_ui/about_dialog.h
+          src/qt_ui/host_overrides_dialog.cpp
+          src/qt_ui/host_overrides_dialog.h
           src/qt_ui/gui_settings.cpp
           src/qt_ui/gui_settings.h
           src/qt_ui/persistent_settings.cpp
@@ -336,7 +340,7 @@ cmrc_add_resource_library(embedded-resources
         src/images/silver.png)
 target_link_libraries(shadLauncher4 PRIVATE res::embedded)
 
-target_link_libraries(shadLauncher4 PRIVATE fmt::fmt Qt6::Widgets Qt6::Concurrent Qt6::Xml Qt6::Network Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL spdlog::spdlog)
+target_link_libraries(shadLauncher4 PRIVATE fmt::fmt Qt6::Widgets Qt6::Concurrent Qt6::Xml Qt6::Network Qt6::Svg Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL spdlog::spdlog)
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
 endif()

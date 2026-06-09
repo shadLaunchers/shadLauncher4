@@ -10,6 +10,7 @@
 #include <core/file_format/pkg.h>
 #include <core/file_format/psf.h>
 
+#include "about_dialog.h"
 #include "background_music_player.h"
 #include "common/input.h"
 #include "common/path_util.h"
@@ -21,6 +22,7 @@
 #include "game_list_exporter.h"
 #include "game_list_frame.h"
 #include "gui_settings.h"
+#include "host_overrides_dialog.h"
 #include "hotkeys.h"
 #include "kbm_gui.h"
 #include "main_window.h"
@@ -303,20 +305,22 @@ void MainWindow::createConnects() {
 
     connect(ui->actionConfigGeneral, &QAction::triggered, this,
             [open_settings]() { open_settings(0); });
-    connect(ui->actionConfigGUI, &QAction::triggered, this,
+    connect(ui->actionConfigAudio, &QAction::triggered, this,
             [open_settings]() { open_settings(1); });
-    connect(ui->actionConfigGraphics, &QAction::triggered, this,
+    connect(ui->actionConfigGUI, &QAction::triggered, this,
             [open_settings]() { open_settings(2); });
-    connect(ui->actionConfigInput, &QAction::triggered, this,
+    connect(ui->actionConfigGraphics, &QAction::triggered, this,
             [open_settings]() { open_settings(3); });
-    connect(ui->actionConfigPaths, &QAction::triggered, this,
+    connect(ui->actionConfigInput, &QAction::triggered, this,
             [open_settings]() { open_settings(4); });
-    connect(ui->actionConfigLog, &QAction::triggered, this,
+    connect(ui->actionConfigPaths, &QAction::triggered, this,
             [open_settings]() { open_settings(5); });
-    connect(ui->actionConfigDebug, &QAction::triggered, this,
+    connect(ui->actionConfigLog, &QAction::triggered, this,
             [open_settings]() { open_settings(6); });
-    connect(ui->actionConfigExperimental, &QAction::triggered, this,
+    connect(ui->actionConfigDebug, &QAction::triggered, this,
             [open_settings]() { open_settings(7); });
+    connect(ui->actionConfigExperimental, &QAction::triggered, this,
+            [open_settings]() { open_settings(8); });
 
     connect(ui->bootGameAct, &QAction::triggered, this,
             [this] { MainWindow::StartGameWithArgs({}); });
@@ -356,6 +360,16 @@ void MainWindow::createConnects() {
 #else
     ui->updaterAct->setVisible(false);
 #endif
+
+    connect(ui->aboutAct, &QAction::triggered, this, [this] {
+        AboutDialog about(this);
+        about.exec();
+    });
+
+    connect(ui->actionHostOverrides, &QAction::triggered, this, [this] {
+        HostOverridesDialog dlg(this);
+        dlg.exec();
+    });
 }
 
 void MainWindow::LoadVersionComboBox() {

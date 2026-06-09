@@ -26,6 +26,7 @@
 #include "common/key_manager.h"
 #include "common/singleton.h"
 #include "core/emulator_settings.h"
+#include "core/emulator_state.h"
 #include "core/file_format/psf.h"
 #include "core/ipc/ipc_client.h"
 #include "game_list_frame.h"
@@ -1887,6 +1888,11 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
 }
 
 void GameListFrame::PlayBackgroundMusic(game_info game) {
+    // Don't start title music over a game that's already running.
+    if (EmulatorState::GetInstance()->IsGameRunning()) {
+        return;
+    }
+
     if (!m_gui_settings->GetValue(GUI::game_list_play_bg).toBool() ||
         game->info.snd0_path.empty()) {
         BackgroundMusicPlayer::getInstance().StopMusic();
