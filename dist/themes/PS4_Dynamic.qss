@@ -312,6 +312,24 @@ QComboBox::drop-down {
 	background: transparent;
 }
 
+QComboBox::down-arrow {
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 5px solid #FFFFFF;
+	margin-right: 5px;
+}
+
+QComboBox::down-arrow:on {
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid #FFFFFF;
+}
+
+QComboBox::down-arrow:disabled {
+	border-top-color: #5F7A99;
+}
+
 QComboBox QAbstractItemView {
 	background-color: #0E2440;
 	color: #FFFFFF;
