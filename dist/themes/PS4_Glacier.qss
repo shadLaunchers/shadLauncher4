@@ -312,22 +312,25 @@ QComboBox::drop-down {
 	background: transparent;
 }
 
+/* Arrow asset path is rewritten at load time by GUIApplication::
+   OnChangeStyleSheetRequest — it does
+       sheet.replace("url(\"./", "url(\"" + themeDir + "/")
+   so url("./icons/...") becomes an absolute path before Qt parses it.
+   Keep the double-quote and ./ prefix exactly or the rewrite won't fire. */
 QComboBox::down-arrow {
-	width: 0;
-	height: 0;
-	border-left: 4px solid transparent;
-	border-right: 4px solid transparent;
-	border-top: 5px solid #0A1929;
-	margin-right: 5px;
+	image: url("./icons/arrow-down-light.svg");
+	width: 12px;
+	height: 8px;
+	margin-right: 3px;
 }
 
 QComboBox::down-arrow:on {
-	border-top: 5px solid transparent;
-	border-bottom: 5px solid #0A1929;
+	/* dropdown is open — flip the arrow */
+	image: url("./icons/arrow-up-light.svg");
 }
 
 QComboBox::down-arrow:disabled {
-	border-top-color: #8FA3B9;
+	image: url("./icons/arrow-down-light-disabled.svg");
 }
 
 QComboBox QAbstractItemView {

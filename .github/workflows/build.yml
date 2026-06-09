@@ -81,7 +81,7 @@ jobs:
           target: desktop
           arch: win64_msvc2022_64
           archives: qtbase qttools
-          modules: qtmultimedia
+          modules: qtmultimedia qtsvg
 
       - name: Run version script
         shell: bash
