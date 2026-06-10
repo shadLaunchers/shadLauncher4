@@ -4,6 +4,49 @@
 <!DOCTYPE TS>
 <TS version="2.1" sourcelanguage="en_US">
 <context>
+    <name>AboutDialog</name>
+    <message>
+        <source>About shadLauncher4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Release</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Development build</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy Build Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copied!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ChangelogDialog</name>
     <message>
         <source>Changelog Viewer</source>
@@ -1464,6 +1507,104 @@ Using local database.
     </message>
 </context>
 <context>
+    <name>HostOverridesDialog</name>
+    <message>
+        <source>Network Host Overrides</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Match (host / endpoint)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Redirect to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add &amp;catch-all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Catch-all exists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A catch-all (*) row already exists.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Parse error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Format error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>host_overrides.json must be a JSON object. Starting empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Row %1: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please fix the following before saving:
+
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not open the file for writing:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>An error occurred while writing.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Hotkeys</name>
     <message>
         <source>Customize Hotkeys</source>
@@ -2317,6 +2458,18 @@ Select an emulator version from the right panel.</source>
         <source>Check for Updates</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Network Host Overrides</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Redirect game network traffic to another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>NpBindDialog</name>
@@ -2574,6 +2727,42 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Failed to copy executable to application directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Redirect target is empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Target scheme must be http or https.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Redirect target has no host.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Port must be a number between 1 and 65535.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Match host is empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Match scheme must be http or https (or omit it).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Match has no host.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Match port must be a number between 1 and 65535.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
