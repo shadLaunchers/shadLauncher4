@@ -9,52 +9,8 @@
 #include <SDL3/SDL_camera.h>
 #include <SDL3/SDL_init.h>
 
-#ifdef _WIN32
-#include "VulkanDeviceLib.h"
-#else
-#include <cstring>
-#include <vector>
-#include <vulkan/vulkan.h>
-
-static int GetVulkanDeviceCount() {
-    VkApplicationInfo app{};
-    app.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
-    app.apiVersion = VK_API_VERSION_1_0;
-    VkInstanceCreateInfo ci{};
-    ci.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
-    ci.pApplicationInfo = &app;
-    VkInstance instance;
-    if (vkCreateInstance(&ci, nullptr, &instance) != VK_SUCCESS)
-        return 0;
-    uint32_t count = 0;
-    vkEnumeratePhysicalDevices(instance, &count, nullptr);
-    vkDestroyInstance(instance, nullptr);
-    return static_cast<int>(count);
-}
-
-static int GetVulkanDeviceNames(char** names, int maxDevices, int maxNameLength) {
-    VkApplicationInfo app{};
-    app.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
-    app.apiVersion = VK_API_VERSION_1_0;
-    VkInstanceCreateInfo ci{};
-    ci.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
-    ci.pApplicationInfo = &app;
-    VkInstance instance;
-    if (vkCreateInstance(&ci, nullptr, &instance) != VK_SUCCESS)
-        return 0;
-    uint32_t count = static_cast<uint32_t>(maxDevices);
-    std::vector<VkPhysicalDevice> devices(count);
-    vkEnumeratePhysicalDevices(instance, &count, devices.data());
-    for (uint32_t i = 0; i < count; ++i) {
-        VkPhysicalDeviceProperties props{};
-        vkGetPhysicalDeviceProperties(devices[i], &props);
-        std::strncpy(names[i], props.deviceName, static_cast<size_t>(maxNameLength) - 1);
-        names[i][maxNameLength - 1] = '\0';
-    }
-    vkDestroyInstance(instance, nullptr);
-    return static_cast<int>(count);
-}
-#endif
+#define VOLK_IMPLEMENTATION
+#include "volk.h"
 
 #include "background_music_player.h"
 #include "common/assert.h"
@@ -240,6 +196,56 @@ SettingsDialog::~SettingsDialog() {
 void SettingsDialog::open() {
     QDialog::open();
     ui->tabWidgetSettings->setCurrentIndex(m_tab_index);
+}
+
+static std::vector<QString> m_physical_devices;
+void SettingsDialog::GetPhysicalDevices() {
+    if (volkInitialize() != VK_SUCCESS) {
+        qWarning() << "Failed to initialize Volk.";
+        return;
+    }
+
+    // Create Vulkan instance
+    VkApplicationInfo appInfo{};
+    appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+    appInfo.pApplicationName = "shadLauncher4";
+    appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
+    appInfo.pEngineName = "No Engine";
+    appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
+    appInfo.apiVersion = VK_API_VERSION_1_3;
+
+    VkInstanceCreateInfo instInfo{};
+    instInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+    instInfo.pApplicationInfo = &appInfo;
+    VkInstance instance;
+    if (vkCreateInstance(&instInfo, nullptr, &instance) != VK_SUCCESS) {
+        qWarning() << "Failed to create Vulkan instance.";
+        return;
+    }
+
+    // Load instance-based function pointers
+    volkLoadInstance(instance);
+
+    // Enumerate devices
+    uint32_t deviceCount = 0;
+    vkEnumeratePhysicalDevices(instance, &deviceCount, nullptr);
+    if (deviceCount == 0) {
+        qWarning() << "No Vulkan physical devices found.";
+        return;
+    }
+
+    std::vector<VkPhysicalDevice> devices(deviceCount);
+    vkEnumeratePhysicalDevices(instance, &deviceCount, devices.data());
+
+    m_physical_devices.clear();
+    for (uint32_t i = 0; i < deviceCount; ++i) {
+        VkPhysicalDeviceProperties props;
+        vkGetPhysicalDeviceProperties(devices[i], &props);
+        QString name = QString::fromUtf8(props.deviceName, -1);
+        m_physical_devices.push_back(name);
+    }
+
+    vkDestroyInstance(instance, nullptr);
 }
 
 // ---------------------------- Help text ----------------------------
@@ -1016,17 +1022,14 @@ void SettingsDialog::HandleButtonBox() {
 }
 
 void SettingsDialog::PopulateComboBoxes() {
+    if (m_physical_devices.empty()) {
+        GetPhysicalDevices();
+    }
     // GPU Devices
-    ui->graphicsAdapterBox->addItem(tr("Auto Select")); // -1, auto selection
-    const int maxDevices = GetVulkanDeviceCount();
     const int maxNameLength = 100;
-    std::vector<char*> names(maxDevices);
-    for (int i = 0; i < maxDevices; ++i)
-        names[i] = new char[maxNameLength];
-    GetVulkanDeviceNames(names.data(), maxDevices, maxNameLength);
-    for (int i = 0; i < maxDevices; ++i) {
-        ui->graphicsAdapterBox->addItem(names[i]);
-        delete[] names[i];
+    ui->graphicsAdapterBox->addItem(tr("Auto Select")); // -1, auto selection
+    for (const auto& device : m_physical_devices) {
+        ui->graphicsAdapterBox->addItem(device);
     }
 
     // Camera
