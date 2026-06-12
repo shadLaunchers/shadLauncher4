@@ -587,7 +587,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->dmaCheckBox->setChecked(m_emu_settings->IsDirectMemoryAccessEnabled());
     ui->devkitCheckBox->setChecked(m_emu_settings->IsDevKit());
     ui->neoCheckBox->setChecked(m_emu_settings->IsNeo());
-    ui->psnSignInCheckBox->setChecked(m_emu_settings->IsPSNSignedIn());
+    ui->psnSignInCheckBox->setChecked(m_emu_settings->IsShadNetEnabled());
     ui->networkConnectedCheckBox->setChecked(m_emu_settings->IsConnectedToNetwork());
 
     ui->enableShaderCacheCheckBox->setChecked(m_emu_settings->IsPipelineCacheEnabled());
@@ -816,7 +816,7 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetDirectMemoryAccessEnabled(ui->dmaCheckBox->isChecked(), is_specific);
     m_emu_settings->SetDevKit(ui->devkitCheckBox->isChecked(), is_specific);
     m_emu_settings->SetNeo(ui->neoCheckBox->isChecked(), is_specific);
-    m_emu_settings->SetPSNSignedIn(ui->psnSignInCheckBox->isChecked(), is_specific);
+    m_emu_settings->SetShadNetEnabled(ui->psnSignInCheckBox->isChecked(), is_specific);
     m_emu_settings->SetConnectedToNetwork(ui->networkConnectedCheckBox->isChecked(), is_specific);
 
     m_emu_settings->SetPipelineCacheEnabled(ui->enableShaderCacheCheckBox->isChecked(),
@@ -1247,7 +1247,7 @@ void SettingsDialog::MapUIControls() {
     // Experimental/Other Settings
     m_uiSettingMap[ui->devkitCheckBox] = {"dev_kit_mode", "General"};
     m_uiSettingMap[ui->neoCheckBox] = {"neo_mode", "General"};
-    m_uiSettingMap[ui->psnSignInCheckBox] = {"psn_signed_in", "General"};
+    m_uiSettingMap[ui->psnSignInCheckBox] = {"shad_net_enabled", "General"};
     m_uiSettingMap[ui->networkConnectedCheckBox] = {"connected_to_network", "General"};
     m_uiSettingMap[ui->dmemSpinBox] = {"extra_dmem_in_mbytes", "General"};
     m_uiSettingMap[ui->vblankSpinBox] = {"vblank_frequency", "GPU"};

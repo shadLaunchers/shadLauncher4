@@ -11,7 +11,6 @@
 #include "emulator_settings.h"
 #include "emulator_state.h"
 
-#include <SDL3/SDL_messagebox.h>
 
 using json = nlohmann::json;
 
@@ -35,11 +34,11 @@ struct adl_serializer<std::filesystem::path> {
 };
 } // namespace nlohmann
 
+
 // ── Helpers ───────────────────────────────────────────────────────────
 
 void EmulatorSettingsImpl::PrintChangedSummary(const std::vector<std::string>& changed) {
     if (changed.empty()) {
-        LOG_DEBUG(Config, "No game-specific overrides applied");
         return;
     }
     LOG_DEBUG(Config, "Game-specific overrides applied:");
@@ -50,7 +49,10 @@ void EmulatorSettingsImpl::PrintChangedSummary(const std::vector<std::string>& c
 // ── Singleton ────────────────────────────────────────────────────────
 EmulatorSettingsImpl::EmulatorSettingsImpl() = default;
 
-EmulatorSettingsImpl::~EmulatorSettingsImpl() = default;
+EmulatorSettingsImpl::~EmulatorSettingsImpl() {
+    if (m_loaded)
+        Save();
+}
 
 std::shared_ptr<EmulatorSettingsImpl> EmulatorSettingsImpl::GetInstance() {
     std::lock_guard lock(s_mutex);
@@ -159,6 +161,17 @@ void EmulatorSettingsImpl::SetFontsDir(const std::filesystem::path& dir) {
     m_general.font_dir.value = dir;
 }
 
+std::filesystem::path EmulatorSettingsImpl::GetAddonInstallDir() {
+    if (m_general.addon_install_dir.value.empty()) {
+        return Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "addcont";
+    }
+    return m_general.addon_install_dir.value;
+}
+
+void EmulatorSettingsImpl::SetAddonInstallDir(const std::filesystem::path& dir) {
+    m_general.addon_install_dir.value = dir;
+}
+
 // ── Game-specific override management ────────────────────────────────
 void EmulatorSettingsImpl::ClearGameSpecificOverrides() {
     ClearGroupOverrides(m_general);
@@ -168,7 +181,6 @@ void EmulatorSettingsImpl::ClearGameSpecificOverrides() {
     ClearGroupOverrides(m_audio);
     ClearGroupOverrides(m_gpu);
     ClearGroupOverrides(m_vulkan);
-    LOG_DEBUG(Config, "All game-specific overrides cleared");
 }
 
 void EmulatorSettingsImpl::ResetGameSpecificValue(const std::string& key) {
@@ -196,7 +208,7 @@ void EmulatorSettingsImpl::ResetGameSpecificValue(const std::string& key) {
         return;
     if (tryGroup(m_vulkan))
         return;
-    LOG_WARNING(Config, "ResetGameSpecificValue: key '{}' not found", key);
+    LOG_DEBUG(Config, "ResetGameSpecificValue: key '{}' not found", key);
 }
 
 bool EmulatorSettingsImpl::Save(const std::string& serial) {
@@ -238,7 +250,7 @@ bool EmulatorSettingsImpl::Save(const std::string& serial) {
 
             std::ofstream out(path);
             if (!out) {
-                LOG_ERROR(Config, "Failed to open game config for writing: {}", path.string());
+                LOG_DEBUG(Config, "Failed to open game config for writing: {}", path.string());
                 return false;
             }
             out << std::setw(2) << j;
@@ -280,14 +292,14 @@ bool EmulatorSettingsImpl::Save(const std::string& serial) {
 
             std::ofstream out(path);
             if (!out) {
-                LOG_ERROR(Config, "Failed to open config for writing: {}", path.string());
+                LOG_DEBUG(Config, "Failed to open config for writing: {}", path.string());
                 return false;
             }
             out << std::setw(2) << existing;
             return !out.fail();
         }
     } catch (const std::exception& e) {
-        LOG_ERROR(Config, "Error saving settings: {}", e.what());
+        LOG_DEBUG(Config, "Error saving settings: {}", e.what());
         return false;
     }
 }
@@ -300,7 +312,6 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
             // ── Global config ──────────────────────────────────────────
             const auto userDir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
             const auto configPath = userDir / "config.json";
-            LOG_DEBUG(Config, "Loading global config from: {}", configPath.string());
 
             if (std::ifstream in{configPath}; in.good()) {
                 json gj;
@@ -321,13 +332,15 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
                 mergeGroup(m_audio, "Audio");
                 mergeGroup(m_gpu, "GPU");
                 mergeGroup(m_vulkan, "Vulkan");
-
-                LOG_DEBUG(Config, "Global config loaded successfully");
+            } else {
+                // No config.json yet: start from defaults and write them out.
+                SetDefaultValues();
+                Save();
             }
-
             if (GetConfigVersion() != Common::g_scm_rev) {
                 Save();
             }
+            m_loaded = true;
             return true;
         } else {
             // ── Per-game override file ─────────────────────────────────
@@ -336,16 +349,13 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
             // base configuration.
             const auto gamePath =
                 Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) / (serial + ".json");
-            LOG_DEBUG(Config, "Applying game config: {}", gamePath.string());
 
             if (!std::filesystem::exists(gamePath)) {
-                LOG_DEBUG(Config, "No game-specific config found for {}", serial);
                 return false;
             }
 
             std::ifstream in(gamePath);
             if (!in) {
-                LOG_ERROR(Config, "Failed to open game config: {}", gamePath.string());
                 return false;
             }
 
@@ -378,7 +388,7 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
             return true;
         }
     } catch (const std::exception& e) {
-        LOG_ERROR(Config, "Error loading settings: {}", e.what());
+        LOG_DEBUG(Config, "Error loading settings: {}", e.what());
         return false;
     }
 }
