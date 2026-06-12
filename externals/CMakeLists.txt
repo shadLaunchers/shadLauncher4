@@ -77,6 +77,9 @@ endif()
 
 add_subdirectory(libdeflate)
 
+#volk
+add_subdirectory(volk)
+
 # staticwindlibs
 if (WIN32)
 add_subdirectory(staticwinlibs)
