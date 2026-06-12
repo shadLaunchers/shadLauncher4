@@ -28,6 +28,9 @@ Clone the repository with submodules:
 ```sh
 git clone --recursive https://github.com/shadLaunchers/shadLauncher4.git
 cd shadLauncher4
+
+# If you cloned without --recursive:
+git submodule update --init --recursive
 ```
 
 ---
@@ -90,4 +93,8 @@ sudo apt-get install -y \
 2. Build:
    ```sh
    cmake --build build --parallel $(nproc)
+   ```
+3. Run:
+   ```sh
+   ./build/shadLauncher4
    ```
