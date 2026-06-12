@@ -7,43 +7,43 @@
     <name>AboutDialog</name>
     <message>
       <source>About shadLauncher4</source>
-      <translation type="unfinished">About shadLauncher4</translation>
+      <translation>Acerca de shadLauncher4</translation>
     </message>
     <message>
       <source>Release</source>
-      <translation type="unfinished">Release</translation>
+      <translation>Principal</translation>
     </message>
     <message>
       <source>Development build</source>
-      <translation type="unfinished">Development build</translation>
+      <translation>Compilación de desarrollo</translation>
     </message>
     <message>
       <source>&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</source>
-      <translation type="unfinished">&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</translation>
+      <translation>&lt;b&gt;Versión %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</translation>
     </message>
     <message>
       <source>Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</source>
-      <translation type="unfinished">Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</translation>
+      <translation>Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; rama %2&lt;br&gt;Fecha %3</translation>
     </message>
     <message>
       <source>A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</source>
-      <translation type="unfinished">A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</translation>
+      <translation>Un iniciador gráfico para el emulador de PlayStation 4 shadPS4. Explora, organiza y ejecuta tu biblioteca de juegos, administra versiones del emulador y modifica la configuración desde un único sitio.</translation>
     </message>
     <message>
       <source>&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</translation>
+      <translation>&lt;a href=&quot;%1&quot;&gt;Repositorio de GitHub&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Informar de un problema (en inglés)&lt;/a&gt;</translation>
     </message>
     <message>
       <source>Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</source>
-      <translation type="unfinished">Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</translation>
+      <translation>Con tecnología del emulador &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt;.&lt;br&gt;Con licencia GNU General Public License v2.0 o superior.</translation>
     </message>
     <message>
       <source>Copy Build Info</source>
-      <translation type="unfinished">Copy Build Info</translation>
+      <translation>Copiar información de compilación</translation>
     </message>
     <message>
       <source>Copied!</source>
-      <translation type="unfinished">Copied!</translation>
+      <translation>¡Datos copiados!</translation>
     </message>
   </context>
   <context>
@@ -1524,101 +1524,101 @@ Se va a utilizar la base de datos local.
     <name>HostOverridesDialog</name>
     <message>
       <source>Network Host Overrides</source>
-      <translation type="unfinished">Network Host Overrides</translation>
+      <translation>Reemplazo de hosts de red</translation>
     </message>
     <message>
       <source>Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</source>
-      <translation type="unfinished">Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</translation>
+      <translation>Redirige las peticiones de red de un juego a otro servidor (como podría ser un servidor privado local). Cada fila asigna una &lt;b&gt;coincidencia&lt;/b&gt; a un &lt;b&gt;destino de redirección&lt;/b&gt;. Las coincidencias se buscarán en orden de detalle:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:puerto&lt;/tt&gt; &amp;middot; &lt;tt&gt;esquema://host:puerto&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (comodín)&lt;br&gt;Los destinos pueden escribirse como &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:puerto&lt;/tt&gt; o &lt;tt&gt;http(s)://host[:puerto]&lt;/tt&gt;. Las filas desactivadas se guardarán, pero serán ignoradas por el emulador.</translation>
     </message>
     <message>
       <source>Enabled</source>
-      <translation type="unfinished">Enabled</translation>
+      <translation>Activar</translation>
     </message>
     <message>
       <source>Match (host / endpoint)</source>
-      <translation type="unfinished">Match (host / endpoint)</translation>
+      <translation>Coincidencia (host/punto de conexión)</translation>
     </message>
     <message>
       <source>Redirect to</source>
-      <translation type="unfinished">Redirect to</translation>
+      <translation>Redirección</translation>
     </message>
     <message>
       <source>&amp;Add</source>
-      <translation type="unfinished">&amp;Add</translation>
+      <translation>&amp;Añadir</translation>
     </message>
     <message>
       <source>Add &amp;catch-all</source>
-      <translation type="unfinished">Add &amp;catch-all</translation>
+      <translation>Añadir &amp;comodín</translation>
     </message>
     <message>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;Quitar</translation>
     </message>
     <message>
       <source>File: %1</source>
-      <translation type="unfinished">File: %1</translation>
+      <translation>Archivo: %1</translation>
     </message>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>Abrir carpeta</translation>
     </message>
     <message>
       <source>Catch-all exists</source>
-      <translation type="unfinished">Catch-all exists</translation>
+      <translation>Comodín presente</translation>
     </message>
     <message>
       <source>A catch-all (*) row already exists.</source>
-      <translation type="unfinished">A catch-all (*) row already exists.</translation>
+      <translation>Ya existe una fila con comodín (*)</translation>
     </message>
     <message>
       <source>Parse error</source>
-      <translation type="unfinished">Parse error</translation>
+      <translation>Error al analizar</translation>
     </message>
     <message>
       <source>The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</source>
-      <translation type="unfinished">The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</translation>
+      <translation>No se ha podido analizar el archivo host_overrides.json existente. Abriendo una lista en blanco: si guardas los cambios, sobrescribirás el archivo.</translation>
     </message>
     <message>
       <source>Format error</source>
-      <translation type="unfinished">Format error</translation>
+      <translation>Error de formato</translation>
     </message>
     <message>
       <source>host_overrides.json must be a JSON object. Starting empty.</source>
-      <translation type="unfinished">host_overrides.json must be a JSON object. Starting empty.</translation>
+      <translation>host_overrides.json debe ser un objeto JSON. Abriendo una lista en blanco.</translation>
     </message>
     <message>
       <source>Row %1: %2</source>
-      <translation type="unfinished">Row %1: %2</translation>
+      <translation>Fila %1: %2</translation>
     </message>
     <message>
       <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
-      <translation type="unfinished">Row %1: duplicate entry for &apos;%2&apos;.</translation>
+      <translation>Fila %1: entrada duplicada para «%2».</translation>
     </message>
     <message>
       <source>Cannot save</source>
-      <translation type="unfinished">Cannot save</translation>
+      <translation>No se puede guardar</translation>
     </message>
     <message>
       <source>Please fix the following before saving:
 
 %1</source>
-      <translation type="unfinished">Please fix the following before saving:
+      <translation>Debes corregir los siguientes valores antes de poder guardar:
 
 %1</translation>
     </message>
     <message>
       <source>Save failed</source>
-      <translation type="unfinished">Save failed</translation>
+      <translation>Error al guardar</translation>
     </message>
     <message>
       <source>Could not open the file for writing:
 %1</source>
-      <translation type="unfinished">Could not open the file for writing:
+      <translation>No se ha podido abrir el archivo para su escritura:
 %1</translation>
     </message>
     <message>
       <source>An error occurred while writing.</source>
-      <translation type="unfinished">An error occurred while writing.</translation>
+      <translation>Se ha producido un error durante la escritura.</translation>
     </message>
   </context>
   <context>
@@ -2487,15 +2487,15 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Network Host Overrides</source>
-      <translation type="unfinished">Network Host Overrides</translation>
+      <translation>Reemplazo de hosts de red</translation>
     </message>
     <message>
       <source>Redirect game network traffic to another server</source>
-      <translation type="unfinished">Redirect game network traffic to another server</translation>
+      <translation>Redirige el tráfico de red del juego a otro servidor</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Audio</translation>
     </message>
   </context>
   <context>
@@ -2761,39 +2761,39 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>unknown</source>
-      <translation type="unfinished">unknown</translation>
+      <translation>desconocido</translation>
     </message>
     <message>
       <source>Redirect target is empty.</source>
-      <translation type="unfinished">Redirect target is empty.</translation>
+      <translation>El destino de redirección está en blanco.</translation>
     </message>
     <message>
       <source>Target scheme must be http or https.</source>
-      <translation type="unfinished">Target scheme must be http or https.</translation>
+      <translation>El esquema de destino ha de ser http o https.</translation>
     </message>
     <message>
       <source>Redirect target has no host.</source>
-      <translation type="unfinished">Redirect target has no host.</translation>
+      <translation>El destino de redirección no tiene host.</translation>
     </message>
     <message>
       <source>Port must be a number between 1 and 65535.</source>
-      <translation type="unfinished">Port must be a number between 1 and 65535.</translation>
+      <translation>El puerto debe ser un número entre 1 y 65535.</translation>
     </message>
     <message>
       <source>Match host is empty.</source>
-      <translation type="unfinished">Match host is empty.</translation>
+      <translation>El host a coincidir está en blanco.</translation>
     </message>
     <message>
       <source>Match scheme must be http or https (or omit it).</source>
-      <translation type="unfinished">Match scheme must be http or https (or omit it).</translation>
+      <translation>El esquema de la coincidencia ha de ser http o https (o debe omitirse).</translation>
     </message>
     <message>
       <source>Match has no host.</source>
-      <translation type="unfinished">Match has no host.</translation>
+      <translation>La coincidencia no tiene host.</translation>
     </message>
     <message>
       <source>Match port must be a number between 1 and 65535.</source>
-      <translation type="unfinished">Match port must be a number between 1 and 65535.</translation>
+      <translation>El puerto de la coincidencia debe ser un número entre 1 y 65535.</translation>
     </message>
   </context>
   <context>
