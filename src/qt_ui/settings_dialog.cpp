@@ -539,6 +539,9 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->micComboBox->setCurrentText(QString::fromStdString(m_emu_settings->GetSDLMicDevice()));
     ui->motionControlsCheckBox->setChecked(m_emu_settings->IsMotionControlsEnabled());
     ui->backgroundControllerCheckBox->setChecked(m_emu_settings->IsBackgroundControllerInput());
+    ui->imeAccessibilityCheckBox->setChecked(m_emu_settings->IsImeAccessibilityEnabled());
+    ui->imeUrlMailShortPanelCheckBox->setChecked(m_emu_settings->IsImeUrlMailShortPanel());
+    ui->circleEnterCheckBox->setChecked(m_emu_settings->IsCircleEnter());
     ui->cameraComboBox->setCurrentIndex(EmulatorSettings.GetCameraId() + 1);
 
     // ------------------ Log tab --------------------------------------------------------
@@ -778,6 +781,11 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetMotionControlsEnabled(ui->motionControlsCheckBox->isChecked(), is_specific);
     m_emu_settings->SetBackgroundControllerInput(ui->backgroundControllerCheckBox->isChecked(),
                                                  is_specific);
+    m_emu_settings->SetImeAccessibilityEnabled(ui->imeAccessibilityCheckBox->isChecked(),
+                                               is_specific);
+    m_emu_settings->SetImeUrlMailShortPanel(ui->imeUrlMailShortPanelCheckBox->isChecked(),
+                                            is_specific);
+    m_emu_settings->SetCircleEnter(ui->circleEnterCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetCameraId(ui->cameraComboBox->currentIndex() - 1, is_specific);
 
     // ------------------ Log tab --------------------------------------------------------
@@ -1227,6 +1235,9 @@ void SettingsDialog::MapUIControls() {
     m_uiSettingMap[ui->usbComboBox] = {"usb_device_backend", "Input"};
     m_uiSettingMap[ui->motionControlsCheckBox] = {"motion_controls_enabled", "Input"};
     m_uiSettingMap[ui->backgroundControllerCheckBox] = {"background_controller_input", "Input"};
+    m_uiSettingMap[ui->imeAccessibilityCheckBox] = {"ime_accessibility_enabled", "Input"};
+    m_uiSettingMap[ui->imeUrlMailShortPanelCheckBox] = {"ime_url_mail_short_panel", "Input"};
+    m_uiSettingMap[ui->circleEnterCheckBox] = {"is_circle_enter", "Input"};
 
     // Log Settings
     m_uiSettingMap[ui->enableLoggingCheckBox] = {"enable", "Log"};

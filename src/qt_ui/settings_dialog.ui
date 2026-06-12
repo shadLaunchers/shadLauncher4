@@ -1613,6 +1613,36 @@
                    </property>
                   </widget>
                  </item>
+                 <item>
+                  <widget class="QCheckBox" name="circleEnterCheckBox">
+                   <property name="text">
+                    <string>Use Circle Button to Confirm</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="imeGroupBox">
+                <property name="title">
+                 <string>IME</string>
+                </property>
+                <layout class="QVBoxLayout" name="imeLayout">
+                 <item>
+                  <widget class="QCheckBox" name="imeAccessibilityCheckBox">
+                   <property name="text">
+                    <string>Enable IME Accessibility</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="imeUrlMailShortPanelCheckBox">
+                   <property name="text">
+                    <string>Enable IME URL/Email Short Panel</string>
+                   </property>
+                  </widget>
+                 </item>
                 </layout>
                </widget>
               </item>
