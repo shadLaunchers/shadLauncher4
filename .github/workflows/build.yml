@@ -156,47 +156,40 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
-          fetch-depth: 0
           submodules: recursive
 
-      - name: Install dependencies
+      - name: Fetch commit history
         run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            cmake ninja-build clang \
-            libasound2-dev libpulse-dev \
-            libgl1-mesa-dev \
-            libxcb-cursor-dev \
-            libssl-dev \
-            libvulkan-dev
+          git fetch origin --unshallow --filter=blob:none
 
-      - name: Setup Qt
+      - name: Add LLVM repository
+        run: |
+          wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+          sudo add-apt-repository 'deb http://apt.llvm.org/noble/ llvm-toolchain-noble-19 main'
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt install -y libx11-dev libxext-dev libwayland-dev libdecor-0-dev libxkbcommon-dev libglfw3-dev libgles2-mesa-dev libfuse2 clang-19 mold build-essential libasound2-dev libpulse-dev libopenal-dev libudev-dev libxcursor-dev libxi-dev libxss-dev libxtst-dev
+
+      - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
           version: 6.10.0
-          host: linux
-          target: desktop
           arch: linux_gcc_64
-          archives: qtbase qttools
-          modules: qtmultimedia
-
-      - name: Run version script
-        run: .github/workflows/scripts/update_version.sh
-
-      - name: Read computed version
-        run: |
-          version=$(cat version.txt)
-          echo "APP_VERSION=$version" >> $GITHUB_ENV
+          modules: "qtmultimedia"
+          tools: 'tools_generic'
+          setup-python: false
+          cache: true
 
       - name: Cache CMake Configuration
         uses: actions/cache@v4
         env:
-          cache-name: ${{ runner.os }}-qt-ninja-cache-cmake-configuration
+          cache-name: ${{ runner.os }}-qt-cache-cmake-configuration
         with:
-          path: ${{ github.workspace }}/build
+          path: |
+            ${{github.workspace}}/build
           key: ${{ env.cache-name }}-${{ hashFiles('**/CMakeLists.txt', 'cmake/**') }}
           restore-keys: |
-            ${{ env.cache-name }}-
+            ${{ env.cache-name }}- 
 
       - name: Cache CMake Build
         uses: hendrikmuhs/ccache-action@v1.2.19
@@ -207,59 +200,22 @@ jobs:
           key: ${{ env.cache-name }}-${{ hashFiles('**/CMakeLists.txt', 'cmake/**') }}
 
       - name: Configure CMake
-        run: |
-          cmake --fresh -G Ninja \
-            -B "${{ github.workspace }}/build" \
-            -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }} \
-            -DAPP_VERSION="${{ env.APP_VERSION }}" \
-            -DCMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE=ON \
-            -DCMAKE_C_COMPILER=clang \
-            -DCMAKE_CXX_COMPILER=clang++ \
-            -DCMAKE_C_COMPILER_LAUNCHER=ccache \
-            -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
+        run: cmake --fresh -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE=ON -DCMAKE_C_COMPILER=clang-19 -DCMAKE_CXX_COMPILER=clang++-19 -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold" -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=mold" -DENABLE_UPDATER=ON -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
 
       - name: Build
-        run: cmake --build ${{ github.workspace }}/build --config ${{ env.BUILD_TYPE }} --parallel $(nproc)
+        run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --parallel $(nproc)
 
-      - name: Deploy and Package
+      - name: Run AppImage packaging script
+        run: ./.github/linux-appimage-qt.sh
+
+      - name: Package and Upload Linux Qt artifact
         run: |
-          # Download linuxdeploy and Qt plugin to /tmp
-          wget -q -O /tmp/linuxdeploy.AppImage \
-            https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
-          wget -q -O /tmp/linuxdeploy-plugin-qt.AppImage \
-            https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage
-          chmod +x /tmp/linuxdeploy.AppImage /tmp/linuxdeploy-plugin-qt.AppImage
-
-          # Create minimal .desktop file
-          cat > /tmp/shadlauncher4.desktop << 'EOF'
-          [Desktop Entry]
-          Type=Application
-          Name=shadLauncher4
-          Exec=shadLauncher4
-          Icon=shadlauncher4
-          Categories=Game;
-          EOF
-
-          # Build AppImage
-          APPIMAGE_EXTRACT_AND_RUN=1 \
-          QMAKE=$(command -v qmake6 || command -v qmake) \
-          PATH="/tmp:$PATH" \
-          /tmp/linuxdeploy.AppImage \
-            --appdir AppDir \
-            --executable build/shadLauncher4 \
-            --desktop-file /tmp/shadlauncher4.desktop \
-            --icon-file src/images/shadLauncher4.png \
-            --plugin qt \
-            --output appimage
-
-          mv shadLauncher4-x86_64.AppImage \
-            shadLauncher4-linux-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}.AppImage
-
-      - name: Upload Linux Qt artifact
-        uses: actions/upload-artifact@v4
+          tar cf shadPS4QtLauncher-linux-qt.tar.gz -C ${{github.workspace}}/build shadPS4QtLauncher
+      - uses: actions/upload-artifact@v4
         with:
-          name: shadLauncher4-linux-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
-          path: shadLauncher4-linux-qt-*.AppImage
+          name: shadPS4QtLauncher-linux-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
+          path: shadLauncher4.AppImage
+
 
   pre-release:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
