@@ -342,13 +342,12 @@ cmrc_add_resource_library(embedded-resources
         src/images/silver.png)
 target_link_libraries(shadLauncher4 PRIVATE res::embedded)
 
-target_link_libraries(shadLauncher4 PRIVATE fmt::fmt Qt6::Widgets Qt6::Concurrent Qt6::Xml Qt6::Network Qt6::Svg Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL spdlog::spdlog)
+target_link_libraries(shadLauncher4 PRIVATE Vulkan::Headers fmt::fmt SDL3::SDL3 volk_headers spdlog::spdlog)
+target_link_libraries(shadLauncher4 PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Svg Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL)
+
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
 endif()
-
-target_link_libraries(shadLauncher4 PRIVATE ntdll sdl3 vulkaninfowin)
-target_link_libraries(shadLauncher4 PRIVATE SDL3::SDL3 OpenSSL::Crypto Vulkan::Vulkan atomic)
 
 if (WIN32)
     target_sources(shadLauncher4 PRIVATE src/shadLauncher4.rc)
