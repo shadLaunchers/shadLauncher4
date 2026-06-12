@@ -1029,7 +1029,7 @@ void SettingsDialog::PopulateComboBoxes() {
     const int maxNameLength = 100;
     ui->graphicsAdapterBox->addItem(tr("Auto Select")); // -1, auto selection
     for (const auto& device : m_physical_devices) {
-        ui->graphicsAdapterBox->addItem(device);
+        ui->graphicsAdapterBox->addItem(device.left(maxNameLength));
     }
 
     // Camera
