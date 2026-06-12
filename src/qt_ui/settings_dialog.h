@@ -34,6 +34,7 @@ signals:
     void GameFoldersChanged();
     void CompatUpdateRequested();
     void EmuSettingsApplied();
+    void ThemeChanged();
 
 private:
     int m_tab_index = 0;
@@ -92,7 +93,7 @@ private:
     const QMap<QString, QString> micMap = {{tr("None"), "None"},
                                            {tr("Default Device"), "Default Device"}};
 
-    const QMap<QString, QString> logTypeMap = {{tr("async"), "async"}, {tr("sync"), "sync"}};
+    const QMap<QString, QString> logTypeMap = {{tr("wincolor"), "wincolor"}, {tr("msvc"), "msvc"}};
 
     const QMap<int, QString> audioBackendMap = {{0, "SDL"}, {1, "OpenAL"}};
 

@@ -57,6 +57,7 @@ static int GetVulkanDeviceNames(char** names, int maxDevices, int maxNameLength)
 #endif
 
 #include "background_music_player.h"
+#include "common/assert.h"
 #include "common/path_util.h"
 #include "core/emulator_settings.h"
 #include "core/emulator_state.h"
@@ -67,6 +68,7 @@ static int GetVulkanDeviceNames(char** names, int maxDevices, int maxNameLength)
 #ifdef ENABLE_UPDATER
 #include "qt_ui/check_update.h"
 #endif
+#include <iostream>
 #include "settings_dialog.h"
 #include "settings_dialog_helper_texts.h"
 #include "ui_settings_dialog.h"
@@ -97,6 +99,45 @@ inline bool operator==(GameInstallDir const& a, GameInstallDir const& b) {
 
 inline bool operator!=(GameInstallDir const& a, GameInstallDir const& b) {
     return !(a == b);
+}
+
+void LogUpdateLevels() {
+    spdlog::level default_log_level = spdlog::level::info;
+    std::unordered_map<std::string, spdlog::level> log_level_per_class;
+
+    if (EmulatorSettings.IsLogEnable()) {
+        for (const auto class_level : std::views::split(EmulatorSettings.GetLogFilter(), ' ')) {
+            const auto class_level_pair =
+                std::views::split(class_level, ':') | std::ranges::to<std::vector<std::string>>();
+
+            if (class_level_pair.size() != 2) {
+                std::cerr << "bad log filter provided" << std::endl;
+                continue;
+            }
+
+            if (class_level_pair.front()[0] == '*') {
+                default_log_level = spdlog::level_from_str(class_level_pair.back() |
+                                                           std::ranges::to<std::string>());
+            } else {
+                log_level_per_class[class_level_pair.front() | std::ranges::to<std::string>()] =
+                    spdlog::level_from_str(class_level_pair.back() |
+                                           std::ranges::to<std::string>());
+            }
+        }
+    }
+
+    for (auto& [name, logger] : Common::Log::ALL_LOGGERS) {
+        ASSERT_MSG(logger != nullptr, "logger {} is null", name);
+
+        if (EmulatorSettings.IsLogEnable()) {
+            const auto level_it = log_level_per_class.find(std::string(name));
+
+            logger->set_level(level_it != log_level_per_class.end() ? level_it->second
+                                                                    : default_log_level);
+        } else {
+            logger->set_level(spdlog::level::off);
+        }
+    }
 }
 
 SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
@@ -159,6 +200,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->currentFontsPath, helptexts.settings.paths_fontsDir);
     SubscribeHelpText(ui->browseFontsButton, helptexts.settings.paths_fontsDir_browse);
     SubscribeHelpText(ui->readbacksModeComboBox, helptexts.settings.gpu_readback_mode);
+    SubscribeHelpText(ui->logFilterLineEdit, helptexts.settings.log_filter);
 
     PopulateComboBoxes();
     PathTabConnections();
@@ -427,10 +469,14 @@ void SettingsDialog::OtherConnections() {
     });
 
     // ------------------ Log tab --------------------------------------------------------
-    connect(ui->OpenLogLocationButton, &QPushButton::clicked, this, []() {
+    connect(ui->logOpenLocationButton, &QPushButton::clicked, this, []() {
         QString userPath;
         Common::FS::PathToQString(userPath, Common::FS::GetUserPath(Common::FS::PathType::LogDir));
         QDesktopServices::openUrl(QUrl::fromLocalFile(userPath));
+    });
+
+    connect(ui->logSkipDuplicateCheckBox, &QPushButton::clicked, this, [this]() {
+        ui->logMaxSkipDurationGroupBox->setVisible(!ui->logMaxSkipDurationGroupBox->isVisible());
     });
 
     connect(ui->logPresetsButton, &QPushButton::clicked, this, [this]() {
@@ -470,11 +516,22 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->DsAudioComboBox->setCurrentText(
         QString::fromStdString(m_emu_settings->GetSDLPadSpkOutputDevice()));
 
-    ui->audioBackendComboBox->setCurrentText(audioBackendMap[EmulatorSettings.GetAudioBackend()]);
+    ui->audioBackendComboBox->setCurrentIndex(EmulatorSettings.GetAudioBackend());
     RefreshAudioDevices();
 
     // ------------------ GUI tab --------------------------------------------------------
     ui->discordRPCCheckbox->setChecked(m_emu_settings->IsDiscordRPCEnabled());
+    {
+        const QString current_theme =
+            m_gui_settings->GetValue(GUI::meta_currentStylesheet).toString();
+        const int idx = ui->themeComboBox->findData(current_theme);
+        if (idx >= 0) {
+            ui->themeComboBox->setCurrentIndex(idx);
+        } else {
+            ui->themeComboBox->addItem(current_theme + tr(" (missing)"), current_theme);
+            ui->themeComboBox->setCurrentIndex(ui->themeComboBox->count() - 1);
+        }
+    }
     ui->playBGMCheckBox->setChecked(m_gui_settings->GetValue(GUI::game_list_play_bg).toBool());
     ui->BGMVolumeSlider->setValue(m_gui_settings->GetValue(GUI::game_list_bg_volume).toInt());
     ui->showBackgroundImageCheckBox->setChecked(
@@ -531,14 +588,26 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->cameraComboBox->setCurrentIndex(EmulatorSettings.GetCameraId() + 1);
 
     // ------------------ Log tab --------------------------------------------------------
+    ui->logAppendCheckBox->setChecked(EmulatorSettings.IsLogAppend());
+    ui->enableLoggingCheckBox->setChecked(m_emu_settings->IsLogEnable());
     ui->logFilterLineEdit->setText(QString::fromStdString(m_emu_settings->GetLogFilter()));
-    ui->enableLoggingCheckBox->setChecked(m_emu_settings->IsLogEnabled());
-    ui->separateLogFilesCheckbox->setChecked(m_emu_settings->IsSeparateLoggingEnabled());
-    ui->identicalLogGroupedCheckbox->setChecked(m_emu_settings->IsIdenticalLogGrouped());
+    ui->separateLogFilesCheckbox->setChecked(m_emu_settings->IsLogSeparate());
+    ui->logSizeLimitLineEdit->setValue(m_emu_settings->GetLogSizeLimit());
+    ui->logSyncCheckBox->setChecked(m_emu_settings->IsLogSync());
 
+    ui->logSkipDuplicateCheckBox->setChecked(m_emu_settings->IsLogSkipDuplicate());
+    ui->logMaxSkipDurationGroupBox->setVisible(ui->logSkipDuplicateCheckBox->isChecked());
+    ui->logMaxSkipDurationLineEdit->setValue(m_emu_settings->GetLogMaxSkipDuration());
+
+#ifdef _WIN32
     std::string logType = m_emu_settings->GetLogType();
-    QString translatedText_LogType = logTypeMap.key(QString::fromStdString(logType));
-    ui->logTypeComboBox->setCurrentText(translatedText_LogType);
+    QString translatedText_logType = logTypeMap.key(QString::fromStdString(logType));
+    if (!translatedText_logType.isEmpty()) {
+        ui->logTypeComboBox->setCurrentText(translatedText_logType);
+    }
+#else
+    ui->logTypeGroupBox->setVisible(false);
+#endif
 
     // ------------------ Debug tab --------------------------------------------------------
     ui->rdocCheckBox->setChecked(m_emu_settings->IsRenderdocEnabled());
@@ -672,7 +741,7 @@ void SettingsDialog::ApplyValuesToBackend() {
 
     // ------------------ Audio tab --------------------------------------------------------
     const std::string backend = ui->audioBackendComboBox->currentText().toStdString();
-    EmulatorSettings.SetAudioBackend(audioBackendMap.key(QString::fromStdString(backend)));
+    EmulatorSettings.SetAudioBackend(ui->audioBackendComboBox->currentIndex());
 
     if (backend == "SDL") {
         EmulatorSettings.SetSDLMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString(),
@@ -693,6 +762,15 @@ void SettingsDialog::ApplyValuesToBackend() {
 
     // ------------------ GUI tab --------------------------------------------------------
     m_emu_settings->SetDiscordRPCEnabled(ui->discordRPCCheckbox->isChecked());
+
+    {
+        const QString new_theme = ui->themeComboBox->currentData().toString();
+        const QString prev_theme = m_gui_settings->GetValue(GUI::meta_currentStylesheet).toString();
+        if (!new_theme.isEmpty() && new_theme != prev_theme) {
+            m_gui_settings->SetValue(GUI::meta_currentStylesheet, new_theme);
+            emit ThemeChanged();
+        }
+    }
 
     m_gui_settings->SetValue(GUI::general_directory_depth_scanning,
                              ui->ScanDepthComboBox->currentIndex() + 1);
@@ -743,13 +821,19 @@ void SettingsDialog::ApplyValuesToBackend() {
     EmulatorSettings.SetCameraId(ui->cameraComboBox->currentIndex() - 1, is_specific);
 
     // ------------------ Log tab --------------------------------------------------------
+    m_emu_settings->SetLogAppend(ui->logAppendCheckBox->isChecked(), is_specific);
+    m_emu_settings->SetLogEnable(ui->enableLoggingCheckBox->isChecked(), is_specific);
     m_emu_settings->SetLogFilter(ui->logFilterLineEdit->text().toStdString(), is_specific);
-    m_emu_settings->SetLogEnabled(ui->enableLoggingCheckBox->isChecked(), is_specific);
-    m_emu_settings->SetSeparateLoggingEnabled(ui->separateLogFilesCheckbox->isChecked(),
-                                              is_specific);
-    m_emu_settings->SetIdenticalLogGrouped(ui->identicalLogGroupedCheckbox->isChecked());
+    m_emu_settings->SetLogMaxSkipDuration(ui->logMaxSkipDurationLineEdit->value(), is_specific);
+    m_emu_settings->SetLogSeparate(ui->separateLogFilesCheckbox->isChecked(), is_specific);
+    m_emu_settings->SetLogSizeLimit(ui->logSizeLimitLineEdit->value(), is_specific);
+    m_emu_settings->SetLogSkipDuplicate(ui->logSkipDuplicateCheckBox->isChecked(), is_specific);
+    m_emu_settings->SetLogSync(ui->logSyncCheckBox->isChecked(), is_specific);
+
+#ifdef _WIN32
     m_emu_settings->SetLogType(logTypeMap.value(ui->logTypeComboBox->currentText()).toStdString(),
                                is_specific);
+#endif
 
     // ------------------ Debug tab --------------------------------------------------------
     m_emu_settings->SetRenderdocEnabled(ui->rdocCheckBox->isChecked(), is_specific);
@@ -916,6 +1000,7 @@ void SettingsDialog::HandleButtonBox() {
         // CLOSE
         if (button == closeBtn) {
             close();
+            LogUpdateLevels();
             Q_EMIT EmuSettingsApplied();
             return;
         }
@@ -974,6 +1059,17 @@ void SettingsDialog::PopulateComboBoxes() {
     ui->usbComboBox->addItem(tr("Skylander Portal"));
     ui->usbComboBox->addItem(tr("Infinity Base"));
     ui->usbComboBox->addItem(tr("Dimensions Toypad"));
+
+    // Themes / stylesheets
+    ui->themeComboBox->addItem(tr("Default"), GUI::DefaultStylesheet);
+    ui->themeComboBox->addItem(tr("None"), GUI::NoStylesheet);
+    for (const QString& style : QStyleFactory::keys()) {
+        const QString display = GUI::NativeStylesheet + " (" + style + ")";
+        ui->themeComboBox->addItem(display, display);
+    }
+    for (const QString& entry : m_gui_settings->GetStylesheetEntries()) {
+        ui->themeComboBox->addItem(entry, entry);
+    }
 }
 
 void SettingsDialog::RefreshAudioDevices() {
@@ -1164,14 +1260,23 @@ void SettingsDialog::MapUIControls() {
     m_uiSettingMap[ui->motionControlsCheckBox] = {"motion_controls_enabled", "Input"};
     m_uiSettingMap[ui->backgroundControllerCheckBox] = {"background_controller_input", "Input"};
 
+    // Log Settings
+    m_uiSettingMap[ui->enableLoggingCheckBox] = {"enable", "Log"};
+    m_uiSettingMap[ui->logFilterLineEdit] = {"filter", "Log"};
+    m_uiSettingMap[ui->separateLogFilesCheckbox] = {"separate", "Log"};
+    m_uiSettingMap[ui->logSyncCheckBox] = {"sync", "Log"};
+    m_uiSettingMap[ui->logSkipDuplicateCheckBox] = {"skip_duplicate", "Log"};
+    m_uiSettingMap[ui->logMaxSkipDurationLineEdit] = {"max_skip_duration", "Log"};
+    m_uiSettingMap[ui->logSizeLimitLineEdit] = {"size_limit", "Log"};
+    m_uiSettingMap[ui->logAppendCheckBox] = {"append", "Log"};
+
+#ifdef WIN32
+    m_uiSettingMap[ui->logTypeComboBox] = {"type", "Log"};
+#endif
+
     // Debug Settings
-    m_uiSettingMap[ui->separateLogFilesCheckbox] = {"separate_logging_enabled", "Debug"};
-    m_uiSettingMap[ui->identicalLogGroupedCheckbox] = {"identical_log_grouped", "General"};
     m_uiSettingMap[ui->debugDump] = {"debug_dump", "Debug"};
     m_uiSettingMap[ui->collectShaderCheckBox] = {"shader_collect", "Debug"};
-    m_uiSettingMap[ui->enableLoggingCheckBox] = {"log_enabled", "Debug"};
-    m_uiSettingMap[ui->logFilterLineEdit] = {"log_filter", "General"};
-    m_uiSettingMap[ui->logTypeComboBox] = {"log_type", "General"};
 
     // Vulkan Settings
     m_uiSettingMap[ui->rdocCheckBox] = {"renderdoc_enabled", "Vulkan"};

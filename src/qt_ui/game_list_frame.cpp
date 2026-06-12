@@ -23,8 +23,10 @@
 #include <fmt/core.h>
 #include "background_music_player.h"
 #include "change_log_dialog.h"
+#include "common/key_manager.h"
 #include "common/singleton.h"
 #include "core/emulator_settings.h"
+#include "core/emulator_state.h"
 #include "core/file_format/psf.h"
 #include "core/ipc/ipc_client.h"
 #include "game_list_frame.h"
@@ -1520,7 +1522,7 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
         QString logPath;
         Common::FS::PathToQString(logPath, Common::FS::GetUserPath(Common::FS::PathType::LogDir));
 
-        if (!m_emu_settings->IsSeparateLoggingEnabled()) {
+        if (!m_emu_settings->IsLogSeparate()) {
             // Open the entire log folder
             QDesktopServices::openUrl(QUrl::fromLocalFile(logPath));
             return;
@@ -1622,6 +1624,17 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
 
     QAction* trophy_viewer = menu.addAction(tr("&Trophy Viewer"));
     connect(trophy_viewer, &QAction::triggered, this, [this, current_game] {
+        const auto& user_key_vec =
+            KeyManager::GetInstance()->GetAllKeys().TrophyKeySet.ReleaseTrophyKey;
+
+        if (user_key_vec.size() != 16) {
+            // turn clang format off to maintain one string line for easy translations
+            // clang-format off
+            QMessageBox::critical(nullptr, tr("Error"), tr("A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager"));
+            // clang-format on
+            return;
+        }
+
         if (m_game_data.empty()) {
             QMessageBox::information(
                 this, tr("Trophy Viewer"),
@@ -1762,8 +1775,7 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
     connect(compatibility_submit, &QAction::triggered, this, [this, current_game, gameinfo] {
         std::filesystem::path log_file_path =
             (Common::FS::GetUserPath(Common::FS::PathType::LogDir) /
-             (m_emu_settings->IsSeparateLoggingEnabled() ? current_game.serial + ".log"
-                                                         : "shad_log.txt"));
+             (m_emu_settings->IsLogSeparate() ? current_game.serial + ".log" : "shad_log.txt"));
         bool is_valid_file = LogAnalyzer::ProcessFile(log_file_path);
         std::optional<std::string> report_result = std::nullopt;
         if (is_valid_file) {
@@ -1876,6 +1888,11 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
 }
 
 void GameListFrame::PlayBackgroundMusic(game_info game) {
+    // Don't start title music over a game that's already running.
+    if (EmulatorState::GetInstance()->IsGameRunning()) {
+        return;
+    }
+
     if (!m_gui_settings->GetValue(GUI::game_list_play_bg).toBool() ||
         game->info.snd0_path.empty()) {
         BackgroundMusicPlayer::getInstance().StopMusic();

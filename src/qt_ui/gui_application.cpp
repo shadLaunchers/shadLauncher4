@@ -3,6 +3,9 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QDebug>
+#include <QDir>
+#include <QFile>
+#include <QFileInfo>
 #include <QStyleHints>
 #include <core/libraries/system/system_service.h>
 #include <core/user_settings.h>
@@ -33,6 +36,11 @@ GUIApplication::GUIApplication(int& argc, char** argv) : QApplication(argc, argv
 GUIApplication::~GUIApplication() {}
 
 bool GUIApplication::init(QString emulator_arg, QString game_arg, QStringList passed_args) {
+    Common::Log::Shutdown();
+    // Start configured log
+    Common::Log::g_should_append |= EmulatorSettings.IsLogAppend();
+    Common::Log::Setup("shadLauncher4.log");
+
     m_gui_settings = std::make_shared<GUISettings>();
     m_emu_settings = std::make_shared<EmulatorSettingsImpl>();
     m_emu_settings->Load();
@@ -328,7 +336,26 @@ void GUIApplication::OnChangeStyleSheetRequest() {
             // available";
         }
     } else {
-        // qDebug() << "Using custom stylesheet:" << stylesheet_name;
+        // Custom stylesheet from a .qss file
+        const QString themes_dir = GUI::GetThemesDir();
+        const QFileInfo file_info(
+            QDir(themes_dir).absoluteFilePath(stylesheet_name + QStringLiteral(".qss")));
+
+        QFile file(file_info.absoluteFilePath());
+        if (file_info.exists() && file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            QString sheet = QString::fromUtf8(file.readAll());
+            sheet.replace(QStringLiteral("url(\"./"), QStringLiteral("url(\"") +
+                                                          file_info.absolutePath() +
+                                                          QStringLiteral("/"));
+            setStyleSheet(sheet);
+            file.close();
+        } else {
+            qDebug() << "Could not find stylesheet" << stylesheet_name << "in" << themes_dir
+                     << "- falling back to default.";
+            setStyleSheet(GUI::Stylesheets::default_style_sheet);
+        }
+
+        GUI::custom_stylesheet_active = true;
     }
 
     GUI::stylesheet = styleSheet();

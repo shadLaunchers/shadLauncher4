@@ -20,13 +20,15 @@ project(shadLauncher4 VERSION ${NUMERIC_VERSION} LANGUAGES CXX)
 
 set(APP_IS_RELEASE false)
 
+include(FetchContent)
+
 if(WIN32 AND NOT CMAKE_PREFIX_PATH)
     include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/DetectQtInstallation.cmake")
 endif ()
 
 
 find_package(OpenAL CONFIG)
-find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Xml Network Multimedia)
+find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Xml Network Multimedia Svg)
 qt_standard_project_setup()
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOMOC ON)
@@ -128,16 +130,11 @@ set(COMMON src/common/types.h
            src/common/key_manager.cpp
            src/common/key_manager.h
            src/common/aes.h
-           src/common/logging/backend.cpp
-           src/common/logging/backend.h
-           src/common/logging/filter.cpp
-           src/common/logging/filter.h
+           src/common/logging/classes.h
            src/common/logging/formatter.h
-           src/common/logging/log_entry.h
+           src/common/logging/log.cpp
            src/common/logging/log.h
-           src/common/logging/text_formatter.cpp
-           src/common/logging/text_formatter.h
-           src/common/logging/types.h
+           src/common/logging/thread_name_formatter.h
            src/common/assert.cpp
            src/common/assert.h
            src/common/arch.h
@@ -204,6 +201,10 @@ endif()
 set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/settings.h
           src/qt_ui/gui_save.h
+          src/qt_ui/about_dialog.cpp
+          src/qt_ui/about_dialog.h
+          src/qt_ui/host_overrides_dialog.cpp
+          src/qt_ui/host_overrides_dialog.h
           src/qt_ui/gui_settings.cpp
           src/qt_ui/gui_settings.h
           src/qt_ui/persistent_settings.cpp
@@ -339,7 +340,7 @@ cmrc_add_resource_library(embedded-resources
         src/images/silver.png)
 target_link_libraries(shadLauncher4 PRIVATE res::embedded)
 
-target_link_libraries(shadLauncher4 PRIVATE fmt::fmt Qt6::Widgets Qt6::Concurrent Qt6::Xml Qt6::Network Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL)
+target_link_libraries(shadLauncher4 PRIVATE fmt::fmt Qt6::Widgets Qt6::Concurrent Qt6::Xml Qt6::Network Qt6::Svg Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL spdlog::spdlog)
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
 endif()

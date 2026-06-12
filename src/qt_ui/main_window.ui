@@ -191,6 +191,7 @@
      <string>Configuration</string>
     </property>
     <addaction name="actionConfigGeneral"/>
+    <addaction name="actionConfigAudio"/>
     <addaction name="actionConfigGUI"/>
     <addaction name="actionConfigGraphics"/>
     <addaction name="actionConfigInput"/>
@@ -212,6 +213,7 @@
     <addaction name="actionExport_GameList"/>
     <addaction name="actionCrypto_Key_Manager"/>
     <addaction name="actionConfigure_Hotkeys"/>
+    <addaction name="actionHostOverrides"/>
    </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
@@ -365,6 +367,10 @@
    </property>
   </action>
   <action name="actionConfigGUI">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/cfg-gui.svg</normaloff>:/images/menu/cfg-gui.svg</iconset>
+   </property>
    <property name="text">
     <string>GUI</string>
    </property>
@@ -373,6 +379,10 @@
    </property>
   </action>
   <action name="exitAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/exit.svg</normaloff>:/images/menu/exit.svg</iconset>
+   </property>
    <property name="text">
     <string>Exit</string>
    </property>
@@ -384,11 +394,27 @@
    </property>
   </action>
   <action name="actionManage_Users">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/user.svg</normaloff>:/images/menu/user.svg</iconset>
+   </property>
    <property name="text">
     <string>User Accounts</string>
    </property>
    <property name="toolTip">
     <string>Manage user accounts</string>
+   </property>
+  </action>
+  <action name="actionHostOverrides">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/network.svg</normaloff>:/images/menu/network.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Network Host Overrides</string>
+   </property>
+   <property name="toolTip">
+    <string>Redirect game network traffic to another server</string>
    </property>
   </action>
   <action name="aboutAct">
@@ -400,6 +426,10 @@
    </property>
   </action>
   <action name="showGameListAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/show-list.svg</normaloff>:/images/menu/show-list.svg</iconset>
+   </property>
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -408,6 +438,10 @@
    </property>
   </action>
   <action name="showToolBarAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/toolbar.svg</normaloff>:/images/menu/toolbar.svg</iconset>
+   </property>
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -416,6 +450,10 @@
    </property>
   </action>
   <action name="showCompatibilityInGridAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/compat.svg</normaloff>:/images/menu/compat.svg</iconset>
+   </property>
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -424,11 +462,19 @@
    </property>
   </action>
   <action name="refreshGameListAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/refresh.png</normaloff>:/images/refresh.png</iconset>
+   </property>
    <property name="text">
     <string>Game List Refresh</string>
    </property>
   </action>
   <action name="setIconSizeTinyAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/size-tiny.svg</normaloff>:/images/menu/size-tiny.svg</iconset>
+   </property>
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -437,6 +483,10 @@
    </property>
   </action>
   <action name="setIconSizeSmallAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/size-small.svg</normaloff>:/images/menu/size-small.svg</iconset>
+   </property>
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -448,6 +498,10 @@
    </property>
   </action>
   <action name="setIconSizeMediumAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/size-medium.svg</normaloff>:/images/menu/size-medium.svg</iconset>
+   </property>
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -456,6 +510,10 @@
    </property>
   </action>
   <action name="setIconSizeLargeAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/size-large.svg</normaloff>:/images/menu/size-large.svg</iconset>
+   </property>
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -464,6 +522,10 @@
    </property>
   </action>
   <action name="setlistModeListAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/list.png</normaloff>:/images/list.png</iconset>
+   </property>
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -475,6 +537,10 @@
    </property>
   </action>
   <action name="setlistModeGridAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/grid.png</normaloff>:/images/grid.png</iconset>
+   </property>
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -591,6 +657,10 @@
    </property>
   </action>
   <action name="showHiddenEntriesAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/eye.svg</normaloff>:/images/menu/eye.svg</iconset>
+   </property>
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -599,6 +669,10 @@
    </property>
   </action>
   <action name="install_pkg_act">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/package.svg</normaloff>:/images/menu/package.svg</iconset>
+   </property>
    <property name="text">
     <string>Install Packages (PKG)</string>
    </property>
@@ -607,6 +681,10 @@
    </property>
   </action>
   <action name="showTitleBarsAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/titlebar.svg</normaloff>:/images/menu/titlebar.svg</iconset>
+   </property>
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -623,6 +701,10 @@
    </property>
   </action>
   <action name="showCustomIconsAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/custom_config.png</normaloff>:/images/custom_config.png</iconset>
+   </property>
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -653,51 +735,91 @@
    </property>
   </action>
   <action name="actionExport_GameList">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/export.svg</normaloff>:/images/menu/export.svg</iconset>
+   </property>
    <property name="text">
     <string>Export GameList</string>
    </property>
   </action>
   <action name="actionConfigGeneral">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/cfg-general.svg</normaloff>:/images/menu/cfg-general.svg</iconset>
+   </property>
    <property name="text">
     <string>General</string>
    </property>
   </action>
   <action name="actionConfigGraphics">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/cfg-graphics.svg</normaloff>:/images/menu/cfg-graphics.svg</iconset>
+   </property>
    <property name="text">
     <string>Graphics</string>
    </property>
   </action>
   <action name="actionConfigInput">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/ps4_controller.png</normaloff>:/images/ps4_controller.png</iconset>
+   </property>
    <property name="text">
     <string>Input</string>
    </property>
   </action>
   <action name="actionConfigPaths">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/cfg-paths.svg</normaloff>:/images/menu/cfg-paths.svg</iconset>
+   </property>
    <property name="text">
     <string>Paths</string>
    </property>
   </action>
   <action name="actionConfigDebug">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/cfg-debug.svg</normaloff>:/images/menu/cfg-debug.svg</iconset>
+   </property>
    <property name="text">
     <string>Debug</string>
    </property>
   </action>
   <action name="actionConfigExperimental">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/cfg-experimental.svg</normaloff>:/images/menu/cfg-experimental.svg</iconset>
+   </property>
    <property name="text">
     <string>Experimental</string>
    </property>
   </action>
   <action name="actionConfigLog">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/cfg-log.svg</normaloff>:/images/menu/cfg-log.svg</iconset>
+   </property>
    <property name="text">
     <string>Log</string>
    </property>
   </action>
   <action name="actionCrypto_Key_Manager">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/key.svg</normaloff>:/images/menu/key.svg</iconset>
+   </property>
    <property name="text">
     <string>Crypto Key Manager</string>
    </property>
   </action>
   <action name="showLogAct">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/log.svg</normaloff>:/images/menu/log.svg</iconset>
+   </property>
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -727,6 +849,10 @@
    </property>
   </action>
   <action name="actionConfigure_Hotkeys">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/hotkey.svg</normaloff>:/images/menu/hotkey.svg</iconset>
+   </property>
    <property name="text">
     <string>Configure Hotkeys</string>
    </property>
@@ -737,6 +863,15 @@
    </property>
    <property name="text">
     <string>Check for Updates</string>
+   </property>
+  </action>
+  <action name="actionConfigAudio">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/cfg-audio.svg</normaloff>:/images/menu/cfg-audio.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Audio</string>
    </property>
   </action>
  </widget>

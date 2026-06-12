@@ -4,6 +4,49 @@
 <!DOCTYPE TS>
 <TS version="2.1" sourcelanguage="en_US" language="de">
   <context>
+    <name>AboutDialog</name>
+    <message>
+      <source>About shadLauncher4</source>
+      <translation type="unfinished">About shadLauncher4</translation>
+    </message>
+    <message>
+      <source>Release</source>
+      <translation type="unfinished">Release</translation>
+    </message>
+    <message>
+      <source>Development build</source>
+      <translation type="unfinished">Development build</translation>
+    </message>
+    <message>
+      <source>&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</source>
+      <translation type="unfinished">&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</translation>
+    </message>
+    <message>
+      <source>Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</source>
+      <translation type="unfinished">Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</translation>
+    </message>
+    <message>
+      <source>A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</source>
+      <translation type="unfinished">A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</translation>
+    </message>
+    <message>
+      <source>&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</source>
+      <translation type="unfinished">&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</translation>
+    </message>
+    <message>
+      <source>Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</source>
+      <translation type="unfinished">Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</translation>
+    </message>
+    <message>
+      <source>Copy Build Info</source>
+      <translation type="unfinished">Copy Build Info</translation>
+    </message>
+    <message>
+      <source>Copied!</source>
+      <translation type="unfinished">Copied!</translation>
+    </message>
+  </context>
+  <context>
     <name>ChangelogDialog</name>
     <message>
       <source>Changelog Viewer</source>
@@ -1396,11 +1439,15 @@ Benutze lokale Datenbank.
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Trophäenansicht</translation>
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
       <translation>Keine Spiele gefunden. Bitte füge zuerst deine Spiele zu deiner Bibliothek hinzu.</translation>
+    </message>
+    <message>
+      <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
+      <translation>Ein Trophäen-Schlüssel wird benötigt, um die Trophäenansicht verwenden zu können. Dies kann durch Klicken auf "Dienstprogramme" - "Kryptografie Schlüsselverwaltung" eingetragen werden</translation>
     </message>
   </context>
   <context>
@@ -1473,14 +1520,111 @@ Benutze lokale Datenbank.
     </message>
   </context>
   <context>
+    <name>HostOverridesDialog</name>
+    <message>
+      <source>Network Host Overrides</source>
+      <translation type="unfinished">Network Host Overrides</translation>
+    </message>
+    <message>
+      <source>Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</source>
+      <translation type="unfinished">Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</translation>
+    </message>
+    <message>
+      <source>Enabled</source>
+      <translation type="unfinished">Enabled</translation>
+    </message>
+    <message>
+      <source>Match (host / endpoint)</source>
+      <translation type="unfinished">Match (host / endpoint)</translation>
+    </message>
+    <message>
+      <source>Redirect to</source>
+      <translation type="unfinished">Redirect to</translation>
+    </message>
+    <message>
+      <source>&amp;Add</source>
+      <translation type="unfinished">&amp;Add</translation>
+    </message>
+    <message>
+      <source>Add &amp;catch-all</source>
+      <translation type="unfinished">Add &amp;catch-all</translation>
+    </message>
+    <message>
+      <source>&amp;Remove</source>
+      <translation type="unfinished">&amp;Remove</translation>
+    </message>
+    <message>
+      <source>File: %1</source>
+      <translation type="unfinished">File: %1</translation>
+    </message>
+    <message>
+      <source>Open Folder</source>
+      <translation type="unfinished">Open Folder</translation>
+    </message>
+    <message>
+      <source>Catch-all exists</source>
+      <translation type="unfinished">Catch-all exists</translation>
+    </message>
+    <message>
+      <source>A catch-all (*) row already exists.</source>
+      <translation type="unfinished">A catch-all (*) row already exists.</translation>
+    </message>
+    <message>
+      <source>Parse error</source>
+      <translation type="unfinished">Parse error</translation>
+    </message>
+    <message>
+      <source>The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</source>
+      <translation type="unfinished">The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</translation>
+    </message>
+    <message>
+      <source>Format error</source>
+      <translation type="unfinished">Format error</translation>
+    </message>
+    <message>
+      <source>host_overrides.json must be a JSON object. Starting empty.</source>
+      <translation type="unfinished">host_overrides.json must be a JSON object. Starting empty.</translation>
+    </message>
+    <message>
+      <source>Row %1: %2</source>
+      <translation type="unfinished">Row %1: %2</translation>
+    </message>
+    <message>
+      <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
+      <translation type="unfinished">Row %1: duplicate entry for &apos;%2&apos;.</translation>
+    </message>
+    <message>
+      <source>Cannot save</source>
+      <translation type="unfinished">Cannot save</translation>
+    </message>
+    <message>
+      <source>Please fix the following before saving:
+
+%1</source>
+      <translation type="unfinished">Please fix the following before saving:
+
+%1</translation>
+    </message>
+    <message>
+      <source>Save failed</source>
+      <translation type="unfinished">Save failed</translation>
+    </message>
+    <message>
+      <source>Could not open the file for writing:
+%1</source>
+      <translation type="unfinished">Could not open the file for writing:
+%1</translation>
+    </message>
+    <message>
+      <source>An error occurred while writing.</source>
+      <translation type="unfinished">An error occurred while writing.</translation>
+    </message>
+  </context>
+  <context>
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
       <translation>Hotkeys anpassen</translation>
-    </message>
-    <message>
-      <source>Controller Hotkeys</source>
-      <translation>Controller Hotkeys</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
@@ -1505,14 +1649,6 @@ Benutze lokale Datenbank.
     <message>
       <source>Toggle Pause</source>
       <translation>Anhalten/fortsetzen</translation>
-    </message>
-    <message>
-      <source>Keyboard Hotkeys</source>
-      <translation>Tastatur Hotkeys</translation>
-    </message>
-    <message>
-      <source>Renderdoc Capture (for debugging only)</source>
-      <translation>RenderDoc-Aufnahme (nur für Debugging erforderlich)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
@@ -1569,6 +1705,26 @@ Benutze lokale Datenbank.
     <message>
       <source>Volume Down</source>
       <translation>Lautstärke reduzieren</translation>
+    </message>
+    <message>
+      <source>Hotkeys</source>
+      <translation>Hotkeys</translation>
+    </message>
+    <message>
+      <source>Placeholder</source>
+      <translation>Platzhalter</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot</source>
+      <translation>Screenshot aufnehmen</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot w/ Overlays</source>
+      <translation>Screenshot mit Overlays aufnehmen</translation>
+    </message>
+    <message>
+      <source>Open Emulator Settings</source>
+      <translation>Emulator-Einstellungen öffnen</translation>
     </message>
   </context>
   <context>
@@ -2328,6 +2484,18 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <source>Check for Updates</source>
       <translation>Auf Updates prüfen</translation>
     </message>
+    <message>
+      <source>Network Host Overrides</source>
+      <translation type="unfinished">Network Host Overrides</translation>
+    </message>
+    <message>
+      <source>Redirect game network traffic to another server</source>
+      <translation type="unfinished">Redirect game network traffic to another server</translation>
+    </message>
+    <message>
+      <source>Audio</source>
+      <translation type="unfinished">Audio</translation>
+    </message>
   </context>
   <context>
     <name>NpBindDialog</name>
@@ -2589,6 +2757,42 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     <message>
       <source>Failed to copy executable to application directory.</source>
       <translation>Fehler beim Kopieren der ausführbaren Datei in das Anwendungsverzeichnis.</translation>
+    </message>
+    <message>
+      <source>unknown</source>
+      <translation type="unfinished">unknown</translation>
+    </message>
+    <message>
+      <source>Redirect target is empty.</source>
+      <translation type="unfinished">Redirect target is empty.</translation>
+    </message>
+    <message>
+      <source>Target scheme must be http or https.</source>
+      <translation type="unfinished">Target scheme must be http or https.</translation>
+    </message>
+    <message>
+      <source>Redirect target has no host.</source>
+      <translation type="unfinished">Redirect target has no host.</translation>
+    </message>
+    <message>
+      <source>Port must be a number between 1 and 65535.</source>
+      <translation type="unfinished">Port must be a number between 1 and 65535.</translation>
+    </message>
+    <message>
+      <source>Match host is empty.</source>
+      <translation type="unfinished">Match host is empty.</translation>
+    </message>
+    <message>
+      <source>Match scheme must be http or https (or omit it).</source>
+      <translation type="unfinished">Match scheme must be http or https (or omit it).</translation>
+    </message>
+    <message>
+      <source>Match has no host.</source>
+      <translation type="unfinished">Match has no host.</translation>
+    </message>
+    <message>
+      <source>Match port must be a number between 1 and 65535.</source>
+      <translation type="unfinished">Match port must be a number between 1 and 65535.</translation>
     </message>
   </context>
   <context>
@@ -2971,14 +3175,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Protokoll-Typ</translation>
     </message>
     <message>
-      <source>async</source>
-      <translation>asynchron</translation>
-    </message>
-    <message>
-      <source>sync</source>
-      <translation>syncron</translation>
-    </message>
-    <message>
       <source>Log Filter</source>
       <translation>Protokoll-Filter</translation>
     </message>
@@ -3313,10 +3509,6 @@ This will remove all game-specific overrides.</translation>
       <translation>Wähle ein Verzeichnis für Systemschriftarten</translation>
     </message>
     <message>
-      <source>Identical Log Grouped</source>
-      <translation>Identische Protokollzeilen gruppieren</translation>
-    </message>
-    <message>
       <source>Readbacks Mode</source>
       <translation>Readback-Modus</translation>
     </message>
@@ -3334,11 +3526,67 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Audio Backend</translation>
     </message>
     <message>
       <source>Camera Device</source>
       <translation type="unfinished">Camera Device</translation>
+    </message>
+    <message>
+      <source>Log Sync</source>
+      <translation>Synchrones Protokoll</translation>
+    </message>
+    <message>
+      <source>Log Skip Duplicate</source>
+      <translation>Doppelte Protokollzeilen überspringen</translation>
+    </message>
+    <message>
+      <source>Log Max Skip Duration</source>
+      <translation>Max. Überspringdauer der Protokollzeilen</translation>
+    </message>
+    <message>
+      <source> ms</source>
+      <translation> ms</translation>
+    </message>
+    <message>
+      <source>Log Size Limit</source>
+      <translation>Protokollgrößenlimit</translation>
+    </message>
+    <message>
+      <source> B</source>
+      <translation> B</translation>
+    </message>
+    <message>
+      <source>Log Append</source>
+      <translation>Protokoll anhängen</translation>
+    </message>
+    <message>
+      <source>wincolor</source>
+      <translation>wincolor</translation>
+    </message>
+    <message>
+      <source>msvc</source>
+      <translation>msvc</translation>
+    </message>
+    <message>
+      <source>Theme</source>
+      <translation type="unfinished">Theme</translation>
+    </message>
+    <message>
+      <source>Stylesheet:</source>
+      <translation type="unfinished">Stylesheet:</translation>
+    </message>
+    <message>
+      <source>Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</source>
+      <translation type="unfinished">Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</translation>
+    </message>
+    <message>
+      <source> (missing)</source>
+      <translation type="unfinished"> (missing)</translation>
+    </message>
+    <message>
+      <source>Default</source>
+      <translation type="unfinished">Default</translation>
     </message>
   </context>
   <context>
@@ -3407,6 +3655,10 @@ This will remove all game-specific overrides.</translation>
       <source>Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</source>
       <translation type="unfinished">Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</translation>
     </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation>Protokoll-Filter:\nFiltert das Protokoll so, dass nur bestimmte Informationen ausgegeben werden.\nBeispiele: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\n Ebenen: Trace, Debug, Info, Warning, Error, Critical, Off - in dieser Reihenfolge, eine ausgewählte Ebene blendet alle niedrigeren Ebenen aus und zeigt alle höheren Ebenen an.</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -3416,7 +3668,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Trophäenansicht</translation>
     </message>
     <message>
       <source>Select Game:</source>
@@ -3436,11 +3688,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
-    </message>
-    <message>
-      <source>%1 trophies for %2</source>
-      <translation type="unfinished">%1 trophies for %2</translation>
+      <translation>Benutzer auswählen:</translation>
     </message>
   </context>
   <context>
@@ -3788,7 +4036,7 @@ The custom build is still available under:
     </message>
     <message>
       <source>Could not find executable in extracted files.</source>
-      <translation type="unfinished">Could not find executable in extracted files.</translation>
+      <translation>Konnte die ausführbare Datei nicht in den extrahierten Dateien finden.</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.
@@ -3808,7 +4056,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>1. Version folder:</source>
-      <translation type="unfinished">1. Version folder:</translation>
+      <translation>1. Versions-Ordner:</translation>
     </message>
     <message>
       <source>2. Installed to:</source>
@@ -3824,11 +4072,11 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Version %1 has been:</source>
-      <translation type="unfinished">Version %1 has been:</translation>
+      <translation>Version %1 wurde:</translation>
     </message>
     <message>
       <source>1. Downloaded to:</source>
-      <translation type="unfinished">1. Downloaded to:</translation>
+      <translation>1. Downgeloadet nach:</translation>
     </message>
     <message>
       <source>Extraction failure:</source>
@@ -3836,7 +4084,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) has been:</source>
-      <translation type="unfinished">Pre-release (Nightly) has been:</translation>
+      <translation>Vorabversion (Nightly) wurde:</translation>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
@@ -3852,7 +4100,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Select executable or zip file</source>
-      <translation type="unfinished">Select executable or zip file</translation>
+      <translation>Wähle eine ausführbare Datei oder Zip-Datei</translation>
     </message>
     <message>
       <source>No executable found in the extracted zip file.</source>
@@ -3864,7 +4112,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Install as Current Version</source>
-      <translation type="unfinished">Install as Current Version</translation>
+      <translation>Als aktuelle Version installieren</translation>
     </message>
     <message>
       <source>Do you want to install this version as the current version?
@@ -3881,30 +4129,30 @@ The version may not run correctly.</translation>
     <message>
       <source>Version %1 has been installed with all files to:
 %2</source>
-      <translation type="unfinished">Version %1 has been installed with all files to:
+      <translation>Version %1 wurde mit allen Dateien installiert nach:
 %2</translation>
     </message>
     <message>
       <source>Version %1 has been installed to:
 %2</source>
-      <translation type="unfinished">Version %1 has been installed to:
+      <translation>Version %1 wurde installiert nach:
 %2</translation>
     </message>
     <message>
       <source>Custom (ZIP)</source>
-      <translation type="unfinished">Custom (ZIP)</translation>
+      <translation>Benutzerdefiniert (ZIP)</translation>
     </message>
     <message>
       <source>2. Extracted from:</source>
-      <translation type="unfinished">2. Extracted from:</translation>
+      <translation>2. Entpackt von:</translation>
     </message>
     <message>
       <source>3. Executable found:</source>
-      <translation type="unfinished">3. Executable found:</translation>
+      <translation>3. Ausführbare Datei gefunden:</translation>
     </message>
     <message>
       <source>4. Build hash:</source>
-      <translation type="unfinished">4. Build hash:</translation>
+      <translation>4. Erstelle Hash:</translation>
     </message>
     <message>
       <source>

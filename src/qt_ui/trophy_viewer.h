@@ -50,6 +50,7 @@ private slots:
 private:
     void PopulateTrophyWidget(QString title, QString user);
     void SetTableItem(QTableWidget* parent, int row, int column, QString str);
+    std::filesystem::path GetTrpFilesPath(std::filesystem::path gamePath);
     bool userResizedWindow_ = false;
     bool programmaticResize_ = false;
     bool initialSizeApplied_ = false;

@@ -1,6 +1,8 @@
 // SPDX-FileCopyrightText: Copyright 2025-2026 shadLauncher4 Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <QPainter>
+#include <QPixmap>
 #include <QtConcurrent>
 #include <common/scm_rev.h>
 #include <common/string_util.h>
@@ -8,6 +10,7 @@
 #include <core/file_format/pkg.h>
 #include <core/file_format/psf.h>
 
+#include "about_dialog.h"
 #include "background_music_player.h"
 #include "common/input.h"
 #include "common/path_util.h"
@@ -19,6 +22,7 @@
 #include "game_list_exporter.h"
 #include "game_list_frame.h"
 #include "gui_settings.h"
+#include "host_overrides_dialog.h"
 #include "hotkeys.h"
 #include "kbm_gui.h"
 #include "main_window.h"
@@ -62,6 +66,14 @@ bool MainWindow::init() {
     createActions();
     createDockWindows();
     createConnects();
+
+    m_toolbar_icon_color_label = new QLabel(this);
+    m_toolbar_icon_color_label->setObjectName("toolbar_icon_color");
+    m_toolbar_icon_color_label->hide();
+    m_thumbnail_icon_color_label = new QLabel(this);
+    m_thumbnail_icon_color_label->setObjectName("thumbnail_icon_color");
+    m_thumbnail_icon_color_label->hide();
+    CacheOriginalToolbarIcons();
 
     setMinimumSize(350, minimumSizeHint().height()); // seems fine on win 10
 
@@ -282,26 +294,33 @@ void MainWindow::createConnects() {
             }
         });
 
+        // When the user picks a new stylesheet in the dialog, ask GUIApplication
+        // to reload it through the existing channel.
+        connect(dlg, &SettingsDialog::ThemeChanged, this,
+                [this]() { emit RequestGlobalStylesheetChange(); });
+
         dlg->setAttribute(Qt::WA_DeleteOnClose);
         dlg->open();
     };
 
     connect(ui->actionConfigGeneral, &QAction::triggered, this,
             [open_settings]() { open_settings(0); });
-    connect(ui->actionConfigGUI, &QAction::triggered, this,
+    connect(ui->actionConfigAudio, &QAction::triggered, this,
             [open_settings]() { open_settings(1); });
-    connect(ui->actionConfigGraphics, &QAction::triggered, this,
+    connect(ui->actionConfigGUI, &QAction::triggered, this,
             [open_settings]() { open_settings(2); });
-    connect(ui->actionConfigInput, &QAction::triggered, this,
+    connect(ui->actionConfigGraphics, &QAction::triggered, this,
             [open_settings]() { open_settings(3); });
-    connect(ui->actionConfigPaths, &QAction::triggered, this,
+    connect(ui->actionConfigInput, &QAction::triggered, this,
             [open_settings]() { open_settings(4); });
-    connect(ui->actionConfigLog, &QAction::triggered, this,
+    connect(ui->actionConfigPaths, &QAction::triggered, this,
             [open_settings]() { open_settings(5); });
-    connect(ui->actionConfigDebug, &QAction::triggered, this,
+    connect(ui->actionConfigLog, &QAction::triggered, this,
             [open_settings]() { open_settings(6); });
-    connect(ui->actionConfigExperimental, &QAction::triggered, this,
+    connect(ui->actionConfigDebug, &QAction::triggered, this,
             [open_settings]() { open_settings(7); });
+    connect(ui->actionConfigExperimental, &QAction::triggered, this,
+            [open_settings]() { open_settings(8); });
 
     connect(ui->bootGameAct, &QAction::triggered, this,
             [this] { MainWindow::StartGameWithArgs({}); });
@@ -341,6 +360,16 @@ void MainWindow::createConnects() {
 #else
     ui->updaterAct->setVisible(false);
 #endif
+
+    connect(ui->aboutAct, &QAction::triggered, this, [this] {
+        AboutDialog about(this);
+        about.exec();
+    });
+
+    connect(ui->actionHostOverrides, &QAction::triggered, this, [this] {
+        HostOverridesDialog dlg(this);
+        dlg.exec();
+    });
 }
 
 void MainWindow::LoadVersionComboBox() {
@@ -614,10 +643,62 @@ void MainWindow::closeEvent(QCloseEvent* closeEvent) {
 }
 
 void MainWindow::RepaintGUI() {
+    RepaintToolbarIcons();
     if (m_game_list_frame) {
         m_game_list_frame->RepaintIcons(true);
     }
-    // TODO finish this
+}
+
+void MainWindow::CacheOriginalToolbarIcons() {
+    m_original_toolbar_icons.clear();
+    if (!ui->toolBar) {
+        return;
+    }
+    for (QAction* action : ui->toolBar->actions()) {
+        if (action && !action->icon().isNull()) {
+            m_original_toolbar_icons.insert(action, action->icon());
+        }
+    }
+}
+
+void MainWindow::RepaintToolbarIcons() {
+    if (!ui->toolBar || m_original_toolbar_icons.isEmpty()) {
+        return;
+    }
+    const QColor target_color =
+        m_toolbar_icon_color_label
+            ? m_toolbar_icon_color_label->palette().color(QPalette::WindowText)
+            : QColor(Qt::black);
+
+    const auto colorize = [&target_color](const QIcon& source) -> QIcon {
+        QIcon out;
+        // Iterate the icon's available sizes so HiDPI variants stay sharp.
+        const QList<QSize> sizes = source.availableSizes();
+        const QList<QSize> render_sizes = sizes.isEmpty() ? QList<QSize>{QSize(64, 64)} : sizes;
+        for (const QSize& size : render_sizes) {
+            QPixmap pm = source.pixmap(size);
+            if (pm.isNull()) {
+                continue;
+            }
+            QPixmap tinted(pm.size());
+            tinted.setDevicePixelRatio(pm.devicePixelRatio());
+            tinted.fill(Qt::transparent);
+            QPainter p(&tinted);
+            p.drawPixmap(0, 0, pm);
+            p.setCompositionMode(QPainter::CompositionMode_SourceIn);
+            p.fillRect(tinted.rect(), target_color);
+            p.end();
+            out.addPixmap(tinted);
+        }
+        return out;
+    };
+
+    for (auto it = m_original_toolbar_icons.constBegin(); it != m_original_toolbar_icons.constEnd();
+         ++it) {
+        if (QAction* action = it.key()) {
+            action->setIcon(colorize(it.value()));
+        }
+    }
 }
 
 void MainWindow::InstallPkg() {
