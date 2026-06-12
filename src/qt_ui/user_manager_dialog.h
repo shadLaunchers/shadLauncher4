@@ -32,27 +32,28 @@ private Q_SLOTS:
 private:
     QColor GetQColorFromIndex(int index) {
         switch (index) {
-        case 0:
-            return Qt::blue;
         case 1:
-            return Qt::red;
+            return Qt::blue;
         case 2:
-            return Qt::green;
+            return Qt::red;
         case 3:
+            return Qt::green;
+        case 4:
             return Qt::magenta;
         default:
             return Qt::gray;
         }
     }
     QString GetColorName(int index) {
+        // 1-based to match user_color (1=Blue .. 4=Pink).
         switch (index) {
-        case 0:
-            return "Blue";
         case 1:
-            return "Red";
+            return "Blue";
         case 2:
-            return "Green";
+            return "Red";
         case 3:
+            return "Green";
+        case 4:
             return "Pink";
         default:
             return "Unknown";

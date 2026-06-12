@@ -1,6 +1,7 @@
 ﻿// SPDX-FileCopyrightText: Copyright 2025-2026 shadLauncher4 Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <algorithm>
 #include <QHeaderView>
 #include <QtWidgets>
 #include <common/path_util.h>
@@ -192,23 +193,24 @@ u32 UserManagerDialog::GetUserKey() const {
 }
 
 void UserManagerDialog::OnUserCreate() {
-    int smallest = 1;
-    for (auto& u : UserManagement.GetAllUsers()) {
-        if (u.user_id == smallest)
-            ++smallest;
-        else
-            break;
-    }
-    if (smallest > 16) {
+    const auto& users = UserManagement.GetAllUsers();
+
+    if (users.size() >= 16) {
         QMessageBox::warning(this, tr("Error"), tr("Cannot add more users."));
         return;
+    }
+
+    s32 new_id = 1000;
+    for (const auto& u : users) {
+        if (u.user_id >= new_id)
+            new_id = u.user_id + 1;
     }
 
     QDialog dialog(this);
     dialog.setWindowTitle(tr("Create New User"));
     dialog.setModal(true);
     QVBoxLayout* layout = new QVBoxLayout(&dialog);
-    layout->addWidget(new QLabel(tr("New User ID: %1").arg(smallest)));
+    layout->addWidget(new QLabel(tr("New User ID: %1").arg(new_id)));
     layout->addWidget(new QLabel(tr("Username (3–16 chars, letters, numbers, _, -)")));
     QLineEdit* edit = new QLineEdit(&dialog);
     edit->setValidator(
@@ -225,9 +227,9 @@ void UserManagerDialog::OnUserCreate() {
             return;
         }
         User u;
-        u.user_id = smallest;
+        u.user_id = new_id;
         u.user_name = name.toStdString();
-        u.user_color = 0;
+        u.user_color = 1; // 1-based palette: 1 = Blue
         u.player_index = -1;
         UserManagement.AddUser(u);
         UpdateTable();
@@ -302,10 +304,14 @@ void UserManagerDialog::OnUserSetColor() {
 
     QStringList colors = {"Blue", "Red", "Green", "Pink"};
     bool ok = false;
+    // user_color is 1-based; the picker list is 0-based. Convert both ways.
+    const int current =
+        std::clamp(static_cast<int>(user->user_color) - 1, 0, static_cast<int>(colors.size()) - 1);
     QString color = QInputDialog::getItem(this, tr("Set User Color"), tr("Select color:"), colors,
-                                          user->user_color, false, &ok);
+                                          current, false, &ok);
     if (ok) {
-        user->user_color = colors.indexOf(color);
+        user->user_color = static_cast<u32>(colors.indexOf(color) + 1);
+        UserManagement.Save(); // persist immediately
         UpdateTable();
     }
 }
@@ -346,7 +352,7 @@ void UserManagerDialog::OnSort(int logicalIndex) {
 }
 
 void UserManagerDialog::closeEvent(QCloseEvent* event) {
-    m_emu_settings->Save(); // Save any changes to users before exiting
+    UserSettings.Save();
     m_gui_settings->SetValue(GUI::user_manager_geometry, saveGeometry());
     QDialog::closeEvent(event);
 }
