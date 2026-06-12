@@ -590,6 +590,12 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->psnSignInCheckBox->setChecked(m_emu_settings->IsShadNetEnabled());
     ui->networkConnectedCheckBox->setChecked(m_emu_settings->IsConnectedToNetwork());
 
+    // ShadNet
+    ui->shadNetServerLineEdit->setText(QString::fromStdString(m_emu_settings->GetShadNetServer()));
+    ui->signalingAddrLineEdit->setText(QString::fromStdString(m_emu_settings->GetSignalingAddr()));
+    ui->signalingPortSpinBox->setValue(m_emu_settings->GetSignalingPort());
+    ui->upnpCheckBox->setChecked(m_emu_settings->IsUPnPEnabled());
+
     ui->enableShaderCacheCheckBox->setChecked(m_emu_settings->IsPipelineCacheEnabled());
     ui->archiveShaderCacheCheckBox->setChecked(m_emu_settings->IsPipelineCacheArchived());
     ui->dmemSpinBox->setValue(m_emu_settings->GetExtraDmemInMBytes());
@@ -818,6 +824,14 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetNeo(ui->neoCheckBox->isChecked(), is_specific);
     m_emu_settings->SetShadNetEnabled(ui->psnSignInCheckBox->isChecked(), is_specific);
     m_emu_settings->SetConnectedToNetwork(ui->networkConnectedCheckBox->isChecked(), is_specific);
+
+    // ShadNet (signaling_addr / signaling_port / enable_upnp are overrideable;
+    // shadnet_server is global-only but set with the same flag for consistency)
+    m_emu_settings->SetShadNetServer(ui->shadNetServerLineEdit->text().toStdString(), is_specific);
+    m_emu_settings->SetSignalingAddr(ui->signalingAddrLineEdit->text().toStdString(), is_specific);
+    m_emu_settings->SetSignalingPort(static_cast<u16>(ui->signalingPortSpinBox->value()),
+                                     is_specific);
+    m_emu_settings->SetUPnPEnabled(ui->upnpCheckBox->isChecked(), is_specific);
 
     m_emu_settings->SetPipelineCacheEnabled(ui->enableShaderCacheCheckBox->isChecked(),
                                             is_specific);
@@ -1249,6 +1263,9 @@ void SettingsDialog::MapUIControls() {
     m_uiSettingMap[ui->neoCheckBox] = {"neo_mode", "General"};
     m_uiSettingMap[ui->psnSignInCheckBox] = {"shad_net_enabled", "General"};
     m_uiSettingMap[ui->networkConnectedCheckBox] = {"connected_to_network", "General"};
+    m_uiSettingMap[ui->signalingAddrLineEdit] = {"signaling_addr", "General"};
+    m_uiSettingMap[ui->signalingPortSpinBox] = {"signaling_port", "General"};
+    m_uiSettingMap[ui->upnpCheckBox] = {"enable_upnp", "General"};
     m_uiSettingMap[ui->dmemSpinBox] = {"extra_dmem_in_mbytes", "General"};
     m_uiSettingMap[ui->vblankSpinBox] = {"vblank_frequency", "GPU"};
 }
