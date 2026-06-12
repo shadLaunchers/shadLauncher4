@@ -27,6 +27,7 @@ private Q_SLOTS:
     void OnUserSetDefault();
     void OnUserSetColor();
     void OnUserSetControllerPort();
+    void OnUserEditShadNet();
     void OnSort(int logicalIndex);
 
 private:
@@ -45,7 +46,6 @@ private:
         }
     }
     QString GetColorName(int index) {
-        // 1-based to match user_color (1=Blue .. 4=Pink).
         switch (index) {
         case 1:
             return "Blue";
@@ -75,6 +75,7 @@ private:
     QPushButton* push_set_default;
     QPushButton* push_set_color;
     QPushButton* push_set_controller;
+    QPushButton* push_shadnet;
     QPushButton* push_close;
 
     int m_sort_column = 1;
