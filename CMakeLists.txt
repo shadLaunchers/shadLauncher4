@@ -29,6 +29,8 @@ endif ()
 
 find_package(OpenAL CONFIG)
 find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Xml Network Multimedia Svg)
+find_package(OpenSSL REQUIRED)
+find_package(Vulkan REQUIRED)
 qt_standard_project_setup()
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOMOC ON)
@@ -340,16 +342,16 @@ cmrc_add_resource_library(embedded-resources
         src/images/silver.png)
 target_link_libraries(shadLauncher4 PRIVATE res::embedded)
 
-target_link_libraries(shadLauncher4 PRIVATE fmt::fmt Qt6::Widgets Qt6::Concurrent Qt6::Xml Qt6::Network Qt6::Svg Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL spdlog::spdlog)
+target_link_libraries(shadLauncher4 PRIVATE atomic Vulkan::Headers fmt::fmt SDL3::SDL3 volk_headers spdlog::spdlog)
+target_link_libraries(shadLauncher4 PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Svg Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL OpenSSL::Crypto)
+
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
 endif()
+
 if (WIN32)
-target_link_libraries(shadLauncher4 PRIVATE ntdll sdl3 vulkaninfowin)
-else()
-target_link_libraries(shadLauncher4 PRIVATE SDL3::SDL3)
+    target_sources(shadLauncher4 PRIVATE src/shadLauncher4.rc)
 endif()
-target_sources(shadLauncher4 PRIVATE src/shadLauncher4.rc)
 target_sources(shadLauncher4 PRIVATE ${RESOURCE_FILES})
 
 if (WIN32)

@@ -22,3 +22,6 @@
 	path = externals/spdlog
 	url = https://github.com/gabime/spdlog.git
 	branch = v2.x
+[submodule "externals/volk"]
+	path = externals/volk
+	url = https://github.com/zeux/volk.git
