@@ -101,14 +101,7 @@ message(STATUS "Remote name: ${GIT_REMOTE_NAME}")
 message(STATUS "Branch: ${GIT_BRANCH}")
 message(STATUS "Remote URL: ${GIT_REMOTE_URL}")
 
-option(ENABLE_UPDATER "Enables the options to updater" ON)
-
 string(TOLOWER "${GIT_REMOTE_URL}" GIT_REMOTE_URL_LOWER)
-
-if(NOT GIT_REMOTE_URL_LOWER MATCHES "shadlaunchers/shadlauncher4" OR NOT GIT_BRANCH STREQUAL "main")
-    message(STATUS "Not the expected branch or remote, disabling auto update")
-    set(ENABLE_UPDATER OFF)
-endif()
 
 set(COMMON src/common/types.h
            src/common/fs_util.cpp
@@ -191,12 +184,9 @@ set(FILEFORMAT src/core/file_format/psf.cpp
 )
 
 set(LIBRARIES src/core/libraries/system/system_service.h)
-
-if (ENABLE_UPDATER)
-    set(UPDATER src/qt_ui/check_update.cpp
-                src/qt_ui/check_update.h
-    )
-endif()
+set(UPDATER src/qt_ui/check_update.cpp
+            src/qt_ui/check_update.h
+)
 
 set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/settings.h
@@ -341,9 +331,7 @@ cmrc_add_resource_library(embedded-resources
 target_link_libraries(shadLauncher4 PRIVATE res::embedded)
 
 target_link_libraries(shadLauncher4 PRIVATE fmt::fmt Qt6::Widgets Qt6::Concurrent Qt6::Xml Qt6::Network Qt6::Svg Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL spdlog::spdlog)
-if (ENABLE_UPDATER)
-    add_definitions(-DENABLE_UPDATER)
-endif()
+
 if (WIN32)
 target_link_libraries(shadLauncher4 PRIVATE ntdll sdl3 vulkaninfowin)
 else()

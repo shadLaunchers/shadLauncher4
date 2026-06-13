@@ -26,16 +26,14 @@
 #include "game_list_exporter.h"
 #include "game_list_frame.h"
 #include "gui_settings.h"
+#include "host_overrides_dialog.h"
 #include "hotkeys.h"
 #include "kbm_gui.h"
 #include "main_window.h"
 #include "pkg_install_dir_select_dialog.h"
 #include "pkg_install_model.h"
 #include "progress_dialog.h"
-#ifdef ENABLE_UPDATER
 #include "qt_ui/check_update.h"
-#endif
-#include "host_overrides_dialog.h"
 #include "settings_dialog.h"
 #include "ui_main_window.h"
 #include "user_manager_dialog.h"
@@ -116,12 +114,10 @@ bool MainWindow::init() {
     }
 
     // Check Update Gui
-#ifdef ENABLE_UPDATER
     if (m_gui_settings->GetValue(GUI::general_check_gui_updates).toBool()) {
         auto* checkUpdate = new CheckUpdate(m_gui_settings, false, this);
         checkUpdate->exec();
     }
-#endif
 
     return true;
 }
@@ -357,14 +353,10 @@ void MainWindow::createConnects() {
     connect(m_ipc_client.get(), &IpcClient::LogEntrySent, m_game_list_frame,
             &GameListFrame::PrintLog);
 
-#ifdef ENABLE_UPDATER
     connect(ui->updaterAct, &QAction::triggered, this, [this] {
         auto* checkUpdate = new CheckUpdate(m_gui_settings, true, this);
         checkUpdate->exec();
     });
-#else
-    ui->updaterAct->setVisible(false);
-#endif
 
     connect(ui->aboutAct, &QAction::triggered, this, [this] {
         AboutDialog about(this);
