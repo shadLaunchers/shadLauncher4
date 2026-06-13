@@ -1,6 +1,10 @@
 // SPDX-FileCopyrightText: Copyright 2025-2026 shadLauncher4 Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <algorithm>
+#include <functional>
+#include <QMenu>
+#include <QMenuBar>
 #include <QPainter>
 #include <QPixmap>
 #include <QtConcurrent>
@@ -29,9 +33,7 @@
 #include "pkg_install_dir_select_dialog.h"
 #include "pkg_install_model.h"
 #include "progress_dialog.h"
-#ifdef ENABLE_UPDATER
 #include "qt_ui/check_update.h"
-#endif
 #include "settings_dialog.h"
 #include "ui_main_window.h"
 #include "user_manager_dialog.h"
@@ -74,6 +76,7 @@ bool MainWindow::init() {
     m_thumbnail_icon_color_label->setObjectName("thumbnail_icon_color");
     m_thumbnail_icon_color_label->hide();
     CacheOriginalToolbarIcons();
+    CacheOriginalMenuIcons();
 
     setMinimumSize(350, minimumSizeHint().height()); // seems fine on win 10
 
@@ -111,12 +114,10 @@ bool MainWindow::init() {
     }
 
     // Check Update Gui
-#ifdef ENABLE_UPDATER
     if (m_gui_settings->GetValue(GUI::general_check_gui_updates).toBool()) {
         auto* checkUpdate = new CheckUpdate(m_gui_settings, false, this);
         checkUpdate->exec();
     }
-#endif
 
     return true;
 }
@@ -314,7 +315,7 @@ void MainWindow::createConnects() {
     connect(ui->actionConfigInput, &QAction::triggered, this,
             [open_settings]() { open_settings(4); });
     connect(ui->actionConfigPaths, &QAction::triggered, this,
-            [open_settings]() { open_settings(5); });
+            [open_settings]() { open_settings(54); });
     connect(ui->actionConfigLog, &QAction::triggered, this,
             [open_settings]() { open_settings(6); });
     connect(ui->actionConfigDebug, &QAction::triggered, this,
@@ -352,14 +353,10 @@ void MainWindow::createConnects() {
     connect(m_ipc_client.get(), &IpcClient::LogEntrySent, m_game_list_frame,
             &GameListFrame::PrintLog);
 
-#ifdef ENABLE_UPDATER
     connect(ui->updaterAct, &QAction::triggered, this, [this] {
         auto* checkUpdate = new CheckUpdate(m_gui_settings, true, this);
         checkUpdate->exec();
     });
-#else
-    ui->updaterAct->setVisible(false);
-#endif
 
     connect(ui->aboutAct, &QAction::triggered, this, [this] {
         AboutDialog about(this);
@@ -644,6 +641,7 @@ void MainWindow::closeEvent(QCloseEvent* closeEvent) {
 
 void MainWindow::RepaintGUI() {
     RepaintToolbarIcons();
+    RepaintMenuIcons();
     if (m_game_list_frame) {
         m_game_list_frame->RepaintIcons(true);
     }
@@ -661,6 +659,55 @@ void MainWindow::CacheOriginalToolbarIcons() {
     }
 }
 
+QIcon MainWindow::ColorizeIcon(const QIcon& source, const QColor& color) {
+    QIcon out;
+    // Iterate the icon's available sizes so HiDPI variants stay sharp.
+    const QList<QSize> sizes = source.availableSizes();
+    const QList<QSize> render_sizes = sizes.isEmpty() ? QList<QSize>{QSize(64, 64)} : sizes;
+    for (const QSize& size : render_sizes) {
+        QPixmap pm = source.pixmap(size);
+        if (pm.isNull()) {
+            continue;
+        }
+        QPixmap tinted(pm.size());
+        tinted.setDevicePixelRatio(pm.devicePixelRatio());
+        tinted.fill(Qt::transparent);
+        QPainter p(&tinted);
+        p.drawPixmap(0, 0, pm);
+        p.setCompositionMode(QPainter::CompositionMode_SourceIn);
+        p.fillRect(tinted.rect(), color);
+        p.end();
+        out.addPixmap(tinted);
+    }
+    return out;
+}
+
+bool MainWindow::IsMonochromeIcon(const QIcon& icon) {
+    if (icon.isNull()) {
+        return false;
+    }
+    const QImage img = icon.pixmap(32, 32).toImage().convertToFormat(QImage::Format_ARGB32);
+    if (img.isNull()) {
+        return false;
+    }
+    bool any_opaque = false;
+    for (int y = 0; y < img.height(); ++y) {
+        for (int x = 0; x < img.width(); ++x) {
+            const QColor c = img.pixelColor(x, y);
+            if (c.alpha() < 24) {
+                continue;
+            }
+            any_opaque = true;
+            const int mx = std::max({c.red(), c.green(), c.blue()});
+            const int mn = std::min({c.red(), c.green(), c.blue()});
+            if (mx - mn > 24) {
+                return false; // has real chroma -> colored icon
+            }
+        }
+    }
+    return any_opaque;
+}
+
 void MainWindow::RepaintToolbarIcons() {
     if (!ui->toolBar || m_original_toolbar_icons.isEmpty()) {
         return;
@@ -670,33 +717,54 @@ void MainWindow::RepaintToolbarIcons() {
             ? m_toolbar_icon_color_label->palette().color(QPalette::WindowText)
             : QColor(Qt::black);
 
-    const auto colorize = [&target_color](const QIcon& source) -> QIcon {
-        QIcon out;
-        // Iterate the icon's available sizes so HiDPI variants stay sharp.
-        const QList<QSize> sizes = source.availableSizes();
-        const QList<QSize> render_sizes = sizes.isEmpty() ? QList<QSize>{QSize(64, 64)} : sizes;
-        for (const QSize& size : render_sizes) {
-            QPixmap pm = source.pixmap(size);
-            if (pm.isNull()) {
-                continue;
-            }
-            QPixmap tinted(pm.size());
-            tinted.setDevicePixelRatio(pm.devicePixelRatio());
-            tinted.fill(Qt::transparent);
-            QPainter p(&tinted);
-            p.drawPixmap(0, 0, pm);
-            p.setCompositionMode(QPainter::CompositionMode_SourceIn);
-            p.fillRect(tinted.rect(), target_color);
-            p.end();
-            out.addPixmap(tinted);
-        }
-        return out;
-    };
-
     for (auto it = m_original_toolbar_icons.constBegin(); it != m_original_toolbar_icons.constEnd();
          ++it) {
         if (QAction* action = it.key()) {
-            action->setIcon(colorize(it.value()));
+            action->setIcon(ColorizeIcon(it.value(), target_color));
+        }
+    }
+}
+
+void MainWindow::CacheOriginalMenuIcons() {
+    m_original_menu_icons.clear();
+    if (!menuBar()) {
+        return;
+    }
+    std::function<void(QMenu*)> walk = [&](QMenu* menu) {
+        if (!menu) {
+            return;
+        }
+        for (QAction* action : menu->actions()) {
+            if (!action) {
+                continue;
+            }
+            if (action->menu()) {
+                walk(action->menu());
+            } else if (!action->icon().isNull() && IsMonochromeIcon(action->icon())) {
+                m_original_menu_icons.insert(action, action->icon());
+            }
+        }
+    };
+    for (QAction* top : menuBar()->actions()) {
+        if (top && top->menu()) {
+            walk(top->menu());
+        }
+    }
+}
+
+void MainWindow::RepaintMenuIcons() {
+    if (m_original_menu_icons.isEmpty()) {
+        return;
+    }
+    const QColor target_color =
+        m_toolbar_icon_color_label
+            ? m_toolbar_icon_color_label->palette().color(QPalette::WindowText)
+            : QColor(Qt::black);
+
+    for (auto it = m_original_menu_icons.constBegin(); it != m_original_menu_icons.constEnd();
+         ++it) {
+        if (QAction* action = it.key()) {
+            action->setIcon(ColorizeIcon(it.value(), target_color));
         }
     }
 }

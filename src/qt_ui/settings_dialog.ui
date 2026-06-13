@@ -1613,6 +1613,36 @@
                    </property>
                   </widget>
                  </item>
+                 <item>
+                  <widget class="QCheckBox" name="circleEnterCheckBox">
+                   <property name="text">
+                    <string>Use Circle Button to Confirm</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="imeGroupBox">
+                <property name="title">
+                 <string>IME</string>
+                </property>
+                <layout class="QVBoxLayout" name="imeLayout">
+                 <item>
+                  <widget class="QCheckBox" name="imeAccessibilityCheckBox">
+                   <property name="text">
+                    <string>Enable IME Accessibility</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="imeUrlMailShortPanelCheckBox">
+                   <property name="text">
+                    <string>Enable IME URL/Email Short Panel</string>
+                   </property>
+                  </widget>
+                 </item>
                 </layout>
                </widget>
               </item>
@@ -2472,7 +2502,7 @@
                <item>
                 <widget class="QCheckBox" name="psnSignInCheckBox">
                  <property name="text">
-                  <string>Set &quot;PSN signed-in&quot; to True</string>
+                  <string>Enable ShadNet</string>
                  </property>
                 </widget>
                </item>
@@ -2480,6 +2510,56 @@
                 <widget class="QCheckBox" name="networkConnectedCheckBox">
                  <property name="text">
                   <string>Set &quot;Network Connected&quot; to True</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="shadNetGroupBox">
+              <property name="title">
+               <string>ShadNet</string>
+              </property>
+              <layout class="QFormLayout" name="shadNetFormLayout">
+               <item row="0" column="0">
+                <widget class="QLabel" name="shadNetServerLabel">
+                 <property name="text">
+                  <string>Server</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="shadNetServerLineEdit"/>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="signalingAddrLabel">
+                 <property name="text">
+                  <string>Signaling Address</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="signalingAddrLineEdit"/>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="signalingPortLabel">
+                 <property name="text">
+                  <string>Signaling Port</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QSpinBox" name="signalingPortSpinBox">
+                 <property name="maximum">
+                  <number>65535</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0" colspan="2">
+                <widget class="QCheckBox" name="upnpCheckBox">
+                 <property name="text">
+                  <string>Enable UPnP</string>
                  </property>
                 </widget>
                </item>
