@@ -11,7 +11,6 @@
 #include "emulator_settings.h"
 #include "emulator_state.h"
 
-
 using json = nlohmann::json;
 
 // ── Singleton storage ─────────────────────────────────────────────────
@@ -33,7 +32,6 @@ struct adl_serializer<std::filesystem::path> {
     }
 };
 } // namespace nlohmann
-
 
 // ── Helpers ───────────────────────────────────────────────────────────
 
