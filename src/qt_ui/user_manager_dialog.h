@@ -27,18 +27,19 @@ private Q_SLOTS:
     void OnUserSetDefault();
     void OnUserSetColor();
     void OnUserSetControllerPort();
+    void OnUserEditShadNet();
     void OnSort(int logicalIndex);
 
 private:
     QColor GetQColorFromIndex(int index) {
         switch (index) {
-        case 0:
-            return Qt::blue;
         case 1:
-            return Qt::red;
+            return Qt::blue;
         case 2:
-            return Qt::green;
+            return Qt::red;
         case 3:
+            return Qt::green;
+        case 4:
             return Qt::magenta;
         default:
             return Qt::gray;
@@ -46,13 +47,13 @@ private:
     }
     QString GetColorName(int index) {
         switch (index) {
-        case 0:
-            return "Blue";
         case 1:
-            return "Red";
+            return "Blue";
         case 2:
-            return "Green";
+            return "Red";
         case 3:
+            return "Green";
+        case 4:
             return "Pink";
         default:
             return "Unknown";
@@ -74,6 +75,7 @@ private:
     QPushButton* push_set_default;
     QPushButton* push_set_color;
     QPushButton* push_set_controller;
+    QPushButton* push_shadnet;
     QPushButton* push_close;
 
     int m_sort_column = 1;
