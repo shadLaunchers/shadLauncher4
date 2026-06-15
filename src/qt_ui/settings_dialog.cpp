@@ -9,6 +9,7 @@
 #include <SDL3/SDL_camera.h>
 #include <SDL3/SDL_init.h>
 
+#include <iostream>
 #include "VulkanDeviceLib.h"
 #include "background_music_player.h"
 #include "common/assert.h"
@@ -20,7 +21,6 @@
 #include "gui_settings.h"
 #include "log_presets_dialog.h"
 #include "qt_ui/check_update.h"
-#include <iostream>
 #include "settings_dialog.h"
 #include "settings_dialog_helper_texts.h"
 #include "ui_settings_dialog.h"
