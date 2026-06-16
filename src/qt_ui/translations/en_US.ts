@@ -3245,10 +3245,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Set &quot;PSN signed-in&quot; to True</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Set &quot;Network Connected&quot; to True</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3557,6 +3553,46 @@ This will remove all game-specific overrides.</source>
         <source>Default</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Use Circle Button to Confirm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>IME</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable IME Accessibility</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable IME URL/Email Short Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable ShadNet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ShadNet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signaling Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signaling Port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable UPnP</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsDialogHelperTexts</name>
@@ -3756,6 +3792,54 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
         <source>&amp;Open User Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shad&amp;Net...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On (%1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ShadNet Settings - %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable ShadNet for this user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Account ID (NPID)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Account ID (NPID):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shad&amp;Net Settings...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
