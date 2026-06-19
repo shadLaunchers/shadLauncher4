@@ -3587,43 +3587,43 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Use Circle Button to Confirm</source>
-      <translation type="unfinished">Use Circle Button to Confirm</translation>
+      <translation>Confirmar con el botón Círculo</translation>
     </message>
     <message>
       <source>IME</source>
-      <translation type="unfinished">IME</translation>
+      <translation>Editor de métodos de entrada (IME)</translation>
     </message>
     <message>
       <source>Enable IME Accessibility</source>
-      <translation type="unfinished">Enable IME Accessibility</translation>
+      <translation>Habilitar accesibilidad en IME</translation>
     </message>
     <message>
       <source>Enable IME URL/Email Short Panel</source>
-      <translation type="unfinished">Enable IME URL/Email Short Panel</translation>
+      <translation>Habilitar panel de direcciones URL/emails en el IME</translation>
     </message>
     <message>
       <source>Enable ShadNet</source>
-      <translation type="unfinished">Enable ShadNet</translation>
+      <translation>Habilitar ShadNet</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>Servidor</translation>
     </message>
     <message>
       <source>Signaling Address</source>
-      <translation type="unfinished">Signaling Address</translation>
+      <translation>Dirección de señalización</translation>
     </message>
     <message>
       <source>Signaling Port</source>
-      <translation type="unfinished">Signaling Port</translation>
+      <translation>Puerto de señalización</translation>
     </message>
     <message>
       <source>Enable UPnP</source>
-      <translation type="unfinished">Enable UPnP</translation>
+      <translation>Habilitar UPnP</translation>
     </message>
   </context>
   <context>
@@ -3828,51 +3828,51 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net...</translation>
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>Activado</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>Activado (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>Desactivado</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>Configuración de ShadNet - %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>Habilitar ShadNet para este usuario</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>ID de cuenta (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Contraseña</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>Mostrar contraseña</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>ID de cuenta (NPID):</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>Contraseña:</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>Configuración de Shad&amp;Net...</translation>
     </message>
   </context>
   <context>
