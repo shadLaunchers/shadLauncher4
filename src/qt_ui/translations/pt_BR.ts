@@ -15,7 +15,7 @@
     </message>
     <message>
       <source>Development build</source>
-      <translation>Build de desenvolvimento</translation>
+      <translation>Compilação de desenvolvimento</translation>
     </message>
     <message>
       <source>&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</source>
@@ -23,7 +23,7 @@
     </message>
     <message>
       <source>Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</source>
-      <translation type="unfinished">Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</translation>
+      <translation>Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</translation>
     </message>
     <message>
       <source>A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</source>
@@ -39,7 +39,7 @@
     </message>
     <message>
       <source>Copy Build Info</source>
-      <translation>Copiar Informações da Build</translation>
+      <translation>Copiar Informações da Compilação</translation>
     </message>
     <message>
       <source>Copied!</source>
@@ -1368,7 +1368,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
-      <translation>O registro é inválido; ou não existe ou foram utilizados filtros de registro.</translation>
+      <translation>O registro é inválido; não existe ou foram utilizados filtros de registro.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
@@ -1524,7 +1524,7 @@ Utilizando o banco de dados local.
     <name>HostOverridesDialog</name>
     <message>
       <source>Network Host Overrides</source>
-      <translation type="unfinished">Network Host Overrides</translation>
+      <translation>Sobrescrever Host de Rede</translation>
     </message>
     <message>
       <source>Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</source>
@@ -1576,7 +1576,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</source>
-      <translation type="unfinished">The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</translation>
+      <translation>O arquivo host_overrides.json existente não pôde ser analisado. Iniciando com uma lista vazia; ao salvar, o arquivo será sobrescrito.</translation>
     </message>
     <message>
       <source>Format error</source>
@@ -2487,7 +2487,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Network Host Overrides</source>
-      <translation type="unfinished">Network Host Overrides</translation>
+      <translation>Sobrescrever Host de Rede</translation>
     </message>
     <message>
       <source>Redirect game network traffic to another server</source>
@@ -2781,7 +2781,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Match host is empty.</source>
-      <translation type="unfinished">Match host is empty.</translation>
+      <translation>O host correspondente está vazio.</translation>
     </message>
     <message>
       <source>Match scheme must be http or https (or omit it).</source>
@@ -3041,7 +3041,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation>Habilitar RCAS (sharpening)</translation>
+      <translation>Habilitar RCAS (nitidez)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
@@ -3595,11 +3595,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Enable IME Accessibility</source>
-      <translation>Ativar Acessibilidade IME</translation>
+      <translation>Ativar Acessibilidade para IME</translation>
     </message>
     <message>
       <source>Enable IME URL/Email Short Panel</source>
-      <translation type="unfinished">Enable IME URL/Email Short Panel</translation>
+      <translation>Ativar Painel Curto de IME para URL/E-mail</translation>
     </message>
     <message>
       <source>Enable ShadNet</source>
@@ -3816,7 +3816,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation>Definir Porta do Controlador</translation>
+      <translation>Definir Porta do Controle</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
@@ -3832,15 +3832,15 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>Liga</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>Liga (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>Desliga</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
@@ -4057,7 +4057,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation>Você quer atualizar?</translation>
+      <translation>Deseja atualizar?</translation>
     </message>
     <message>
       <source>Update</source>
