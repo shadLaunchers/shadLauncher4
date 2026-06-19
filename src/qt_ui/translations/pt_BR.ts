@@ -1528,7 +1528,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</source>
-      <translation type="unfinished">Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</translation>
+      <translation>Redirecione as solicitações de rede de um jogo para um servidor diferente (por exemplo, um servidor privado local). Cada linha mapeia uma &lt;b&gt;correspondência&lt;/b&gt; para um &lt;b&gt;destino de redirecionamento&lt;/b&gt;. As correspondências são testadas primeiro, da mais específica para a menos específica::&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:porta&lt;/tt&gt; &amp;middot; &lt;tt&gt;protocolo://host:porta&lt;/tt&gt;&amp;middot;&lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Os destinos têm a aparência de &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:porta&lt;/tt&gt; ou &lt;tt&gt;http(s)://host[:porta]&lt;/tt&gt;. As linhas não marcadas são salvas, mas ignoradas pelo emulador.</translation>
     </message>
     <message>
       <source>Enabled</source>
@@ -1548,7 +1548,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>Add &amp;catch-all</source>
-      <translation type="unfinished">Add &amp;catch-all</translation>
+      <translation>Adicionar &amp;catch-all</translation>
     </message>
     <message>
       <source>&amp;Remove</source>
@@ -1564,11 +1564,11 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>Catch-all exists</source>
-      <translation type="unfinished">Catch-all exists</translation>
+      <translation>Existe catch-all</translation>
     </message>
     <message>
       <source>A catch-all (*) row already exists.</source>
-      <translation type="unfinished">A catch-all (*) row already exists.</translation>
+      <translation>Uma linha de catch-all (*) já existe.</translation>
     </message>
     <message>
       <source>Parse error</source>
@@ -1584,7 +1584,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>host_overrides.json must be a JSON object. Starting empty.</source>
-      <translation type="unfinished">host_overrides.json must be a JSON object. Starting empty.</translation>
+      <translation>host_overrides.json deve ser um objeto JSON. Iniciando vazio.</translation>
     </message>
     <message>
       <source>Row %1: %2</source>
@@ -2491,7 +2491,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Redirect game network traffic to another server</source>
-      <translation type="unfinished">Redirect game network traffic to another server</translation>
+      <translation>Redirecionar o tráfego de rede de jogos para outro servidor</translation>
     </message>
     <message>
       <source>Audio</source>
@@ -2769,11 +2769,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Target scheme must be http or https.</source>
-      <translation type="unfinished">Target scheme must be http or https.</translation>
+      <translation>O protocolo de destino deve ser http ou https.</translation>
     </message>
     <message>
       <source>Redirect target has no host.</source>
-      <translation type="unfinished">Redirect target has no host.</translation>
+      <translation>Destino de redirecionamento não possui host.</translation>
     </message>
     <message>
       <source>Port must be a number between 1 and 65535.</source>
@@ -2785,7 +2785,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Match scheme must be http or https (or omit it).</source>
-      <translation type="unfinished">Match scheme must be http or https (or omit it).</translation>
+      <translation>O protocolo correspondente deve ser http ou https (ou omiti-lo).</translation>
     </message>
     <message>
       <source>Match has no host.</source>
