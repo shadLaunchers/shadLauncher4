@@ -7,19 +7,19 @@
     <name>AboutDialog</name>
     <message>
       <source>About shadLauncher4</source>
-      <translation type="unfinished">About shadLauncher4</translation>
+      <translation>Sobre o shadLauncher4</translation>
     </message>
     <message>
       <source>Release</source>
-      <translation type="unfinished">Release</translation>
+      <translation>Release</translation>
     </message>
     <message>
       <source>Development build</source>
-      <translation type="unfinished">Development build</translation>
+      <translation>Build de desenvolvimento</translation>
     </message>
     <message>
       <source>&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</source>
-      <translation type="unfinished">&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</translation>
+      <translation>&lt;b&gt;Versão %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</translation>
     </message>
     <message>
       <source>Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</source>
@@ -27,23 +27,23 @@
     </message>
     <message>
       <source>A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</source>
-      <translation type="unfinished">A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</translation>
+      <translation>Um launcher gráfico para o emulador shadPS4 para PlayStation 4. Navegue, organize e inicie sua biblioteca de jogos, gerencie versões do emulador e configure as opções, tudo em um só lugar.</translation>
     </message>
     <message>
       <source>&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</translation>
+      <translation>&lt;a href=&quot;%1&quot;&gt;Repositório do GitHub&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Relate um problema&lt;/a&gt;</translation>
     </message>
     <message>
       <source>Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</source>
-      <translation type="unfinished">Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</translation>
+      <translation>Desenvolvido pelo emulador &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt;.&lt;br&gt;Licenciado sob a GNU General Public License v2.0 ou posterior.</translation>
     </message>
     <message>
       <source>Copy Build Info</source>
-      <translation type="unfinished">Copy Build Info</translation>
+      <translation>Copiar Informações da Build</translation>
     </message>
     <message>
       <source>Copied!</source>
-      <translation type="unfinished">Copied!</translation>
+      <translation>Copiado!</translation>
     </message>
   </context>
   <context>
@@ -363,7 +363,7 @@
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation>Nenhum pré-lançamento foi encontrado.</translation>
+      <translation>Nenhum pre-release foi encontrado.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
@@ -1532,19 +1532,19 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>Enabled</source>
-      <translation type="unfinished">Enabled</translation>
+      <translation>Ativado</translation>
     </message>
     <message>
       <source>Match (host / endpoint)</source>
-      <translation type="unfinished">Match (host / endpoint)</translation>
+      <translation>Correspondência (host / destino)</translation>
     </message>
     <message>
       <source>Redirect to</source>
-      <translation type="unfinished">Redirect to</translation>
+      <translation>Redirecionar para</translation>
     </message>
     <message>
       <source>&amp;Add</source>
-      <translation type="unfinished">&amp;Add</translation>
+      <translation>&amp;Adicionar</translation>
     </message>
     <message>
       <source>Add &amp;catch-all</source>
@@ -1552,15 +1552,15 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;Remover</translation>
     </message>
     <message>
       <source>File: %1</source>
-      <translation type="unfinished">File: %1</translation>
+      <translation>Arquivo: %1</translation>
     </message>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>Abrir Pasta</translation>
     </message>
     <message>
       <source>Catch-all exists</source>
@@ -1572,7 +1572,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>Parse error</source>
-      <translation type="unfinished">Parse error</translation>
+      <translation>Erro de análise</translation>
     </message>
     <message>
       <source>The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</source>
@@ -1580,7 +1580,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>Format error</source>
-      <translation type="unfinished">Format error</translation>
+      <translation>Erro de formato</translation>
     </message>
     <message>
       <source>host_overrides.json must be a JSON object. Starting empty.</source>
@@ -1588,37 +1588,37 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>Row %1: %2</source>
-      <translation type="unfinished">Row %1: %2</translation>
+      <translation>Linha %1: %2</translation>
     </message>
     <message>
       <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
-      <translation type="unfinished">Row %1: duplicate entry for &apos;%2&apos;.</translation>
+      <translation>Linha %1: registro duplicado para &apos;%2&apos;.</translation>
     </message>
     <message>
       <source>Cannot save</source>
-      <translation type="unfinished">Cannot save</translation>
+      <translation>Não foi possível salvar</translation>
     </message>
     <message>
       <source>Please fix the following before saving:
 
 %1</source>
-      <translation type="unfinished">Please fix the following before saving:
+      <translation>Por favor, corrija o seguinte antes de salvar:
 
 %1</translation>
     </message>
     <message>
       <source>Save failed</source>
-      <translation type="unfinished">Save failed</translation>
+      <translation>Falha ao salvar</translation>
     </message>
     <message>
       <source>Could not open the file for writing:
 %1</source>
-      <translation type="unfinished">Could not open the file for writing:
+      <translation>Não foi possível abrir o arquivo para gravação:
 %1</translation>
     </message>
     <message>
       <source>An error occurred while writing.</source>
-      <translation type="unfinished">An error occurred while writing.</translation>
+      <translation>Ocorreu um erro durante a escrita.</translation>
     </message>
   </context>
   <context>
@@ -2495,7 +2495,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Áudio</translation>
     </message>
   </context>
   <context>
@@ -2761,11 +2761,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>unknown</source>
-      <translation type="unfinished">unknown</translation>
+      <translation>desconhecido</translation>
     </message>
     <message>
       <source>Redirect target is empty.</source>
-      <translation type="unfinished">Redirect target is empty.</translation>
+      <translation>Destino de redirecionamento está vazio.</translation>
     </message>
     <message>
       <source>Target scheme must be http or https.</source>
@@ -2777,7 +2777,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Port must be a number between 1 and 65535.</source>
-      <translation type="unfinished">Port must be a number between 1 and 65535.</translation>
+      <translation>A porta deve ser um número entre 1 e 65535.</translation>
     </message>
     <message>
       <source>Match host is empty.</source>
@@ -2789,11 +2789,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Match has no host.</source>
-      <translation type="unfinished">Match has no host.</translation>
+      <translation>A partida não tem host.</translation>
     </message>
     <message>
       <source>Match port must be a number between 1 and 65535.</source>
-      <translation type="unfinished">Match port must be a number between 1 and 65535.</translation>
+      <translation>A porta correspondente deve ser um número entre 1 e 65535.</translation>
     </message>
   </context>
   <context>
@@ -3587,15 +3587,15 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Use Circle Button to Confirm</source>
-      <translation type="unfinished">Use Circle Button to Confirm</translation>
+      <translation>Utilize o Botão Círculo para Confirmar</translation>
     </message>
     <message>
       <source>IME</source>
-      <translation type="unfinished">IME</translation>
+      <translation>IME</translation>
     </message>
     <message>
       <source>Enable IME Accessibility</source>
-      <translation type="unfinished">Enable IME Accessibility</translation>
+      <translation>Ativar Acessibilidade IME</translation>
     </message>
     <message>
       <source>Enable IME URL/Email Short Panel</source>
@@ -3603,27 +3603,27 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Enable ShadNet</source>
-      <translation type="unfinished">Enable ShadNet</translation>
+      <translation>Ativar ShadNet</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>Servidor</translation>
     </message>
     <message>
       <source>Signaling Address</source>
-      <translation type="unfinished">Signaling Address</translation>
+      <translation>Endereço de Sinalização</translation>
     </message>
     <message>
       <source>Signaling Port</source>
-      <translation type="unfinished">Signaling Port</translation>
+      <translation>Porta de Sinalização</translation>
     </message>
     <message>
       <source>Enable UPnP</source>
-      <translation type="unfinished">Enable UPnP</translation>
+      <translation>Ativar UPnP</translation>
     </message>
   </context>
   <context>
@@ -3828,7 +3828,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net...</translation>
     </message>
     <message>
       <source>On</source>
@@ -3844,35 +3844,35 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>Configurações da ShadNet - %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>Ativar ShadNet para este usuário</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>ID da Conta (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Senha</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>Mostrar senha</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>ID da Conta (NPID):</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>Senha:</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>Configurações da Shad&amp;Net...</translation>
     </message>
   </context>
   <context>
@@ -4089,7 +4089,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Downloading Pre-release (Nightly)</source>
-      <translation>Baixando pré-lançamento (Nightly)</translation>
+      <translation>Baixando Pre-release (Nightly)</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
@@ -4133,7 +4133,7 @@ A versão de pré-lançamento foi salva em: %1</translation>
       <source>Failed to copy executable to application directory.
 The pre-release version has been saved to: %1</source>
       <translation>Falha ao copiar o executável para o diretório da aplicação.
-A versão de pré-lançamento foi salva em: %1</translation>
+A versão de pre-release foi salva em: %1</translation>
     </message>
     <message>
       <source>Custom version installed successfully:</source>
@@ -4169,7 +4169,7 @@ A versão de pré-lançamento foi salva em: %1</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) has been:</source>
-      <translation>Pré-lançamento (Nightly) foi:</translation>
+      <translation>Pre-release (Nightly) foi:</translation>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
