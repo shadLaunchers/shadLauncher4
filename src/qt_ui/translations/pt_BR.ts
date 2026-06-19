@@ -691,7 +691,7 @@ Deve ser uma sequência hexadecimal válida com comprimento par.</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation>Status: Não carregado.</translation>
+      <translation>Estado: Não carregado</translation>
     </message>
     <message>
       <source>Trophy Key</source>
@@ -2957,7 +2957,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation>Sempre Mostrar o Histórico de Mudanças</translation>
+      <translation>Sempre Mostrar o Histórico de Alterações</translation>
     </message>
     <message>
       <source>Check for Updates</source>
@@ -3756,7 +3756,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation>&amp;Definir Porta do Controlador</translation>
+      <translation>&amp;Definir Porta do Controle</translation>
     </message>
     <message>
       <source>&amp;Close</source>
