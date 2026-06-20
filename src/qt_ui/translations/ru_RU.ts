@@ -7,43 +7,43 @@
     <name>AboutDialog</name>
     <message>
       <source>About shadLauncher4</source>
-      <translation type="unfinished">About shadLauncher4</translation>
+      <translation>Выйти из shadLauncher4</translation>
     </message>
     <message>
       <source>Release</source>
-      <translation type="unfinished">Release</translation>
+      <translation>Релиз</translation>
     </message>
     <message>
       <source>Development build</source>
-      <translation type="unfinished">Development build</translation>
+      <translation>Версия разработки</translation>
     </message>
     <message>
       <source>&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</source>
-      <translation type="unfinished">&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</translation>
+      <translation>&lt;b&gt;Версия %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</translation>
     </message>
     <message>
       <source>Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</source>
-      <translation type="unfinished">Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</translation>
+      <translation>Коммит %1 &amp;nbsp;&amp;middot;&amp;nbsp; ветка %2&lt;br&gt;Собрано %3</translation>
     </message>
     <message>
       <source>A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</source>
-      <translation type="unfinished">A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</translation>
+      <translation>Графический лаунчер для эмулятора PlayStation 4 shadPS4. Просматривайте, упорядочивайте и запускайте вашу библиотеку игр, управляйте версиями эмуляторов и настраивайте параметры из одного места.</translation>
     </message>
     <message>
       <source>&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</translation>
+      <translation>&lt;a href=&quot;%1&quot;&gt;GitHub репозиторий&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Сообщить о проблеме&lt;/a&gt;</translation>
     </message>
     <message>
       <source>Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</source>
-      <translation type="unfinished">Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</translation>
+      <translation>Создано эмулятором &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt;.&lt;br&gt;Лицензирован на условиях GNU General Public License v2.0 или выше.</translation>
     </message>
     <message>
       <source>Copy Build Info</source>
-      <translation type="unfinished">Copy Build Info</translation>
+      <translation>Скопировать информацию о сборке</translation>
     </message>
     <message>
       <source>Copied!</source>
-      <translation type="unfinished">Copied!</translation>
+      <translation>Скопировано!</translation>
     </message>
   </context>
   <context>
@@ -1522,7 +1522,7 @@ Using local database.
     <name>HostOverridesDialog</name>
     <message>
       <source>Network Host Overrides</source>
-      <translation type="unfinished">Network Host Overrides</translation>
+      <translation>Переопределения сетевого хоста</translation>
     </message>
     <message>
       <source>Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</source>
@@ -1530,7 +1530,7 @@ Using local database.
     </message>
     <message>
       <source>Enabled</source>
-      <translation type="unfinished">Enabled</translation>
+      <translation>Включено</translation>
     </message>
     <message>
       <source>Match (host / endpoint)</source>
@@ -1538,11 +1538,11 @@ Using local database.
     </message>
     <message>
       <source>Redirect to</source>
-      <translation type="unfinished">Redirect to</translation>
+      <translation>Перенаправление на</translation>
     </message>
     <message>
       <source>&amp;Add</source>
-      <translation type="unfinished">&amp;Add</translation>
+      <translation>&amp;Добавить</translation>
     </message>
     <message>
       <source>Add &amp;catch-all</source>
@@ -1550,15 +1550,15 @@ Using local database.
     </message>
     <message>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;Удалить</translation>
     </message>
     <message>
       <source>File: %1</source>
-      <translation type="unfinished">File: %1</translation>
+      <translation>Файл: %1</translation>
     </message>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>Открыть папку</translation>
     </message>
     <message>
       <source>Catch-all exists</source>
