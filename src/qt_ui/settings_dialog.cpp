@@ -1,6 +1,7 @@
 ﻿// SPDX-FileCopyrightText: Copyright 2025-2026 shadLauncher4 Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <iostream>
 #include <AL/al.h>
 #include <AL/alc.h>
 #include <QDesktopServices>
