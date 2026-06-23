@@ -88,7 +88,12 @@ private:
 
     void CacheOriginalToolbarIcons();
     void RepaintToolbarIcons();
+    void CacheOriginalMenuIcons();
+    void RepaintMenuIcons();
+    static bool IsMonochromeIcon(const QIcon& icon);
+    static QIcon ColorizeIcon(const QIcon& source, const QColor& color);
     QHash<QAction*, QIcon> m_original_toolbar_icons;
+    QHash<QAction*, QIcon> m_original_menu_icons;
     QLabel* m_toolbar_icon_color_label = nullptr;
     QLabel* m_thumbnail_icon_color_label = nullptr;
 

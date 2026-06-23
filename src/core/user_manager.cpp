@@ -3,10 +3,13 @@
 
 #include <filesystem>
 #include <iostream>
+#include <common/assert.h>
 #include <common/path_util.h>
 #include "emulator_settings.h"
 #include "user_manager.h"
 #include "user_settings.h"
+
+namespace fs = std::filesystem;
 
 bool UserManager::AddUser(const User& user) {
     for (const auto& u : m_users.user) {
@@ -21,10 +24,10 @@ bool UserManager::AddUser(const User& user) {
 
     std::error_code ec;
     if (!std::filesystem::exists(user_dir)) {
-        std::filesystem::create_directory(user_dir, ec);
-        std::filesystem::create_directory(user_dir / "savedata", ec);
-        std::filesystem::create_directory(user_dir / "trophy", ec);
-        std::filesystem::create_directory(user_dir / "inputs", ec);
+        std::filesystem::create_directories(user_dir, ec);
+        std::filesystem::create_directories(user_dir / "savedata", ec);
+        std::filesystem::create_directories(user_dir / "trophy", ec);
+        std::filesystem::create_directories(user_dir / "inputs", ec);
     }
 
     Save();
@@ -57,11 +60,11 @@ bool UserManager::RenameUser(s32 user_id, const std::string& new_name) {
                 return true; // no change
 
             user.user_name = new_name;
+            Save();
             return true;
         }
     }
-    Save();
-    return false;
+    return false; // not found
 }
 
 User* UserManager::GetUserByID(s32 user_id) {
@@ -92,24 +95,44 @@ Users UserManager::CreateDefaultUsers() {
             .user_name = "shadPS4",
             .user_color = 1,
             .player_index = 1,
+            .shadnet_npid = "",
+            .shadnet_password = "",
+            .shadnet_token = "",
+            .shadnet_email = "",
+            .shadnet_enabled = false,
         },
         {
             .user_id = 1001,
             .user_name = "shadPS4-2",
             .user_color = 2,
             .player_index = 2,
+            .shadnet_npid = "",
+            .shadnet_password = "",
+            .shadnet_token = "",
+            .shadnet_email = "",
+            .shadnet_enabled = false,
         },
         {
             .user_id = 1002,
             .user_name = "shadPS4-3",
             .user_color = 3,
             .player_index = 3,
+            .shadnet_npid = "",
+            .shadnet_password = "",
+            .shadnet_token = "",
+            .shadnet_email = "",
+            .shadnet_enabled = false,
         },
         {
             .user_id = 1003,
             .user_name = "shadPS4-4",
             .user_color = 4,
             .player_index = 4,
+            .shadnet_npid = "",
+            .shadnet_password = "",
+            .shadnet_token = "",
+            .shadnet_email = "",
+            .shadnet_enabled = false,
         },
     };
 

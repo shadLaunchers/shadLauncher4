@@ -10,8 +10,6 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include <fmt/ranges.h>
-#include <fmt/std.h>
 #include <nlohmann/json.hpp>
 #include "common/logging/log.h"
 #include "common/types.h"
@@ -73,6 +71,7 @@ struct Setting {
         return value;
     }
 
+    /// Write v to the base layer.
     /// Set proper value as base or game_specific
     void set(const T& v, bool game_specific = false) {
         if (game_specific) {
@@ -117,45 +116,20 @@ inline OverrideItem make_override(const char* key, Setting<T> Struct::* member) 
     return OverrideItem{
         key,
         [member, key](void* base, const nlohmann::json& entry, std::vector<std::string>& changed) {
-            LOG_DEBUG(Config, "[make_override] Processing key: {}", key);
-            LOG_DEBUG(Config, "[make_override] Entry JSON: {}", entry.dump());
             Struct* obj = reinterpret_cast<Struct*>(base);
             Setting<T>& dst = obj->*member;
             try {
                 T newValue = entry.get<T>();
-                LOG_DEBUG(Config, "[make_override] Parsed value: {}", newValue);
-                LOG_DEBUG(Config, "[make_override] Current value: {}", dst.value);
                 if (dst.value != newValue) {
                     std::ostringstream oss;
-
-                    oss << key << " ( " << key;
-
-                    constexpr bool iterable = requires(const T& t) { t.operator[](0); };
-
-                    if constexpr (iterable) {
-                        for (const auto v : dst.value) {
-                            oss << v << " ";
-                        }
-
-                        oss << "→";
-
-                        for (const auto v : newValue) {
-                            oss << " " << v;
-                        }
-                    } else {
-                        oss << dst.value << " → " << newValue;
-                    }
-
-                    oss << " )";
+                    oss << key << " ( " << dst.value << " -> " << newValue << " )";
                     changed.push_back(oss.str());
-                    LOG_DEBUG(Config, "[make_override] Recorded change: {}", oss.str());
                 }
                 dst.game_specific_value = newValue;
-                LOG_DEBUG(Config, "[make_override] Successfully updated {}", key);
             } catch (const std::exception& e) {
-                LOG_ERROR(Config, "[make_override] ERROR parsing {}: {}", key, e.what());
-                LOG_ERROR(Config, "[make_override] Entry was: {}", entry.dump());
-                LOG_ERROR(Config, "[make_override] Type name: {}", entry.type_name());
+                LOG_DEBUG(Config, "[make_override] error parsing {}: {}", key, e.what());
+                LOG_DEBUG(Config, "[make_override] Entry was: {}", entry.dump());
+                LOG_DEBUG(Config, "[make_override] Type name: {}", entry.type_name());
             }
         },
 
@@ -199,7 +173,7 @@ struct GeneralSettings {
     Setting<bool> neo_mode{false};
     Setting<bool> dev_kit_mode{false};
     Setting<int> extra_dmem_in_mbytes{0};
-    Setting<bool> psn_signed_in{false};
+    Setting<bool> shad_net_enabled{false};
     Setting<bool> trophy_popup_disabled{false};
     Setting<double> trophy_notification_duration{6.0};
     Setting<std::string> trophy_notification_side{"right"};
@@ -208,6 +182,11 @@ struct GeneralSettings {
     Setting<bool> discord_rpc_enabled{false};
     Setting<bool> show_fps_counter{false};
     Setting<int> console_language{1};
+    Setting<int> big_picture_scale{1000};
+    Setting<std::string> shadnet_server{""};
+    Setting<std::string> signaling_addr{""};
+    Setting<u16> signaling_port{};
+    Setting<bool> enable_upnp{true};
 
     // return a vector of override descriptors (runtime, but tiny)
     std::vector<OverrideItem> GetOverrideableFields() const {
@@ -217,7 +196,7 @@ struct GeneralSettings {
             make_override<GeneralSettings>("dev_kit_mode", &GeneralSettings::dev_kit_mode),
             make_override<GeneralSettings>("extra_dmem_in_mbytes",
                                            &GeneralSettings::extra_dmem_in_mbytes),
-            make_override<GeneralSettings>("psn_signed_in", &GeneralSettings::psn_signed_in),
+            make_override<GeneralSettings>("shad_net_enabled", &GeneralSettings::shad_net_enabled),
             make_override<GeneralSettings>("trophy_popup_disabled",
                                            &GeneralSettings::trophy_popup_disabled),
             make_override<GeneralSettings>("trophy_notification_duration",
@@ -226,15 +205,21 @@ struct GeneralSettings {
             make_override<GeneralSettings>("trophy_notification_side",
                                            &GeneralSettings::trophy_notification_side),
             make_override<GeneralSettings>("connected_to_network",
-                                           &GeneralSettings::connected_to_network)};
+                                           &GeneralSettings::connected_to_network),
+            make_override<GeneralSettings>("signaling_addr", &GeneralSettings::signaling_addr),
+            make_override<GeneralSettings>("signaling_port", &GeneralSettings::signaling_port),
+            make_override<GeneralSettings>("enable_upnp", &GeneralSettings::enable_upnp)};
     }
 };
+
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(GeneralSettings, install_dirs, addon_install_dir, home_dir,
                                    sys_modules_dir, font_dir, volume_slider, neo_mode, dev_kit_mode,
-                                   extra_dmem_in_mbytes, psn_signed_in, trophy_popup_disabled,
+                                   extra_dmem_in_mbytes, shad_net_enabled, trophy_popup_disabled,
                                    trophy_notification_duration, show_splash,
                                    trophy_notification_side, connected_to_network,
-                                   discord_rpc_enabled, show_fps_counter, console_language)
+                                   discord_rpc_enabled, show_fps_counter, console_language,
+                                   big_picture_scale, shadnet_server, signaling_addr,
+                                   signaling_port, enable_upnp)
 
 // -------------------------------
 // Log settings
@@ -307,6 +292,9 @@ struct InputSettings {
     Setting<bool> use_unified_input_config{true};
     Setting<std::string> default_controller_id{""};
     Setting<bool> background_controller_input{false}; // specific
+    Setting<bool> ime_accessibility_enabled{false};   // specific
+    Setting<bool> ime_url_mail_short_panel{false};    // specific
+    Setting<bool> is_circle_enter{false};             // specific
     Setting<s32> camera_id{-1};
 
     std::vector<OverrideItem> GetOverrideableFields() const {
@@ -319,13 +307,20 @@ struct InputSettings {
                                          &InputSettings::motion_controls_enabled),
             make_override<InputSettings>("background_controller_input",
                                          &InputSettings::background_controller_input),
+            make_override<InputSettings>("ime_accessibility_enabled",
+                                         &InputSettings::ime_accessibility_enabled),
+            make_override<InputSettings>("ime_url_mail_short_panel",
+                                         &InputSettings::ime_url_mail_short_panel),
+            make_override<InputSettings>("is_circle_enter", &InputSettings::is_circle_enter),
             make_override<InputSettings>("camera_id", &InputSettings::camera_id)};
     }
 };
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(InputSettings, cursor_state, cursor_hide_timeout,
                                    usb_device_backend, use_special_pad, special_pad_class,
                                    motion_controls_enabled, use_unified_input_config,
-                                   default_controller_id, background_controller_input, camera_id)
+                                   default_controller_id, background_controller_input,
+                                   ime_accessibility_enabled, ime_url_mail_short_panel, camera_id,
+                                   is_circle_enter)
 // -------------------------------
 // Audio settings
 // -------------------------------
@@ -506,6 +501,8 @@ public:
     void SetSysModulesDir(const std::filesystem::path& dir);
     std::filesystem::path GetFontsDir();
     void SetFontsDir(const std::filesystem::path& dir);
+    std::filesystem::path GetAddonInstallDir();
+    void SetAddonInstallDir(const std::filesystem::path& dir);
 
 private:
     GeneralSettings m_general{};
@@ -516,6 +513,8 @@ private:
     GPUSettings m_gpu{};
     VulkanSettings m_vulkan{};
     ConfigMode m_configMode{ConfigMode::Default};
+
+    bool m_loaded{false};
 
     static std::shared_ptr<EmulatorSettingsImpl> s_instance;
     static std::mutex s_mutex;
@@ -583,7 +582,6 @@ public:
     void Set##Name(bool v, bool specific = false) {                                                \
         (group).field.set(v, specific);                                                            \
     }
-
 #define SETTING_FORWARD_BOOL_READONLY(group, Name, field)                                          \
     bool Is##Name() const {                                                                        \
         return (group).field.get(m_configMode);                                                    \
@@ -594,16 +592,20 @@ public:
     SETTING_FORWARD_BOOL(m_general, Neo, neo_mode)
     SETTING_FORWARD_BOOL(m_general, DevKit, dev_kit_mode)
     SETTING_FORWARD(m_general, ExtraDmemInMBytes, extra_dmem_in_mbytes)
-    SETTING_FORWARD_BOOL(m_general, PSNSignedIn, psn_signed_in)
+    SETTING_FORWARD_BOOL(m_general, ShadNetEnabled, shad_net_enabled)
     SETTING_FORWARD_BOOL(m_general, TrophyPopupDisabled, trophy_popup_disabled)
     SETTING_FORWARD(m_general, TrophyNotificationDuration, trophy_notification_duration)
     SETTING_FORWARD(m_general, TrophyNotificationSide, trophy_notification_side)
     SETTING_FORWARD_BOOL(m_general, ShowSplash, show_splash)
-    SETTING_FORWARD(m_general, AddonInstallDir, addon_install_dir)
     SETTING_FORWARD_BOOL(m_general, ConnectedToNetwork, connected_to_network)
     SETTING_FORWARD_BOOL(m_general, DiscordRPCEnabled, discord_rpc_enabled)
     SETTING_FORWARD_BOOL(m_general, ShowFpsCounter, show_fps_counter)
     SETTING_FORWARD(m_general, ConsoleLanguage, console_language)
+    SETTING_FORWARD(m_general, BigPictureScale, big_picture_scale)
+    SETTING_FORWARD(m_general, ShadNetServer, shadnet_server)
+    SETTING_FORWARD(m_general, SignalingAddr, signaling_addr)
+    SETTING_FORWARD(m_general, SignalingPort, signaling_port)
+    SETTING_FORWARD_BOOL(m_general, UPnPEnabled, enable_upnp)
 
     // Log settings
     SETTING_FORWARD_BOOL(m_log, LogAppend, append)
@@ -673,11 +675,14 @@ public:
     SETTING_FORWARD(m_input, UsbDeviceBackend, usb_device_backend)
     SETTING_FORWARD_BOOL(m_input, MotionControlsEnabled, motion_controls_enabled)
     SETTING_FORWARD_BOOL(m_input, BackgroundControllerInput, background_controller_input)
+    SETTING_FORWARD_BOOL(m_input, ImeAccessibilityEnabled, ime_accessibility_enabled)
+    SETTING_FORWARD_BOOL(m_input, ImeUrlMailShortPanel, ime_url_mail_short_panel)
     SETTING_FORWARD(m_input, DefaultControllerId, default_controller_id)
     SETTING_FORWARD_BOOL(m_input, UsingSpecialPad, use_special_pad)
     SETTING_FORWARD(m_input, SpecialPadClass, special_pad_class)
     SETTING_FORWARD_BOOL(m_input, UseUnifiedInputConfig, use_unified_input_config)
     SETTING_FORWARD(m_input, CameraId, camera_id)
+    SETTING_FORWARD_BOOL(m_input, CircleEnter, is_circle_enter)
 
     // Vulkan settings
     SETTING_FORWARD(m_vulkan, GpuId, gpu_id)
