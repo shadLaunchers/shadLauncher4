@@ -319,33 +319,8 @@ void GUIApplication::OnChangeStyleSheetRequest() {
     // qDebug() << "Changing stylesheet to" << stylesheet_name;
     GUI::custom_stylesheet_active = false;
 
-    static const QPalette system_palette = palette();
-    const auto use_light_palette = [this] {
-        const QColor light(0xF0, 0xF0, 0xF0);
-        const QColor disabled(0x78, 0x78, 0x78);
-        QPalette pal;
-        pal.setColor(QPalette::Window, light);
-        pal.setColor(QPalette::WindowText, Qt::black);
-        pal.setColor(QPalette::Base, Qt::white);
-        pal.setColor(QPalette::AlternateBase, QColor(0xF2, 0xF2, 0xF2));
-        pal.setColor(QPalette::Text, Qt::black);
-        pal.setColor(QPalette::Button, light);
-        pal.setColor(QPalette::ButtonText, Qt::black);
-        pal.setColor(QPalette::ToolTipBase, Qt::white);
-        pal.setColor(QPalette::ToolTipText, Qt::black);
-        pal.setColor(QPalette::PlaceholderText, disabled);
-        pal.setColor(QPalette::Highlight, QColor(0x14, 0x8A, 0xFF));
-        pal.setColor(QPalette::HighlightedText, Qt::white);
-        pal.setColor(QPalette::Disabled, QPalette::Text, disabled);
-        pal.setColor(QPalette::Disabled, QPalette::ButtonText, disabled);
-        pal.setColor(QPalette::Disabled, QPalette::WindowText, disabled);
-        setPalette(pal);
-    };
-    setPalette(system_palette);
-
     if (stylesheet_name.isEmpty() || stylesheet_name == GUI::DefaultStylesheet) {
         // qDebug() << "Using default stylesheet";
-        use_light_palette();
         setStyleSheet(GUI::Stylesheets::default_style_sheet);
         GUI::custom_stylesheet_active = true;
     } else if (stylesheet_name == GUI::NoStylesheet) {
@@ -377,7 +352,6 @@ void GUIApplication::OnChangeStyleSheetRequest() {
         } else {
             qDebug() << "Could not find stylesheet" << stylesheet_name << "in" << themes_dir
                      << "- falling back to default.";
-            use_light_palette();
             setStyleSheet(GUI::Stylesheets::default_style_sheet);
         }
 
