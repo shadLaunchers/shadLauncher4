@@ -29,7 +29,9 @@ endif ()
 
 find_package(OpenAL CONFIG)
 find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Xml Network Multimedia Svg)
-find_package(OpenSSL REQUIRED)
+if (NOT WIN32)
+    find_package(OpenSSL REQUIRED)
+endif()
 find_package(VulkanHeaders REQUIRED)
 qt_standard_project_setup()
 set(CMAKE_AUTORCC ON)
@@ -343,7 +345,11 @@ cmrc_add_resource_library(embedded-resources
 target_link_libraries(shadLauncher4 PRIVATE res::embedded)
 
 target_link_libraries(shadLauncher4 PRIVATE atomic Vulkan::Headers fmt::fmt SDL3::SDL3 volk_headers spdlog::spdlog)
-target_link_libraries(shadLauncher4 PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Svg Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL OpenSSL::Crypto)
+target_link_libraries(shadLauncher4 PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Svg Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL)
+
+if (NOT WIN32)
+    target_link_libraries(shadLauncher4 PRIVATE OpenSSL::Crypto)
+endif()
 
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
