@@ -458,7 +458,7 @@
     </message>
     <message>
       <source>Up</source>
-      <translation>Cima</translation>
+      <translation>Para Cima</translation>
     </message>
     <message>
       <source>unmapped</source>
@@ -474,7 +474,7 @@
     </message>
     <message>
       <source>Down</source>
-      <translation>Baixo</translation>
+      <translation>Para Baixo</translation>
     </message>
     <message>
       <source>L1 and L2</source>
@@ -909,7 +909,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Do you want to save changes?</source>
-      <translation>Gostaria de salvar as alterações?</translation>
+      <translation>Deseja salvar as alterações?</translation>
     </message>
     <message>
       <source>Help</source>
@@ -917,7 +917,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation>Você gostaria de redefinir sua configuração padrão personalizada de volta para a configuração padrão original?</translation>
+      <translation>Deseja redefinir sua configuração padrão personalizada de volta para a configuração padrão original?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
@@ -1110,7 +1110,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Show Firmwares</source>
-      <translation>Mostrar Firmware</translation>
+      <translation>Mostrar Firmwares</translation>
     </message>
     <message>
       <source>Version</source>
@@ -3903,7 +3903,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Codename</source>
-      <translation>Codinome</translation>
+      <translation>Apelido</translation>
     </message>
     <message>
       <source>Date</source>
