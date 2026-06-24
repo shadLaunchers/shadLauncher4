@@ -3284,10 +3284,6 @@ Select an emulator version from the right panel.</source>
       <translation>Увімкнути режим PS4 Neo</translation>
     </message>
     <message>
-      <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>Використовувати емуляцію доступу до PSN</translation>
-    </message>
-    <message>
       <source>Set &quot;Network Connected&quot; to True</source>
       <translation>Використовувати емуляцію доступу до мережі</translation>
     </message>
@@ -3597,6 +3593,46 @@ This will remove all game-specific overrides.</source>
       <source>Default</source>
       <translation>Типово</translation>
     </message>
+    <message>
+      <source>Use Circle Button to Confirm</source>
+      <translation>Натисніть кнопку «коло», щоби підтвердити</translation>
+    </message>
+    <message>
+      <source>IME</source>
+      <translation>Редактор методу введення (РМВ)</translation>
+    </message>
+    <message>
+      <source>Enable IME Accessibility</source>
+      <translation>Увімкнути спеціальні можливості РМВ</translation>
+    </message>
+    <message>
+      <source>Enable IME URL/Email Short Panel</source>
+      <translation>Увімкнути коротку панель РМВ для URL-адрес та пошти</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet</source>
+      <translation>Увімкнути ShadNet</translation>
+    </message>
+    <message>
+      <source>ShadNet</source>
+      <translation>ShadNet</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation>Сервер</translation>
+    </message>
+    <message>
+      <source>Signaling Address</source>
+      <translation>Сигнальна адреса</translation>
+    </message>
+    <message>
+      <source>Signaling Port</source>
+      <translation>Порт сигналу</translation>
+    </message>
+    <message>
+      <source>Enable UPnP</source>
+      <translation>Увімкнути UPnP</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
@@ -3797,6 +3833,54 @@ This will remove all game-specific overrides.</source>
     <message>
       <source>&amp;Open User Directory</source>
       <translation>&amp;Відкрити каталог користувачів</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net...</source>
+      <translation>Shad&amp;Net...</translation>
+    </message>
+    <message>
+      <source>On</source>
+      <translation>Увімк</translation>
+    </message>
+    <message>
+      <source>On (%1)</source>
+      <translation>Увімк (%1)</translation>
+    </message>
+    <message>
+      <source>Off</source>
+      <translation>Вимк</translation>
+    </message>
+    <message>
+      <source>ShadNet Settings - %1</source>
+      <translation>Налаштування ShadNet: %1</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet for this user</source>
+      <translation>Увімкнути ShadNet для цього користувача</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID)</source>
+      <translation>ID облікового запису (NPID)</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation>Пароль</translation>
+    </message>
+    <message>
+      <source>Show password</source>
+      <translation>Показати пароль</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID):</source>
+      <translation>ID облікового запису (NPID):</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation>Пароль:</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net Settings...</source>
+      <translation>Налаштування Shad&amp;Net...</translation>
     </message>
   </context>
   <context>

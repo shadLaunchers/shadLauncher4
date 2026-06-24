@@ -3276,10 +3276,6 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <translation>Habilitar modo PS4 Neo</translation>
     </message>
     <message>
-      <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>Cambia la opción «Inicio de sesión en PSN» a verdadero</translation>
-    </message>
-    <message>
       <source>Set &quot;Network Connected&quot; to True</source>
       <translation>Cambia la opción «Conexión a red» a verdadero</translation>
     </message>
@@ -3589,6 +3585,46 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
       <source>Default</source>
       <translation>Predeterminada</translation>
     </message>
+    <message>
+      <source>Use Circle Button to Confirm</source>
+      <translation>Confirmar con el botón Círculo</translation>
+    </message>
+    <message>
+      <source>IME</source>
+      <translation>Editor de métodos de entrada (IME)</translation>
+    </message>
+    <message>
+      <source>Enable IME Accessibility</source>
+      <translation>Habilitar accesibilidad en IME</translation>
+    </message>
+    <message>
+      <source>Enable IME URL/Email Short Panel</source>
+      <translation>Habilitar panel de direcciones URL/emails en el IME</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet</source>
+      <translation>Habilitar ShadNet</translation>
+    </message>
+    <message>
+      <source>ShadNet</source>
+      <translation>ShadNet</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation>Servidor</translation>
+    </message>
+    <message>
+      <source>Signaling Address</source>
+      <translation>Dirección de señalización</translation>
+    </message>
+    <message>
+      <source>Signaling Port</source>
+      <translation>Puerto de señalización</translation>
+    </message>
+    <message>
+      <source>Enable UPnP</source>
+      <translation>Habilitar UPnP</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
@@ -3789,6 +3825,54 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     <message>
       <source>&amp;Open User Directory</source>
       <translation>&amp;Abrir directorio de usuarios</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net...</source>
+      <translation>Shad&amp;Net...</translation>
+    </message>
+    <message>
+      <source>On</source>
+      <translation>Activado</translation>
+    </message>
+    <message>
+      <source>On (%1)</source>
+      <translation>Activado (%1)</translation>
+    </message>
+    <message>
+      <source>Off</source>
+      <translation>Desactivado</translation>
+    </message>
+    <message>
+      <source>ShadNet Settings - %1</source>
+      <translation>Configuración de ShadNet - %1</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet for this user</source>
+      <translation>Habilitar ShadNet para este usuario</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID)</source>
+      <translation>ID de cuenta (NPID)</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation>Contraseña</translation>
+    </message>
+    <message>
+      <source>Show password</source>
+      <translation>Mostrar contraseña</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID):</source>
+      <translation>ID de cuenta (NPID):</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation>Contraseña:</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net Settings...</source>
+      <translation>Configuración de Shad&amp;Net...</translation>
     </message>
   </context>
   <context>
