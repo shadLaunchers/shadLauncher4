@@ -1614,6 +1614,13 @@
                   </widget>
                  </item>
                  <item>
+                  <widget class="QCheckBox" name="miceUsedAsMiceCheckBox">
+                   <property name="text">
+                    <string>Use Mice as Mice</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
                   <widget class="QCheckBox" name="circleEnterCheckBox">
                    <property name="text">
                     <string>Use Circle Button to Confirm</string>
@@ -2533,28 +2540,24 @@
                 <widget class="QLineEdit" name="shadNetServerLineEdit"/>
                </item>
                <item row="1" column="0">
-                <widget class="QLabel" name="signalingAddrLabel">
+                <widget class="QLabel" name="shadNetWebApiServerLabel">
                  <property name="text">
-                  <string>Signaling Address</string>
+                  <string>WebAPI Server</string>
                  </property>
                 </widget>
                </item>
                <item row="1" column="1">
-                <widget class="QLineEdit" name="signalingAddrLineEdit"/>
+                <widget class="QLineEdit" name="shadNetWebApiServerLineEdit"/>
                </item>
                <item row="2" column="0">
-                <widget class="QLabel" name="signalingPortLabel">
+                <widget class="QLabel" name="signalingInfoLabel">
                  <property name="text">
-                  <string>Signaling Port</string>
+                  <string>Signaling Info</string>
                  </property>
                 </widget>
                </item>
                <item row="2" column="1">
-                <widget class="QSpinBox" name="signalingPortSpinBox">
-                 <property name="maximum">
-                  <number>65535</number>
-                 </property>
-                </widget>
+                <widget class="QLineEdit" name="signalingInfoLineEdit"/>
                </item>
                <item row="3" column="0" colspan="2">
                 <widget class="QCheckBox" name="upnpCheckBox">
