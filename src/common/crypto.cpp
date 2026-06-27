@@ -93,12 +93,12 @@ void Crypto::RSA2048Decrypt(std::span<u8, 32> dec_key, std::span<const u8, 256> 
 #else // Linux / macOS
 #include <cpuid.h>
 #include <immintrin.h>
-#include <wmmintrin.h>
 #include <openssl/bn.h>
 #include <openssl/core_names.h>
 #include <openssl/evp.h>
 #include <openssl/param_build.h>
 #include <openssl/rsa.h>
+#include <wmmintrin.h>
 
 template <typename TKeyset>
 static EVP_PKEY* ImportRsaPrivateKey(const TKeyset& keyset) {
@@ -106,18 +106,24 @@ static EVP_PKEY* ImportRsaPrivateKey(const TKeyset& keyset) {
         return BN_bin2bn(v.data(), static_cast<int>(v.size()), nullptr);
     };
 
-    BIGNUM* n  = bn(keyset.Modulus);
-    BIGNUM* e  = bn(keyset.PublicExponent);
-    BIGNUM* d  = bn(keyset.PrivateExponent);
-    BIGNUM* p  = bn(keyset.Prime1);
-    BIGNUM* q  = bn(keyset.Prime2);
+    BIGNUM* n = bn(keyset.Modulus);
+    BIGNUM* e = bn(keyset.PublicExponent);
+    BIGNUM* d = bn(keyset.PrivateExponent);
+    BIGNUM* p = bn(keyset.Prime1);
+    BIGNUM* q = bn(keyset.Prime2);
     BIGNUM* dp = bn(keyset.Exponent1);
     BIGNUM* dq = bn(keyset.Exponent2);
     BIGNUM* qi = bn(keyset.Coefficient);
 
     if (!n || !e || !d || !p || !q || !dp || !dq || !qi) {
-        BN_free(n); BN_free(e); BN_free(d); BN_free(p);
-        BN_free(q); BN_free(dp); BN_free(dq); BN_free(qi);
+        BN_free(n);
+        BN_free(e);
+        BN_free(d);
+        BN_free(p);
+        BN_free(q);
+        BN_free(dp);
+        BN_free(dq);
+        BN_free(qi);
         throw std::runtime_error("BN_bin2bn failed for RSA key component");
     }
 
@@ -132,8 +138,14 @@ static EVP_PKEY* ImportRsaPrivateKey(const TKeyset& keyset) {
     OSSL_PARAM_BLD_push_BN(bld, OSSL_PKEY_PARAM_RSA_COEFFICIENT1, qi);
     OSSL_PARAM* params = OSSL_PARAM_BLD_to_param(bld);
     OSSL_PARAM_BLD_free(bld);
-    BN_free(n); BN_free(e); BN_free(d); BN_free(p);
-    BN_free(q); BN_free(dp); BN_free(dq); BN_free(qi);
+    BN_free(n);
+    BN_free(e);
+    BN_free(d);
+    BN_free(p);
+    BN_free(q);
+    BN_free(dp);
+    BN_free(dq);
+    BN_free(qi);
 
     if (!params)
         throw std::runtime_error("OSSL_PARAM_BLD_to_param failed");

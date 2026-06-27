@@ -154,7 +154,7 @@ bool SFOViewerDialog::loadSFO(const QString& path) {
 
         se.type =
             SFOKeyDecoders::typeToString(e.param_fmt == PSFEntryFmt::Integer ? SFOValueType::Integer
-                                         : e.param_fmt == PSFEntryFmt::Text  ? SFOValueType::String
+                                         : e.param_fmt == PSFEntryFmt::Text ? SFOValueType::String
                                                                             : SFOValueType::Binary);
 
         if (sfoKeyMap().contains(se.key)) {
