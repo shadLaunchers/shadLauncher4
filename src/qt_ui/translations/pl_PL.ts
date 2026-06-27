@@ -3284,10 +3284,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Enable PS4 Neo Mode</translation>
     </message>
     <message>
-      <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation type="unfinished">Set &quot;PSN signed-in&quot; to True</translation>
-    </message>
-    <message>
       <source>Set &quot;Network Connected&quot; to True</source>
       <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
     </message>
@@ -3597,6 +3593,46 @@ This will remove all game-specific overrides.</translation>
       <source>Default</source>
       <translation type="unfinished">Default</translation>
     </message>
+    <message>
+      <source>Use Circle Button to Confirm</source>
+      <translation type="unfinished">Use Circle Button to Confirm</translation>
+    </message>
+    <message>
+      <source>IME</source>
+      <translation type="unfinished">IME</translation>
+    </message>
+    <message>
+      <source>Enable IME Accessibility</source>
+      <translation type="unfinished">Enable IME Accessibility</translation>
+    </message>
+    <message>
+      <source>Enable IME URL/Email Short Panel</source>
+      <translation type="unfinished">Enable IME URL/Email Short Panel</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet</source>
+      <translation type="unfinished">Enable ShadNet</translation>
+    </message>
+    <message>
+      <source>ShadNet</source>
+      <translation type="unfinished">ShadNet</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation type="unfinished">Server</translation>
+    </message>
+    <message>
+      <source>Signaling Address</source>
+      <translation type="unfinished">Signaling Address</translation>
+    </message>
+    <message>
+      <source>Signaling Port</source>
+      <translation type="unfinished">Signaling Port</translation>
+    </message>
+    <message>
+      <source>Enable UPnP</source>
+      <translation type="unfinished">Enable UPnP</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
@@ -3797,6 +3833,54 @@ This will remove all game-specific overrides.</translation>
     <message>
       <source>&amp;Open User Directory</source>
       <translation type="unfinished">&amp;Open User Directory</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net...</source>
+      <translation type="unfinished">Shad&amp;Net...</translation>
+    </message>
+    <message>
+      <source>On</source>
+      <translation type="unfinished">On</translation>
+    </message>
+    <message>
+      <source>On (%1)</source>
+      <translation type="unfinished">On (%1)</translation>
+    </message>
+    <message>
+      <source>Off</source>
+      <translation type="unfinished">Off</translation>
+    </message>
+    <message>
+      <source>ShadNet Settings - %1</source>
+      <translation type="unfinished">ShadNet Settings - %1</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet for this user</source>
+      <translation type="unfinished">Enable ShadNet for this user</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID)</source>
+      <translation type="unfinished">Account ID (NPID)</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation type="unfinished">Password</translation>
+    </message>
+    <message>
+      <source>Show password</source>
+      <translation type="unfinished">Show password</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID):</source>
+      <translation type="unfinished">Account ID (NPID):</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation type="unfinished">Password:</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net Settings...</source>
+      <translation type="unfinished">Shad&amp;Net Settings...</translation>
     </message>
   </context>
   <context>

@@ -22,7 +22,10 @@
 #include "gui_application.h"
 #include "gui_settings.h"
 #include "log_presets_dialog.h"
+#ifdef ENABLE_UPDATER
 #include "qt_ui/check_update.h"
+#endif
+#include <iostream>
 #include "settings_dialog.h"
 #include "settings_dialog_helper_texts.h"
 #include "ui_settings_dialog.h"
@@ -439,10 +442,14 @@ void SettingsDialog::OtherConnections() {
     connect(ui->BGMVolumeSlider, &QSlider::valueChanged, this,
             [](int value) { BackgroundMusicPlayer::getInstance().SetVolume(value); });
 
+#ifdef ENABLE_UPDATER
     connect(ui->checkUpdateButton, &QPushButton::clicked, this, [this]() {
         auto checkUpdate = new CheckUpdate(m_gui_settings, true);
         checkUpdate->exec();
     });
+#else
+    ui->updaterGroupBox->setVisible(false);
+#endif
 
     // ------------------ Graphics tab --------------------------------------------------------
     connect(ui->RCASSlider, &QSlider::valueChanged, [this](int value) {
@@ -542,10 +549,12 @@ void SettingsDialog::LoadValuesFromConfig() {
         m_gui_settings->GetValue(GUI::compatibility_check_on_startup).toBool());
     ui->separateUpdateCheckBox->setChecked(
         m_gui_settings->GetValue(GUI::general_separate_update_folder).toBool());
+#ifdef ENABLE_UPDATER
     ui->updaterCheckBox->setChecked(
         m_gui_settings->GetValue(GUI::general_check_gui_updates).toBool());
     ui->changelogCheckBox->setChecked(
         m_gui_settings->GetValue(GUI::general_show_changelog).toBool());
+#endif
 
     // ------------------ Graphics tab --------------------------------------------------------
     // First options is auto selection -1, so gpuId on the GUI will always have to subtract 1
@@ -586,6 +595,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->imeAccessibilityCheckBox->setChecked(m_emu_settings->IsImeAccessibilityEnabled());
     ui->imeUrlMailShortPanelCheckBox->setChecked(m_emu_settings->IsImeUrlMailShortPanel());
     ui->circleEnterCheckBox->setChecked(m_emu_settings->IsCircleEnter());
+    ui->miceUsedAsMiceCheckBox->setChecked(m_emu_settings->IsMiceUsedAsMice());
     ui->cameraComboBox->setCurrentIndex(EmulatorSettings.GetCameraId() + 1);
 
     // ------------------ Log tab --------------------------------------------------------
@@ -639,8 +649,9 @@ void SettingsDialog::LoadValuesFromConfig() {
 
     // ShadNet
     ui->shadNetServerLineEdit->setText(QString::fromStdString(m_emu_settings->GetShadNetServer()));
-    ui->signalingAddrLineEdit->setText(QString::fromStdString(m_emu_settings->GetSignalingAddr()));
-    ui->signalingPortSpinBox->setValue(m_emu_settings->GetSignalingPort());
+    ui->shadNetWebApiServerLineEdit->setText(
+        QString::fromStdString(m_emu_settings->GetShadNetWebApiServer()));
+    ui->signalingInfoLineEdit->setText(QString::fromStdString(m_emu_settings->GetSignalingInfo()));
     ui->upnpCheckBox->setChecked(m_emu_settings->IsUPnPEnabled());
 
     ui->enableShaderCacheCheckBox->setChecked(m_emu_settings->IsPipelineCacheEnabled());
@@ -791,8 +802,10 @@ void SettingsDialog::ApplyValuesToBackend() {
                              ui->checkCompatibilityOnStartupCheckBox->isChecked());
     m_gui_settings->SetValue(GUI::general_separate_update_folder,
                              ui->separateUpdateCheckBox->isChecked());
+#ifdef ENABLE_UPDATER
     m_gui_settings->SetValue(GUI::general_show_changelog, ui->changelogCheckBox->isChecked());
     m_gui_settings->SetValue(GUI::general_check_gui_updates, ui->updaterCheckBox->isChecked());
+#endif
 
     // ------------------ Graphics tab --------------------------------------------------------
     bool isFullscreen = ui->displayModeComboBox->currentText() != tr("Windowed");
@@ -828,6 +841,7 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetImeUrlMailShortPanel(ui->imeUrlMailShortPanelCheckBox->isChecked(),
                                             is_specific);
     m_emu_settings->SetCircleEnter(ui->circleEnterCheckBox->isChecked(), is_specific);
+    m_emu_settings->SetMiceUsedAsMice(ui->miceUsedAsMiceCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetCameraId(ui->cameraComboBox->currentIndex() - 1, is_specific);
 
     // ------------------ Log tab --------------------------------------------------------
@@ -875,12 +889,12 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetShadNetEnabled(ui->psnSignInCheckBox->isChecked(), is_specific);
     m_emu_settings->SetConnectedToNetwork(ui->networkConnectedCheckBox->isChecked(), is_specific);
 
-    // ShadNet (signaling_addr / signaling_port / enable_upnp are overrideable;
-    // shadnet_server is global-only but set with the same flag for consistency)
+    // ShadNet (signaling_info / shadnet_server / shadnet_webapi_server are global-only;
+    // set with the same flag for consistency)
     m_emu_settings->SetShadNetServer(ui->shadNetServerLineEdit->text().toStdString(), is_specific);
-    m_emu_settings->SetSignalingAddr(ui->signalingAddrLineEdit->text().toStdString(), is_specific);
-    m_emu_settings->SetSignalingPort(static_cast<u16>(ui->signalingPortSpinBox->value()),
-                                     is_specific);
+    m_emu_settings->SetShadNetWebApiServer(ui->shadNetWebApiServerLineEdit->text().toStdString(),
+                                           is_specific);
+    m_emu_settings->SetSignalingInfo(ui->signalingInfoLineEdit->text().toStdString(), is_specific);
     m_emu_settings->SetUPnPEnabled(ui->upnpCheckBox->isChecked(), is_specific);
 
     m_emu_settings->SetPipelineCacheEnabled(ui->enableShaderCacheCheckBox->isChecked(),
@@ -1277,6 +1291,7 @@ void SettingsDialog::MapUIControls() {
     m_uiSettingMap[ui->imeAccessibilityCheckBox] = {"ime_accessibility_enabled", "Input"};
     m_uiSettingMap[ui->imeUrlMailShortPanelCheckBox] = {"ime_url_mail_short_panel", "Input"};
     m_uiSettingMap[ui->circleEnterCheckBox] = {"is_circle_enter", "Input"};
+    m_uiSettingMap[ui->miceUsedAsMiceCheckBox] = {"use_mice_as_mice", "Input"};
 
     // Log Settings
     m_uiSettingMap[ui->enableLoggingCheckBox] = {"enable", "Log"};
@@ -1313,9 +1328,6 @@ void SettingsDialog::MapUIControls() {
     m_uiSettingMap[ui->neoCheckBox] = {"neo_mode", "General"};
     m_uiSettingMap[ui->psnSignInCheckBox] = {"shad_net_enabled", "General"};
     m_uiSettingMap[ui->networkConnectedCheckBox] = {"connected_to_network", "General"};
-    m_uiSettingMap[ui->signalingAddrLineEdit] = {"signaling_addr", "General"};
-    m_uiSettingMap[ui->signalingPortSpinBox] = {"signaling_port", "General"};
-    m_uiSettingMap[ui->upnpCheckBox] = {"enable_upnp", "General"};
     m_uiSettingMap[ui->dmemSpinBox] = {"extra_dmem_in_mbytes", "General"};
     m_uiSettingMap[ui->vblankSpinBox] = {"vblank_frequency", "GPU"};
 }

@@ -127,9 +127,9 @@ inline OverrideItem make_override(const char* key, Setting<T> Struct::* member) 
                 }
                 dst.game_specific_value = newValue;
             } catch (const std::exception& e) {
-                LOG_DEBUG(Config, "[make_override] error parsing {}: {}", key, e.what());
-                LOG_DEBUG(Config, "[make_override] Entry was: {}", entry.dump());
-                LOG_DEBUG(Config, "[make_override] Type name: {}", entry.type_name());
+                LOG_ERROR(Config, "[make_override] error parsing {}: {}", key, e.what());
+                LOG_ERROR(Config, "[make_override] Entry was: {}", entry.dump());
+                LOG_ERROR(Config, "[make_override] Type name: {}", entry.type_name());
             }
         },
 
@@ -183,9 +183,9 @@ struct GeneralSettings {
     Setting<bool> show_fps_counter{false};
     Setting<int> console_language{1};
     Setting<int> big_picture_scale{1000};
-    Setting<std::string> shadnet_server{""};
-    Setting<std::string> signaling_addr{""};
-    Setting<u16> signaling_port{};
+    Setting<std::string> shadnet_server{"srv.shadps4.net:31313"};
+    Setting<std::string> shadnet_webapi_server{"http://srv.shadps4.net:31315"};
+    Setting<std::string> signaling_info{};
     Setting<bool> enable_upnp{true};
 
     // return a vector of override descriptors (runtime, but tiny)
@@ -205,10 +205,7 @@ struct GeneralSettings {
             make_override<GeneralSettings>("trophy_notification_side",
                                            &GeneralSettings::trophy_notification_side),
             make_override<GeneralSettings>("connected_to_network",
-                                           &GeneralSettings::connected_to_network),
-            make_override<GeneralSettings>("signaling_addr", &GeneralSettings::signaling_addr),
-            make_override<GeneralSettings>("signaling_port", &GeneralSettings::signaling_port),
-            make_override<GeneralSettings>("enable_upnp", &GeneralSettings::enable_upnp)};
+                                           &GeneralSettings::connected_to_network)};
     }
 };
 
@@ -218,8 +215,8 @@ NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(GeneralSettings, install_dirs, addon_install_
                                    trophy_notification_duration, show_splash,
                                    trophy_notification_side, connected_to_network,
                                    discord_rpc_enabled, show_fps_counter, console_language,
-                                   big_picture_scale, shadnet_server, signaling_addr,
-                                   signaling_port, enable_upnp)
+                                   big_picture_scale, shadnet_server, shadnet_webapi_server,
+                                   signaling_info, enable_upnp)
 
 // -------------------------------
 // Log settings
@@ -296,6 +293,7 @@ struct InputSettings {
     Setting<bool> ime_url_mail_short_panel{false};    // specific
     Setting<bool> is_circle_enter{false};             // specific
     Setting<s32> camera_id{-1};
+    Setting<bool> use_mice_as_mice{false};
 
     std::vector<OverrideItem> GetOverrideableFields() const {
         return std::vector<OverrideItem>{
@@ -312,7 +310,8 @@ struct InputSettings {
             make_override<InputSettings>("ime_url_mail_short_panel",
                                          &InputSettings::ime_url_mail_short_panel),
             make_override<InputSettings>("is_circle_enter", &InputSettings::is_circle_enter),
-            make_override<InputSettings>("camera_id", &InputSettings::camera_id)};
+            make_override<InputSettings>("camera_id", &InputSettings::camera_id),
+            make_override<InputSettings>("use_mice_as_mice", &InputSettings::use_mice_as_mice)};
     }
 };
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(InputSettings, cursor_state, cursor_hide_timeout,
@@ -320,7 +319,7 @@ NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(InputSettings, cursor_state, cursor_hide_time
                                    motion_controls_enabled, use_unified_input_config,
                                    default_controller_id, background_controller_input,
                                    ime_accessibility_enabled, ime_url_mail_short_panel, camera_id,
-                                   is_circle_enter)
+                                   is_circle_enter, use_mice_as_mice)
 // -------------------------------
 // Audio settings
 // -------------------------------
@@ -603,8 +602,8 @@ public:
     SETTING_FORWARD(m_general, ConsoleLanguage, console_language)
     SETTING_FORWARD(m_general, BigPictureScale, big_picture_scale)
     SETTING_FORWARD(m_general, ShadNetServer, shadnet_server)
-    SETTING_FORWARD(m_general, SignalingAddr, signaling_addr)
-    SETTING_FORWARD(m_general, SignalingPort, signaling_port)
+    SETTING_FORWARD(m_general, ShadNetWebApiServer, shadnet_webapi_server)
+    SETTING_FORWARD(m_general, SignalingInfo, signaling_info)
     SETTING_FORWARD_BOOL(m_general, UPnPEnabled, enable_upnp)
 
     // Log settings
@@ -683,6 +682,7 @@ public:
     SETTING_FORWARD_BOOL(m_input, UseUnifiedInputConfig, use_unified_input_config)
     SETTING_FORWARD(m_input, CameraId, camera_id)
     SETTING_FORWARD_BOOL(m_input, CircleEnter, is_circle_enter)
+    SETTING_FORWARD_BOOL(m_input, MiceUsedAsMice, use_mice_as_mice)
 
     // Vulkan settings
     SETTING_FORWARD(m_vulkan, GpuId, gpu_id)
