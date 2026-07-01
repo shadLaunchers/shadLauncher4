@@ -3582,15 +3582,19 @@ This will remove all game-specific overrides.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Signaling Address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Signaling Port</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Enable UPnP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use Mice as Mice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>WebAPI Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signaling Info</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
