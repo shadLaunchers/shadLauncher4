@@ -3623,16 +3623,20 @@ To će ukloniti sve igri-specifične postavke.</translation>
       <translation type="unfinished">Server</translation>
     </message>
     <message>
-      <source>Signaling Address</source>
-      <translation type="unfinished">Signaling Address</translation>
-    </message>
-    <message>
-      <source>Signaling Port</source>
-      <translation type="unfinished">Signaling Port</translation>
-    </message>
-    <message>
       <source>Enable UPnP</source>
       <translation type="unfinished">Enable UPnP</translation>
+    </message>
+    <message>
+      <source>Use Mice as Mice</source>
+      <translation type="unfinished">Use Mice as Mice</translation>
+    </message>
+    <message>
+      <source>WebAPI Server</source>
+      <translation type="unfinished">WebAPI Server</translation>
+    </message>
+    <message>
+      <source>Signaling Info</source>
+      <translation type="unfinished">Signaling Info</translation>
     </message>
   </context>
   <context>
