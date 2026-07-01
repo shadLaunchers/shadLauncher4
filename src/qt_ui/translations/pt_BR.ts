@@ -3614,16 +3614,20 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
       <translation>Servidor</translation>
     </message>
     <message>
-      <source>Signaling Address</source>
-      <translation>Endereço de Sinalização</translation>
-    </message>
-    <message>
-      <source>Signaling Port</source>
-      <translation>Porta de Sinalização</translation>
-    </message>
-    <message>
       <source>Enable UPnP</source>
       <translation>Ativar UPnP</translation>
+    </message>
+    <message>
+      <source>Use Mice as Mice</source>
+      <translation type="unfinished">Use Mice as Mice</translation>
+    </message>
+    <message>
+      <source>WebAPI Server</source>
+      <translation type="unfinished">WebAPI Server</translation>
+    </message>
+    <message>
+      <source>Signaling Info</source>
+      <translation type="unfinished">Signaling Info</translation>
     </message>
   </context>
   <context>
