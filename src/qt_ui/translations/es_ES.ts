@@ -3614,16 +3614,20 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
       <translation>Servidor</translation>
     </message>
     <message>
-      <source>Signaling Address</source>
-      <translation>Dirección de señalización</translation>
-    </message>
-    <message>
-      <source>Signaling Port</source>
-      <translation>Puerto de señalización</translation>
-    </message>
-    <message>
       <source>Enable UPnP</source>
       <translation>Habilitar UPnP</translation>
+    </message>
+    <message>
+      <source>Use Mice as Mice</source>
+      <translation type="unfinished">Use Mice as Mice</translation>
+    </message>
+    <message>
+      <source>WebAPI Server</source>
+      <translation type="unfinished">WebAPI Server</translation>
+    </message>
+    <message>
+      <source>Signaling Info</source>
+      <translation type="unfinished">Signaling Info</translation>
     </message>
   </context>
   <context>
