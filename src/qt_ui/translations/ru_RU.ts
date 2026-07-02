@@ -1526,7 +1526,7 @@ Using local database.
     </message>
     <message>
       <source>Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</source>
-      <translation type="unfinished">Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</translation>
+      <translation>Перенаправление сетевых запросов из игры на другой сервер (например, локальный частный сервер). Каждая строка сопоставляет &lt;b&gt;совпадение&lt;/b&gt; с &lt;b&gt;адресом назначения&lt;/b&gt;. Совпадения проверяются первыми, от наиболее специфичных к наименее специфичным:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;protocol://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (универсальный)&lt;br&gt;Пункты назначения выглядят как &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, или &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Неотмеченные строки сохраняются, но игнорируются эмулятором.</translation>
     </message>
     <message>
       <source>Enabled</source>
@@ -1534,7 +1534,7 @@ Using local database.
     </message>
     <message>
       <source>Match (host / endpoint)</source>
-      <translation type="unfinished">Match (host / endpoint)</translation>
+      <translation>Совпадение (хост / конечная точка)</translation>
     </message>
     <message>
       <source>Redirect to</source>
@@ -1546,7 +1546,7 @@ Using local database.
     </message>
     <message>
       <source>Add &amp;catch-all</source>
-      <translation type="unfinished">Add &amp;catch-all</translation>
+      <translation>Добавить универсал</translation>
     </message>
     <message>
       <source>&amp;Remove</source>
@@ -1562,61 +1562,61 @@ Using local database.
     </message>
     <message>
       <source>Catch-all exists</source>
-      <translation type="unfinished">Catch-all exists</translation>
+      <translation>Универсал существует</translation>
     </message>
     <message>
       <source>A catch-all (*) row already exists.</source>
-      <translation type="unfinished">A catch-all (*) row already exists.</translation>
+      <translation>Универсальная (*) строка уже существует.</translation>
     </message>
     <message>
       <source>Parse error</source>
-      <translation type="unfinished">Parse error</translation>
+      <translation>Ошибка анализа</translation>
     </message>
     <message>
       <source>The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</source>
-      <translation type="unfinished">The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</translation>
+      <translation>Существующий host_overrides.json не может быть проанализирован. Начинается с пустого списка; сохранение перезапишет файл.</translation>
     </message>
     <message>
       <source>Format error</source>
-      <translation type="unfinished">Format error</translation>
+      <translation>Ошибка формата.</translation>
     </message>
     <message>
       <source>host_overrides.json must be a JSON object. Starting empty.</source>
-      <translation type="unfinished">host_overrides.json must be a JSON object. Starting empty.</translation>
+      <translation>Файл host_overrides.json должен быть объектом JSON. Начинается с пустого значения.</translation>
     </message>
     <message>
       <source>Row %1: %2</source>
-      <translation type="unfinished">Row %1: %2</translation>
+      <translation>Строка %1: %2</translation>
     </message>
     <message>
       <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
-      <translation type="unfinished">Row %1: duplicate entry for &apos;%2&apos;.</translation>
+      <translation>Строка %1: дубликат записи для &apos;%2&apos;.</translation>
     </message>
     <message>
       <source>Cannot save</source>
-      <translation type="unfinished">Cannot save</translation>
+      <translation>Невозможно сохранить</translation>
     </message>
     <message>
       <source>Please fix the following before saving:
 
 %1</source>
-      <translation type="unfinished">Please fix the following before saving:
+      <translation>Перед сохранением исправьте следующее:
 
 %1</translation>
     </message>
     <message>
       <source>Save failed</source>
-      <translation type="unfinished">Save failed</translation>
+      <translation>Не удалось сохранить</translation>
     </message>
     <message>
       <source>Could not open the file for writing:
 %1</source>
-      <translation type="unfinished">Could not open the file for writing:
+      <translation>Не удалось открыть файл для записи:
 %1</translation>
     </message>
     <message>
       <source>An error occurred while writing.</source>
-      <translation type="unfinished">An error occurred while writing.</translation>
+      <translation>Во время записи произошла ошибка.</translation>
     </message>
   </context>
   <context>
@@ -2493,15 +2493,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Network Host Overrides</source>
-      <translation type="unfinished">Network Host Overrides</translation>
+      <translation>Переопределения сетевого хоста</translation>
     </message>
     <message>
       <source>Redirect game network traffic to another server</source>
-      <translation type="unfinished">Redirect game network traffic to another server</translation>
+      <translation>Перенаправить игровой сетевой трафик на другой сервер</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Аудио</translation>
     </message>
   </context>
   <context>
@@ -2767,39 +2767,39 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>unknown</source>
-      <translation type="unfinished">unknown</translation>
+      <translation>неизвестный</translation>
     </message>
     <message>
       <source>Redirect target is empty.</source>
-      <translation type="unfinished">Redirect target is empty.</translation>
+      <translation>Адрес перенаправления пуст.</translation>
     </message>
     <message>
       <source>Target scheme must be http or https.</source>
-      <translation type="unfinished">Target scheme must be http or https.</translation>
+      <translation>Протокол назначения должен быть http или https.</translation>
     </message>
     <message>
       <source>Redirect target has no host.</source>
-      <translation type="unfinished">Redirect target has no host.</translation>
+      <translation>У адреса перенаправления отсутствует хост.</translation>
     </message>
     <message>
       <source>Port must be a number between 1 and 65535.</source>
-      <translation type="unfinished">Port must be a number between 1 and 65535.</translation>
+      <translation>Порт должен быть числом от 1 до 65535.</translation>
     </message>
     <message>
       <source>Match host is empty.</source>
-      <translation type="unfinished">Match host is empty.</translation>
+      <translation>Поле для совпадения пустое.</translation>
     </message>
     <message>
       <source>Match scheme must be http or https (or omit it).</source>
-      <translation type="unfinished">Match scheme must be http or https (or omit it).</translation>
+      <translation>Схема совпадения должна быть http или https (или можно не указывать).</translation>
     </message>
     <message>
       <source>Match has no host.</source>
-      <translation type="unfinished">Match has no host.</translation>
+      <translation>У совпадения нет хоста.</translation>
     </message>
     <message>
       <source>Match port must be a number between 1 and 65535.</source>
-      <translation type="unfinished">Match port must be a number between 1 and 65535.</translation>
+      <translation>Порт совпадения должен быть числом от 1 до 65535.</translation>
     </message>
   </context>
   <context>
@@ -3593,47 +3593,47 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Use Circle Button to Confirm</source>
-      <translation type="unfinished">Use Circle Button to Confirm</translation>
+      <translation>Нажмите кнопку «круг» для подтверждения</translation>
     </message>
     <message>
       <source>IME</source>
-      <translation type="unfinished">IME</translation>
+      <translation>IME</translation>
     </message>
     <message>
       <source>Enable IME Accessibility</source>
-      <translation type="unfinished">Enable IME Accessibility</translation>
+      <translation>Включить специальные возможности IME</translation>
     </message>
     <message>
       <source>Enable IME URL/Email Short Panel</source>
-      <translation type="unfinished">Enable IME URL/Email Short Panel</translation>
+      <translation>Включить короткую панель IME для URL/Email</translation>
     </message>
     <message>
       <source>Enable ShadNet</source>
-      <translation type="unfinished">Enable ShadNet</translation>
+      <translation>Включить ShadNet</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>Сервер</translation>
     </message>
     <message>
       <source>Enable UPnP</source>
-      <translation type="unfinished">Enable UPnP</translation>
+      <translation>Включить UPnP</translation>
     </message>
     <message>
       <source>Use Mice as Mice</source>
-      <translation type="unfinished">Use Mice as Mice</translation>
+      <translation>Использовать мышь как мышь</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>Сервер WebAPI</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>Информация про сигнал</translation>
     </message>
   </context>
   <context>
@@ -3838,51 +3838,51 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net...</translation>
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>Вкл</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>Вкл (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>Выкл</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>Настройки ShadNet - %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>Включить ShadNet для этого пользователя</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>ID аккаунта (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Пароль</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>Показать пароль</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>ID аккаунта (NPID):</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>Пароль:</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>Настройки Shad&amp;Net...</translation>
     </message>
   </context>
   <context>
