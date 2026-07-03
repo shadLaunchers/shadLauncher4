@@ -2789,7 +2789,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Match has no host.</source>
-      <translation>A partida não tem host.</translation>
+      <translation>O correspondente não possui host.</translation>
     </message>
     <message>
       <source>Match port must be a number between 1 and 65535.</source>
