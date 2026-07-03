@@ -23,7 +23,7 @@
     </message>
     <message>
       <source>Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</source>
-      <translation type="unfinished">Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</translation>
+      <translation>提交 %1 &amp;nbsp;&amp;middot;&amp;nbsp; 分支 %2&lt;br&gt;构建 %3</translation>
     </message>
     <message>
       <source>A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</source>
@@ -35,11 +35,11 @@
     </message>
     <message>
       <source>Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</source>
-      <translation type="unfinished">Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</translation>
+      <translation>由 &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; 模拟器驱动。&lt;br&gt;在 GNU 通用公共许可协议v2.0 或更高版本下被许可使用。</translation>
     </message>
     <message>
       <source>Copy Build Info</source>
-      <translation type="unfinished">Copy Build Info</translation>
+      <translation>复制构建信息</translation>
     </message>
     <message>
       <source>Copied!</source>
@@ -50,7 +50,7 @@
     <name>ChangelogDialog</name>
     <message>
       <source>Changelog Viewer</source>
-      <translation type="unfinished">Changelog Viewer</translation>
+      <translation>更新日志查看器</translation>
     </message>
     <message>
       <source>Search in changelog...</source>
@@ -1046,11 +1046,11 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>The location for installing emulator versions is not valid.</source>
-      <translation type="unfinished">The location for installing emulator versions is not valid.</translation>
+      <translation>安装模拟器版本的位置无效。</translation>
     </message>
     <message>
       <source>The emulator version location could not be created.</source>
-      <translation type="unfinished">The emulator version location could not be created.</translation>
+      <translation>无法创建模拟器版本位置。</translation>
     </message>
   </context>
   <context>
@@ -1101,107 +1101,107 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Firmware</source>
-      <translation type="unfinished">Firmware</translation>
+      <translation>固件</translation>
     </message>
     <message>
       <source>Show Firmwares</source>
-      <translation type="unfinished">Show Firmwares</translation>
+      <translation>显示固件</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>版本</translation>
     </message>
     <message>
       <source>Show Versions</source>
-      <translation type="unfinished">Show Versions</translation>
+      <translation>显示版本</translation>
     </message>
     <message>
       <source>Last Played</source>
-      <translation type="unfinished">Last Played</translation>
+      <translation>最近游玩</translation>
     </message>
     <message>
       <source>Show Last Played</source>
-      <translation type="unfinished">Show Last Played</translation>
+      <translation>显示最近游玩</translation>
     </message>
     <message>
       <source>Time Played</source>
-      <translation type="unfinished">Time Played</translation>
+      <translation>游玩时长</translation>
     </message>
     <message>
       <source>Show Time Played</source>
-      <translation type="unfinished">Show Time Played</translation>
+      <translation>显示游玩时长</translation>
     </message>
     <message>
       <source>Space On Disk</source>
-      <translation type="unfinished">Space On Disk</translation>
+      <translation>磁盘空间</translation>
     </message>
     <message>
       <source>Show Space On Disk</source>
-      <translation type="unfinished">Show Space On Disk</translation>
+      <translation>显示磁盘空间</translation>
     </message>
     <message>
       <source>Path</source>
-      <translation type="unfinished">Path</translation>
+      <translation>路径</translation>
     </message>
     <message>
       <source>Show Paths</source>
-      <translation type="unfinished">Show Paths</translation>
+      <translation>显示路径</translation>
     </message>
     <message>
       <source>Loading games</source>
-      <translation type="unfinished">Loading games</translation>
+      <translation>加载游戏</translation>
     </message>
     <message>
       <source>Loading games, please wait...</source>
-      <translation type="unfinished">Loading games, please wait...</translation>
+      <translation>正在加载游戏，请稍等……</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>取消</translation>
     </message>
     <message>
       <source>&amp;View Changelog</source>
-      <translation type="unfinished">&amp;View Changelog</translation>
+      <translation>&amp;查看更新日志</translation>
     </message>
     <message>
       <source>&amp;Copy Info</source>
-      <translation type="unfinished">&amp;Copy Info</translation>
+      <translation>&amp;复制信息</translation>
     </message>
     <message>
       <source>&amp;Copy Name + Serial</source>
-      <translation type="unfinished">&amp;Copy Name + Serial</translation>
+      <translation>&amp;复制名称+序列号</translation>
     </message>
     <message>
       <source>&amp;Copy Name</source>
-      <translation type="unfinished">&amp;Copy Name</translation>
+      <translation>&amp;复制名称</translation>
     </message>
     <message>
       <source>&amp;Copy Serial</source>
-      <translation type="unfinished">&amp;Copy Serial</translation>
+      <translation>&amp;复制序列号</translation>
     </message>
     <message>
       <source>&amp;Compatibility</source>
-      <translation type="unfinished">&amp;Compatibility</translation>
+      <translation>&amp;兼容性</translation>
     </message>
     <message>
       <source>&amp;View Report</source>
-      <translation type="unfinished">&amp;View Report</translation>
+      <translation>&amp;查看报告</translation>
     </message>
     <message>
       <source>&amp;Submit Report</source>
-      <translation type="unfinished">&amp;Submit Report</translation>
+      <translation>&amp;提交报告</translation>
     </message>
     <message>
       <source>&amp;Update Database</source>
-      <translation type="unfinished">&amp;Update Database</translation>
+      <translation>&amp;更新数据库</translation>
     </message>
     <message>
       <source>&amp;Manage Game</source>
-      <translation type="unfinished">&amp;Manage Game</translation>
+      <translation>&amp;管理游戏</translation>
     </message>
     <message>
       <source>&amp;Hide From Game List</source>
-      <translation type="unfinished">&amp;Hide From Game List</translation>
+      <translation>&amp;从游戏列表隐藏</translation>
     </message>
     <message>
       <source>&amp;Add/Edit Tooltip Notes</source>
@@ -1213,33 +1213,33 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Warning!</source>
-      <translation type="unfinished">Warning!</translation>
+      <translation>警告！</translation>
     </message>
     <message>
       <source>Failed to retrieve the online compatibility database!
 Using local database.
 
 %0</source>
-      <translation type="unfinished">Failed to retrieve the online compatibility database!
-Using local database.
+      <translation>无法检索在线兼容数据库！
+使用本地数据库。
 
 %0</translation>
     </message>
     <message>
       <source>No Report Available</source>
-      <translation type="unfinished">No Report Available</translation>
+      <translation>无可用报告</translation>
     </message>
     <message>
       <source>There is no compatibility report available for this game.</source>
-      <translation type="unfinished">There is no compatibility report available for this game.</translation>
+      <translation>这款游戏没有可用的兼容性报告。</translation>
     </message>
     <message>
       <source>&amp;Open Folder</source>
-      <translation type="unfinished">&amp;Open Folder</translation>
+      <translation>&amp;打开文件夹</translation>
     </message>
     <message>
       <source>&amp;Open Game Folder</source>
-      <translation type="unfinished">&amp;Open Game Folder</translation>
+      <translation>&amp;打开游戏文件夹</translation>
     </message>
     <message>
       <source>&amp;Open Update Folder</source>
@@ -1443,123 +1443,123 @@ Using local database.
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</translation>
+      <translation>使用奖杯查看器需要提供奖杯密钥。可通过点击“应用”->“加密密钥加密密钥管理器”来输入</translation>
     </message>
   </context>
   <context>
     <name>GameListGrid</name>
     <message>
       <source>Notes:</source>
-      <translation type="unfinished">Notes:</translation>
+      <translation>注：</translation>
     </message>
   </context>
   <context>
     <name>GameListTable</name>
     <message>
       <source>Unknown</source>
-      <translation type="unfinished">Unknown</translation>
+      <translation>未知</translation>
     </message>
     <message>
       <source>Never played</source>
-      <translation type="unfinished">Never played</translation>
+      <translation>从未游玩</translation>
     </message>
     <message>
       <source>Japan</source>
-      <translation type="unfinished">Japan</translation>
+      <translation>日本</translation>
     </message>
     <message>
       <source>Europe</source>
-      <translation type="unfinished">Europe</translation>
+      <translation>欧洲</translation>
     </message>
     <message>
       <source>USA</source>
-      <translation type="unfinished">USA</translation>
+      <translation>美国</translation>
     </message>
     <message>
       <source>Asia</source>
-      <translation type="unfinished">Asia</translation>
+      <translation>亚洲</translation>
     </message>
     <message>
       <source>World</source>
-      <translation type="unfinished">World</translation>
+      <translation>世界</translation>
     </message>
     <message>
       <source>Last updated</source>
-      <translation type="unfinished">Last updated</translation>
+      <translation>最后更新</translation>
     </message>
     <message>
       <source>Notes:</source>
-      <translation type="unfinished">Notes:</translation>
+      <translation>注：</translation>
     </message>
   </context>
   <context>
     <name>HelpDialog</name>
     <message>
       <source>Quickstart</source>
-      <translation type="unfinished">Quickstart</translation>
+      <translation>快速入门</translation>
     </message>
     <message>
       <source>Syntax</source>
-      <translation type="unfinished">Syntax</translation>
+      <translation>语法</translation>
     </message>
     <message>
       <source>Keybindings</source>
-      <translation type="unfinished">Keybindings</translation>
+      <translation>按键绑定</translation>
     </message>
     <message>
       <source>Special Bindings</source>
-      <translation type="unfinished">Special Bindings</translation>
+      <translation>特殊绑定</translation>
     </message>
     <message>
       <source>FAQ</source>
-      <translation type="unfinished">FAQ</translation>
+      <translation>常见问题</translation>
     </message>
   </context>
   <context>
     <name>HostOverridesDialog</name>
     <message>
       <source>Network Host Overrides</source>
-      <translation type="unfinished">Network Host Overrides</translation>
+      <translation>网络主机覆盖</translation>
     </message>
     <message>
       <source>Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</source>
-      <translation type="unfinished">Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</translation>
+      <translation>重定向一款游戏的网络链接需要一个不同的服务器（例如一个本地私服）。每一行都将&lt;b&gt;匹配&lt;/b&gt;一个&lt;/b&gt;重定向目标&lt;b&gt;。匹配对象将从最特定的开始：:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;目标将类似 &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;，或者&lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;。未经检查的行将被保存但不会被模拟器应用。</translation>
     </message>
     <message>
       <source>Enabled</source>
-      <translation type="unfinished">Enabled</translation>
+      <translation>已启用</translation>
     </message>
     <message>
       <source>Match (host / endpoint)</source>
-      <translation type="unfinished">Match (host / endpoint)</translation>
+      <translation>匹配 (主机 / 端点)</translation>
     </message>
     <message>
       <source>Redirect to</source>
-      <translation type="unfinished">Redirect to</translation>
+      <translation>重定向至</translation>
     </message>
     <message>
       <source>&amp;Add</source>
-      <translation type="unfinished">&amp;Add</translation>
+      <translation>&amp;添加</translation>
     </message>
     <message>
       <source>Add &amp;catch-all</source>
-      <translation type="unfinished">Add &amp;catch-all</translation>
+      <translation>添加 &amp;捕捉所有</translation>
     </message>
     <message>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;删除</translation>
     </message>
     <message>
       <source>File: %1</source>
-      <translation type="unfinished">File: %1</translation>
+      <translation>文件：%1</translation>
     </message>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>打开文件夹</translation>
     </message>
     <message>
       <source>Catch-all exists</source>
-      <translation type="unfinished">Catch-all exists</translation>
+      <translation>捕捉所有</translation>
     </message>
     <message>
       <source>A catch-all (*) row already exists.</source>
@@ -1567,23 +1567,23 @@ Using local database.
     </message>
     <message>
       <source>Parse error</source>
-      <translation type="unfinished">Parse error</translation>
+      <translation>解析错误</translation>
     </message>
     <message>
       <source>The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</source>
-      <translation type="unfinished">The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</translation>
+      <translation>无法解析现有主机_overrides.json。将从空列表开始；保存将覆盖文件。</translation>
     </message>
     <message>
       <source>Format error</source>
-      <translation type="unfinished">Format error</translation>
+      <translation>格式错误</translation>
     </message>
     <message>
       <source>host_overrides.json must be a JSON object. Starting empty.</source>
-      <translation type="unfinished">host_overrides.json must be a JSON object. Starting empty.</translation>
+      <translation>host_overrides.json 必须是 JSON 对象。开始为空。</translation>
     </message>
     <message>
       <source>Row %1: %2</source>
-      <translation type="unfinished">Row %1: %2</translation>
+      <translation>行 %1: %2</translation>
     </message>
     <message>
       <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
@@ -1591,72 +1591,71 @@ Using local database.
     </message>
     <message>
       <source>Cannot save</source>
-      <translation type="unfinished">Cannot save</translation>
+      <translation>无法保存</translation>
     </message>
     <message>
       <source>Please fix the following before saving:
 
 %1</source>
-      <translation type="unfinished">Please fix the following before saving:
+      <translation>请在保存前修复以下内容:
 
 %1</translation>
     </message>
     <message>
       <source>Save failed</source>
-      <translation type="unfinished">Save failed</translation>
+      <translation>保存失败</translation>
     </message>
     <message>
       <source>Could not open the file for writing:
 %1</source>
-      <translation type="unfinished">Could not open the file for writing:
-%1</translation>
+      <translation>无法打开文件进行读取：%1</translation>
     </message>
     <message>
       <source>An error occurred while writing.</source>
-      <translation type="unfinished">An error occurred while writing.</translation>
+      <translation>写入时出错。</translation>
     </message>
   </context>
   <context>
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation type="unfinished">Customize Hotkeys</translation>
+      <translation>自定义快捷键</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
-      <translation type="unfinished">Show FPS Counter</translation>
+      <translation>显示FPS计数器</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>未映射</translation>
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation type="unfinished">Quit Emulation</translation>
+      <translation>退出模拟器</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>重新加载按键映射</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
-      <translation type="unfinished">Toggle Fullscreen</translation>
+      <translation>全屏显示切换</translation>
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation type="unfinished">Toggle Pause</translation>
+      <translation>切换暂停</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>切换鼠标模拟摇杆功能</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>切换鼠标模拟陀螺仪功能</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation type="unfinished">Tip: Up to three simultaneous inputs can be assigned for each hotkey</translation>
+      <translation>提示：每个热键最多可以同时分配三个按键</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
@@ -1692,149 +1691,149 @@ Using local database.
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation type="unfinished">Waiting for inputs</translation>
+      <translation>正在等待输入</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>提高音量</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>降低音量</translation>
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation type="unfinished">Hotkeys</translation>
+      <translation>热键</translation>
     </message>
     <message>
       <source>Placeholder</source>
-      <translation type="unfinished">Placeholder</translation>
+      <translation>占位符</translation>
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation type="unfinished">Capture Screenshot</translation>
+      <translation>捕获屏幕截图</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
-      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+      <translation>捕获带叠加层的截图</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
-      <translation type="unfinished">Open Emulator Settings</translation>
+      <translation>打开模拟器设置</translation>
     </message>
   </context>
   <context>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>找不到模拟器可执行程序</translation>
     </message>
   </context>
   <context>
     <name>KBMSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation type="unfinished">Configure Controls</translation>
+      <translation>配置键鼠</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>十字键</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>上</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>未映射</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>左</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>右</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>下</translation>
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation type="unfinished">Left Analog Halfmode</translation>
+      <translation>左摇杆半速模式</translation>
     </message>
     <message>
       <source>hold to move left stick at half-speed</source>
-      <translation type="unfinished">hold to move left stick at half-speed</translation>
+      <translation>按住以半速移动左摇杆</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>左摇杆</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>配置选择</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>通用配置</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation type="unfinished">Use per-game configs</translation>
+      <translation>每个游戏使用单独的配置</translation>
     </message>
     <message>
       <source>Copy from Common Config</source>
-      <translation type="unfinished">Copy from Common Config</translation>
+      <translation>从通用配置中复制</translation>
     </message>
     <message>
       <source>Text Editor</source>
-      <translation type="unfinished">Text Editor</translation>
+      <translation>文本编辑器</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>帮助</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>选项设置</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>左侧触摸板</translation>
     </message>
     <message>
       <source>Mouse to Joystick</source>
-      <translation type="unfinished">Mouse to Joystick</translation>
+      <translation>鼠标控制摇杆</translation>
     </message>
     <message>
       <source>*press F7 ingame to activate</source>
-      <translation type="unfinished">*press F7 ingame to activate</translation>
+      <translation>* 在游戏中按 F7 键激活</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>中心触摸板</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>触摸板右侧</translation>
     </message>
     <message>
       <source>Mouse Movement Parameters</source>
-      <translation type="unfinished">Mouse Movement Parameters</translation>
+      <translation>鼠标移动参数</translation>
     </message>
     <message>
       <source>Deadzone Offset (def 0.50):</source>
-      <translation type="unfinished">Deadzone Offset (def 0.50):</translation>
+      <translation>死区偏移量（默认 0.50）：</translation>
     </message>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
-      <translation type="unfinished">Speed Multiplier (def 1.0):</translation>
+      <translation>速度系数（默认 1.0）：</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
-      <translation type="unfinished">Speed Offset (def 0.125):</translation>
+      <translation>速度偏移量（默认 0.125）：</translation>
     </message>
     <message>
       <source>note: click Help Button/Special Keybindings for more information</source>
@@ -2034,7 +2033,7 @@ Using local database.
     </message>
     <message>
       <source>Utilities</source>
-      <translation type="unfinished">Utilities</translation>
+      <translation>应用</translation>
     </message>
     <message>
       <source>View</source>
@@ -4064,107 +4063,107 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>显示更新日志</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>隐藏更新日志</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation type="unfinished">Network error while fetching changelog</translation>
+      <translation>获取更新日志时出现网络错误</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>更新日志</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>未找到指定资源的下载地址。</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly)</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly)</translation>
+      <translation>正在下载预发布(夜间)版</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
-      <translation type="unfinished">Network error while downloading</translation>
+      <translation>下载时发生网络错误</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
-      <translation type="unfinished">Extraction failure.</translation>
+      <translation>解压失败。</translation>
     </message>
     <message>
       <source>Version install path is not configured.</source>
-      <translation type="unfinished">Version install path is not configured.</translation>
+      <translation>未配置版本安装路径。</translation>
     </message>
     <message>
       <source>Failed to copy executable into versions folder.</source>
-      <translation type="unfinished">Failed to copy executable into versions folder.</translation>
+      <translation>无法将可执行文件复制到版本文件夹。</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>警告</translation>
     </message>
     <message>
       <source>Failed to install executable into application directory.
 The custom build is still available under:
 %1</source>
-      <translation type="unfinished">Failed to install executable into application directory.
-The custom build is still available under:
+      <translation>无法将可执行文件安装到应用程序目录。
+自定义构建依然可用于：
 %1</translation>
     </message>
     <message>
       <source>Could not find executable in extracted files.</source>
-      <translation type="unfinished">Could not find executable in extracted files.</translation>
+      <translation>无法在已提取的文件中找到可执行文件。</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.
 The version has been saved to: %1</source>
-      <translation type="unfinished">Failed to copy executable to application directory.
-The version has been saved to: %1</translation>
+      <translation>复制可执行文件到应用程序目录失败。
+当前版本文件已保存到: %1</translation>
     </message>
     <message>
       <source>Failed to copy executable to application directory.
 The pre-release version has been saved to: %1</source>
-      <translation type="unfinished">Failed to copy executable to application directory.
-The pre-release version has been saved to: %1</translation>
+      <translation>复制可执行文件到应用程序目录失败。
+当前预发布版本文件已保存到: %1</translation>
     </message>
     <message>
       <source>Custom version installed successfully:</source>
-      <translation type="unfinished">Custom version installed successfully:</translation>
+      <translation>自定义版本安装成功：</translation>
     </message>
     <message>
       <source>1. Version folder:</source>
-      <translation type="unfinished">1. Version folder:</translation>
+      <translation>1. 版本文件夹：</translation>
     </message>
     <message>
       <source>2. Installed to:</source>
-      <translation type="unfinished">2. Installed to:</translation>
+      <translation>2. 安装到：</translation>
     </message>
     <message>
       <source>ZIP extraction failed:</source>
-      <translation type="unfinished">ZIP extraction failed:</translation>
+      <translation>ZIP 提取失败：</translation>
     </message>
     <message>
       <source>Executable not found in extracted files.</source>
-      <translation type="unfinished">Executable not found in extracted files.</translation>
+      <translation>在提取的文件中无法找到可执行文件。</translation>
     </message>
     <message>
       <source>Version %1 has been:</source>
-      <translation type="unfinished">Version %1 has been:</translation>
+      <translation>版本 %1 已：</translation>
     </message>
     <message>
       <source>1. Downloaded to:</source>
-      <translation type="unfinished">1. Downloaded to:</translation>
+      <translation>1. 下载到：</translation>
     </message>
     <message>
       <source>Extraction failure:</source>
-      <translation type="unfinished">Extraction failure:</translation>
+      <translation>解压失败：</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) has been:</source>
-      <translation type="unfinished">Pre-release (Nightly) has been:</translation>
+      <translation>预发布（夜间）版已：</translation>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
@@ -4180,7 +4179,7 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Select executable or zip file</source>
-      <translation type="unfinished">Select executable or zip file</translation>
+      <translation>选择可执行文件或 zip 文件</translation>
     </message>
     <message>
       <source>No executable found in the extracted zip file.</source>
@@ -4192,30 +4191,29 @@ The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Install as Current Version</source>
-      <translation type="unfinished">Install as Current Version</translation>
+      <translation>安装为当前版本</translation>
     </message>
     <message>
       <source>Do you want to install this version as the current version?
 This will replace the existing emulator executable and copy all necessary files.</source>
-      <translation type="unfinished">Do you want to install this version as the current version?
-This will replace the existing emulator executable and copy all necessary files.</translation>
+      <translation>您想要将此版本安装为当前版本吗？
+这将替换现有的模拟器可执行文件并复制所有必要的文件。</translation>
     </message>
     <message>
       <source>Some files could not be copied to the application directory.
 The version may not run correctly.</source>
-      <translation type="unfinished">Some files could not be copied to the application directory.
-The version may not run correctly.</translation>
+      <translation>某些文件无法复制到应用程序目录。
+此版本可能无法正常运行。</translation>
     </message>
     <message>
       <source>Version %1 has been installed with all files to:
 %2</source>
-      <translation type="unfinished">Version %1 has been installed with all files to:
-%2</translation>
+      <translation>版本%1的所有文件已经被安装到：%2</translation>
     </message>
     <message>
       <source>Version %1 has been installed to:
 %2</source>
-      <translation type="unfinished">Version %1 has been installed to:
+      <translation>版本 %1 已经安装到:
 %2</translation>
     </message>
     <message>
