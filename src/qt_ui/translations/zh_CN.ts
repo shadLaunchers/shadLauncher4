@@ -1034,15 +1034,15 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>The chosen location for dumped games is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped games is not valid.</translation>
+      <translation>转储游戏选定位置无效。</translation>
     </message>
     <message>
       <source>The chosen location for dumped DLCs is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped DLCs is not valid.</translation>
+      <translation>转储DLC位置选定无效。</translation>
     </message>
     <message>
       <source>The DLC dump location could not be created.</source>
-      <translation type="unfinished">The DLC dump location could not be created.</translation>
+      <translation>无法创建DLC转储位置。</translation>
     </message>
     <message>
       <source>The location for installing emulator versions is not valid.</source>
@@ -3184,11 +3184,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping</source>
-      <translation type="unfinished">Enable Shaders Dumping</translation>
+      <translation>启用着色器转储</translation>
     </message>
     <message>
       <source>Enable Debug Dumping</source>
-      <translation type="unfinished">Enable Debug Dumping</translation>
+      <translation>启用调试转储</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging</source>
