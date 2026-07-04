@@ -27,7 +27,6 @@ chmod a+x linuxdeploy-plugin-checkrt-x86_64.sh
 
 cp -a "$GITHUB_WORKSPACE/build/translations" AppDir/usr/bin
 
-./linuxdeploy-x86_64.AppImage --appdir AppDir -d "$GITHUB_WORKSPACE"/dist/net.shadps4.shadps4-qtlauncher.desktop  -e "$GITHUB_WORKSPACE"/build/shadPS4QtLauncher -i "$GITHUB_WORKSPACE"/src/images/shadLauncher4.png --plugin qt
+./linuxdeploy-x86_64.AppImage --appdir AppDir -d "$GITHUB_WORKSPACE"/dist/net.shadps4.shadps4-qtlauncher.desktop  -e "$GITHUB_WORKSPACE"/build/shadLauncher4 -i "$GITHUB_WORKSPACE"/src/images/shadLauncher4.png --plugin qt
 rm AppDir/usr/plugins/multimedia/libgstreamermediaplugin.so
 ./linuxdeploy-x86_64.AppImage --appdir AppDir --output appimage
-mv shadLauncher4-x86_64.AppImage shadPS4QtLauncher-qt.AppImage
