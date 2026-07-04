@@ -28,7 +28,7 @@ endif ()
 
 
 find_package(OpenAL CONFIG)
-find_package(VulkanHeaders CONFIG)
+find_package(VulkanHeaders 1.4.329 CONFIG)
 find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Xml Network Multimedia Svg)
 if (UNIX)
     find_package(OpenSSL REQUIRED)
