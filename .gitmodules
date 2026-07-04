@@ -25,3 +25,7 @@
 [submodule "externals/volk"]
 	path = externals/volk
 	url = https://github.com/zeux/volk.git
+[submodule "externals/vulkan-headers"]
+	path = externals/vulkan-headers
+	url = https://github.com/KhronosGroup/Vulkan-Headers.git
+	shallow = true
