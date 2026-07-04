@@ -28,11 +28,11 @@ endif ()
 
 
 find_package(OpenAL CONFIG)
+find_package(VulkanHeaders CONFIG)
 find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Xml Network Multimedia Svg)
-if (NOT WIN32)
+if (UNIX)
     find_package(OpenSSL REQUIRED)
 endif()
-find_package(VulkanHeaders REQUIRED)
 qt_standard_project_setup()
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOMOC ON)
