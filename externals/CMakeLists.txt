@@ -77,6 +77,12 @@ endif()
 
 add_subdirectory(libdeflate)
 
+# vulkan-headers
+if (NOT TARGET Vulkan::Headers)
+    set(VULKAN_HEADERS_ENABLE_MODULE OFF)
+    add_subdirectory(vulkan-headers)
+endif()
+
 #volk
 add_subdirectory(volk)
 
