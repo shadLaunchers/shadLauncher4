@@ -1845,191 +1845,191 @@ Using local database.
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>三角</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>方框</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>圆</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>叉</translation>
     </message>
     <message>
       <source>Right Analog Halfmode</source>
-      <translation type="unfinished">Right Analog Halfmode</translation>
+      <translation>右摇杆半速模式</translation>
     </message>
     <message>
       <source>hold to move right stick at half-speed</source>
-      <translation type="unfinished">hold to move right stick at half-speed</translation>
+      <translation>按住以半速移动右摇杆</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>右摇杆</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>提示：右键点击可解除输入映射</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>保存</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>应用</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>恢复默认设置</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>取消</translation>
     </message>
     <message>
       <source>Common Config Selected</source>
-      <translation type="unfinished">Common Config Selected</translation>
+      <translation>已选中通用配置</translation>
     </message>
     <message>
       <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation type="unfinished">This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</translation>
+      <translation>此按钮用于将通用配置中的映射复制到当前选定的配置文件，当前选定的配置文件为通用配置时无法使用。</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
-      <translation type="unfinished">Copy values from Common Config</translation>
+      <translation>从通用配置中复制配置</translation>
     </message>
     <message>
       <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
-      <translation type="unfinished">Do you want to overwrite existing mappings with the mappings from the Common Config?</translation>
+      <translation>您想要用通用配置的映射覆盖现有映射吗？</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>无法保存</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>不能多次绑定任何同一输入。请重新映射以下按键的输入：
 
 %1</translation>
     </message>
     <message>
       <source>Press a key</source>
-      <translation type="unfinished">Press a key</translation>
+      <translation>按下按键</translation>
     </message>
     <message>
       <source>Cannot set mapping</source>
-      <translation type="unfinished">Cannot set mapping</translation>
+      <translation>无法设置映射</translation>
     </message>
     <message>
       <source>Mousewheel cannot be mapped to stick outputs</source>
-      <translation type="unfinished">Mousewheel cannot be mapped to stick outputs</translation>
+      <translation>鼠标滚轮无法映射到摇杆</translation>
     </message>
   </context>
   <context>
     <name>Localized</name>
     <message numerus="yes">
       <source>%Ln day(s)</source>
-      <translation type="unfinished">
-        <numerusform>%Ln day(s)</numerusform>
+      <translation>
+        <numerusform>%Ln 天</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%Ln hour(s)</source>
-      <translation type="unfinished">
-        <numerusform>%Ln hour(s)</numerusform>
+      <translation>
+        <numerusform>%Ln 小时</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%Ln minute(s)</source>
-      <translation type="unfinished">
-        <numerusform>%Ln minute(s)</numerusform>
+      <translation>
+        <numerusform>%Ln 分钟</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%Ln second(s)</source>
-      <translation type="unfinished">
-        <numerusform>%Ln second(s)</numerusform>
+      <translation>
+        <numerusform>%Ln 秒</numerusform>
       </translation>
     </message>
     <message>
       <source>%0 and %1</source>
       <comment>Days and hours</comment>
-      <translation type="unfinished">%0 and %1</translation>
+      <translation>%0和%1</translation>
     </message>
     <message>
       <source>%0 and %1</source>
       <comment>Hours and minutes</comment>
-      <translation type="unfinished">%0 and %1</translation>
+      <translation>%0和%1</translation>
     </message>
     <message>
       <source>%0 and %1</source>
       <comment>Minutes and seconds</comment>
-      <translation type="unfinished">%0 and %1</translation>
+      <translation>%0和%1</translation>
     </message>
   </context>
   <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation type="unfinished">Log Filter Presets</translation>
+      <translation>日志过滤器预设</translation>
     </message>
     <message>
       <source>Comment</source>
-      <translation type="unfinished">Comment</translation>
+      <translation>备注</translation>
     </message>
     <message>
       <source>Filter</source>
-      <translation type="unfinished">Filter</translation>
+      <translation>筛选</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>加载</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>关闭</translation>
     </message>
     <message>
       <source>Add a new preset after the selected row</source>
-      <translation type="unfinished">Add a new preset after the selected row</translation>
+      <translation>在所选行后添加新预设</translation>
     </message>
     <message>
       <source>Remove selected presets</source>
-      <translation type="unfinished">Remove selected presets</translation>
+      <translation>删除选中的预设</translation>
     </message>
     <message>
       <source>Load the selected preset</source>
-      <translation type="unfinished">Load the selected preset</translation>
+      <translation>加载选中的预设</translation>
     </message>
   </context>
   <context>
     <name>MainWindow</name>
     <message>
       <source>Search...</source>
-      <translation type="unfinished">Search...</translation>
+      <translation>搜索……</translation>
     </message>
     <message>
       <source>File</source>
-      <translation type="unfinished">File</translation>
+      <translation>文件</translation>
     </message>
     <message>
       <source>Emulation</source>
-      <translation type="unfinished">Emulation</translation>
+      <translation>模拟</translation>
     </message>
     <message>
       <source>Configuration</source>
-      <translation type="unfinished">Configuration</translation>
+      <translation>配置</translation>
     </message>
     <message>
       <source>Manage</source>
-      <translation type="unfinished">Manage</translation>
+      <translation>管理</translation>
     </message>
     <message>
       <source>Utilities</source>
@@ -2037,11 +2037,11 @@ Using local database.
     </message>
     <message>
       <source>View</source>
-      <translation type="unfinished">View</translation>
+      <translation>显示</translation>
     </message>
     <message>
       <source>Game List Icons</source>
-      <translation type="unfinished">Game List Icons</translation>
+      <translation>游戏列表图标</translation>
     </message>
     <message>
       <source>Game List Mode</source>
@@ -2225,207 +2225,207 @@ Using local database.
     </message>
     <message>
       <source>Exit shadLauncher4</source>
-      <translation type="unfinished">Exit shadLauncher4</translation>
+      <translation>退出 shadLauncher4</translation>
     </message>
     <message>
       <source>About shadLauncher4</source>
-      <translation type="unfinished">About shadLauncher4</translation>
+      <translation>关于 shadLauncher4</translation>
     </message>
     <message>
       <source>Export GameList</source>
-      <translation type="unfinished">Export GameList</translation>
+      <translation>导出游戏列表</translation>
     </message>
     <message>
       <source>General</source>
-      <translation type="unfinished">General</translation>
+      <translation>常规</translation>
     </message>
     <message>
       <source>Graphics</source>
-      <translation type="unfinished">Graphics</translation>
+      <translation>图像</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>输入</translation>
     </message>
     <message>
       <source>Paths</source>
-      <translation type="unfinished">Paths</translation>
+      <translation>路径</translation>
     </message>
     <message>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>调试</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>实验性功能</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>日志</translation>
     </message>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>加密密钥管理器</translation>
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>版本管理器</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>无</translation>
     </message>
     <message>
       <source>Install Packages (PKG)</source>
-      <translation type="unfinished">Install Packages (PKG)</translation>
+      <translation>安装 Packages (PKG)</translation>
     </message>
     <message>
       <source>Install application from a .pkg file</source>
-      <translation type="unfinished">Install application from a .pkg file</translation>
+      <translation>从 .pkg 文件安装应用程序</translation>
     </message>
     <message>
       <source>PKG File (*.PKG *.pkg)</source>
-      <translation type="unfinished">PKG File (*.PKG *.pkg)</translation>
+      <translation>PKG 文件（*.PKG *.pkg）</translation>
     </message>
     <message>
       <source>PKG ERROR</source>
-      <translation type="unfinished">PKG ERROR</translation>
+      <translation>PKG 错误</translation>
     </message>
     <message>
       <source>PKG Extraction</source>
-      <translation type="unfinished">PKG Extraction</translation>
+      <translation>PKG 解压</translation>
     </message>
     <message>
       <source>Patch detected!</source>
-      <translation type="unfinished">Patch detected!</translation>
+      <translation>检测到补丁！</translation>
     </message>
     <message>
       <source>PKG and Game versions match: </source>
-      <translation type="unfinished">PKG and Game versions match: </translation>
+      <translation>PKG 和游戏版本匹配： </translation>
     </message>
     <message>
       <source>Would you like to overwrite?</source>
-      <translation type="unfinished">Would you like to overwrite?</translation>
+      <translation>您想要覆盖吗？</translation>
     </message>
     <message>
       <source>PKG Version %1 is older than installed version: </source>
-      <translation type="unfinished">PKG Version %1 is older than installed version: </translation>
+      <translation>PKG 版本 %1 比已安装版本更旧：</translation>
     </message>
     <message>
       <source>Game is installed: </source>
-      <translation type="unfinished">Game is installed: </translation>
+      <translation>游戏已安装：</translation>
     </message>
     <message>
       <source>Would you like to install Patch: </source>
-      <translation type="unfinished">Would you like to install Patch: </translation>
+      <translation>您想安装补丁吗：</translation>
     </message>
     <message>
       <source>DLC Installation</source>
-      <translation type="unfinished">DLC Installation</translation>
+      <translation>DLC 安装</translation>
     </message>
     <message>
       <source>Would you like to install DLC: %1?</source>
-      <translation type="unfinished">Would you like to install DLC: %1?</translation>
+      <translation>您想安装 DLC：%1 吗？</translation>
     </message>
     <message>
       <source>DLC already installed:</source>
-      <translation type="unfinished">DLC already installed:</translation>
+      <translation>DLC 已经安装：</translation>
     </message>
     <message>
       <source>Game already installed</source>
-      <translation type="unfinished">Game already installed</translation>
+      <translation>游戏已经安装</translation>
     </message>
     <message>
       <source>PKG is a patch or DLC, please install the game first!</source>
-      <translation type="unfinished">PKG is a patch or DLC, please install the game first!</translation>
+      <translation>PKG文件是一个补丁或 DLC，请先安装游戏！</translation>
     </message>
     <message>
       <source>Extracting PKG %1/%2</source>
-      <translation type="unfinished">Extracting PKG %1/%2</translation>
+      <translation>正在解压 PKG %1/%2</translation>
     </message>
     <message>
       <source>Extraction Finished</source>
-      <translation type="unfinished">Extraction Finished</translation>
+      <translation>解压完成</translation>
     </message>
     <message>
       <source>Game successfully installed at %1</source>
-      <translation type="unfinished">Game successfully installed at %1</translation>
+      <translation>游戏成功安装在 %1</translation>
     </message>
     <message>
       <source>File doesn&apos;t appear to be a valid PKG file</source>
-      <translation type="unfinished">File doesn&apos;t appear to be a valid PKG file</translation>
+      <translation>文件似乎不是有效的 PKG 文件</translation>
     </message>
     <message>
       <source>No valid PKG decryption keys found. Please set them up in the Crypto Key Manager.</source>
-      <translation type="unfinished">No valid PKG decryption keys found. Please set them up in the Crypto Key Manager.</translation>
+      <translation>未找到有效的 PKG 解密密钥。请在密钥管理器中设置。</translation>
     </message>
     <message>
       <source>No valid Fake PKG decryption keys found. Please set them up in the Crypto Key Manager.</source>
-      <translation type="unfinished">No valid Fake PKG decryption keys found. Please set them up in the Crypto Key Manager.</translation>
+      <translation>未找到有效的FPKG 解密密钥。请在密钥管理器中设置。</translation>
     </message>
     <message>
       <source>PKG Install</source>
-      <translation type="unfinished">PKG Install</translation>
+      <translation>安装PKG文件</translation>
     </message>
     <message>
       <source>No valid PKG files were found.</source>
-      <translation type="unfinished">No valid PKG files were found.</translation>
+      <translation>没有找到有效的PKG文件。</translation>
     </message>
     <message>
       <source>Could not read SFO. Check log for details.</source>
-      <translation type="unfinished">Could not read SFO. Check log for details.</translation>
+      <translation>无法读取 SFO。请检查日志以了解详细信息。</translation>
     </message>
     <message>
       <source>Run Game</source>
-      <translation type="unfinished">Run Game</translation>
+      <translation>运行游戏</translation>
     </message>
     <message>
       <source>Pause emulation</source>
-      <translation type="unfinished">Pause emulation</translation>
+      <translation>暂停模拟</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>错误</translation>
     </message>
     <message>
       <source>No game selected</source>
-      <translation type="unfinished">No game selected</translation>
+      <translation>未选择游戏</translation>
     </message>
     <message>
       <source>Eboot.bin file not found</source>
-      <translation type="unfinished">Eboot.bin file not found</translation>
+      <translation>找不到 Eboot.bin 文件</translation>
     </message>
     <message>
       <source>Game is already running!</source>
-      <translation type="unfinished">Game is already running!</translation>
+      <translation>游戏已经在运行中！</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>未选择版本</translation>
     </message>
     <message>
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>未选择任何模拟器版本。
+版本管理器菜单将会打开。
+请从右侧面板中选择一个模拟器版本。</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>无法找到模拟器可执行文件</translation>
     </message>
     <message>
       <source>No Running Game</source>
-      <translation type="unfinished">No Running Game</translation>
+      <translation>没有正在运行的游戏</translation>
     </message>
     <message>
       <source>No running game to restart</source>
-      <translation type="unfinished">No running game to restart</translation>
+      <translation>没有能够重启的运行中游戏</translation>
     </message>
     <message>
       <source>No running game to pause</source>
-      <translation type="unfinished">No running game to pause</translation>
+      <translation>没有能够暂停运行中游戏</translation>
     </message>
     <message>
       <source>Resume</source>
@@ -2437,11 +2437,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No running game to stop</source>
-      <translation type="unfinished">No running game to stop</translation>
+      <translation>没有能够停止的运行中游戏</translation>
     </message>
     <message>
       <source>No running game to toggle fullscreen</source>
-      <translation type="unfinished">No running game to toggle fullscreen</translation>
+      <translation>没有能够切换全屏的运行中游戏</translation>
     </message>
     <message>
       <source>Show Game Log</source>
