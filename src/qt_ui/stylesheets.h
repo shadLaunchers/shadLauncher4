@@ -68,6 +68,9 @@ const QString default_style_sheet(
     "QDockWidget::close-button, QDockWidget::float-button{ background-color: #e3e3e3; }"
 
     // Top menu bar (Workaround for transparent menus in Qt 6.7.3)
+    "QMenuBar { color: #000; background-color: #ffffff; }"
+    "QMenuBar::item { background: transparent; }"
+    "QMenuBar::item:selected { background: #90C8F6; }"
     "QMenu { color: #000; background-color: #F0F0F0; alternate-background-color: #f2f2f2; }"
     "QMenu::item:selected { background: #90C8F6; }"
     "QMenu::item:disabled { color: #787878; }");

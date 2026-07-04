@@ -30,6 +30,8 @@ public:
     ~SettingsDialog();
     void open() override;
 
+    void GetPhysicalDevices();
+
 signals:
     void GameFoldersChanged();
     void CompatUpdateRequested();

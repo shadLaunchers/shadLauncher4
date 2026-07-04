@@ -3,3 +3,6 @@
 /out/*
 /.idea/*
 /src/common/scm_rev.cpp
+build/
+user/
+cmake-build-debug/

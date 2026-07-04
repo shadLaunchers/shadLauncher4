@@ -77,10 +77,15 @@ endif()
 
 add_subdirectory(libdeflate)
 
-# staticwindlibs
-if (WIN32)
-add_subdirectory(staticwinlibs)
-else()
+# vulkan-headers
+if (NOT TARGET Vulkan::Headers)
+    set(VULKAN_HEADERS_ENABLE_MODULE OFF)
+    add_subdirectory(vulkan-headers)
+endif()
+
+#volk
+add_subdirectory(volk)
+
 # SDL3
 if (NOT TARGET SDL3::SDL3)
     set(SDL_TEST_LIBRARY OFF)
@@ -88,4 +93,12 @@ if (NOT TARGET SDL3::SDL3)
     add_subdirectory(sdl3)
 endif()
 
+# fmtlib
+if (NOT TARGET fmt::fmt)
+    add_subdirectory(fmt)
+endif()
+
+# staticwindlibs
+if (WIN32)
+    add_subdirectory(staticwinlibs)
 endif()

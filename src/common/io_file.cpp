@@ -9,8 +9,8 @@
 // #include "common/assert.h"
 // #include "common/error.h"
 #include "common/io_file.h"
-// #include "common/logging/log.h"
-// #include "common/path_util.h"
+#include "common/logging/log.h"
+#include "common/path_util.h"
 
 #ifdef _WIN32
 #include "common/ntapi.h"

@@ -424,7 +424,8 @@ void VersionDialog::AddCustomExecutable(const QString& filePath) {
                         break;
                     }
 #elif defined(Q_OS_LINUX)
-                    if (fi.isFile() && fi.isExecutable() && !fi.fileName().contains('.')) {
+                    if (fi.isFile() && (fi.fileName().endsWith(".AppImage", Qt::CaseInsensitive) ||
+                                        !fi.fileName().contains('.'))) {
                         versionExePath = fi.absoluteFilePath();
                         foundExe = true;
                         break;
@@ -490,7 +491,8 @@ void VersionDialog::AddCustomExecutable(const QString& filePath) {
                         break;
                     }
 #elif defined(Q_OS_LINUX)
-                    if (fi.isFile() && fi.isExecutable() && !fi.fileName().contains('.')) {
+                    if (fi.isFile() && (fi.fileName().endsWith(".AppImage", Qt::CaseInsensitive) ||
+                                        !fi.fileName().contains('.'))) {
                         versionExePath = fi.absoluteFilePath();
                         foundExe = true;
                         break;
@@ -890,8 +892,10 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                 break;
                             }
 #elif defined(Q_OS_LINUX)
-                                if (fi.isFile() && fi.isExecutable() &&
-                                    !fi.fileName().contains('.')) {
+                                // There is probably a better way, but this is good for now
+                                if (fi.isFile() &&
+                                    (fi.fileName().endsWith(".AppImage", Qt::CaseInsensitive) ||
+                                     !fi.fileName().contains('.'))) {
                                     versionExePath = fi.absoluteFilePath();
                                     break;
                                 }
@@ -908,6 +912,13 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                                  tr("Executable not found in extracted files."));
                             return;
                         }
+
+#ifdef Q_OS_LINUX
+                        QFile(versionExePath)
+                            .setPermissions(QFile::ReadOwner | QFile::WriteOwner | QFile::ExeOwner |
+                                            QFile::ReadGroup | QFile::ExeGroup | QFile::ReadOther |
+                                            QFile::ExeOther);
+#endif
 
                         // Copy to application directory
                         bool copySuccess = false;

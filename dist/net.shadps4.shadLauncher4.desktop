@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=shadLauncher4
+GenericName=PS4 Game Launcher
+Comment=Game launcher for the shadPS4 PlayStation 4 emulator
+Icon=shadLauncher4
+Exec=shadLauncher4
+Terminal=false
+Categories=Game;Emulator;
+Keywords=PS4;PlayStation;emulator;shadPS4;launcher;

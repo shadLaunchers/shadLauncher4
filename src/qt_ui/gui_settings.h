@@ -127,7 +127,7 @@ const GUISave meta_enableUIColors = GUISave(meta, "enableUIColors", false);
 #ifdef __APPLE__
 const GUISave meta_currentStylesheet = GUISave(meta, "currentStylesheet", "native (macOS)");
 #else
-const GUISave meta_currentStylesheet = GUISave(meta, "currentStylesheet", "DefaultStylesheet");
+const GUISave meta_currentStylesheet = GUISave(meta, "currentStylesheet", DefaultStylesheet);
 #endif
 
 // localization settings

@@ -35,7 +35,8 @@ path = [
     "src/qt_ui/game_install_dialog.ui",
     "src/qt_ui/cheats_patches_dialog.ui",
     "dist/themes/*.*",
-    "dist/themes/icons/*.*"
+    "dist/themes/icons/*.*",
+    "dist/net.shadps4.shadLauncher4.desktop"
 ]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "shadLauncher4 Project"
