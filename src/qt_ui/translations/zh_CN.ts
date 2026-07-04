@@ -1837,11 +1837,11 @@ Using local database.
     </message>
     <message>
       <source>note: click Help Button/Special Keybindings for more information</source>
-      <translation type="unfinished">note: click Help Button/Special Keybindings for more information</translation>
+      <translation>注意：点击帮助按钮 -> 获取更多关于映射特殊键位的信息</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>功能键（动作键）</translation>
     </message>
     <message>
       <source>Triangle</source>
