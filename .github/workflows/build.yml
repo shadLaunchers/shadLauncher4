@@ -100,7 +100,7 @@ jobs:
           echo "APP_VERSION=$version" >> $env:GITHUB_ENV
 
       - name: Cache CMake Configuration
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         env:
           cache-name: ${{ runner.os }}-qt-ninja-cache-cmake-configuration
         with:
@@ -110,7 +110,7 @@ jobs:
             ${{ env.cache-name }}-
 
       - name: Cache CMake Build
-        uses: hendrikmuhs/ccache-action@v1.2.19
+        uses: hendrikmuhs/ccache-action@v1.2.23
         env:
           cache-name: ${{ runner.os }}-qt-cache-cmake-build
         with:
@@ -148,7 +148,7 @@ jobs:
           Compress-Archive -Path upload/* -DestinationPath shadLauncher4-win64-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}.zip
 
       - name: Upload Windows Qt artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: shadLauncher4-win64-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
           path: shadLauncher4-win64-qt-*.zip
@@ -184,7 +184,7 @@ jobs:
           cache: true
 
       - name: Cache CMake Configuration
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         env:
           cache-name: ${{ runner.os }}-qt-cache-cmake-configuration
         with:
@@ -195,7 +195,7 @@ jobs:
             ${{ env.cache-name }}- 
 
       - name: Cache CMake Build
-        uses: hendrikmuhs/ccache-action@v1.2.19
+        uses: hendrikmuhs/ccache-action@v1.2.23
         env:
           cache-name: ${{ runner.os }}-qt-cache-cmake-build
         with:
@@ -214,7 +214,7 @@ jobs:
       - name: Package and Upload Linux Qt artifact
         run: |
           tar cf shadLauncher4-linux-qt.tar.gz -C ${{github.workspace}}/build shadLauncher4
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: shadLauncher4-linux-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
           path: shadLauncher4.AppImage
