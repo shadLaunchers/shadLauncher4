@@ -334,30 +334,20 @@ cmrc_add_resource_library(embedded-resources
         src/images/gold.png
         src/images/platinum.png
         src/images/silver.png)
-target_link_libraries(shadLauncher4 PRIVATE res::embedded)
 
+target_link_libraries(shadLauncher4 PRIVATE res::embedded)
 target_link_libraries(shadLauncher4 PRIVATE Vulkan::Headers fmt::fmt SDL3::SDL3 volk_headers spdlog::spdlog)
 target_link_libraries(shadLauncher4 PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Svg Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL)
-
-if (NOT WIN32)
-    target_link_libraries(shadLauncher4 PRIVATE atomic)
-endif()
-
-if (NOT WIN32)
-    target_link_libraries(shadLauncher4 PRIVATE OpenSSL::Crypto)
-endif()
 
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
 endif()
 
-if (WIN32)
-    target_sources(shadLauncher4 PRIVATE src/shadLauncher4.rc)
-endif()
 target_sources(shadLauncher4 PRIVATE ${RESOURCE_FILES})
 
 if (WIN32)
-    target_link_libraries(shadLauncher4 PRIVATE mincore bcrypt)
+    target_sources(shadLauncher4 PRIVATE src/shadLauncher4.rc)
+    target_link_libraries(shadLauncher4 PRIVATE mincore bcrypt ntdll sdl3 vulkaninfowin)
     if (MSVC)
         # MSVC likes putting opinions on what people can use, disable:
         add_definitions(-D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_SCL_SECURE_NO_WARNINGS)
@@ -376,6 +366,8 @@ if (WIN32)
     if (MSVC)
         target_link_libraries(shadLauncher4 PRIVATE clang_rt.builtins-x86_64.lib)
     endif()
+else ()
+    target_link_libraries(shadLauncher4 PRIVATE OpenSSL::Crypto atomic)
 endif()
 
 set_target_properties(shadLauncher4 PROPERTIES
