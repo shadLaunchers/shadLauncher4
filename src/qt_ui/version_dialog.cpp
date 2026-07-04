@@ -424,9 +424,8 @@ void VersionDialog::AddCustomExecutable(const QString& filePath) {
                         break;
                     }
 #elif defined(Q_OS_LINUX)
-                    if (fi.isFile() &&
-                        (fi.fileName().endsWith(".AppImage", Qt::CaseInsensitive) ||
-                         !fi.fileName().contains('.'))) {
+                    if (fi.isFile() && (fi.fileName().endsWith(".AppImage", Qt::CaseInsensitive) ||
+                                        !fi.fileName().contains('.'))) {
                         versionExePath = fi.absoluteFilePath();
                         foundExe = true;
                         break;
@@ -492,9 +491,8 @@ void VersionDialog::AddCustomExecutable(const QString& filePath) {
                         break;
                     }
 #elif defined(Q_OS_LINUX)
-                    if (fi.isFile() &&
-                        (fi.fileName().endsWith(".AppImage", Qt::CaseInsensitive) ||
-                         !fi.fileName().contains('.'))) {
+                    if (fi.isFile() && (fi.fileName().endsWith(".AppImage", Qt::CaseInsensitive) ||
+                                        !fi.fileName().contains('.'))) {
                         versionExePath = fi.absoluteFilePath();
                         foundExe = true;
                         break;
