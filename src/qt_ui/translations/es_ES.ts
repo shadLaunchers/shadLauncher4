@@ -3619,15 +3619,15 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Use Mice as Mice</source>
-      <translation type="unfinished">Use Mice as Mice</translation>
+      <translation>Utilizar ratones como tales</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>Servidor WebAPI</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>Información de señalización</translation>
     </message>
   </context>
   <context>

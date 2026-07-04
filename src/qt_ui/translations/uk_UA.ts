@@ -3627,15 +3627,15 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Use Mice as Mice</source>
-      <translation type="unfinished">Use Mice as Mice</translation>
+      <translation>Використовувати миші як миші</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>Сервер WebAPI</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>Інформація про сигнал</translation>
     </message>
   </context>
   <context>

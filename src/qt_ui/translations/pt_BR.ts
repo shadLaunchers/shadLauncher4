@@ -2789,7 +2789,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Match has no host.</source>
-      <translation>A partida não tem host.</translation>
+      <translation>O correspondente não possui host.</translation>
     </message>
     <message>
       <source>Match port must be a number between 1 and 65535.</source>
@@ -3619,15 +3619,15 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Use Mice as Mice</source>
-      <translation type="unfinished">Use Mice as Mice</translation>
+      <translation>Usar Mouse como Mouse</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>Servidor WebAPI</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>Informações de Sinalização</translation>
     </message>
   </context>
   <context>
