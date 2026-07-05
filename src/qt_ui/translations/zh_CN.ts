@@ -549,7 +549,7 @@
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation>右侧触摸板</translation>
+      <translation>触摸板右侧</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
