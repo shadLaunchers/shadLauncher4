@@ -2049,107 +2049,107 @@ Using local database.
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>帮助</translation>
     </message>
     <message>
       <source>Language</source>
-      <translation type="unfinished">Language</translation>
+      <translation>语言</translation>
     </message>
     <message>
       <source>Show tool bar</source>
-      <translation type="unfinished">Show tool bar</translation>
+      <translation>显示工具栏</translation>
     </message>
     <message>
       <source>Pause</source>
-      <translation type="unfinished">Pause</translation>
+      <translation>暂停</translation>
     </message>
     <message>
       <source>Start emulation</source>
-      <translation type="unfinished">Start emulation</translation>
+      <translation>开始模拟</translation>
     </message>
     <message>
       <source>Stop</source>
-      <translation type="unfinished">Stop</translation>
+      <translation>停止</translation>
     </message>
     <message>
       <source>Stop emulation</source>
-      <translation type="unfinished">Stop emulation</translation>
+      <translation>停止模拟</translation>
     </message>
     <message>
       <source>GUI</source>
-      <translation type="unfinished">GUI</translation>
+      <translation>图形界面</translation>
     </message>
     <message>
       <source>Configure GUI settings</source>
-      <translation type="unfinished">Configure GUI settings</translation>
+      <translation>配置图形界面设置</translation>
     </message>
     <message>
       <source>Exit</source>
-      <translation type="unfinished">Exit</translation>
+      <translation>退出</translation>
     </message>
     <message>
       <source>Exit the application.</source>
-      <translation type="unfinished">Exit the application.</translation>
+      <translation>退出应用程序。</translation>
     </message>
     <message>
       <source>User Accounts</source>
-      <translation type="unfinished">User Accounts</translation>
+      <translation>帐户</translation>
     </message>
     <message>
       <source>Manage user accounts</source>
-      <translation type="unfinished">Manage user accounts</translation>
+      <translation>管理账户</translation>
     </message>
     <message>
       <source>Show Game List</source>
-      <translation type="unfinished">Show Game List</translation>
+      <translation>显示游戏列表</translation>
     </message>
     <message>
       <source>Show Tool Bar</source>
-      <translation type="unfinished">Show Tool Bar</translation>
+      <translation>显示工具栏</translation>
     </message>
     <message>
       <source>Show Game Compatibility in Grid Mode</source>
-      <translation type="unfinished">Show Game Compatibility in Grid Mode</translation>
+      <translation>在表格视图中显示游戏兼容性</translation>
     </message>
     <message>
       <source>Game List Refresh</source>
-      <translation type="unfinished">Game List Refresh</translation>
+      <translation>刷新游戏列表</translation>
     </message>
     <message>
       <source>Tiny</source>
-      <translation type="unfinished">Tiny</translation>
+      <translation>微小</translation>
     </message>
     <message>
       <source>Small</source>
-      <translation type="unfinished">Small</translation>
+      <translation>小</translation>
     </message>
     <message>
       <source>Medium</source>
-      <translation type="unfinished">Medium</translation>
+      <translation>中</translation>
     </message>
     <message>
       <source>Large</source>
-      <translation type="unfinished">Large</translation>
+      <translation>大</translation>
     </message>
     <message>
       <source>List View</source>
-      <translation type="unfinished">List View</translation>
+      <translation>列表视图</translation>
     </message>
     <message>
       <source>Grid View</source>
-      <translation type="unfinished">Grid View</translation>
+      <translation>表格视图</translation>
     </message>
     <message>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>重新启动</translation>
     </message>
     <message>
       <source>Start</source>
-      <translation type="unfinished">Start</translation>
+      <translation>启动</translation>
     </message>
     <message>
       <source>Settings</source>
-      <translation type="unfinished">Settings</translation>
+      <translation>设置</translation>
     </message>
     <message>
       <source>Configure the emulator</source>
@@ -2181,35 +2181,35 @@ Using local database.
     </message>
     <message>
       <source>Grid</source>
-      <translation type="unfinished">Grid</translation>
+      <translation>表格</translation>
     </message>
     <message>
       <source>Switch to grid mode</source>
-      <translation type="unfinished">Switch to grid mode</translation>
+      <translation>切换表格模式</translation>
     </message>
     <message>
       <source>Refresh</source>
-      <translation type="unfinished">Refresh</translation>
+      <translation>刷新</translation>
     </message>
     <message>
       <source>Refresh gamelist</source>
-      <translation type="unfinished">Refresh gamelist</translation>
+      <translation>刷新游戏列表</translation>
     </message>
     <message>
       <source>Show Hidden Entries</source>
-      <translation type="unfinished">Show Hidden Entries</translation>
+      <translation>显示隐藏项目</translation>
     </message>
     <message>
       <source>Show Title Bars</source>
-      <translation type="unfinished">Show Title Bars</translation>
+      <translation>显示标题栏</translation>
     </message>
     <message>
       <source>English</source>
-      <translation type="unfinished">English</translation>
+      <translation>英语</translation>
     </message>
     <message>
       <source>Show Custom Icons</source>
-      <translation type="unfinished">Show Custom Icons</translation>
+      <translation>显示自定义图标</translation>
     </message>
     <message>
       <source>Play Hover Gifs</source>
@@ -2221,7 +2221,7 @@ Using local database.
     </message>
     <message>
       <source>shadLauncher4</source>
-      <translation type="unfinished">shadLauncher4</translation>
+      <translation>shadLauncher4</translation>
     </message>
     <message>
       <source>Exit shadLauncher4</source>
@@ -2429,11 +2429,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Resume</source>
-      <translation type="unfinished">Resume</translation>
+      <translation>继续游戏</translation>
     </message>
     <message>
       <source>Resume emulation</source>
-      <translation type="unfinished">Resume emulation</translation>
+      <translation>继续模拟</translation>
     </message>
     <message>
       <source>No running game to stop</source>
@@ -2445,23 +2445,23 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>显示游戏日志</translation>
     </message>
     <message>
       <source>Keyboard</source>
-      <translation type="unfinished">Keyboard</translation>
+      <translation>键盘</translation>
     </message>
     <message>
       <source>Configure Keyboard and Mouse</source>
-      <translation type="unfinished">Configure Keyboard and Mouse</translation>
+      <translation>配置键盘和鼠标</translation>
     </message>
     <message>
       <source>Configure Hotkeys</source>
-      <translation type="unfinished">Configure Hotkeys</translation>
+      <translation>配置热键</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>运行模拟器</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
@@ -2481,26 +2481,26 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Redirect game network traffic to another server</source>
-      <translation type="unfinished">Redirect game network traffic to another server</translation>
+      <translation>将游戏网络重定向至另一服务器</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>音频</translation>
     </message>
   </context>
   <context>
     <name>NpBindDialog</name>
     <message>
       <source>npbind.dat Viewer</source>
-      <translation type="unfinished">npbind.dat Viewer</translation>
+      <translation>npbind.dat 查看器</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>错误</translation>
     </message>
     <message>
       <source>Failed to parse npbind.dat</source>
-      <translation type="unfinished">Failed to parse npbind.dat</translation>
+      <translation>解析 npbind.dat 失败</translation>
     </message>
     <message>
       <source>Entry Type:</source>
@@ -2516,7 +2516,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Trophy ID:</source>
-      <translation type="unfinished">Trophy ID:</translation>
+      <translation>奖杯ID：</translation>
     </message>
     <message>
       <source>Hex Data:</source>
@@ -2564,7 +2564,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>JSON exported successfully.</source>
-      <translation type="unfinished">JSON exported successfully.</translation>
+      <translation>JSON 导出成功。</translation>
     </message>
   </context>
   <context>
@@ -2685,7 +2685,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>错误</translation>
     </message>
     <message>
       <source>Failed to create file:
@@ -2695,54 +2695,54 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Game List Exported</source>
-      <translation type="unfinished">Game List Exported</translation>
+      <translation>已导出游戏列表</translation>
     </message>
     <message>
       <source>Game list successfully exported to:
 %1</source>
-      <translation type="unfinished">Game list successfully exported to:
+      <translation>游戏列表成功导出至:
 %1</translation>
     </message>
     <message>
       <source>Exporting Game List</source>
-      <translation type="unfinished">Exporting Game List</translation>
+      <translation>导出游戏列表</translation>
     </message>
     <message>
       <source>Exporting games to CSV...</source>
-      <translation type="unfinished">Exporting games to CSV...</translation>
+      <translation>正在将游戏导出到CSV……</translation>
     </message>
     <message>
       <source>Key</source>
-      <translation type="unfinished">Key</translation>
+      <translation>键</translation>
     </message>
     <message>
       <source>Value</source>
-      <translation type="unfinished">Value</translation>
+      <translation>值</translation>
     </message>
     <message>
       <source>Type</source>
-      <translation type="unfinished">Type</translation>
+      <translation>类型</translation>
     </message>
     <message>
       <source>Version Activated</source>
-      <translation type="unfinished">Version Activated</translation>
+      <translation>版本已激活</translation>
     </message>
     <message>
       <source>The selected version is now active.</source>
-      <translation type="unfinished">The selected version is now active.</translation>
+      <translation>选定的版本已激活。</translation>
     </message>
     <message>
       <source>Copy Failed</source>
-      <translation type="unfinished">Copy Failed</translation>
+      <translation>复制失败</translation>
     </message>
     <message>
       <source>Unable to activate selected version.</source>
-      <translation type="unfinished">Unable to activate selected version.</translation>
+      <translation>无法激活选定版本。</translation>
     </message>
     <message>
       <source>Executable does not exist:
 %1</source>
-      <translation type="unfinished">Executable does not exist:
+      <translation>可执行文件不存在：
 %1</translation>
     </message>
     <message>
@@ -2751,11 +2751,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>unknown</source>
-      <translation type="unfinished">unknown</translation>
+      <translation>未知</translation>
     </message>
     <message>
       <source>Redirect target is empty.</source>
-      <translation type="unfinished">Redirect target is empty.</translation>
+      <translation>重定向目标为空。</translation>
     </message>
     <message>
       <source>Target scheme must be http or https.</source>
@@ -2802,7 +2802,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>打开文件夹</translation>
     </message>
     <message>
       <source>Copy Value</source>
@@ -2818,7 +2818,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Version: -</source>
-      <translation type="unfinished">Version: -</translation>
+      <translation>版本: -</translation>
     </message>
     <message>
       <source>Localized Titles</source>
@@ -2867,35 +2867,35 @@ Select an emulator version from the right panel.</source>
     <name>SettingsDialog</name>
     <message>
       <source>Settings</source>
-      <translation type="unfinished">Settings</translation>
+      <translation>设置</translation>
     </message>
     <message>
       <source>General</source>
-      <translation type="unfinished">General</translation>
+      <translation>常规</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation type="unfinished">Audio Device (general)</translation>
+      <translation>音频设备(常规)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation type="unfinished">Audio Device (DS4 speaker)</translation>
+      <translation>音频设备 (DS4 扬声器)</translation>
     </message>
     <message>
       <source>Volume</source>
-      <translation type="unfinished">Volume</translation>
+      <translation>音量</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
-      <translation type="unfinished">Miscellaneous</translation>
+      <translation>其他</translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
-      <translation type="unfinished">Show Splash Screen When Launching Game</translation>
+      <translation>启动游戏时显示启动画面</translation>
     </message>
     <message>
       <source>GUI</source>
-      <translation type="unfinished">GUI</translation>
+      <translation>图形界面</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence</source>
@@ -2919,7 +2919,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Play title music</source>
-      <translation type="unfinished">Play title music</translation>
+      <translation>播放标题音乐</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
@@ -2939,7 +2939,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>图形界面更新</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2975,7 +2975,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Display Mode</source>
-      <translation type="unfinished">Display Mode</translation>
+      <translation>显示模式</translation>
     </message>
     <message>
       <source>Windowed</source>
@@ -3481,7 +3481,8 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>GUI-only settings cannot be overridden per-game. Use global settings to change them.</source>
-      <translation type="unfinished">GUI-only settings cannot be overridden per-game. Use global settings to change them.</translation>
+      <translation>图形界面设置无法覆盖单个游戏。
+请在全局设置中更改它们。</translation>
     </message>
     <message>
       <source>Path settings cannot be overridden per-game. Use global settings to change them.</source>
@@ -3754,15 +3755,15 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;关闭</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>错误</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>无法添加更多用户。</translation>
     </message>
     <message>
       <source>Create New User</source>
