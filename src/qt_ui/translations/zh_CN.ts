@@ -2153,31 +2153,31 @@ Using local database.
     </message>
     <message>
       <source>Configure the emulator</source>
-      <translation type="unfinished">Configure the emulator</translation>
+      <translation>模拟器设置</translation>
     </message>
     <message>
       <source>Controllers</source>
-      <translation type="unfinished">Controllers</translation>
+      <translation>控制器</translation>
     </message>
     <message>
       <source>Configure controls</source>
-      <translation type="unfinished">Configure controls</translation>
+      <translation>控制器设置</translation>
     </message>
     <message>
       <source>Full Screen</source>
-      <translation type="unfinished">Full Screen</translation>
+      <translation>全屏</translation>
     </message>
     <message>
       <source>Toggle fullscreen</source>
-      <translation type="unfinished">Toggle fullscreen</translation>
+      <translation>全屏显示切换</translation>
     </message>
     <message>
       <source>List</source>
-      <translation type="unfinished">List</translation>
+      <translation>列表</translation>
     </message>
     <message>
       <source>Switch to list mode</source>
-      <translation type="unfinished">Switch to list mode</translation>
+      <translation>切换列表模式</translation>
     </message>
     <message>
       <source>Grid</source>
@@ -2465,19 +2465,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>模拟器已在运行！</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>提供了无效的游戏参数</translation>
     </message>
     <message>
       <source>Check for Updates</source>
-      <translation type="unfinished">Check for Updates</translation>
+      <translation>检查更新</translation>
     </message>
     <message>
       <source>Network Host Overrides</source>
-      <translation type="unfinished">Network Host Overrides</translation>
+      <translation>网络主机覆盖</translation>
     </message>
     <message>
       <source>Redirect game network traffic to another server</source>
@@ -3279,23 +3279,23 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</source>
-      <translation type="unfinished">WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</translation>
+      <translation>警告：这些功能是实验性的，除非您被告知或者游戏需要的话，否则不应启用。 如果您有任何疑问，请在 shadPS4 Discord 服务器上提问。</translation>
     </message>
     <message>
       <source>Point your mouse at an option to display its description.</source>
-      <translation type="unfinished">Point your mouse at an option to display its description.</translation>
+      <translation>将鼠标指针指向选项以显示其描述。</translation>
     </message>
     <message>
       <source>Directory to install games</source>
-      <translation type="unfinished">Directory to install games</translation>
+      <translation>要安装游戏的目录</translation>
     </message>
     <message>
       <source>Invalid Path</source>
-      <translation type="unfinished">Invalid Path</translation>
+      <translation>无效路径</translation>
     </message>
     <message>
       <source>Selected folder does not exist.</source>
-      <translation type="unfinished">Selected folder does not exist.</translation>
+      <translation>所选文件夹不存在。</translation>
     </message>
     <message>
       <source>Duplicate Path</source>
@@ -3307,7 +3307,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>打开文件夹</translation>
     </message>
     <message>
       <source>Disable</source>
@@ -3339,7 +3339,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>恢复默认</translation>
     </message>
     <message>
       <source>Are you sure you want to restore all settings to their default values?</source>
