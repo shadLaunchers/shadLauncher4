@@ -2045,7 +2045,7 @@ Using local database.
     </message>
     <message>
       <source>Game List Mode</source>
-      <translation type="unfinished">Game List Mode</translation>
+      <translation>游戏排列模式</translation>
     </message>
     <message>
       <source>Help</source>
@@ -2528,23 +2528,23 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Trophy</source>
-      <translation type="unfinished">Trophy</translation>
+      <translation>奖杯</translation>
     </message>
     <message>
       <source>Unknown 1</source>
-      <translation type="unfinished">Unknown 1</translation>
+      <translation>未知1</translation>
     </message>
     <message>
       <source>Unknown 2</source>
-      <translation type="unfinished">Unknown 2</translation>
+      <translation>未知2</translation>
     </message>
     <message>
       <source>Show regions:</source>
-      <translation type="unfinished">Show regions:</translation>
+      <translation>显示区域：</translation>
     </message>
     <message>
       <source>Export JSON</source>
-      <translation type="unfinished">Export JSON</translation>
+      <translation>导出JSON</translation>
     </message>
     <message>
       <source>Body #%1</source>
@@ -2552,15 +2552,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>JSON Files (*.json)</source>
-      <translation type="unfinished">JSON Files (*.json)</translation>
+      <translation>JSON 文件(*.json)</translation>
     </message>
     <message>
       <source>Cannot write file</source>
-      <translation type="unfinished">Cannot write file</translation>
+      <translation>无法写入文件</translation>
     </message>
     <message>
       <source>Done</source>
-      <translation type="unfinished">Done</translation>
+      <translation>已完成</translation>
     </message>
     <message>
       <source>JSON exported successfully.</source>
@@ -2571,15 +2571,15 @@ Select an emulator version from the right panel.</source>
     <name>PkgInstallDirSelectDialog</name>
     <message>
       <source>shadLauncher4 - Install PKG Files</source>
-      <translation type="unfinished">shadLauncher4 - Install PKG Files</translation>
+      <translation>shadLauncher4——安装PKG文件</translation>
     </message>
     <message>
       <source>Select PKG files to install</source>
-      <translation type="unfinished">Select PKG files to install</translation>
+      <translation>选择要安装的 PKG 文件</translation>
     </message>
     <message>
       <source>Select All</source>
-      <translation type="unfinished">Select All</translation>
+      <translation>选择全部</translation>
     </message>
     <message>
       <source>Select None</source>
@@ -2591,19 +2591,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Installation Directory</source>
-      <translation type="unfinished">Installation Directory</translation>
+      <translation>安装目录</translation>
     </message>
     <message>
       <source>Browse...</source>
-      <translation type="unfinished">Browse...</translation>
+      <translation>浏览……</translation>
     </message>
     <message>
       <source>Delete PKG files after successful installation</source>
-      <translation type="unfinished">Delete PKG files after successful installation</translation>
+      <translation>安装成功后删除PKG文件</translation>
     </message>
     <message>
       <source>Select Directory</source>
-      <translation type="unfinished">Select Directory</translation>
+      <translation>选择目录</translation>
     </message>
     <message>
       <source>Install Selected</source>
@@ -2615,22 +2615,22 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Please select at least one game to install.</source>
-      <translation type="unfinished">Please select at least one game to install.</translation>
+      <translation>请选择至少一款要安装的游戏。</translation>
     </message>
     <message>
       <source>No Directory</source>
-      <translation type="unfinished">No Directory</translation>
+      <translation>无目录</translation>
     </message>
     <message>
       <source>Please select an installation directory.</source>
-      <translation type="unfinished">Please select an installation directory.</translation>
+      <translation>请选择一个安装目录。</translation>
     </message>
   </context>
   <context>
     <name>PkgInstallModel</name>
     <message>
       <source>Install</source>
-      <translation type="unfinished">Install</translation>
+      <translation>安装</translation>
     </message>
     <message>
       <source>Title ID</source>
@@ -2673,11 +2673,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>导出</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>取消</translation>
     </message>
     <message>
       <source>Save Game List As</source>
@@ -2763,7 +2763,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Redirect target has no host.</source>
-      <translation type="unfinished">Redirect target has no host.</translation>
+      <translation>重定向目标没有主机地址。</translation>
     </message>
     <message>
       <source>Port must be a number between 1 and 65535.</source>
@@ -2798,7 +2798,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>导出</translation>
     </message>
     <message>
       <source>Open Folder</source>
@@ -2856,7 +2856,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>No Icon</source>
-      <translation type="unfinished">No Icon</translation>
+      <translation>没有图标</translation>
     </message>
     <message>
       <source>JSON (*.json);;CSV (*.csv);;HTML (*.html)</source>
@@ -2903,19 +2903,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Background Image</source>
-      <translation type="unfinished">Background Image</translation>
+      <translation>背景图片</translation>
     </message>
     <message>
       <source>Show Background Image</source>
-      <translation type="unfinished">Show Background Image</translation>
+      <translation>显示背景图片</translation>
     </message>
     <message>
       <source>Opacity</source>
-      <translation type="unfinished">Opacity</translation>
+      <translation>可见度</translation>
     </message>
     <message>
       <source>Title Music</source>
-      <translation type="unfinished">Title Music</translation>
+      <translation>标题音乐</translation>
     </message>
     <message>
       <source>Play title music</source>
@@ -2923,19 +2923,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
-      <translation type="unfinished">Set the volume of the background music.</translation>
+      <translation>设置背景音乐的音量。</translation>
     </message>
     <message>
       <source>Game Compatibility</source>
-      <translation type="unfinished">Game Compatibility</translation>
+      <translation>游戏兼容性</translation>
     </message>
     <message>
       <source>Update Compatibility Database On Startup</source>
-      <translation type="unfinished">Update Compatibility Database On Startup</translation>
+      <translation>启动时更新兼容性数据库</translation>
     </message>
     <message>
       <source>Update Compatibility Database</source>
-      <translation type="unfinished">Update Compatibility Database</translation>
+      <translation>更新兼容性数据库</translation>
     </message>
     <message>
       <source>GUI Updates</source>
@@ -2943,35 +2943,35 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation type="unfinished">Check for Updates at Startup</translation>
+      <translation>启动时检查更新</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>始终显示变更日志</translation>
     </message>
     <message>
       <source>Check for Updates</source>
-      <translation type="unfinished">Check for Updates</translation>
+      <translation>检查更新</translation>
     </message>
     <message>
       <source>Directory Scan Depth</source>
-      <translation type="unfinished">Directory Scan Depth</translation>
+      <translation>根目录扫描深度</translation>
     </message>
     <message>
       <source>Graphics</source>
-      <translation type="unfinished">Graphics</translation>
+      <translation>图像</translation>
     </message>
     <message>
       <source>Graphics Device</source>
-      <translation type="unfinished">Graphics Device</translation>
+      <translation>图形设备</translation>
     </message>
     <message>
       <source>Enable NULL GPU</source>
-      <translation type="unfinished">Enable NULL GPU</translation>
+      <translation>启用空GPU</translation>
     </message>
     <message>
       <source>Video</source>
-      <translation type="unfinished">Video</translation>
+      <translation>显示</translation>
     </message>
     <message>
       <source>Display Mode</source>
@@ -2979,139 +2979,139 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Windowed</source>
-      <translation type="unfinished">Windowed</translation>
+      <translation>窗口</translation>
     </message>
     <message>
       <source>Fullscreen</source>
-      <translation type="unfinished">Fullscreen</translation>
+      <translation>全屏</translation>
     </message>
     <message>
       <source>Fullscreen (Borderless)</source>
-      <translation type="unfinished">Fullscreen (Borderless)</translation>
+      <translation>无边框全屏</translation>
     </message>
     <message>
       <source>Present Mode</source>
-      <translation type="unfinished">Present Mode</translation>
+      <translation>呈现模式</translation>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
-      <translation type="unfinished">Mailbox (Vsync)</translation>
+      <translation>邮箱（垂直同步）</translation>
     </message>
     <message>
       <source>Fifo (Vsync)</source>
-      <translation type="unfinished">Fifo (Vsync)</translation>
+      <translation>先进先出（垂直同步）</translation>
     </message>
     <message>
       <source>Immediate (No Vsync)</source>
-      <translation type="unfinished">Immediate (No Vsync)</translation>
+      <translation>即时（关闭垂直同步）</translation>
     </message>
     <message>
       <source>Window Size</source>
-      <translation type="unfinished">Window Size</translation>
+      <translation>窗口大小</translation>
     </message>
     <message>
       <source>W:</source>
-      <translation type="unfinished">W:</translation>
+      <translation>宽：</translation>
     </message>
     <message>
       <source>H:</source>
-      <translation type="unfinished">H:</translation>
+      <translation>高：</translation>
     </message>
     <message>
       <source>Enable HDR</source>
-      <translation type="unfinished">Enable HDR</translation>
+      <translation>启用 HDR</translation>
     </message>
     <message>
       <source>FSR Settings</source>
-      <translation type="unfinished">FSR Settings</translation>
+      <translation>FSR设置</translation>
     </message>
     <message>
       <source>Enable FSR</source>
-      <translation type="unfinished">Enable FSR</translation>
+      <translation>启用 FSR</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation type="unfinished">Enable RCAS (sharpening)</translation>
+      <translation>启用 RCAS(锐化)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
-      <translation type="unfinished">RCAS Attenuation:</translation>
+      <translation>RCAS范围：</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation type="unfinished">Trophy</translation>
+      <translation>奖杯</translation>
     </message>
     <message>
       <source>Disable Trophy Notification</source>
-      <translation type="unfinished">Disable Trophy Notification</translation>
+      <translation>禁用奖杯通知</translation>
     </message>
     <message>
       <source>Trophy Notification Position</source>
-      <translation type="unfinished">Trophy Notification Position</translation>
+      <translation>奖杯通知位置</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>左</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>右</translation>
     </message>
     <message>
       <source>Top</source>
-      <translation type="unfinished">Top</translation>
+      <translation>顶部</translation>
     </message>
     <message>
       <source>Bottom</source>
-      <translation type="unfinished">Bottom</translation>
+      <translation>底部</translation>
     </message>
     <message>
       <source>Notification Duration</source>
-      <translation type="unfinished">Notification Duration</translation>
+      <translation>通知显示持续时间</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder</source>
-      <translation type="unfinished">Open the custom trophy images/sounds folder</translation>
+      <translation>打开自定义奖杯图像/声音文件夹</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>输入</translation>
     </message>
     <message>
       <source>Cursor</source>
-      <translation type="unfinished">Cursor</translation>
+      <translation>光标</translation>
     </message>
     <message>
       <source>Hide Cursor</source>
-      <translation type="unfinished">Hide Cursor</translation>
+      <translation>隐藏光标</translation>
     </message>
     <message>
       <source>Hide Cursor Idle Timeout</source>
-      <translation type="unfinished">Hide Cursor Idle Timeout</translation>
+      <translation>光标隐藏闲置时长</translation>
     </message>
     <message>
       <source>s</source>
-      <translation type="unfinished">s</translation>
+      <translation>秒</translation>
     </message>
     <message>
       <source>Controller</source>
-      <translation type="unfinished">Controller</translation>
+      <translation>手柄</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
-      <translation type="unfinished">Enable Motion Controls</translation>
+      <translation>启用体感控制</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
-      <translation type="unfinished">Enable Background Controller Input</translation>
+      <translation>启用后台控制器输入</translation>
     </message>
     <message>
       <source>Microphone</source>
-      <translation type="unfinished">Microphone</translation>
+      <translation>麦克风</translation>
     </message>
     <message>
       <source>USB Device</source>
-      <translation type="unfinished">USB Device</translation>
+      <translation>USB 设备</translation>
     </message>
     <message>
       <source>Paths</source>
@@ -3351,67 +3351,67 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>应用</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>关闭</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>音频</translation>
     </message>
     <message>
       <source>Frontend Settings</source>
-      <translation type="unfinished">Frontend Settings</translation>
+      <translation>前端设置</translation>
     </message>
     <message>
       <source>Default Device</source>
-      <translation type="unfinished">Default Device</translation>
+      <translation>默认设备</translation>
     </message>
     <message>
       <source>PKG Installer</source>
-      <translation type="unfinished">PKG Installer</translation>
+      <translation>PKG安装器</translation>
     </message>
     <message>
       <source>Use Separate Update Folder</source>
-      <translation type="unfinished">Use Separate Update Folder</translation>
+      <translation>使用单独的更新目录</translation>
     </message>
     <message>
       <source>Discord Rich Presence</source>
-      <translation type="unfinished">Discord Rich Presence</translation>
+      <translation>启用 Discord Rich Presence</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>着色器缓存</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>启用着色器缓存</translation>
     </message>
     <message>
       <source>Compress Shader Cache Files into Zip File</source>
-      <translation type="unfinished">Compress Shader Cache Files into Zip File</translation>
+      <translation>将着色器缓存文件压缩为ZIP文件</translation>
     </message>
     <message>
       <source>Idle</source>
-      <translation type="unfinished">Idle</translation>
+      <translation>闲置</translation>
     </message>
     <message>
       <source>Auto Select</source>
-      <translation type="unfinished">Auto Select</translation>
+      <translation>自动选择</translation>
     </message>
     <message>
       <source>Never</source>
-      <translation type="unfinished">Never</translation>
+      <translation>从不</translation>
     </message>
     <message>
       <source>Always</source>
-      <translation type="unfinished">Always</translation>
+      <translation>始终</translation>
     </message>
     <message>
       <source>Real USB Device</source>
-      <translation type="unfinished">Real USB Device</translation>
+      <translation>真实USB设备</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
@@ -3427,15 +3427,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>无</translation>
     </message>
     <message>
       <source>Show Simple FPS Counter</source>
-      <translation type="unfinished">Show Simple FPS Counter</translation>
+      <translation>显示基本FPS计数器</translation>
     </message>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Some settings are disabled because they cannot be overridden per-game. These require global settings changes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ Some settings are disabled because they cannot be overridden per-game. These require global settings changes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffa500;&quot;&gt;⚠ 有些设置被禁用是由于它们无法对单个游戏进行覆盖。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <source>Custom Settings for %1 [%2]</source>
@@ -3443,15 +3443,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Global Settings</source>
-      <translation type="unfinished">Global Settings</translation>
+      <translation>全局设置</translation>
     </message>
     <message>
       <source>Failed to save game settings.</source>
-      <translation type="unfinished">Failed to save game settings.</translation>
+      <translation>保存游戏设置失败。</translation>
     </message>
     <message>
       <source>Settings Applied</source>
-      <translation type="unfinished">Settings Applied</translation>
+      <translation>已应用设置</translation>
     </message>
     <message>
       <source>Game-specific settings have been saved.</source>
@@ -3477,7 +3477,8 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>This setting cannot be overridden per-game. Use global settings to change it.</source>
-      <translation type="unfinished">This setting cannot be overridden per-game. Use global settings to change it.</translation>
+      <translation>这一设置无法覆盖单个游戏。
+请在全局设置中更改它们。</translation>
     </message>
     <message>
       <source>GUI-only settings cannot be overridden per-game. Use global settings to change them.</source>
@@ -3486,59 +3487,60 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Path settings cannot be overridden per-game. Use global settings to change them.</source>
-      <translation type="unfinished">Path settings cannot be overridden per-game. Use global settings to change them.</translation>
+      <translation>路径设置无法覆盖单个游戏。
+请在全局设置中更改它们。</translation>
     </message>
     <message>
       <source>PS4 Fonts Path</source>
-      <translation type="unfinished">PS4 Fonts Path</translation>
+      <translation>PS4 字体路径</translation>
     </message>
     <message>
       <source>Select directory for System fonts</source>
-      <translation type="unfinished">Select directory for System fonts</translation>
+      <translation>选择系统字体目录</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
-      <translation type="unfinished">Readbacks Mode</translation>
+      <translation>回读模式</translation>
     </message>
     <message>
       <source>Disabled</source>
-      <translation type="unfinished">Disabled</translation>
+      <translation>禁用</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>宽松</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>精确</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>音频后端</translation>
     </message>
     <message>
       <source>Camera Device</source>
-      <translation type="unfinished">Camera Device</translation>
+      <translation>摄像机设备</translation>
     </message>
     <message>
       <source>Log Sync</source>
-      <translation type="unfinished">Log Sync</translation>
+      <translation>同步日志</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation type="unfinished">Log Skip Duplicate</translation>
+      <translation>日志跳过重复</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation type="unfinished">Log Max Skip Duration</translation>
+      <translation>日志最大跳过时长</translation>
     </message>
     <message>
       <source> ms</source>
-      <translation type="unfinished"> ms</translation>
+      <translation> 毫秒</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation type="unfinished">Log Size Limit</translation>
+      <translation>日志大小限制</translation>
     </message>
     <message>
       <source> B</source>
