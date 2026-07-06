@@ -104,7 +104,7 @@
     </message>
     <message>
       <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
-      <translation>您已从所选存储库中成功下载了该游戏版本的作弊码。您还可以尝试从其他存储库下载，或通过从列表中选择文件来使用它们。</translation>
+      <translation>您已从所选库中成功下载了该游戏版本的作弊码。您还可以尝试从其他库中下载，或通过从列表中选择相应文件来使用它们。</translation>
     </message>
     <message>
       <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</source>
@@ -541,7 +541,7 @@
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation>左侧触摸板</translation>
+      <translation>触摸板左侧</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
@@ -2033,7 +2033,7 @@ Using local database.
     </message>
     <message>
       <source>Utilities</source>
-      <translation>应用</translation>
+      <translation>工具</translation>
     </message>
     <message>
       <source>View</source>
@@ -2041,7 +2041,7 @@ Using local database.
     </message>
     <message>
       <source>Game List Icons</source>
-      <translation>游戏列表图标</translation>
+      <translation>游戏图标大小</translation>
     </message>
     <message>
       <source>Game List Mode</source>
