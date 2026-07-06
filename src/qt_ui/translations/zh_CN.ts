@@ -2634,26 +2634,26 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Title ID</source>
-      <translation type="unfinished">Title ID</translation>
+      <translation>标题ID</translation>
     </message>
     <message>
       <source>Game Name</source>
-      <translation type="unfinished">Game Name</translation>
+      <translation>游戏名称</translation>
     </message>
     <message>
       <source>App Version</source>
-      <translation type="unfinished">App Version</translation>
+      <translation>应用版本</translation>
     </message>
     <message>
       <source>Category</source>
-      <translation type="unfinished">Category</translation>
+      <translation>类别</translation>
     </message>
   </context>
   <context>
     <name>QObject</name>
     <message>
       <source>Export Game List</source>
-      <translation type="unfinished">Export Game List</translation>
+      <translation>导出游戏列表</translation>
     </message>
     <message>
       <source>Select export format:</source>
@@ -2661,15 +2661,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Sort by:</source>
-      <translation type="unfinished">Sort by:</translation>
+      <translation>排列方式：</translation>
     </message>
     <message>
       <source>Sort order:</source>
-      <translation type="unfinished">Sort order:</translation>
+      <translation>排列顺序：</translation>
     </message>
     <message>
       <source>Include compatibility info</source>
-      <translation type="unfinished">Include compatibility info</translation>
+      <translation>包含兼容性信息</translation>
     </message>
     <message>
       <source>Export</source>
@@ -2681,7 +2681,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Save Game List As</source>
-      <translation type="unfinished">Save Game List As</translation>
+      <translation>将游戏列表另存为</translation>
     </message>
     <message>
       <source>Error</source>
@@ -2690,7 +2690,7 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Failed to create file:
 %1</source>
-      <translation type="unfinished">Failed to create file:
+      <translation>未能创建文件：
 %1</translation>
     </message>
     <message>
@@ -2814,7 +2814,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Title ID: -</source>
-      <translation type="unfinished">Title ID: -</translation>
+      <translation>标题ID: -</translation>
     </message>
     <message>
       <source>Version: -</source>
@@ -3159,27 +3159,27 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Separate Log Files</source>
-      <translation type="unfinished">Separate Log Files</translation>
+      <translation>独立日志文件</translation>
     </message>
     <message>
       <source>Log Type</source>
-      <translation type="unfinished">Log Type</translation>
+      <translation>日志类型</translation>
     </message>
     <message>
       <source>Log Filter</source>
-      <translation type="unfinished">Log Filter</translation>
+      <translation>日志过滤</translation>
     </message>
     <message>
       <source>Load Presets...</source>
-      <translation type="unfinished">Load Presets...</translation>
+      <translation>加载预设……</translation>
     </message>
     <message>
       <source>Open Log Location</source>
-      <translation type="unfinished">Open Log Location</translation>
+      <translation>打开日志位置</translation>
     </message>
     <message>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>调试</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping</source>
@@ -3191,23 +3191,23 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable RenderDoc Debugging</source>
-      <translation type="unfinished">Enable RenderDoc Debugging</translation>
+      <translation>启用 RenderDoc 调试</translation>
     </message>
     <message>
       <source>Copy GPU Buffers</source>
-      <translation type="unfinished">Copy GPU Buffers</translation>
+      <translation>复制 GPU 缓冲区</translation>
     </message>
     <message>
       <source>Advanced</source>
-      <translation type="unfinished">Advanced</translation>
+      <translation>高级</translation>
     </message>
     <message>
       <source>Collect Shaders</source>
-      <translation type="unfinished">Collect Shaders</translation>
+      <translation>收集着色器</translation>
     </message>
     <message>
       <source>Enable Crash Diagnostics</source>
-      <translation type="unfinished">Enable Crash Diagnostics</translation>
+      <translation>启用崩溃诊断</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
@@ -3219,63 +3219,63 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Vulkan 验证 (需要 Vulkan SDK)</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers</translation>
+      <translation>启用 Vulkan 验证层</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>验证图层</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>启用核心验证</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>启用同步验证</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>启用 GPU 辅助验证</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>实验性功能</translation>
     </message>
     <message>
       <source>Experimental Features</source>
-      <translation type="unfinished">Experimental Features</translation>
+      <translation>实验性功能</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images</source>
-      <translation type="unfinished">Enable Readback Linear Images</translation>
+      <translation>启用回读线性图像</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
-      <translation type="unfinished">Enable Direct Memory Access</translation>
+      <translation>启用直接内存访问</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
-      <translation type="unfinished">Enable Devkit Console Mode</translation>
+      <translation>启用 Devkit 开发机模式</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
-      <translation type="unfinished">Enable PS4 Neo Mode</translation>
+      <translation>启用 PS4 Pro 模式</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
+      <translation>将“网络连接状态”设为“已连接”</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>额外设备内存分配</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation type="unfinished">Vblank Frequency</translation>
+      <translation>垂直同步频率</translation>
     </message>
     <message>
       <source>WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</source>
@@ -3311,15 +3311,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Disable</source>
-      <translation type="unfinished">Disable</translation>
+      <translation>禁用</translation>
     </message>
     <message>
       <source>Enable</source>
-      <translation type="unfinished">Enable</translation>
+      <translation>启用</translation>
     </message>
     <message>
       <source>Select directory for DLC</source>
-      <translation type="unfinished">Select directory for DLC</translation>
+      <translation>选择 DLC 目录</translation>
     </message>
     <message>
       <source>Select directory for home</source>
@@ -3343,11 +3343,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Are you sure you want to restore all settings to their default values?</source>
-      <translation type="unfinished">Are you sure you want to restore all settings to their default values?</translation>
+      <translation>你确定要将所有设置重置为默认值吗？</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>保存</translation>
     </message>
     <message>
       <source>Apply</source>
@@ -3415,15 +3415,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation type="unfinished">Skylander Portal</translation>
+      <translation>Skylander 传送门</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>《迪士尼无限》基础台</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>《乐高次元》控制基座</translation>
     </message>
     <message>
       <source>None</source>
@@ -3439,7 +3439,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Custom Settings for %1 [%2]</source>
-      <translation type="unfinished">Custom Settings for %1 [%2]</translation>
+      <translation>%1[%2]默认设置</translation>
     </message>
     <message>
       <source>Global Settings</source>
@@ -3455,11 +3455,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Game-specific settings have been saved.</source>
-      <translation type="unfinished">Game-specific settings have been saved.</translation>
+      <translation>游戏特定设置已保存。</translation>
     </message>
     <message>
       <source>Failed to save global settings.</source>
-      <translation type="unfinished">Failed to save global settings.</translation>
+      <translation>保存全局设置失败。</translation>
     </message>
     <message>
       <source>Are you sure you want to restore all settings to global defaults?
@@ -3469,7 +3469,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Settings Restored</source>
-      <translation type="unfinished">Settings Restored</translation>
+      <translation>设置已恢复</translation>
     </message>
     <message>
       <source>Game settings restored to global defaults.</source>
@@ -3544,11 +3544,11 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source> B</source>
-      <translation type="unfinished"> B</translation>
+      <translation> B</translation>
     </message>
     <message>
       <source>Log Append</source>
-      <translation type="unfinished">Log Append</translation>
+      <translation>追加日志</translation>
     </message>
     <message>
       <source>wincolor</source>
@@ -3560,7 +3560,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Theme</source>
-      <translation type="unfinished">Theme</translation>
+      <translation>主题</translation>
     </message>
     <message>
       <source>Stylesheet:</source>
@@ -3576,7 +3576,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>默认</translation>
     </message>
     <message>
       <source>Use Circle Button to Confirm</source>
@@ -3600,11 +3600,11 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>服务器</translation>
     </message>
     <message>
       <source>Enable UPnP</source>
@@ -3737,23 +3737,23 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;删除用户</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;重命名用户</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;设置默认用户</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;设置颜色</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;设置控制器端口</translation>
     </message>
     <message>
       <source>&amp;Close</source>
@@ -3769,19 +3769,19 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>创建新用户</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>新用户ID： %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>用户名 (3-16 字符, 字母, 数字, _, -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>无效的用户名</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
