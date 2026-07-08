@@ -3123,39 +3123,39 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Add...</source>
-      <translation type="unfinished">Add...</translation>
+      <translation>添加……</translation>
     </message>
     <message>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>删除</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>DLC 路径</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>浏览</translation>
     </message>
     <message>
       <source>Home Path</source>
-      <translation type="unfinished">Home Path</translation>
+      <translation>首页路径</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>PS4系统模块路径</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>日志</translation>
     </message>
     <message>
       <source>Logger</source>
-      <translation type="unfinished">Logger</translation>
+      <translation>日志</translation>
     </message>
     <message>
       <source>Enable Logging</source>
-      <translation type="unfinished">Enable Logging</translation>
+      <translation>启用日志记录</translation>
     </message>
     <message>
       <source>Separate Log Files</source>
@@ -3552,11 +3552,11 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>wincolor</source>
-      <translation type="unfinished">wincolor</translation>
+      <translation>wincolor</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
     <message>
       <source>Theme</source>
@@ -3564,7 +3564,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Stylesheet:</source>
-      <translation type="unfinished">Stylesheet:</translation>
+      <translation>样式表：</translation>
     </message>
     <message>
       <source>Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</source>
@@ -3627,27 +3627,27 @@ This will remove all game-specific overrides.</translation>
     <name>SettingsDialogHelperTexts</name>
     <message>
       <source>Game Folders:\nThe list of folders to check for installed games.</source>
-      <translation type="unfinished">Game Folders:\nThe list of folders to check for installed games.</translation>
+      <translation>游戏文件夹：\n检查已安装游戏的文件夹列表。</translation>
     </message>
     <message>
       <source>Add Folder:\nAdd a new folder to the list of game installation folders.</source>
-      <translation type="unfinished">Add Folder:\nAdd a new folder to the list of game installation folders.</translation>
+      <translation>添加文件夹：\n在游戏安装文件夹列表中添加新文件夹。</translation>
     </message>
     <message>
       <source>Remove Folder:\nRemove the selected folder from the list of game installation folders.</source>
-      <translation type="unfinished">Remove Folder:\nRemove the selected folder from the list of game installation folders.</translation>
+      <translation>移除文件夹：\n从游戏安装文件夹列表中删除所选文件夹。</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>DLC路径：\n用于加载游戏DLC内容的文件夹。</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
+      <translation>浏览：\n浏览并选择一个文件夹以设置为DLC路径。</translation>
     </message>
     <message>
       <source>Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</source>
-      <translation type="unfinished">Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</translation>
+      <translation>主文件夹：\n模拟器用于存储用户数据，例如存档和奖杯的文件夹。</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the Home folder.</source>
@@ -3655,43 +3655,43 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>System Modules Folder:\nThe folder where system modules are loaded from.</source>
-      <translation type="unfinished">System Modules Folder:\nThe folder where system modules are loaded from.</translation>
+      <translation>系统模块文件夹：\n用于加载PS4系统模块的文件夹。</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Modules folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the System Modules folder.</translation>
+      <translation>浏览：\n请选择要设为系统模块路径的文件夹。</translation>
     </message>
     <message>
       <source>Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</source>
-      <translation type="unfinished">Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</translation>
+      <translation>目录扫描深度：\n设定在扫描指定游戏文件夹寻找游戏时的最大深度.\n1意味着会扫描一层子文件夹，以此类推。</translation>
     </message>
     <message>
       <source>Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</source>
-      <translation type="unfinished">Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</translation>
+      <translation>显示启动画面：\n在游戏启动时显示游戏的启动画面（特殊图像）。</translation>
     </message>
     <message>
       <source>Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</source>
-      <translation type="unfinished">Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</translation>
+      <translation>禁止弹出奖杯：\n禁用游戏内奖杯通知。可以在奖杯查看器中继续跟踪奖杯进度（在主窗口中右键点击游戏）。</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation type="unfinished">Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</translation>
+      <translation>音量：\n调整全局游戏音量，从0-500%不等，默认100%。</translation>
     </message>
     <message>
       <source>System Fonts Folder:\nThe folder where system fonts are loaded from.</source>
-      <translation type="unfinished">System Fonts Folder:\nThe folder where system fonts are loaded from.</translation>
+      <translation>系统字体文件夹：\n用于加载系统字体的文件夹。</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Fonts folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the System Fonts folder.</translation>
+      <translation>浏览：\n浏览并选择一个文件夹以设置为系统字体文件夹。</translation>
     </message>
     <message>
       <source>Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</source>
-      <translation type="unfinished">Readback Mode:\nControls how the emulator handles GPU readbacks.Enabled them with make some games work better.\nDisabled is recommended option\nRelaxed is same as Precised but uses less fence protection,but can give more fps\nPrecise mode should be used for maximum compatibility where readbacks are neccesary</translation>
+      <translation>回读模式：\n控制模拟器如何处理GPU回读。应用回读将改善部分游戏的表现\n关闭回读是推荐选项。\n宽松模式和精确模式效果相同，但是栅栏保护更少\n为了在必须使用回读时得到更好的兼容性，应当使用精确模式</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
+      <translation>日志筛选：\n筛选日志，仅打印特定信息。\n示例："Core:Debug" "Lib.Pad:Debug Common.Filesystem:Error" "*:Critical"\n级别顺序：trace、debug、info、warning、error、critical、off - 按此顺序，指定某一级别将静默列表中位于它之前的所有级别，并记录它之后的所有级别。</translation>
     </message>
   </context>
   <context>
