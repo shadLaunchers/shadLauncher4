@@ -3119,7 +3119,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Game Folders</source>
-      <translation type="unfinished">Game Folders</translation>
+      <translation>游戏文件夹</translation>
     </message>
     <message>
       <source>Add...</source>
