@@ -4,8 +4,10 @@
 #include <fstream>
 #include <set>
 
+#include <QAbstractButton>
 #include <QDesktopServices>
 #include <QDialogButtonBox>
+#include <QFileDialog>
 #include <QFileInfo>
 #include <QHBoxLayout>
 #include <QHeaderView>
@@ -91,6 +93,69 @@ QString ValidateMatch(const QString& raw) {
     return {};
 }
 
+struct OverrideEntry {
+    QString match;
+    QString target;
+    bool enabled;
+};
+
+std::vector<OverrideEntry> ParseOverridesJson(const nlohmann::ordered_json& root) {
+    std::vector<OverrideEntry> entries;
+    for (auto it = root.begin(); it != root.end(); ++it) {
+        if (!it.value().is_string()) {
+            continue;
+        }
+        QString key = QString::fromStdString(it.key());
+        bool enabled = true;
+        if (key.startsWith('_')) {
+            enabled = false;
+            key.remove(0, 1);
+        }
+        entries.push_back(OverrideEntry{
+            std::move(key), QString::fromStdString(it.value().get<std::string>()), enabled});
+    }
+    return entries;
+}
+
+nlohmann::ordered_json BuildOverridesJson(const QTableWidget* table, QStringList& problems) {
+    nlohmann::ordered_json root = nlohmann::ordered_json::object();
+    std::set<QString> seen_keys;
+
+    for (int r = 0; r < table->rowCount(); ++r) {
+        const QTableWidgetItem* match_item = table->item(r, ColMatch);
+        const QTableWidgetItem* target_item = table->item(r, ColTarget);
+        const QTableWidgetItem* check_item = table->item(r, ColEnabled);
+
+        const QString match = match_item ? match_item->text().trimmed() : QString();
+        const QString target = target_item ? target_item->text().trimmed() : QString();
+        const bool enabled = check_item && check_item->checkState() == Qt::Checked;
+
+        if (match.isEmpty() && target.isEmpty()) {
+            continue; // skip blank rows silently
+        }
+
+        if (const QString err = ValidateMatch(match); !err.isEmpty()) {
+            problems << QObject::tr("Row %1: %2").arg(r + 1).arg(err);
+            continue;
+        }
+        if (const QString err = ValidateTarget(target); !err.isEmpty()) {
+            problems << QObject::tr("Row %1: %2").arg(r + 1).arg(err);
+            continue;
+        }
+
+        // Disabled rows are persisted with a leading '_' so the loader skips them.
+        const QString effective_key = enabled ? match : QStringLiteral("_") + match;
+        if (seen_keys.count(effective_key)) {
+            problems << QObject::tr("Row %1: duplicate entry for '%2'.").arg(r + 1).arg(match);
+            continue;
+        }
+        seen_keys.insert(effective_key);
+        root[effective_key.toStdString()] = target.toStdString();
+    }
+
+    return root;
+}
+
 } // namespace
 
 std::filesystem::path HostOverridesDialog::FilePath() {
@@ -133,19 +198,27 @@ HostOverridesDialog::HostOverridesDialog(QWidget* parent) : QDialog(parent) {
     auto* add_btn = new QPushButton(tr("&Add"), this);
     auto* add_catchall_btn = new QPushButton(tr("Add &catch-all"), this);
     auto* remove_btn = new QPushButton(tr("&Remove"), this);
+    auto* import_btn = new QPushButton(tr("&Import..."), this);
+    auto* export_btn = new QPushButton(tr("&Export..."), this);
     add_btn->setAutoDefault(false);
     add_catchall_btn->setAutoDefault(false);
     remove_btn->setAutoDefault(false);
+    import_btn->setAutoDefault(false);
+    export_btn->setAutoDefault(false);
 
     auto* edit_row = new QHBoxLayout();
     edit_row->addWidget(add_btn);
     edit_row->addWidget(add_catchall_btn);
     edit_row->addWidget(remove_btn);
+    edit_row->addWidget(import_btn);
+    edit_row->addWidget(export_btn);
     edit_row->addStretch();
 
     connect(add_btn, &QPushButton::clicked, this, &HostOverridesDialog::OnAdd);
     connect(add_catchall_btn, &QPushButton::clicked, this, &HostOverridesDialog::OnAddCatchAll);
     connect(remove_btn, &QPushButton::clicked, this, &HostOverridesDialog::OnRemove);
+    connect(import_btn, &QPushButton::clicked, this, &HostOverridesDialog::OnImport);
+    connect(export_btn, &QPushButton::clicked, this, &HostOverridesDialog::OnExport);
 
     // Path label + open-folder
     m_path_label = new QLabel(this);
@@ -239,6 +312,139 @@ void HostOverridesDialog::OnRemove() {
     }
 }
 
+void HostOverridesDialog::OnImport() {
+    const QString file_name = QFileDialog::getOpenFileName(
+        this, tr("Import Host Overrides"), QString(), tr("JSON Files (*.json);;All Files (*)"));
+    if (file_name.isEmpty()) {
+        return;
+    }
+
+    std::ifstream in(file_name.toStdString());
+    if (!in.is_open()) {
+        QMessageBox::critical(this, tr("Import failed"), tr("Could not open the selected file."));
+        return;
+    }
+
+    nlohmann::ordered_json root;
+    try {
+        in >> root;
+    } catch (const std::exception&) {
+        QMessageBox::warning(this, tr("Parse error"),
+                             tr("The selected file could not be parsed as JSON."));
+        return;
+    }
+    if (!root.is_object()) {
+        QMessageBox::warning(
+            this, tr("Format error"),
+            tr("The selected file must be a JSON object mapping match keys to redirect "
+               "targets, like host_overrides.json."));
+        return;
+    }
+
+    const std::vector<OverrideEntry> entries = ParseOverridesJson(root);
+    if (entries.empty()) {
+        QMessageBox::information(this, tr("Nothing to import"),
+                                 tr("The selected file doesn't contain any valid entries."));
+        return;
+    }
+
+    QMessageBox box(this);
+    box.setWindowTitle(tr("Import Host Overrides"));
+    box.setIcon(QMessageBox::Question);
+    box.setText(tr("Found %1 entry/entries in the selected file.\n\n"
+                   "Replace the current list entirely, or append these entries to it "
+                   "(entries whose match already exists in the list will be skipped)?")
+                    .arg(entries.size()));
+    QPushButton* replace_btn = box.addButton(tr("Replace All"), QMessageBox::DestructiveRole);
+    QPushButton* append_btn = box.addButton(tr("Append"), QMessageBox::AcceptRole);
+    box.addButton(QMessageBox::Cancel);
+    box.setDefaultButton(append_btn);
+    box.exec();
+
+    const QAbstractButton* clicked = box.clickedButton();
+    if (clicked == replace_btn) {
+        m_table->setRowCount(0);
+        for (const OverrideEntry& entry : entries) {
+            AddRow(entry.match, entry.target, entry.enabled);
+        }
+        QMessageBox::information(
+            this, tr("Import complete"),
+            tr("Replaced the list with %1 imported entry/entries.").arg(entries.size()));
+    } else if (clicked == append_btn) {
+        // Match keys already present in the table, so we don't create duplicate rows.
+        std::set<QString> existing;
+        for (int r = 0; r < m_table->rowCount(); ++r) {
+            if (const QTableWidgetItem* match_item = m_table->item(r, ColMatch)) {
+                existing.insert(match_item->text().trimmed());
+            }
+        }
+
+        int added = 0;
+        int skipped = 0;
+        for (const OverrideEntry& entry : entries) {
+            if (existing.count(entry.match)) {
+                ++skipped;
+                continue;
+            }
+            AddRow(entry.match, entry.target, entry.enabled);
+            existing.insert(entry.match); // guard against duplicates within the imported file
+            ++added;
+        }
+
+        if (skipped > 0) {
+            QMessageBox::information(
+                this, tr("Import complete"),
+                tr("Added %1 new entry/entries. Skipped %2 already in the list.")
+                    .arg(added)
+                    .arg(skipped));
+        } else {
+            QMessageBox::information(this, tr("Import complete"),
+                                     tr("Added %1 new entry/entries.").arg(added));
+        }
+    }
+    // Cancel: leave the table untouched.
+}
+
+void HostOverridesDialog::OnExport() {
+    QStringList problems;
+    nlohmann::ordered_json root = BuildOverridesJson(m_table, problems);
+
+    if (!problems.isEmpty()) {
+        QMessageBox::warning(
+            this, tr("Cannot export"),
+            tr("Please fix the following before exporting:\n\n%1").arg(problems.join('\n')));
+        return;
+    }
+    if (root.empty()) {
+        QMessageBox::information(this, tr("Nothing to export"),
+                                 tr("The list doesn't have any entries yet."));
+        return;
+    }
+
+    QString default_path;
+    Common::FS::PathToQString(default_path, FilePath());
+    const QString file_name = QFileDialog::getSaveFileName(
+        this, tr("Export Host Overrides"), default_path, tr("JSON Files (*.json);;All Files (*)"));
+    if (file_name.isEmpty()) {
+        return;
+    }
+
+    std::ofstream out(file_name.toStdString(), std::ios::trunc);
+    if (!out.is_open()) {
+        QMessageBox::critical(this, tr("Export failed"),
+                              tr("Could not open the selected file for writing."));
+        return;
+    }
+    out << root.dump(4) << '\n';
+    if (out.fail()) {
+        QMessageBox::critical(this, tr("Export failed"), tr("An error occurred while writing."));
+        return;
+    }
+
+    QMessageBox::information(this, tr("Export complete"),
+                             tr("Exported %1 entry/entries.").arg(root.size()));
+}
+
 void HostOverridesDialog::LoadFromDisk() {
     m_table->setRowCount(0);
 
@@ -265,59 +471,14 @@ void HostOverridesDialog::LoadFromDisk() {
         return;
     }
 
-    for (auto it = root.begin(); it != root.end(); ++it) {
-        if (!it.value().is_string()) {
-            continue;
-        }
-        QString key = QString::fromStdString(it.key());
-        const QString value = QString::fromStdString(it.value().get<std::string>());
-        // A leading '_' marks a disabled/comment entry; strip it for display.
-        bool enabled = true;
-        if (key.startsWith('_')) {
-            enabled = false;
-            key.remove(0, 1);
-        }
-        AddRow(key, value, enabled);
+    for (const OverrideEntry& entry : ParseOverridesJson(root)) {
+        AddRow(entry.match, entry.target, entry.enabled);
     }
 }
 
 bool HostOverridesDialog::SaveToDisk() {
-    // Build the object, validating as we go.
-    nlohmann::ordered_json root = nlohmann::ordered_json::object();
-    std::set<QString> seen_keys;
     QStringList problems;
-
-    for (int r = 0; r < m_table->rowCount(); ++r) {
-        const QTableWidgetItem* match_item = m_table->item(r, ColMatch);
-        const QTableWidgetItem* target_item = m_table->item(r, ColTarget);
-        const QTableWidgetItem* check_item = m_table->item(r, ColEnabled);
-
-        const QString match = match_item ? match_item->text().trimmed() : QString();
-        const QString target = target_item ? target_item->text().trimmed() : QString();
-        const bool enabled = check_item && check_item->checkState() == Qt::Checked;
-
-        if (match.isEmpty() && target.isEmpty()) {
-            continue; // skip blank rows silently
-        }
-
-        if (const QString err = ValidateMatch(match); !err.isEmpty()) {
-            problems << tr("Row %1: %2").arg(r + 1).arg(err);
-            continue;
-        }
-        if (const QString err = ValidateTarget(target); !err.isEmpty()) {
-            problems << tr("Row %1: %2").arg(r + 1).arg(err);
-            continue;
-        }
-
-        // Disabled rows are persisted with a leading '_' so the loader skips them.
-        const QString effective_key = enabled ? match : QStringLiteral("_") + match;
-        if (seen_keys.count(effective_key)) {
-            problems << tr("Row %1: duplicate entry for '%2'.").arg(r + 1).arg(match);
-            continue;
-        }
-        seen_keys.insert(effective_key);
-        root[effective_key.toStdString()] = target.toStdString();
-    }
+    nlohmann::ordered_json root = BuildOverridesJson(m_table, problems);
 
     if (!problems.isEmpty()) {
         QMessageBox::warning(

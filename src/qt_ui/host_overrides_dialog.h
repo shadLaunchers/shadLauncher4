@@ -33,6 +33,8 @@ private:
     void OnAdd();
     void OnRemove();
     void OnAddCatchAll();
+    void OnImport();
+    void OnExport();
     void LoadFromDisk();
     bool SaveToDisk();
 
