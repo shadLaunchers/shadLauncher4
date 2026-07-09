@@ -141,23 +141,113 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->gameFoldersListWidget, helptexts.settings.paths_gameDir);
     SubscribeHelpText(ui->addFolderButton, helptexts.settings.paths_gameDir_add);
     SubscribeHelpText(ui->removeFolderButton, helptexts.settings.paths_gameDir_remove);
-    SubscribeHelpText(ui->dlcFolderGroupBox, helptexts.settings.paths_dlcDir);
+    SubscribeHelpText(ui->dlcFolderGroupBox_2, helptexts.settings.paths_dlcDir);
     SubscribeHelpText(ui->currentDLCFolder, helptexts.settings.paths_dlcDir);
     SubscribeHelpText(ui->browseDLCButton, helptexts.settings.paths_dlcDir_browse);
     SubscribeHelpText(ui->homeGroupBox, helptexts.settings.paths_homeDir);
     SubscribeHelpText(ui->currentHomePath, helptexts.settings.paths_homeDir);
     SubscribeHelpText(ui->browseHomeButton, helptexts.settings.paths_homeDir_browse);
-    SubscribeHelpText(ui->sysmodulesGroupBox, helptexts.settings.paths_homeDir);
+    SubscribeHelpText(ui->sysmodulesGroupBox, helptexts.settings.paths_sysmodulesDir);
     SubscribeHelpText(ui->currentSysmodulesPath, helptexts.settings.paths_sysmodulesDir);
     SubscribeHelpText(ui->browseSysmodulesButton, helptexts.settings.paths_sysmodulesDir_browse);
-    SubscribeHelpText(ui->ScanDepthComboBox, helptexts.settings.general_scan_depth_combo);
-    SubscribeHelpText(ui->showSplashCheckBox, helptexts.settings.general_show_splash);
-    SubscribeHelpText(ui->horizontalVolumeSlider, helptexts.settings.general_volume_slider);
-    SubscribeHelpText(ui->disableTrophycheckBox, helptexts.settings.general_disable_trophy_popup);
+    SubscribeHelpText(ui->fontsGroupBox, helptexts.settings.paths_fontsDir);
     SubscribeHelpText(ui->currentFontsPath, helptexts.settings.paths_fontsDir);
     SubscribeHelpText(ui->browseFontsButton, helptexts.settings.paths_fontsDir_browse);
-    SubscribeHelpText(ui->readbacksModeComboBox, helptexts.settings.gpu_readback_mode);
+
+    // General
+    SubscribeHelpText(ui->ScanDepthGroupBox, helptexts.settings.general_scan_depth_combo);
+    SubscribeHelpText(ui->ScanDepthComboBox, helptexts.settings.general_scan_depth_combo);
+    SubscribeHelpText(ui->showSplashCheckBox, helptexts.settings.general_show_splash);
+    SubscribeHelpText(ui->volumeSliderElement, helptexts.settings.general_volume_slider);
+    SubscribeHelpText(ui->horizontalVolumeSlider, helptexts.settings.general_volume_slider);
+    SubscribeHelpText(ui->disableTrophycheckBox, helptexts.settings.general_disable_trophy_popup);
+    SubscribeHelpText(ui->OpenCustomTrophyLocationButton,
+                      helptexts.settings.general_open_custom_trophy_location);
+    SubscribeHelpText(ui->discordRPCCheckbox, helptexts.settings.general_discord_rpc);
+    SubscribeHelpText(ui->MicGroupBox, helptexts.settings.general_microphone);
+    SubscribeHelpText(ui->micComboBox, helptexts.settings.general_microphone);
+    SubscribeHelpText(ui->updaterGroupBox, helptexts.settings.general_updater);
+
+    // Log
+    SubscribeHelpText(ui->logFilter, helptexts.settings.log_filter);
     SubscribeHelpText(ui->logFilterLineEdit, helptexts.settings.log_filter);
+    SubscribeHelpText(ui->enableLoggingCheckBox, helptexts.settings.log_enable);
+    SubscribeHelpText(ui->logOpenLocationButton, helptexts.settings.log_open_location);
+    SubscribeHelpText(ui->separateLogFilesCheckbox, helptexts.settings.log_separate_files);
+    SubscribeHelpText(ui->logSyncCheckBox, helptexts.settings.log_sync);
+    SubscribeHelpText(ui->logSkipDuplicateCheckBox, helptexts.settings.log_skip_duplicate);
+    SubscribeHelpText(ui->logMaxSkipDurationGroupBox, helptexts.settings.log_max_skip_duration);
+    SubscribeHelpText(ui->logMaxSkipDurationLineEdit, helptexts.settings.log_max_skip_duration);
+    SubscribeHelpText(ui->logSizeLimitGroupBox, helptexts.settings.log_size_limit);
+    SubscribeHelpText(ui->logSizeLimitLineEdit, helptexts.settings.log_size_limit);
+    SubscribeHelpText(ui->logAppendCheckBox, helptexts.settings.log_append);
+    SubscribeHelpText(ui->logTypeGroupBox, helptexts.settings.log_type);
+    SubscribeHelpText(ui->logTypeComboBox, helptexts.settings.log_type);
+
+    // GUI
+    SubscribeHelpText(ui->GUIBackgroundImageGroupBox, helptexts.settings.gui_background_image);
+    SubscribeHelpText(ui->backgroundImageOpacitySlider, helptexts.settings.gui_background_image);
+    SubscribeHelpText(ui->GUIMusicGroupBox, helptexts.settings.gui_music);
+
+    // Compatibility
+    SubscribeHelpText(ui->checkCompatibilityOnStartupCheckBox,
+                      helptexts.settings.compat_check_on_startup);
+    SubscribeHelpText(ui->updateCompatibilityButton, helptexts.settings.compat_update_button);
+
+    // GPU / Graphics
+    SubscribeHelpText(ui->readbacksModeComboBox, helptexts.settings.gpu_readback_mode);
+    SubscribeHelpText(ui->groupBox, helptexts.settings.gpu_readback_mode);
+    SubscribeHelpText(ui->graphicsAdapterGroupBox, helptexts.settings.gpu_graphics_adapter);
+    SubscribeHelpText(ui->graphicsAdapterBox, helptexts.settings.gpu_graphics_adapter);
+    SubscribeHelpText(ui->presentModeGroupBox, helptexts.settings.gpu_present_mode);
+    SubscribeHelpText(ui->presentModeComboBox, helptexts.settings.gpu_present_mode);
+    SubscribeHelpText(ui->windowSizeGroupBox, helptexts.settings.gpu_window_size);
+    SubscribeHelpText(ui->widthSpinBox, helptexts.settings.gpu_window_size);
+    SubscribeHelpText(ui->heightSpinBox, helptexts.settings.gpu_window_size);
+    SubscribeHelpText(ui->enableHDRCheckBox, helptexts.settings.gpu_enable_hdr);
+    SubscribeHelpText(ui->heightDivider, helptexts.settings.gpu_vblank_frequency);
+    SubscribeHelpText(ui->vblankSpinBox, helptexts.settings.gpu_vblank_frequency);
+    SubscribeHelpText(ui->readbackLinearImagesCheckBox,
+                      helptexts.settings.gpu_readback_linear_images);
+
+    // Input
+    SubscribeHelpText(ui->hideCursorGroupBox, helptexts.settings.input_hide_cursor);
+    SubscribeHelpText(ui->hideCursorComboBox, helptexts.settings.input_hide_cursor);
+    SubscribeHelpText(ui->idleTimeoutGroupBox, helptexts.settings.input_idle_timeout);
+    SubscribeHelpText(ui->idleTimeoutSpinBox, helptexts.settings.input_idle_timeout);
+    SubscribeHelpText(ui->motionControlsCheckBox, helptexts.settings.input_motion_controls);
+    SubscribeHelpText(ui->backgroundControllerCheckBox,
+                      helptexts.settings.input_background_controller);
+    SubscribeHelpText(ui->USBDeviceGroupBox, helptexts.settings.input_usb_device);
+    SubscribeHelpText(ui->usbComboBox, helptexts.settings.input_usb_device);
+
+    // Debug
+    SubscribeHelpText(ui->dumpShadersCheckBox, helptexts.settings.debug_dump_shaders);
+    SubscribeHelpText(ui->debugDump, helptexts.settings.debug_dump);
+    SubscribeHelpText(ui->rdocCheckBox, helptexts.settings.debug_renderdoc);
+    SubscribeHelpText(ui->copyGPUBuffersCheckBox, helptexts.settings.debug_copy_gpu_buffers);
+    SubscribeHelpText(ui->collectShaderCheckBox, helptexts.settings.debug_collect_shaders);
+    SubscribeHelpText(ui->crashDiagnosticsCheckBox, helptexts.settings.debug_crash_diagnostics);
+    SubscribeHelpText(ui->hostMarkersCheckBox, helptexts.settings.debug_host_markers);
+    SubscribeHelpText(ui->guestMarkersCheckBox, helptexts.settings.debug_guest_markers);
+    SubscribeHelpText(ui->vkValidationCheckBox, helptexts.settings.debug_vk_validation);
+    SubscribeHelpText(ui->vkCoreValidationCheckBox, helptexts.settings.debug_vk_core_validation);
+    SubscribeHelpText(ui->vkSyncValidationCheckBox, helptexts.settings.debug_vk_sync_validation);
+    SubscribeHelpText(ui->vkGpuValidationCheckBox, helptexts.settings.debug_vk_gpu_validation);
+
+    // Experimental
+    SubscribeHelpText(ui->dmaCheckBox, helptexts.settings.experimental_dma);
+    SubscribeHelpText(ui->devkitCheckBox, helptexts.settings.experimental_devkit);
+    SubscribeHelpText(ui->neoCheckBox, helptexts.settings.experimental_neo);
+    SubscribeHelpText(ui->networkConnectedCheckBox,
+                      helptexts.settings.experimental_network_connected);
+    SubscribeHelpText(ui->shadNetGroupBox, helptexts.settings.experimental_shadnet);
+    SubscribeHelpText(ui->shaderCacheGroupBox, helptexts.settings.experimental_shader_cache);
+    SubscribeHelpText(ui->enableShaderCacheCheckBox, helptexts.settings.experimental_shader_cache);
+    SubscribeHelpText(ui->archiveShaderCacheCheckBox,
+                      helptexts.settings.experimental_shader_cache_archive);
+    SubscribeHelpText(ui->dmemGroupBox, helptexts.settings.experimental_dmem);
+    SubscribeHelpText(ui->dmemSpinBox, helptexts.settings.experimental_dmem);
 
     PopulateComboBoxes();
     PathTabConnections();
