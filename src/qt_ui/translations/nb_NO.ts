@@ -7,31 +7,31 @@
     <name>AboutDialog</name>
     <message>
       <source>About shadLauncher4</source>
-      <translation type="unfinished">About shadLauncher4</translation>
+      <translation>Om shadLauncher4</translation>
     </message>
     <message>
       <source>Release</source>
-      <translation type="unfinished">Release</translation>
+      <translation>Utgivelse</translation>
     </message>
     <message>
       <source>Development build</source>
-      <translation type="unfinished">Development build</translation>
+      <translation>Utviklingsutgivelse</translation>
     </message>
     <message>
       <source>&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</source>
-      <translation type="unfinished">&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</translation>
+      <translation>&lt;b&gt;Versjon %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</translation>
     </message>
     <message>
       <source>Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</source>
-      <translation type="unfinished">Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</translation>
+      <translation>Bidrag %1 &amp;nbsp;&amp;middot;&amp;nbsp; Gren %2&lt;br&gt;Bygget %3</translation>
     </message>
     <message>
       <source>A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</source>
-      <translation type="unfinished">A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</translation>
+      <translation>Et grafisk oppstartsprogram for shadPS4 PlayStation 4-emulatoren. Bla gjennom, organiser og start opp dine spill i biblioteket, håndter emulatorversjoner, og sett opp innstillinger fra ett sted.</translation>
     </message>
     <message>
       <source>&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</translation>
+      <translation>&lt;a href=&quot;%1&quot;&gt;GitHub-depot&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Meld fra om feil&lt;/a&gt;</translation>
     </message>
     <message>
       <source>Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</source>
