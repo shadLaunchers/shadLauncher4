@@ -1614,115 +1614,115 @@ Bruker lokal database.
     </message>
     <message>
       <source>&amp;Import...</source>
-      <translation type="unfinished">&amp;Import...</translation>
+      <translation>&amp;Importer …</translation>
     </message>
     <message>
       <source>&amp;Export...</source>
-      <translation type="unfinished">&amp;Export...</translation>
+      <translation>&amp;Eksporter …</translation>
     </message>
     <message>
       <source>Import Host Overrides</source>
-      <translation type="unfinished">Import Host Overrides</translation>
+      <translation>Importer vertoverstyringer for nettverk</translation>
     </message>
     <message>
       <source>JSON Files (*.json);;All Files (*)</source>
-      <translation type="unfinished">JSON Files (*.json);;All Files (*)</translation>
+      <translation>JSON-filer (*.json);;alle filer (*)</translation>
     </message>
     <message>
       <source>Import failed</source>
-      <translation type="unfinished">Import failed</translation>
+      <translation>Klarte ikke importere</translation>
     </message>
     <message>
       <source>Could not open the selected file.</source>
-      <translation type="unfinished">Could not open the selected file.</translation>
+      <translation>Klarte ikke åpne den valgte fila.</translation>
     </message>
     <message>
       <source>The selected file could not be parsed as JSON.</source>
-      <translation type="unfinished">The selected file could not be parsed as JSON.</translation>
+      <translation>Den valgte fila kunne ikke tolkes som JSON.</translation>
     </message>
     <message>
       <source>The selected file must be a JSON object mapping match keys to redirect targets, like host_overrides.json.</source>
-      <translation type="unfinished">The selected file must be a JSON object mapping match keys to redirect targets, like host_overrides.json.</translation>
+      <translation>Den valgte fila må være en nøkkel til JSON-objekttreff for omdirigeringsmålene, eks. «host_overrides.json».</translation>
     </message>
     <message>
       <source>Nothing to import</source>
-      <translation type="unfinished">Nothing to import</translation>
+      <translation>Ingenting å importere</translation>
     </message>
     <message>
       <source>The selected file doesn&apos;t contain any valid entries.</source>
-      <translation type="unfinished">The selected file doesn&apos;t contain any valid entries.</translation>
+      <translation>Den valgte fila inneholder ingen gyldige oppføringer.</translation>
     </message>
     <message>
       <source>Found %1 entry/entries in the selected file.
 
 Replace the current list entirely, or append these entries to it (entries whose match already exists in the list will be skipped)?</source>
-      <translation type="unfinished">Found %1 entry/entries in the selected file.
+      <translation>Fant %1 oppføringer i den valgte fila.
 
-Replace the current list entirely, or append these entries to it (entries whose match already exists in the list will be skipped)?</translation>
+Erstatt den gjeldende lista i sin helhet, eller tilføy disse oppføringene til den (samsvarende oppføringer som allerede finnes, hoppes over)?</translation>
     </message>
     <message>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Erstatt alle</translation>
     </message>
     <message>
       <source>Append</source>
-      <translation type="unfinished">Append</translation>
+      <translation>Tilføy</translation>
     </message>
     <message>
       <source>Import complete</source>
-      <translation type="unfinished">Import complete</translation>
+      <translation>Importering fullført</translation>
     </message>
     <message>
       <source>Replaced the list with %1 imported entry/entries.</source>
-      <translation type="unfinished">Replaced the list with %1 imported entry/entries.</translation>
+      <translation>Erstattet lista med %1 importerte oppføringer.</translation>
     </message>
     <message>
       <source>Added %1 new entry/entries. Skipped %2 already in the list.</source>
-      <translation type="unfinished">Added %1 new entry/entries. Skipped %2 already in the list.</translation>
+      <translation>La til %1 nye oppføringer. Hoppet over %2 allerede ført opp.</translation>
     </message>
     <message>
       <source>Added %1 new entry/entries.</source>
-      <translation type="unfinished">Added %1 new entry/entries.</translation>
+      <translation>La til %1 nye oppføringer.</translation>
     </message>
     <message>
       <source>Cannot export</source>
-      <translation type="unfinished">Cannot export</translation>
+      <translation>Klarte ikke eksportere</translation>
     </message>
     <message>
       <source>Please fix the following before exporting:
 
 %1</source>
-      <translation type="unfinished">Please fix the following before exporting:
+      <translation>Rett opp i følgende før eksportering:
 
 %1</translation>
     </message>
     <message>
       <source>Nothing to export</source>
-      <translation type="unfinished">Nothing to export</translation>
+      <translation>Ingenting å eksportere</translation>
     </message>
     <message>
       <source>The list doesn&apos;t have any entries yet.</source>
-      <translation type="unfinished">The list doesn&apos;t have any entries yet.</translation>
+      <translation>Lista har ingen oppføringer ennå.</translation>
     </message>
     <message>
       <source>Export Host Overrides</source>
-      <translation type="unfinished">Export Host Overrides</translation>
+      <translation>Eksporter vertoverstyringer for nettverk</translation>
     </message>
     <message>
       <source>Export failed</source>
-      <translation type="unfinished">Export failed</translation>
+      <translation>Klarte ikke eksportere</translation>
     </message>
     <message>
       <source>Could not open the selected file for writing.</source>
-      <translation type="unfinished">Could not open the selected file for writing.</translation>
+      <translation>Klarte ikke åpne den valgte fila for skriving.</translation>
     </message>
     <message>
       <source>Export complete</source>
-      <translation type="unfinished">Export complete</translation>
+      <translation>Eksportering fullført</translation>
     </message>
     <message>
       <source>Exported %1 entry/entries.</source>
-      <translation type="unfinished">Exported %1 entry/entries.</translation>
+      <translation>Eksporterte %1 oppføringer.</translation>
     </message>
   </context>
   <context>
@@ -2901,11 +2901,11 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Row %1: %2</source>
-      <translation type="unfinished">Row %1: %2</translation>
+      <translation>Rad %1: %2</translation>
     </message>
     <message>
       <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
-      <translation type="unfinished">Row %1: duplicate entry for &apos;%2&apos;.</translation>
+      <translation>Rad %1: Duplisert oppføring for «%2».</translation>
     </message>
   </context>
   <context>
@@ -3814,195 +3814,195 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</source>
-      <translation type="unfinished">Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</translation>
+      <translation>Åpne mappa med tilpassede bilder og lyder for trofé:\nDu kan legge til tilpassede bilder til trofeer og en lyd.\nLegg filene til custom_trophy med følgende navn:\ntrophy.wav ELLER trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nMerk: Lyden avspilles kun i Qt-versjonen.</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</source>
-      <translation type="unfinished">Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</translation>
+      <translation>Bruk Discord Rich Presence:\nViser emulatorikonet og relevant informasjon på Discord-profilen din.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation type="unfinished">Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</translation>
+      <translation>Mikrofon:\nIngen: Tar ikke mikrofonen i bruk.\nStandard enhet: Tar i bruk standardenheten som angitt av systemet.\nEller velg mikrofonen manuelt fra lista.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Grensesnitt oppdateringer:\nOffisiell: Stabile offisielle versjoner utgis hver måned, men kan være veldig utdaterte.\nNattlig: Ustabile utviklingsversjoner med alle de nyeste funksjonene og rettelsene, men kan inneholde feil.\n\nMerk: denne oppdateringen angår kun Qt-brukergrensesnittet. For oppdatering av selve emulatoren, bruk «Versjonsbehandling»-menyen.</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation type="unfinished">Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</translation>
+      <translation>Bruk loggføring:\nTar i bruk loggføring.\nIkke endre dette hvis du ikke vet hva du gjør!\nNår du spør om hjelp vær sikker på at denne innstillingen er «påslått».</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>Åpne loggplassering:\nÅpne mappa der loggfilen er lagret.</translation>
     </message>
     <message>
       <source>Separate Log Files:\nWrites a separate logfile for each game.</source>
-      <translation type="unfinished">Separate Log Files:\nWrites a separate logfile for each game.</translation>
+      <translation>Separate loggfiler:\nOppretter en separat loggfil for hvert spill.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+      <translation>Loggsynkronisering:\nBytt mellom synkron (sortering) eller asynkron (ytelse).</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+      <translation>Logghopp over duplikat:\nBevar lagringsplass ved å ikke loggføre samme linjer tekst.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+      <translation>Maks. varighet for logghopping:\nIntervall uten å skrive samme linjer (ms) – bare hvis «Logghopp over duplikat» er i bruk.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+      <translation>Grense for loggstørrelse:\nMaksimal størrelse på loggfiler (byte).</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+      <translation>Tilføy i logg:\nLegg til i eksisterende logger.</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
+      <translation>Loggføringstype:\nVelg mellom wincolor eller msvc loggtyper.\nwincolor: Standardloggføring for Windows\nmsvc: Loggføring for feilsøking.</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
-      <translation type="unfinished">Background Image:\nControl the opacity of the game background image.</translation>
+      <translation>Bakgrunnsbilde:\nEndrer synligheten til spillets bakgrunnsbilde.</translation>
     </message>
     <message>
       <source>Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</source>
-      <translation type="unfinished">Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</translation>
+      <translation>Spill av tittelmusikk:\nHvis et spill støtter det, så brukes det spesiell musikk når du velger spillet i menyen.</translation>
     </message>
     <message>
       <source>Update Compatibility On Startup:\nAutomatically update the compatibility database when shadPS4 starts.</source>
-      <translation type="unfinished">Update Compatibility On Startup:\nAutomatically update the compatibility database when shadPS4 starts.</translation>
+      <translation>Oppdater database ved oppstart:\nOppdaterer kompatibilitets-databasen automatisk når shadPS4 starter.</translation>
     </message>
     <message>
       <source>Update Compatibility Database:\nImmediately update the compatibility database.</source>
-      <translation type="unfinished">Update Compatibility Database:\nImmediately update the compatibility database.</translation>
+      <translation>Oppdater kompatibilitets-database:\nOppdater kompatibilitets-databasen nå.</translation>
     </message>
     <message>
       <source>Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</source>
-      <translation type="unfinished">Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</translation>
+      <translation>Grafikkenhet:\nSystemer med flere GPU-er, kan emulatoren velge hvilken enhet som skal brukes fra rullegardinlista,\neller bruk «Velg automatisk».</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>Presentasjonsmodus:\nSetter opp hvordan video-utdata skal presenteres til skjermen.\n\n«Mailbox»: Bildene synkroniseres med skjermens oppdateringsfrekvens. Nye bilder erstatter gamle bilder i køen. Reduserer ventetid men kan hoppe over bilder hvis de er forsinket.\n«FIFO»: Bildene synkroniseres med skjermens oppdateringsfrekvens. Nye bilder settes i kø bak gamle bilder. Dette sikrer at alle bildene vises men kan øke ventetid.\nUmiddelbart: Bildene vises til skjermen med en gang når de er klare. Kan forutsake bilderiving.</translation>
     </message>
     <message>
       <source>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</source>
-      <translation type="unfinished">Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</translation>
+      <translation>Bredde / Høyde:\nAngir størrelsen på emulatorvinduet ved oppstart, som kan endres under spillingen.\nDette er annerledes fra oppløsningen i spillet.</translation>
     </message>
     <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
-      <translation type="unfinished">Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</translation>
+      <translation>Bruk HDR:\nTillater bruk av HDR i spill som støtter det.\nSkjermen din må ha støtte for BT2020 PQ fargerom og RGB10A2 byttekjede-format.</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>Vblank-frekvens:\nBildehastigheten som emulatoren oppdaterer ved, (60 hz er standard, enten om spillet kjøres med 30 eller 60 fps). Endring av dette kan ha negative effekter, som å øke hastigheten av spillet, eller ødelegge kritisk spillfunksjonalitet som ikke forventer at dette endres!</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation type="unfinished">Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</translation>
+      <translation>Bruk tilbakelesninger av lineære bilder:\nTar i bruk asynkron nedlasting av lineære bilder modifisert av GPU-en.\nKan rette feil i noen spill.</translation>
     </message>
     <message>
       <source>Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</source>
-      <translation type="unfinished">Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</translation>
+      <translation>Skjul musepeker:\nVelg når musepekeren skal forsvinne:\nAldri: Du vil alltid se musepekeren.\nInaktiv: Sett en tid for at den skal forsvinne etter å ha vært inaktiv.\nAlltid: du vil aldri se musepekeren.</translation>
     </message>
     <message>
       <source>Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</source>
-      <translation type="unfinished">Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</translation>
+      <translation>Sett en tid for når musepekeren forsvinner etter å ha vært inaktiv.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation type="unfinished">Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</translation>
+      <translation>Bruk bevegelsesstyring:\nNår i bruk, vil den bruke kontrollerens bevegelsesstyring hvis det støttes.</translation>
     </message>
     <message>
       <source>Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</source>
-      <translation type="unfinished">Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</translation>
+      <translation>Bruk kontroller inndata ved mangel på fokus:\n Tillater shadPS4 å oppdage kontroller inndata når spillvinduet ikke er i fokus. Nyttig for flerskjerm-oppsett.</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>USB-enhet:\nEkte USB-enhet: Bruk en ekte USB-enhet tilkoblet systemet.\nSkylanders portal: Emuler en «Skylanders Portal of Power».\nInfinity-base: Emuler en Disney Infinity-base.\nDimensions-lekebase: Emuler en Lego Dimensions lekebase.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Bruk skyggeleggerdumping:\nFor teknisk feilsøking lagrer skyggeleggerne fra spillet i en mappe mens de gjengis.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation type="unfinished">Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</translation>
+      <translation>Bruk feilsøkingsdumping:\nLagrer import- og eksport-symbolene og filoverskrifts-informasjonen til det nåværende kjørende PS4-programmet i en mappe.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
-      <translation type="unfinished">Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</translation>
+      <translation>Bruk RenderDoc feilsøking:\nHvis brukt, vil emulatoren gi kompatibilitet med RenderDoc for å tillate opptak og analyse av det nåværende gjengitte bildet.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
-      <translation type="unfinished">Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</translation>
+      <translation>Kopier GPU-buffere:\nKommer rundt løpsforhold som involverer GPU-innsendinger.\nKan muligens hjelpe med PM4 type 0 krasj.</translation>
     </message>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
-      <translation type="unfinished">Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</translation>
+      <translation>Lagre skyggeleggere:\nDu trenger dette for å redigere skyggeleggerne med feilsøkingsmenyen (Ctrl + F10).</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</translation>
+      <translation>Krasjdiagnostikk:\nOppretter en .yaml-fil med informasjon om Vulkan-tilstanden ved krasj.\nNyttig for feilsøking &apos;Device lost&apos; feil. Hvis dette brukes, burde du aktivere vert OG gjestefeilsøkingsmarkører.\nDu trenger Vulkan Validation Layers og Vulkan SDK for at dette skal fungere.</translation>
     </message>
     <message>
       <source>Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation type="unfinished">Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</translation>
+      <translation>Vertsfeilsøkingsmarkører:\nSetter inn emulator-side informasjon som markører for spesifikke AMDGPU-kommandoer rundt Vulkan-kommandoer, i tillegg til å gi ressurser feilrettingsnavn.\nHvis dette brukes, burde du også bruke krasjdiagnostikk.\nNyttig for programmer som RenderDoc.</translation>
     </message>
     <message>
       <source>Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation type="unfinished">Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</translation>
+      <translation>Gjestefeilsøkingsmarkører:\nSetter inn eventuelle feilsøkingsmarkører spillet selv har lagt til kommandobufferen.\nHvis dette brukes, burde du også bruke krasjdiagnostikk.\nNyttig for programmer som RenderDoc.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Bruk Vulkan Validation Layers:\nTar i bruk et system som bekrefter tilstanden til Vulkan-gjengiveren og loggfører informasjon om dens indre tilstand.\n Dette vil redusere ytelsen og sannsynligvis endre emulatorens atferd.\nDu trenger Vulkan SDK for at dette skal fungere.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Bruk kjernevalidering:\nTar i bruk hoved API validerings funksjonene.\nDette vil redusere ytelsen og sannsynligvis endre emulatorens atferd.\nDu trenger Vulkan SDK for at dette skal fungere.</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Bruk Vulkan synkroniseringsvalidering:\nTar i bruk et system som bekrefter frekvens tiden av Vulkan-gjengivelseoppgaver.\nDette vil redusere ytelsen og sannsynligvis endre emulatorens atferd.\nDu trenger Vulkan SDK for at dette skal fungere.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Bruk grafikkort assistert validering:\nForteller skyggeleggere gjennom kode som validerer om de gjengis riktig.\nDette vil redusere ytelsen og sannsynligvis endre emulatorens atferd.\nDu trenger Vulkan SDK for at dette skal fungere.</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Bruk direkte minnetilgang:\nTar i bruk vilkårlig minnetilgang fra GPU-en til CPU-minne.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Bruk utvikler-konsollmodus:\nTar i bruk økt minnekapasitet som i en utvikler-konsoll.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>Bruk PS4 Neo-modus:\nTar i bruk emulering av PS4 Pro-modus og økt minnestørrelse. Forårsaker for tiden ustabilitet i et stort antall testede spill.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Bruk emulering av nettverkstilgang:\nTvinger spill å oppdage nettverkstilgang. Faktisk funksjonalitet støttes ikke.</translation>
     </message>
     <message>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
-      <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
+      <translation>ShadNet:\nKompatibilitet er veldig begrenset for øyeblikket.\nDu kan registrere deg på https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Bruk skyggelegger hurtiglager:\nLagrer kompilerte skyggeleggere for å unngå gjenkompilasjoner, reduserer hakking.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Komprimer skyggelegger hurtiglager-filer til en zip-fil:\nskyggeleggerhurtiglager filene lagres i en zip-fil i stedet for flere separate filer.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Ytterligere direkte-minne tildeling:\nTvinger gjennom tildeling av ytterligere mengde direkte-minne. Forårsaker krasj eller andre feil i noen spill.</translation>
     </message>
   </context>
   <context>
