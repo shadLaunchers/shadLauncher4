@@ -7,43 +7,43 @@
     <name>AboutDialog</name>
     <message>
       <source>About shadLauncher4</source>
-      <translation type="unfinished">About shadLauncher4</translation>
+      <translation>Om shadLauncher4</translation>
     </message>
     <message>
       <source>Release</source>
-      <translation type="unfinished">Release</translation>
+      <translation>Utgivelse</translation>
     </message>
     <message>
       <source>Development build</source>
-      <translation type="unfinished">Development build</translation>
+      <translation>Utviklingsutgivelse</translation>
     </message>
     <message>
       <source>&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</source>
-      <translation type="unfinished">&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</translation>
+      <translation>&lt;b&gt;Versjon %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</translation>
     </message>
     <message>
       <source>Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</source>
-      <translation type="unfinished">Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</translation>
+      <translation>Bidrag %1 &amp;nbsp;&amp;middot;&amp;nbsp; Gren %2&lt;br&gt;Bygget %3</translation>
     </message>
     <message>
       <source>A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</source>
-      <translation type="unfinished">A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</translation>
+      <translation>Et grafisk oppstartsprogram for shadPS4 PlayStation 4-emulatoren. Bla gjennom, organiser og start opp dine spill i biblioteket, håndter emulatorversjoner, og sett opp innstillinger fra ett sted.</translation>
     </message>
     <message>
       <source>&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</translation>
+      <translation>&lt;a href=&quot;%1&quot;&gt;GitHub-depot&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Meld fra om feil&lt;/a&gt;</translation>
     </message>
     <message>
       <source>Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</source>
-      <translation type="unfinished">Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</translation>
+      <translation>Drevet av &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt;-emulatoren.&lt;br&gt;Lisensiert under GNU General Public License v2.0 eller nyere.</translation>
     </message>
     <message>
       <source>Copy Build Info</source>
-      <translation type="unfinished">Copy Build Info</translation>
+      <translation>Kopier byggeinfo</translation>
     </message>
     <message>
       <source>Copied!</source>
-      <translation type="unfinished">Copied!</translation>
+      <translation>Kopiert!</translation>
     </message>
   </context>
   <context>
@@ -1524,101 +1524,101 @@ Bruker lokal database.
     <name>HostOverridesDialog</name>
     <message>
       <source>Network Host Overrides</source>
-      <translation type="unfinished">Network Host Overrides</translation>
+      <translation>Vertoverstyringer for nettverk</translation>
     </message>
     <message>
       <source>Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</source>
-      <translation type="unfinished">Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</translation>
+      <translation>Omdiriger nettverksforespørsler for ett spill til en annen tjener (f.eks. en lokal privat tjener). Hver rad kartlegger et &lt;b&gt;treff&lt;/b&gt; til et &lt;b&gt;omdirigeringsmål&lt;/b&gt;. De mest spesifikke treffene prøves først:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;vert&lt;/tt&gt; &amp;middot; &lt;tt&gt;vert:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (alt-i-ett)&lt;br&gt;Målene ser ut som &lt;tt&gt;vert&lt;/tt&gt;, &lt;tt&gt;vert:port&lt;/tt&gt;, eller &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Ukryssede rader lagres men blir ignorert av emulatoren.</translation>
     </message>
     <message>
       <source>Enabled</source>
-      <translation type="unfinished">Enabled</translation>
+      <translation>I bruk</translation>
     </message>
     <message>
       <source>Match (host / endpoint)</source>
-      <translation type="unfinished">Match (host / endpoint)</translation>
+      <translation>Treff (vert / endepunkt)</translation>
     </message>
     <message>
       <source>Redirect to</source>
-      <translation type="unfinished">Redirect to</translation>
+      <translation>Omdiriger til</translation>
     </message>
     <message>
       <source>&amp;Add</source>
-      <translation type="unfinished">&amp;Add</translation>
+      <translation>&amp;Legg til</translation>
     </message>
     <message>
       <source>Add &amp;catch-all</source>
-      <translation type="unfinished">Add &amp;catch-all</translation>
+      <translation>Legg til &amp;alt-i-ett</translation>
     </message>
     <message>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;Fjern</translation>
     </message>
     <message>
       <source>File: %1</source>
-      <translation type="unfinished">File: %1</translation>
+      <translation>Fil: %1</translation>
     </message>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>Åpne mappe</translation>
     </message>
     <message>
       <source>Catch-all exists</source>
-      <translation type="unfinished">Catch-all exists</translation>
+      <translation>Alt-i-ett finnes</translation>
     </message>
     <message>
       <source>A catch-all (*) row already exists.</source>
-      <translation type="unfinished">A catch-all (*) row already exists.</translation>
+      <translation>En alt-i-ett (*) rad finnes allerede.</translation>
     </message>
     <message>
       <source>Parse error</source>
-      <translation type="unfinished">Parse error</translation>
+      <translation>Tolkningsfeil</translation>
     </message>
     <message>
       <source>The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</source>
-      <translation type="unfinished">The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</translation>
+      <translation>Den eksisterende «host_overrides.json»-fila kunne ikke tolkes. Begynner med ei tom liste; lagring vil overskrive fila.</translation>
     </message>
     <message>
       <source>Format error</source>
-      <translation type="unfinished">Format error</translation>
+      <translation>Formateringsfeil</translation>
     </message>
     <message>
       <source>host_overrides.json must be a JSON object. Starting empty.</source>
-      <translation type="unfinished">host_overrides.json must be a JSON object. Starting empty.</translation>
+      <translation>«host_overrides.json» må være ett JSON-objekt. Begynner tomt.</translation>
     </message>
     <message>
       <source>Row %1: %2</source>
-      <translation type="unfinished">Row %1: %2</translation>
+      <translation>Rad %1: %2</translation>
     </message>
     <message>
       <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
-      <translation type="unfinished">Row %1: duplicate entry for &apos;%2&apos;.</translation>
+      <translation>Rad %1: Duplisert oppføring for «%2».</translation>
     </message>
     <message>
       <source>Cannot save</source>
-      <translation type="unfinished">Cannot save</translation>
+      <translation>Klarte ikke lagre</translation>
     </message>
     <message>
       <source>Please fix the following before saving:
 
 %1</source>
-      <translation type="unfinished">Please fix the following before saving:
+      <translation>Rett opp i følgende før lagring:
 
 %1</translation>
     </message>
     <message>
       <source>Save failed</source>
-      <translation type="unfinished">Save failed</translation>
+      <translation>Klarte ikke lagre</translation>
     </message>
     <message>
       <source>Could not open the file for writing:
 %1</source>
-      <translation type="unfinished">Could not open the file for writing:
+      <translation>Klarte ikke åpne fila for skriving:
 %1</translation>
     </message>
     <message>
       <source>An error occurred while writing.</source>
-      <translation type="unfinished">An error occurred while writing.</translation>
+      <translation>En feil oppstod ved skriving.</translation>
     </message>
   </context>
   <context>
@@ -2487,15 +2487,15 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Network Host Overrides</source>
-      <translation type="unfinished">Network Host Overrides</translation>
+      <translation>Vertoverstyringer for nettverk</translation>
     </message>
     <message>
       <source>Redirect game network traffic to another server</source>
-      <translation type="unfinished">Redirect game network traffic to another server</translation>
+      <translation>Omdiriger spill-nettverkstrafikk til en annen tjener</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Lyd</translation>
     </message>
   </context>
   <context>
@@ -2761,39 +2761,39 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>unknown</source>
-      <translation type="unfinished">unknown</translation>
+      <translation>ukjent</translation>
     </message>
     <message>
       <source>Redirect target is empty.</source>
-      <translation type="unfinished">Redirect target is empty.</translation>
+      <translation>Målet for omdirigering er tom.</translation>
     </message>
     <message>
       <source>Target scheme must be http or https.</source>
-      <translation type="unfinished">Target scheme must be http or https.</translation>
+      <translation>Målskjemaet må være http eller https.</translation>
     </message>
     <message>
       <source>Redirect target has no host.</source>
-      <translation type="unfinished">Redirect target has no host.</translation>
+      <translation>Målet for omdirigering har ingen vert.</translation>
     </message>
     <message>
       <source>Port must be a number between 1 and 65535.</source>
-      <translation type="unfinished">Port must be a number between 1 and 65535.</translation>
+      <translation>Porten må være ett tall mellom 1 og 65535.</translation>
     </message>
     <message>
       <source>Match host is empty.</source>
-      <translation type="unfinished">Match host is empty.</translation>
+      <translation>Treffvert er tom.</translation>
     </message>
     <message>
       <source>Match scheme must be http or https (or omit it).</source>
-      <translation type="unfinished">Match scheme must be http or https (or omit it).</translation>
+      <translation>Treffskjemaet må være http eller https (eller utelat det).</translation>
     </message>
     <message>
       <source>Match has no host.</source>
-      <translation type="unfinished">Match has no host.</translation>
+      <translation>Treff har ingen vert.</translation>
     </message>
     <message>
       <source>Match port must be a number between 1 and 65535.</source>
-      <translation type="unfinished">Match port must be a number between 1 and 65535.</translation>
+      <translation>Treffporten må være ett tall mellom 1 og 65535.</translation>
     </message>
   </context>
   <context>
@@ -2937,7 +2937,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Game Compatibility</source>
-      <translation>Spill kompatibilitet</translation>
+      <translation>Spillkompatibilitet</translation>
     </message>
     <message>
       <source>Update Compatibility Database On Startup</source>
@@ -3129,7 +3129,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Game Folders</source>
-      <translation>Spillmapper</translation>
+      <translation>Sti for spillmapper</translation>
     </message>
     <message>
       <source>Add...</source>
@@ -3149,11 +3149,11 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Home Path</source>
-      <translation>Hjemmesti</translation>
+      <translation>Sti for hjemmemappe</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation>PS4 «sys_modules»-sti</translation>
+      <translation>Sti for PS4-systemmoduler</translation>
     </message>
     <message>
       <source>Log</source>
@@ -3453,7 +3453,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Global Settings</source>
-      <translation>Globale innstillinger</translation>
+      <translation>Globale-innstillinger</translation>
     </message>
     <message>
       <source>Failed to save game settings.</source>
@@ -3499,7 +3499,7 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>PS4 Fonts Path</source>
-      <translation>PS4-skriftmappe</translation>
+      <translation>Sti for PS4-skriftfiler</translation>
     </message>
     <message>
       <source>Select directory for System fonts</source>
@@ -3587,54 +3587,54 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Use Circle Button to Confirm</source>
-      <translation type="unfinished">Use Circle Button to Confirm</translation>
+      <translation>Trykk på «sirkel»-knappen for å bekrefte</translation>
     </message>
     <message>
       <source>IME</source>
-      <translation type="unfinished">IME</translation>
+      <translation>IME</translation>
     </message>
     <message>
       <source>Enable IME Accessibility</source>
-      <translation type="unfinished">Enable IME Accessibility</translation>
+      <translation>Bruk IME-tilgjengelighet</translation>
     </message>
     <message>
       <source>Enable IME URL/Email Short Panel</source>
-      <translation type="unfinished">Enable IME URL/Email Short Panel</translation>
+      <translation>Bruk URL-/e-postpanel i IME</translation>
     </message>
     <message>
       <source>Enable ShadNet</source>
-      <translation type="unfinished">Enable ShadNet</translation>
+      <translation>Bruk ShadNet</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>Tjener</translation>
     </message>
     <message>
       <source>Enable UPnP</source>
-      <translation type="unfinished">Enable UPnP</translation>
+      <translation>Skru på UPnP</translation>
     </message>
     <message>
       <source>Use Mice as Mice</source>
-      <translation type="unfinished">Use Mice as Mice</translation>
+      <translation>Bruk mus som mus</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>Nett-API-tjener</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>Signalinformasjon</translation>
     </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
     <message>
       <source>Game Folders:\nThe list of folders to check for installed games.</source>
-      <translation>Spillmapper:\nListe over mapper som brukes for å se etter installerte spill.</translation>
+      <translation>Sti for spillmapper:\nListe over mapper som brukes for å se etter installerte spill.</translation>
     </message>
     <message>
       <source>Add Folder:\nAdd a new folder to the list of game installation folders.</source>
@@ -3662,7 +3662,7 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>System Modules Folder:\nThe folder where system modules are loaded from.</source>
-      <translation>Mappe for systemmoduler:\nMappa hvor systemmodulene lastes fra.</translation>
+      <translation>Sti for PS4-systemmoduler:\nMappa hvor systemmodulene lastes fra.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Modules folder.</source>
@@ -3686,7 +3686,7 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>System Fonts Folder:\nThe folder where system fonts are loaded from.</source>
-      <translation>PS4-skriftmappe:\nMappa hvor systemskriftene lastes fra.</translation>
+      <translation>Sti for PS4-skriftfiler:\nMappa hvor systemskriftene lastes fra.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the System Fonts folder.</source>
@@ -3832,51 +3832,51 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net …</translation>
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>På</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>På (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>Av</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>ShadNet-innstillinger – %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>Ta i bruk ShadNet for denne brukeren</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>Konto-ID (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Passord</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>Vis passord</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>Konto-ID (NPID):</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>Passord:</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>ShadNet-innstillinger …</translation>
     </message>
   </context>
   <context>
