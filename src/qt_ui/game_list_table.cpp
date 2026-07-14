@@ -2,11 +2,14 @@
 // SPDX-FileCopyrightText: Copyright 2025-2026 shadLauncher4 Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <string_view>
 #include <QHeaderView>
 #include <QScrollBar>
 #include <QStringBuilder>
 #include "common/fs_util.h"
+#include "common/types.h"
 #include "custom_table_widget_item.h"
+#include "game_info_cache.h"
 #include "game_list_delegate.h"
 #include "game_list_frame.h"
 #include "game_list_table.h"
@@ -15,11 +18,44 @@
 #include "persistent_settings.h"
 #include "qt_utils.h"
 
+namespace {
+
+s64 ComputeSizeFingerprint(const std::string& game_path) {
+    namespace fs = std::filesystem;
+
+    s64 fingerprint = 0;
+    {
+        std::error_code ec;
+        if (const auto ftime = fs::last_write_time(game_path, ec); !ec) {
+            fingerprint ^= static_cast<s64>(ftime.time_since_epoch().count());
+        }
+    }
+
+    for (const auto& suffix : {"-UPDATE", "-patch"}) {
+        fs::path extra_path = game_path;
+        extra_path += suffix;
+
+        if (std::error_code ec; fs::exists(extra_path, ec) && !ec) {
+            std::error_code ec2;
+            if (const auto ftime = fs::last_write_time(extra_path, ec2); !ec2) {
+                fingerprint ^= static_cast<s64>(ftime.time_since_epoch().count()) ^
+                               std::hash<std::string_view>{}(suffix);
+            }
+            break; // matches the "found -UPDATE, don't also look for -patch" logic below
+        }
+    }
+
+    return fingerprint;
+}
+
+} // namespace
+
 GameListTable::GameListTable(GameListFrame* frame, std::shared_ptr<GUISettings> gui_settings,
                              std::shared_ptr<PersistentSettings> persistent_settings)
     : GameList(), m_game_list_frame(frame), m_gui_settings(std::move(gui_settings)),
       m_persistent_settings(std::move(persistent_settings)) {
     m_is_list_layout = true;
+    SetInfoCache(m_game_list_frame ? m_game_list_frame->GetInfoCache() : nullptr);
 
     setShowGrid(false);
     setItemDelegate(new GameListDelegate(this));
@@ -237,31 +273,49 @@ void GameListTable::Populate(const std::vector<game_info>& game_data,
             }
         });
 
-        icon_item->setSizeCalcFunc(
-            [this, game, cancel = icon_item->getSizeOnDiskLoadingAborted()]() {
-                if (!game || game->info.size_on_disk != UINT64_MAX || (cancel && cancel->load()))
-                    return;
+        icon_item->setSizeCalcFunc([this, game,
+                                    cancel = icon_item->getSizeOnDiskLoadingAborted()]() {
+            if (!game || game->info.size_on_disk != UINT64_MAX || (cancel && cancel->load()))
+                return;
 
-                // Calculate main game folder size
-                uint64_t total_size = FS::Utils::GetDirSize(game->info.path, 1, cancel.get());
+            GameInfoCache* info_cache =
+                m_game_list_frame ? m_game_list_frame->GetInfoCache() : nullptr;
+            const s64 size_fingerprint = ComputeSizeFingerprint(game->info.path);
 
-                // Check for "-UPDATE" and "-PATCH" folders
-                for (const auto& suffix : {"-UPDATE", "-patch"}) {
-                    std::filesystem::path extra_path = game->info.path;
-                    extra_path += suffix;
-
-                    if (std::filesystem::exists(extra_path) && (!cancel || !cancel->load())) {
-                        total_size += FS::Utils::GetDirSize(extra_path.string(), 1, cancel.get());
-                        break; // if update founds don't search for -patch
+            if (info_cache && size_fingerprint != 0) {
+                if (const auto cached = info_cache->GetSize(game->info.path, size_fingerprint)) {
+                    game->info.size_on_disk = *cached;
+                    if (!cancel || !cancel->load()) {
+                        Q_EMIT sizeOnDiskReady(game, game->item);
                     }
+                    return;
                 }
+            }
 
-                game->info.size_on_disk = total_size;
+            // Calculate main game folder size
+            uint64_t total_size = FS::Utils::GetDirSize(game->info.path, 1, cancel.get());
 
-                if (!cancel || !cancel->load()) {
-                    Q_EMIT sizeOnDiskReady(game, game->item);
+            // Check for "-UPDATE" and "-PATCH" folders
+            for (const auto& suffix : {"-UPDATE", "-patch"}) {
+                std::filesystem::path extra_path = game->info.path;
+                extra_path += suffix;
+
+                if (std::filesystem::exists(extra_path) && (!cancel || !cancel->load())) {
+                    total_size += FS::Utils::GetDirSize(extra_path.string(), 1, cancel.get());
+                    break; // if update founds don't search for -patch
                 }
-            });
+            }
+
+            game->info.size_on_disk = total_size;
+
+            if (info_cache && size_fingerprint != 0 && (!cancel || !cancel->load())) {
+                info_cache->PutSize(game->info.path, total_size, size_fingerprint);
+            }
+
+            if (!cancel || !cancel->load()) {
+                Q_EMIT sizeOnDiskReady(game, game->item);
+            }
+        });
 
         icon_item->setData(Qt::UserRole, index, true);
         icon_item->setData(GUI::CustomRoles::game_role, QVariant::fromValue(game));

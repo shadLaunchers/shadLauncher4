@@ -6,6 +6,7 @@
 
 #include "common/lf_queue.h"
 #include "custom_dock_widget.h"
+#include "game_info_cache.h"
 #include "game_list.h"
 
 #include <QFutureWatcher>
@@ -82,6 +83,9 @@ public Q_SLOTS:
     game_info GetSelectedGameInfo();
     void PrintLog(QString entry, QColor textColor);
     void ShowLog(bool show);
+    GameInfoCache* GetInfoCache() const {
+        return m_info_cache.get();
+    }
 private Q_SLOTS:
     void OnColumnClicked(int col);
     void OnParsingFinished();
@@ -142,6 +146,7 @@ private:
     QMutex m_games_mutex;
     lf_queue<game_info> m_games;
     const std::array<int, 1> m_parsing_threads{0};
+    std::shared_ptr<GameInfoCache> m_info_cache;
     // List Mode
     bool m_is_list_layout = true;
     bool m_old_layout_is_list = true;
@@ -166,5 +171,5 @@ private:
     QTextEdit* logDisplay;
     //
     bool m_draw_compat_status_to_grid = false;
-    enum class DeleteType { Game, Update, SaveData, DLC, Trophy, ShaderCache };
+    enum class DeleteType { Game, Update, SaveData, DLC, Trophy, ShaderCache, MetadataCache };
 };

@@ -31,7 +31,7 @@ find_package(OpenAL CONFIG)
 find_package(VulkanHeaders 1.4.329 CONFIG)
 find_package(fmt 10.2.0 CONFIG)
 find_package(SDL3 3.1.2 CONFIG)
-find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Xml Network Multimedia Svg)
+find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Xml Network Multimedia Svg Sql)
 if (UNIX)
     find_package(OpenSSL REQUIRED)
 endif()
@@ -220,6 +220,8 @@ set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/table_item_delegate.cpp
           src/qt_ui/table_item_delegate.h
           src/qt_ui/gui_game_info.h
+          src/qt_ui/game_info_cache.cpp
+          src/qt_ui/game_info_cache.h
           src/qt_ui/game_compatibility.cpp
           src/qt_ui/game_compatibility.h
           src/qt_ui/game_list_delegate.cpp
@@ -337,7 +339,7 @@ cmrc_add_resource_library(embedded-resources
 
 target_link_libraries(shadLauncher4 PRIVATE res::embedded)
 target_link_libraries(shadLauncher4 PRIVATE Vulkan::Headers fmt::fmt SDL3::SDL3 volk_headers spdlog::spdlog)
-target_link_libraries(shadLauncher4 PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Svg Qt6::Multimedia nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL)
+target_link_libraries(shadLauncher4 PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Svg Qt6::Multimedia Qt6::Sql nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL)
 
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)

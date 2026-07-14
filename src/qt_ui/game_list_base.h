@@ -9,6 +9,8 @@
 #include <QIcon>
 #include <QWidget>
 
+class GameInfoCache;
+
 class GameListBase {
 public:
     GameListBase();
@@ -27,6 +29,9 @@ public:
     }
     void SetDrawCompatStatusToGrid(bool enabled) {
         m_draw_compat_status_to_grid = enabled;
+    }
+    void SetInfoCache(GameInfoCache* cache) {
+        m_info_cache = cache;
     }
 
     virtual void RepaintIcons(std::vector<game_info>& game_data, const QColor& icon_color,
@@ -48,4 +53,5 @@ protected:
     bool m_is_list_layout{};
     QSize m_icon_size{};
     QColor m_icon_color{};
+    GameInfoCache* m_info_cache = nullptr;
 };

@@ -4,13 +4,37 @@
 
 #include "game_list_base.h"
 
+#include <QBuffer>
 #include <QDir>
 #include <QPainter>
 
 #include <cmath>
+#include <filesystem>
+#include <functional>
+#include <system_error>
 #include <unordered_set>
 
+#include "common/types.h"
+#include "game_info_cache.h"
+
 GameListBase::GameListBase() {}
+
+namespace {
+s64 ComputeIconFingerprint(const std::string& icon_path) {
+    if (icon_path.empty()) {
+        return 0;
+    }
+
+    std::error_code ec;
+    const auto ftime = std::filesystem::last_write_time(icon_path, ec);
+    if (ec) {
+        return 0;
+    }
+
+    return static_cast<s64>(std::hash<std::string>{}(icon_path)) ^
+           static_cast<s64>(ftime.time_since_epoch().count());
+}
+} // namespace
 
 void GameListBase::RepaintIcons(std::vector<game_info>& game_data, const QColor& icon_color,
                                 const QSize& icon_size, qreal device_pixel_ratio) {
@@ -41,8 +65,28 @@ void GameListBase::IconLoadFunction(game_info game, qreal device_pixel_ratio,
         return;
     }
 
-    if (game->icon.isNull() && (game->info.icon_path.empty() ||
-                                !game->icon.load(QString::fromStdString(game->info.icon_path)))) {
+    if (game->icon.isNull() && !game->info.icon_path.empty()) {
+        const s64 icon_fingerprint = ComputeIconFingerprint(game->info.icon_path);
+        bool loaded = false;
+
+        if (m_info_cache && icon_fingerprint != 0) {
+            if (const auto cached = m_info_cache->GetIcon(game->info.path, icon_fingerprint)) {
+                loaded = game->icon.loadFromData(*cached, "PNG");
+            }
+        }
+
+        if (!loaded) {
+            loaded = game->icon.load(QString::fromStdString(game->info.icon_path));
+
+            if (loaded && m_info_cache && icon_fingerprint != 0) {
+                QByteArray icon_bytes;
+                QBuffer buffer(&icon_bytes);
+                buffer.open(QIODevice::WriteOnly);
+                if (game->icon.save(&buffer, "PNG")) {
+                    m_info_cache->PutIcon(game->info.path, icon_bytes, icon_fingerprint);
+                }
+            }
+        }
         // TODO log if fails?
     }
 
