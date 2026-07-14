@@ -137,6 +137,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     }
 
     const SettingsDialogHelperTexts helptexts;
+    // Paths
     SubscribeHelpText(ui->gameFoldersGroupBox, helptexts.settings.paths_gameDir);
     SubscribeHelpText(ui->gameFoldersListWidget, helptexts.settings.paths_gameDir);
     SubscribeHelpText(ui->addFolderButton, helptexts.settings.paths_gameDir_add);
@@ -167,10 +168,18 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->MicGroupBox, helptexts.settings.general_microphone);
     SubscribeHelpText(ui->micComboBox, helptexts.settings.general_microphone);
     SubscribeHelpText(ui->updaterGroupBox, helptexts.settings.general_updater);
+    SubscribeHelpText(ui->updaterCheckBox, helptexts.settings.general_updater_check_startup);
+    SubscribeHelpText(ui->changelogCheckBox, helptexts.settings.general_updater_changelog);
+    SubscribeHelpText(ui->checkUpdateButton, helptexts.settings.general_updater_check_now);
+    SubscribeHelpText(ui->showFpsCounterCheckBox, helptexts.settings.general_fps_counter);
+    SubscribeHelpText(ui->pkgGroupBox, helptexts.settings.general_pkg_separate_update);
+    SubscribeHelpText(ui->separateUpdateCheckBox, helptexts.settings.general_pkg_separate_update);
 
     // Log
+    SubscribeHelpText(ui->loggerGroupBox, helptexts.settings.log_section);
     SubscribeHelpText(ui->logFilter, helptexts.settings.log_filter);
     SubscribeHelpText(ui->logFilterLineEdit, helptexts.settings.log_filter);
+    SubscribeHelpText(ui->logPresetsButton, helptexts.settings.log_presets);
     SubscribeHelpText(ui->enableLoggingCheckBox, helptexts.settings.log_enable);
     SubscribeHelpText(ui->logOpenLocationButton, helptexts.settings.log_open_location);
     SubscribeHelpText(ui->separateLogFilesCheckbox, helptexts.settings.log_separate_files);
@@ -187,9 +196,24 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     // GUI
     SubscribeHelpText(ui->GUIBackgroundImageGroupBox, helptexts.settings.gui_background_image);
     SubscribeHelpText(ui->backgroundImageOpacitySlider, helptexts.settings.gui_background_image);
+    SubscribeHelpText(ui->showBackgroundImageCheckBox,
+                      helptexts.settings.gui_show_background_image);
     SubscribeHelpText(ui->GUIMusicGroupBox, helptexts.settings.gui_music);
+    SubscribeHelpText(ui->playBGMCheckBox, helptexts.settings.gui_music);
+    SubscribeHelpText(ui->BGMVolumeSlider, helptexts.settings.gui_music_volume);
+    SubscribeHelpText(ui->themeGroupBox, helptexts.settings.gui_theme);
+    SubscribeHelpText(ui->themeComboBox, helptexts.settings.gui_theme);
+
+    // Audio
+    SubscribeHelpText(ui->audioBackendGroupBox, helptexts.settings.audio_backend);
+    SubscribeHelpText(ui->audioBackendComboBox, helptexts.settings.audio_backend);
+    SubscribeHelpText(ui->GenAudioGroupBox, helptexts.settings.audio_general_device);
+    SubscribeHelpText(ui->GenAudioComboBox, helptexts.settings.audio_general_device);
+    SubscribeHelpText(ui->DsSpeakerGroupBox, helptexts.settings.audio_ds4_speaker);
+    SubscribeHelpText(ui->DsAudioComboBox, helptexts.settings.audio_ds4_speaker);
 
     // Compatibility
+    SubscribeHelpText(ui->CompatgroupBox, helptexts.settings.compat_section);
     SubscribeHelpText(ui->checkCompatibilityOnStartupCheckBox,
                       helptexts.settings.compat_check_on_startup);
     SubscribeHelpText(ui->updateCompatibilityButton, helptexts.settings.compat_update_button);
@@ -209,6 +233,13 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->vblankSpinBox, helptexts.settings.gpu_vblank_frequency);
     SubscribeHelpText(ui->readbackLinearImagesCheckBox,
                       helptexts.settings.gpu_readback_linear_images);
+    SubscribeHelpText(ui->displayOptionsGroupBox, helptexts.settings.gpu_display_options);
+    SubscribeHelpText(ui->displayModeGroupBox, helptexts.settings.gpu_display_mode);
+    SubscribeHelpText(ui->displayModeComboBox, helptexts.settings.gpu_display_mode);
+    SubscribeHelpText(ui->FSRGroupBox, helptexts.settings.gpu_fsr);
+    SubscribeHelpText(ui->FSRCheckBox, helptexts.settings.gpu_fsr_enable);
+    SubscribeHelpText(ui->RCASCheckBox, helptexts.settings.gpu_rcas_enable);
+    SubscribeHelpText(ui->RCASSlider, helptexts.settings.gpu_rcas_attenuation);
 
     // Input
     SubscribeHelpText(ui->hideCursorGroupBox, helptexts.settings.input_hide_cursor);
@@ -220,8 +251,20 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
                       helptexts.settings.input_background_controller);
     SubscribeHelpText(ui->USBDeviceGroupBox, helptexts.settings.input_usb_device);
     SubscribeHelpText(ui->usbComboBox, helptexts.settings.input_usb_device);
+    SubscribeHelpText(ui->cursorGroupBox, helptexts.settings.input_cursor_section);
+    SubscribeHelpText(ui->ControllerGroupBox, helptexts.settings.input_controller_section);
+    SubscribeHelpText(ui->miceUsedAsMiceCheckBox, helptexts.settings.input_mice_as_mice);
+    SubscribeHelpText(ui->circleEnterCheckBox, helptexts.settings.input_circle_confirm);
+    SubscribeHelpText(ui->imeGroupBox, helptexts.settings.input_ime_section);
+    SubscribeHelpText(ui->imeAccessibilityCheckBox, helptexts.settings.input_ime_accessibility);
+    SubscribeHelpText(ui->imeUrlMailShortPanelCheckBox,
+                      helptexts.settings.input_ime_url_mail_panel);
+    SubscribeHelpText(ui->cameraGroupBox, helptexts.settings.input_camera_device);
+    SubscribeHelpText(ui->cameraComboBox, helptexts.settings.input_camera_device);
 
     // Debug
+    SubscribeHelpText(ui->debugTabGroupBox, helptexts.settings.debug_section);
+    SubscribeHelpText(ui->advancedGroupBox, helptexts.settings.debug_advanced_section);
     SubscribeHelpText(ui->dumpShadersCheckBox, helptexts.settings.debug_dump_shaders);
     SubscribeHelpText(ui->debugDump, helptexts.settings.debug_dump);
     SubscribeHelpText(ui->rdocCheckBox, helptexts.settings.debug_renderdoc);
@@ -231,17 +274,26 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->hostMarkersCheckBox, helptexts.settings.debug_host_markers);
     SubscribeHelpText(ui->guestMarkersCheckBox, helptexts.settings.debug_guest_markers);
     SubscribeHelpText(ui->vkValidationCheckBox, helptexts.settings.debug_vk_validation);
+    SubscribeHelpText(ui->VkValidationGroupBox, helptexts.settings.debug_vk_validation_section);
     SubscribeHelpText(ui->vkCoreValidationCheckBox, helptexts.settings.debug_vk_core_validation);
     SubscribeHelpText(ui->vkSyncValidationCheckBox, helptexts.settings.debug_vk_sync_validation);
     SubscribeHelpText(ui->vkGpuValidationCheckBox, helptexts.settings.debug_vk_gpu_validation);
 
     // Experimental
+    SubscribeHelpText(ui->experimentalGroupBox, helptexts.settings.experimental_section);
     SubscribeHelpText(ui->dmaCheckBox, helptexts.settings.experimental_dma);
     SubscribeHelpText(ui->devkitCheckBox, helptexts.settings.experimental_devkit);
     SubscribeHelpText(ui->neoCheckBox, helptexts.settings.experimental_neo);
+    SubscribeHelpText(ui->psnSignInCheckBox, helptexts.settings.experimental_shadnet);
     SubscribeHelpText(ui->networkConnectedCheckBox,
                       helptexts.settings.experimental_network_connected);
-    SubscribeHelpText(ui->shadNetGroupBox, helptexts.settings.experimental_shadnet);
+    SubscribeHelpText(ui->shadNetGroupBox, helptexts.settings.experimental_shadnet_config);
+    SubscribeHelpText(ui->shadNetServerLineEdit, helptexts.settings.experimental_shadnet_server);
+    SubscribeHelpText(ui->shadNetWebApiServerLineEdit,
+                      helptexts.settings.experimental_shadnet_webapi);
+    SubscribeHelpText(ui->signalingInfoLineEdit,
+                      helptexts.settings.experimental_shadnet_signaling);
+    SubscribeHelpText(ui->upnpCheckBox, helptexts.settings.experimental_upnp);
     SubscribeHelpText(ui->shaderCacheGroupBox, helptexts.settings.experimental_shader_cache);
     SubscribeHelpText(ui->enableShaderCacheCheckBox, helptexts.settings.experimental_shader_cache);
     SubscribeHelpText(ui->archiveShaderCacheCheckBox,
