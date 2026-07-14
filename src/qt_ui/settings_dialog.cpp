@@ -291,8 +291,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->shadNetServerLineEdit, helptexts.settings.experimental_shadnet_server);
     SubscribeHelpText(ui->shadNetWebApiServerLineEdit,
                       helptexts.settings.experimental_shadnet_webapi);
-    SubscribeHelpText(ui->signalingInfoLineEdit,
-                      helptexts.settings.experimental_shadnet_signaling);
+    SubscribeHelpText(ui->signalingInfoLineEdit, helptexts.settings.experimental_shadnet_signaling);
     SubscribeHelpText(ui->upnpCheckBox, helptexts.settings.experimental_upnp);
     SubscribeHelpText(ui->shaderCacheGroupBox, helptexts.settings.experimental_shader_cache);
     SubscribeHelpText(ui->enableShaderCacheCheckBox, helptexts.settings.experimental_shader_cache);
