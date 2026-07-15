@@ -1,7 +1,11 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2026 shadLauncher4 Emulator Project
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 set -euo pipefail
 
 if [[ -z "${GITHUB_WORKSPACE:-}" ]]; then
-GITHUB_WORKSPACE="${PWD%/*}"
+    GITHUB_WORKSPACE="${PWD%/*}"
 fi
 
 export EXTRA_QT_PLUGINS="waylandcompositor"
@@ -19,25 +23,22 @@ chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
 chmod +x linuxdeploy-plugin-checkrt-x86_64.sh
 
 if command -v qtpaths >/dev/null 2>&1; then
-QT_PLUGIN_DIR="$(qtpaths --plugin-dir)"
+    QT_PLUGIN_DIR="$(qtpaths --plugin-dir)"
 
-```
-echo "Qt plugin directory: $QT_PLUGIN_DIR"
+    echo "Qt plugin directory: $QT_PLUGIN_DIR"
 
-if [[ -d "$QT_PLUGIN_DIR/sqldrivers" ]]; then
-    echo "Installed SQL drivers:"
-    ls -la "$QT_PLUGIN_DIR/sqldrivers"
+    if [[ -d "$QT_PLUGIN_DIR/sqldrivers" ]]; then
+        echo "Installed SQL drivers:"
+        ls -la "$QT_PLUGIN_DIR/sqldrivers"
 
-    rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlmimer.so"
-    rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlmysql.so"
-    rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlpsql.so"
-    rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlodbc.so"
+        rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlmimer.so"
+        rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlmysql.so"
+        rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlpsql.so"
+        rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlodbc.so"
 
-    echo "Remaining SQL drivers:"
-    ls -la "$QT_PLUGIN_DIR/sqldrivers"
-fi
-```
-
+        echo "Remaining SQL drivers:"
+        ls -la "$QT_PLUGIN_DIR/sqldrivers"
+    fi
 fi
 
 ./linuxdeploy-x86_64.AppImage --appdir AppDir
@@ -46,22 +47,21 @@ fi
 mkdir -p AppDir/usr/bin
 
 if [[ -d "$GITHUB_WORKSPACE/build/translations" ]]; then
-cp -a "$GITHUB_WORKSPACE/build/translations" AppDir/usr/bin/
+    cp -a "$GITHUB_WORKSPACE/build/translations" AppDir/usr/bin/
 fi
 
-./linuxdeploy-x86_64.AppImage 
---appdir AppDir 
--d "$GITHUB_WORKSPACE/dist/net.shadps4.shadLauncher4.desktop" 
--e "$GITHUB_WORKSPACE/build/shadLauncher4" 
--i "$GITHUB_WORKSPACE/src/images/shadLauncher4.png" 
---plugin qt
+./linuxdeploy-x86_64.AppImage \
+    --appdir AppDir \
+    -d "$GITHUB_WORKSPACE/dist/net.shadps4.shadLauncher4.desktop" \
+    -e "$GITHUB_WORKSPACE/build/shadLauncher4" \
+    -i "$GITHUB_WORKSPACE/src/images/shadLauncher4.png" \
+    --plugin qt
 
 # Optional multimedia plugin removal
-
 rm -f AppDir/usr/plugins/multimedia/libgstreamermediaplugin.so
 
-./linuxdeploy-x86_64.AppImage 
---appdir AppDir 
---output appimage
+./linuxdeploy-x86_64.AppImage \
+    --appdir AppDir \
+    --output appimage
 
 echo "AppImage successfully created: $OUTPUT"
