@@ -86,7 +86,7 @@ GameListFrame::GameListFrame(std::shared_ptr<GUISettings> gui_settings,
 
     m_info_cache = std::make_shared<GameInfoCache>(
         Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "game_info_cache.sqlite3");
-    QtConcurrent::run([cache = m_info_cache]() { cache->WarmUp(); });
+    QThreadPool::globalInstance()->start([cache = m_info_cache]() { cache->WarmUp(); });
 
     // Save factors for first setup
     m_gui_settings->SetValue(GUI::game_list_iconColor, m_icon_color, false);
@@ -939,9 +939,10 @@ void GameListFrame::OnRefreshFinished() {
         for (const auto& entry : m_path_entries) {
             known_paths.push_back(GUI::Utils::NormalizePath(std::filesystem::path(entry.path)));
         }
-        QtConcurrent::run([cache = m_info_cache, known_paths = std::move(known_paths)]() {
-            cache->Prune(known_paths);
-        });
+        QThreadPool::globalInstance()->start(
+            [cache = m_info_cache, known_paths = std::move(known_paths)]() {
+                cache->Prune(known_paths);
+            });
     }
 
     m_serials.clear();
