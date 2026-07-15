@@ -1,5 +1,5 @@
 #!/bin/bash
-# SPDX-FileCopyrightText: 2026 shadLauncher4 Emulator Project
+# SPDX-FileCopyrightText: 2024 shadPS4 Emulator Project
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 set -euo pipefail
@@ -22,23 +22,30 @@ chmod +x linuxdeploy-x86_64.AppImage
 chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
 chmod +x linuxdeploy-plugin-checkrt-x86_64.sh
 
-if command -v qtpaths >/dev/null 2>&1; then
+# Prefer the workflow-provided plugin path (aqtinstall Qt); fall back to qtpaths.
+QT_PLUGIN_DIR="${QT_PLUGIN_PATH:-}"
+if [[ -z "$QT_PLUGIN_DIR" ]] && command -v qtpaths >/dev/null 2>&1; then
     QT_PLUGIN_DIR="$(qtpaths --plugin-dir)"
+fi
 
+if [[ -n "$QT_PLUGIN_DIR" && -d "$QT_PLUGIN_DIR/sqldrivers" ]]; then
     echo "Qt plugin directory: $QT_PLUGIN_DIR"
+    echo "Installed SQL drivers:"
+    ls -la "$QT_PLUGIN_DIR/sqldrivers"
 
-    if [[ -d "$QT_PLUGIN_DIR/sqldrivers" ]]; then
-        echo "Installed SQL drivers:"
-        ls -la "$QT_PLUGIN_DIR/sqldrivers"
+    # Remove drivers whose client libraries are not present on the build
+    # runner (Oracle, InterBase/Firebird, Mimer, MySQL, PostgreSQL, ODBC).
+    # Keep only SQLite. linuxdeploy-plugin-qt bundles every driver it finds
+    # and fails hard on their missing dependencies (e.g. libclntsh.so).
+    rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqloci.so"
+    rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlibase.so"
+    rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlmimer.so"
+    rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlmysql.so"
+    rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlpsql.so"
+    rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlodbc.so"
 
-        rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlmimer.so"
-        rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlmysql.so"
-        rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlpsql.so"
-        rm -f "$QT_PLUGIN_DIR/sqldrivers/libqsqlodbc.so"
-
-        echo "Remaining SQL drivers:"
-        ls -la "$QT_PLUGIN_DIR/sqldrivers"
-    fi
+    echo "Remaining SQL drivers:"
+    ls -la "$QT_PLUGIN_DIR/sqldrivers"
 fi
 
 ./linuxdeploy-x86_64.AppImage --appdir AppDir
