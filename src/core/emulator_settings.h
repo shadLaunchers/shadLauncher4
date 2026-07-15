@@ -3,7 +3,6 @@
 
 #pragma once
 
-#include <atomic>
 #include <filesystem>
 #include <functional>
 #include <memory>
@@ -519,9 +518,7 @@ private:
     VulkanSettings m_vulkan{};
     ConfigMode m_configMode{ConfigMode::Default};
 
-    // Runtime-only override: when true, IsShadNetEnabled() reports false for the
-    // rest of this run regardless of the persisted setting
-    std::atomic<bool> m_shadnet_session_disabled{false};
+    bool m_shadnet_session_disabled{false};
 
     bool m_loaded{false};
 
@@ -602,8 +599,7 @@ public:
     SETTING_FORWARD_BOOL(m_general, DevKit, dev_kit_mode)
     SETTING_FORWARD(m_general, ExtraDmemInMBytes, extra_dmem_in_mbytes)
     bool IsShadNetEnabled() const {
-        return m_general.shad_net_enabled.get(m_configMode) &&
-               !m_shadnet_session_disabled.load(std::memory_order_relaxed);
+        return m_general.shad_net_enabled.get(m_configMode) && !m_shadnet_session_disabled;
     }
     void SetShadNetEnabled(bool v, bool specific = false) {
         m_general.shad_net_enabled.set(v, specific);
@@ -612,10 +608,10 @@ public:
         return m_general.shad_net_enabled.get(m_configMode);
     }
     void SetShadNetSessionDisabled(bool v) {
-        m_shadnet_session_disabled.store(v, std::memory_order_relaxed);
+        m_shadnet_session_disabled = v;
     }
     bool IsShadNetSessionDisabled() const {
-        return m_shadnet_session_disabled.load(std::memory_order_relaxed);
+        return m_shadnet_session_disabled;
     }
     SETTING_FORWARD_BOOL(m_general, TrophyPopupDisabled, trophy_popup_disabled)
     SETTING_FORWARD(m_general, TrophyNotificationDuration, trophy_notification_duration)
