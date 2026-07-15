@@ -3968,6 +3968,154 @@ This will remove all game-specific overrides.</source>
         <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Check for Updates at Startup:\nAutomatically check for a new launcher version each time it starts.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Always Show Changelog:\nDisplay the changelog dialog after installing an update, even for minor releases.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check for Updates:\nManually check right now for a newer launcher version.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Simple FPS Counter:\nDisplays a basic frames-per-second counter overlay while a game is running.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use Separate Update Folder:\nInstall PKG game updates to their own folder instead of merging them into the base game&apos;s install folder.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log:\nSettings that control what gets logged and how log files are written.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load Presets...:\nChoose from a list of common log filter presets instead of typing one by hand.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Music Volume:\nAdjust the volume of the background/title music played in the GUI.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Theme:\nChoose the stylesheet used for the launcher&apos;s interface. Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Background Image:\nDisplay a background image behind the game list. Use the Opacity slider below to control how visible it is.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio Backend:\nSelects the backend library used for audio output. SDL is recommended for most users.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio Device (general):\nSelects which system audio output device the emulator uses for general game audio.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio Device (DS4 speaker):\nSelects which system audio output device is used for sound played through a connected DualShock 4/DualSense controller&apos;s built-in speaker.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compatibility:\nSettings for displaying and updating the game compatibility database.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Display Options:\nSettings that control how and where the emulator&apos;s video output is presented.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Display Mode:\nChoose whether the game runs in a window, fullscreen, or borderless fullscreen.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FSR Settings:\nAMD FidelityFX Super Resolution upscaling and sharpening options.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable FSR:\nUses AMD FidelityFX Super Resolution to upscale the rendered image, which can improve performance at lower internal resolutions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable RCAS (sharpening):\nApplies FSR&apos;s Robust Contrast Adaptive Sharpening pass to the image. Requires FSR to be enabled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RCAS Attenuation:\nControls the strength of the RCAS sharpening effect. Lower values sharpen the image more.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cursor:\nSettings that control when and how the mouse cursor is hidden.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Controller:\nSettings related to gamepad and mouse input behavior.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use Mice as Mice:\nLets the mouse behave as a regular mouse instead of being treated as an emulated controller input.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use Circle Button to Confirm:\nSwaps the Circle and Cross buttons&apos; roles so Circle acts as the confirm/enter button, matching Japanese console conventions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>IME:\nSettings for the on-screen keyboard/input method editor used by games for text entry.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable IME Accessibility:\nEnables accessibility features for the on-screen keyboard, such as additional audio/visual cues.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable IME URL/Email Short Panel:\nShows a shortened on-screen keyboard layout optimized for entering URLs and email addresses.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Camera Device:\nSelects which connected camera device the emulator exposes to games as the PlayStation Camera.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Debug:\nTools for diagnosing crashes and inspecting emulator behavior. Intended for troubleshooting and development, not everyday use.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Advanced:\nLower-level debugging options for diagnosing rendering issues and crashes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vulkan Validation:\nEnables Vulkan&apos;s built-in validation layers to catch incorrect API usage. Reduces performance; requires the Vulkan SDK to be installed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Experimental:\nFeatures that are still in development or considered unstable. Use with caution - these can cause crashes or unexpected behavior.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ShadNet Server Settings:\nConfigure the server addresses used to connect to a ShadNet-compatible online service. Only used while ShadNet is enabled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Server:\nThe address of the ShadNet server to connect to.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>WebAPI Server:\nThe address of the ShadNet WebAPI server used for account and session management.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signaling Info:\nConnection details used for ShadNet&apos;s peer-to-peer signaling/matchmaking.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable UPnP:\nAutomatically configure port forwarding on your router via UPnP for ShadNet&apos;s networked features.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>TrophyViewer</name>
