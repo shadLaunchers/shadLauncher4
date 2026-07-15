@@ -13,6 +13,7 @@
 GameListGrid::GameListGrid(GameListFrame* frame, std::shared_ptr<GUISettings> gui_settings)
     : m_game_list_frame(frame), m_gui_settings(std::move(gui_settings)), FlowWidget(nullptr),
       GameListBase() {
+    SetInfoCache(m_game_list_frame ? m_game_list_frame->GetInfoCache() : nullptr);
     setObjectName("game_list_grid");
     setContextMenuPolicy(Qt::CustomContextMenu);
     setStyleSheet(

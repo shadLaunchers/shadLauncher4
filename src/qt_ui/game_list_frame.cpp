@@ -84,6 +84,10 @@ GameListFrame::GameListFrame(std::shared_ptr<GUISettings> gui_settings,
 
     m_old_layout_is_list = m_is_list_layout;
 
+    m_info_cache = std::make_shared<GameInfoCache>(
+        Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "game_info_cache.sqlite3");
+    QThreadPool::globalInstance()->start([cache = m_info_cache]() { cache->WarmUp(); });
+
     // Save factors for first setup
     m_gui_settings->SetValue(GUI::game_list_iconColor, m_icon_color, false);
     m_gui_settings->SetValue(GUI::game_list_marginFactor, m_margin_factor, false);
@@ -593,145 +597,178 @@ void GameListFrame::OnParsingFinished() {
     const std::string localized_title = fmt::format("TITLE_%02d", language_index);
     const std::string localized_icon = fmt::format("ICON0_%02d.PNG", language_index);
 
-    const auto add_game = [this, localized_title, localized_icon](const std::string& dir_or_elf) {
+    const auto add_game = [this, localized_title, localized_icon,
+                           language_index](const std::string& dir_or_elf) {
         GUIGameInfo game{};
         game.info.path = GUI::Utils::NormalizePath(std::filesystem::path(dir_or_elf));
 
         const Localized thread_localized;
 
         const std::string sfo_dir = dir_or_elf + "/sce_sys";
-        PSF psf;
-        psf.Open(sfo_dir + "/param.sfo");
-        if (const auto category = psf.GetString("CATEGORY"); category.has_value()) {
-            game.info.category = *category;
+        const std::string sfo_path = sfo_dir + "/param.sfo";
+
+        s64 fingerprint = 0;
+        if (std::error_code ec; std::filesystem::exists(sfo_path, ec) && !ec) {
+            if (const auto ftime = std::filesystem::last_write_time(sfo_path, ec); !ec) {
+                fingerprint = static_cast<s64>(ftime.time_since_epoch().count()) ^
+                              (static_cast<s64>(language_index) << 48);
+            }
+        }
+
+        if (fingerprint != 0) {
+            if (auto cached = m_info_cache->Get(game.info.path, fingerprint)) {
+                game.info = std::move(*cached);
+            }
+        }
+
+        if (game.info.serial.empty()) {
+            PSF psf;
+            psf.Open(sfo_path);
+            if (const auto category = psf.GetString("CATEGORY"); category.has_value()) {
+                game.info.category = *category;
+#ifdef _WIN32
+                if (_stricmp(game.info.category.c_str(), "ac") == 0) // skip dlc
+#else
+                if (strcasecmp(game.info.category.c_str(), "ac") == 0)
+#endif
+                    return;
+            }
+            NPBindFile m_npfile;
+            if (m_npfile.Load(dir_or_elf + "/sce_sys/npbind.dat")) {
+                game.info.np_comm_ids = m_npfile.GetNpCommIds();
+            }
+            std::string title_id = "";
+            if (const auto titleId = psf.GetString("TITLE_ID"); titleId.has_value()) {
+                title_id = *titleId;
+            }
+            if (title_id.empty()) {
+                qDebug() << "No TITLE_ID found in PARAM.SFO for path:"
+                         << QString::fromStdString(dir_or_elf);
+                return;
+            } else {
+                std::string name = "";
+                if (const auto locname = psf.GetString(localized_title); locname.has_value()) {
+                    name = *locname;
+                }
+                if (name.empty()) {
+                    if (const auto defname = psf.GetString("TITLE"); defname.has_value()) {
+                        name = *defname;
+                    }
+                }
+
+                game.info.serial = std::string(title_id);
+                game.info.name = std::string(name);
+                if (const auto appversion = psf.GetString("APP_VER"); appversion.has_value()) {
+                    game.info.app_ver = *appversion;
+                }
+
+                if (const auto pubtool_info = psf.GetString("PUBTOOLINFO");
+                    pubtool_info.has_value()) {
+                    u64 sdk_ver_offset = pubtool_info.value().find("sdk_ver");
+                    if (sdk_ver_offset == pubtool_info.value().npos) {
+                        game.info.sdk_ver = "0.00";
+                    } else {
+                        // Increment offset to account for sdk_ver= part of string.
+                        sdk_ver_offset += 8;
+                        u64 sdk_ver_len = pubtool_info.value().find(",", sdk_ver_offset);
+                        if (sdk_ver_len == pubtool_info.value().npos) {
+                            // If there's no more commas, this is likely the last entry of pubtool
+                            // info. Use string length instead.
+                            sdk_ver_len = pubtool_info.value().size();
+                        }
+                        sdk_ver_len -= sdk_ver_offset;
+                        std::string sdk_ver_string =
+                            pubtool_info.value().substr(sdk_ver_offset, sdk_ver_len).data();
+                        // Number is stored in base 16.
+                        uint32_t sdk_int = std::stoi(sdk_ver_string, nullptr, 16);
+                        u8 major_bcd = (sdk_int >> 24) & 0xFF;
+                        u8 minor_bcd = (sdk_int >> 16) & 0xFF;
+
+                        int major = ((major_bcd >> 4) * 10) + (major_bcd & 0xF);
+                        int minor = ((minor_bcd >> 4) * 10) + (minor_bcd & 0xF);
+
+                        QString sdk = QString("%1.%2").arg(major).arg(minor, 2, 10, QChar('0'));
+                        game.info.sdk_ver = sdk.toStdString();
+                    }
+                }
+
+                if (const auto fw_int_opt = psf.GetInteger("SYSTEM_VER"); fw_int_opt.has_value()) {
+                    uint32_t fw_int = *fw_int_opt;
+                    if (fw_int == 0) {
+                        game.info.fw = "0.00";
+                    } else {
+                        u8 major_bcd = (fw_int >> 24) & 0xFF;
+                        u8 minor_bcd = (fw_int >> 16) & 0xFF;
+
+                        int major = ((major_bcd >> 4) * 10) + (major_bcd & 0xF);
+                        int minor = ((minor_bcd >> 4) * 10) + (minor_bcd & 0xF);
+
+                        QString fw = QString("%1.%2").arg(major).arg(minor, 2, 10, QChar('0'));
+                        game.info.fw = fw.toStdString();
+                    }
+                }
+
+                if (const auto content_id = psf.GetString("CONTENT_ID");
+                    content_id.has_value() && !content_id->empty()) {
+                    char region = content_id->at(0);
+                    switch (region) {
+                    case 'U':
+                        game.info.region = "USA";
+                        break;
+                    case 'E':
+                        game.info.region = "Europe";
+                        break;
+                    case 'J':
+                        game.info.region = "Japan";
+                        break;
+                    case 'H':
+                        game.info.region = "Asia";
+                        break;
+                    case 'I':
+                        game.info.region = "World";
+                        break;
+                    default:
+                        game.info.region = "Unknown";
+                        break;
+                    }
+                }
+
+                if (const auto save_dir = psf.GetString("INSTALL_DIR_SAVEDATA");
+                    save_dir.has_value()) {
+                    game.info.save_dir = *save_dir;
+                } else {
+                    game.info.save_dir = game.info.serial;
+                }
+            }
+
+            game.info.pic_path = sfo_dir + "/PIC1.PNG";
+
+            if (game.info.icon_path.empty()) {
+                if (std::string icon_path = sfo_dir + "/" + localized_icon;
+                    std::filesystem::is_regular_file(icon_path)) {
+                    game.info.icon_path = std::move(icon_path);
+                } else {
+                    game.info.icon_path = sfo_dir + "/icon0.png";
+                }
+            }
+
+            if (game.info.snd0_path.empty()) {
+                if (std::filesystem::is_regular_file(sfo_dir + "/snd0.at9")) {
+                    game.info.snd0_path = sfo_dir + "/snd0.at9";
+                }
+            }
+
+            if (fingerprint != 0) {
+                m_info_cache->Put(game.info, fingerprint);
+            }
+        } else {
+            // Cache hit: category is already known without touching disk.
 #ifdef _WIN32
             if (_stricmp(game.info.category.c_str(), "ac") == 0) // skip dlc
 #else
             if (strcasecmp(game.info.category.c_str(), "ac") == 0)
 #endif
                 return;
-        }
-        NPBindFile m_npfile;
-        if (m_npfile.Load(dir_or_elf + "/sce_sys/npbind.dat")) {
-            game.info.np_comm_ids = m_npfile.GetNpCommIds();
-        }
-        std::string title_id = "";
-        if (const auto titleId = psf.GetString("TITLE_ID"); titleId.has_value()) {
-            title_id = *titleId;
-        }
-        if (title_id.empty()) {
-            qDebug() << "No TITLE_ID found in PARAM.SFO for path:"
-                     << QString::fromStdString(dir_or_elf);
-            return;
-        } else {
-            std::string name = "";
-            if (const auto locname = psf.GetString(localized_title); locname.has_value()) {
-                name = *locname;
-            }
-            if (name.empty()) {
-                if (const auto defname = psf.GetString("TITLE"); defname.has_value()) {
-                    name = *defname;
-                }
-            }
-
-            game.info.serial = std::string(title_id);
-            game.info.name = std::string(name);
-            if (const auto appversion = psf.GetString("APP_VER"); appversion.has_value()) {
-                game.info.app_ver = *appversion;
-            }
-
-            if (const auto pubtool_info = psf.GetString("PUBTOOLINFO"); pubtool_info.has_value()) {
-                u64 sdk_ver_offset = pubtool_info.value().find("sdk_ver");
-                if (sdk_ver_offset == pubtool_info.value().npos) {
-                    game.info.sdk_ver = "0.00";
-                } else {
-                    // Increment offset to account for sdk_ver= part of string.
-                    sdk_ver_offset += 8;
-                    u64 sdk_ver_len = pubtool_info.value().find(",", sdk_ver_offset);
-                    if (sdk_ver_len == pubtool_info.value().npos) {
-                        // If there's no more commas, this is likely the last entry of pubtool info.
-                        // Use string length instead.
-                        sdk_ver_len = pubtool_info.value().size();
-                    }
-                    sdk_ver_len -= sdk_ver_offset;
-                    std::string sdk_ver_string =
-                        pubtool_info.value().substr(sdk_ver_offset, sdk_ver_len).data();
-                    // Number is stored in base 16.
-                    uint32_t sdk_int = std::stoi(sdk_ver_string, nullptr, 16);
-                    u8 major_bcd = (sdk_int >> 24) & 0xFF;
-                    u8 minor_bcd = (sdk_int >> 16) & 0xFF;
-
-                    int major = ((major_bcd >> 4) * 10) + (major_bcd & 0xF);
-                    int minor = ((minor_bcd >> 4) * 10) + (minor_bcd & 0xF);
-
-                    QString sdk = QString("%1.%2").arg(major).arg(minor, 2, 10, QChar('0'));
-                    game.info.sdk_ver = sdk.toStdString();
-                }
-            }
-
-            if (const auto fw_int_opt = psf.GetInteger("SYSTEM_VER"); fw_int_opt.has_value()) {
-                uint32_t fw_int = *fw_int_opt;
-                if (fw_int == 0) {
-                    game.info.fw = "0.00";
-                } else {
-                    u8 major_bcd = (fw_int >> 24) & 0xFF;
-                    u8 minor_bcd = (fw_int >> 16) & 0xFF;
-
-                    int major = ((major_bcd >> 4) * 10) + (major_bcd & 0xF);
-                    int minor = ((minor_bcd >> 4) * 10) + (minor_bcd & 0xF);
-
-                    QString fw = QString("%1.%2").arg(major).arg(minor, 2, 10, QChar('0'));
-                    game.info.fw = fw.toStdString();
-                }
-            }
-
-            if (const auto content_id = psf.GetString("CONTENT_ID");
-                content_id.has_value() && !content_id->empty()) {
-                char region = content_id->at(0);
-                switch (region) {
-                case 'U':
-                    game.info.region = "USA";
-                    break;
-                case 'E':
-                    game.info.region = "Europe";
-                    break;
-                case 'J':
-                    game.info.region = "Japan";
-                    break;
-                case 'H':
-                    game.info.region = "Asia";
-                    break;
-                case 'I':
-                    game.info.region = "World";
-                    break;
-                default:
-                    game.info.region = "Unknown";
-                    break;
-                }
-            }
-
-            if (const auto save_dir = psf.GetString("INSTALL_DIR_SAVEDATA"); save_dir.has_value()) {
-                game.info.save_dir = *save_dir;
-            } else {
-                game.info.save_dir = game.info.serial;
-            }
-        }
-
-        game.info.pic_path = sfo_dir + "/PIC1.PNG";
-
-        if (game.info.icon_path.empty()) {
-            if (std::string icon_path = sfo_dir + "/" + localized_icon;
-                std::filesystem::is_regular_file(icon_path)) {
-                game.info.icon_path = std::move(icon_path);
-            } else {
-                game.info.icon_path = sfo_dir + "/icon0.png";
-            }
-        }
-
-        if (game.info.snd0_path.empty()) {
-            if (std::filesystem::is_regular_file(sfo_dir + "/snd0.at9")) {
-                game.info.snd0_path = sfo_dir + "/snd0.at9";
-            }
         }
 
         const QString serial = QString::fromStdString(game.info.serial);
@@ -896,6 +933,18 @@ void GameListFrame::OnRefreshFinished() {
     // Clean up hidden games list
     m_hidden_list.intersect(m_serials);
     m_gui_settings->SetValue(GUI::game_list_hidden_list, QStringList(m_hidden_list.values()));
+    {
+        std::vector<std::string> known_paths;
+        known_paths.reserve(m_path_entries.size());
+        for (const auto& entry : m_path_entries) {
+            known_paths.push_back(GUI::Utils::NormalizePath(std::filesystem::path(entry.path)));
+        }
+        QThreadPool::globalInstance()->start(
+            [cache = m_info_cache, known_paths = std::move(known_paths)]() {
+                cache->Prune(known_paths);
+            });
+    }
+
     m_serials.clear();
     m_path_list.clear();
     m_path_entries.clear();
@@ -1426,6 +1475,23 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
                                      tr("Shader cache deleted successfully."));
             return;
         }
+
+        case DeleteType::MetadataCache: {
+            QMessageBox::StandardButton reply =
+                QMessageBox::question(this, tr("Clear Metadata Cache"),
+                                      tr("Clear the cached name/serial/icon/size info for %1?\n\n"
+                                         "It will be re-read from disk on the next refresh.")
+                                          .arg(QString::fromStdString(gameinfo->info.name)),
+                                      QMessageBox::Yes | QMessageBox::No);
+            if (reply != QMessageBox::Yes) {
+                return;
+            }
+            if (m_info_cache) {
+                m_info_cache->ClearGame(gameinfo->info.path);
+            }
+            Refresh(true);
+            return;
+        }
         }
 
         QMessageBox::StandardButton reply = QMessageBox::question(
@@ -1720,6 +1786,8 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
     QAction* delete_DLC = delete_menu->addAction(tr("&Delete DLC "));
     QAction* delete_trophy = delete_menu->addAction(tr("&Delete Trophy"));
     QAction* delete_shader_cache = delete_menu->addAction(tr("&Delete Shader Cache"));
+    delete_menu->addSeparator();
+    QAction* clear_metadata_cache = delete_menu->addAction(tr("Clear &Metadata Cache"));
     delete_trophy->setEnabled(false); // TODO
 
     // Compatibility
@@ -1759,6 +1827,8 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
     connect(delete_trophy, &QAction::triggered, this, [=] { deleteHandler(DeleteType::Trophy); });
     connect(delete_shader_cache, &QAction::triggered, this,
             [=] { deleteHandler(DeleteType::ShaderCache); });
+    connect(clear_metadata_cache, &QAction::triggered, this,
+            [=] { deleteHandler(DeleteType::MetadataCache); });
 
     // Compatibility menu actions
     connect(compatibility_view, &QAction::triggered, this, [this, gameinfo] {

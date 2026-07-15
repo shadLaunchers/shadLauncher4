@@ -205,7 +205,12 @@ struct GeneralSettings {
             make_override<GeneralSettings>("trophy_notification_side",
                                            &GeneralSettings::trophy_notification_side),
             make_override<GeneralSettings>("connected_to_network",
-                                           &GeneralSettings::connected_to_network)};
+                                           &GeneralSettings::connected_to_network),
+            make_override<GeneralSettings>("shadnet_server", &GeneralSettings::shadnet_server),
+            make_override<GeneralSettings>("shadnet_webapi_server",
+                                           &GeneralSettings::shadnet_webapi_server),
+            make_override<GeneralSettings>("signaling_info", &GeneralSettings::signaling_info),
+            make_override<GeneralSettings>("enable_upnp", &GeneralSettings::enable_upnp)};
     }
 };
 
@@ -513,6 +518,8 @@ private:
     VulkanSettings m_vulkan{};
     ConfigMode m_configMode{ConfigMode::Default};
 
+    bool m_shadnet_session_disabled{false};
+
     bool m_loaded{false};
 
     static std::shared_ptr<EmulatorSettingsImpl> s_instance;
@@ -591,7 +598,21 @@ public:
     SETTING_FORWARD_BOOL(m_general, Neo, neo_mode)
     SETTING_FORWARD_BOOL(m_general, DevKit, dev_kit_mode)
     SETTING_FORWARD(m_general, ExtraDmemInMBytes, extra_dmem_in_mbytes)
-    SETTING_FORWARD_BOOL(m_general, ShadNetEnabled, shad_net_enabled)
+    bool IsShadNetEnabled() const {
+        return m_general.shad_net_enabled.get(m_configMode) && !m_shadnet_session_disabled;
+    }
+    void SetShadNetEnabled(bool v, bool specific = false) {
+        m_general.shad_net_enabled.set(v, specific);
+    }
+    bool IsShadNetEnabledSetting() const {
+        return m_general.shad_net_enabled.get(m_configMode);
+    }
+    void SetShadNetSessionDisabled(bool v) {
+        m_shadnet_session_disabled = v;
+    }
+    bool IsShadNetSessionDisabled() const {
+        return m_shadnet_session_disabled;
+    }
     SETTING_FORWARD_BOOL(m_general, TrophyPopupDisabled, trophy_popup_disabled)
     SETTING_FORWARD(m_general, TrophyNotificationDuration, trophy_notification_duration)
     SETTING_FORWARD(m_general, TrophyNotificationSide, trophy_notification_side)
