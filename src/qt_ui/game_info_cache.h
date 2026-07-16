@@ -32,6 +32,14 @@ public:
     void Clear();
     void ClearGame(const std::string& game_path);
 
+    // Returns one GameInfo per distinct cached serial (deduped, and skipping DLC and
+    // -UPDATE/-patch sub-folders so update/patch directories - which share their base game's
+    // serial - don't show up as separate rows). Meant only for showing a last-known list
+    // instantly at startup before the real scan completes; every field this returns comes
+    // straight from the cache, so size/icon may be stale and compat/custom-config decoration
+    // isn't included at all - the real scan replaces this within moments.
+    std::vector<GameInfo> GetAllForInstantList();
+
 private:
     class Connection;
     Connection& ThreadConnection();
