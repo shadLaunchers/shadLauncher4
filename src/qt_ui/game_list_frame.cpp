@@ -1163,6 +1163,25 @@ QStringList GameListFrame::scanDirectories(const std::vector<std::filesystem::pa
 }
 #endif
 
+void GameListFrame::PopulateFromCacheInstantly() {
+    if (!m_info_cache) {
+        return;
+    }
+
+    std::vector<GameInfo> cached = m_info_cache->GetAllForInstantList();
+    if (cached.empty()) {
+        return;
+    }
+
+    for (auto& info : cached) {
+        auto game = std::make_shared<GUIGameInfo>();
+        game->info = std::move(info);
+        m_game_data.push_back(std::move(game));
+    }
+
+    Refresh(false, {}, false);
+}
+
 void GameListFrame::Refresh(const bool from_drive,
                             const std::vector<std::string>& serials_to_remove,
                             const bool scroll_after) {
@@ -1185,6 +1204,11 @@ void GameListFrame::Refresh(const bool from_drive,
         m_game_data.clear();
         m_notes.clear();
         m_games.pop_all();
+
+        if (!m_shown_instant_cache_list) {
+            m_shown_instant_cache_list = true;
+            PopulateFromCacheInstantly();
+        }
 
         if (m_progress_dialog) {
             m_progress_dialog->SetValue(0);

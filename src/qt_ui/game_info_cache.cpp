@@ -175,6 +175,45 @@ std::optional<GameInfo> GameInfoCache::Get(const std::string& game_path, s64 fin
     return info;
 }
 
+std::vector<GameInfo> GameInfoCache::GetAllForInstantList() {
+    Connection& conn = ThreadConnection();
+    if (!conn.IsValid()) {
+        return {};
+    }
+
+    QSqlQuery query(conn.Db());
+    if (!query.exec(QStringLiteral(
+            "SELECT path, serial, name, category, app_ver, sdk_ver, fw, region, save_dir,"
+            " icon_path, pic_path, snd0_path, np_comm_ids FROM game_cache"
+            " WHERE serial != '' AND category != 'ac'"
+            " AND path NOT LIKE '%-UPDATE' AND path NOT LIKE '%-patch'"
+            " GROUP BY serial ORDER BY name COLLATE NOCASE"))) {
+        LOG_ERROR(Frontend, "GameInfoCache: failed to query instant list: {}",
+                  query.lastError().text().toStdString());
+        return {};
+    }
+
+    std::vector<GameInfo> results;
+    while (query.next()) {
+        GameInfo info;
+        info.path = query.value(0).toString().toStdString();
+        info.serial = query.value(1).toString().toStdString();
+        info.name = query.value(2).toString().toStdString();
+        info.category = query.value(3).toString().toStdString();
+        info.app_ver = query.value(4).toString().toStdString();
+        info.sdk_ver = query.value(5).toString().toStdString();
+        info.fw = query.value(6).toString().toStdString();
+        info.region = query.value(7).toString().toStdString();
+        info.save_dir = query.value(8).toString().toStdString();
+        info.icon_path = query.value(9).toString().toStdString();
+        info.pic_path = query.value(10).toString().toStdString();
+        info.snd0_path = query.value(11).toString().toStdString();
+        info.np_comm_ids = SplitNpCommIds(query.value(12).toString());
+        results.push_back(std::move(info));
+    }
+    return results;
+}
+
 std::optional<u64> GameInfoCache::GetSize(const std::string& game_path, s64 size_fingerprint) {
     Connection& conn = ThreadConnection();
     if (!conn.IsValid()) {

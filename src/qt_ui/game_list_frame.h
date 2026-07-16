@@ -117,6 +117,7 @@ private:
     void WaitAndAbortSizeCalcThreads();
     game_info GetGameInfoByMode(const QTableWidgetItem* item) const;
     static game_info GetGameInfoFromItem(const QTableWidgetItem* item);
+    void PopulateFromCacheInstantly();
     // Settings
     std::shared_ptr<GUISettings> m_gui_settings;
     std::shared_ptr<EmulatorSettingsImpl> m_emu_settings;
@@ -147,6 +148,7 @@ private:
     lf_queue<game_info> m_games;
     const std::array<int, 1> m_parsing_threads{0};
     std::shared_ptr<GameInfoCache> m_info_cache;
+    bool m_shown_instant_cache_list = false;
     // List Mode
     bool m_is_list_layout = true;
     bool m_old_layout_is_list = true;
