@@ -1436,6 +1436,20 @@ Using local database.
         <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Clear Metadata Cache</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear the cached name/serial/icon/size info for %1?
+
+It will be re-read from disk on the next refresh.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear &amp;Metadata Cache</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GameListGrid</name>
