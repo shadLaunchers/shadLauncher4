@@ -845,6 +845,7 @@ void GameListFrame::OnParsingFinished() {
 void GameListFrame::OnRefreshFinished() {
     WaitAndAbortSizeCalcThreads();
     WaitAndAbortRepaintThreads();
+    m_game_data.clear();
 
     // Move parsed results into main game data list
     for (auto&& g : m_games.pop_all()) {
