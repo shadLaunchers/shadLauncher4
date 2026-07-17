@@ -228,6 +228,10 @@ void GameListFrame::CreateConnections() {
         m_game_data.clear();
         m_notes.clear();
         m_games.pop_all();
+        {
+            std::lock_guard lock(m_pending_cache_puts_mutex);
+            m_pending_cache_puts.clear();
+        }
     });
 
     connect(&m_parsing_watcher, &QFutureWatcher<void>::finished, this,
@@ -241,6 +245,10 @@ void GameListFrame::CreateConnections() {
         m_game_data.clear();
         m_serials.clear();
         m_games.pop_all();
+        {
+            std::lock_guard lock(m_pending_cache_puts_mutex);
+            m_pending_cache_puts.clear();
+        }
     });
     connect(&m_refresh_watcher, &QFutureWatcher<void>::finished, this,
             &GameListFrame::OnRefreshFinished);
@@ -253,6 +261,10 @@ void GameListFrame::CreateConnections() {
         m_game_data.clear();
         m_serials.clear();
         m_games.pop_all();
+        {
+            std::lock_guard lock(m_pending_cache_puts_mutex);
+            m_pending_cache_puts.clear();
+        }
 
         if (m_progress_dialog) {
             m_progress_dialog->accept();
@@ -597,8 +609,13 @@ void GameListFrame::OnParsingFinished() {
     const std::string localized_title = fmt::format("TITLE_%02d", language_index);
     const std::string localized_icon = fmt::format("ICON0_%02d.PNG", language_index);
 
-    const auto add_game = [this, localized_title, localized_icon,
-                           language_index](const std::string& dir_or_elf) {
+    auto cached_meta =
+        std::make_shared<const std::unordered_map<std::string, GameInfoCache::CachedEntry>>(
+            m_info_cache ? m_info_cache->GetAllMeta()
+                         : std::unordered_map<std::string, GameInfoCache::CachedEntry>{});
+
+    const auto add_game = [this, localized_title, localized_icon, language_index,
+                           cached_meta](const std::string& dir_or_elf) {
         GUIGameInfo game{};
         game.info.path = GUI::Utils::NormalizePath(std::filesystem::path(dir_or_elf));
 
@@ -616,8 +633,9 @@ void GameListFrame::OnParsingFinished() {
         }
 
         if (fingerprint != 0) {
-            if (auto cached = m_info_cache->Get(game.info.path, fingerprint)) {
-                game.info = std::move(*cached);
+            if (const auto it = cached_meta->find(game.info.path);
+                it != cached_meta->end() && it->second.fingerprint == fingerprint) {
+                game.info = it->second.info; // copy: the map is shared across worker threads
             }
         }
 
@@ -759,7 +777,8 @@ void GameListFrame::OnParsingFinished() {
             }
 
             if (fingerprint != 0) {
-                m_info_cache->Put(game.info, fingerprint);
+                std::lock_guard lock(m_pending_cache_puts_mutex);
+                m_pending_cache_puts.emplace_back(game.info, fingerprint);
             }
         } else {
             // Cache hit: category is already known without touching disk.
@@ -935,15 +954,22 @@ void GameListFrame::OnRefreshFinished() {
     m_hidden_list.intersect(m_serials);
     m_gui_settings->SetValue(GUI::game_list_hidden_list, QStringList(m_hidden_list.values()));
     {
+        std::vector<std::pair<GameInfo, s64>> pending_puts;
+        {
+            std::lock_guard lock(m_pending_cache_puts_mutex);
+            pending_puts.swap(m_pending_cache_puts);
+        }
         std::vector<std::string> known_paths;
         known_paths.reserve(m_path_entries.size());
         for (const auto& entry : m_path_entries) {
             known_paths.push_back(GUI::Utils::NormalizePath(std::filesystem::path(entry.path)));
         }
-        QThreadPool::globalInstance()->start(
-            [cache = m_info_cache, known_paths = std::move(known_paths)]() {
-                cache->Prune(known_paths);
-            });
+        QThreadPool::globalInstance()->start([cache = m_info_cache,
+                                              pending_puts = std::move(pending_puts),
+                                              known_paths = std::move(known_paths)]() {
+            cache->PutMany(pending_puts);
+            cache->Prune(known_paths);
+        });
     }
 
     m_serials.clear();
@@ -1205,6 +1231,10 @@ void GameListFrame::Refresh(const bool from_drive,
         m_game_data.clear();
         m_notes.clear();
         m_games.pop_all();
+        {
+            std::lock_guard lock(m_pending_cache_puts_mutex);
+            m_pending_cache_puts.clear();
+        }
 
         if (!m_shown_instant_cache_list) {
             m_shown_instant_cache_list = true;
