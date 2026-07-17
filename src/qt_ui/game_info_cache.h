@@ -6,6 +6,8 @@
 #include <filesystem>
 #include <optional>
 #include <string>
+#include <unordered_map>
+#include <utility>
 #include <vector>
 #include <QByteArray>
 #include <QString>
@@ -21,9 +23,16 @@ public:
     GameInfoCache(const GameInfoCache&) = delete;
     GameInfoCache& operator=(const GameInfoCache&) = delete;
 
+    struct CachedEntry {
+        s64 fingerprint;
+        GameInfo info;
+    };
+
     void WarmUp();
     std::optional<GameInfo> Get(const std::string& game_path, s64 fingerprint);
     void Put(const GameInfo& info, s64 fingerprint);
+    std::unordered_map<std::string, CachedEntry> GetAllMeta();
+    void PutMany(const std::vector<std::pair<GameInfo, s64>>& entries);
     std::optional<u64> GetSize(const std::string& game_path, s64 size_fingerprint);
     void PutSize(const std::string& game_path, u64 size_on_disk, s64 size_fingerprint);
     std::optional<QByteArray> GetIcon(const std::string& game_path, s64 icon_fingerprint);

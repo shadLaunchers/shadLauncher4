@@ -70,6 +70,7 @@ public:
         QSqlQuery setup(db);
         setup.exec(QStringLiteral("PRAGMA journal_mode=WAL"));
         setup.exec(QStringLiteral("PRAGMA synchronous=NORMAL"));
+        setup.exec(QStringLiteral("PRAGMA temp_store=MEMORY"));
         if (!setup.exec(
                 QStringLiteral("CREATE TABLE IF NOT EXISTS game_cache ("
                                "path TEXT PRIMARY KEY,"
@@ -173,6 +174,45 @@ std::optional<GameInfo> GameInfoCache::Get(const std::string& game_path, s64 fin
     info.snd0_path = query.value(11).toString().toStdString();
     info.np_comm_ids = SplitNpCommIds(query.value(12).toString());
     return info;
+}
+
+std::unordered_map<std::string, GameInfoCache::CachedEntry> GameInfoCache::GetAllMeta() {
+    Connection& conn = ThreadConnection();
+    if (!conn.IsValid()) {
+        return {};
+    }
+
+    QSqlQuery query(conn.Db());
+    query.setForwardOnly(true);
+    if (!query.exec(QStringLiteral(
+            "SELECT path, fingerprint, serial, name, category, app_ver, sdk_ver, fw, region,"
+            " save_dir, icon_path, pic_path, snd0_path, np_comm_ids FROM game_cache"))) {
+        LOG_ERROR(Frontend, "GameInfoCache: failed to bulk-load cache: {}",
+                  query.lastError().text().toStdString());
+        return {};
+    }
+
+    std::unordered_map<std::string, CachedEntry> results;
+    while (query.next()) {
+        CachedEntry entry;
+        entry.fingerprint = query.value(1).toLongLong();
+        entry.info.path = query.value(0).toString().toStdString();
+        entry.info.serial = query.value(2).toString().toStdString();
+        entry.info.name = query.value(3).toString().toStdString();
+        entry.info.category = query.value(4).toString().toStdString();
+        entry.info.app_ver = query.value(5).toString().toStdString();
+        entry.info.sdk_ver = query.value(6).toString().toStdString();
+        entry.info.fw = query.value(7).toString().toStdString();
+        entry.info.region = query.value(8).toString().toStdString();
+        entry.info.save_dir = query.value(9).toString().toStdString();
+        entry.info.icon_path = query.value(10).toString().toStdString();
+        entry.info.pic_path = query.value(11).toString().toStdString();
+        entry.info.snd0_path = query.value(12).toString().toStdString();
+        entry.info.np_comm_ids = SplitNpCommIds(query.value(13).toString());
+        std::string key = entry.info.path;
+        results.emplace(std::move(key), std::move(entry));
+    }
+    return results;
 }
 
 std::vector<GameInfo> GameInfoCache::GetAllForInstantList() {
@@ -312,12 +352,21 @@ void GameInfoCache::PutIcon(const std::string& game_path, const QByteArray& icon
 }
 
 void GameInfoCache::Put(const GameInfo& info, s64 fingerprint) {
+    PutMany({{info, fingerprint}});
+}
+
+void GameInfoCache::PutMany(const std::vector<std::pair<GameInfo, s64>>& entries) {
+    if (entries.empty()) {
+        return;
+    }
+
     Connection& conn = ThreadConnection();
     if (!conn.IsValid()) {
         return;
     }
 
-    QSqlQuery query(conn.Db());
+    QSqlDatabase db = conn.Db();
+    QSqlQuery query(db);
     query.prepare(QStringLiteral(
         "INSERT INTO game_cache (path, fingerprint, serial, name, category, app_ver, sdk_ver,"
         " fw, region, save_dir, icon_path, pic_path, snd0_path, np_comm_ids)"
@@ -328,25 +377,30 @@ void GameInfoCache::Put(const GameInfo& info, s64 fingerprint) {
         " fw=excluded.fw, region=excluded.region, save_dir=excluded.save_dir,"
         " icon_path=excluded.icon_path, pic_path=excluded.pic_path,"
         " snd0_path=excluded.snd0_path, np_comm_ids=excluded.np_comm_ids"));
-    query.addBindValue(QString::fromStdString(info.path));
-    query.addBindValue(static_cast<qint64>(fingerprint));
-    query.addBindValue(QString::fromStdString(info.serial));
-    query.addBindValue(QString::fromStdString(info.name));
-    query.addBindValue(QString::fromStdString(info.category));
-    query.addBindValue(QString::fromStdString(info.app_ver));
-    query.addBindValue(QString::fromStdString(info.sdk_ver));
-    query.addBindValue(QString::fromStdString(info.fw));
-    query.addBindValue(QString::fromStdString(info.region));
-    query.addBindValue(QString::fromStdString(info.save_dir));
-    query.addBindValue(QString::fromStdString(info.icon_path));
-    query.addBindValue(QString::fromStdString(info.pic_path));
-    query.addBindValue(QString::fromStdString(info.snd0_path));
-    query.addBindValue(JoinNpCommIds(info.np_comm_ids));
 
-    if (!query.exec()) {
-        LOG_ERROR(Frontend, "GameInfoCache: failed to cache '{}': {}", info.path,
-                  query.lastError().text().toStdString());
+    db.transaction();
+    for (const auto& [info, fingerprint] : entries) {
+        query.addBindValue(QString::fromStdString(info.path));
+        query.addBindValue(static_cast<qint64>(fingerprint));
+        query.addBindValue(QString::fromStdString(info.serial));
+        query.addBindValue(QString::fromStdString(info.name));
+        query.addBindValue(QString::fromStdString(info.category));
+        query.addBindValue(QString::fromStdString(info.app_ver));
+        query.addBindValue(QString::fromStdString(info.sdk_ver));
+        query.addBindValue(QString::fromStdString(info.fw));
+        query.addBindValue(QString::fromStdString(info.region));
+        query.addBindValue(QString::fromStdString(info.save_dir));
+        query.addBindValue(QString::fromStdString(info.icon_path));
+        query.addBindValue(QString::fromStdString(info.pic_path));
+        query.addBindValue(QString::fromStdString(info.snd0_path));
+        query.addBindValue(JoinNpCommIds(info.np_comm_ids));
+
+        if (!query.exec()) {
+            LOG_ERROR(Frontend, "GameInfoCache: failed to cache '{}': {}", info.path,
+                      query.lastError().text().toStdString());
+        }
     }
+    db.commit();
 }
 
 void GameInfoCache::Prune(const std::vector<std::string>& known_paths) {

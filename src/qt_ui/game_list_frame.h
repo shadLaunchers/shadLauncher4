@@ -21,8 +21,10 @@
 
 #include <filesystem>
 #include <memory>
+#include <mutex>
 #include <optional>
 #include <set>
+#include <utility>
 
 class GameListTable;
 class GameListGrid;
@@ -148,6 +150,8 @@ private:
     lf_queue<game_info> m_games;
     const std::array<int, 1> m_parsing_threads{0};
     std::shared_ptr<GameInfoCache> m_info_cache;
+    std::mutex m_pending_cache_puts_mutex;
+    std::vector<std::pair<GameInfo, s64>> m_pending_cache_puts;
     bool m_shown_instant_cache_list = false;
     // List Mode
     bool m_is_list_layout = true;
