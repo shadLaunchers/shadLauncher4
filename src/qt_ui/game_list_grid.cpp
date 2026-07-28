@@ -19,14 +19,16 @@ GameListGrid::GameListGrid(GameListFrame* frame, std::shared_ptr<GUISettings> gu
     setStyleSheet(
         GUI::Stylesheets::default_style_sheet); // todo: check why it's not applying w/o this
 
-    m_icon_ready_callback = [this](const game_info& game, const GameItemBase* item) {
-        Q_EMIT IconReady(game, item);
+    m_icon_ready_callback = [this](const game_info& game, const GameItemBase* item,
+                                   std::shared_ptr<std::atomic<bool>> cancel) {
+        Q_EMIT IconReady(game, item, cancel);
     };
 
     connect(
         this, &GameListGrid::IconReady, this,
-        [this](const game_info& game, const GameItemBase* item) {
-            if (game && item && game->item == item)
+        [this](const game_info& game, const GameItemBase* item,
+               std::shared_ptr<std::atomic<bool>> cancel) {
+            if (game && item && game->item == item && cancel && !cancel->load())
                 item->getImageChangeCallback();
         },
         Qt::QueuedConnection); // The default 'AutoConnection' doesn't seem to work in this specific
@@ -136,10 +138,10 @@ void GameListGrid::RepaintIcons(std::vector<game_info>& game_data, const QColor&
                 item->getImageChangeCallback();
             }
 
-            item->setIconLoadFunc(
-                [this, game, device_pixel_ratio, cancel = item->getIconLoadingAborted()](int) {
-                    IconLoadFunction(game, device_pixel_ratio, cancel);
-                });
+            item->setIconLoadFunc([this, game, item, device_pixel_ratio,
+                                   cancel = item->getIconLoadingAborted()](int) {
+                IconLoadFunction(game, item, device_pixel_ratio, cancel);
+            });
 
             item->AdjustSize();
             item->ShowTitle(show_title);

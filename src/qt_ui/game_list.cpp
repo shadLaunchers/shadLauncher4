@@ -10,8 +10,9 @@
 #include <QMenu>
 
 GameList::GameList() : QTableWidget(), GameListBase() {
-    m_icon_ready_callback = [this](const game_info& game, const GameItemBase* item) {
-        Q_EMIT IconReady(game, item);
+    m_icon_ready_callback = [this](const game_info& game, const GameItemBase* item,
+                                   std::shared_ptr<std::atomic<bool>> cancel) {
+        Q_EMIT IconReady(game, item, cancel);
     };
 }
 

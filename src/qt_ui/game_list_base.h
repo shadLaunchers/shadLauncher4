@@ -41,14 +41,15 @@ public:
     static QIcon GetCustomConfigIcon(const game_info& game);
 
 protected:
-    void IconLoadFunction(game_info game, qreal device_pixel_ratio,
+    void IconLoadFunction(game_info game, GameItemBase* item, qreal device_pixel_ratio,
                           std::shared_ptr<std::atomic<bool>> cancel);
     QPixmap PaintedPixmap(const QPixmap& icon, qreal device_pixel_ratio,
                           bool paint_config_icon = false, bool paint_pad_config_icon = false,
                           const QColor& compatibility_color = {}) const;
     QColor GetGridCompatibilityColor(const QString& string) const;
 
-    std::function<void(const game_info&, const GameItemBase*)> m_icon_ready_callback{};
+    std::function<void(const game_info&, const GameItemBase*, std::shared_ptr<std::atomic<bool>>)>
+        m_icon_ready_callback{};
     bool m_draw_compat_status_to_grid{};
     bool m_is_list_layout{};
     QSize m_icon_size{};

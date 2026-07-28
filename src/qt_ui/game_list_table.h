@@ -37,7 +37,8 @@ public:
                       const QSize& icon_size, qreal device_pixel_ratio) override;
 
 Q_SIGNALS:
-    void sizeOnDiskReady(const game_info& game, GameItemBase* item);
+    void sizeOnDiskReady(const game_info& game, GameItemBase* item,
+                         std::shared_ptr<std::atomic<bool>> cancel);
 
 private:
     GameListFrame* m_game_list_frame{};
