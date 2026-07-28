@@ -49,10 +49,10 @@ void GameListBase::RepaintIcons(std::vector<game_info>& game_data, const QColor&
         game->pxmap = placeholder;
 
         if (GameItemBase* item = game->item) {
-            item->setIconLoadFunc(
-                [this, game, item, device_pixel_ratio, cancel = item->getIconLoadingAborted()](int) {
-                    IconLoadFunction(game, item, device_pixel_ratio, cancel);
-                });
+            item->setIconLoadFunc([this, game, item, device_pixel_ratio,
+                                   cancel = item->getIconLoadingAborted()](int) {
+                IconLoadFunction(game, item, device_pixel_ratio, cancel);
+            });
 
             item->getImageChangeCallback();
         }
