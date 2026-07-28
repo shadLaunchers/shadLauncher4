@@ -12,6 +12,10 @@
 using icon_load_callback_t = std::function<void(int)>;
 using size_calc_callback_t = std::function<void()>;
 
+// IconReady/sizeOnDiskReady carry this across a queued (cross-thread) Qt
+// connection, which requires the type to be a registered QMetaType.
+Q_DECLARE_METATYPE(std::shared_ptr<std::atomic<bool>>)
+
 class GameItemBase {
 public:
     GameItemBase();

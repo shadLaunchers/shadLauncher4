@@ -36,7 +36,8 @@ Q_SIGNALS:
     void FocusToSearchBar();
     void ItemDoubleClicked(const game_info& game);
     void ItemSelectionChanged(const game_info& game);
-    void IconReady(const game_info& game, const GameItemBase* item);
+    void IconReady(const game_info& game, const GameItemBase* item,
+                   std::shared_ptr<std::atomic<bool>> cancel);
 
 private:
     GameListFrame* m_game_list_frame{};

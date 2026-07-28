@@ -50,8 +50,8 @@ void GameListBase::RepaintIcons(std::vector<game_info>& game_data, const QColor&
 
         if (GameItemBase* item = game->item) {
             item->setIconLoadFunc(
-                [this, game, device_pixel_ratio, cancel = item->getIconLoadingAborted()](int) {
-                    IconLoadFunction(game, device_pixel_ratio, cancel);
+                [this, game, item, device_pixel_ratio, cancel = item->getIconLoadingAborted()](int) {
+                    IconLoadFunction(game, item, device_pixel_ratio, cancel);
                 });
 
             item->getImageChangeCallback();
@@ -59,7 +59,7 @@ void GameListBase::RepaintIcons(std::vector<game_info>& game_data, const QColor&
     }
 }
 
-void GameListBase::IconLoadFunction(game_info game, qreal device_pixel_ratio,
+void GameListBase::IconLoadFunction(game_info game, GameItemBase* item, qreal device_pixel_ratio,
                                     std::shared_ptr<std::atomic<bool>> cancel) {
     if (cancel && cancel->load()) {
         return;
@@ -90,20 +90,20 @@ void GameListBase::IconLoadFunction(game_info game, qreal device_pixel_ratio,
         // TODO log if fails?
     }
 
-    if (!game->item || (cancel && cancel->load())) {
+    if (!item || (cancel && cancel->load())) {
         return;
     }
 
     const QColor color = GetGridCompatibilityColor(game->compat.color);
     {
-        std::lock_guard lock(game->item->pixmap_mutex);
+        std::lock_guard lock(item->pixmap_mutex);
         game->pxmap = PaintedPixmap(game->icon, device_pixel_ratio, game->has_custom_config,
                                     game->has_custom_pad_config, color);
     }
 
     if (!cancel || !cancel->load()) {
         if (m_icon_ready_callback)
-            m_icon_ready_callback(game, game->item);
+            m_icon_ready_callback(game, item, cancel);
     }
 }
 

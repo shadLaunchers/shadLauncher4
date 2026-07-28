@@ -78,11 +78,12 @@ GameListTable::GameListTable(GameListFrame* frame, std::shared_ptr<GUISettings> 
     setMouseTracking(true);
 
     connect(this, &GameListTable::sizeOnDiskReady, this,
-            [this](const game_info& game, GameItemBase* item) {
-                if (!game || !game->item || game->item != item)
+            [this](const game_info& game, GameItemBase* item,
+                   std::shared_ptr<std::atomic<bool>> cancel) {
+                if (!game || !item || game->item != item || !cancel || cancel->load())
                     return;
                 if (QTableWidgetItem* size_item =
-                        this->item(static_cast<GameItem*>(game->item)->row(),
+                        this->item(static_cast<GameItem*>(item)->row(),
                                    static_cast<int>(GUI::GameListColumns::dir_size))) {
                     const u64& game_size = game->info.size_on_disk;
                     size_item->setText(game_size != UINT64_MAX
@@ -93,8 +94,9 @@ GameListTable::GameListTable(GameListFrame* frame, std::shared_ptr<GUISettings> 
             });
 
     connect(this, &GameList::IconReady, this,
-            [this](const game_info& game, const GameItemBase* item) {
-                if (game && item && game->item == item)
+            [this](const game_info& game, const GameItemBase* item,
+                   std::shared_ptr<std::atomic<bool>> cancel) {
+                if (game && item && game->item == item && cancel && !cancel->load())
                     item->getImageChangeCallback();
             });
 }
@@ -273,7 +275,7 @@ void GameListTable::Populate(const std::vector<game_info>& game_data,
             }
         });
 
-        icon_item->setSizeCalcFunc([this, game,
+        icon_item->setSizeCalcFunc([this, game, icon_item,
                                     cancel = icon_item->getSizeOnDiskLoadingAborted()]() {
             if (!game || game->info.size_on_disk != UINT64_MAX || (cancel && cancel->load()))
                 return;
@@ -286,7 +288,7 @@ void GameListTable::Populate(const std::vector<game_info>& game_data,
                 if (const auto cached = info_cache->GetSize(game->info.path, size_fingerprint)) {
                     game->info.size_on_disk = *cached;
                     if (!cancel || !cancel->load()) {
-                        Q_EMIT sizeOnDiskReady(game, game->item);
+                        Q_EMIT sizeOnDiskReady(game, icon_item, cancel);
                     }
                     return;
                 }
@@ -313,7 +315,7 @@ void GameListTable::Populate(const std::vector<game_info>& game_data,
             }
 
             if (!cancel || !cancel->load()) {
-                Q_EMIT sizeOnDiskReady(game, game->item);
+                Q_EMIT sizeOnDiskReady(game, icon_item, cancel);
             }
         });
 

@@ -36,7 +36,8 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void FocusToSearchBar();
-    void IconReady(const game_info& game, const GameItemBase* item);
+    void IconReady(const game_info& game, const GameItemBase* item,
+                   std::shared_ptr<std::atomic<bool>> cancel);
 
 protected:
     void mousePressEvent(QMouseEvent* event) override;
