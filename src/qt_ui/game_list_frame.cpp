@@ -654,14 +654,7 @@ void GameListFrame::OnParsingFinished() {
         if (fingerprint != 0) {
             if (const auto it = cached_meta->find(game.info.path);
                 it != cached_meta->end() && it->second.fingerprint == fingerprint) {
-                game.info = it->second.info; // copy: the map is shared across worker threads
-            }
-        }
-
-        if (fingerprint != 0) {
-            if (const auto it = cached_meta->find(game.info.path);
-                it != cached_meta->end() && it->second.fingerprint == fingerprint) {
-                game.info = it->second.info; // copy: the map is shared across worker threads
+                game.info = it->second.info;
             }
         }
 
