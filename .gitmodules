@@ -29,3 +29,9 @@
 	path = externals/vulkan-headers
 	url = https://github.com/KhronosGroup/Vulkan-Headers.git
 	shallow = true
+[submodule "externals/zstd"]
+	path = externals/zstd
+	url = https://github.com/shadexternals/zstd.git
+[submodule "externals/zarchive"]
+	path = externals/zarchive
+	url = https://github.com/shadexternals/ZArchive.git

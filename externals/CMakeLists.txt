@@ -102,3 +102,28 @@ endif()
 if (WIN32)
     add_subdirectory(staticwinlibs)
 endif()
+
+# zstd (dependency of ZArchive)
+if (NOT TARGET libzstd_static)
+    set(ZSTD_BUILD_PROGRAMS OFF CACHE BOOL "" FORCE)
+    set(ZSTD_BUILD_SHARED OFF CACHE BOOL "" FORCE)
+    set(ZSTD_BUILD_STATIC ON CACHE BOOL "" FORCE)
+    set(ZSTD_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+    set(ZSTD_LEGACY_SUPPORT OFF CACHE BOOL "" FORCE)
+    set(ZSTD_MULTITHREAD_SUPPORT OFF CACHE BOOL "" FORCE)
+    add_subdirectory(zstd/build/cmake)
+endif()
+
+# ZArchive (.zar archive support, matches shadPS4's externals/CMakeLists.txt)
+if (NOT TARGET zarchive)
+    add_library(zarchive STATIC
+        zarchive/src/zarchivereader.cpp
+        zarchive/src/zarchivewriter.cpp
+        zarchive/src/sha_256.c
+    )
+    target_include_directories(zarchive PUBLIC zarchive/include)
+    target_include_directories(zarchive PRIVATE zstd/lib)
+    target_link_libraries(zarchive PRIVATE libzstd_static)
+    target_compile_features(zarchive PRIVATE cxx_std_20)
+    add_library(ZArchive::zarchive ALIAS zarchive)
+endif()

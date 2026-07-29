@@ -187,6 +187,12 @@ set(FILEFORMAT src/core/file_format/psf.cpp
                src/core/file_format/pkg_type.h
                src/core/file_format/trp.cpp
                src/core/file_format/trp.h
+               src/core/file_sys/game_backend.cpp
+               src/core/file_sys/game_backend.h
+               src/core/file_sys/backends/host_directory_backend.cpp
+               src/core/file_sys/backends/host_directory_backend.h
+               src/core/file_sys/backends/zarchive_backend.cpp
+               src/core/file_sys/backends/zarchive_backend.h
 )
 
 set(LIBRARIES src/core/libraries/system/system_service.h)
@@ -339,7 +345,7 @@ cmrc_add_resource_library(embedded-resources
 
 target_link_libraries(shadLauncher4 PRIVATE res::embedded)
 target_link_libraries(shadLauncher4 PRIVATE Vulkan::Headers fmt::fmt SDL3::SDL3 volk_headers spdlog::spdlog)
-target_link_libraries(shadLauncher4 PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Svg Qt6::Multimedia Qt6::Sql nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL)
+target_link_libraries(shadLauncher4 PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Svg Qt6::Multimedia Qt6::Sql nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL ZArchive::zarchive)
 
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
