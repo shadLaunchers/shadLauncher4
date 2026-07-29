@@ -639,8 +639,8 @@ void GameListFrame::OnParsingFinished() {
 
         s64 fingerprint = 0;
         if (is_archive) {
-            if (std::error_code ec;
-                const auto ftime = std::filesystem::last_write_time(entry_path, ec); !ec) {
+            std::error_code ec;
+            if (const auto ftime = std::filesystem::last_write_time(entry_path, ec); !ec) {
                 fingerprint = static_cast<s64>(ftime.time_since_epoch().count()) ^
                               (static_cast<s64>(language_index) << 48);
             }
@@ -648,6 +648,13 @@ void GameListFrame::OnParsingFinished() {
             if (const auto ftime = std::filesystem::last_write_time(sfo_path, ec); !ec) {
                 fingerprint = static_cast<s64>(ftime.time_since_epoch().count()) ^
                               (static_cast<s64>(language_index) << 48);
+            }
+        }
+
+        if (fingerprint != 0) {
+            if (const auto it = cached_meta->find(game.info.path);
+                it != cached_meta->end() && it->second.fingerprint == fingerprint) {
+                game.info = it->second.info; // copy: the map is shared across worker threads
             }
         }
 
