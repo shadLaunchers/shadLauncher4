@@ -1205,10 +1205,10 @@ void MainWindow::StartGameWithArgs(const game_info& game, QStringList args) {
     Common::FS::PathToQString(gamePath, ebootPath);
 
     if (gamePath != "") {
-        const bool eboot_present = Core::FileSys::IsZArchiveFile(basePath)
-                                       ? Core::FileSys::ReadGameFile(basePath, "eboot.bin")
-                                             .has_value()
-                                       : std::filesystem::exists(ebootPath);
+        const bool eboot_present =
+            Core::FileSys::IsZArchiveFile(basePath)
+                ? Core::FileSys::ReadGameFile(basePath, "eboot.bin").has_value()
+                : std::filesystem::exists(ebootPath);
         if (!eboot_present) {
             QMessageBox::critical(nullptr, tr("Run Game"), QString(tr("Eboot.bin file not found")));
             return;
