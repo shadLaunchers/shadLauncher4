@@ -114,7 +114,7 @@ if (NOT TARGET libzstd_static)
     add_subdirectory(zstd/build/cmake)
 endif()
 
-# ZArchive (.zar archive support, matches shadPS4's externals/CMakeLists.txt)
+# ZArchive (.zar archive support)
 if (NOT TARGET zarchive)
     add_library(zarchive STATIC
         zarchive/src/zarchivereader.cpp
