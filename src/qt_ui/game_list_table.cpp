@@ -8,6 +8,7 @@
 #include <QStringBuilder>
 #include "common/fs_util.h"
 #include "common/types.h"
+#include "core/file_sys/game_backend.h"
 #include "custom_table_widget_item.h"
 #include "game_info_cache.h"
 #include "game_list_delegate.h"
@@ -17,8 +18,6 @@
 #include "localized.h"
 #include "persistent_settings.h"
 #include "qt_utils.h"
-
-namespace {
 
 s64 ComputeSizeFingerprint(const std::string& game_path) {
     namespace fs = std::filesystem;
@@ -30,25 +29,30 @@ s64 ComputeSizeFingerprint(const std::string& game_path) {
             fingerprint ^= static_cast<s64>(ftime.time_since_epoch().count());
         }
     }
+    fs::path stem_path = game_path;
+    if (stem_path.extension() == ".zar") {
+        stem_path.replace_extension();
+    }
 
     for (const auto& suffix : {"-UPDATE", "-patch"}) {
-        fs::path extra_path = game_path;
+        fs::path extra_path = stem_path;
         extra_path += suffix;
 
-        if (std::error_code ec; fs::exists(extra_path, ec) && !ec) {
-            std::error_code ec2;
-            if (const auto ftime = fs::last_write_time(extra_path, ec2); !ec2) {
-                fingerprint ^= static_cast<s64>(ftime.time_since_epoch().count()) ^
-                               std::hash<std::string_view>{}(suffix);
-            }
-            break; // matches the "found -UPDATE, don't also look for -patch" logic below
+        const auto resolved_root = Core::FileSys::ResolveGameRoot(extra_path);
+        if (!resolved_root.has_value()) {
+            continue;
         }
+
+        std::error_code ec2;
+        if (const auto ftime = fs::last_write_time(*resolved_root, ec2); !ec2) {
+            fingerprint ^= static_cast<s64>(ftime.time_since_epoch().count()) ^
+                           std::hash<std::string_view>{}(suffix);
+        }
+        break; // matches the "found -UPDATE, don't also look for -patch" logic below
     }
 
     return fingerprint;
 }
-
-} // namespace
 
 GameListTable::GameListTable(GameListFrame* frame, std::shared_ptr<GUISettings> gui_settings,
                              std::shared_ptr<PersistentSettings> persistent_settings)
@@ -294,16 +298,35 @@ void GameListTable::Populate(const std::vector<game_info>& game_data,
                 }
             }
 
-            // Calculate main game folder size
-            uint64_t total_size = FS::Utils::GetDirSize(game->info.path, 1, cancel.get());
+            const std::filesystem::path game_path(game->info.path);
+            uint64_t total_size = Core::FileSys::IsZArchiveFile(game_path)
+                                      ? [&] {
+                                            std::error_code ec;
+                                            const auto sz =
+                                                std::filesystem::file_size(game_path, ec);
+                                            return ec ? 0ull : static_cast<uint64_t>(sz);
+                                        }()
+                                      : FS::Utils::GetDirSize(game->info.path, 1, cancel.get());
 
-            // Check for "-UPDATE" and "-PATCH" folders
+            // Check for "-UPDATE" and "-PATCH" folders/archives
+            std::filesystem::path stem_path = game_path;
+            if (stem_path.extension() == ".zar") {
+                stem_path.replace_extension();
+            }
             for (const auto& suffix : {"-UPDATE", "-patch"}) {
-                std::filesystem::path extra_path = game->info.path;
+                std::filesystem::path extra_path = stem_path;
                 extra_path += suffix;
 
-                if (std::filesystem::exists(extra_path) && (!cancel || !cancel->load())) {
-                    total_size += FS::Utils::GetDirSize(extra_path.string(), 1, cancel.get());
+                const auto resolved_root = Core::FileSys::ResolveGameRoot(extra_path);
+                if (resolved_root.has_value() && (!cancel || !cancel->load())) {
+                    if (Core::FileSys::IsZArchiveFile(*resolved_root)) {
+                        std::error_code ec;
+                        const auto sz = std::filesystem::file_size(*resolved_root, ec);
+                        total_size += ec ? 0ull : static_cast<uint64_t>(sz);
+                    } else {
+                        total_size +=
+                            FS::Utils::GetDirSize(resolved_root->string(), 1, cancel.get());
+                    }
                     break; // if update founds don't search for -patch
                 }
             }

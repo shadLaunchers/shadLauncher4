@@ -13,6 +13,7 @@
 #include <common/versions.h>
 #include <core/file_format/pkg.h>
 #include <core/file_format/psf.h>
+#include <core/file_sys/game_backend.h>
 
 #include "about_dialog.h"
 #include "background_music_player.h"
@@ -1204,8 +1205,11 @@ void MainWindow::StartGameWithArgs(const game_info& game, QStringList args) {
     Common::FS::PathToQString(gamePath, ebootPath);
 
     if (gamePath != "") {
-        // AddRecentFiles(gamePath);
-        if (!std::filesystem::exists(ebootPath)) {
+        const bool eboot_present = Core::FileSys::IsZArchiveFile(basePath)
+                                       ? Core::FileSys::ReadGameFile(basePath, "eboot.bin")
+                                             .has_value()
+                                       : std::filesystem::exists(ebootPath);
+        if (!eboot_present) {
             QMessageBox::critical(nullptr, tr("Run Game"), QString(tr("Eboot.bin file not found")));
             return;
         }
@@ -1387,6 +1391,12 @@ void MainWindow::StartEmulatorExecutable(QString emulatorArg, QString gameArg,
                             gameFound = true;
                             break;
                         }
+                    } else if (Core::FileSys::IsZArchiveFile(entry.path())) {
+                        if (entry.path().stem().string() == gameArg.toStdString()) {
+                            gamePath = entry.path();
+                            gameFound = true;
+                            break;
+                        }
                     }
                 }
             }
@@ -1432,7 +1442,8 @@ void MainWindow::StartEmulatorExecutable(QString emulatorArg, QString gameArg,
     QString workDir = QDir::currentPath();
     m_ipc_client->startEmulator(fileInfo, args, workDir);
 
-    GameInfo game = GameInfoTools::readGameInfo(gamePath.parent_path());
+    GameInfo game = GameInfoTools::readGameInfo(
+        Core::FileSys::IsZArchiveFile(gamePath) ? gamePath : gamePath.parent_path());
     auto appVersion = game.app_ver;
     auto gameSerial = game.serial;
     auto patches = MemoryPatcher::readPatches(gameSerial, appVersion);
