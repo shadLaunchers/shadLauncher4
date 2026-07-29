@@ -8,6 +8,7 @@
 
 #include <QJsonArray>
 #include <QJsonDocument>
+#include <QtConcurrentRun>
 
 GameCompatibility::GameCompatibility(std::shared_ptr<GUISettings> gui_settings, QWidget* parent)
     : QObject(parent), m_gui_settings(std::move(gui_settings)) {
@@ -31,6 +32,12 @@ GameCompatibility::GameCompatibility(std::shared_ptr<GUISettings> gui_settings, 
             &GameCompatibility::HandleDownloadCanceled);
 }
 
+GameCompatibility::~GameCompatibility() {
+    if (m_parse_watcher) {
+        m_parse_watcher->waitForFinished();
+    }
+}
+
 Compat::Status GameCompatibility::GetCompatibility(const std::string& title_id) {
     if (m_compat_database.empty()) {
         return m_status_data.at("NoData");
@@ -48,30 +55,8 @@ Compat::Status GameCompatibility::GetStatusData(const QString& status) const {
 }
 
 void GameCompatibility::HandleDownloadFinished(const QByteArray& content) {
-    qDebug() << "Database download finished";
-
-    // Create new map from database and write database to file if database was valid
-    if (ReadJSON(QJsonDocument::fromJson(content).object(), true)) {
-        // Write database to file
-        QFile file(m_filepath);
-
-        if (file.exists()) {
-            qDebug() << "Database file found:" << m_filepath;
-        }
-
-        if (!file.open(QIODevice::WriteOnly)) {
-            qDebug() << "Could not write database to file:" << m_filepath;
-            return;
-        }
-
-        file.write(content);
-        file.close();
-
-        qDebug() << "Wrote database to file:" << m_filepath;
-    }
-
-    // We have a new database in map, therefore refresh gamelist to new state
-    Q_EMIT DownloadFinished();
+    qDebug() << "Database download finished, parsing in background";
+    StartParse(content, /*after_download=*/true);
 }
 
 void GameCompatibility::HandleDownloadCanceled() {
@@ -100,10 +85,8 @@ void GameCompatibility::RequestCompatibility(bool online) {
         const QByteArray content = file.readAll();
         file.close();
 
-        qDebug() << "Finished reading database from file:" << m_filepath;
-
-        // Create new map from database
-        ReadJSON(QJsonDocument::fromJson(content).object(), online);
+        qDebug() << "Finished reading database from file, parsing in background:" << m_filepath;
+        StartParse(content, /*after_download=*/false);
 
         return;
     }
@@ -118,7 +101,10 @@ void GameCompatibility::RequestCompatibility(bool online) {
     Q_EMIT DownloadStarted();
 }
 
-bool GameCompatibility::ReadJSON(const QJsonObject& json_data, bool after_download) {
+std::optional<std::map<std::string, Compat::Status>> GameCompatibility::ParseDatabase(
+    const QByteArray& content) const {
+    const QJsonObject json_data = QJsonDocument::fromJson(content).object();
+
     // Set current_os automatically
     QString current_os;
 #ifdef Q_OS_WIN
@@ -132,26 +118,29 @@ bool GameCompatibility::ReadJSON(const QJsonObject& json_data, bool after_downlo
 #endif
     if (json_data.isEmpty()) {
         qDebug() << "Database Error - Empty JSON root";
-        Q_EMIT DownloadError(tr("Error Downloading Compatibility Database"));
-        return false;
+        return std::nullopt;
     }
-    m_compat_database.clear();
-    for (const QString& game_id : json_data.keys()) {
-        const QJsonValue game_value = json_data.value(game_id);
+
+    std::map<std::string, Compat::Status> database;
+
+    for (auto it = json_data.constBegin(); it != json_data.constEnd(); ++it) {
+        const QString& game_id = it.key();
+        const QJsonValue& game_value = it.value();
         if (!game_value.isObject()) {
             qDebug() << "Database Error - Unusable object:" << game_id;
             continue;
         }
         const QJsonObject game_object = game_value.toObject();
-        for (const QString& platform_key : game_object.keys()) { // match platform
-            const QJsonValue platform_value = game_object.value(platform_key);
+        for (auto platform_it = game_object.constBegin(); platform_it != game_object.constEnd();
+             ++platform_it) {
+            if (platform_it.key() != current_os) {
+                continue; // skip non-matching platform
+            }
+            const QJsonValue& platform_value = platform_it.value();
             if (!platform_value.isObject()) {
-                qDebug() << "Database Error - Invalid platform object:" << platform_key
+                qDebug() << "Database Error - Invalid platform object:" << platform_it.key()
                          << "for game ID:" << game_id;
                 continue;
-            }
-            if (platform_key != current_os) {
-                continue; // skip non-matching platform
             }
             const QJsonObject platform_obj = platform_value.toObject();
 
@@ -161,7 +150,11 @@ bool GameCompatibility::ReadJSON(const QJsonObject& json_data, bool after_downlo
             if (normalized.startsWith("Unknown")) {
                 normalized = "NoResult";
             }
-            Compat::Status status = m_status_data.at(normalized);
+            const auto status_it = m_status_data.find(normalized);
+            if (status_it == m_status_data.end()) {
+                continue;
+            }
+            Compat::Status status = status_it->second;
 
             QString isoDate = platform_obj.value("last_tested").toString();
             QDateTime dt = QDateTime::fromString(isoDate, Qt::ISODate);
@@ -171,9 +164,57 @@ bool GameCompatibility::ReadJSON(const QJsonObject& json_data, bool after_downlo
             status.issue_number = platform_obj.value("issue_number").toString();
 
             // Add status to map
-            m_compat_database.emplace(game_id.toStdString(), std::move(status));
+            database.emplace(game_id.toStdString(), std::move(status));
         }
     }
 
-    return true;
+    return database;
+}
+
+void GameCompatibility::StartParse(const QByteArray& content, bool after_download) {
+    if (!m_parse_watcher) {
+        m_parse_watcher =
+            new QFutureWatcher<std::optional<std::map<std::string, Compat::Status>>>(this);
+        connect(m_parse_watcher, &QFutureWatcherBase::finished, this,
+                &GameCompatibility::OnParseFinished);
+    }
+
+    m_pending_after_download = after_download;
+    m_pending_write_content = after_download ? content : QByteArray();
+
+    m_parse_watcher->setFuture(
+        QtConcurrent::run([this, content]() { return ParseDatabase(content); }));
+}
+
+void GameCompatibility::OnParseFinished() {
+    const auto result = m_parse_watcher->result();
+    const bool after_download = m_pending_after_download;
+
+    if (!result.has_value()) {
+        Q_EMIT DownloadError(tr("Error Downloading Compatibility Database"));
+        return;
+    }
+
+    m_compat_database = std::move(*result);
+
+    if (after_download) {
+        // Only persist to disk once we know the download actually parsed
+        // into something usable.
+        QFile file(m_filepath);
+
+        if (file.exists()) {
+            qDebug() << "Database file found:" << m_filepath;
+        }
+
+        if (!file.open(QIODevice::WriteOnly)) {
+            qDebug() << "Could not write database to file:" << m_filepath;
+        } else {
+            file.write(m_pending_write_content);
+            file.close();
+            qDebug() << "Wrote database to file:" << m_filepath;
+        }
+        m_pending_write_content.clear();
+    }
+
+    Q_EMIT DownloadFinished();
 }

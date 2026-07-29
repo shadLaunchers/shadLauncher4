@@ -117,6 +117,7 @@ private:
     std::string CurrentSelectionPath();
     void WaitAndAbortRepaintThreads();
     void WaitAndAbortSizeCalcThreads();
+    void UpdateCompatColumn();
     game_info GetGameInfoByMode(const QTableWidgetItem* item) const;
     static game_info GetGameInfoFromItem(const QTableWidgetItem* item);
     void PopulateFromCacheInstantly();

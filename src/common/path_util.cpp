@@ -4,6 +4,7 @@
 
 #include <unordered_map>
 #include "common/path_util.h"
+#include "core/file_sys/game_backend.h"
 
 namespace Common::FS {
 
@@ -77,6 +78,16 @@ std::optional<fs::path> FindGameByID(const fs::path& dir, const std::string& gam
         auto eboot_path = dir / "eboot.bin";
         if (fs::exists(eboot_path)) {
             return eboot_path;
+        }
+    }
+
+    // Also check for a same-named ZArchive sibling ("<game_id>.zar"), which
+    // packs the whole game folder (including sce_sys/param.sfo) into a
+    // single read-only file instead of a directory.
+    if (const auto zar_candidate = dir / (game_id + ".zar");
+        Core::FileSys::IsZArchiveFile(zar_candidate)) {
+        if (Core::FileSys::ReadGameFile(zar_candidate, "sce_sys/param.sfo").has_value()) {
+            return zar_candidate;
         }
     }
 

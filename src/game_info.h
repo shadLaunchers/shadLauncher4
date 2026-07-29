@@ -10,6 +10,7 @@
 
 #include "common/types.h"
 #include "core/file_format/psf.h"
+#include "core/file_sys/game_backend.h"
 
 struct GameInfo {
     std::string path; // root path of game directory (normaly directory that contains eboot.bin)
@@ -50,31 +51,42 @@ static QString GetRegion(char region) {
     }
 }
 
+// Strips a trailing ".zar" extension so overlay suffixes
+static std::filesystem::path StripZArchiveExtension(const std::filesystem::path& path) {
+    if (path.extension() == ".zar") {
+        std::filesystem::path stripped = path;
+        stripped.replace_extension();
+        return stripped;
+    }
+    return path;
+}
+
 static void SceUpdateChecker(const std::string sceItem, std::string& gameItem,
                              std::filesystem::path& update_folder,
                              std::filesystem::path& patch_folder, std::string& game_folder) {
 
     std::filesystem::path game_folder_path = game_folder;
-    std::filesystem::path gameItemPath;
+    const std::string rel_path = "sce_sys/" + sceItem;
 
-    if (std::filesystem::exists(update_folder / "sce_sys" / sceItem)) {
-        gameItemPath = update_folder / "sce_sys" / sceItem;
-    } else if (std::filesystem::exists(patch_folder / "sce_sys" / sceItem)) {
-        gameItemPath = patch_folder / "sce_sys" / sceItem;
-    } else {
-        gameItemPath = game_folder_path / "sce_sys" / sceItem;
+    for (const auto& candidate : {update_folder, patch_folder, game_folder_path}) {
+        if (const auto root = Core::FileSys::ResolveGameRoot(candidate)) {
+            if (const auto resolved = Core::FileSys::ResolveGameFilePath(*root, rel_path)) {
+                gameItem = resolved->string();
+                return;
+            }
+        }
     }
-
-    gameItem = gameItemPath.string();
+    gameItem = (game_folder_path / "sce_sys" / sceItem).string();
 }
 
 static GameInfo readGameInfo(const std::filesystem::path& filePath) {
     GameInfo game;
     game.path = filePath.string();
     std::string param_sfo_path;
-    std::filesystem::path game_update_path = filePath;
+    const std::filesystem::path stem_path = StripZArchiveExtension(filePath);
+    std::filesystem::path game_update_path = stem_path;
     game_update_path += "-UPDATE";
-    std::filesystem::path game_patch_path = filePath;
+    std::filesystem::path game_patch_path = stem_path;
     game_patch_path += "-patch";
     SceUpdateChecker("param.sfo", param_sfo_path, game_update_path, game_patch_path, game.path);
 

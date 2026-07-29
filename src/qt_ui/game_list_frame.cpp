@@ -28,6 +28,7 @@
 #include "core/emulator_settings.h"
 #include "core/emulator_state.h"
 #include "core/file_format/psf.h"
+#include "core/file_sys/game_backend.h"
 #include "core/ipc/ipc_client.h"
 #include "game_list_frame.h"
 #include "game_list_grid.h"
@@ -322,7 +323,7 @@ void GameListFrame::CreateConnections() {
         for (const auto& game : m_game_data) {
             game->compat = m_game_compat->GetStatusData("Download");
         }
-        Refresh();
+        UpdateCompatColumn();
     });
     connect(m_game_compat, &GameCompatibility::DownloadFinished, this,
             &GameListFrame::OnCompatFinished);
@@ -617,15 +618,33 @@ void GameListFrame::OnParsingFinished() {
     const auto add_game = [this, localized_title, localized_icon, language_index,
                            cached_meta](const std::string& dir_or_elf) {
         GUIGameInfo game{};
-        game.info.path = GUI::Utils::NormalizePath(std::filesystem::path(dir_or_elf));
+        const std::filesystem::path entry_path(dir_or_elf);
+        const bool is_archive = Core::FileSys::IsZArchiveFile(entry_path);
+        game.info.path = GUI::Utils::NormalizePath(entry_path);
 
         const Localized thread_localized;
 
         const std::string sfo_dir = dir_or_elf + "/sce_sys";
-        const std::string sfo_path = sfo_dir + "/param.sfo";
+        std::string sfo_path = sfo_dir + "/param.sfo";
+        if (is_archive) {
+            if (const auto resolved =
+                    Core::FileSys::ResolveGameFilePath(entry_path, "sce_sys/param.sfo")) {
+                sfo_path = resolved->string();
+            } else {
+                qDebug() << "Failed to read sce_sys/param.sfo from archive:"
+                         << QString::fromStdString(dir_or_elf);
+                return;
+            }
+        }
 
         s64 fingerprint = 0;
-        if (std::error_code ec; std::filesystem::exists(sfo_path, ec) && !ec) {
+        if (is_archive) {
+            std::error_code ec;
+            if (const auto ftime = std::filesystem::last_write_time(entry_path, ec); !ec) {
+                fingerprint = static_cast<s64>(ftime.time_since_epoch().count()) ^
+                              (static_cast<s64>(language_index) << 48);
+            }
+        } else if (std::error_code ec; std::filesystem::exists(sfo_path, ec) && !ec) {
             if (const auto ftime = std::filesystem::last_write_time(sfo_path, ec); !ec) {
                 fingerprint = static_cast<s64>(ftime.time_since_epoch().count()) ^
                               (static_cast<s64>(language_index) << 48);
@@ -635,7 +654,7 @@ void GameListFrame::OnParsingFinished() {
         if (fingerprint != 0) {
             if (const auto it = cached_meta->find(game.info.path);
                 it != cached_meta->end() && it->second.fingerprint == fingerprint) {
-                game.info = it->second.info; // copy: the map is shared across worker threads
+                game.info = it->second.info;
             }
         }
 
@@ -652,7 +671,15 @@ void GameListFrame::OnParsingFinished() {
                     return;
             }
             NPBindFile m_npfile;
-            if (m_npfile.Load(dir_or_elf + "/sce_sys/npbind.dat")) {
+            std::string npbind_path = dir_or_elf + "/sce_sys/npbind.dat";
+            if (is_archive) {
+                npbind_path.clear();
+                if (const auto resolved =
+                        Core::FileSys::ResolveGameFilePath(entry_path, "sce_sys/npbind.dat")) {
+                    npbind_path = resolved->string();
+                }
+            }
+            if (!npbind_path.empty() && m_npfile.Load(npbind_path)) {
                 game.info.np_comm_ids = m_npfile.GetNpCommIds();
             }
             std::string title_id = "";
@@ -759,20 +786,47 @@ void GameListFrame::OnParsingFinished() {
                 }
             }
 
-            game.info.pic_path = sfo_dir + "/PIC1.PNG";
-
-            if (game.info.icon_path.empty()) {
-                if (std::string icon_path = sfo_dir + "/" + localized_icon;
-                    std::filesystem::is_regular_file(icon_path)) {
-                    game.info.icon_path = std::move(icon_path);
-                } else {
-                    game.info.icon_path = sfo_dir + "/icon0.png";
+            if (is_archive) {
+                if (const auto resolved =
+                        Core::FileSys::ResolveGameFilePath(entry_path, "sce_sys/PIC1.PNG")) {
+                    game.info.pic_path = resolved->string();
+                } else if (const auto resolved_lower =
+                               Core::FileSys::ResolveGameFilePath(entry_path, "sce_sys/pic1.png")) {
+                    game.info.pic_path = resolved_lower->string();
                 }
-            }
 
-            if (game.info.snd0_path.empty()) {
-                if (std::filesystem::is_regular_file(sfo_dir + "/snd0.at9")) {
-                    game.info.snd0_path = sfo_dir + "/snd0.at9";
+                if (game.info.icon_path.empty()) {
+                    if (const auto resolved = Core::FileSys::ResolveGameFilePath(
+                            entry_path, "sce_sys/" + localized_icon)) {
+                        game.info.icon_path = resolved->string();
+                    } else if (const auto resolved_default = Core::FileSys::ResolveGameFilePath(
+                                   entry_path, "sce_sys/icon0.png")) {
+                        game.info.icon_path = resolved_default->string();
+                    }
+                }
+
+                if (game.info.snd0_path.empty()) {
+                    if (const auto resolved =
+                            Core::FileSys::ResolveGameFilePath(entry_path, "sce_sys/snd0.at9")) {
+                        game.info.snd0_path = resolved->string();
+                    }
+                }
+            } else {
+                game.info.pic_path = sfo_dir + "/PIC1.PNG";
+
+                if (game.info.icon_path.empty()) {
+                    if (std::string icon_path = sfo_dir + "/" + localized_icon;
+                        std::filesystem::is_regular_file(icon_path)) {
+                        game.info.icon_path = std::move(icon_path);
+                    } else {
+                        game.info.icon_path = sfo_dir + "/icon0.png";
+                    }
+                }
+
+                if (game.info.snd0_path.empty()) {
+                    if (std::filesystem::is_regular_file(sfo_dir + "/snd0.at9")) {
+                        game.info.snd0_path = sfo_dir + "/snd0.at9";
+                    }
                 }
             }
 
@@ -844,8 +898,15 @@ void GameListFrame::OnParsingFinished() {
         QtConcurrent::map(m_path_entries, [this, add_game](const path_entry& entry) {
             std::vector<std::string> legit_paths;
 
+            const std::filesystem::path candidate_path(entry.path);
+            const bool valid_dir =
+                std::filesystem::is_regular_file(entry.path + "/sce_sys/param.sfo");
+            const bool valid_archive =
+                Core::FileSys::IsZArchiveFile(candidate_path) &&
+                Core::FileSys::ReadGameFile(candidate_path, "sce_sys/param.sfo").has_value();
+
             // if (entry.is_from_file) { //TODO
-            if (std::filesystem::is_regular_file(entry.path + "/sce_sys/param.sfo")) {
+            if (valid_dir || valid_archive) {
                 PushPath(entry.path, legit_paths);
             } else {
                 qDebug() << "Invalid game path registered:" << QString::fromStdString(entry.path);
@@ -871,34 +932,44 @@ void GameListFrame::OnRefreshFinished() {
         m_game_data.push_back(g);
     }
 
-    const s32 language_index = GUIApplication::getLanguageId();
-    const std::string localized_icon = fmt::format("ICON0_%02d.PNG", language_index);
-
     std::vector<game_info> filtered_games;
     filtered_games.reserve(m_game_data.size());
+
+    auto strip_zar_suffix = [](const std::string& path) {
+        constexpr std::string_view suffix = ".zar";
+        if (path.size() >= suffix.size() &&
+            path.compare(path.size() - suffix.size(), suffix.size(), suffix) == 0) {
+            return path.substr(0, path.size() - suffix.size());
+        }
+        return path;
+    };
+    auto is_overlay_path = [&](const std::string& path) {
+        const std::string stem = strip_zar_suffix(path);
+        return stem.ends_with("-UPDATE") || stem.ends_with("-patch");
+    };
 
     // Merge base and update game info (CUSAxxxxx + CUSAxxxxx-UPDATE) or -patch
     for (const game_info& entry : m_game_data) {
         // Skip update folders (we’ll merge them into base)
-        if (entry->info.path.ends_with("-UPDATE") || entry->info.path.ends_with("-patch"))
+        if (is_overlay_path(entry->info.path))
             continue;
 
         for (const auto& other : m_game_data) {
             // Process only matching update or patch folders
-            if (!other->info.path.ends_with("-UPDATE") && !other->info.path.ends_with("-patch"))
+            if (!is_overlay_path(other->info.path))
                 continue;
 
             auto starts_with = [](const std::string& str, const std::string& prefix) {
                 return str.size() >= prefix.size() && str.compare(0, prefix.size(), prefix) == 0;
             };
 
-            const std::string base_path = entry->info.path;
-            const std::string other_path = other->info.path;
+            const std::string base_stem = strip_zar_suffix(entry->info.path);
+            const std::string other_stem = strip_zar_suffix(other->info.path);
 
             // Match by serial and full path prefix (including "-UPDATE" -patch folders)
             if (entry->info.serial != other->info.serial ||
-                !(starts_with(other_path, base_path + "-UPDATE") ||
-                  starts_with(other_path, base_path + "-patch"))) {
+                !(starts_with(other_stem, base_stem + "-UPDATE") ||
+                  starts_with(other_stem, base_stem + "-patch"))) {
                 continue;
             }
 
@@ -910,23 +981,18 @@ void GameListFrame::OnRefreshFinished() {
 
             entry->info.update_path = other->info.path; // Store update path
 
-            // --- Replace picture path if available ---
-            if (std::string pic_path = other->info.path + "/sce_sys/PIC1.PNG";
-                std::filesystem::is_regular_file(pic_path))
-                entry->info.pic_path = std::move(pic_path);
-
-            // --- Replace icon path if available ---
-            if (std::string icon_path = other->info.path + "/sce_sys/" + localized_icon;
-                std::filesystem::is_regular_file(icon_path))
-                entry->info.icon_path = std::move(icon_path);
-            else if (std::string icon_path = other->info.path + "/sce_sys/ICON0.PNG";
-                     std::filesystem::is_regular_file(icon_path))
-                entry->info.icon_path = std::move(icon_path);
-
-            // --- Replace sound path if available ---
-            if (std::string snd0_path = other->info.path + "/sce_sys/snd0.at9";
-                std::filesystem::is_regular_file(snd0_path))
-                entry->info.snd0_path = std::move(snd0_path);
+            if (!other->info.pic_path.empty() &&
+                std::filesystem::is_regular_file(other->info.pic_path)) {
+                entry->info.pic_path = other->info.pic_path;
+            }
+            if (!other->info.icon_path.empty() &&
+                std::filesystem::is_regular_file(other->info.icon_path)) {
+                entry->info.icon_path = other->info.icon_path;
+            }
+            if (!other->info.snd0_path.empty() &&
+                std::filesystem::is_regular_file(other->info.snd0_path)) {
+                entry->info.snd0_path = other->info.snd0_path;
+            }
         }
 
         // Keep only base games (hide -update folders)
@@ -1139,6 +1205,14 @@ QStringList GameListFrame::scanDirectories(const std::vector<std::filesystem::pa
                             std::filesystem::path pth(full);
                             results << scanDirectories({pth}, maxDepth, currentDepth + 1);
                         }
+                    } else if (name.size() > 4 &&
+                               _wcsicmp(name.c_str() + (name.size() - 4), L".zar") == 0) {
+                        const std::filesystem::path zar_path(full);
+                        if (Core::FileSys::IsZArchiveFile(zar_path) &&
+                            Core::FileSys::ReadGameFile(zar_path, "sce_sys/param.sfo")
+                                .has_value()) {
+                            results << QString::fromWCharArray(full.c_str());
+                        }
                     }
                 }
 
@@ -1169,19 +1243,29 @@ QStringList GameListFrame::scanDirectories(const std::vector<std::filesystem::pa
         if (!dir.exists())
             continue;
 
-        QStringList entries =
-            dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot | QDir::Hidden, QDir::Name);
+        QStringList entries = dir.entryList(
+            QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot | QDir::Hidden, QDir::Name);
         for (const QString& entry : entries) {
             QString fullPath = dir.absoluteFilePath(entry);
+            QFileInfo entryInfo(fullPath);
 
-            // Only include directories that have /sce_sys/param.sfo
-            if (QFileInfo(fullPath + "/sce_sys/param.sfo").exists()) {
-                results << fullPath;
-            }
+            if (entryInfo.isDir()) {
+                // Only include directories that have /sce_sys/param.sfo
+                if (QFileInfo(fullPath + "/sce_sys/param.sfo").exists()) {
+                    results << fullPath;
+                }
 
-            // Recurse if still below max depth
-            if (currentDepth < maxDepth) {
-                results << scanDirectories({fullPath.toStdString()}, maxDepth, currentDepth + 1);
+                // Recurse if still below max depth
+                if (currentDepth < maxDepth) {
+                    results << scanDirectories({fullPath.toStdString()}, maxDepth,
+                                               currentDepth + 1);
+                }
+            } else if (fullPath.endsWith(".zar", Qt::CaseInsensitive)) {
+                const std::filesystem::path zar_path = fullPath.toStdString();
+                if (Core::FileSys::IsZArchiveFile(zar_path) &&
+                    Core::FileSys::ReadGameFile(zar_path, "sce_sys/param.sfo").has_value()) {
+                    results << fullPath;
+                }
             }
         }
     }
@@ -1384,7 +1468,17 @@ void GameListFrame::OnCompatFinished() {
     for (const auto& game : m_game_data) {
         game->compat = m_game_compat->GetCompatibility(game->info.serial);
     }
-    Refresh();
+    UpdateCompatColumn();
+}
+
+void GameListFrame::UpdateCompatColumn() {
+    if (m_is_list_layout) {
+        if (m_game_list) {
+            m_game_list->UpdateCompatItems();
+        }
+    } else if (m_game_grid) {
+        m_game_grid->update();
+    }
 }
 
 bool GameListFrame::RemoveCustomConfiguration(const QString& serial, const game_info& game) {
