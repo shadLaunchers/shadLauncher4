@@ -4,6 +4,8 @@
 #pragma once
 
 #include <memory>
+#include <optional>
+#include <QFutureWatcher>
 #include <QJsonObject>
 #include <QString>
 #include <QWidget>
@@ -45,9 +47,18 @@ private:
     std::shared_ptr<GUISettings> m_gui_settings;
     std::map<std::string, Compat::Status> m_compat_database;
     QString m_filepath;
-    /** Creates new map from the database */
-    bool ReadJSON(const QJsonObject& json_data, bool after_download);
-    QString NormalizeStatusString(const QString& value) {
+
+    std::optional<std::map<std::string, Compat::Status>> ParseDatabase(
+        const QByteArray& content) const;
+
+    void StartParse(const QByteArray& content, bool after_download);
+    void OnParseFinished();
+
+    QFutureWatcher<std::optional<std::map<std::string, Compat::Status>>>* m_parse_watcher = nullptr;
+    QByteArray m_pending_write_content;
+    bool m_pending_after_download = false;
+
+    QString NormalizeStatusString(const QString& value) const {
         QString result = value;
 
         if (result.startsWith("status-"))
@@ -63,11 +74,12 @@ private:
 public:
     /** Handles reads, writes and downloads for the compatibility database */
     GameCompatibility(std::shared_ptr<GUISettings> gui_settings, QWidget* parent);
+    ~GameCompatibility() override;
     /** Returns the compatibility status for the requested title */
     Compat::Status GetCompatibility(const std::string& title_id);
     /** Returns the data for the requested status */
     Compat::Status GetStatusData(const QString& status) const;
-    /** Reads database. If online set to true: Downloads and writes the database to file */
+    /** Reads database. If online set to true: Downloads and writes the database to file.*/
     void RequestCompatibility(bool online = false);
 
 Q_SIGNALS:

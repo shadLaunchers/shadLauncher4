@@ -36,6 +36,11 @@ public:
     void RepaintIcons(std::vector<game_info>& game_data, const QColor& icon_color,
                       const QSize& icon_size, qreal device_pixel_ratio) override;
 
+    // Updates the compatibility cell (text/tooltip/color dot) of every
+    // existing row in place, reading the already-refreshed game->compat
+    // field off the game_info stored on the icon cell.
+    void UpdateCompatItems();
+
 Q_SIGNALS:
     void sizeOnDiskReady(const game_info& game, GameItemBase* item,
                          std::shared_ptr<std::atomic<bool>> cancel);

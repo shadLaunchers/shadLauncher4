@@ -323,7 +323,7 @@ void GameListFrame::CreateConnections() {
         for (const auto& game : m_game_data) {
             game->compat = m_game_compat->GetStatusData("Download");
         }
-        Refresh();
+        UpdateCompatColumn();
     });
     connect(m_game_compat, &GameCompatibility::DownloadFinished, this,
             &GameListFrame::OnCompatFinished);
@@ -980,6 +980,7 @@ void GameListFrame::OnRefreshFinished() {
             entry->info.np_comm_ids = other->info.np_comm_ids;
 
             entry->info.update_path = other->info.path; // Store update path
+
             if (!other->info.pic_path.empty() &&
                 std::filesystem::is_regular_file(other->info.pic_path)) {
                 entry->info.pic_path = other->info.pic_path;
@@ -1467,7 +1468,17 @@ void GameListFrame::OnCompatFinished() {
     for (const auto& game : m_game_data) {
         game->compat = m_game_compat->GetCompatibility(game->info.serial);
     }
-    Refresh();
+    UpdateCompatColumn();
+}
+
+void GameListFrame::UpdateCompatColumn() {
+    if (m_is_list_layout) {
+        if (m_game_list) {
+            m_game_list->UpdateCompatItems();
+        }
+    } else if (m_game_grid) {
+        m_game_grid->update();
+    }
 }
 
 bool GameListFrame::RemoveCustomConfiguration(const QString& serial, const game_info& game) {

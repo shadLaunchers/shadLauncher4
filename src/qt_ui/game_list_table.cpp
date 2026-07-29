@@ -29,6 +29,7 @@ s64 ComputeSizeFingerprint(const std::string& game_path) {
             fingerprint ^= static_cast<s64>(ftime.time_since_epoch().count());
         }
     }
+
     fs::path stem_path = game_path;
     if (stem_path.extension() == ".zar") {
         stem_path.replace_extension();
@@ -480,6 +481,46 @@ void GameListTable::RepaintIcons(std::vector<game_info>& game_data, const QColor
                                  const QSize& icon_size, qreal device_pixel_ratio) {
     GameListBase::RepaintIcons(game_data, icon_color, icon_size, device_pixel_ratio);
     adjustIconColumn();
+}
+
+void GameListTable::UpdateCompatItems() {
+    const int icon_col = static_cast<int>(GUI::GameListColumns::icon);
+    const int compat_col = static_cast<int>(GUI::GameListColumns::compat);
+
+    for (int row = 0; row < rowCount(); ++row) {
+        QTableWidgetItem* icon_cell = item(row, icon_col);
+        auto* compat_cell = static_cast<CustomTableWidgetItem*>(item(row, compat_col));
+        if (!icon_cell || !compat_cell) {
+            continue;
+        }
+
+        const game_info game = icon_cell->data(GUI::CustomRoles::game_role).value<game_info>();
+        if (!game) {
+            continue;
+        }
+
+        compat_cell->setText(game->compat.text);
+        compat_cell->setData(Qt::UserRole, game->compat.index, true);
+
+        if (game->compat.index <= 4) {
+            const QString tooltip_string =
+                "<p>" + tr("Last updated") +
+                QString(": %1 (%2)")
+                    .arg(game->compat.last_tested_date, game->compat.latest_version) +
+                "<br>" + game->compat.tooltip + "</p>";
+            compat_cell->setToolTip(tooltip_string);
+        } else {
+            compat_cell->setToolTip(game->compat.tooltip);
+        }
+
+        if (!game->compat.color.isEmpty()) {
+            compat_cell->setData(
+                Qt::DecorationRole,
+                GUI::Utils::CirclePixmap(game->compat.color, devicePixelRatioF() * 2));
+        } else {
+            compat_cell->setData(Qt::DecorationRole, QVariant());
+        }
+    }
 }
 
 void GameListTable::paintEvent(QPaintEvent* event) {
