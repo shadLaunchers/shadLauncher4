@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <algorithm>
+#include <atomic>
 #include <memory>
 #include <regex>
 #include <set>
@@ -16,6 +17,7 @@
 #include <QInputDialog>
 #include <QMenuBar>
 #include <QMessageBox>
+#include <QPointer>
 #include <QPushButton>
 #include <QScrollBar>
 #include <QtConcurrent>
@@ -29,6 +31,7 @@
 #include "core/emulator_state.h"
 #include "core/file_format/psf.h"
 #include "core/file_sys/game_backend.h"
+#include "core/file_sys/zar_packer.h"
 #include "core/ipc/ipc_client.h"
 #include "game_list_frame.h"
 #include "game_list_grid.h"
@@ -654,7 +657,7 @@ void GameListFrame::OnParsingFinished() {
         if (fingerprint != 0) {
             if (const auto it = cached_meta->find(game.info.path);
                 it != cached_meta->end() && it->second.fingerprint == fingerprint) {
-                game.info = it->second.info;
+                game.info = it->second.info; // copy: the map is shared across worker threads
             }
         }
 
@@ -980,7 +983,6 @@ void GameListFrame::OnRefreshFinished() {
             entry->info.np_comm_ids = other->info.np_comm_ids;
 
             entry->info.update_path = other->info.path; // Store update path
-
             if (!other->info.pic_path.empty() &&
                 std::filesystem::is_regular_file(other->info.pic_path)) {
                 entry->info.pic_path = other->info.pic_path;
@@ -1658,6 +1660,159 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
         }
     };
 
+    auto convertToZArchiveHandler = [this](const game_info& game) {
+        const std::filesystem::path source_path(game->info.path);
+
+        if (Core::FileSys::IsZArchiveFile(source_path)) {
+            QMessageBox::information(this, tr("Convert to ZArchive"),
+                                     tr("This game is already packed as a ZArchive."));
+            return;
+        }
+
+        std::error_code dir_ec;
+        if (!std::filesystem::is_directory(source_path, dir_ec) || dir_ec) {
+            QMessageBox::critical(this, tr("Convert to ZArchive"),
+                                  tr("This game's folder could not be found on disk."));
+            return;
+        }
+
+        const QString game_name = QString::fromStdString(game->info.name);
+
+        QString default_output;
+        Common::FS::PathToQString(default_output, source_path.parent_path() /
+                                                      (source_path.filename().string() + ".zar"));
+
+        const QString output_path_str =
+            QFileDialog::getSaveFileName(this, tr("Convert %1 to ZArchive").arg(game_name),
+                                         default_output, tr("ZArchive Files (*.zar)"));
+        if (output_path_str.isEmpty()) {
+            return;
+        }
+
+        std::filesystem::path output_path = Common::FS::PathFromQString(output_path_str);
+        if (output_path.extension() != ".zar") {
+            output_path += ".zar";
+        }
+
+        std::error_code exists_ec;
+        if (std::filesystem::exists(output_path, exists_ec) && !exists_ec) {
+            const auto overwrite_reply = QMessageBox::question(
+                this, tr("Convert to ZArchive"),
+                tr("%1 already exists. Overwrite it?")
+                    .arg(QString::fromStdString(output_path.filename().string())),
+                QMessageBox::Yes | QMessageBox::No);
+            if (overwrite_reply != QMessageBox::Yes) {
+                return;
+            }
+        }
+
+        // clang-format off
+        const auto confirm_reply = QMessageBox::question(
+            this, tr("Convert to ZArchive"),
+            tr("This will pack \"%1\" into a single read-only .zar archive. Depending on the "
+               "game's size this can take a while, and the archive will temporarily need as "
+               "much free disk space as the game itself.\n\n"
+               "The original folder is left untouched until conversion succeeds,you'll be "
+               "asked afterward whether to delete it.\n\nContinue?").arg(game_name),
+            QMessageBox::Yes | QMessageBox::No);
+        // clang-format on
+        if (confirm_reply != QMessageBox::Yes) {
+            return;
+        }
+
+        auto* progress =
+            new ProgressDialog(tr("Convert to ZArchive"), tr("Packing %1...").arg(game_name),
+                               tr("Cancel"), 0, 1000, /*delete_on_close=*/true, this);
+        progress->SetValue(0);
+        progress->show();
+
+        auto cancel_flag = std::make_shared<std::atomic<bool>>(false);
+        connect(progress, &QProgressDialog::canceled, this, [cancel_flag] { *cancel_flag = true; });
+
+        struct ConvertZarResult {
+            bool success = false;
+            std::string error_message;
+        };
+
+        QPointer<ProgressDialog> progress_guard(progress);
+        auto* watcher = new QFutureWatcher<ConvertZarResult>(this);
+
+        connect(watcher, &QFutureWatcher<ConvertZarResult>::finished, this,
+                [this, watcher, progress_guard, source_path, output_path]() {
+                    const ConvertZarResult result = watcher->result();
+                    watcher->deleteLater();
+
+                    if (progress_guard) {
+                        progress_guard->close();
+                    }
+
+                    if (!result.success) {
+                        if (result.error_message != "Canceled") {
+                            QMessageBox::critical(
+                                this, tr("Convert to ZArchive"),
+                                tr("Failed to convert game to ZArchive:\n%1")
+                                    .arg(QString::fromStdString(result.error_message)));
+                        }
+                        return;
+                    }
+
+                    QString source_qpath;
+                    Common::FS::PathToQString(source_qpath, source_path);
+                    const auto delete_reply = QMessageBox::question(
+                        this, tr("Convert to ZArchive"),
+                        tr("Conversion finished. Delete the original game folder now to free "
+                           "up disk space?\n\n%1")
+                            .arg(source_qpath),
+                        QMessageBox::Yes | QMessageBox::No);
+                    if (delete_reply == QMessageBox::Yes) {
+                        BackgroundMusicPlayer::getInstance().StopMusic();
+
+                        std::error_code remove_ec;
+                        std::filesystem::remove_all(source_path, remove_ec);
+                        if (remove_ec) {
+                            QMessageBox::warning(
+                                this, tr("Convert to ZArchive"),
+                                tr("The archive was created, but the original folder could "
+                                   "not be fully deleted. You can remove it manually."));
+                        }
+                    }
+
+                    Refresh(true);
+                });
+
+        auto future = QtConcurrent::run(
+            [source_path, output_path, cancel_flag, progress_guard]() -> ConvertZarResult {
+                std::string error_message;
+                const bool ok = Core::FileSys::PackDirectoryToZArchive(
+                    source_path, output_path,
+                    [cancel_flag, progress_guard](const Core::FileSys::PackProgress& p) {
+                        if (progress_guard) {
+                            const int percent =
+                                p.bytes_total > 0
+                                    ? static_cast<int>((p.bytes_done * 1000) / p.bytes_total)
+                                    : 0;
+                            QMetaObject::invokeMethod(
+                                progress_guard.data(),
+                                [progress_guard, percent, file = p.current_file]() {
+                                    if (!progress_guard) {
+                                        return;
+                                    }
+                                    progress_guard->SetValue(percent);
+                                    progress_guard->setLabelText(
+                                        tr("Packing: %1").arg(QString::fromStdString(file)));
+                                },
+                                Qt::QueuedConnection);
+                        }
+                        return !cancel_flag->load();
+                    },
+                    &error_message);
+
+                return ConvertZarResult{ok, ok ? std::string() : error_message};
+            });
+
+        watcher->setFuture(future);
+    };
+
     GameInfo current_game = gameinfo->info;
     const QString serial = QString::fromStdString(current_game.serial);
     const QString name = QString::fromStdString(current_game.name).simplified();
@@ -1721,15 +1876,22 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
     }
     // Open Menu
     QMenu* open_menu = menu.addMenu(tr("&Open Folder"));
+    auto openFolderForPath = [](const std::string& path) {
+        std::filesystem::path fs_path(path);
+        std::error_code ec;
+        if (std::filesystem::is_regular_file(fs_path, ec) && !ec) {
+            fs_path = fs_path.parent_path();
+        }
+        QDesktopServices::openUrl(QUrl::fromLocalFile(QString::fromStdString(fs_path.string())));
+    };
+
     QAction* open_game_path = open_menu->addAction(tr("&Open Game Folder"));
-    connect(open_game_path, &QAction::triggered, this, [current_game] {
-        QDesktopServices::openUrl(QUrl::fromLocalFile(QString::fromStdString(current_game.path)));
-    });
+    connect(open_game_path, &QAction::triggered, this,
+            [current_game, openFolderForPath] { openFolderForPath(current_game.path); });
     if (!update_path.empty()) {
         QAction* open_update_path = open_menu->addAction(tr("&Open Update Folder"));
-        connect(open_update_path, &QAction::triggered, this, [update_path] {
-            QDesktopServices::openUrl(QUrl::fromLocalFile(QString::fromStdString(update_path)));
-        });
+        connect(open_update_path, &QAction::triggered, this,
+                [update_path, openFolderForPath] { openFolderForPath(update_path); });
     }
     QAction* open_log_folder = open_menu->addAction(tr("&Open Log Folder"));
     connect(open_log_folder, &QAction::triggered, this, [this, serial] {
@@ -1920,6 +2082,9 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
     hide_serial->setCheckable(true);
     hide_serial->setChecked(m_hidden_list.contains(serial));
     QAction* edit_notes = manage_game_menu->addAction(tr("&Add/Edit Tooltip Notes"));
+    QAction* convert_to_zar = manage_game_menu->addAction(tr("&Convert to ZArchive (.zar)..."));
+    convert_to_zar->setEnabled(
+        !Core::FileSys::IsZArchiveFile(std::filesystem::path(current_game.path)));
 
     // Copy Info menu
     QMenu* info_menu = menu.addMenu(tr("&Copy Info"));
@@ -2051,6 +2216,8 @@ void GameListFrame::ShowContextMenu(const QPoint& pos) {
             [this] { m_game_compat->RequestCompatibility(true); });
 
     // Manage Game menu actions
+    connect(convert_to_zar, &QAction::triggered, this,
+            [convertToZArchiveHandler, gameinfo] { convertToZArchiveHandler(gameinfo); });
     connect(hide_serial, &QAction::triggered, this, [serial, this](bool checked) {
         if (checked)
             m_hidden_list.insert(serial);

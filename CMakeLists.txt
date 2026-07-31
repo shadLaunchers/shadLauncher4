@@ -193,6 +193,8 @@ set(FILEFORMAT src/core/file_format/psf.cpp
                src/core/file_sys/backends/host_directory_backend.h
                src/core/file_sys/backends/zarchive_backend.cpp
                src/core/file_sys/backends/zarchive_backend.h
+               src/core/file_sys/zar_packer.cpp
+               src/core/file_sys/zar_packer.h
 )
 
 set(LIBRARIES src/core/libraries/system/system_service.h)
