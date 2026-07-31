@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include "game_item.h"
+#include "game_list.h"
 #include "game_list_delegate.h"
 #include "gui_settings.h"
 
@@ -12,7 +13,15 @@ GameListDelegate::GameListDelegate(QObject* parent) : TableItemDelegate(parent, 
 
 void GameListDelegate::paint(QPainter* painter, const QStyleOptionViewItem& option,
                              const QModelIndex& index) const {
-    TableItemDelegate::paint(painter, option, index);
+    QStyleOptionViewItem opt = option;
+    const auto* hover_table = static_cast<const GameList*>(parent());
+    if (hover_table && hover_table->HoveredRow() >= 0 && hover_table->HoveredRow() == index.row()) {
+        opt.state |= QStyle::State_MouseOver;
+    } else {
+        opt.state &= ~QStyle::State_MouseOver;
+    }
+
+    TableItemDelegate::paint(painter, opt, index);
 
     // Find out if the icon or size items are visible
     if (index.column() == static_cast<int>(GUI::GameListColumns::dir_size) ||

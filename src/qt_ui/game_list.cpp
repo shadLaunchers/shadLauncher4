@@ -117,6 +117,7 @@ void GameList::mousePressEvent(QMouseEvent* event) {
 
 void GameList::mouseMoveEvent(QMouseEvent* event) {
     QTableWidget::mouseMoveEvent(event);
+    UpdateHoveredRow(rowAt(event->position().toPoint().y()));
 }
 
 void GameList::mouseDoubleClickEvent(QMouseEvent* ev) {
@@ -147,6 +148,24 @@ void GameList::keyPressEvent(QKeyEvent* event) {
 
 void GameList::leaveEvent(QEvent* event) {
     QTableWidget::leaveEvent(event);
+    UpdateHoveredRow(-1);
+}
+
+void GameList::UpdateHoveredRow(int row) {
+    if (row == m_hovered_row) {
+        return;
+    }
+
+    auto repaint_row = [this](int r) {
+        if (r < 0 || r >= rowCount()) {
+            return;
+        }
+        viewport()->update(QRect(0, rowViewportPosition(r), viewport()->width(), rowHeight(r)));
+    };
+
+    repaint_row(m_hovered_row);
+    m_hovered_row = row;
+    repaint_row(m_hovered_row);
 }
 
 void GameList::FocusAndSelectFirstEntryIfNoneIs() {

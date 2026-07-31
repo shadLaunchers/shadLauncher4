@@ -31,6 +31,11 @@ public:
     /** Fix columns with width smaller than the minimal section size */
     void FixNarrowColumns();
 
+    /** Row currently under the mouse cursor */
+    int HoveredRow() const {
+        return m_hovered_row;
+    }
+
 public Q_SLOTS:
     void FocusAndSelectFirstEntryIfNoneIs();
 
@@ -45,4 +50,9 @@ protected:
     void mouseDoubleClickEvent(QMouseEvent* event) override;
     void keyPressEvent(QKeyEvent* event) override;
     void leaveEvent(QEvent* event) override;
+
+private:
+    void UpdateHoveredRow(int row);
+
+    int m_hovered_row = -1;
 };

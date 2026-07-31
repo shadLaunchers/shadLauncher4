@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QApplication>
+#include <QColor>
 #include <QPainter>
 #include <QStyle>
 #include "gui_settings.h"
@@ -19,6 +20,7 @@ void TableItemDelegate::initStyleOption(QStyleOptionViewItem* option,
     if (m_has_icons && index.column() == 0) {
         // Don't highlight icons
         option->state &= ~QStyle::State_Selected;
+        option->state &= ~QStyle::State_MouseOver;
 
         // Center icons
         option->decorationAlignment = Qt::AlignCenter;
@@ -73,10 +75,15 @@ void TableItemDelegate::paint(QPainter* painter, const QStyleOptionViewItem& opt
         }
     }
 
-    if (m_has_icons && index.column() == static_cast<int>(GUI::GameListColumns::icon) &&
-        option.state & QStyle::State_Selected) {
-        // Add background highlight color to icons
-        painter->fillRect(option.rect, option.palette.color(QPalette::Highlight));
+    if (m_has_icons && index.column() == static_cast<int>(GUI::GameListColumns::icon)) {
+        if (option.state & QStyle::State_Selected) {
+            // Add background highlight color to icons
+            painter->fillRect(option.rect, option.palette.color(QPalette::Highlight));
+        } else if (option.state & QStyle::State_MouseOver) {
+            QColor hover_color = option.palette.color(QPalette::Highlight);
+            hover_color.setAlpha(70);
+            painter->fillRect(option.rect, hover_color);
+        }
     }
 
     QStyledItemDelegate::paint(painter, option, index);
