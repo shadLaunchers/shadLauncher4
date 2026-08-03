@@ -6,6 +6,7 @@
 #include <vector>
 
 #include <zarchive/zarchivewriter.h>
+#include "core/file_sys/game_backend.h"
 #include "core/file_sys/zar_packer.h"
 
 namespace Core::FileSys {
@@ -160,6 +161,167 @@ bool PackDirectoryToZArchive(const std::filesystem::path& input_dir,
 
     if (pack_context.has_error) {
         return fail("Write error while finalizing archive");
+    }
+
+    return true;
+}
+
+void CollectZArchiveEntries(const IGameBackend& backend, const std::string& rel_dir,
+                            std::vector<std::string>& out_files,
+                            std::vector<std::string>& out_dirs) {
+    for (const auto& entry : backend.ListDir(rel_dir)) {
+        const std::string child = rel_dir.empty() ? entry.name : rel_dir + "/" + entry.name;
+        if (entry.is_directory) {
+            out_dirs.push_back(child);
+            CollectZArchiveEntries(backend, child, out_files, out_dirs);
+        } else {
+            out_files.push_back(child);
+        }
+    }
+}
+
+std::string ExtractOneFile(const IGameBackend& backend, const std::filesystem::path& output_dir,
+                           const std::string& rel_path) {
+    namespace fs = std::filesystem;
+
+    const auto data = backend.ReadFile(rel_path);
+    if (!data.has_value()) {
+        return "Failed to read file from archive: " + rel_path;
+    }
+
+    const fs::path dest_path = output_dir / fs::path(rel_path);
+    std::error_code dir_ec;
+    fs::create_directories(dest_path.parent_path(), dir_ec);
+
+    std::ofstream out(dest_path, std::ios::binary | std::ios::trunc);
+    if (!out.is_open()) {
+        return "Failed to create output file: " + dest_path.string();
+    }
+    out.write(reinterpret_cast<const char*>(data->data()),
+              static_cast<std::streamsize>(data->size()));
+    if (!out.good()) {
+        return "Write error while extracting: " + rel_path;
+    }
+    out.close();
+    if (!out.good()) {
+        return "Write error while extracting: " + rel_path;
+    }
+    return {};
+}
+
+bool UnpackZArchiveToDirectory(const std::filesystem::path& input_zar,
+                               const std::filesystem::path& output_dir,
+                               const std::function<bool(const UnpackProgress&)>& progress_cb,
+                               std::string* error_message) {
+    namespace fs = std::filesystem;
+
+    const auto fail = [&](const std::string& message) {
+        if (error_message) {
+            *error_message = message;
+        }
+        return false;
+    };
+
+    if (!IsZArchiveFile(input_zar)) {
+        return fail("Input path is not a ZArchive file: " + input_zar.string());
+    }
+
+    const auto backend = OpenGameBackend(input_zar);
+    if (!backend || !backend->IsOpen()) {
+        return fail("Failed to open ZArchive: " + input_zar.string());
+    }
+
+    std::error_code mkdir_ec;
+    fs::create_directories(output_dir, mkdir_ec);
+    if (mkdir_ec) {
+        return fail("Failed to create output directory: " + output_dir.string());
+    }
+
+    std::vector<std::string> files;
+    std::vector<std::string> dirs;
+    CollectZArchiveEntries(*backend, "", files, dirs);
+
+    for (const auto& rel_dir : dirs) {
+        std::error_code dir_ec;
+        fs::create_directories(output_dir / fs::path(rel_dir), dir_ec);
+        if (dir_ec) {
+            return fail("Failed to create directory: " + rel_dir);
+        }
+    }
+
+    UnpackProgress progress;
+    progress.files_total = files.size();
+
+    for (const auto& rel_path : files) {
+        progress.current_file = rel_path;
+        if (progress_cb && !progress_cb(progress)) {
+            return fail("Canceled");
+        }
+
+        if (const std::string error = ExtractOneFile(*backend, output_dir, rel_path);
+            !error.empty()) {
+            return fail(error);
+        }
+
+        progress.files_done++;
+        if (progress_cb && !progress_cb(progress)) {
+            return fail("Canceled");
+        }
+    }
+
+    return true;
+}
+
+bool ExtractZArchiveFiles(const std::filesystem::path& input_zar,
+                          const std::filesystem::path& output_dir,
+                          const std::vector<std::string>& rel_paths,
+                          const std::function<bool(const UnpackProgress&)>& progress_cb,
+                          std::string* error_message) {
+    namespace fs = std::filesystem;
+
+    const auto fail = [&](const std::string& message) {
+        if (error_message) {
+            *error_message = message;
+        }
+        return false;
+    };
+
+    if (!IsZArchiveFile(input_zar)) {
+        return fail("Input path is not a ZArchive file: " + input_zar.string());
+    }
+    if (rel_paths.empty()) {
+        return fail("No files were selected for extraction.");
+    }
+
+    const auto backend = OpenGameBackend(input_zar);
+    if (!backend || !backend->IsOpen()) {
+        return fail("Failed to open ZArchive: " + input_zar.string());
+    }
+
+    std::error_code mkdir_ec;
+    fs::create_directories(output_dir, mkdir_ec);
+    if (mkdir_ec) {
+        return fail("Failed to create output directory: " + output_dir.string());
+    }
+
+    UnpackProgress progress;
+    progress.files_total = rel_paths.size();
+
+    for (const auto& rel_path : rel_paths) {
+        progress.current_file = rel_path;
+        if (progress_cb && !progress_cb(progress)) {
+            return fail("Canceled");
+        }
+
+        if (const std::string error = ExtractOneFile(*backend, output_dir, rel_path);
+            !error.empty()) {
+            return fail(error);
+        }
+
+        progress.files_done++;
+        if (progress_cb && !progress_cb(progress)) {
+            return fail("Canceled");
+        }
     }
 
     return true;
