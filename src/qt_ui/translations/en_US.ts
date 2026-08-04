@@ -1509,6 +1509,61 @@ Continue?</source>
         <source>&amp;Convert to ZArchive (.zar)...</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Convert from ZArchive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This game is not packed as a ZArchive.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extract %1 to Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The destination folder &quot;%1&quot; already exists and is not empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This will extract &quot;%1&quot; into a regular folder. Depending on the game&apos;s size this can take a while, and the folder will need as much free disk space as the game itself.
+
+The original .zar archive is left untouched until extraction succeeds, you&apos;ll be asked afterward whether to delete it.
+
+Continue?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extracting %1...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to extract game from ZArchive:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extraction finished. Delete the original .zar archive now to free up disk space?
+
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The game was extracted, but the original .zar archive could not be deleted. You can remove it manually.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extracting: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Extract from ZArchive (.zar)...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Browse ZArchive Contents...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GameListGrid</name>
@@ -2944,6 +2999,10 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extracting: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4738,6 +4797,102 @@ To use this version, select it from the installed list.</source>
     <message>
         <source>Failed to copy the selected version to the application directory.
 The version may not run correctly when launched.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ZArchiveViewerDialog</name>
+    <message>
+        <source>Failed to open archive.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZArchive Viewer - %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extract Selected...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extract All...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Loading...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No files selected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 file(s) selected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extract Selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select one or more files to extract first.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extract Selected Files To</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extract All Files To</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extract from ZArchive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extracting all files...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extracting selected files...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to extract files:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extraction finished.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
