@@ -672,11 +672,24 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
     // Open Menu
     QMenu* open_menu = addMenu(tr("&Open Folder"));
     auto openFolderForPath = [](const std::string& path) {
-        std::filesystem::path fs_path(path);
+        if (path.empty()) {
+            return;
+        }
+
         std::error_code ec;
+        std::filesystem::path fs_path = std::filesystem::absolute(std::filesystem::path(path), ec);
+        if (ec) {
+            fs_path = std::filesystem::path(path);
+        }
+
         if (std::filesystem::is_regular_file(fs_path, ec) && !ec) {
             fs_path = fs_path.parent_path();
         }
+
+        if (fs_path.empty() || !std::filesystem::exists(fs_path, ec) || ec) {
+            return;
+        }
+
         QDesktopServices::openUrl(QUrl::fromLocalFile(QString::fromStdString(fs_path.string())));
     };
 

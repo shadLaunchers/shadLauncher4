@@ -6,6 +6,7 @@
 #include <QHeaderView>
 #include <QScrollBar>
 #include <QStringBuilder>
+#include <QTimer>
 #include "common/fs_util.h"
 #include "common/types.h"
 #include "core/file_sys/game_backend.h"
@@ -82,6 +83,14 @@ GameListTable::GameListTable(GameListFrame* frame, std::shared_ptr<GUISettings> 
     setColumnCount(static_cast<int>(GUI::GameListColumns::count));
     setMouseTracking(true);
 
+    m_resort_timer = new QTimer(this);
+    m_resort_timer->setSingleShot(true);
+    m_resort_timer->setInterval(400);
+    connect(m_resort_timer, &QTimer::timeout, this, [this] {
+        sort(static_cast<u64>(rowCount()), horizontalHeader()->sortIndicatorSection(),
+             horizontalHeader()->sortIndicatorOrder());
+    });
+
     connect(this, &GameListTable::sizeOnDiskReady, this,
             [this](const game_info& game, GameItemBase* item,
                    std::shared_ptr<std::atomic<bool>> cancel) {
@@ -94,7 +103,13 @@ GameListTable::GameListTable(GameListFrame* frame, std::shared_ptr<GUISettings> 
                     size_item->setText(game_size != UINT64_MAX
                                            ? GUI::Utils::FormatByteSize(game_size)
                                            : tr("Unknown"));
-                    size_item->setData(Qt::UserRole, QVariant::fromValue<qulonglong>(game_size));
+                    size_item->setData(Qt::UserRole, QVariant::fromValue<qulonglong>(
+                                                         game_size != UINT64_MAX ? game_size : 0));
+
+                    if (horizontalHeader()->sortIndicatorSection() ==
+                        static_cast<int>(GUI::GameListColumns::dir_size)) {
+                        m_resort_timer->start();
+                    }
                 }
             });
 
@@ -463,7 +478,8 @@ void GameListTable::Populate(const std::vector<game_info>& game_data,
         setItem(row, static_cast<int>(GUI::GameListColumns::dir_size),
                 new CustomTableWidgetItem(
                     game_size != UINT64_MAX ? GUI::Utils::FormatByteSize(game_size) : tr("Unknown"),
-                    Qt::UserRole, QVariant::fromValue<qulonglong>(game_size)));
+                    Qt::UserRole,
+                    QVariant::fromValue<qulonglong>(game_size != UINT64_MAX ? game_size : 0)));
         setItem(row, static_cast<int>(GUI::GameListColumns::path),
                 new CustomTableWidgetItem(game->info.path));
 
