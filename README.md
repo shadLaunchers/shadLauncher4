@@ -11,7 +11,7 @@ SPDX-License-Identifier: GPL-2.0-or-later
   <br>
 </h1>
 <h1 align="center">
- <a href="https://discord.gg/bFJxfftGW6">
+ <a href="https://discord.gg/agmZvBqwPv">
         <img src="https://img.shields.io/discord/1534236192399425748?color=5865F2&label=shadLaunchers%20Discord&logo=Discord&logoColor=white" width="275">
  <a href="https://shadlaunchers.com">
         <img src="https://img.shields.io/badge/shadLaunchers-website-8A2BE2" width="150">
