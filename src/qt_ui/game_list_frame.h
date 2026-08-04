@@ -180,5 +180,14 @@ private:
     QTextEdit* logDisplay;
     //
     bool m_draw_compat_status_to_grid = false;
-    enum class DeleteType { Game, Update, SaveData, DLC, Trophy, ShaderCache, MetadataCache };
+    enum class DeleteType {
+        Game,
+        Update,
+        GameAndUpdate,
+        SaveData,
+        DLC,
+        Trophy,
+        ShaderCache,
+        MetadataCache
+    };
 };

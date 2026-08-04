@@ -104,6 +104,48 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
             message_type = tr("Update");
             break;
 
+        case GameListFrame::DeleteType::GameAndUpdate: {
+            if (update_path.isEmpty() ||
+                !std::filesystem::exists(Common::FS::PathFromQString(update_path))) {
+                QMessageBox::critical(frame, tr("Error"), tr("This game has no update to delete!"));
+                return;
+            }
+
+            const QMessageBox::StandardButton reply = QMessageBox::question(
+                frame, tr("Delete Game + Update"),
+                tr("Are you sure you want to delete %1's game and update/patch "
+                   "directories? This cannot be undone.")
+                    .arg(QString::fromStdString(gameinfo->info.name)),
+                QMessageBox::Yes | QMessageBox::No);
+            if (reply != QMessageBox::Yes) {
+                return;
+            }
+
+            BackgroundMusicPlayer::getInstance().StopMusic();
+
+            auto remove_path = [](const QString& path) {
+                const std::filesystem::path path_to_delete = Common::FS::PathFromQString(path);
+                std::error_code remove_ec;
+                if (std::filesystem::is_regular_file(path_to_delete, remove_ec)) {
+                    // A ZArchive-packed game/update is a single file, not a
+                    // directory; QDir::removeRecursively() would silently
+                    // do nothing for it.
+                    std::filesystem::remove(path_to_delete, remove_ec);
+                } else {
+                    QDir(path).removeRecursively();
+                }
+            };
+
+            // Delete the update first: if it were interrupted partway, we'd
+            // rather be left with just the (still-launchable) base game
+            // than an orphaned update pointing at a deleted base.
+            remove_path(update_path);
+            remove_path(game_path);
+
+            frame->Refresh(true);
+            return;
+        }
+
         case GameListFrame::DeleteType::DLC:
             if (!std::filesystem::exists(Common::FS::PathFromQString(dlc_path))) {
                 QMessageBox::critical(frame, tr("Error"), tr("This game has no DLC to delete!"));
@@ -192,8 +234,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
             QMessageBox::Yes | QMessageBox::No);
 
         if (reply == QMessageBox::Yes) {
-            const std::filesystem::path path_to_delete =
-                Common::FS::PathFromQString(folder_path);
+            const std::filesystem::path path_to_delete = Common::FS::PathFromQString(folder_path);
             std::error_code remove_ec;
             if (std::filesystem::is_regular_file(path_to_delete, remove_ec)) {
                 // A ZArchive-packed game/update is a single file, not a
@@ -276,14 +317,14 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
             return;
         }
 
-        auto* progress =
-            new ProgressDialog(dialog_title, tr("Packing %1...").arg(display_name), tr("Cancel"),
-                               0, 1000, /*delete_on_close=*/true, frame);
+        auto* progress = new ProgressDialog(dialog_title, tr("Packing %1...").arg(display_name),
+                                            tr("Cancel"), 0, 1000, /*delete_on_close=*/true, frame);
         progress->SetValue(0);
         progress->show();
 
         auto cancel_flag = std::make_shared<std::atomic<bool>>(false);
-        connect(progress, &QProgressDialog::canceled, frame, [cancel_flag] { *cancel_flag = true; });
+        connect(progress, &QProgressDialog::canceled, frame,
+                [cancel_flag] { *cancel_flag = true; });
 
         struct ConvertZarResult {
             bool success = false;
@@ -374,17 +415,14 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         const QString game_name = QString::fromStdString(game->info.name);
 
         QString extra_note;
-        if (!game->info.update_path.empty() &&
-            !Core::FileSys::IsZArchiveFile(source_path)) {
-            extra_note =
-                tr("\n\nThis game has a separate update/patch folder. Only the base game "
-                   "will be archived; the update/patch folder will not be included and "
-                   "will be left as-is. Use \"Convert Update to ZArchive\" separately if "
-                   "you'd like to archive it too.");
+        if (!game->info.update_path.empty() && !Core::FileSys::IsZArchiveFile(source_path)) {
+            extra_note = tr("\n\nThis game has a separate update/patch folder. Only the base game "
+                            "will be archived; the update/patch folder will not be included and "
+                            "will be left as-is. Use \"Convert Update to ZArchive\" separately if "
+                            "you'd like to archive it too.");
         }
 
-        convertPathToZArchiveHandler(source_path, game_name, tr("Convert to ZArchive"),
-                                     extra_note);
+        convertPathToZArchiveHandler(source_path, game_name, tr("Convert to ZArchive"), extra_note);
     };
 
     auto convertUpdateToZArchiveHandler = [frame,
@@ -397,8 +435,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         }
 
         const std::filesystem::path source_path(game->info.update_path);
-        const QString display_name =
-            tr("%1 Update").arg(QString::fromStdString(game->info.name));
+        const QString display_name = tr("%1 Update").arg(QString::fromStdString(game->info.name));
 
         convertPathToZArchiveHandler(source_path, display_name, tr("Convert Update to ZArchive"),
                                      QString());
@@ -418,9 +455,9 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         QString default_dir;
         Common::FS::PathToQString(default_dir, source_path.parent_path());
 
-        const QString output_path_str = QFileDialog::getExistingDirectory(
-            frame, tr("Extract %1 to Folder").arg(game_name), default_dir,
-            QFileDialog::ShowDirsOnly);
+        const QString output_path_str =
+            QFileDialog::getExistingDirectory(frame, tr("Extract %1 to Folder").arg(game_name),
+                                              default_dir, QFileDialog::ShowDirsOnly);
         if (output_path_str.isEmpty()) {
             return;
         }
@@ -432,8 +469,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         if (std::filesystem::exists(output_path, exists_ec) && !exists_ec) {
             bool has_entries = false;
             std::error_code it_ec;
-            for (const auto& entry :
-                std::filesystem::directory_iterator(output_path, it_ec)) {
+            for (const auto& entry : std::filesystem::directory_iterator(output_path, it_ec)) {
                 (void)entry;
                 has_entries = true;
                 break;
@@ -447,8 +483,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         if (std::filesystem::exists(output_path, target_exists_ec) && !target_exists_ec) {
             bool target_has_entries = false;
             std::error_code it_ec;
-            for (const auto& entry :
-                std::filesystem::directory_iterator(output_path, it_ec)) {
+            for (const auto& entry : std::filesystem::directory_iterator(output_path, it_ec)) {
                 (void)entry;
                 target_has_entries = true;
                 break;
@@ -483,7 +518,8 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         progress->show();
 
         auto cancel_flag = std::make_shared<std::atomic<bool>>(false);
-        connect(progress, &QProgressDialog::canceled, frame, [cancel_flag] { *cancel_flag = true; });
+        connect(progress, &QProgressDialog::canceled, frame,
+                [cancel_flag] { *cancel_flag = true; });
 
         struct UnpackZarResult {
             bool success = false;
@@ -575,7 +611,8 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
 
     QMenu* launch_menu = addMenu(tr("&Launch game"));
     QAction* launch_default = launch_menu->addAction(tr("&Launch game with current settings"));
-    connect(launch_default, &QAction::triggered, frame, [frame, gameinfo] { frame->RequestBoot(gameinfo); });
+    connect(launch_default, &QAction::triggered, frame,
+            [frame, gameinfo] { frame->RequestBoot(gameinfo); });
 
     QAction* launch_clean = launch_menu->addAction(tr("&Launch game with default settings"));
     connect(launch_clean, &QAction::triggered, frame, [frame, gameinfo] {
@@ -589,9 +626,9 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         frame->RequestBoot(gameinfo, args);
     });
 
-    QAction* configure = addAction(
-        gameinfo->has_custom_config ? tr("&Change Custom Configuration")
-                                    : tr("&Create Custom Configuration From Global Settings"));
+    QAction* configure = addAction(gameinfo->has_custom_config
+                                       ? tr("&Change Custom Configuration")
+                                       : tr("&Create Custom Configuration From Global Settings"));
 
     // this will work only for separate updates install (-UPDATE or -patch folders)
     const std::string update_path = current_game.update_path;
@@ -611,8 +648,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                     update_path, "sce_sys/changeinfo/changeinfo.xml");
             }
             if (changelog_resolved) {
-                ChangelogDialog dialog(frame,
-                                       QString::fromStdString(changelog_resolved->string()));
+                ChangelogDialog dialog(frame, QString::fromStdString(changelog_resolved->string()));
                 dialog.exec();
             }
         });
@@ -725,12 +761,16 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
     // Desktop shortcut
     QAction* create_shortcut = addAction(tr("&Create Desktop Shortcut"));
     connect(create_shortcut, &QAction::triggered, frame, [frame, current_game] {
-        if (frame->m_gui_settings->GetValue(GUI::version_manager_versionSelected).toString().isEmpty()) {
-            QMessageBox::information(frame, tr("No Version Selected"), tr("Select a version first"));
+        if (frame->m_gui_settings->GetValue(GUI::version_manager_versionSelected)
+                .toString()
+                .isEmpty()) {
+            QMessageBox::information(frame, tr("No Version Selected"),
+                                     tr("Select a version first"));
             return;
         }
 
-        QString version = frame->m_gui_settings->GetValue(GUI::version_manager_versionSelected).toString();
+        QString version =
+            frame->m_gui_settings->GetValue(GUI::version_manager_versionSelected).toString();
         QString path = frame->m_gui_settings->GetVersionExecutablePath(version);
         frame->requestShortcut(current_game);
     });
@@ -759,8 +799,9 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         QString iconPath;
         Common::FS::PathToQString(iconPath, current_game.icon_path);
         QPixmap gameImage(iconPath);
-        CheatsPatches* cheatsPatches = new CheatsPatches(
-            frame->m_gui_settings, frame->m_ipc_client, gameName, gameSerial, gameVersion, gameSize, gameImage);
+        CheatsPatches* cheatsPatches =
+            new CheatsPatches(frame->m_gui_settings, frame->m_ipc_client, gameName, gameSerial,
+                              gameVersion, gameSize, gameImage);
         cheatsPatches->show();
         connect(frame, &QWidget::destroyed, cheatsPatches,
                 [cheatsPatches]() { cheatsPatches->deleteLater(); });
@@ -811,8 +852,8 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         }
 
         QString gameName = QString::fromStdString(current_game.name);
-        TrophyViewer* trophyViewer =
-            new TrophyViewer(frame->m_gui_settings, trophyPath, gameTrpPath, gameName, allTrophyGames);
+        TrophyViewer* trophyViewer = new TrophyViewer(frame->m_gui_settings, trophyPath,
+                                                      gameTrpPath, gameName, allTrophyGames);
         trophyViewer->show();
     });
 
@@ -843,13 +884,16 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
     convert_update_to_zar->setEnabled(
         !current_game.update_path.empty() &&
         !Core::FileSys::IsZArchiveFile(std::filesystem::path(current_game.update_path)));
-    QAction* convert_from_zar =
-        manage_game_menu->addAction(tr("&Extract from ZArchive (.zar)..."));
+    QAction* convert_from_zar = manage_game_menu->addAction(tr("&Extract from ZArchive (.zar)..."));
     convert_from_zar->setEnabled(
         Core::FileSys::IsZArchiveFile(std::filesystem::path(current_game.path)));
     QAction* browse_zar = manage_game_menu->addAction(tr("&Browse ZArchive Contents..."));
-    browse_zar->setEnabled(
-        Core::FileSys::IsZArchiveFile(std::filesystem::path(current_game.path)));
+    browse_zar->setEnabled(Core::FileSys::IsZArchiveFile(std::filesystem::path(current_game.path)));
+    QAction* browse_update_zar =
+        manage_game_menu->addAction(tr("Browse &Update ZArchive Contents..."));
+    browse_update_zar->setEnabled(
+        !current_game.update_path.empty() &&
+        Core::FileSys::IsZArchiveFile(std::filesystem::path(current_game.update_path)));
 
     // Copy Info menu
     QMenu* info_menu = addMenu(tr("&Copy Info"));
@@ -861,6 +905,8 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
     QMenu* delete_menu = addMenu(tr("&Delete..."));
     QAction* delete_game = delete_menu->addAction(tr("&Delete Game"));
     QAction* delete_update = delete_menu->addAction(tr("&Delete Update"));
+    QAction* delete_game_and_update = delete_menu->addAction(tr("Delete Game + &Update"));
+    delete_game_and_update->setEnabled(!current_game.update_path.empty());
     QAction* delete_save_data = delete_menu->addAction(tr("&Delete Save Data"));
     QAction* delete_DLC = delete_menu->addAction(tr("&Delete DLC "));
     QAction* delete_trophy = delete_menu->addAction(tr("&Delete Trophy"));
@@ -890,8 +936,12 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
 
     // Delete Menu Actions
 
-    connect(delete_game, &QAction::triggered, frame, [=] { deleteHandler(GameListFrame::DeleteType::Game); });
-    connect(delete_update, &QAction::triggered, frame, [=] { deleteHandler(GameListFrame::DeleteType::Update); });
+    connect(delete_game, &QAction::triggered, frame,
+            [=] { deleteHandler(GameListFrame::DeleteType::Game); });
+    connect(delete_update, &QAction::triggered, frame,
+            [=] { deleteHandler(GameListFrame::DeleteType::Update); });
+    connect(delete_game_and_update, &QAction::triggered, frame,
+            [=] { deleteHandler(GameListFrame::DeleteType::GameAndUpdate); });
     if (gameinfo->has_custom_config) {
         QAction* remove_custom_config = delete_menu->addAction(tr("&Remove Custom Configuration"));
         connect(remove_custom_config, &QAction::triggered, frame, [frame, serial, gameinfo]() {
@@ -902,8 +952,10 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
     }
     connect(delete_save_data, &QAction::triggered, frame,
             [=] { deleteHandler(GameListFrame::DeleteType::SaveData); });
-    connect(delete_DLC, &QAction::triggered, frame, [=] { deleteHandler(GameListFrame::DeleteType::DLC); });
-    connect(delete_trophy, &QAction::triggered, frame, [=] { deleteHandler(GameListFrame::DeleteType::Trophy); });
+    connect(delete_DLC, &QAction::triggered, frame,
+            [=] { deleteHandler(GameListFrame::DeleteType::DLC); });
+    connect(delete_trophy, &QAction::triggered, frame,
+            [=] { deleteHandler(GameListFrame::DeleteType::Trophy); });
     connect(delete_shader_cache, &QAction::triggered, frame,
             [=] { deleteHandler(GameListFrame::DeleteType::ShaderCache); });
     connect(clear_metadata_cache, &QAction::triggered, frame,
@@ -924,7 +976,8 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
     connect(compatibility_submit, &QAction::triggered, frame, [frame, current_game, gameinfo] {
         std::filesystem::path log_file_path =
             (Common::FS::GetUserPath(Common::FS::PathType::LogDir) /
-             (frame->m_emu_settings->IsLogSeparate() ? current_game.serial + ".log" : "shad_log.txt"));
+             (frame->m_emu_settings->IsLogSeparate() ? current_game.serial + ".log"
+                                                     : "shad_log.txt"));
         bool is_valid_file = LogAnalyzer::ProcessFile(log_file_path);
         std::optional<std::string> report_result = std::nullopt;
         if (is_valid_file) {
@@ -956,8 +1009,9 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
             return;
         }
         if (gameinfo->compat.issue_number == "") {
-            QUrl url = QUrl(frame->m_gui_settings->GetValue(GUI::compatibility_issues_url).toString() +
-                            "issues/new");
+            QUrl url =
+                QUrl(frame->m_gui_settings->GetValue(GUI::compatibility_issues_url).toString() +
+                     "issues/new");
             QUrlQuery query;
             query.addQueryItem("template", QString("game_compatibility.yml"));
             query.addQueryItem("title",
@@ -973,7 +1027,8 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
             QDesktopServices::openUrl(url);
         } else {
             auto url_issues =
-                frame->m_gui_settings->GetValue(GUI::compatibility_issues_url).toString() + "issues/";
+                frame->m_gui_settings->GetValue(GUI::compatibility_issues_url).toString() +
+                "issues/";
             QDesktopServices::openUrl(QUrl(url_issues + gameinfo->compat.issue_number));
         }
     });
@@ -983,15 +1038,19 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
     // Manage Game menu actions
     connect(convert_to_zar, &QAction::triggered, frame,
             [convertToZArchiveHandler, gameinfo] { convertToZArchiveHandler(gameinfo); });
-    connect(convert_update_to_zar, &QAction::triggered, frame,
-            [convertUpdateToZArchiveHandler, gameinfo] {
-                convertUpdateToZArchiveHandler(gameinfo);
-            });
+    connect(
+        convert_update_to_zar, &QAction::triggered, frame,
+        [convertUpdateToZArchiveHandler, gameinfo] { convertUpdateToZArchiveHandler(gameinfo); });
     connect(convert_from_zar, &QAction::triggered, frame,
             [convertFromZArchiveHandler, gameinfo] { convertFromZArchiveHandler(gameinfo); });
     connect(browse_zar, &QAction::triggered, frame, [frame, gameinfo] {
+        auto* dialog = new ZArchiveViewerDialog(std::filesystem::path(gameinfo->info.path), frame);
+        dialog->setAttribute(Qt::WA_DeleteOnClose);
+        dialog->show();
+    });
+    connect(browse_update_zar, &QAction::triggered, frame, [frame, gameinfo] {
         auto* dialog =
-            new ZArchiveViewerDialog(std::filesystem::path(gameinfo->info.path), frame);
+            new ZArchiveViewerDialog(std::filesystem::path(gameinfo->info.update_path), frame);
         dialog->setAttribute(Qt::WA_DeleteOnClose);
         dialog->show();
     });
@@ -1001,7 +1060,8 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         else
             frame->m_hidden_list.remove(serial);
 
-        frame->m_gui_settings->SetValue(GUI::game_list_hidden_list, QStringList(frame->m_hidden_list.values()));
+        frame->m_gui_settings->SetValue(GUI::game_list_hidden_list,
+                                        QStringList(frame->m_hidden_list.values()));
         frame->Refresh();
     });
     connect(edit_notes, &QAction::triggered, frame, [frame, name, serial] {
@@ -1032,8 +1092,8 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         }
     });
     auto configure_dialog = [frame, current_game, gameinfo](bool create_cfg_from_global_cfg) {
-        SettingsDialog dlg(frame->m_gui_settings, frame->m_emu_settings, frame->m_ipc_client, 0, frame, &current_game,
-                           create_cfg_from_global_cfg);
+        SettingsDialog dlg(frame->m_gui_settings, frame->m_emu_settings, frame->m_ipc_client, 0,
+                           frame, &current_game, create_cfg_from_global_cfg);
 
         connect(&dlg, &SettingsDialog::EmuSettingsApplied, [frame, gameinfo]() {
             if (!gameinfo->has_custom_config) {
