@@ -1614,115 +1614,115 @@ Using local database.
     </message>
     <message>
       <source>&amp;Import...</source>
-      <translation type="unfinished">&amp;Import...</translation>
+      <translation>&amp;Імпортувати...</translation>
     </message>
     <message>
       <source>&amp;Export...</source>
-      <translation type="unfinished">&amp;Export...</translation>
+      <translation>&amp;Експортувати...</translation>
     </message>
     <message>
       <source>Import Host Overrides</source>
-      <translation type="unfinished">Import Host Overrides</translation>
+      <translation>Імпорт перевизначення хосту</translation>
     </message>
     <message>
       <source>JSON Files (*.json);;All Files (*)</source>
-      <translation type="unfinished">JSON Files (*.json);;All Files (*)</translation>
+      <translation>Файли JSON (*.json);;Усі файли (*)</translation>
     </message>
     <message>
       <source>Import failed</source>
-      <translation type="unfinished">Import failed</translation>
+      <translation>Не вдалося імпортувати</translation>
     </message>
     <message>
       <source>Could not open the selected file.</source>
-      <translation type="unfinished">Could not open the selected file.</translation>
+      <translation>Не вдалося відкрити вибраний файл.</translation>
     </message>
     <message>
       <source>The selected file could not be parsed as JSON.</source>
-      <translation type="unfinished">The selected file could not be parsed as JSON.</translation>
+      <translation>Не вдалося проаналізувати вибраний файл як JSON.</translation>
     </message>
     <message>
       <source>The selected file must be a JSON object mapping match keys to redirect targets, like host_overrides.json.</source>
-      <translation type="unfinished">The selected file must be a JSON object mapping match keys to redirect targets, like host_overrides.json.</translation>
+      <translation>Вибраний файл має бути об’єктом JSON, який зіставляє ключі відповідності з цілями перенаправлення, як-от host_overrides.json.</translation>
     </message>
     <message>
       <source>Nothing to import</source>
-      <translation type="unfinished">Nothing to import</translation>
+      <translation>Немає що імпортувати</translation>
     </message>
     <message>
       <source>The selected file doesn&apos;t contain any valid entries.</source>
-      <translation type="unfinished">The selected file doesn&apos;t contain any valid entries.</translation>
+      <translation>Вибраний файл не містить жодних дійсних записів.</translation>
     </message>
     <message>
       <source>Found %1 entry/entries in the selected file.
 
 Replace the current list entirely, or append these entries to it (entries whose match already exists in the list will be skipped)?</source>
-      <translation type="unfinished">Found %1 entry/entries in the selected file.
+      <translation>У вибраному файлі знайдено %1 запис(-ів).
 
-Replace the current list entirely, or append these entries to it (entries whose match already exists in the list will be skipped)?</translation>
+Повністю замінити поточний список чи додати ці записи до нього (записи, що вже є в списку, будуть пропущені)?</translation>
     </message>
     <message>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Замінити все</translation>
     </message>
     <message>
       <source>Append</source>
-      <translation type="unfinished">Append</translation>
+      <translation>Додати</translation>
     </message>
     <message>
       <source>Import complete</source>
-      <translation type="unfinished">Import complete</translation>
+      <translation>Імпорт завершено</translation>
     </message>
     <message>
       <source>Replaced the list with %1 imported entry/entries.</source>
-      <translation type="unfinished">Replaced the list with %1 imported entry/entries.</translation>
+      <translation>Список замінено на %1 імпортований запис / імпортованих записів.</translation>
     </message>
     <message>
       <source>Added %1 new entry/entries. Skipped %2 already in the list.</source>
-      <translation type="unfinished">Added %1 new entry/entries. Skipped %2 already in the list.</translation>
+      <translation>Додано %1 новий запис / нових записів. Пропущено %2, що вже є у списку.</translation>
     </message>
     <message>
       <source>Added %1 new entry/entries.</source>
-      <translation type="unfinished">Added %1 new entry/entries.</translation>
+      <translation>Додано %1 новий запис / нових записів.</translation>
     </message>
     <message>
       <source>Cannot export</source>
-      <translation type="unfinished">Cannot export</translation>
+      <translation>Не вдалося експортувати</translation>
     </message>
     <message>
       <source>Please fix the following before exporting:
 
 %1</source>
-      <translation type="unfinished">Please fix the following before exporting:
+      <translation>Виправте наступне перед експортуванням:
 
 %1</translation>
     </message>
     <message>
       <source>Nothing to export</source>
-      <translation type="unfinished">Nothing to export</translation>
+      <translation>Немає що експортувати</translation>
     </message>
     <message>
       <source>The list doesn&apos;t have any entries yet.</source>
-      <translation type="unfinished">The list doesn&apos;t have any entries yet.</translation>
+      <translation>У списку ще немає жодних записів.</translation>
     </message>
     <message>
       <source>Export Host Overrides</source>
-      <translation type="unfinished">Export Host Overrides</translation>
+      <translation>Експорт перевизначення хосту</translation>
     </message>
     <message>
       <source>Export failed</source>
-      <translation type="unfinished">Export failed</translation>
+      <translation>Не вдалося експортувати</translation>
     </message>
     <message>
       <source>Could not open the selected file for writing.</source>
-      <translation type="unfinished">Could not open the selected file for writing.</translation>
+      <translation>Не вдалося відкрити вибраний файл для запису.</translation>
     </message>
     <message>
       <source>Export complete</source>
-      <translation type="unfinished">Export complete</translation>
+      <translation>Експорт завершено</translation>
     </message>
     <message>
       <source>Exported %1 entry/entries.</source>
-      <translation type="unfinished">Exported %1 entry/entries.</translation>
+      <translation>Експортовано %1 запис / записів.</translation>
     </message>
   </context>
   <context>
@@ -2909,11 +2909,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Row %1: %2</source>
-      <translation type="unfinished">Row %1: %2</translation>
+      <translation>Рядок %1: %2</translation>
     </message>
     <message>
       <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
-      <translation type="unfinished">Row %1: duplicate entry for &apos;%2&apos;.</translation>
+      <translation>Рядок %1: повторюваний запис для «%2».</translation>
     </message>
   </context>
   <context>
@@ -3822,195 +3822,196 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</source>
-      <translation type="unfinished">Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</translation>
+      <translation>Відкрити теку користувацьких зображень трофеїв/звуків:\nВи можете додати користувацькі зображення до трофеїв та звук.\nДодайте файли до теки custom_trophy з такими назвами:\ntrophy.wav АБО trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nПримітка: Звук буде працювати лише у версіях ShadPS4 з графічним інтерфейсом.</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</source>
-      <translation type="unfinished">Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</translation>
+      <translation>Увімкнути інформативну активність у Discord:\nпоказує значок емулятора та відповідну інформацію у вашому профілі Discord.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation type="unfinished">Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</translation>
+      <translation>Мікрофон:\nНемає: Не використовує мікрофон.\nТиповий пристрій: Використовуватиме типовий пристрій, визначений у системі.\nАбо вручну виберіть мікрофон зі списку.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Оновлення інтерфейсу:\nРелізна: офіційні версії, що виходять щомісяця; вони можуть бути застарілими, проте є більш надійними та перевіреними.\nНічна: версії для розробки, що містять усі найновіші функції та виправлення, але можуть мати помилки та бути менш стабільними.\n\n*Це оновлення стосується лише інтерфейсу користувача Qt. Щоб оновити ядро емулятора, скористайтеся меню «Менеджер версій».</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation type="unfinished">Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</translation>
+      <translation>Увімкнути журналювання:\nУвімкнення ведення журналу.\nНе змінюйте це, якщо не знаєте, що робите!\nКоли звертаєтеся за допомогою, переконайтеся, що цей параметр УВІМКНЕНО.</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>Відкрити розташування журналу:\nВідкрити теку, де збережено файл журналу.</translation>
     </message>
     <message>
       <source>Separate Log Files:\nWrites a separate logfile for each game.</source>
-      <translation type="unfinished">Separate Log Files:\nWrites a separate logfile for each game.</translation>
+      <translation>Окремі файли журналу:\nЗаписує окремий файл журналу для кожної гри.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+      <translation>Синхронізація журналів:\nПеремикання між синхронним (порядок) або асинхронним (продуктивність) режимами.</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+      <translation>Пропускати дублікати в журналі:\nЕкономить місце в сховищі, уникаючи запису ідентичних журналів.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+      <translation>Макс. тривалість пропуску журналу:\nІнтервал без запису однакових рядків (мс) — лише якщо увімкнено «Пропускати дублікати в журналах».</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+      <translation>Ліміт розміру журналу:\nМаксимальний розмір журналу (у байтах).</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+      <translation>Додавання до журналу:\nДодати до наявних журналів.</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
+      <translation>Тип журналювання:\nВиберіть між типами журналів wincolor або msvc.\nwincolor: Стандартне журналювання для Windows\nmsvc: журналювання для налагодження</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
-      <translation type="unfinished">Background Image:\nControl the opacity of the game background image.</translation>
+      <translation>Фонове зображення:\nКерує непрозорістю фонового зображення гри.</translation>
     </message>
     <message>
       <source>Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</source>
-      <translation type="unfinished">Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</translation>
+      <translation>Грати титульну музику:\nВмикає відтворення спеціальної музики під час вибору гри в списку, якщо вона це підтримує.</translation>
     </message>
     <message>
       <source>Update Compatibility On Startup:\nAutomatically update the compatibility database when shadPS4 starts.</source>
-      <translation type="unfinished">Update Compatibility On Startup:\nAutomatically update the compatibility database when shadPS4 starts.</translation>
+      <translation>Оновлення даних ігрової сумісності під час запуску:\nАвтоматично оновлює базу даних ігрової сумісності під час запуску shadPS4.</translation>
     </message>
     <message>
       <source>Update Compatibility Database:\nImmediately update the compatibility database.</source>
-      <translation type="unfinished">Update Compatibility Database:\nImmediately update the compatibility database.</translation>
+      <translation>Оновити данні ігрової сумістності:\nНегайно оновить базу даних ігрової сумісності.</translation>
     </message>
     <message>
       <source>Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</source>
-      <translation type="unfinished">Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</translation>
+      <translation>Графічний пристрій:\nУ системах із кількома GPU виберіть з випадаючого списку GPU, який буде використовувати емулятор,\nабо виберіть &quot;Автовибір&quot;, щоб визначити його автоматично.</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>Режим показу:\nНалаштовує спосіб виведення відео на ваш екран.\n\nПоштова скринька: Кадри синхронізуються з частотою оновлення вашого екрана. Нові кадри замінять будь-які очікувальні кадри. Зменшує затримку, але може пропускати кадри, якщо відстає.\nFifo: Кадри синхронізуються з частотою оновлення вашого екрана. Нові кадри стають в чергу після очікувальних кадрів. Гарантує показ усіх кадрів, але може збільшити затримку.
+\nНегайно: Кадри негайно зображуються на екрані, коли готові. Може призвести до розривів зображення.</translation>
     </message>
     <message>
       <source>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</source>
-      <translation type="unfinished">Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</translation>
+      <translation>Ширина/Висота:\nВстановіть розмір вікна емулятора під час запуску, який може бути змінений під час гри.\nЦе відрізняється від роздільної здатності в грі.</translation>
     </message>
     <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
-      <translation type="unfinished">Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</translation>
+      <translation>Увімкнути HDR:\nУвімкнути HDR в іграх, які його підтримують.\nВаш монітор повинен мати колірний простір BT2020 PQ та формат swapchain RGB10A2.</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>Частота Vblank:\nЧастота кадрів, з якою працює емулятор (базова частота — 60 Гц, незалежно від того, чи гра працює у 30 чи 60 к / с). Зміна цього параметра може призвести до негативних наслідків, таких як прискорення гри або порушення критичної функціональності, яка не розрахована на такі зміни!</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation type="unfinished">Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</translation>
+      <translation>Увімкнути відгуки лінійних зображень:\nУвімкнути асинхронне завантаження зображень, модифікованих GPU.\nМоже виправити проблеми у деяких іграх.</translation>
     </message>
     <message>
       <source>Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</source>
-      <translation type="unfinished">Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</translation>
+      <translation>Приховувати курсор:\nВиберіть, коли курсор зникатиме:\nНіколи: Курсор миші завжди буде видимий.\nПри бездіяльності: Встановіть час, через який курсор зникне в разі бездіяльності.\nЗавжди: Курсор миші завжди буде прихований.</translation>
     </message>
     <message>
       <source>Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</source>
-      <translation type="unfinished">Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</translation>
+      <translation>Затримка приховування неактивного курсора:\nТривалість (у секундах), після якої неактивний курсор приховується.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation type="unfinished">Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</translation>
+      <translation>Увімкнути керування рухом:\nЯкщо ввімкнено, буде використовуватися керування рухом контролера, якщо це підтримується.</translation>
     </message>
     <message>
       <source>Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</source>
-      <translation type="unfinished">Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</translation>
+      <translation>Увімкнути фонове введення з контролера:\nДозволити shadPS4 виявляти введення з контролера, коли вікно гри не у фокусі.</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>USB-пристрій:\nСправжній USB-пристрій: використовувати справжній USB-пристрій, під’єднаний до системи.\nSkylander Portal: емуляція Skylander Portal of Power.\nInfinity Base: емуляція Disney Infinity Base.\nDimensions Toypad: емуляція Lego Dimensions Toypad.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Увімкнути збереження шейдерів:\nДля технічного налагодження зберігає шейдери гри в теку під час їхнього рендерингу.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation type="unfinished">Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</translation>
+      <translation>Увімкнути налагоджувальні дампи:\nЗберігає символи імпорту, експорту та інформацію про заголовок файлу поточної виконуваної програми PS4 у теку.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
-      <translation type="unfinished">Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</translation>
+      <translation>Увімкнути налагодження RenderDoc:\nЯкщо увімкнено, емулятор забезпечить сумісність із Renderdoc, даючи змогу захоплювати й аналізувати поточні кадри під час рендерингу.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
-      <translation type="unfinished">Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</translation>
+      <translation>Копіювати буфери GPU:\nДозволяє обійти проблеми синхронізації, пов&apos;язані з відправленням даних на GPU\nМоже як допомогти, так і не вплинути на збої типу PM4 (тип 0).</translation>
     </message>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
-      <translation type="unfinished">Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</translation>
+      <translation>Збирати шейдери:\nВам потрібно увімкнути цей параметр, щоб редагувати шейдери за допомогою меню налагодження (Ctrl + F10).</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</translation>
+      <translation>Діагностика збоїв:\nСтворює файл .yaml з інформацією про стан Vulkan на момент збою.\nКорисно для налагодження помилок «Пристрій втрачено». Якщо ви ввімкнули цю функцію, вам слід увімкнути маркери налагодження як для власника, так і для гостя.\nДля роботи цього потрібно мати ввімкнені шари перевірки Vulkan та SDK Vulkan.</translation>
     </message>
     <message>
       <source>Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation type="unfinished">Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</translation>
+      <translation>Хостові маркери налагодження:\nДодає інформацію емулятора, наприклад маркери для конкретних команд AMDGPU у Vulkan, також присвоює ресурсам налагоджувані назви.\nЯкщо цей параметр увімкнено, рекомендується також активувати діагностику збоїв.\nКорисно для програм на кшталт RenderDoc.</translation>
     </message>
     <message>
       <source>Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation type="unfinished">Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</translation>
+      <translation>Гостьові маркери налагодження:\nВставляє налагоджувані маркери, які сама гра додала до командного буфера.\nЯкщо цей параметр увімкнено, рекомендується також активувати діагностику збоїв.\nКорисно для програм на кшталт RenderDoc.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Увімкнути шари перевірки Vulkan:\nВмикає систему, яка перевіряє стан рендерера Vulkan та записує інформацію про його внутрішній стан.\nЦе знизить продуктивність і, ймовірно, змінить поведінку емуляції.\nДля роботи цієї функції потрібен Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Увімкнення перевірки ядра:\nЗабезпечує роботу основних функцій перевірки API.\nЦе знизить продуктивність і, ймовірно, змінить поведінку емуляції.\nДля роботи потрібен Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Увімкнути перевірку синхронізації:\nУмикає систему, яка перевіряє синхронізацію завдань рендерингу Vulkan.\nЦе знизить продуктивність і, ймовірно, змінить поведінку емуляції.\nДля роботи цієї функції потрібен Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Увімкнути перевірку з використанням GPU:\nІнструменти шейдери з кодом, який перевіряє, чи вони працюють правильно.\nЦе знизить продуктивність і, ймовірно, змінить поведінку емуляції.\nДля цього потрібен Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Увімкнути прямий доступ до пам’яті:\nНадає відеокарті довільний доступ до пам’яті центрального процесора.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Увімкнути режим консолі для розробників:\nДодає підтримку розміру пам’яті консолі для розробників.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>Увімкнути режим PS4 Neo:\nДодає підтримку емуляції PS4 Pro та розміру пам’яті. Наразі викликає нестабільність у великій кількості протестованих ігор.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Використовувати емуляцію доступу до мережі:\nЗмушує ігри визначати активне мережеве з’єднання. Фактичні онлайн-можливості ще не підтримуються.</translation>
     </message>
     <message>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
-      <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
+      <translation>shadNet:\n Сумісність наразі дуже обмежена.\nВи можете зареєструватися за адресою https://www.shadps4.net/shadnet/register.</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Увімкнути кеш шейдерів:\nЗбереження скомпільованих шейдерів для уникнення повторної компіляції та зменшення затримок.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Стисніть файли кешу шейдерів у zip-архів:\nФайли кешу шейдерів зберігаються в одному zip-архіві замість кількох окремих файлів.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Додаткове виділення оперативної пам’яті:\nПримусово виділяє вказану додаткову кількість оперативної пам’яті. Призводить до збоїв або проблем у деяких іграх.</translation>
     </message>
   </context>
   <context>

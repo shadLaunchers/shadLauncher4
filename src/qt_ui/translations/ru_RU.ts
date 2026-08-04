@@ -7,7 +7,7 @@
     <name>AboutDialog</name>
     <message>
       <source>About shadLauncher4</source>
-      <translation>Выйти из shadLauncher4</translation>
+      <translation>О shadLauncher4</translation>
     </message>
     <message>
       <source>Release</source>
@@ -1612,115 +1612,115 @@ Using local database.
     </message>
     <message>
       <source>&amp;Import...</source>
-      <translation type="unfinished">&amp;Import...</translation>
+      <translation>&amp;Импорт...</translation>
     </message>
     <message>
       <source>&amp;Export...</source>
-      <translation type="unfinished">&amp;Export...</translation>
+      <translation>&amp;Экспорт...</translation>
     </message>
     <message>
       <source>Import Host Overrides</source>
-      <translation type="unfinished">Import Host Overrides</translation>
+      <translation>Перезапись импорта хоста</translation>
     </message>
     <message>
       <source>JSON Files (*.json);;All Files (*)</source>
-      <translation type="unfinished">JSON Files (*.json);;All Files (*)</translation>
+      <translation>Файлы JSON (*.json);;Все файлы (*)</translation>
     </message>
     <message>
       <source>Import failed</source>
-      <translation type="unfinished">Import failed</translation>
+      <translation>Ошибка импорта</translation>
     </message>
     <message>
       <source>Could not open the selected file.</source>
-      <translation type="unfinished">Could not open the selected file.</translation>
+      <translation>Невозможно открыть выбранный файл.</translation>
     </message>
     <message>
       <source>The selected file could not be parsed as JSON.</source>
-      <translation type="unfinished">The selected file could not be parsed as JSON.</translation>
+      <translation>Выбранный файл не может быть определен как JSON.</translation>
     </message>
     <message>
       <source>The selected file must be a JSON object mapping match keys to redirect targets, like host_overrides.json.</source>
-      <translation type="unfinished">The selected file must be a JSON object mapping match keys to redirect targets, like host_overrides.json.</translation>
+      <translation>Выбранный файл должен быть объектом JSON для переназначения подходящих клавиш на переадресованные цели, например host_overrides.json.</translation>
     </message>
     <message>
       <source>Nothing to import</source>
-      <translation type="unfinished">Nothing to import</translation>
+      <translation>Нечего импортировать</translation>
     </message>
     <message>
       <source>The selected file doesn&apos;t contain any valid entries.</source>
-      <translation type="unfinished">The selected file doesn&apos;t contain any valid entries.</translation>
+      <translation>Выбранный файл не содержит ни одой из допустимых записей.</translation>
     </message>
     <message>
       <source>Found %1 entry/entries in the selected file.
 
 Replace the current list entirely, or append these entries to it (entries whose match already exists in the list will be skipped)?</source>
-      <translation type="unfinished">Found %1 entry/entries in the selected file.
+      <translation>Найдено %1 запись/записей в выделенном файле.
 
-Replace the current list entirely, or append these entries to it (entries whose match already exists in the list will be skipped)?</translation>
+Полностью заменить текущий лист, или добавить к нему существующие записи (уже существующие совпадающие записи в списке будут пропущены)?</translation>
     </message>
     <message>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Заменить все</translation>
     </message>
     <message>
       <source>Append</source>
-      <translation type="unfinished">Append</translation>
+      <translation>Добавить</translation>
     </message>
     <message>
       <source>Import complete</source>
-      <translation type="unfinished">Import complete</translation>
+      <translation>Импорт завершен</translation>
     </message>
     <message>
       <source>Replaced the list with %1 imported entry/entries.</source>
-      <translation type="unfinished">Replaced the list with %1 imported entry/entries.</translation>
+      <translation>Список заменен %1 импортированными записью/записями.</translation>
     </message>
     <message>
       <source>Added %1 new entry/entries. Skipped %2 already in the list.</source>
-      <translation type="unfinished">Added %1 new entry/entries. Skipped %2 already in the list.</translation>
+      <translation>Добавлено %1 новых запись/записей. %2 пропущено, уже в списке.</translation>
     </message>
     <message>
       <source>Added %1 new entry/entries.</source>
-      <translation type="unfinished">Added %1 new entry/entries.</translation>
+      <translation>Добавлено %1 новых запись/записей.</translation>
     </message>
     <message>
       <source>Cannot export</source>
-      <translation type="unfinished">Cannot export</translation>
+      <translation>Невозможно экспортировать</translation>
     </message>
     <message>
       <source>Please fix the following before exporting:
 
 %1</source>
-      <translation type="unfinished">Please fix the following before exporting:
+      <translation>Пожалуйста, исправьте следующее перед экспортом:
 
 %1</translation>
     </message>
     <message>
       <source>Nothing to export</source>
-      <translation type="unfinished">Nothing to export</translation>
+      <translation>Нечего экспортировать</translation>
     </message>
     <message>
       <source>The list doesn&apos;t have any entries yet.</source>
-      <translation type="unfinished">The list doesn&apos;t have any entries yet.</translation>
+      <translation>В списке пока нет ни одной записи.</translation>
     </message>
     <message>
       <source>Export Host Overrides</source>
-      <translation type="unfinished">Export Host Overrides</translation>
+      <translation>Перезапись экспорта хоста</translation>
     </message>
     <message>
       <source>Export failed</source>
-      <translation type="unfinished">Export failed</translation>
+      <translation>Ошибка экспорта</translation>
     </message>
     <message>
       <source>Could not open the selected file for writing.</source>
-      <translation type="unfinished">Could not open the selected file for writing.</translation>
+      <translation>Невозможно открыть выбранный файл для записи.</translation>
     </message>
     <message>
       <source>Export complete</source>
-      <translation type="unfinished">Export complete</translation>
+      <translation>Экспорт завершен</translation>
     </message>
     <message>
       <source>Exported %1 entry/entries.</source>
-      <translation type="unfinished">Exported %1 entry/entries.</translation>
+      <translation>Экспортировано %1 запись/записей.</translation>
     </message>
   </context>
   <context>
@@ -2907,11 +2907,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Row %1: %2</source>
-      <translation type="unfinished">Row %1: %2</translation>
+      <translation>Ряд %1:%2</translation>
     </message>
     <message>
       <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
-      <translation type="unfinished">Row %1: duplicate entry for &apos;%2&apos;.</translation>
+      <translation>Ряд %1: дубликат записи для&apos;%2&apos;.</translation>
     </message>
   </context>
   <context>
@@ -3820,195 +3820,195 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</source>
-      <translation type="unfinished">Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</translation>
+      <translation>Открыть папку с изображениями/звуками пользовательских трофеев:\nВы можете добавить свои изображения и звуки для трофеев.\nДобавьте файлы в custom_trophy определенными именами:\ntrophy.wav ИЛИ trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nПодсказка: Звук будет работать только на QT версиях.</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</source>
-      <translation type="unfinished">Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</translation>
+      <translation>Включить Discord Rich Presence:\nОтображает иконку эмулятора и соответствующую информацию в вашем профиле Discord.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation type="unfinished">Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</translation>
+      <translation>Микрофон:\nНет: Не использовать микрофон.\nСтандартное устройство: Будет использовать устройство по умолчанию определенное системой.\nИли вручную выбрать из списка какой микрофон будет использован.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Обновления GUI:\nRelease: Официальные версии выпускаются каждый месяц, они могут сильно устареть, но лучше протестированы и более стабильны.\nNightly: Активно разрабатываемые версии со всеми последними функциями, исправлениями, но могут содержать баги и в общем менее стабильны.\n\n*Это обновление распространяется только для пользовательского интерфейса QT. Что бы обновить ядро эмулятора, пожалуйста используйте меню &apos;Менеджер версий&apos;.</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation type="unfinished">Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</translation>
+      <translation>Включить логирование:\nВключает логирование.\nНе изменяйте настройку если не знаете для чего она нужна!\nЕсли обращаетесь за помощью, убедитесь что эта настройка ВКЛЮЧЕНА.</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>Открыть местонахождение лога:\nОткрыть папку, где сохранен лог.</translation>
     </message>
     <message>
       <source>Separate Log Files:\nWrites a separate logfile for each game.</source>
-      <translation type="unfinished">Separate Log Files:\nWrites a separate logfile for each game.</translation>
+      <translation>Раздельное логирование:\nЗаписывает логи отдельно для каждой игры.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+      <translation>Синхронизация логов:\nПереключение между sync (order) или async (performance).</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+      <translation>Пропуск дубликатов логов:\nЭкономит место избегая записывание идентичных логов.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+      <translation>Максимальная продолжительность пропуска логов:\nИнтервал пропуска одних и тех же линий лога (миллисекунды) - только если &apos;Пропуск дубликатов логов&apos; активен.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+      <translation>Лимит размера лога:\nМаксимальный размер лога (в байтах).</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+      <translation>Добавление к логам:\nДобавление к существующим логам.</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
+      <translation>Тип лога:\nВыбор между wincolor или msvc.\nwincolor: Стандартное логирование для Windows\nmsvc: Логирование для отладки</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
-      <translation type="unfinished">Background Image:\nControl the opacity of the game background image.</translation>
+      <translation>Фоновое изображение:\nУправление прозрачностью фонового изображения игры.</translation>
     </message>
     <message>
       <source>Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</source>
-      <translation type="unfinished">Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</translation>
+      <translation>Проигрывать музыку с заставки:\nЕсли игра это поддерживает, включить проигрывание специальной музыки при выделении в интерфейсе.</translation>
     </message>
     <message>
       <source>Update Compatibility On Startup:\nAutomatically update the compatibility database when shadPS4 starts.</source>
-      <translation type="unfinished">Update Compatibility On Startup:\nAutomatically update the compatibility database when shadPS4 starts.</translation>
+      <translation>Обновлять базу совместимости при запуске:\nАвтоматически обновлять базу совместимости после запуска shadPS4.</translation>
     </message>
     <message>
       <source>Update Compatibility Database:\nImmediately update the compatibility database.</source>
-      <translation type="unfinished">Update Compatibility Database:\nImmediately update the compatibility database.</translation>
+      <translation>Обновить базу совместимости:\nМгновенно обновить базу совместимости.</translation>
     </message>
     <message>
       <source>Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</source>
-      <translation type="unfinished">Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</translation>
+      <translation>Графическое Устройство:\nДля систем с несколькими GPU, выберите из выпадающего списка GPU который будет использовать эмулятор,\nили выберите &quot;Авто выбор&quot;, для автоматического определения.</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>Режим Present:\nОпределяет как видео вывод будет представлен на экране.\n\nMailbox: Кадры синхронизируются с частотой обновления экрана. Ожидающие кадры будут заменены последующими. Уменьшает задержку, но может пропускать кадры если не будет успевать.\nFifo: Кадры синхронизируются с частотой обновления экрана. Новые кадры будут отложены за ожидающими. Обеспечивает отображение всех кадров, но может увеличить задержку.\nImmediate: Кадры сразу отображаются на экране по готовности. Может вызвать разрывы изображения.</translation>
     </message>
     <message>
       <source>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</source>
-      <translation type="unfinished">Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</translation>
+      <translation>Ширина/Высота:\nВыставляет Размер окна эмулятора при запуске, может быть изменен во время игры.\nЭта настройка отличается от игрового разрешения.</translation>
     </message>
     <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
-      <translation type="unfinished">Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</translation>
+      <translation>Включить HDR:\nВключает HDR в играх которые его поддерживают.\nВаш монитор должен иметь поддержку цветового покрытия BT2020 PQ и формат цепочки обмена RGB10A2.</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>Частота Vblank:\nЧастота обновления кадра с которой оперирует эмулятор (Стандартное значение 60hz, независимо от того работает игра в 30 или в 60 fps). Изменение частоты может повлечь за собой некоторые побочные эффекты, такие как увеличение скорости игры или критические ошибки в работе игр, некоторые из них не рассчитаны на изменение этого параметра!</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation type="unfinished">Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</translation>
+      <translation>Включить Обратное чтение линейных изображений:\nВключает асинхронную загрузку модифицированных линейных изображений через GPU.\nМожет исправить проблемы в некоторых играх.</translation>
     </message>
     <message>
       <source>Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</source>
-      <translation type="unfinished">Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</translation>
+      <translation>Спрятать курсор:\nВыбрать когда курсор будет исчезать:\nНикогда: Курсор всегда будет на виду.\nОжидание: Поставить таймер на скрытие курсора во время простоя.\nВсегда: Вы больше никогда не увидите свой курсор.</translation>
     </message>
     <message>
       <source>Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</source>
-      <translation type="unfinished">Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</translation>
+      <translation>Время скрытия курсора при бездействии:\nДлительность (секунды) в течение которого курсор скрывается.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation type="unfinished">Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</translation>
+      <translation>Активировать Управление гироскопом:\nВключить управление гироскопом контроллера если поддерживается игрой.</translation>
     </message>
     <message>
       <source>Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</source>
-      <translation type="unfinished">Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</translation>
+      <translation>Активировать фоновый ввод контроллера:\nРазрешить shadPS4 определять ввод с контроллера когда игровое окно не в фокусе.</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>Устройства USB:\nРеальное USB устройство: Использовать реальное USB устройство подсоединенное к системе.\nSkylander Portal: Эмулировать SKYLANDER Portal.\nDisney Infinity Base: Эмулировать DISNEY Infinity Base.\nLego Dimensions Toypad: Эмулировать LEGO Dimensions Toypad.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Активировать запись шейдеров:\nПо воле технической отладки, сохраняет игровые шейдеры в папку как только они рендерятся.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation type="unfinished">Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</translation>
+      <translation>Активировать запись отладки:\nСохраняет в директорию импорт, экспорт символов и информацию заголовка файла выполняемой на данный момент программы PS4.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
-      <translation type="unfinished">Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</translation>
+      <translation>Активировать отладку RenderDoc:\nЕсли активно, проводит эмулятору слой совместимости с RenderDoc, для захвата и анализирования кадров в реальном времени.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
-      <translation type="unfinished">Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</translation>
+      <translation>Копировать буферы GPU:\nПозволяет обойти состояния гонки, связанные с отправками GPU.\nМожет помочь или не помочь при сбоях PM4 типа 0.</translation>
     </message>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
-      <translation type="unfinished">Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</translation>
+      <translation>Сбор шейдеров:\nЧто бы редактировать шейдеры с помощью меню отладки активируйте этот параметр (Ctrl + F10).</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</translation>
+      <translation>Диагностика сбоев:\nСоздает .yaml файл с информацией о состоянии Vulkan'а в момент вылета.\nПригодится для отладки ошибок &apos;Device lost&apos;. Если у вас это включено, вам следует так же включить маркеры отладки Host И Guest.\nЧто бы все это использовать нужно включить слои проверки Vulkan, а так же Vulkan SDK.</translation>
     </message>
     <message>
       <source>Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation type="unfinished">Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</translation>
+      <translation>Маркеры отладки Host:\nВставляет любую информацию со стороны эмулятора, например маркеры для конкретных команд Vulkan'а на GPU от AMD, так же предоставляет отладочные имена для ресурсов.\nЕсли активно, стоит задуматься о включении Диагностики сбоев.\nПолезно для программ по типу RenderDoc.</translation>
     </message>
     <message>
       <source>Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation type="unfinished">Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</translation>
+      <translation>Маркеры отладки Guest:\nВставляет любые маркеры отладки, которые игра добавляет в командный буфер.\nЕсли это активно, стоит включить Диагностику сбоев.\nОтлично пригодится например для RenderDoc.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Включить Слои проверки Vulkan:\nЗапускает систему, которая проверяет состояние рендеринга Vulkan и пишет логи о его внутреннем состоянии.\nЭто категорически сильно понизит производительность и вероятно, изменит поведение эмуляции.\nНужен Vulkan SDK что бы работало.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Включить проверку ядра:\nАктивирует основные функции API для проверки.\nНемного понизит производительность и возможно, изменит поведение эмуляции.\nНужен Vulkan SDK для работы.</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Включить проверку синхронизации:\nЗапускает систему, которая проверяет Vulkan на время рендеринга задач \nЭто понизит производительность и вероятно, изменит поведение эмуляции.\nДля этого требуется Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Включить проверки с помощью GPU:\nСвязывает инструменты шейдеров с кодом и проверяет, ведут ли они себя корректно.\nЭто гарантированно понизит производительность и вероятно, изменит поведение эмуляции.\nДля этого требуется Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Активировать Direct Memory Access:\nВключает произвольный доступ к памяти из графического процессора в память центрального процессора.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Активировать режим Devkit консоли:\nДобавляет поддержку расширенной оперативной памяти как на консоли для разработки.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>Активировать режим PS4 Neo:\nДобавляет поддержку эмуляции и поддержку объема оперативной памяти PS4 Pro. На данный момент нестабильно в большинстве протестированных игр.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Установить значение сети на True:\nФорсирует игры определять активное сетевое подключение. Реальные возможности онлайна пока не поддерживаются.</translation>
     </message>
     <message>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
-      <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
+      <translation>shadNet:\nСовместимость на данный момент сильно ограничена.\nВы можете зарегистрироваться на https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Активировать Кэш шейдеров:\nПозволяет хранить скомпилированные шейдеры что бы избежать повторной компиляции, уменьшает статеры.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Сжать файлы Кэша шейдеров в zip папку:\nФайлы шейдерного кэша будут храниться в одном zip файле, вместо множества раздельных файлов.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Дополнительное назначение DMem:\nФорсирует распределение конкретного значения дополнительного DMem. Вызывает вылеты или проблемы в некоторых играх.</translation>
     </message>
   </context>
   <context>

@@ -1489,7 +1489,7 @@ Benutze lokale Datenbank.
     </message>
     <message>
       <source>Last updated</source>
-      <translation>Leztes update</translation>
+      <translation>Letztes Update</translation>
     </message>
     <message>
       <source>Notes:</source>
