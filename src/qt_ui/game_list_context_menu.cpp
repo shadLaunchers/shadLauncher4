@@ -257,14 +257,22 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         }
 
         // clang-format off
-        const auto confirm_reply = QMessageBox::question(
-            frame, tr("Convert to ZArchive"),
+        QString confirm_message =
             tr("This will pack \"%1\" into a single read-only .zar archive. Depending on the "
                "game's size this can take a while, and the archive will temporarily need as "
                "much free disk space as the game itself.\n\n"
                "The original folder is left untouched until conversion succeeds,you'll be "
-               "asked afterward whether to delete it.\n\nContinue?").arg(game_name),
-            QMessageBox::Yes | QMessageBox::No);
+               "asked afterward whether to delete it.").arg(game_name);
+        if (!game->info.update_path.empty()) {
+            confirm_message +=
+                tr("\n\nThis game has a separate update/patch folder. Only the base game "
+                   "will be archived; the update/patch folder will not be included and "
+                   "will be left as-is.");
+        }
+        confirm_message += tr("\n\nContinue?");
+        const auto confirm_reply = QMessageBox::question(frame, tr("Convert to ZArchive"),
+                                                          confirm_message,
+                                                          QMessageBox::Yes | QMessageBox::No);
         // clang-format on
         if (confirm_reply != QMessageBox::Yes) {
             return;
