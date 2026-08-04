@@ -252,6 +252,8 @@ set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/qt_utils.h
           src/qt_ui/game_list_table.cpp
           src/qt_ui/game_list_table.h
+          src/qt_ui/game_list_context_menu.cpp
+          src/qt_ui/game_list_context_menu.h
           src/qt_ui/game_list_frame.cpp
           src/qt_ui/game_list_frame.h
           src/qt_ui/stylesheets.h

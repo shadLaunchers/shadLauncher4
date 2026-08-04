@@ -37,6 +37,8 @@ class IpcClient;
 class GameListFrame : public CustomDockWidget {
     Q_OBJECT
 
+    friend class GameListContextMenu;
+
 public:
     explicit GameListFrame(std::shared_ptr<GUISettings> gui_settings,
                            std::shared_ptr<EmulatorSettingsImpl> emu_settings,
