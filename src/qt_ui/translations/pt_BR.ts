@@ -75,7 +75,7 @@
     <message>
       <source>Failed to open changelog file:
 %1</source>
-      <translation>Falha ao abrir o arquivo de registro de alterações:
+      <translation>Falha ao abrir o arquivo de histórico de alterações:
 %1</translation>
     </message>
     <message>
@@ -403,11 +403,11 @@
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation>Mostrar Alterações</translation>
+      <translation>Mostrar Histórico de Alterações</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation>Ocultar Alterações</translation>
+      <translation>Ocultar Histórico de Alterações</translation>
     </message>
     <message>
       <source>Changes</source>
@@ -1252,7 +1252,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>&amp;Open Log Folder</source>
-      <translation>&amp;Abrir Pasta de Log</translation>
+      <translation>&amp;Abrir Pasta de Registro</translation>
     </message>
     <message>
       <source>Log Not Found</source>
@@ -1264,7 +1264,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>Open Log Folder</source>
-      <translation>Abrir Pasta de Log</translation>
+      <translation>Abrir Pasta de Registro</translation>
     </message>
     <message>
       <source>&amp;SFO viewer</source>
@@ -1300,7 +1300,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation>Este jogo não tem DLC para excluir!</translation>
+      <translation>Este jogo não possui DLC para excluir!</translation>
     </message>
     <message>
       <source>DLC</source>
@@ -1478,7 +1478,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>USA</source>
-      <translation>USA</translation>
+      <translation>EUA</translation>
     </message>
     <message>
       <source>Asia</source>
@@ -1614,115 +1614,115 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>&amp;Import...</source>
-      <translation type="unfinished">&amp;Import...</translation>
+      <translation>&amp;Importar...</translation>
     </message>
     <message>
       <source>&amp;Export...</source>
-      <translation type="unfinished">&amp;Export...</translation>
+      <translation>&amp;Exportar...</translation>
     </message>
     <message>
       <source>Import Host Overrides</source>
-      <translation type="unfinished">Import Host Overrides</translation>
+      <translation>Importar Substituições de Host</translation>
     </message>
     <message>
       <source>JSON Files (*.json);;All Files (*)</source>
-      <translation type="unfinished">JSON Files (*.json);;All Files (*)</translation>
+      <translation>Arquivos JSON (*.json);;Todos os Arquivos (*)</translation>
     </message>
     <message>
       <source>Import failed</source>
-      <translation type="unfinished">Import failed</translation>
+      <translation>Falha na importação</translation>
     </message>
     <message>
       <source>Could not open the selected file.</source>
-      <translation type="unfinished">Could not open the selected file.</translation>
+      <translation>Não foi possível abrir o arquivo selecionado.</translation>
     </message>
     <message>
       <source>The selected file could not be parsed as JSON.</source>
-      <translation type="unfinished">The selected file could not be parsed as JSON.</translation>
+      <translation>Não foi possível analisar o arquivo selecionado como JSON.</translation>
     </message>
     <message>
       <source>The selected file must be a JSON object mapping match keys to redirect targets, like host_overrides.json.</source>
-      <translation type="unfinished">The selected file must be a JSON object mapping match keys to redirect targets, like host_overrides.json.</translation>
+      <translation>O arquivo selecionado deve ser um objeto JSON que mapeia chaves de correspondência para destinos de redirecionamento, como o host_overrides.json.</translation>
     </message>
     <message>
       <source>Nothing to import</source>
-      <translation type="unfinished">Nothing to import</translation>
+      <translation>Nada para importar</translation>
     </message>
     <message>
       <source>The selected file doesn&apos;t contain any valid entries.</source>
-      <translation type="unfinished">The selected file doesn&apos;t contain any valid entries.</translation>
+      <translation>O arquivo selecionado não contém entrada válida.</translation>
     </message>
     <message>
       <source>Found %1 entry/entries in the selected file.
 
 Replace the current list entirely, or append these entries to it (entries whose match already exists in the list will be skipped)?</source>
-      <translation type="unfinished">Found %1 entry/entries in the selected file.
+      <translation>%1 entrada(s) encontrada(s) no arquivo selecionado.
 
-Replace the current list entirely, or append these entries to it (entries whose match already exists in the list will be skipped)?</translation>
+Substituir a lista atual completamente ou adicionar estas entradas a ela (entradas que já existam na lista serão ignoradas)?</translation>
     </message>
     <message>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Substituir Todos</translation>
     </message>
     <message>
       <source>Append</source>
-      <translation type="unfinished">Append</translation>
+      <translation>Anexar</translation>
     </message>
     <message>
       <source>Import complete</source>
-      <translation type="unfinished">Import complete</translation>
+      <translation>Importação concluída</translation>
     </message>
     <message>
       <source>Replaced the list with %1 imported entry/entries.</source>
-      <translation type="unfinished">Replaced the list with %1 imported entry/entries.</translation>
+      <translation>Substituída a lista com %1 entrada(s).</translation>
     </message>
     <message>
       <source>Added %1 new entry/entries. Skipped %2 already in the list.</source>
-      <translation type="unfinished">Added %1 new entry/entries. Skipped %2 already in the list.</translation>
+      <translation>%1 nova(s) entrada(s) adicionada(s). %2 ignorada(s) constam na lista.</translation>
     </message>
     <message>
       <source>Added %1 new entry/entries.</source>
-      <translation type="unfinished">Added %1 new entry/entries.</translation>
+      <translation>%1 nova(s) entrada(s) adicionada(s).</translation>
     </message>
     <message>
       <source>Cannot export</source>
-      <translation type="unfinished">Cannot export</translation>
+      <translation>Não é possível exportar</translation>
     </message>
     <message>
       <source>Please fix the following before exporting:
 
 %1</source>
-      <translation type="unfinished">Please fix the following before exporting:
+      <translation>Por favor, corrija o seguinte antes de exportar:
 
 %1</translation>
     </message>
     <message>
       <source>Nothing to export</source>
-      <translation type="unfinished">Nothing to export</translation>
+      <translation>Nada para exportar</translation>
     </message>
     <message>
       <source>The list doesn&apos;t have any entries yet.</source>
-      <translation type="unfinished">The list doesn&apos;t have any entries yet.</translation>
+      <translation>A lista ainda não possui entradas.</translation>
     </message>
     <message>
       <source>Export Host Overrides</source>
-      <translation type="unfinished">Export Host Overrides</translation>
+      <translation>Exportar Substituições de Host</translation>
     </message>
     <message>
       <source>Export failed</source>
-      <translation type="unfinished">Export failed</translation>
+      <translation>Falha na exportação</translation>
     </message>
     <message>
       <source>Could not open the selected file for writing.</source>
-      <translation type="unfinished">Could not open the selected file for writing.</translation>
+      <translation>Não foi possível abrir o arquivo selecionado para gravação.</translation>
     </message>
     <message>
       <source>Export complete</source>
-      <translation type="unfinished">Export complete</translation>
+      <translation>Exportação concluída</translation>
     </message>
     <message>
       <source>Exported %1 entry/entries.</source>
-      <translation type="unfinished">Exported %1 entry/entries.</translation>
+      <translation>%1 entrada(s) exportada(s).</translation>
     </message>
   </context>
   <context>
@@ -2092,7 +2092,7 @@ Replace the current list entirely, or append these entries to it (entries whose 
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation>Predefinições do Filtro do Log</translation>
+      <translation>Predefinições do Filtro de Registro</translation>
     </message>
     <message>
       <source>Comment</source>
@@ -2901,11 +2901,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Row %1: %2</source>
-      <translation type="unfinished">Row %1: %2</translation>
+      <translation>Linha %1: %2</translation>
     </message>
     <message>
       <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
-      <translation type="unfinished">Row %1: duplicate entry for &apos;%2&apos;.</translation>
+      <translation>Linha %1: entrada duplicada para &apos;%2&apos;.</translation>
     </message>
   </context>
   <context>
@@ -3225,7 +3225,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
-      <translation>Ativar Controle em Segundo plano</translation>
+      <translation>Ativar Entrada do Controle em Segundo Plano</translation>
     </message>
     <message>
       <source>Microphone</source>
@@ -3269,7 +3269,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation>Log</translation>
+      <translation>Registro</translation>
     </message>
     <message>
       <source>Logger</source>
@@ -3277,11 +3277,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
-      <translation>Habilitar Log/Registro</translation>
+      <translation>Habilitar Monitoramento</translation>
     </message>
     <message>
       <source>Separate Log Files</source>
-      <translation>Separar Arquivos de Registro</translation>
+      <translation>Arquivos de Registro Separados</translation>
     </message>
     <message>
       <source>Log Type</source>
@@ -3373,7 +3373,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images</source>
-      <translation>Ativar Readback Linear Images</translation>
+      <translation>Ativar Imagens Lineares do Readback</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
@@ -3389,7 +3389,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Definir &quot;Network Connected&quot; como Verdadeiro</translation>
+      <translation>Definir &quot;Rede Conectada&quot; para Verdadeiro</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
@@ -3786,7 +3786,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</source>
-      <translation>Mostrar Tela Inicial:\nExibe a tela inicial do jogo (imagem especial) enquanto o jogo está iniciando.</translation>
+      <translation>Mostrar Tela de Abertura:\nExibe a tela de abertura do jogo (imagem especial) enquanto o jogo está iniciando.</translation>
     </message>
     <message>
       <source>Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</source>
@@ -3814,195 +3814,195 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</source>
-      <translation type="unfinished">Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</translation>
+      <translation>Abrir a pasta de imagens e sons de troféus personalizados:\nVocê pode adicionar imagens personalizadas aos troféus e um áudio.\nAdicione os arquivos na pasta custom_trophy com os seguintes nomes:\ntrophy.wav OU trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nObservação: O som funcionará apenas nas versões QT.</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</source>
-      <translation type="unfinished">Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</translation>
+      <translation>Ativar Discord Rich Presence:\nExibe o ícone do emulador e informações relevantes no seu perfil do Discord.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation type="unfinished">Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</translation>
+      <translation>Microfone:\nNenhum: Não usa o microfone.\nDispositivo Padrão: Usará o dispositivo padrão definido no sistema.\nOu escolha manualmente o microfone que será usado da lista.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Atualizações da GUI:\nRelease: Versões oficiais lançadas todos os meses que podem estar muito desatualizadas. São mais confiáveis e testadas.\nNightly: Versões de desenvolvimento que possuem todos os recursos e correções mais recentes, mas podem conter bugs sendo menos estáveis.\n\n*Esta atualização aplica-se apenas à interface de usuário Qt. Para atualizar o núcleo do emulador, por favor use o menu &apos;Gerenciador de Versões&apos;.</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation type="unfinished">Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</translation>
+      <translation>Habilitar Monitoramento:\nHabilita o monitoramento.\nNão altere esta opção se você não souber o que está fazendo!\nAo pedir ajuda, certifique-se de que esta configuração esteja HABILITADA.</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>Abrir Local do Registro:\nAbre a pasta onde o arquivo de registro é salvo.</translation>
     </message>
     <message>
       <source>Separate Log Files:\nWrites a separate logfile for each game.</source>
-      <translation type="unfinished">Separate Log Files:\nWrites a separate logfile for each game.</translation>
+      <translation>Arquivos de Registro Separados:\nEscreve um arquivo de registro separado para cada jogo.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+      <translation>Sincronização de Registro:\nAlternar entre síncrono (ordem) ou assíncrono (desempenho).</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+      <translation>Ignorar Registros Duplicados:\nEconomize espaço de armazenamento evitando gravar registros idênticos.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+      <translation>Duração Máxima para Ignorar Registros:\nIntervalo sem escrever as mesmas linhas (ms) - somente se &apos;Ignorar Registros Duplicados&apos; estiver ativado.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+      <translation>Tamanho Limite do Registro:\nTamanho máximo dos arquivos de registro (em bytes).</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+      <translation>Anexar ao Registro:\nAdiciona aos registros existentes.</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
+      <translation>Tipo de Registro:\nEscolha entre os tipos de registro wincolor ou msvc.\nwincolor: O monitoramento padrão do Windows\nmsvc: Monitoramento para depuração</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
-      <translation type="unfinished">Background Image:\nControl the opacity of the game background image.</translation>
+      <translation>Imagem de Fundo:\nControla a transparência da imagem de fundo do jogo.</translation>
     </message>
     <message>
       <source>Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</source>
-      <translation type="unfinished">Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</translation>
+      <translation>Reproduzir Música do Título:\nSe o jogo suportar, ativa a reprodução de uma música especial ao selecionar o jogo na interface gráfica do usuário.</translation>
     </message>
     <message>
       <source>Update Compatibility On Startup:\nAutomatically update the compatibility database when shadPS4 starts.</source>
-      <translation type="unfinished">Update Compatibility On Startup:\nAutomatically update the compatibility database when shadPS4 starts.</translation>
+      <translation>Atualizar Compatibilidade ao Inicializar:\nAtualiza automaticamente o banco de dados de compatibilidade quando o shadPS4 é iniciado.</translation>
     </message>
     <message>
       <source>Update Compatibility Database:\nImmediately update the compatibility database.</source>
-      <translation type="unfinished">Update Compatibility Database:\nImmediately update the compatibility database.</translation>
+      <translation>Atualizar Banco de Dados de Compatibilidade:\nAtualiza imediatamente o banco de dados de compatibilidade.</translation>
     </message>
     <message>
       <source>Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</source>
-      <translation type="unfinished">Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</translation>
+      <translation>Dispositivo Gráfico:\nEm sistemas com múltiplas GPUs, escolha qual GPU o emulador utilizará da lista suspensa,\nou escolha &quot;Seleção Automática&quot; para determiná-lo automaticamente.</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>Modo de Apresentação:\nConfigura como a saída de vídeo será apresentada na sua tela.\n\nMailbox: Os quadros sincronizam com a taxa de atualização da sua tela. Novos quadros substituirão quaisquer quadros pendentes. Reduz a latência, mas pode pular quadros se o desempenho estiver atrasado.\nFifo: Os quadros sincronizam com a taxa de atualização da sua tela. Novos quadros serão colocados em fila atrás dos quadros pendentes. Garante que todos os quadros sejam apresentados, mas pode aumentar a latência.\nImediato: Os quadros são apresentados imediatamente na sua tela quando estiverem prontos. Pode resultar em rasgos de imagem.</translation>
     </message>
     <message>
       <source>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</source>
-      <translation type="unfinished">Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</translation>
+      <translation>Largura/Altura:\nDefine o tamanho da janela do emulador na inicialização, a qual pode ser redimensionada enquanto joga.\nIsso difere da resolução do jogo.</translation>
     </message>
     <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
-      <translation type="unfinished">Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</translation>
+      <translation>Ativar HDR: \nAtiva o HDR em jogos que oferecem suporte a esse recurso. \nSeu monitor deve ser compatível com o espaço de cores BT2020 PQ e o formato de swapchain RGB10A2.</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>Frequência do Vblank:\nTaxa de atualização em que o emulador realiza a renovação da imagem (60Hz é o padrão, independentemente do jogo rodar a 30 ou 60 fps). Alterar este valor pode causar efeitos adversos, como aumentar a velocidade do jogo ou quebrar funcionalidades críticas que não foram projetadas para lidar com essa mudança!</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation type="unfinished">Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</translation>
+      <translation>Ativar o Readback de Imagens Lineares:\nAtiva a transferência assíncrona de imagens lineares modificadas pela GPU.\nPode corrigir problemas em alguns jogos.</translation>
     </message>
     <message>
       <source>Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</source>
-      <translation type="unfinished">Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</translation>
+      <translation>Ocultar Cursor:\nEscolha quando o cursor desaparecerá:\nNunca: Você sempre verá o mouse.\nOcioso: Defina um tempo para ele desaparecer após ficar ocioso.\nSempre: Você nunca verá o mouse.</translation>
     </message>
     <message>
       <source>Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</source>
-      <translation type="unfinished">Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</translation>
+      <translation>Tempo Limite para Ocultar Cursor Inativo:\nO tempo (em segundos) após o qual o cursor inativo é ocultado.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation type="unfinished">Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</translation>
+      <translation>Ativar Controles de Movimento:\nQuando ativado usará o sensor de movimento do controle, caso suportado.</translation>
     </message>
     <message>
       <source>Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</source>
-      <translation type="unfinished">Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</translation>
+      <translation>Ativar Entrada do Controle em Segundo Plano:\nPermitir que o shadPS4 detecte entradas do controle quando a janela do jogo não está em foco.</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>Dispositivo USB:\nDispositivo USB Real: Usa um dispositivo USB real conectado ao sistema.\nPortal Skylander: Emula o Portal de Energia Skylander.\nBase Infinity: Emula uma Base Disney Infinity.\nToypad Dimensions: Emula um Toypad de Lego Dimensions.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Ativar Despejo de Shaders:\nPara fins de depuração técnica, salva os shaders do jogo em uma pasta à medida que são renderizados.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation type="unfinished">Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</translation>
+      <translation>Ativar Despejo de Depuração:\nArmazena os símbolos de importação/exportação e informações de cabeçalho do arquivo do programa PS4 atual em um diretório.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
-      <translation type="unfinished">Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</translation>
+      <translation>Ativar Depuração por RenderDoc:\nSe habilitado, o emulador fornecerá compatibilidade com RenderDoc para permitir a captura e análise do quadro atualmente renderizado.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
-      <translation type="unfinished">Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</translation>
+      <translation>Copiar Buffers de GPU:\nContorna condições de concorrência envolvendo envios a GPU.\nPode ou não ajudar com travamentos de PM4 tipo 0.</translation>
     </message>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
-      <translation type="unfinished">Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</translation>
+      <translation>Coletar Shaders:\nVocê precisa dessa opção ativada para editar shaders com o menu de depuração (Ctrl + F10).</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</translation>
+      <translation>Diagnóstico de Falhas:\nCria um arquivo .yaml com informações sobre o estado do Vulkan no momento da falha.\nÚtil para depuração de erros de &apos;Dispositivo perdido&apos;. Se isto estiver ativado, você deve habilitar os Marcadores de Depuração do Host E Marcadores de Depuração do Convidado.\nVocê precisa habilitar as Camadas de Validação do Vulkan e o Vulkan SDK para que isso funcione.</translation>
     </message>
     <message>
       <source>Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation type="unfinished">Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</translation>
+      <translation>Marcadores de Depuração do Host:\nInsere informações vindo do emulador como marcadores para comandos AMDGPU específicos em torno de comandos Vulkan, além de fornecer nomes de depuração de recursos.\nSe isso estiver habilitado, ative os Diagnósticos de Falhas.\nÚtil para programas como o RenderDoc.</translation>
     </message>
     <message>
       <source>Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation type="unfinished">Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</translation>
+      <translation>Marcadores de Depuração do Convidado:\nInsere quaisquer marcadores de depuração que o próprio jogo adicionou ao buffer de comando.\nSe isso estiver habilitado, ative os Diagnósticos de Falhas.\nÚtil para programas como o RenderDoc.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ativar Camadas de Validação do Vulkan:\nAtiva um sistema que valida o estado do renderizador Vulkan e registra informações sobre seu estado interno.\nIsso diminuirá o desempenho e provavelmente mudará o comportamento da emulação.\nVocê precisa do Vulkan SDK para que isso funcione.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ativar Validação do Núcleo:\Ativa as principais funções de validação da API.\nIsso reduzirá o desempenho e provavelmente alterará o comportamento da emulação.\nVocê precisa do Vulkan SDK para que isso funcione.</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ativar Validação de Sincronização: \nAtiva um sistema que valida o tempo de execução das tarefas de renderização Vulkan. \nIsso reduzirá o desempenho e provavelmente alterará o comportamento da emulação. \nVocê precisa do Vulkan SDK para que isso funcione.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ativar Validação Assistida por GPU:\nInstrumenta os shaders com código que valida se eles estão se comportando corretamente.\nIsso reduzirá o desempenho e alterará provavelmente o comportamento da emulação.\nVocê precisa do Vulkan SDK para que isso funcione.</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Ativar Acesso Direto à Memória:\nPermite o acesso arbitrário à memória da GPU para a memória da CPU.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Ativar Modo Console Devkit:\nAdiciona suporte para o tamanho de memória do console Devkit.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>Ativar Modo PS4 Neo:\nAdiciona suporte para emulação e tamanho de memória do PS4 Pro. Atualmente causa instabilidade em um grande número de jogos testados.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Definir Rede Conectada como Verdadeiro:\nForça os jogos a detectarem uma conexão de rede ativa. Recursos on-line reais ainda não são suportados.</translation>
     </message>
     <message>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
-      <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
+      <translation>shadNet:\nA compatibilidade é muito limitada no momento.\nVocê pode se registrar em https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Habilitar Cache de Shader:\nArmazena shaders compilados para evitar recompilações reduzindo travamentos.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Compacte os arquivos de Cache do Shader em um arquivo zip:\nOs arquivos de cache do shader são armazenados dentro de um único arquivo zip em vez de vários arquivos separados.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Alocação Adicional de DMem:\nForça a alocação da quantidade especificada de DMem adicional. Causa travamentos ou problemas em alguns jogos.</translation>
     </message>
   </context>
   <context>
