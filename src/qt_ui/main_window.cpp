@@ -1274,6 +1274,10 @@ void MainWindow::onGameClosed() {
     EmulatorState::GetInstance()->SetGameRunning(false);
     is_paused = false;
 
+    if (m_game_list_frame) {
+        m_game_list_frame->Refresh(false);
+    }
+
     /* TODO
     // clear dialogs when game closed
     skylander_dialog* sky_diag = skylander_dialog::get_dlg(this, m_ipc_client);

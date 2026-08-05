@@ -24,6 +24,7 @@
 #include <mutex>
 #include <optional>
 #include <set>
+#include <unordered_map>
 #include <utility>
 
 class GameListTable;
@@ -78,6 +79,14 @@ public:
 #endif
 
     QImage backgroundImage;
+
+    struct PlayTimeEntry {
+        quint64 seconds = 0;
+        qint64 last_played_unix = 0; // 0 = never played
+    };
+
+    PlayTimeEntry GetPlayTimeEntry(const std::string& serial) const;
+
 public Q_SLOTS:
     void SetListMode(const bool& is_list);
     void SetSearchText(const QString& text);
@@ -123,11 +132,13 @@ private:
     game_info GetGameInfoByMode(const QTableWidgetItem* item) const;
     static game_info GetGameInfoFromItem(const QTableWidgetItem* item);
     void PopulateFromCacheInstantly();
+    void LoadPlayTimeData();
     // Settings
     std::shared_ptr<GUISettings> m_gui_settings;
     std::shared_ptr<EmulatorSettingsImpl> m_emu_settings;
     std::shared_ptr<PersistentSettings> m_persistent_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
+    std::unordered_map<std::string, PlayTimeEntry> m_play_times;
     // Objects
     QMainWindow* m_game_dock = nullptr;
     QStackedWidget* m_central_widget = nullptr;

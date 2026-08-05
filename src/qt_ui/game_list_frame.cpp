@@ -4,9 +4,11 @@
 
 #include <algorithm>
 #include <atomic>
+#include <fstream>
 #include <memory>
 #include <regex>
 #include <set>
+#include <sstream>
 #include <unordered_map>
 #include <unordered_set>
 #include <QApplication>
@@ -1297,9 +1299,48 @@ void GameListFrame::PopulateFromCacheInstantly() {
     Refresh(false, {}, false);
 }
 
+void GameListFrame::LoadPlayTimeData() {
+    m_play_times.clear();
+    const auto file_path = Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "play_time.txt";
+    std::ifstream in(file_path);
+    if (!in) {
+        return;
+    }
+
+    std::string line;
+    while (std::getline(in, line)) {
+        std::istringstream iss(line);
+        std::string serial, time_str;
+        qint64 last_played_unix = 0;
+        if (!(iss >> serial >> time_str >> last_played_unix)) {
+            continue;
+        }
+
+        int hours = 0, minutes = 0, seconds = 0;
+        char c1 = 0, c2 = 0;
+        std::istringstream ts(time_str);
+        if (!(ts >> hours >> c1 >> minutes >> c2 >> seconds) || c1 != ':' || c2 != ':') {
+            continue;
+        }
+
+        PlayTimeEntry entry;
+        entry.seconds = static_cast<quint64>(hours) * 3600 + static_cast<quint64>(minutes) * 60 +
+                        static_cast<quint64>(seconds);
+        entry.last_played_unix = last_played_unix;
+        m_play_times[serial] = entry;
+    }
+}
+
+GameListFrame::PlayTimeEntry GameListFrame::GetPlayTimeEntry(const std::string& serial) const {
+    const auto it = m_play_times.find(serial);
+    return it != m_play_times.end() ? it->second : PlayTimeEntry{};
+}
+
 void GameListFrame::Refresh(const bool from_drive,
                             const std::vector<std::string>& serials_to_remove,
                             const bool scroll_after) {
+    LoadPlayTimeData();
+
     if (from_drive) {
         WaitAndAbortSizeCalcThreads();
     }

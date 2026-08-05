@@ -430,21 +430,14 @@ void GameListTable::Populate(const std::vector<game_info>& game_data,
         region_item->setData(Qt::UserRole, region_item->toolTip(),
                              true); // make it sortable by region name
 
-        // Playtimes
-        const quint64 elapsed_ms = m_persistent_settings->GetPlaytime(serial);
+        const GameListFrame::PlayTimeEntry play_time_entry =
+            m_game_list_frame ? m_game_list_frame->GetPlayTimeEntry(game->info.serial)
+                              : GameListFrame::PlayTimeEntry{};
+        const quint64 elapsed_ms = play_time_entry.seconds * 1000ULL;
 
-        // Last played (support outdated values)
         QDateTime last_played;
-        const QString last_played_str = m_persistent_settings->GetLastPlayed(serial);
-
-        if (!last_played_str.isEmpty()) {
-            last_played =
-                QDateTime::fromString(last_played_str, GUI::Persistent::last_played_date_format);
-
-            if (!last_played.isValid()) {
-                last_played = QDateTime::fromString(last_played_str,
-                                                    GUI::Persistent::last_played_date_format_old);
-            }
+        if (play_time_entry.last_played_unix > 0) {
+            last_played = QDateTime::fromSecsSinceEpoch(play_time_entry.last_played_unix);
         }
 
         const u64 game_size = game->info.size_on_disk;

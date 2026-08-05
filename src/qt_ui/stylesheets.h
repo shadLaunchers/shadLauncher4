@@ -33,7 +33,7 @@ const QString default_style_sheet(
     "QLabel#thumbnail_icon_color { color: rgba(0, 100, 231, 255); }"
 
     // game list icon color
-    "QLabel#gamelist_icon_background_color { color: rgba(240, 240, 240, 255); }"
+    "QLabel#gamelist_icon_background_color { color: transparent; }"
 
     // game grid
     "#GameListGrid { background-color: transparent; }"
