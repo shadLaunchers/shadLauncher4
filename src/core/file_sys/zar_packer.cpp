@@ -166,6 +166,8 @@ bool PackDirectoryToZArchive(const std::filesystem::path& input_dir,
     return true;
 }
 
+namespace {
+
 void CollectZArchiveEntries(const IGameBackend& backend, const std::string& rel_dir,
                             std::vector<std::string>& out_files,
                             std::vector<std::string>& out_dirs) {
@@ -180,6 +182,9 @@ void CollectZArchiveEntries(const IGameBackend& backend, const std::string& rel_
     }
 }
 
+// Reads a single archive entry and writes it out to output_dir/rel_path,
+// creating any missing parent directories. Returns an error string on
+// failure, or an empty string on success.
 std::string ExtractOneFile(const IGameBackend& backend, const std::filesystem::path& output_dir,
                            const std::string& rel_path) {
     namespace fs = std::filesystem;
@@ -208,6 +213,8 @@ std::string ExtractOneFile(const IGameBackend& backend, const std::filesystem::p
     }
     return {};
 }
+
+} // namespace
 
 bool UnpackZArchiveToDirectory(const std::filesystem::path& input_zar,
                                const std::filesystem::path& output_dir,

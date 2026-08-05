@@ -8,6 +8,7 @@
 
 class PersistentSettings;
 class GameListFrame;
+class QTimer;
 
 class GameListTable : public GameList {
     Q_OBJECT
@@ -49,6 +50,7 @@ private:
     GameListFrame* m_game_list_frame{};
     std::shared_ptr<PersistentSettings> m_persistent_settings;
     std::shared_ptr<GUISettings> m_gui_settings;
+    QTimer* m_resort_timer = nullptr;
 
 protected:
     void paintEvent(QPaintEvent* event) override;

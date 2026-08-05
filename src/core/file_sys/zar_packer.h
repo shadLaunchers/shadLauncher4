@@ -35,7 +35,9 @@ bool UnpackZArchiveToDirectory(const std::filesystem::path& input_zar,
                                const std::function<bool(const UnpackProgress&)>& progress_cb,
                                std::string* error_message);
 
-// Extracts only the given archive-relative file paths
+// Extracts only the given archive-relative file paths (forward-slash separated,
+// as returned by IGameBackend::ListDir) into output_dir, preserving their
+// relative directory structure.
 bool ExtractZArchiveFiles(const std::filesystem::path& input_zar,
                           const std::filesystem::path& output_dir,
                           const std::vector<std::string>& rel_paths,

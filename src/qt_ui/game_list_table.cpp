@@ -6,6 +6,7 @@
 #include <QHeaderView>
 #include <QScrollBar>
 #include <QStringBuilder>
+#include <QTimer>
 #include "common/fs_util.h"
 #include "common/types.h"
 #include "core/file_sys/game_backend.h"
@@ -82,6 +83,14 @@ GameListTable::GameListTable(GameListFrame* frame, std::shared_ptr<GUISettings> 
     setColumnCount(static_cast<int>(GUI::GameListColumns::count));
     setMouseTracking(true);
 
+    m_resort_timer = new QTimer(this);
+    m_resort_timer->setSingleShot(true);
+    m_resort_timer->setInterval(400);
+    connect(m_resort_timer, &QTimer::timeout, this, [this] {
+        sort(static_cast<u64>(rowCount()), horizontalHeader()->sortIndicatorSection(),
+             horizontalHeader()->sortIndicatorOrder());
+    });
+
     connect(this, &GameListTable::sizeOnDiskReady, this,
             [this](const game_info& game, GameItemBase* item,
                    std::shared_ptr<std::atomic<bool>> cancel) {
@@ -94,7 +103,13 @@ GameListTable::GameListTable(GameListFrame* frame, std::shared_ptr<GUISettings> 
                     size_item->setText(game_size != UINT64_MAX
                                            ? GUI::Utils::FormatByteSize(game_size)
                                            : tr("Unknown"));
-                    size_item->setData(Qt::UserRole, QVariant::fromValue<qulonglong>(game_size));
+                    size_item->setData(Qt::UserRole, QVariant::fromValue<qulonglong>(
+                                                         game_size != UINT64_MAX ? game_size : 0));
+
+                    if (horizontalHeader()->sortIndicatorSection() ==
+                        static_cast<int>(GUI::GameListColumns::dir_size)) {
+                        m_resort_timer->start();
+                    }
                 }
             });
 
@@ -415,21 +430,14 @@ void GameListTable::Populate(const std::vector<game_info>& game_data,
         region_item->setData(Qt::UserRole, region_item->toolTip(),
                              true); // make it sortable by region name
 
-        // Playtimes
-        const quint64 elapsed_ms = m_persistent_settings->GetPlaytime(serial);
+        const GameListFrame::PlayTimeEntry play_time_entry =
+            m_game_list_frame ? m_game_list_frame->GetPlayTimeEntry(game->info.serial)
+                              : GameListFrame::PlayTimeEntry{};
+        const quint64 elapsed_ms = play_time_entry.seconds * 1000ULL;
 
-        // Last played (support outdated values)
         QDateTime last_played;
-        const QString last_played_str = m_persistent_settings->GetLastPlayed(serial);
-
-        if (!last_played_str.isEmpty()) {
-            last_played =
-                QDateTime::fromString(last_played_str, GUI::Persistent::last_played_date_format);
-
-            if (!last_played.isValid()) {
-                last_played = QDateTime::fromString(last_played_str,
-                                                    GUI::Persistent::last_played_date_format_old);
-            }
+        if (play_time_entry.last_played_unix > 0) {
+            last_played = QDateTime::fromSecsSinceEpoch(play_time_entry.last_played_unix);
         }
 
         const u64 game_size = game->info.size_on_disk;
@@ -463,7 +471,8 @@ void GameListTable::Populate(const std::vector<game_info>& game_data,
         setItem(row, static_cast<int>(GUI::GameListColumns::dir_size),
                 new CustomTableWidgetItem(
                     game_size != UINT64_MAX ? GUI::Utils::FormatByteSize(game_size) : tr("Unknown"),
-                    Qt::UserRole, QVariant::fromValue<qulonglong>(game_size)));
+                    Qt::UserRole,
+                    QVariant::fromValue<qulonglong>(game_size != UINT64_MAX ? game_size : 0)));
         setItem(row, static_cast<int>(GUI::GameListColumns::path),
                 new CustomTableWidgetItem(game->info.path));
 
