@@ -93,11 +93,11 @@
     <name>CheatsPatches</name>
     <message>
       <source>Cheats / Patches for </source>
-      <translation>Trapaças / Modificações para </translation>
+      <translation>Trapaças / Patches para </translation>
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation>As Trapaças/Modificações são experimentais.\nUse com cautela.\n\nBaixe as trapaças individualmente selecionando o repositório e clicando no botão de baixar.\nNa aba Modificações, você pode baixar todas as modificações de uma vez, escolha qual deseja usar e salve a opção.\n\nComo não desenvolvemos as Trapaças/Modificações,\npor favor, reporte os problemas relacionados ao autor da trapaça.\n\nCriou uma nova trapaça? Visite:\n</translation>
+      <translation>As Trapaças/Patches são experimentais.\nUse com cautela.\n\nBaixe as trapaças individualmente selecionando o repositório e clicando no botão baixar.\nNa aba Patches, você pode baixar todos os patches de uma vez, escolher quais deseja usar e salvar sua seleção.\n\nComo não desenvolvemos as Trapaças/Patches,\npor favor, relate problemas ao autor do cheat.\n\nCriou uma nova trapaça? Visite:\n</translation>
     </message>
     <message>
       <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
@@ -109,7 +109,7 @@
     </message>
     <message>
       <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</source>
-      <translation>Modificações Baixados com Sucesso! Todos as modificações disponíveis para todos os jogos foram baixados, não é necessário baixá-los individualmente para cada jogo como acontece em trapaças. Se a modificação não aparecer, pode ser que ela não exista para o serial e versão específicas do jogo.</translation>
+      <translation>Patches Transferidos com Sucesso! Todos os Patches disponíveis para todos os jogos foram transferidos, não é necessário baixá-los individualmente para cada jogo como acontece em Trapaças. Se a modificação não aparecer, pode ser que ela não exista para o serial e versão específicas do jogo.</translation>
     </message>
     <message>
       <source>No Image Available</source>
@@ -264,7 +264,7 @@
     <name>CheatsPatchesDialog</name>
     <message>
       <source>Cheats / Patches</source>
-      <translation>Trapaças / Modificações</translation>
+      <translation>Trapaças / Patches</translation>
     </message>
     <message>
       <source>Game Info</source>
@@ -320,7 +320,7 @@
     </message>
     <message>
       <source>Patches</source>
-      <translation>Modificações</translation>
+      <translation>Patches</translation>
     </message>
     <message>
       <source>Select Patch File:</source>
@@ -363,7 +363,7 @@
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation>Nenhum pre-release foi encontrado.</translation>
+      <translation>Nenhum pre-release encontrado.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
@@ -2350,7 +2350,7 @@ Substituir a lista atual completamente ou adicionar estas entradas a ela (entrad
     </message>
     <message>
       <source>View</source>
-      <translation>Ver</translation>
+      <translation>Visualizar</translation>
     </message>
     <message>
       <source>Game List Icons</source>
@@ -2610,11 +2610,11 @@ Substituir a lista atual completamente ou adicionar estas entradas a ela (entrad
     </message>
     <message>
       <source>Patch detected!</source>
-      <translation>Atualização detectada!</translation>
+      <translation>Patch detectado!</translation>
     </message>
     <message>
       <source>PKG and Game versions match: </source>
-      <translation>As versões do PKG e do Jogo são iguais: </translation>
+      <translation>Versões correspondentes do PKG e do Jogo: </translation>
     </message>
     <message>
       <source>Would you like to overwrite?</source>
@@ -2904,7 +2904,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Installation Directory</source>
-      <translation>Local de instalação</translation>
+      <translation>Diretório de Instalação</translation>
     </message>
     <message>
       <source>Browse...</source>
@@ -3516,7 +3516,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging</source>
-      <translation>Ativar Depuração por RenderDoc</translation>
+      <translation>Habilitar Depuração por RenderDoc</translation>
     </message>
     <message>
       <source>Copy GPU Buffers</source>
@@ -3576,7 +3576,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images</source>
-      <translation>Ativar Imagens Lineares do Readback</translation>
+      <translation>Habilitar Imagens Lineares do Readback</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
@@ -3592,7 +3592,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Definir &quot;Rede Conectada&quot; para Verdadeiro</translation>
+      <translation>Definir &quot;Rede Conectada&quot; como Verdadeiro</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
@@ -3624,7 +3624,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Duplicate Path</source>
-      <translation>Caminho duplicado</translation>
+      <translation>Caminho Duplicado</translation>
     </message>
     <message>
       <source>This folder is already added.</source>
@@ -3648,7 +3648,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Select directory for home</source>
-      <translation>Selecione o diretório principal</translation>
+      <translation>Selecione o diretório da pasta raiz</translation>
     </message>
     <message>
       <source>Select directory for System modules</source>
@@ -3902,7 +3902,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Use Circle Button to Confirm</source>
-      <translation>Utilize o Botão Círculo para Confirmar</translation>
+      <translation>Utilizar o Botão Círculo para Confirmar</translation>
     </message>
     <message>
       <source>IME</source>
@@ -3969,11 +3969,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Home Folder:\nThe folder where the emulator stores user data such as save files and trophies.</source>
-      <translation>Pasta inicial:\nA pasta onde o emulador armazena dados de usuário como salvar arquivos e troféus.</translation>
+      <translation>Pasta Raiz:\nA pasta onde o emulador armazena dados de usuário como salvar arquivos e troféus.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the Home folder.</source>
-      <translation>Procurar:\nProcura uma pasta para definir como pasta Pessoal.</translation>
+      <translation>Procurar:\nProcura uma pasta para definir como pasta Raiz.</translation>
     </message>
     <message>
       <source>System Modules Folder:\nThe folder where system modules are loaded from.</source>
@@ -4097,7 +4097,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
-      <translation>Ativar HDR: \nAtiva o HDR em jogos que oferecem suporte a esse recurso. \nSeu monitor deve ser compatível com o espaço de cores BT2020 PQ e o formato de swapchain RGB10A2.</translation>
+      <translation>Habilitar o HDR:\nAtiva o HDR em jogos que oferecem suporte a esse recurso.\nSeu monitor deve ser compatível com o espaço de cores BT2020 PQ e o formato de swapchain RGB10A2.</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
@@ -4105,7 +4105,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation>Ativar o Readback de Imagens Lineares:\nAtiva a transferência assíncrona de imagens lineares modificadas pela GPU.\nPode corrigir problemas em alguns jogos.</translation>
+      <translation>Habilitar Imagens Lineares do Readback:\nAtiva a transferência assíncrona de imagens lineares modificadas pela GPU.\nPode corrigir problemas em alguns jogos.</translation>
     </message>
     <message>
       <source>Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</source>
@@ -4129,15 +4129,15 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation>Ativar Despejo de Shaders:\nPara fins de depuração técnica, salva os shaders do jogo em uma pasta à medida que são renderizados.</translation>
+      <translation>Habilitar Despejo de Shaders:\nPara fins de depuração técnica, salva os shaders do jogo em uma pasta à medida que são renderizados.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation>Ativar Despejo de Depuração:\nArmazena os símbolos de importação/exportação e informações de cabeçalho do arquivo do programa PS4 atual em um diretório.</translation>
+      <translation>Habilitar Despejo de Depuração:\nArmazena os símbolos de importação/exportação e informações de cabeçalho do arquivo do programa PS4 atual em um diretório.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
-      <translation>Ativar Depuração por RenderDoc:\nSe habilitado, o emulador fornecerá compatibilidade com RenderDoc para permitir a captura e análise do quadro atualmente renderizado.</translation>
+      <translation>Habilitar Depuração por RenderDoc:\nSe habilitado, o emulador fornecerá compatibilidade com RenderDoc para permitir a captura e análise do quadro atualmente renderizado.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
@@ -4282,7 +4282,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Enable RCAS (sharpening):\nApplies FSR&apos;s Robust Contrast Adaptive Sharpening pass to the image. Requires FSR to be enabled.</source>
-      <translation>Habilitar RCAS (nitidez): \nAplica à imagem ao passo de Nitidez Adaptativa ao Contraste Robusto (RCAS) do FSR. Requer que o FSR esteja ativado.</translation>
+      <translation>Habilitar RCAS (nitidez):\nAplica à imagem ao passo de Nitidez Adaptativa ao Contraste Robusto (RCAS) do FSR. Requer que o FSR esteja ativado.</translation>
     </message>
     <message>
       <source>RCAS Attenuation:\nControls the strength of the RCAS sharpening effect. Lower values sharpen the image more.</source>
@@ -4302,11 +4302,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Use Circle Button to Confirm:\nSwaps the Circle and Cross buttons&apos; roles so Circle acts as the confirm/enter button, matching Japanese console conventions.</source>
-      <translation>Usar o Botão Círculo para Confirmar:\Inverte os papéis dos botões Círculo e Cruz, fazendo com que Círculo atue como o botão de confirmação/entrada, seguindo as convenções dos consoles japoneses.</translation>
+      <translation>Utilizar Botão Círculo para Confirmar:\Inverte os papéis dos botões Círculo e Cruz, fazendo com que Círculo atue como o botão de confirmação/entrada, seguindo as convenções dos consoles japoneses.</translation>
     </message>
     <message>
       <source>IME:\nSettings for the on-screen keyboard/input method editor used by games for text entry.</source>
-      <translation>IME: \nConfigurações do teclado de tela/editor do método de entrada utilizado pelos jogos para a inserção de texto.</translation>
+      <translation>IME:\nConfigurações do teclado de tela/editor do método de entrada utilizado pelos jogos para a inserção de texto.</translation>
     </message>
     <message>
       <source>Enable IME Accessibility:\nEnables accessibility features for the on-screen keyboard, such as additional audio/visual cues.</source>
@@ -4673,11 +4673,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Downloading</source>
-      <translation>Baixando</translation>
+      <translation>Transferindo</translation>
     </message>
     <message>
       <source>Error accessing GitHub</source>
-      <translation>Erro ao acessar a API do GitHub</translation>
+      <translation>Erro ao acessar o GitHub</translation>
     </message>
     <message>
       <source>Cannot open cache file</source>
@@ -4749,7 +4749,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Downloading Pre-release (Nightly)</source>
-      <translation>Baixando Pre-release (Nightly)</translation>
+      <translation>Transferindo Pre-release (Nightly)</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
