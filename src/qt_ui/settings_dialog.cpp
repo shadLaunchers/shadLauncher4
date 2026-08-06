@@ -136,6 +136,10 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
         ui->tabWidgetSettings->setTabVisible(index, false);
     }
 
+#ifndef _WIN32
+    ui->redZoneGroupBox->setVisible(false);
+#endif
+
     const SettingsDialogHelperTexts helptexts;
     // Paths
     SubscribeHelpText(ui->gameFoldersGroupBox, helptexts.settings.paths_gameDir);
@@ -787,6 +791,8 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->neoCheckBox->setChecked(m_emu_settings->IsNeo());
     ui->psnSignInCheckBox->setChecked(m_emu_settings->IsShadNetEnabled());
     ui->networkConnectedCheckBox->setChecked(m_emu_settings->IsConnectedToNetwork());
+    ui->redZoneComboBox->setCurrentIndex(
+        static_cast<int>(m_emu_settings->GetWindowsGuestRedZoneProtectionMode()));
 
     // ShadNet
     ui->shadNetServerLineEdit->setText(QString::fromStdString(m_emu_settings->GetShadNetServer()));
@@ -1044,6 +1050,9 @@ void SettingsDialog::ApplyValuesToBackend() {
                                              is_specific);
     m_emu_settings->SetExtraDmemInMBytes(ui->dmemSpinBox->value(), is_specific);
     m_emu_settings->SetVblankFrequency(ui->vblankSpinBox->value(), is_specific);
+    m_emu_settings->SetWindowsGuestRedZoneProtectionMode(
+        static_cast<WindowsGuestRedZoneProtectionMode>(ui->redZoneComboBox->currentIndex()),
+        is_specific);
 
     // ------------------ Paths tab --------------------------------------------------------
     for (int i = 0; i < ui->gameFoldersListWidget->count(); ++i) {
@@ -1149,7 +1158,7 @@ void SettingsDialog::HandleButtonBox() {
                 // For game-specific: restore to global settings
                 if (m_original_settings) {
                     // Restore from backup
-                    *m_emu_settings = *m_original_settings;
+                    m_emu_settings = m_original_settings;
 
                     // Delete game-specific config file
                     if (!m_game_serial.empty()) {
