@@ -93,8 +93,8 @@ bool MainWindow::init() {
         }
     } else {
         if (remote_host == "shadLaunchers" || remote_url.empty()) {
-            window_title = fmt::format("shadLauncher4 v{} {} {}", APP_VERSION,
-                                       Common::g_scm_branch, Common::g_scm_desc);
+            window_title = fmt::format("shadLauncher4 v{} {} {}", APP_VERSION, Common::g_scm_branch,
+                                       Common::g_scm_desc);
         } else {
             window_title = fmt::format("shadLauncher4 {}/v{} {} {}", remote_host, APP_VERSION,
                                        Common::g_scm_branch, Common::g_scm_desc);
