@@ -14,6 +14,7 @@
 #include <core/file_format/pkg.h>
 #include <core/file_format/psf.h>
 #include <core/file_sys/game_backend.h>
+#include <fmt/core.h>
 
 #include "about_dialog.h"
 #include "background_music_player.h"
@@ -81,11 +82,25 @@ bool MainWindow::init() {
 
     setMinimumSize(350, minimumSizeHint().height()); // seems fine on win 10
 
-    if (Common::g_is_release || std::string(Common::g_scm_remote_url).empty()) {
-        setWindowTitle(QString("shadLauncher4 %1").arg(APP_VERSION));
+    std::string remote_url(Common::g_scm_remote_url);
+    std::string remote_host = Common::GetRemoteNameFromLink();
+    std::string window_title;
+    if (Common::g_is_release) {
+        if (remote_host == "shadLaunchers" || remote_url.empty()) {
+            window_title = fmt::format("shadLauncher4 v{}", APP_VERSION);
+        } else {
+            window_title = fmt::format("shadLauncher4 {}/v{}", remote_host, APP_VERSION);
+        }
     } else {
-        setWindowTitle(QString("%1").arg(APP_VERSION));
+        if (remote_host == "shadLaunchers" || remote_url.empty()) {
+            window_title = fmt::format("shadLauncher4 v{} {} {}", APP_VERSION,
+                                       Common::g_scm_branch, Common::g_scm_desc);
+        } else {
+            window_title = fmt::format("shadLauncher4 {}/v{} {} {}", remote_host, APP_VERSION,
+                                       Common::g_scm_branch, Common::g_scm_desc);
+        }
     }
+    setWindowTitle(QString::fromStdString(window_title));
 
     Q_EMIT RequestGlobalStylesheetChange();
     configureGuiFromSettings();
@@ -1273,7 +1288,6 @@ void MainWindow::RunGame() {
 void MainWindow::onGameClosed() {
     EmulatorState::GetInstance()->SetGameRunning(false);
     is_paused = false;
-
     if (m_game_list_frame) {
         m_game_list_frame->Refresh(false);
     }

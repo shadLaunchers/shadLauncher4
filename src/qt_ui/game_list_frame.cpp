@@ -855,24 +855,6 @@ void GameListFrame::OnParsingFinished() {
 
         m_games_mutex.lock();
 
-        // Read persistent_settings values
-        const QString last_played =
-            m_persistent_settings->GetValue(GUI::Persistent::last_played, serial, "").toString();
-        const quint64 playtime =
-            m_persistent_settings->GetValue(GUI::Persistent::playtime, serial, 0).toULongLong();
-
-        // Set persistent_settings values if values exist
-        if (!last_played.isEmpty()) {
-            m_persistent_settings->SetLastPlayed(
-                serial, last_played,
-                false); // No need to sync here. It would slow down the refresh anyway.
-        }
-        if (playtime > 0) {
-            m_persistent_settings->SetPlaytime(
-                serial, playtime,
-                false); // No need to sync here. It would slow down the refresh anyway.
-        }
-
         m_serials.insert(serial);
 
         if (QString note =
