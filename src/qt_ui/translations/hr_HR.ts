@@ -1063,6 +1063,453 @@ Molimo unesite vlastite ključeve i spremite ih.</translation>
     </message>
   </context>
   <context>
+    <name>GameListContextMenu</name>
+    <message>
+      <source>Game</source>
+      <translation type="unfinished">Game</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>This game has no update to delete!</source>
+      <translation type="unfinished">This game has no update to delete!</translation>
+    </message>
+    <message>
+      <source>Update</source>
+      <translation type="unfinished">Update</translation>
+    </message>
+    <message>
+      <source>Delete Game + Update</source>
+      <translation type="unfinished">Delete Game + Update</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to delete %1&apos;s game and update/patch directories? This cannot be undone.</source>
+      <translation type="unfinished">Are you sure you want to delete %1&apos;s game and update/patch directories? This cannot be undone.</translation>
+    </message>
+    <message>
+      <source>This game has no DLC to delete!</source>
+      <translation type="unfinished">This game has no DLC to delete!</translation>
+    </message>
+    <message>
+      <source>DLC</source>
+      <translation type="unfinished">DLC</translation>
+    </message>
+    <message>
+      <source>This game has no save data to delete!</source>
+      <translation type="unfinished">This game has no save data to delete!</translation>
+    </message>
+    <message>
+      <source>Save Data</source>
+      <translation type="unfinished">Save Data</translation>
+    </message>
+    <message>
+      <source>This game has no Shader Cache to delete!</source>
+      <translation type="unfinished">This game has no Shader Cache to delete!</translation>
+    </message>
+    <message>
+      <source>Shader Cache</source>
+      <translation type="unfinished">Shader Cache</translation>
+    </message>
+    <message>
+      <source>Shader cache deleted successfully.</source>
+      <translation type="unfinished">Shader cache deleted successfully.</translation>
+    </message>
+    <message>
+      <source>Clear Metadata Cache</source>
+      <translation type="unfinished">Clear Metadata Cache</translation>
+    </message>
+    <message>
+      <source>Clear the cached name/serial/icon/size info for %1?
+
+It will be re-read from disk on the next refresh.</source>
+      <translation type="unfinished">Clear the cached name/serial/icon/size info for %1?
+
+It will be re-read from disk on the next refresh.</translation>
+    </message>
+    <message>
+      <source>Delete %1</source>
+      <translation type="unfinished">Delete %1</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
+      <translation type="unfinished">Are you sure you want to delete %1&apos;s %2 directory?</translation>
+    </message>
+    <message>
+      <source>This is already packed as a ZArchive.</source>
+      <translation type="unfinished">This is already packed as a ZArchive.</translation>
+    </message>
+    <message>
+      <source>This folder could not be found on disk.</source>
+      <translation type="unfinished">This folder could not be found on disk.</translation>
+    </message>
+    <message>
+      <source>Convert %1 to ZArchive</source>
+      <translation type="unfinished">Convert %1 to ZArchive</translation>
+    </message>
+    <message>
+      <source>ZArchive Files (*.zar)</source>
+      <translation type="unfinished">ZArchive Files (*.zar)</translation>
+    </message>
+    <message>
+      <source>%1 already exists. Overwrite it?</source>
+      <translation type="unfinished">%1 already exists. Overwrite it?</translation>
+    </message>
+    <message>
+      <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+
+The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
+      <translation type="unfinished">This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+
+The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</translation>
+    </message>
+    <message>
+      <source>
+
+Continue?</source>
+      <translation type="unfinished">
+
+Continue?</translation>
+    </message>
+    <message>
+      <source>Packing %1...</source>
+      <translation type="unfinished">Packing %1...</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation type="unfinished">Cancel</translation>
+    </message>
+    <message>
+      <source>Failed to convert to ZArchive:
+%1</source>
+      <translation type="unfinished">Failed to convert to ZArchive:
+%1</translation>
+    </message>
+    <message>
+      <source>Conversion finished. Delete the original folder now to free up disk space?
+
+%1</source>
+      <translation type="unfinished">Conversion finished. Delete the original folder now to free up disk space?
+
+%1</translation>
+    </message>
+    <message>
+      <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
+      <translation type="unfinished">The archive was created, but the original folder could not be fully deleted. You can remove it manually.</translation>
+    </message>
+    <message>
+      <source>Packing: %1</source>
+      <translation type="unfinished">Packing: %1</translation>
+    </message>
+    <message>
+      <source>
+
+This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
+      <translation type="unfinished">
+
+This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</translation>
+    </message>
+    <message>
+      <source>Convert to ZArchive</source>
+      <translation type="unfinished">Convert to ZArchive</translation>
+    </message>
+    <message>
+      <source>Convert Update to ZArchive</source>
+      <translation type="unfinished">Convert Update to ZArchive</translation>
+    </message>
+    <message>
+      <source>This game has no separate update/patch folder to archive.</source>
+      <translation type="unfinished">This game has no separate update/patch folder to archive.</translation>
+    </message>
+    <message>
+      <source>%1 Update</source>
+      <translation type="unfinished">%1 Update</translation>
+    </message>
+    <message>
+      <source>Convert from ZArchive</source>
+      <translation type="unfinished">Convert from ZArchive</translation>
+    </message>
+    <message>
+      <source>This game is not packed as a ZArchive.</source>
+      <translation type="unfinished">This game is not packed as a ZArchive.</translation>
+    </message>
+    <message>
+      <source>Extract %1 to Folder</source>
+      <translation type="unfinished">Extract %1 to Folder</translation>
+    </message>
+    <message>
+      <source>The destination folder &quot;%1&quot; already exists and is not empty.</source>
+      <translation type="unfinished">The destination folder &quot;%1&quot; already exists and is not empty.</translation>
+    </message>
+    <message>
+      <source>This will extract &quot;%1&quot; into a regular folder. Depending on the game&apos;s size this can take a while, and the folder will need as much free disk space as the game itself.
+
+The original .zar archive is left untouched until extraction succeeds, you&apos;ll be asked afterward whether to delete it.
+
+Continue?</source>
+      <translation type="unfinished">This will extract &quot;%1&quot; into a regular folder. Depending on the game&apos;s size this can take a while, and the folder will need as much free disk space as the game itself.
+
+The original .zar archive is left untouched until extraction succeeds, you&apos;ll be asked afterward whether to delete it.
+
+Continue?</translation>
+    </message>
+    <message>
+      <source>Extracting %1...</source>
+      <translation type="unfinished">Extracting %1...</translation>
+    </message>
+    <message>
+      <source>Failed to extract game from ZArchive:
+%1</source>
+      <translation type="unfinished">Failed to extract game from ZArchive:
+%1</translation>
+    </message>
+    <message>
+      <source>Extraction finished. Delete the original .zar archive now to free up disk space?
+
+%1</source>
+      <translation type="unfinished">Extraction finished. Delete the original .zar archive now to free up disk space?
+
+%1</translation>
+    </message>
+    <message>
+      <source>The game was extracted, but the original .zar archive could not be deleted. You can remove it manually.</source>
+      <translation type="unfinished">The game was extracted, but the original .zar archive could not be deleted. You can remove it manually.</translation>
+    </message>
+    <message>
+      <source>Extracting: %1</source>
+      <translation type="unfinished">Extracting: %1</translation>
+    </message>
+    <message>
+      <source>&amp;Launch game</source>
+      <translation type="unfinished">&amp;Launch game</translation>
+    </message>
+    <message>
+      <source>&amp;Launch game with current settings</source>
+      <translation type="unfinished">&amp;Launch game with current settings</translation>
+    </message>
+    <message>
+      <source>&amp;Launch game with default settings</source>
+      <translation type="unfinished">&amp;Launch game with default settings</translation>
+    </message>
+    <message>
+      <source>&amp;Launch game with global settings</source>
+      <translation type="unfinished">&amp;Launch game with global settings</translation>
+    </message>
+    <message>
+      <source>&amp;Change Custom Configuration</source>
+      <translation type="unfinished">&amp;Change Custom Configuration</translation>
+    </message>
+    <message>
+      <source>&amp;Create Custom Configuration From Global Settings</source>
+      <translation type="unfinished">&amp;Create Custom Configuration From Global Settings</translation>
+    </message>
+    <message>
+      <source>&amp;View Changelog</source>
+      <translation type="unfinished">&amp;View Changelog</translation>
+    </message>
+    <message>
+      <source>&amp;Open Folder</source>
+      <translation type="unfinished">&amp;Open Folder</translation>
+    </message>
+    <message>
+      <source>&amp;Open Game Folder</source>
+      <translation type="unfinished">&amp;Open Game Folder</translation>
+    </message>
+    <message>
+      <source>&amp;Open Update Folder</source>
+      <translation type="unfinished">&amp;Open Update Folder</translation>
+    </message>
+    <message>
+      <source>&amp;Open Log Folder</source>
+      <translation type="unfinished">&amp;Open Log Folder</translation>
+    </message>
+    <message>
+      <source>Log Not Found</source>
+      <translation type="unfinished">Log Not Found</translation>
+    </message>
+    <message>
+      <source>No log file found for this game!</source>
+      <translation type="unfinished">No log file found for this game!</translation>
+    </message>
+    <message>
+      <source>Open Log Folder</source>
+      <translation type="unfinished">Open Log Folder</translation>
+    </message>
+    <message>
+      <source>&amp;SFO viewer</source>
+      <translation type="unfinished">&amp;SFO viewer</translation>
+    </message>
+    <message>
+      <source>&amp;Create Desktop Shortcut</source>
+      <translation type="unfinished">&amp;Create Desktop Shortcut</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation type="unfinished">No Version Selected</translation>
+    </message>
+    <message>
+      <source>Select a version first</source>
+      <translation type="unfinished">Select a version first</translation>
+    </message>
+    <message>
+      <source>&amp;npbind.dat viewer</source>
+      <translation type="unfinished">&amp;npbind.dat viewer</translation>
+    </message>
+    <message>
+      <source>&amp;Cheats &amp; Patches</source>
+      <translation type="unfinished">&amp;Cheats &amp; Patches</translation>
+    </message>
+    <message>
+      <source>&amp;Trophy Viewer</source>
+      <translation type="unfinished">&amp;Trophy Viewer</translation>
+    </message>
+    <message>
+      <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
+      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</translation>
+    </message>
+    <message>
+      <source>Trophy Viewer</source>
+      <translation type="unfinished">Trophy Viewer</translation>
+    </message>
+    <message>
+      <source>No games found. Please add your games to your library first.</source>
+      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
+    </message>
+    <message>
+      <source>&amp;Manage Game</source>
+      <translation type="unfinished">&amp;Manage Game</translation>
+    </message>
+    <message>
+      <source>&amp;Hide From Game List</source>
+      <translation type="unfinished">&amp;Hide From Game List</translation>
+    </message>
+    <message>
+      <source>&amp;Add/Edit Tooltip Notes</source>
+      <translation type="unfinished">&amp;Add/Edit Tooltip Notes</translation>
+    </message>
+    <message>
+      <source>&amp;Convert to ZArchive (.zar)...</source>
+      <translation type="unfinished">&amp;Convert to ZArchive (.zar)...</translation>
+    </message>
+    <message>
+      <source>Convert &amp;Update to ZArchive (.zar)...</source>
+      <translation type="unfinished">Convert &amp;Update to ZArchive (.zar)...</translation>
+    </message>
+    <message>
+      <source>&amp;Extract from ZArchive (.zar)...</source>
+      <translation type="unfinished">&amp;Extract from ZArchive (.zar)...</translation>
+    </message>
+    <message>
+      <source>&amp;Browse ZArchive Contents...</source>
+      <translation type="unfinished">&amp;Browse ZArchive Contents...</translation>
+    </message>
+    <message>
+      <source>Browse &amp;Update ZArchive Contents...</source>
+      <translation type="unfinished">Browse &amp;Update ZArchive Contents...</translation>
+    </message>
+    <message>
+      <source>&amp;Copy Info</source>
+      <translation type="unfinished">&amp;Copy Info</translation>
+    </message>
+    <message>
+      <source>&amp;Copy Name + Serial</source>
+      <translation type="unfinished">&amp;Copy Name + Serial</translation>
+    </message>
+    <message>
+      <source>&amp;Copy Name</source>
+      <translation type="unfinished">&amp;Copy Name</translation>
+    </message>
+    <message>
+      <source>&amp;Copy Serial</source>
+      <translation type="unfinished">&amp;Copy Serial</translation>
+    </message>
+    <message>
+      <source>&amp;Delete...</source>
+      <translation type="unfinished">&amp;Delete...</translation>
+    </message>
+    <message>
+      <source>&amp;Delete Game</source>
+      <translation type="unfinished">&amp;Delete Game</translation>
+    </message>
+    <message>
+      <source>&amp;Delete Update</source>
+      <translation type="unfinished">&amp;Delete Update</translation>
+    </message>
+    <message>
+      <source>Delete Game + &amp;Update</source>
+      <translation type="unfinished">Delete Game + &amp;Update</translation>
+    </message>
+    <message>
+      <source>&amp;Delete Save Data</source>
+      <translation type="unfinished">&amp;Delete Save Data</translation>
+    </message>
+    <message>
+      <source>&amp;Delete DLC </source>
+      <translation type="unfinished">&amp;Delete DLC </translation>
+    </message>
+    <message>
+      <source>&amp;Delete Trophy</source>
+      <translation type="unfinished">&amp;Delete Trophy</translation>
+    </message>
+    <message>
+      <source>&amp;Delete Shader Cache</source>
+      <translation type="unfinished">&amp;Delete Shader Cache</translation>
+    </message>
+    <message>
+      <source>Clear &amp;Metadata Cache</source>
+      <translation type="unfinished">Clear &amp;Metadata Cache</translation>
+    </message>
+    <message>
+      <source>&amp;Compatibility</source>
+      <translation type="unfinished">&amp;Compatibility</translation>
+    </message>
+    <message>
+      <source>&amp;View Report</source>
+      <translation type="unfinished">&amp;View Report</translation>
+    </message>
+    <message>
+      <source>&amp;Submit Report</source>
+      <translation type="unfinished">&amp;Submit Report</translation>
+    </message>
+    <message>
+      <source>&amp;Update Database</source>
+      <translation type="unfinished">&amp;Update Database</translation>
+    </message>
+    <message>
+      <source>&amp;Remove Custom Configuration</source>
+      <translation type="unfinished">&amp;Remove Custom Configuration</translation>
+    </message>
+    <message>
+      <source>No Report Available</source>
+      <translation type="unfinished">No Report Available</translation>
+    </message>
+    <message>
+      <source>There is no compatibility report available for this game.</source>
+      <translation type="unfinished">There is no compatibility report available for this game.</translation>
+    </message>
+    <message>
+      <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
+      <translation type="unfinished">The log is invalid, it either doesn&apos;t exist or log filters were used.</translation>
+    </message>
+    <message>
+      <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
+      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+    </message>
+    <message>
+      <source>Ok</source>
+      <translation type="unfinished">Ok</translation>
+    </message>
+    <message>
+      <source>Info</source>
+      <translation type="unfinished">Info</translation>
+    </message>
+    <message>
+      <source>Edit Tooltip Notes</source>
+      <translation type="unfinished">Edit Tooltip Notes</translation>
+    </message>
+  </context>
+  <context>
     <name>GameListFrame</name>
     <message>
       <source>Game List</source>
@@ -1169,58 +1616,6 @@ Molimo unesite vlastite ključeve i spremite ih.</translation>
       <translation>Poništi</translation>
     </message>
     <message>
-      <source>&amp;View Changelog</source>
-      <translation>&amp;Pogledaj Dnevnik Izmjena</translation>
-    </message>
-    <message>
-      <source>&amp;Copy Info</source>
-      <translation>&amp;Kopiranje Informacija</translation>
-    </message>
-    <message>
-      <source>&amp;Copy Name + Serial</source>
-      <translation>&amp;Kopiranje Imena + Serijski Broj</translation>
-    </message>
-    <message>
-      <source>&amp;Copy Name</source>
-      <translation>&amp;Kopiraj Ime</translation>
-    </message>
-    <message>
-      <source>&amp;Copy Serial</source>
-      <translation>&amp;Kopiraj Serijski Broj</translation>
-    </message>
-    <message>
-      <source>&amp;Compatibility</source>
-      <translation>&amp;Kompatibilnost</translation>
-    </message>
-    <message>
-      <source>&amp;View Report</source>
-      <translation>&amp;Vidi Izvještaj</translation>
-    </message>
-    <message>
-      <source>&amp;Submit Report</source>
-      <translation>&amp;Podnesi Izvještaj</translation>
-    </message>
-    <message>
-      <source>&amp;Update Database</source>
-      <translation>&amp;Ažuriraj Bazu</translation>
-    </message>
-    <message>
-      <source>&amp;Manage Game</source>
-      <translation>&amp;Upravljanje Igrom</translation>
-    </message>
-    <message>
-      <source>&amp;Hide From Game List</source>
-      <translation>&amp;Sakrij s Liste Igara</translation>
-    </message>
-    <message>
-      <source>&amp;Add/Edit Tooltip Notes</source>
-      <translation>&amp;Dodaj/Uredi Tooltip Zabilješke</translation>
-    </message>
-    <message>
-      <source>Edit Tooltip Notes</source>
-      <translation>Uredi Tooltip Zabilješke</translation>
-    </message>
-    <message>
       <source>Warning!</source>
       <translation>Upozorenje!</translation>
     </message>
@@ -1235,181 +1630,12 @@ Koristim lokalnu bazu.
 %0</translation>
     </message>
     <message>
-      <source>No Report Available</source>
-      <translation>Nema Dostupnog Izvještaja</translation>
-    </message>
-    <message>
-      <source>There is no compatibility report available for this game.</source>
-      <translation>Nema izvještaja o kompatibilnosti dostupnih za ovu igru.</translation>
-    </message>
-    <message>
-      <source>&amp;Open Folder</source>
-      <translation>&amp;Otvori Mapu</translation>
-    </message>
-    <message>
-      <source>&amp;Open Game Folder</source>
-      <translation>&amp;Otvori Mapu Igre</translation>
-    </message>
-    <message>
-      <source>&amp;Open Update Folder</source>
-      <translation>&amp;Otvori Mapu Ažuriranja</translation>
-    </message>
-    <message>
-      <source>&amp;Open Log Folder</source>
-      <translation>&amp;Otvori Mapu Zapisnika</translation>
-    </message>
-    <message>
-      <source>Log Not Found</source>
-      <translation>Zapisnik nije pronađen</translation>
-    </message>
-    <message>
-      <source>No log file found for this game!</source>
-      <translation>Nema pronađenog zapisnika za ovu igru!</translation>
-    </message>
-    <message>
-      <source>Open Log Folder</source>
-      <translation>Otvori Mapu Zapisnika</translation>
-    </message>
-    <message>
-      <source>&amp;SFO viewer</source>
-      <translation>&amp;SFO preglednik</translation>
-    </message>
-    <message>
-      <source>&amp;npbind.dat viewer</source>
-      <translation>&amp;npbind.dat preglednik</translation>
-    </message>
-    <message>
-      <source>&amp;Trophy Viewer</source>
-      <translation>&amp;Preglednik Trofeja</translation>
-    </message>
-    <message>
-      <source>&amp;Cheats &amp; Patches</source>
-      <translation>&amp;Šifre i Zakrpe</translation>
-    </message>
-    <message>
-      <source>Game</source>
-      <translation>Igra</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>Greška</translation>
     </message>
     <message>
-      <source>This game has no update to delete!</source>
-      <translation>Igra nema ažuriranja za brisanje!</translation>
-    </message>
-    <message>
-      <source>Update</source>
-      <translation>Ažuriraj</translation>
-    </message>
-    <message>
-      <source>This game has no DLC to delete!</source>
-      <translation>Ova igra nema DLC za brisanje!</translation>
-    </message>
-    <message>
-      <source>DLC</source>
-      <translation>DLC</translation>
-    </message>
-    <message>
-      <source>This game has no save data to delete!</source>
-      <translation>Ova igra nema podataka o spremanju za obrisati!</translation>
-    </message>
-    <message>
-      <source>Save Data</source>
-      <translation>Spremi Podatke</translation>
-    </message>
-    <message>
-      <source>This game has no Shader Cache to delete!</source>
-      <translation>Ova igra nema Shader Cache za brisanje!</translation>
-    </message>
-    <message>
-      <source>Shader Cache</source>
-      <translation>Shader Cache</translation>
-    </message>
-    <message>
-      <source>Shader cache deleted successfully.</source>
-      <translation>Shader cache izbrisan uspješno.</translation>
-    </message>
-    <message>
-      <source>Delete %1</source>
-      <translation>Izbriši %1</translation>
-    </message>
-    <message>
-      <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation>Jeste li sigurni da želite izbrisat %1 %2 mapu?</translation>
-    </message>
-    <message>
-      <source>&amp;Delete...</source>
-      <translation>&amp;Izbriši...</translation>
-    </message>
-    <message>
-      <source>&amp;Delete Game</source>
-      <translation>&amp;Izbriši Igru</translation>
-    </message>
-    <message>
-      <source>&amp;Delete Update</source>
-      <translation>&amp;Izbriši Ažuriranje</translation>
-    </message>
-    <message>
-      <source>&amp;Delete Save Data</source>
-      <translation>&amp;Izbriši Spremanja</translation>
-    </message>
-    <message>
-      <source>&amp;Delete DLC </source>
-      <translation>&amp;Izbriši DLC </translation>
-    </message>
-    <message>
-      <source>&amp;Delete Trophy</source>
-      <translation>&amp;Izbriši Trofej</translation>
-    </message>
-    <message>
-      <source>&amp;Delete Shader Cache</source>
-      <translation>&amp;Izbriši Shader Cache</translation>
-    </message>
-    <message>
       <source>Game Log</source>
       <translation>Dnevnik/Zapisnik Igre</translation>
-    </message>
-    <message>
-      <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
-      <translation>Zapisnik nije valjan, ne postoji ili je uključen filtar za zapisnik.</translation>
-    </message>
-    <message>
-      <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation>Neuspješno podnošenje izvještaja, jer je zadnji zapisnik igre pao na dotičnoj provjeri, kako 
-sam izvještaj ne bi postao nevaljan:</translation>
-    </message>
-    <message>
-      <source>Ok</source>
-      <translation>Ok</translation>
-    </message>
-    <message>
-      <source>Info</source>
-      <translation>Informacije</translation>
-    </message>
-    <message>
-      <source>&amp;Change Custom Configuration</source>
-      <translation>&amp;Promijeni Proizvoljnu Konfiguraciju</translation>
-    </message>
-    <message>
-      <source>&amp;Create Custom Configuration From Global Settings</source>
-      <translation>&amp;Promijeni Proizvoljnu Konfiguraciju iz Globalnih Postavki</translation>
-    </message>
-    <message>
-      <source>&amp;Remove Custom Configuration</source>
-      <translation>&amp;Ukloni Proizvoljnu Konfiguraciju</translation>
-    </message>
-    <message>
-      <source>&amp;Create Desktop Shortcut</source>
-      <translation>&amp;Postavi Prečac na Radnu Površinu</translation>
-    </message>
-    <message>
-      <source>No Version Selected</source>
-      <translation>Nijedna Verzija Odabrana</translation>
-    </message>
-    <message>
-      <source>Select a version first</source>
-      <translation>Prvo izaberi verziju</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
@@ -1426,34 +1652,6 @@ sam izvještaj ne bi postao nevaljan:</translation>
     <message>
       <source>Failed to convert icon.</source>
       <translation>Pogreška prilikom pretvorbe ikone.</translation>
-    </message>
-    <message>
-      <source>&amp;Launch game</source>
-      <translation>&amp;Pokreni igru</translation>
-    </message>
-    <message>
-      <source>&amp;Launch game with current settings</source>
-      <translation>&amp;Pokreni igru uz trenutne postavke</translation>
-    </message>
-    <message>
-      <source>&amp;Launch game with default settings</source>
-      <translation>&amp;Pokreni igru uz zadane postavke</translation>
-    </message>
-    <message>
-      <source>&amp;Launch game with global settings</source>
-      <translation>&amp;Pokreni igru uz globalne postavke</translation>
-    </message>
-    <message>
-      <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
-    </message>
-    <message>
-      <source>No games found. Please add your games to your library first.</source>
-      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
-    </message>
-    <message>
-      <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</translation>
     </message>
   </context>
   <context>
@@ -2916,6 +3114,10 @@ Izaberite verziju emulatora s desne liste.</translation>
       <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
       <translation type="unfinished">Row %1: duplicate entry for &apos;%2&apos;.</translation>
     </message>
+    <message>
+      <source>Extracting: %1</source>
+      <translation type="unfinished">Extracting: %1</translation>
+    </message>
   </context>
   <context>
     <name>SFOViewerDialog</name>
@@ -4013,6 +4215,154 @@ To će ukloniti sve igri-specifične postavke.</translation>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
       <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
     </message>
+    <message>
+      <source>Check for Updates at Startup:\nAutomatically check for a new launcher version each time it starts.</source>
+      <translation type="unfinished">Check for Updates at Startup:\nAutomatically check for a new launcher version each time it starts.</translation>
+    </message>
+    <message>
+      <source>Always Show Changelog:\nDisplay the changelog dialog after installing an update, even for minor releases.</source>
+      <translation type="unfinished">Always Show Changelog:\nDisplay the changelog dialog after installing an update, even for minor releases.</translation>
+    </message>
+    <message>
+      <source>Check for Updates:\nManually check right now for a newer launcher version.</source>
+      <translation type="unfinished">Check for Updates:\nManually check right now for a newer launcher version.</translation>
+    </message>
+    <message>
+      <source>Show Simple FPS Counter:\nDisplays a basic frames-per-second counter overlay while a game is running.</source>
+      <translation type="unfinished">Show Simple FPS Counter:\nDisplays a basic frames-per-second counter overlay while a game is running.</translation>
+    </message>
+    <message>
+      <source>Use Separate Update Folder:\nInstall PKG game updates to their own folder instead of merging them into the base game&apos;s install folder.</source>
+      <translation type="unfinished">Use Separate Update Folder:\nInstall PKG game updates to their own folder instead of merging them into the base game&apos;s install folder.</translation>
+    </message>
+    <message>
+      <source>Log:\nSettings that control what gets logged and how log files are written.</source>
+      <translation type="unfinished">Log:\nSettings that control what gets logged and how log files are written.</translation>
+    </message>
+    <message>
+      <source>Load Presets...:\nChoose from a list of common log filter presets instead of typing one by hand.</source>
+      <translation type="unfinished">Load Presets...:\nChoose from a list of common log filter presets instead of typing one by hand.</translation>
+    </message>
+    <message>
+      <source>Music Volume:\nAdjust the volume of the background/title music played in the GUI.</source>
+      <translation type="unfinished">Music Volume:\nAdjust the volume of the background/title music played in the GUI.</translation>
+    </message>
+    <message>
+      <source>Theme:\nChoose the stylesheet used for the launcher&apos;s interface. Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</source>
+      <translation type="unfinished">Theme:\nChoose the stylesheet used for the launcher&apos;s interface. Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</translation>
+    </message>
+    <message>
+      <source>Show Background Image:\nDisplay a background image behind the game list. Use the Opacity slider below to control how visible it is.</source>
+      <translation type="unfinished">Show Background Image:\nDisplay a background image behind the game list. Use the Opacity slider below to control how visible it is.</translation>
+    </message>
+    <message>
+      <source>Audio Backend:\nSelects the backend library used for audio output. SDL is recommended for most users.</source>
+      <translation type="unfinished">Audio Backend:\nSelects the backend library used for audio output. SDL is recommended for most users.</translation>
+    </message>
+    <message>
+      <source>Audio Device (general):\nSelects which system audio output device the emulator uses for general game audio.</source>
+      <translation type="unfinished">Audio Device (general):\nSelects which system audio output device the emulator uses for general game audio.</translation>
+    </message>
+    <message>
+      <source>Audio Device (DS4 speaker):\nSelects which system audio output device is used for sound played through a connected DualShock 4/DualSense controller&apos;s built-in speaker.</source>
+      <translation type="unfinished">Audio Device (DS4 speaker):\nSelects which system audio output device is used for sound played through a connected DualShock 4/DualSense controller&apos;s built-in speaker.</translation>
+    </message>
+    <message>
+      <source>Compatibility:\nSettings for displaying and updating the game compatibility database.</source>
+      <translation type="unfinished">Compatibility:\nSettings for displaying and updating the game compatibility database.</translation>
+    </message>
+    <message>
+      <source>Display Options:\nSettings that control how and where the emulator&apos;s video output is presented.</source>
+      <translation type="unfinished">Display Options:\nSettings that control how and where the emulator&apos;s video output is presented.</translation>
+    </message>
+    <message>
+      <source>Display Mode:\nChoose whether the game runs in a window, fullscreen, or borderless fullscreen.</source>
+      <translation type="unfinished">Display Mode:\nChoose whether the game runs in a window, fullscreen, or borderless fullscreen.</translation>
+    </message>
+    <message>
+      <source>FSR Settings:\nAMD FidelityFX Super Resolution upscaling and sharpening options.</source>
+      <translation type="unfinished">FSR Settings:\nAMD FidelityFX Super Resolution upscaling and sharpening options.</translation>
+    </message>
+    <message>
+      <source>Enable FSR:\nUses AMD FidelityFX Super Resolution to upscale the rendered image, which can improve performance at lower internal resolutions.</source>
+      <translation type="unfinished">Enable FSR:\nUses AMD FidelityFX Super Resolution to upscale the rendered image, which can improve performance at lower internal resolutions.</translation>
+    </message>
+    <message>
+      <source>Enable RCAS (sharpening):\nApplies FSR&apos;s Robust Contrast Adaptive Sharpening pass to the image. Requires FSR to be enabled.</source>
+      <translation type="unfinished">Enable RCAS (sharpening):\nApplies FSR&apos;s Robust Contrast Adaptive Sharpening pass to the image. Requires FSR to be enabled.</translation>
+    </message>
+    <message>
+      <source>RCAS Attenuation:\nControls the strength of the RCAS sharpening effect. Lower values sharpen the image more.</source>
+      <translation type="unfinished">RCAS Attenuation:\nControls the strength of the RCAS sharpening effect. Lower values sharpen the image more.</translation>
+    </message>
+    <message>
+      <source>Cursor:\nSettings that control when and how the mouse cursor is hidden.</source>
+      <translation type="unfinished">Cursor:\nSettings that control when and how the mouse cursor is hidden.</translation>
+    </message>
+    <message>
+      <source>Controller:\nSettings related to gamepad and mouse input behavior.</source>
+      <translation type="unfinished">Controller:\nSettings related to gamepad and mouse input behavior.</translation>
+    </message>
+    <message>
+      <source>Use Mice as Mice:\nLets the mouse behave as a regular mouse instead of being treated as an emulated controller input.</source>
+      <translation type="unfinished">Use Mice as Mice:\nLets the mouse behave as a regular mouse instead of being treated as an emulated controller input.</translation>
+    </message>
+    <message>
+      <source>Use Circle Button to Confirm:\nSwaps the Circle and Cross buttons&apos; roles so Circle acts as the confirm/enter button, matching Japanese console conventions.</source>
+      <translation type="unfinished">Use Circle Button to Confirm:\nSwaps the Circle and Cross buttons&apos; roles so Circle acts as the confirm/enter button, matching Japanese console conventions.</translation>
+    </message>
+    <message>
+      <source>IME:\nSettings for the on-screen keyboard/input method editor used by games for text entry.</source>
+      <translation type="unfinished">IME:\nSettings for the on-screen keyboard/input method editor used by games for text entry.</translation>
+    </message>
+    <message>
+      <source>Enable IME Accessibility:\nEnables accessibility features for the on-screen keyboard, such as additional audio/visual cues.</source>
+      <translation type="unfinished">Enable IME Accessibility:\nEnables accessibility features for the on-screen keyboard, such as additional audio/visual cues.</translation>
+    </message>
+    <message>
+      <source>Enable IME URL/Email Short Panel:\nShows a shortened on-screen keyboard layout optimized for entering URLs and email addresses.</source>
+      <translation type="unfinished">Enable IME URL/Email Short Panel:\nShows a shortened on-screen keyboard layout optimized for entering URLs and email addresses.</translation>
+    </message>
+    <message>
+      <source>Camera Device:\nSelects which connected camera device the emulator exposes to games as the PlayStation Camera.</source>
+      <translation type="unfinished">Camera Device:\nSelects which connected camera device the emulator exposes to games as the PlayStation Camera.</translation>
+    </message>
+    <message>
+      <source>Debug:\nTools for diagnosing crashes and inspecting emulator behavior. Intended for troubleshooting and development, not everyday use.</source>
+      <translation type="unfinished">Debug:\nTools for diagnosing crashes and inspecting emulator behavior. Intended for troubleshooting and development, not everyday use.</translation>
+    </message>
+    <message>
+      <source>Advanced:\nLower-level debugging options for diagnosing rendering issues and crashes.</source>
+      <translation type="unfinished">Advanced:\nLower-level debugging options for diagnosing rendering issues and crashes.</translation>
+    </message>
+    <message>
+      <source>Vulkan Validation:\nEnables Vulkan&apos;s built-in validation layers to catch incorrect API usage. Reduces performance; requires the Vulkan SDK to be installed.</source>
+      <translation type="unfinished">Vulkan Validation:\nEnables Vulkan&apos;s built-in validation layers to catch incorrect API usage. Reduces performance; requires the Vulkan SDK to be installed.</translation>
+    </message>
+    <message>
+      <source>Experimental:\nFeatures that are still in development or considered unstable. Use with caution - these can cause crashes or unexpected behavior.</source>
+      <translation type="unfinished">Experimental:\nFeatures that are still in development or considered unstable. Use with caution - these can cause crashes or unexpected behavior.</translation>
+    </message>
+    <message>
+      <source>ShadNet Server Settings:\nConfigure the server addresses used to connect to a ShadNet-compatible online service. Only used while ShadNet is enabled.</source>
+      <translation type="unfinished">ShadNet Server Settings:\nConfigure the server addresses used to connect to a ShadNet-compatible online service. Only used while ShadNet is enabled.</translation>
+    </message>
+    <message>
+      <source>Server:\nThe address of the ShadNet server to connect to.</source>
+      <translation type="unfinished">Server:\nThe address of the ShadNet server to connect to.</translation>
+    </message>
+    <message>
+      <source>WebAPI Server:\nThe address of the ShadNet WebAPI server used for account and session management.</source>
+      <translation type="unfinished">WebAPI Server:\nThe address of the ShadNet WebAPI server used for account and session management.</translation>
+    </message>
+    <message>
+      <source>Signaling Info:\nConnection details used for ShadNet&apos;s peer-to-peer signaling/matchmaking.</source>
+      <translation type="unfinished">Signaling Info:\nConnection details used for ShadNet&apos;s peer-to-peer signaling/matchmaking.</translation>
+    </message>
+    <message>
+      <source>Enable UPnP:\nAutomatically configure port forwarding on your router via UPnP for ShadNet&apos;s networked features.</source>
+      <translation type="unfinished">Enable UPnP:\nAutomatically configure port forwarding on your router via UPnP for ShadNet&apos;s networked features.</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -4576,6 +4926,103 @@ To use this version, select it from the installed list.</translation>
 The version may not run correctly when launched.</source>
       <translation type="unfinished">Failed to copy the selected version to the application directory.
 The version may not run correctly when launched.</translation>
+    </message>
+  </context>
+  <context>
+    <name>ZArchiveViewerDialog</name>
+    <message>
+      <source>Failed to open archive.</source>
+      <translation type="unfinished">Failed to open archive.</translation>
+    </message>
+    <message>
+      <source>ZArchive Viewer - %1</source>
+      <translation type="unfinished">ZArchive Viewer - %1</translation>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation type="unfinished">Name</translation>
+    </message>
+    <message>
+      <source>Type</source>
+      <translation type="unfinished">Type</translation>
+    </message>
+    <message>
+      <source>Select All</source>
+      <translation type="unfinished">Select All</translation>
+    </message>
+    <message>
+      <source>Select None</source>
+      <translation type="unfinished">Select None</translation>
+    </message>
+    <message>
+      <source>Extract Selected...</source>
+      <translation type="unfinished">Extract Selected...</translation>
+    </message>
+    <message>
+      <source>Extract All...</source>
+      <translation type="unfinished">Extract All...</translation>
+    </message>
+    <message>
+      <source>Folder</source>
+      <translation type="unfinished">Folder</translation>
+    </message>
+    <message>
+      <source>File</source>
+      <translation type="unfinished">File</translation>
+    </message>
+    <message>
+      <source>Loading...</source>
+      <translation type="unfinished">Loading...</translation>
+    </message>
+    <message>
+      <source>No files selected.</source>
+      <translation type="unfinished">No files selected.</translation>
+    </message>
+    <message>
+      <source>%1 file(s) selected.</source>
+      <translation type="unfinished">%1 file(s) selected.</translation>
+    </message>
+    <message>
+      <source>Extract Selected</source>
+      <translation type="unfinished">Extract Selected</translation>
+    </message>
+    <message>
+      <source>Select one or more files to extract first.</source>
+      <translation type="unfinished">Select one or more files to extract first.</translation>
+    </message>
+    <message>
+      <source>Extract Selected Files To</source>
+      <translation type="unfinished">Extract Selected Files To</translation>
+    </message>
+    <message>
+      <source>Extract All Files To</source>
+      <translation type="unfinished">Extract All Files To</translation>
+    </message>
+    <message>
+      <source>Extract from ZArchive</source>
+      <translation type="unfinished">Extract from ZArchive</translation>
+    </message>
+    <message>
+      <source>Extracting all files...</source>
+      <translation type="unfinished">Extracting all files...</translation>
+    </message>
+    <message>
+      <source>Extracting selected files...</source>
+      <translation type="unfinished">Extracting selected files...</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation type="unfinished">Cancel</translation>
+    </message>
+    <message>
+      <source>Failed to extract files:
+%1</source>
+      <translation type="unfinished">Failed to extract files:
+%1</translation>
+    </message>
+    <message>
+      <source>Extraction finished.</source>
+      <translation type="unfinished">Extraction finished.</translation>
     </message>
   </context>
 </TS>
