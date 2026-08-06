@@ -197,7 +197,7 @@
     </message>
     <message>
       <source>Downloading cheat index...</source>
-      <translation>Baixando índice de trapaça...</translation>
+      <translation>Transferindo catálogo de trapaças...</translation>
     </message>
     <message>
       <source>Selected repository does not support patches.</source>
@@ -209,7 +209,7 @@
     </message>
     <message>
       <source>Downloading patches...</source>
-      <translation>Baixando Modificações...</translation>
+      <translation>Transferindo patches...</translation>
     </message>
     <message>
       <source>Failed to open file:</source>
@@ -486,11 +486,11 @@
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation>Zona Morta Minima (pad:2 max:127)</translation>
+      <translation>Zona Morta Mínima (padrão:2 máxima:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation>Zona Morta Máxima (pad:127 max:127)</translation>
+      <translation>Zona Morta Máxima (padrão:127 máxima:127)</translation>
     </message>
     <message>
       <source>Left Stick</source>
@@ -988,15 +988,15 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Downloading the compatibility database. Please wait...</source>
-      <translation>Baixando a Lista de Compatibilidade. Aguarde...</translation>
+      <translation>Transferindo banco de dados de compatibilidade. Aguarde...</translation>
     </message>
     <message>
       <source>Downloading Compatibility Database</source>
-      <translation>Baixando Lista de Compatibilidade</translation>
+      <translation>Transferindo Banco de Dados de Compatibilidade</translation>
     </message>
     <message>
       <source>Error Downloading Compatibility Database</source>
-      <translation>Erro ao Baixar Lista de Compatibilidade</translation>
+      <translation>Erro na Transferência do Banco de Dados de Compatibilidade</translation>
     </message>
     <message>
       <source>Right click here and choose Compatibility -&gt; Update Database.</source>
@@ -1156,9 +1156,9 @@ Elas serão lidas novamente do disco na próxima atualização.</translation>
       <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
 
 The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
-      <translation type="unfinished">This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+      <translation>Isso compactará &quot;%1&quot; em um único arquivo .zar de somente leitura. Dependendo do tamanho, o processo pode levar algum tempo e o arquivamento exigirá temporariamente tanto espaço livre em disco quanto o original.
 
-The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</translation>
+A pasta original permanece inalterada até que a conversão seja concluída com sucesso; em seguida, será perguntado se você deseja excluí-la.</translation>
     </message>
     <message>
       <source>
@@ -1186,13 +1186,13 @@ Continuar?</translation>
       <source>Conversion finished. Delete the original folder now to free up disk space?
 
 %1</source>
-      <translation type="unfinished">Conversion finished. Delete the original folder now to free up disk space?
+      <translation>Conversão concluída. Deseja excluir a pasta original agora para liberar espaço em disco?
 
 %1</translation>
     </message>
     <message>
       <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
-      <translation type="unfinished">The archive was created, but the original folder could not be fully deleted. You can remove it manually.</translation>
+      <translation>O arquivamento foi criado, mas a pasta original não pôde ser totalmente excluída. Você pode removê-la manualmente.</translation>
     </message>
     <message>
       <source>Packing: %1</source>
@@ -1216,7 +1216,7 @@ Este jogo possui uma pasta separada para atualizações/patches. Apenas o jogo b
     </message>
     <message>
       <source>This game has no separate update/patch folder to archive.</source>
-      <translation type="unfinished">This game has no separate update/patch folder to archive.</translation>
+      <translation>Esse jogo não possui nenhuma pasta separada de atualização/patch para arquivar.</translation>
     </message>
     <message>
       <source>%1 Update</source>
@@ -1236,7 +1236,7 @@ Este jogo possui uma pasta separada para atualizações/patches. Apenas o jogo b
     </message>
     <message>
       <source>The destination folder &quot;%1&quot; already exists and is not empty.</source>
-      <translation type="unfinished">The destination folder &quot;%1&quot; already exists and is not empty.</translation>
+      <translation>A pasta de destino &quot;%1&quot; já existe e não está vazia.</translation>
     </message>
     <message>
       <source>This will extract &quot;%1&quot; into a regular folder. Depending on the game&apos;s size this can take a while, and the folder will need as much free disk space as the game itself.
@@ -1244,11 +1244,11 @@ Este jogo possui uma pasta separada para atualizações/patches. Apenas o jogo b
 The original .zar archive is left untouched until extraction succeeds, you&apos;ll be asked afterward whether to delete it.
 
 Continue?</source>
-      <translation type="unfinished">This will extract &quot;%1&quot; into a regular folder. Depending on the game&apos;s size this can take a while, and the folder will need as much free disk space as the game itself.
+      <translation>Isso extrairá o arquivo &quot;%1&quot; para uma pasta normal. Dependendo do tamanho do jogo, isso pode demorar um pouco e a pasta precisará de tanto espaço livre em disco quanto o próprio jogo.
 
-The original .zar archive is left untouched until extraction succeeds, you&apos;ll be asked afterward whether to delete it.
+O arquivamento .zar original permanecerá intacto até que a extração seja concluída. Você será perguntado posteriormente se deseja excluí-lo.
 
-Continue?</translation>
+Continuar?</translation>
     </message>
     <message>
       <source>Extracting %1...</source>
@@ -1264,13 +1264,13 @@ Continue?</translation>
       <source>Extraction finished. Delete the original .zar archive now to free up disk space?
 
 %1</source>
-      <translation type="unfinished">Extraction finished. Delete the original .zar archive now to free up disk space?
+      <translation>Extração concluída. Deseja excluir o arquivamento .zar original nesse momento para liberar espaço em disco?
 
 %1</translation>
     </message>
     <message>
       <source>The game was extracted, but the original .zar archive could not be deleted. You can remove it manually.</source>
-      <translation type="unfinished">The game was extracted, but the original .zar archive could not be deleted. You can remove it manually.</translation>
+      <translation>O jogo foi extraído, mas o arquivamento .zar original não pode ser apagado. Você pode removê-lo manualmente.</translation>
     </message>
     <message>
       <source>Extracting: %1</source>
@@ -2430,7 +2430,7 @@ Substituir a lista atual completamente ou adicionar estas entradas a ela (entrad
     </message>
     <message>
       <source>Tiny</source>
-      <translation>Muito pequeno</translation>
+      <translation>Minúsculo</translation>
     </message>
     <message>
       <source>Small</source>
@@ -2490,7 +2490,7 @@ Substituir a lista atual completamente ou adicionar estas entradas a ela (entrad
     </message>
     <message>
       <source>Switch to list mode</source>
-      <translation>Mudar para modo de lista</translation>
+      <translation>Mudar para modo lista</translation>
     </message>
     <message>
       <source>Grid</source>
@@ -2498,7 +2498,7 @@ Substituir a lista atual completamente ou adicionar estas entradas a ela (entrad
     </message>
     <message>
       <source>Switch to grid mode</source>
-      <translation>Alternar para modo de grade</translation>
+      <translation>Alternar para modo grade</translation>
     </message>
     <message>
       <source>Refresh</source>
@@ -2618,7 +2618,7 @@ Substituir a lista atual completamente ou adicionar estas entradas a ela (entrad
     </message>
     <message>
       <source>Would you like to overwrite?</source>
-      <translation>Você gostaria de sobrescrever?</translation>
+      <translation>Gostaria de sobrescrever?</translation>
     </message>
     <message>
       <source>PKG Version %1 is older than installed version: </source>
@@ -2630,7 +2630,7 @@ Substituir a lista atual completamente ou adicionar estas entradas a ela (entrad
     </message>
     <message>
       <source>Would you like to install Patch: </source>
-      <translation>Você gostaria de instalar a atualização: </translation>
+      <translation>Gostaria de instalar o Patch: </translation>
     </message>
     <message>
       <source>DLC Installation</source>
@@ -2638,7 +2638,7 @@ Substituir a lista atual completamente ou adicionar estas entradas a ela (entrad
     </message>
     <message>
       <source>Would you like to install DLC: %1?</source>
-      <translation>Você gostaria de instalar o DLC: %1?</translation>
+      <translation>Gostaria de instalar o DLC: %1?</translation>
     </message>
     <message>
       <source>DLC already installed:</source>
@@ -3216,7 +3216,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
-      <translation>Mostrar Tela de Abertura(Splash Screen) ao iniciar o Jogo</translation>
+      <translation>Mostrar Tela de Abertura Durante a Inicialização do Jogo</translation>
     </message>
     <message>
       <source>GUI</source>
@@ -3344,7 +3344,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable HDR</source>
-      <translation>Ativar HDR</translation>
+      <translation>Habilitar HDR</translation>
     </message>
     <message>
       <source>FSR Settings</source>
@@ -3476,7 +3476,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Logger</source>
-      <translation>Log/Registro</translation>
+      <translation>Monitor</translation>
     </message>
     <message>
       <source>Enable Logging</source>
@@ -3548,7 +3548,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers</source>
-      <translation>Ativar Camadas de Validação do Vulkan</translation>
+      <translation>Habilitar Camadas de Validação do Vulkan</translation>
     </message>
     <message>
       <source>Validation Layers</source>
@@ -3564,7 +3564,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation>Ativar Validação Assistida por GPU</translation>
+      <translation>Habilitar Validação Assistida por GPU</translation>
     </message>
     <message>
       <source>Experimental</source>
@@ -3914,7 +3914,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Enable IME URL/Email Short Panel</source>
-      <translation>Ativar Painel Curto de IME para URL/E-mail</translation>
+      <translation>Ativar Painel Reduzido de IME para URL/E-mail</translation>
     </message>
     <message>
       <source>Enable ShadNet</source>
@@ -4161,19 +4161,19 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Ativar Camadas de Validação do Vulkan:\nAtiva um sistema que valida o estado do renderizador Vulkan e registra informações sobre seu estado interno.\nIsso diminuirá o desempenho e provavelmente mudará o comportamento da emulação.\nVocê precisa do Vulkan SDK para que isso funcione.</translation>
+      <translation>Habilitar Camadas de Validação do Vulkan:\nAtiva um sistema que valida o estado do renderizador Vulkan e registra informações sobre seu estado interno.\nIsso diminuirá o desempenho e provavelmente mudará o comportamento da emulação.\nVocê precisa do Vulkan SDK para que isso funcione.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Ativar Validação do Núcleo:\Ativa as principais funções de validação da API.\nIsso reduzirá o desempenho e provavelmente alterará o comportamento da emulação.\nVocê precisa do Vulkan SDK para que isso funcione.</translation>
+      <translation>Habilitar Validação do Núcleo:\nAtiva as principais funções de validação da API.\nIsso reduzirá o desempenho e provavelmente alterará o comportamento da emulação.\nVocê precisa do Vulkan SDK para que isso funcione.</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Ativar Validação de Sincronização: \nAtiva um sistema que valida o tempo de execução das tarefas de renderização Vulkan. \nIsso reduzirá o desempenho e provavelmente alterará o comportamento da emulação. \nVocê precisa do Vulkan SDK para que isso funcione.</translation>
+      <translation>Habilitar Validação de Sincronização:\nAtiva um sistema que valida o tempo de execução das tarefas de renderização Vulkan.\nIsso reduzirá o desempenho e provavelmente alterará o comportamento da emulação.\nVocê precisa do Vulkan SDK para que isso funcione.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Ativar Validação Assistida por GPU:\nInstrumenta os shaders com código que valida se eles estão se comportando corretamente.\nIsso reduzirá o desempenho e alterará provavelmente o comportamento da emulação.\nVocê precisa do Vulkan SDK para que isso funcione.</translation>
+      <translation>Habilitar Validação Assistida por GPU:\nInstrumenta os shaders com código que valida se eles estão se comportando corretamente.\nIsso reduzirá o desempenho e alterará provavelmente o comportamento da emulação.\nVocê precisa do Vulkan SDK para que isso funcione.</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
@@ -4234,7 +4234,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Load Presets...:\nChoose from a list of common log filter presets instead of typing one by hand.</source>
-      <translation type="unfinished">Load Presets...:\nChoose from a list of common log filter presets instead of typing one by hand.</translation>
+      <translation>Carregar Predefinições...:\nEscolha a partir de uma lista de predefinições de filtros de registros comuns, em vez de digitar uma manualmente.</translation>
     </message>
     <message>
       <source>Music Volume:\nAdjust the volume of the background/title music played in the GUI.</source>
@@ -4246,19 +4246,19 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Show Background Image:\nDisplay a background image behind the game list. Use the Opacity slider below to control how visible it is.</source>
-      <translation type="unfinished">Show Background Image:\nDisplay a background image behind the game list. Use the Opacity slider below to control how visible it is.</translation>
+      <translation>Mostrar Imagem do Plano de Fundo:\nExibe uma imagem de fundo atrás da lista de jogos. Utilize o controle deslizante da Transparência abaixo para controlar o quão visível ela é.</translation>
     </message>
     <message>
       <source>Audio Backend:\nSelects the backend library used for audio output. SDL is recommended for most users.</source>
-      <translation type="unfinished">Audio Backend:\nSelects the backend library used for audio output. SDL is recommended for most users.</translation>
+      <translation>Backend de Áudio:\nSelecione a biblioteca de backend utilizada para a saída de áudio. O SDL é recomendado para a maioria dos usuários.</translation>
     </message>
     <message>
       <source>Audio Device (general):\nSelects which system audio output device the emulator uses for general game audio.</source>
-      <translation type="unfinished">Audio Device (general):\nSelects which system audio output device the emulator uses for general game audio.</translation>
+      <translation>Dispositivo de Áudio (geral):\nSeleciona qual dispositivo de saída de áudio do sistema o emulador utiliza para o áudio geral dos jogos.</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker):\nSelects which system audio output device is used for sound played through a connected DualShock 4/DualSense controller&apos;s built-in speaker.</source>
-      <translation type="unfinished">Audio Device (DS4 speaker):\nSelects which system audio output device is used for sound played through a connected DualShock 4/DualSense controller&apos;s built-in speaker.</translation>
+      <translation>Dispositivo de Áudio (alto-falante do DS4):\nSeleciona qual dispositivo de saída de áudio do sistema é utilizado para o som reproduzido pelo alto-falante integrado de um controle DualShock 4 ou DualSense conectado.</translation>
     </message>
     <message>
       <source>Compatibility:\nSettings for displaying and updating the game compatibility database.</source>
@@ -4274,11 +4274,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>FSR Settings:\nAMD FidelityFX Super Resolution upscaling and sharpening options.</source>
-      <translation type="unfinished">FSR Settings:\nAMD FidelityFX Super Resolution upscaling and sharpening options.</translation>
+      <translation>Configurações do FSR:\nOpções de aumento de resolução e nitidez do AMD FidelityFX Super Resolution.</translation>
     </message>
     <message>
       <source>Enable FSR:\nUses AMD FidelityFX Super Resolution to upscale the rendered image, which can improve performance at lower internal resolutions.</source>
-      <translation type="unfinished">Enable FSR:\nUses AMD FidelityFX Super Resolution to upscale the rendered image, which can improve performance at lower internal resolutions.</translation>
+      <translation>Habilitar o FSR:\nUtiliza o AMD FidelityFX Super Resolution para aumentar a escala da imagem renderizada, o que pode melhorar o desempenho em resoluções internas mais baixas.</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening):\nApplies FSR&apos;s Robust Contrast Adaptive Sharpening pass to the image. Requires FSR to be enabled.</source>
@@ -4286,7 +4286,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>RCAS Attenuation:\nControls the strength of the RCAS sharpening effect. Lower values sharpen the image more.</source>
-      <translation type="unfinished">RCAS Attenuation:\nControls the strength of the RCAS sharpening effect. Lower values sharpen the image more.</translation>
+      <translation>Atenuação do RCAS:\nControla a intensidade do efeito de nitidez RCAS. Valores mais baixos aumentam a nitidez da imagem.</translation>
     </message>
     <message>
       <source>Cursor:\nSettings that control when and how the mouse cursor is hidden.</source>
@@ -4310,11 +4310,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Enable IME Accessibility:\nEnables accessibility features for the on-screen keyboard, such as additional audio/visual cues.</source>
-      <translation type="unfinished">Enable IME Accessibility:\nEnables accessibility features for the on-screen keyboard, such as additional audio/visual cues.</translation>
+      <translation>Habilitar a Acessibilidade do IME:\nAtiva recursos de acessibilidade para o teclado virtual, como indicadores de áudio ou visuais adicionais.</translation>
     </message>
     <message>
       <source>Enable IME URL/Email Short Panel:\nShows a shortened on-screen keyboard layout optimized for entering URLs and email addresses.</source>
-      <translation type="unfinished">Enable IME URL/Email Short Panel:\nShows a shortened on-screen keyboard layout optimized for entering URLs and email addresses.</translation>
+      <translation>Ativar Painel Reduzido de IME para URL/E-mail:\nExibe um leiaute de teclado na tela reduzido, otimizado para inserir URLs e endereços de e-mail.</translation>
     </message>
     <message>
       <source>Camera Device:\nSelects which connected camera device the emulator exposes to games as the PlayStation Camera.</source>
@@ -4330,7 +4330,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Vulkan Validation:\nEnables Vulkan&apos;s built-in validation layers to catch incorrect API usage. Reduces performance; requires the Vulkan SDK to be installed.</source>
-      <translation type="unfinished">Vulkan Validation:\nEnables Vulkan&apos;s built-in validation layers to catch incorrect API usage. Reduces performance; requires the Vulkan SDK to be installed.</translation>
+      <translation>Validação Vulkan:\nAtiva as camadas de validação integradas do Vulkan para detectar o uso incorreto da API. Reduz o desempenho; requer a instalação do SDK do Vulkan.</translation>
     </message>
     <message>
       <source>Experimental:\nFeatures that are still in development or considered unstable. Use with caution - these can cause crashes or unexpected behavior.</source>
@@ -4346,7 +4346,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>WebAPI Server:\nThe address of the ShadNet WebAPI server used for account and session management.</source>
-      <translation type="unfinished">WebAPI Server:\nThe address of the ShadNet WebAPI server used for account and session management.</translation>
+      <translation>Servidor WebAPI:\nO endereço do servidor WebAPI do ShadNet utilizado para o gerenciamento de contas e sessões.</translation>
     </message>
     <message>
       <source>Signaling Info:\nConnection details used for ShadNet&apos;s peer-to-peer signaling/matchmaking.</source>
@@ -4563,7 +4563,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Codename</source>
-      <translation>Apelido</translation>
+      <translation>Codinome</translation>
     </message>
     <message>
       <source>Date</source>
