@@ -1156,7 +1156,7 @@ Elas serão lidas novamente do disco na próxima atualização.</translation>
       <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
 
 The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
-      <translation>Isso compactará &quot;%1&quot; em um único arquivo .zar de somente leitura. Dependendo do tamanho, o processo pode levar algum tempo e o arquivamento exigirá temporariamente tanto espaço livre em disco quanto o original.
+      <translation>Isso compactará &quot;%1&quot; em um único arquivamento .zar de somente leitura. Dependendo do tamanho, o processo pode levar algum tempo e o arquivamento exigirá temporariamente tanto espaço livre em disco quanto o original.
 
 A pasta original permanece inalterada até que a conversão seja concluída com sucesso; em seguida, será perguntado se você deseja excluí-la.</translation>
     </message>
@@ -3716,11 +3716,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Compress Shader Cache Files into Zip File</source>
-      <translation>Comprimir os arquivos de Cache de Shader em um arquivo zip</translation>
+      <translation>Compactar os Arquivos de Cache de Shader em um Arquivo Zip</translation>
     </message>
     <message>
       <source>Idle</source>
-      <translation>Parado</translation>
+      <translation>Ocioso</translation>
     </message>
     <message>
       <source>Auto Select</source>
@@ -3736,7 +3736,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Real USB Device</source>
-      <translation>Dispositivo USB real</translation>
+      <translation>Dispositivo USB Real</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
@@ -3930,7 +3930,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Enable UPnP</source>
-      <translation>Ativar UPnP</translation>
+      <translation>Habilitar UPnP</translation>
     </message>
     <message>
       <source>Use Mice as Mice</source>
@@ -4201,7 +4201,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation>Compacte os arquivos de Cache do Shader em um arquivo zip:\nOs arquivos de cache do shader são armazenados dentro de um único arquivo zip em vez de vários arquivos separados.</translation>
+      <translation>Compactar os arquivos de Cache do Shader em um arquivo zip:\nOs arquivos de cache do shader são armazenados dentro de um único arquivo zip em vez de vários arquivos separados.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
@@ -4587,7 +4587,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation>Verificar por Atualizações Pre-release ao Iniciar</translation>
+      <translation>Verificar por atualizações Pre-release ao iniciar</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
@@ -4631,7 +4631,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation>Não foi possível determinar o caminho da pasta.</translation>
+      <translation>Falha ao determinar o caminho da pasta.</translation>
     </message>
     <message>
       <source>Delete version</source>
@@ -4643,7 +4643,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation>Não foi possível determinar a pasta para remover.</translation>
+      <translation>Falha ao determinar a pasta para remover.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
