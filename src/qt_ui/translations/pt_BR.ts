@@ -1164,9 +1164,9 @@ The original folder is left untouched until conversion succeeds, you&apos;ll be 
       <source>
 
 Continue?</source>
-      <translation type="unfinished">
+      <translation>
 
-Continue?</translation>
+Continuar?</translation>
     </message>
     <message>
       <source>Packing %1...</source>
@@ -1224,7 +1224,7 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
     <message>
       <source>Convert from ZArchive</source>
-      <translation type="unfinished">Convert from ZArchive</translation>
+      <translation>Converter do ZArchive</translation>
     </message>
     <message>
       <source>This game is not packed as a ZArchive.</source>
@@ -1302,15 +1302,15 @@ Continue?</translation>
     </message>
     <message>
       <source>&amp;View Changelog</source>
-      <translation type="unfinished">&amp;View Changelog</translation>
+      <translation>&amp;Visualizar Histórico de Alterações</translation>
     </message>
     <message>
       <source>&amp;Open Folder</source>
-      <translation type="unfinished">&amp;Open Folder</translation>
+      <translation>&amp;Abrir Pasta</translation>
     </message>
     <message>
       <source>&amp;Open Game Folder</source>
-      <translation type="unfinished">&amp;Open Game Folder</translation>
+      <translation>&amp;Abrir Pasta do Jogo</translation>
     </message>
     <message>
       <source>&amp;Open Update Folder</source>
@@ -1318,23 +1318,23 @@ Continue?</translation>
     </message>
     <message>
       <source>&amp;Open Log Folder</source>
-      <translation type="unfinished">&amp;Open Log Folder</translation>
+      <translation>&amp;Abrir Pasta de Registro</translation>
     </message>
     <message>
       <source>Log Not Found</source>
-      <translation type="unfinished">Log Not Found</translation>
+      <translation>Registro Não Encontrado</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
-      <translation type="unfinished">No log file found for this game!</translation>
+      <translation>Nenhum arquivo de registro foi encontrado para este jogo!</translation>
     </message>
     <message>
       <source>Open Log Folder</source>
-      <translation type="unfinished">Open Log Folder</translation>
+      <translation>Abrir Pasta de Registro</translation>
     </message>
     <message>
       <source>&amp;SFO viewer</source>
-      <translation type="unfinished">&amp;SFO viewer</translation>
+      <translation>&amp;Visualizador de SFO</translation>
     </message>
     <message>
       <source>&amp;Create Desktop Shortcut</source>
@@ -1374,11 +1374,11 @@ Continue?</translation>
     </message>
     <message>
       <source>&amp;Manage Game</source>
-      <translation type="unfinished">&amp;Manage Game</translation>
+      <translation>&amp;Gerenciar Jogo</translation>
     </message>
     <message>
       <source>&amp;Hide From Game List</source>
-      <translation type="unfinished">&amp;Hide From Game List</translation>
+      <translation>&amp;Ocultar da Lista de Jogos</translation>
     </message>
     <message>
       <source>&amp;Add/Edit Tooltip Notes</source>
@@ -1390,7 +1390,7 @@ Continue?</translation>
     </message>
     <message>
       <source>Convert &amp;Update to ZArchive (.zar)...</source>
-      <translation type="unfinished">Convert &amp;Update to ZArchive (.zar)...</translation>
+      <translation>Converter &amp;Atualização para ZArchive (.zar)...</translation>
     </message>
     <message>
       <source>&amp;Extract from ZArchive (.zar)...</source>
@@ -1414,23 +1414,23 @@ Continue?</translation>
     </message>
     <message>
       <source>&amp;Copy Name</source>
-      <translation type="unfinished">&amp;Copy Name</translation>
+      <translation>&amp;Copiar Nome</translation>
     </message>
     <message>
       <source>&amp;Copy Serial</source>
-      <translation type="unfinished">&amp;Copy Serial</translation>
+      <translation>&amp;Copiar Serial</translation>
     </message>
     <message>
       <source>&amp;Delete...</source>
-      <translation type="unfinished">&amp;Delete...</translation>
+      <translation>&amp;Excluir...</translation>
     </message>
     <message>
       <source>&amp;Delete Game</source>
-      <translation type="unfinished">&amp;Delete Game</translation>
+      <translation>&amp;Excluir Jogo</translation>
     </message>
     <message>
       <source>&amp;Delete Update</source>
-      <translation type="unfinished">&amp;Delete Update</translation>
+      <translation>&amp;Excluir Atualização</translation>
     </message>
     <message>
       <source>Delete Game + &amp;Update</source>
@@ -1442,11 +1442,11 @@ Continue?</translation>
     </message>
     <message>
       <source>&amp;Delete DLC </source>
-      <translation type="unfinished">&amp;Delete DLC </translation>
+      <translation>&amp;Excluir DLC </translation>
     </message>
     <message>
       <source>&amp;Delete Trophy</source>
-      <translation type="unfinished">&amp;Delete Trophy</translation>
+      <translation>&amp;Excluir Troféu</translation>
     </message>
     <message>
       <source>&amp;Delete Shader Cache</source>
@@ -1458,11 +1458,11 @@ Continue?</translation>
     </message>
     <message>
       <source>&amp;Compatibility</source>
-      <translation type="unfinished">&amp;Compatibility</translation>
+      <translation>&amp;Compatibilidade</translation>
     </message>
     <message>
       <source>&amp;View Report</source>
-      <translation type="unfinished">&amp;View Report</translation>
+      <translation>&amp;Visualizar Relatório</translation>
     </message>
     <message>
       <source>&amp;Submit Report</source>
@@ -1478,7 +1478,7 @@ Continue?</translation>
     </message>
     <message>
       <source>No Report Available</source>
-      <translation type="unfinished">No Report Available</translation>
+      <translation>Nenhum Relatório Disponível</translation>
     </message>
     <message>
       <source>There is no compatibility report available for this game.</source>
@@ -1494,15 +1494,15 @@ Continue?</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Ok</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Informações</translation>
     </message>
     <message>
       <source>Edit Tooltip Notes</source>
-      <translation type="unfinished">Edit Tooltip Notes</translation>
+      <translation>Editar Observações do Balão de Ajuda</translation>
     </message>
   </context>
   <context>
@@ -4933,11 +4933,11 @@ A versão pode não funcionar corretamente ao ser iniciada.</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Nome</translation>
     </message>
     <message>
       <source>Type</source>
-      <translation type="unfinished">Type</translation>
+      <translation>Tipo</translation>
     </message>
     <message>
       <source>Select All</source>
@@ -4957,11 +4957,11 @@ A versão pode não funcionar corretamente ao ser iniciada.</translation>
     </message>
     <message>
       <source>Folder</source>
-      <translation type="unfinished">Folder</translation>
+      <translation>Pasta</translation>
     </message>
     <message>
       <source>File</source>
-      <translation type="unfinished">File</translation>
+      <translation>Arquivo</translation>
     </message>
     <message>
       <source>Loading...</source>
@@ -5005,7 +5005,7 @@ A versão pode não funcionar corretamente ao ser iniciada.</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Failed to extract files:
