@@ -181,7 +181,7 @@
     </message>
     <message>
       <source>Invalid Source</source>
-      <translation>Fonte Inválida</translation>
+      <translation>Origem Inválida</translation>
     </message>
     <message>
       <source>Selected repository does not support cheats.</source>
@@ -3159,7 +3159,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>PSF Error</source>
-      <translation>Erro PSF</translation>
+      <translation>Erro no PSF</translation>
     </message>
     <message>
       <source>Failed to load PSF file:
@@ -3464,7 +3464,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Home Path</source>
-      <translation>Caminho Pasta Inicial</translation>
+      <translation>Caminho da Pasta Raiz</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
