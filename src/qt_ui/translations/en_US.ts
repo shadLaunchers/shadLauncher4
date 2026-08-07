@@ -2486,10 +2486,6 @@ Replace the current list entirely, or append these entries to it (entries whose 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>shadLauncher4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Exit shadLauncher4</source>
         <translation type="unfinished"></translation>
     </message>
