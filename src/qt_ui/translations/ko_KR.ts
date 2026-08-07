@@ -2529,10 +2529,6 @@ Replace the current list entirely, or append these entries to it (entries whose 
       <translation type="unfinished">Prefer Game Data Icons</translation>
     </message>
     <message>
-      <source>shadLauncher4</source>
-      <translation type="unfinished">shadLauncher4</translation>
-    </message>
-    <message>
       <source>Exit shadLauncher4</source>
       <translation type="unfinished">Exit shadLauncher4</translation>
     </message>

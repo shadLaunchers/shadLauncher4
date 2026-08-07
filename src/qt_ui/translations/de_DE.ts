@@ -2530,10 +2530,6 @@ Soll die aktuelle Liste vollständig ersetzt werden oder sollen die Einträge nu
       <translation>Icons aus den Spieldaten bevorzugen</translation>
     </message>
     <message>
-      <source>shadLauncher4</source>
-      <translation>shadLauncher4</translation>
-    </message>
-    <message>
       <source>Exit shadLauncher4</source>
       <translation>Beende shadLauncher4</translation>
     </message>

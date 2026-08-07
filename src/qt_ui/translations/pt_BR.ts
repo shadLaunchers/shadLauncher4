@@ -2533,10 +2533,6 @@ Substituir a lista atual completamente ou adicionar estas entradas a ela (entrad
       <translation>Optar por Ícones de Dados do Jogo</translation>
     </message>
     <message>
-      <source>shadLauncher4</source>
-      <translation>shadLauncher4</translation>
-    </message>
-    <message>
       <source>Exit shadLauncher4</source>
       <translation>Sair do shadLauncher4</translation>
     </message>

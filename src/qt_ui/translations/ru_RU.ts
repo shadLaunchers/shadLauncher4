@@ -2539,10 +2539,6 @@ Replace the current list entirely, or append these entries to it (entries whose 
       <translation>Предпочтение иконкам игр</translation>
     </message>
     <message>
-      <source>shadLauncher4</source>
-      <translation>shadLauncher4</translation>
-    </message>
-    <message>
       <source>Exit shadLauncher4</source>
       <translation>Выйти из shadLauncher4</translation>
     </message>
