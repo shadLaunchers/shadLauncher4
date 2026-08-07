@@ -211,8 +211,6 @@ set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/host_overrides_dialog.h
           src/qt_ui/gui_settings.cpp
           src/qt_ui/gui_settings.h
-          src/qt_ui/persistent_settings.cpp
-          src/qt_ui/persistent_settings.h
           src/qt_ui/gui_application.cpp
           src/qt_ui/gui_application.h
           src/qt_ui/main_window.cpp

@@ -7,6 +7,7 @@
 #include <QMenuBar>
 #include <QPainter>
 #include <QPixmap>
+#include <QStatusBar>
 #include <QtConcurrent>
 #include <common/scm_rev.h>
 #include <common/string_util.h>
@@ -44,11 +45,9 @@
 
 MainWindow::MainWindow(std::shared_ptr<GUISettings> gui_settings,
                        std::shared_ptr<EmulatorSettingsImpl> emu_settings,
-                       std::shared_ptr<PersistentSettings> persistent_settings,
                        std::shared_ptr<IpcClient> ipc_client, QWidget* parent)
     : QMainWindow(parent), ui(new Ui::MainWindow), m_gui_settings(gui_settings),
-      m_emu_settings(std::move(emu_settings)), m_ipc_client(std::move(ipc_client)),
-      m_persistent_settings(std::move(persistent_settings)) {
+      m_emu_settings(std::move(emu_settings)), m_ipc_client(std::move(ipc_client)) {
 
     Q_INIT_RESOURCE(shadLauncher4);
     ui->setupUi(this);
@@ -207,6 +206,16 @@ void MainWindow::createConnects() {
         m_save_slider_pos = true;
         resizeIcons(idx);
     });
+    connect(m_game_list_frame, &GameListFrame::GameCountChanged, this,
+            [this](int visible_count, int total_count) {
+                if (!m_game_count_label) {
+                    return;
+                }
+                m_game_count_label->setText(
+                    visible_count == total_count
+                        ? tr("%n game(s)", "", total_count)
+                        : tr("%1 of %n game(s)", "", total_count).arg(visible_count));
+            });
     connect(m_game_list_frame, &GameListFrame::GameListFrameClosed, this, [this]() {
         if (ui->showGameListAct->isChecked()) {
             ui->showGameListAct->setChecked(false);
@@ -494,13 +503,14 @@ void MainWindow::createDockWindows() {
     m_mw = new QMainWindow();
     m_mw->setContextMenuPolicy(Qt::PreventContextMenu);
 
-    m_game_list_frame = new GameListFrame(m_gui_settings, m_emu_settings, m_persistent_settings,
-                                          m_ipc_client, m_mw);
+    m_game_list_frame = new GameListFrame(m_gui_settings, m_emu_settings, m_ipc_client, m_mw);
     m_game_list_frame->setObjectName("gamelist");
 
     m_mw->addDockWidget(Qt::LeftDockWidgetArea, m_game_list_frame);
     m_mw->setDockNestingEnabled(true);
     setCentralWidget(m_mw);
+    m_game_count_label = new QLabel(this);
+    statusBar()->addPermanentWidget(m_game_count_label);
 }
 
 void MainWindow::updateLanguageActions(const QStringList& language_codes,
@@ -1288,6 +1298,7 @@ void MainWindow::RunGame() {
 void MainWindow::onGameClosed() {
     EmulatorState::GetInstance()->SetGameRunning(false);
     is_paused = false;
+
     if (m_game_list_frame) {
         m_game_list_frame->Refresh(false);
     }

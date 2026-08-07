@@ -39,7 +39,6 @@
 #include "gui_settings.h"
 #include "localized.h"
 #include "npbind_dialog.h"
-#include "persistent_settings.h"
 #include "progress_dialog.h"
 #include "qt_utils.h"
 
@@ -65,9 +64,6 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         QString game_path;
         Common::FS::PathToQString(game_path, gameinfo->info.path);
 
-        // gameinfo->info.update_path is resolved at scan time and already
-        // accounts for the base game (or the update/patch itself) being a
-        // .zar archive rather than a plain folder.
         QString update_path;
         Common::FS::PathToQString(update_path, gameinfo->info.update_path);
 
@@ -127,18 +123,12 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                 const std::filesystem::path path_to_delete = Common::FS::PathFromQString(path);
                 std::error_code remove_ec;
                 if (std::filesystem::is_regular_file(path_to_delete, remove_ec)) {
-                    // A ZArchive-packed game/update is a single file, not a
-                    // directory; QDir::removeRecursively() would silently
-                    // do nothing for it.
                     std::filesystem::remove(path_to_delete, remove_ec);
                 } else {
                     QDir(path).removeRecursively();
                 }
             };
 
-            // Delete the update first: if it were interrupted partway, we'd
-            // rather be left with just the (still-launchable) base game
-            // than an orphaned update pointing at a deleted base.
             remove_path(update_path);
             remove_path(game_path);
 
@@ -251,8 +241,6 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                                 game_data.end());
                 frame->Refresh(false);
             } else if (type == GameListFrame::DeleteType::Update) {
-                // Only this one game's size (and its update_path) changed;
-                // update it in place rather than rescanning the drive.
                 gameinfo->info.update_path.clear();
                 gameinfo->info.size_on_disk = UINT64_MAX;
                 frame->Refresh(false);
@@ -260,9 +248,6 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         }
     };
 
-    // Packs an arbitrary folder (either a base game or its associated
-    // update/patch folder) into a .zar archive. Shared by
-    // convertToZArchiveHandler and convertUpdateToZArchiveHandler below.
     auto convertPathToZArchiveHandler =
         [frame](const std::filesystem::path& source_path, const QString& display_name,
                 const QString& dialog_title, const QString& extra_note,
@@ -385,6 +370,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                                        "not be fully deleted. You can remove it manually."));
                             }
                         }
+
                         if (on_success) {
                             on_success(output_path);
                         }
@@ -596,6 +582,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                                    "could not be deleted. You can remove it manually."));
                         }
                     }
+
                     game->info.path = output_path.string();
                     game->info.size_on_disk = UINT64_MAX;
                     frame->Refresh(false);
@@ -668,8 +655,6 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
             const s32 language_index = GUIApplication::getLanguageId();
             const std::string localized_changelog =
                 fmt::format("changeinfo_%02d.xml", language_index);
-            // update_path may itself be a .zar archive, so resolve through
-            // the game backend rather than concatenating a raw path.
             auto changelog_resolved = Core::FileSys::ResolveGameFilePath(
                 update_path, "sce_sys/changeinfo/" + localized_changelog);
             if (!changelog_resolved) {
@@ -718,6 +703,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         if (fs_path.empty() || !std::filesystem::exists(fs_path, ec) || ec) {
             return;
         }
+
         QString qpath;
         Common::FS::PathToQString(qpath, fs_path);
         QDesktopServices::openUrl(QUrl::fromLocalFile(qpath));
@@ -1106,9 +1092,10 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
     });
     connect(edit_notes, &QAction::triggered, frame, [frame, name, serial] {
         bool accepted;
-        // fetch old notes from persistent storage
-        const QString old_notes =
-            frame->m_persistent_settings->GetValue(GUI::Persistent::notes, serial, "").toString();
+        // fetch old notes from the game info database
+        const QString old_notes = frame->GetInfoCache()
+                                      ? frame->GetInfoCache()->GetNotes(serial.toStdString())
+                                      : QString();
 
         QInputDialog dlg(frame);
         dlg.setWindowTitle(tr("Edit Tooltip Notes"));
@@ -1122,10 +1109,11 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
 
             if (new_notes.isEmpty()) {
                 frame->m_notes.erase(serial);
-                frame->m_persistent_settings->RemoveValue(GUI::Persistent::notes, serial);
             } else {
                 frame->m_notes.insert_or_assign(serial, new_notes);
-                frame->m_persistent_settings->SetValue(GUI::Persistent::notes, serial, new_notes);
+            }
+            if (frame->GetInfoCache()) {
+                frame->GetInfoCache()->SetNotes(serial.toStdString(), new_notes);
             }
 
             frame->Refresh();

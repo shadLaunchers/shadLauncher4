@@ -18,7 +18,6 @@
 
 class EmulatorSettingsImpl;
 class GUISettings;
-class PersistentSettings;
 class GameListFrame;
 class IpcClient;
 
@@ -36,7 +35,6 @@ class MainWindow : public QMainWindow {
 public:
     MainWindow(std::shared_ptr<GUISettings> gui_settings,
                std::shared_ptr<EmulatorSettingsImpl> emu_settings,
-               std::shared_ptr<PersistentSettings> persistent_settings,
                std::shared_ptr<IpcClient> ipc_client, QWidget* parent = nullptr);
     ~MainWindow();
     bool init();
@@ -96,10 +94,10 @@ private:
     QHash<QAction*, QIcon> m_original_menu_icons;
     QLabel* m_toolbar_icon_color_label = nullptr;
     QLabel* m_thumbnail_icon_color_label = nullptr;
+    QLabel* m_game_count_label = nullptr;
 
     std::shared_ptr<GUISettings> m_gui_settings;
     std::shared_ptr<EmulatorSettingsImpl> m_emu_settings;
-    std::shared_ptr<PersistentSettings> m_persistent_settings;
     QMainWindow* m_mw = nullptr;
     GameListFrame* m_game_list_frame = nullptr;
     QActionGroup* m_icon_size_act_group = nullptr;

@@ -22,7 +22,6 @@
 #include "gui_application.h"
 #include "gui_settings.h"
 #include "main_window.h"
-#include "persistent_settings.h"
 #include "stylesheets.h"
 
 s32 GUIApplication::m_language_id =
@@ -44,7 +43,6 @@ bool GUIApplication::init(QString emulator_arg, QString game_arg, QStringList pa
     m_gui_settings = std::make_shared<GUISettings>();
     m_emu_settings = std::make_shared<EmulatorSettingsImpl>();
     m_emu_settings->Load();
-    m_persistent_settings = std::make_shared<PersistentSettings>();
     m_ipc_client = std::make_shared<IpcClient>();
     m_emu_state = std::make_shared<EmulatorState>();
     EmulatorState::SetInstance(m_emu_state);
@@ -54,8 +52,7 @@ bool GUIApplication::init(QString emulator_arg, QString game_arg, QStringList pa
     m_key_manager->LoadFromFile();          // load keys
     UserSettings.Load();
 
-    m_main_window = new MainWindow(m_gui_settings, m_emu_settings, m_persistent_settings,
-                                   m_ipc_client, nullptr);
+    m_main_window = new MainWindow(m_gui_settings, m_emu_settings, m_ipc_client, nullptr);
 
     const auto codes = getAvailableLanguageCodes();
     const auto language = m_gui_settings->GetValue(GUI::localization_language).toString();

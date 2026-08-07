@@ -17,8 +17,10 @@
 #include "game_list_table.h"
 #include "gui_settings.h"
 #include "localized.h"
-#include "persistent_settings.h"
 #include "qt_utils.h"
+
+const QString last_played_date_format = "dd/MM/yyyy";
+const QString last_played_date_with_time_of_day_format = "dd/MM/yyyy HH:mm";
 
 s64 ComputeSizeFingerprint(const std::string& game_path) {
     namespace fs = std::filesystem;
@@ -56,10 +58,8 @@ s64 ComputeSizeFingerprint(const std::string& game_path) {
     return fingerprint;
 }
 
-GameListTable::GameListTable(GameListFrame* frame, std::shared_ptr<GUISettings> gui_settings,
-                             std::shared_ptr<PersistentSettings> persistent_settings)
-    : GameList(), m_game_list_frame(frame), m_gui_settings(std::move(gui_settings)),
-      m_persistent_settings(std::move(persistent_settings)) {
+GameListTable::GameListTable(GameListFrame* frame, std::shared_ptr<GUISettings> gui_settings)
+    : GameList(), m_game_list_frame(frame), m_gui_settings(std::move(gui_settings)) {
     m_is_list_layout = true;
     SetInfoCache(m_game_list_frame ? m_game_list_frame->GetInfoCache() : nullptr);
 
@@ -457,13 +457,13 @@ void GameListTable::Populate(const std::vector<game_info>& game_data,
                                                    Qt::UserRole, QVariant(app_value));
         setItem(row, static_cast<int>(GUI::GameListColumns::version), app_item);
 
-        setItem(row, static_cast<int>(GUI::GameListColumns::last_play),
-                new CustomTableWidgetItem(
-                    locale.toString(last_played,
-                                    last_played >= QDateTime::currentDateTime().addDays(-7)
-                                        ? GUI::Persistent::last_played_date_with_time_of_day_format
-                                        : GUI::Persistent::last_played_date_format_new),
-                    Qt::UserRole, last_played));
+        setItem(
+            row, static_cast<int>(GUI::GameListColumns::last_play),
+            new CustomTableWidgetItem(
+                locale.toString(last_played, last_played >= QDateTime::currentDateTime().addDays(-7)
+                                                 ? last_played_date_with_time_of_day_format
+                                                 : last_played_date_format),
+                Qt::UserRole, last_played));
         setItem(row, static_cast<int>(GUI::GameListColumns::play_time),
                 new CustomTableWidgetItem(
                     elapsed_ms == 0 ? tr("Never played") : localized.getVerboseTimeByMs(elapsed_ms),

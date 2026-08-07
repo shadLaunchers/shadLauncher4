@@ -6,7 +6,6 @@
 
 #include "game_list.h"
 
-class PersistentSettings;
 class GameListFrame;
 class QTimer;
 
@@ -14,8 +13,7 @@ class GameListTable : public GameList {
     Q_OBJECT
 
 public:
-    GameListTable(GameListFrame* frame, std::shared_ptr<GUISettings> gui_settings,
-                  std::shared_ptr<PersistentSettings> persistent_settings);
+    GameListTable(GameListFrame* frame, std::shared_ptr<GUISettings> gui_settings);
 
     /** Restores the initial layout of the table */
     void restoreLayout(const QByteArray& state);
@@ -48,7 +46,6 @@ Q_SIGNALS:
 
 private:
     GameListFrame* m_game_list_frame{};
-    std::shared_ptr<PersistentSettings> m_persistent_settings;
     std::shared_ptr<GUISettings> m_gui_settings;
     QTimer* m_resort_timer = nullptr;
 

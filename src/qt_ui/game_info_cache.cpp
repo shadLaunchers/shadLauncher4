@@ -84,6 +84,13 @@ public:
                       setup.lastError().text().toStdString());
             return;
         }
+        if (!setup.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS game_notes ("
+                                       "serial TEXT PRIMARY KEY,"
+                                       "notes TEXT NOT NULL)"))) {
+            LOG_ERROR(Frontend, "GameInfoCache: failed to create notes schema: {}",
+                      setup.lastError().text().toStdString());
+            return;
+        }
         LOG_INFO(Frontend, "GameInfoCache: using '{}'", path_str.toStdString());
         m_valid = true;
     }
@@ -295,6 +302,45 @@ void GameInfoCache::PutSize(const std::string& game_path, u64 size_on_disk, s64 
 
     if (!query.exec()) {
         LOG_ERROR(Frontend, "GameInfoCache: failed to cache size for '{}': {}", game_path,
+                  query.lastError().text().toStdString());
+    }
+}
+
+QString GameInfoCache::GetNotes(const std::string& serial) {
+    Connection& conn = ThreadConnection();
+    if (!conn.IsValid()) {
+        return QString();
+    }
+
+    QSqlQuery query(conn.Db());
+    query.prepare(QStringLiteral("SELECT notes FROM game_notes WHERE serial = ?"));
+    query.addBindValue(QString::fromStdString(serial));
+
+    if (!query.exec() || !query.next()) {
+        return QString();
+    }
+    return query.value(0).toString();
+}
+
+void GameInfoCache::SetNotes(const std::string& serial, const QString& notes) {
+    Connection& conn = ThreadConnection();
+    if (!conn.IsValid()) {
+        return;
+    }
+
+    QSqlQuery query(conn.Db());
+    if (notes.isEmpty()) {
+        query.prepare(QStringLiteral("DELETE FROM game_notes WHERE serial = ?"));
+        query.addBindValue(QString::fromStdString(serial));
+    } else {
+        query.prepare(QStringLiteral("INSERT INTO game_notes (serial, notes) VALUES (?, ?)"
+                                     " ON CONFLICT(serial) DO UPDATE SET notes=excluded.notes"));
+        query.addBindValue(QString::fromStdString(serial));
+        query.addBindValue(notes);
+    }
+
+    if (!query.exec()) {
+        LOG_ERROR(Frontend, "GameInfoCache: failed to save notes for '{}': {}", serial,
                   query.lastError().text().toStdString());
     }
 }

@@ -44,7 +44,6 @@
 #include "gui_settings.h"
 #include "localized.h"
 #include "npbind_dialog.h"
-#include "persistent_settings.h"
 #include "progress_dialog.h"
 #include "qt_utils.h"
 
@@ -72,11 +71,9 @@
 
 GameListFrame::GameListFrame(std::shared_ptr<GUISettings> gui_settings,
                              std::shared_ptr<EmulatorSettingsImpl> emu_settings,
-                             std::shared_ptr<PersistentSettings> persistent_settings,
                              std::shared_ptr<IpcClient> ipc_client, QWidget* parent)
     : CustomDockWidget(tr("Game List"), parent), m_gui_settings(std::move(gui_settings)),
-      m_emu_settings(std::move(emu_settings)), m_ipc_client(std::move(ipc_client)),
-      m_persistent_settings(std::move(persistent_settings)) {
+      m_emu_settings(std::move(emu_settings)), m_ipc_client(std::move(ipc_client)) {
 
     m_icon_size = GUI::game_list_icon_size_min; // ensure a valid size
     m_is_list_layout = m_gui_settings->GetValue(GUI::game_list_listMode).toBool();
@@ -109,7 +106,7 @@ GameListFrame::GameListFrame(std::shared_ptr<GUISettings> gui_settings,
     m_game_grid->installEventFilter(this);
     m_game_grid->ScrollArea()->verticalScrollBar()->installEventFilter(this);
 
-    m_game_list = new GameListTable(this, m_gui_settings, m_persistent_settings);
+    m_game_list = new GameListTable(this, m_gui_settings);
     m_game_list->installEventFilter(this);
     m_game_list->verticalScrollBar()->installEventFilter(this);
 
@@ -857,17 +854,8 @@ void GameListFrame::OnParsingFinished() {
 
         m_serials.insert(serial);
 
-        if (QString note =
-                m_persistent_settings->GetValue(GUI::Persistent::notes, serial, "").toString();
-            !note.isEmpty()) {
+        if (QString note = m_info_cache->GetNotes(game.info.serial); !note.isEmpty()) {
             m_notes.insert_or_assign(serial, std::move(note));
-        }
-
-        if (QString title = m_persistent_settings->GetValue(GUI::Persistent::titles, serial, "")
-                                .toString()
-                                .simplified();
-            !title.isEmpty()) {
-            m_titles.insert_or_assign(serial, std::move(title));
         }
 
         m_games_mutex.unlock();
@@ -1283,6 +1271,7 @@ void GameListFrame::PopulateFromCacheInstantly() {
 
 void GameListFrame::LoadPlayTimeData() {
     m_play_times.clear();
+
     const auto file_path = Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "play_time.txt";
     std::ifstream in(file_path);
     if (!in) {
@@ -1447,6 +1436,9 @@ void GameListFrame::Refresh(const bool from_drive,
         m_game_grid->Populate(matching_apps, m_notes, m_titles, selected_item);
         RepaintIcons();
     }
+
+    Q_EMIT GameCountChanged(static_cast<int>(matching_apps.size()),
+                            static_cast<int>(m_game_data.size()));
 }
 
 game_info GameListFrame::GetGameInfoByMode(const QTableWidgetItem* item) const {

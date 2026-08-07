@@ -31,7 +31,6 @@ class GameListTable;
 class GameListGrid;
 class GUISettings;
 class EmulatorSettingsImpl;
-class PersistentSettings;
 class ProgressDialog;
 class IpcClient;
 
@@ -43,7 +42,6 @@ class GameListFrame : public CustomDockWidget {
 public:
     explicit GameListFrame(std::shared_ptr<GUISettings> gui_settings,
                            std::shared_ptr<EmulatorSettingsImpl> emu_settings,
-                           std::shared_ptr<PersistentSettings> persistent_settings,
                            std::shared_ptr<IpcClient> ipc_client, QWidget* parent = nullptr);
     ~GameListFrame();
 
@@ -114,6 +112,7 @@ Q_SIGNALS:
     void Refreshed();
     void NotifyGameSelection(const game_info& game);
     void RequestBoot(const game_info& game, QStringList args = {});
+    void GameCountChanged(int visible_count, int total_count);
 
 protected:
     /** Override inherited method from Qt to allow signalling when close happened.*/
@@ -136,7 +135,6 @@ private:
     // Settings
     std::shared_ptr<GUISettings> m_gui_settings;
     std::shared_ptr<EmulatorSettingsImpl> m_emu_settings;
-    std::shared_ptr<PersistentSettings> m_persistent_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
     std::unordered_map<std::string, PlayTimeEntry> m_play_times;
     // Objects

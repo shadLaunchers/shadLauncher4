@@ -41,6 +41,9 @@ public:
     void Clear();
     void ClearGame(const std::string& game_path);
 
+    QString GetNotes(const std::string& serial);
+    void SetNotes(const std::string& serial, const QString& notes); // empty notes removes the row
+
     // Returns one GameInfo per distinct cached serial (deduped, and skipping DLC and
     // -UPDATE/-patch sub-folders so update/patch directories - which share their base game's
     // serial - don't show up as separate rows). Meant only for showing a last-known list

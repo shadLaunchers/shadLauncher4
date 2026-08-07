@@ -11,7 +11,6 @@
 
 class EmulatorSettingsImpl;
 class GUISettings;
-class PersistentSettings;
 class MainWindow;
 class IpcClient;
 class EmulatorState;
@@ -40,7 +39,6 @@ private:
     std::shared_ptr<EmulatorSettingsImpl> m_emu_settings;
     std::shared_ptr<EmulatorState> m_emu_state;
     std::shared_ptr<GUISettings> m_gui_settings;
-    std::shared_ptr<PersistentSettings> m_persistent_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
     QString m_default_style;
     QTranslator m_translator;
