@@ -2533,10 +2533,6 @@ Replace the current list entirely, or append these entries to it (entries whose 
       <translation>Preferir Ícones do Jogo</translation>
     </message>
     <message>
-      <source>shadLauncher4</source>
-      <translation type="unfinished">shadLauncher4</translation>
-    </message>
-    <message>
       <source>Exit shadLauncher4</source>
       <translation>Sair do shadLauncher4</translation>
     </message>
