@@ -7,43 +7,43 @@
     <name>AboutDialog</name>
     <message>
       <source>About shadLauncher4</source>
-      <translation type="unfinished">About shadLauncher4</translation>
+      <translation>Über shadLauncher4</translation>
     </message>
     <message>
       <source>Release</source>
-      <translation type="unfinished">Release</translation>
+      <translation>Veröffentlichung</translation>
     </message>
     <message>
       <source>Development build</source>
-      <translation type="unfinished">Development build</translation>
+      <translation>Entwicklerversion</translation>
     </message>
     <message>
       <source>&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</source>
-      <translation type="unfinished">&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</translation>
+      <translation>&lt;b&gt;Version %1&lt;/b&gt; &amp;nbsp;&amp;middot;&amp;nbsp; %2</translation>
     </message>
     <message>
       <source>Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</source>
-      <translation type="unfinished">Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; branch %2&lt;br&gt;Built %3</translation>
+      <translation>Commit %1 &amp;nbsp;&amp;middot;&amp;nbsp; Branch %2&lt;br&gt;Built %3</translation>
     </message>
     <message>
       <source>A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</source>
-      <translation type="unfinished">A graphical launcher for the shadPS4 PlayStation 4 emulator. Browse, organize, and start your game library, manage emulator versions, and configure settings from one place.</translation>
+      <translation>Ein grafischer Launcher für den shadPS4 PlayStation 4 Emulator. Durchsuchen, organisieren und starten von Spielen aus Ihrer Bibliothek, verwalten von Emulator-Versionen und konfigurieren von Einstellungen an einem Ort.</translation>
     </message>
     <message>
       <source>&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Report an issue&lt;/a&gt;</translation>
+      <translation>&lt;a href=&quot;%1&quot;&gt;GitHub repository&lt;/a&gt; &amp;nbsp;&amp;middot;&amp;nbsp; &lt;a href=&quot;%1/issues&quot;&gt;Ein Problem melden&lt;/a&gt;</translation>
     </message>
     <message>
       <source>Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</source>
-      <translation type="unfinished">Powered by the &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Licensed under the GNU General Public License v2.0 or later.</translation>
+      <translation>Powered by &lt;a href=&quot;https://github.com/shadps4-emu/shadPS4&quot;&gt;shadPS4&lt;/a&gt; emulator.&lt;br&gt;Lizenziert unter der GNU General Public License v2.0 oder höher.</translation>
     </message>
     <message>
       <source>Copy Build Info</source>
-      <translation type="unfinished">Copy Build Info</translation>
+      <translation>Build-Info kopieren</translation>
     </message>
     <message>
       <source>Copied!</source>
-      <translation type="unfinished">Copied!</translation>
+      <translation>Kopiert!</translation>
     </message>
   </context>
   <context>
@@ -653,7 +653,7 @@
     </message>
     <message>
       <source>Cannot bind axis values more than once</source>
-      <translation type="unfinished">Cannot bind axis values more than once</translation>
+      <translation>Achsenwerte können nicht mehr als einmal gebunden werden</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
@@ -1061,181 +1061,181 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     <name>GameListContextMenu</name>
     <message>
       <source>Game</source>
-      <translation type="unfinished">Game</translation>
+      <translation>Spiel</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Fehler</translation>
     </message>
     <message>
       <source>This game has no update to delete!</source>
-      <translation type="unfinished">This game has no update to delete!</translation>
+      <translation>Dieses Spiel hat keine Updates zum Löschen!</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Update</translation>
     </message>
     <message>
       <source>Delete Game + Update</source>
-      <translation type="unfinished">Delete Game + Update</translation>
+      <translation>Spiel + Update löschen</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s game and update/patch directories? This cannot be undone.</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s game and update/patch directories? This cannot be undone.</translation>
+      <translation>Sind Sie sicher, dass Sie %1&apos;s Spiel und Update/Patch Verzeichnisse löschen möchten? Dies kann nicht rückgängig gemacht werden.</translation>
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation type="unfinished">This game has no DLC to delete!</translation>
+      <translation>Dieses Spiel hat keine DLCs zum Löschen!</translation>
     </message>
     <message>
       <source>DLC</source>
-      <translation type="unfinished">DLC</translation>
+      <translation>DLC</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
-      <translation type="unfinished">This game has no save data to delete!</translation>
+      <translation>Dieses Spiel hat keine Speicherdaten zum Löschen!</translation>
     </message>
     <message>
       <source>Save Data</source>
-      <translation type="unfinished">Save Data</translation>
+      <translation>Speicherdaten</translation>
     </message>
     <message>
       <source>This game has no Shader Cache to delete!</source>
-      <translation type="unfinished">This game has no Shader Cache to delete!</translation>
+      <translation>Dieses Spiel hat keinen Shader Cache zum Löschen!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Shader Cache</translation>
     </message>
     <message>
       <source>Shader cache deleted successfully.</source>
-      <translation type="unfinished">Shader cache deleted successfully.</translation>
+      <translation>Shader Cache erfolgreich gelöscht.</translation>
     </message>
     <message>
       <source>Clear Metadata Cache</source>
-      <translation type="unfinished">Clear Metadata Cache</translation>
+      <translation>Metadaten-Cache leeren</translation>
     </message>
     <message>
       <source>Clear the cached name/serial/icon/size info for %1?
 
 It will be re-read from disk on the next refresh.</source>
-      <translation type="unfinished">Clear the cached name/serial/icon/size info for %1?
+      <translation>Lösche die zwischengespeicherten Daten Name/Seriennummer/Icon/Größe für %1?
 
-It will be re-read from disk on the next refresh.</translation>
+Die werden bei der nächsten Aktualisierung von dem Datenträger neu gelesen.</translation>
     </message>
     <message>
       <source>Delete %1</source>
-      <translation type="unfinished">Delete %1</translation>
+      <translation>Lösche %1</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s %2 directory?</translation>
+      <translation>Sind Sie sicher, dass Sie %1 %2 Verzeichnis löschen möchten?</translation>
     </message>
     <message>
       <source>This is already packed as a ZArchive.</source>
-      <translation type="unfinished">This is already packed as a ZArchive.</translation>
+      <translation>Das ist bereits als ZArchiv gepackt.</translation>
     </message>
     <message>
       <source>This folder could not be found on disk.</source>
-      <translation type="unfinished">This folder could not be found on disk.</translation>
+      <translation>Dieser Ordner konnte nicht auf dem Datenträger gefunden werden.</translation>
     </message>
     <message>
       <source>Convert %1 to ZArchive</source>
-      <translation type="unfinished">Convert %1 to ZArchive</translation>
+      <translation>%1 in ZArchiv konvertieren</translation>
     </message>
     <message>
       <source>ZArchive Files (*.zar)</source>
-      <translation type="unfinished">ZArchive Files (*.zar)</translation>
+      <translation>ZArchiv-Dateien (*.zar)</translation>
     </message>
     <message>
       <source>%1 already exists. Overwrite it?</source>
-      <translation type="unfinished">%1 already exists. Overwrite it?</translation>
+      <translation>%1 existiert bereits. Überschreiben?</translation>
     </message>
     <message>
       <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
 
 The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
-      <translation type="unfinished">This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+      <translation>Dies wird &quot;%1&quot; in ein einzelnes schreibgeschütztes .zar-Archiv packen. Abhängig von der Größe kann dies eine Weile dauern und das Archiv benötigt vorübergehend so viel freien Speicherplatz wie das Original.
 
-The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</translation>
+Der Originalordner bleibt unberührt, bis die Konvertierung erfolgreich ist. Sie werden danach gefragt, ob Sie ihn löschen wollen.</translation>
     </message>
     <message>
       <source>
 
 Continue?</source>
-      <translation type="unfinished">
+      <translation>
 
-Continue?</translation>
+Fortfahren?</translation>
     </message>
     <message>
       <source>Packing %1...</source>
-      <translation type="unfinished">Packing %1...</translation>
+      <translation>Verpacke %1...</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Abbrechen</translation>
     </message>
     <message>
       <source>Failed to convert to ZArchive:
 %1</source>
-      <translation type="unfinished">Failed to convert to ZArchive:
+      <translation>Fehler beim Konvertieren ins ZArchiv:
 %1</translation>
     </message>
     <message>
       <source>Conversion finished. Delete the original folder now to free up disk space?
 
 %1</source>
-      <translation type="unfinished">Conversion finished. Delete the original folder now to free up disk space?
+      <translation>Konvertierung abgeschlossen. Soll der ursprüngliche Ordner gelöscht werden, um Speicherplatz freizugeben?
 
 %1</translation>
     </message>
     <message>
       <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
-      <translation type="unfinished">The archive was created, but the original folder could not be fully deleted. You can remove it manually.</translation>
+      <translation>Das Archiv wurde erstellt, aber der ursprüngliche Ordner konnte nicht vollständig gelöscht werden. Es kann manuell entfernt werden.</translation>
     </message>
     <message>
       <source>Packing: %1</source>
-      <translation type="unfinished">Packing: %1</translation>
+      <translation>Packe: %1</translation>
     </message>
     <message>
       <source>
 
 This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
-      <translation type="unfinished">
+      <translation>
 
-This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</translation>
+Dieses Spiel hat einen separaten Update/Patch-Ordner. Nur das Basisspiel wird archiviert; der Update/Patch-Ordner wird nicht enthalten sein und bleibt unverändert. Wähle &quot;Update in ZArchiv konvertieren&quot; separat aus, wenn das Update auch archiviert werden soll.</translation>
     </message>
     <message>
       <source>Convert to ZArchive</source>
-      <translation type="unfinished">Convert to ZArchive</translation>
+      <translation>In ZArchiv konvertieren</translation>
     </message>
     <message>
       <source>Convert Update to ZArchive</source>
-      <translation type="unfinished">Convert Update to ZArchive</translation>
+      <translation>Update in ZArchiv konvertieren</translation>
     </message>
     <message>
       <source>This game has no separate update/patch folder to archive.</source>
-      <translation type="unfinished">This game has no separate update/patch folder to archive.</translation>
+      <translation>Dieses Spiel hat keinen separaten Update/Patch Ordner zum Archivieren.</translation>
     </message>
     <message>
       <source>%1 Update</source>
-      <translation type="unfinished">%1 Update</translation>
+      <translation>%1 Update</translation>
     </message>
     <message>
       <source>Convert from ZArchive</source>
-      <translation type="unfinished">Convert from ZArchive</translation>
+      <translation>Aus ZArchiv konvertieren</translation>
     </message>
     <message>
       <source>This game is not packed as a ZArchive.</source>
-      <translation type="unfinished">This game is not packed as a ZArchive.</translation>
+      <translation>Dieses Spiel ist nicht als ZArchiv gepackt.</translation>
     </message>
     <message>
       <source>Extract %1 to Folder</source>
-      <translation type="unfinished">Extract %1 to Folder</translation>
+      <translation>Entpacken %1 in Ordner</translation>
     </message>
     <message>
       <source>The destination folder &quot;%1&quot; already exists and is not empty.</source>
-      <translation type="unfinished">The destination folder &quot;%1&quot; already exists and is not empty.</translation>
+      <translation>Der Zielordner &quot;%1&quot; existiert bereits und ist nicht leer.</translation>
     </message>
     <message>
       <source>This will extract &quot;%1&quot; into a regular folder. Depending on the game&apos;s size this can take a while, and the folder will need as much free disk space as the game itself.
@@ -1243,41 +1243,39 @@ This game has a separate update/patch folder. Only the base game will be archive
 The original .zar archive is left untouched until extraction succeeds, you&apos;ll be asked afterward whether to delete it.
 
 Continue?</source>
-      <translation type="unfinished">This will extract &quot;%1&quot; into a regular folder. Depending on the game&apos;s size this can take a while, and the folder will need as much free disk space as the game itself.
+      <translation>Dies wird &quot;%1&quot; in einen regulären Ordner extrahieren. Abhängig von der Größe kann dies eine Weile dauern und der Ordner benötigt vorübergehend so viel freien Speicherplatz wie das Spiel selbst.
 
-The original .zar archive is left untouched until extraction succeeds, you&apos;ll be asked afterward whether to delete it.
-
-Continue?</translation>
+Das ursprüngliche .zar-Archiv bleibt unberührt, bis die Extrahierung erfolgreich ist. Sie werden danach gefragt, ob Sie das löschen wollen.</translation>
     </message>
     <message>
       <source>Extracting %1...</source>
-      <translation type="unfinished">Extracting %1...</translation>
+      <translation>Extrahiere %1...</translation>
     </message>
     <message>
       <source>Failed to extract game from ZArchive:
 %1</source>
-      <translation type="unfinished">Failed to extract game from ZArchive:
+      <translation>Fehler beim Extrahieren des Spiels aus ZArchive:
 %1</translation>
     </message>
     <message>
       <source>Extraction finished. Delete the original .zar archive now to free up disk space?
 
 %1</source>
-      <translation type="unfinished">Extraction finished. Delete the original .zar archive now to free up disk space?
+      <translation>Extrahierung abgeschlossen. Soll das ursprüngliche .zar-Archiv gelöscht werden, um Speicherplatz freizugeben?
 
 %1</translation>
     </message>
     <message>
       <source>The game was extracted, but the original .zar archive could not be deleted. You can remove it manually.</source>
-      <translation type="unfinished">The game was extracted, but the original .zar archive could not be deleted. You can remove it manually.</translation>
+      <translation>Das Spiel wurde extrahiert, aber das ursprüngliche .zar-Archiv konnte nicht gelöscht werden. Es kann manuell entfernt werden.</translation>
     </message>
     <message>
       <source>Extracting: %1</source>
-      <translation type="unfinished">Extracting: %1</translation>
+      <translation>Extrahiere: %1</translation>
     </message>
     <message>
       <source>&amp;Launch game</source>
-      <translation type="unfinished">&amp;Launch game</translation>
+      <translation>&amp;Spiel starten</translation>
     </message>
     <message>
       <source>&amp;Launch game with current settings</source>
@@ -1301,175 +1299,175 @@ Continue?</translation>
     </message>
     <message>
       <source>&amp;View Changelog</source>
-      <translation type="unfinished">&amp;View Changelog</translation>
+      <translation>&amp;Changelog anzeigen</translation>
     </message>
     <message>
       <source>&amp;Open Folder</source>
-      <translation type="unfinished">&amp;Open Folder</translation>
+      <translation>&amp;Ordner öffnen</translation>
     </message>
     <message>
       <source>&amp;Open Game Folder</source>
-      <translation type="unfinished">&amp;Open Game Folder</translation>
+      <translation>&amp;Spielordner öffnen</translation>
     </message>
     <message>
       <source>&amp;Open Update Folder</source>
-      <translation type="unfinished">&amp;Open Update Folder</translation>
+      <translation>&amp;Updateordner öffnen</translation>
     </message>
     <message>
       <source>&amp;Open Log Folder</source>
-      <translation type="unfinished">&amp;Open Log Folder</translation>
+      <translation>&amp;Protokollordner öffnen</translation>
     </message>
     <message>
       <source>Log Not Found</source>
-      <translation type="unfinished">Log Not Found</translation>
+      <translation>Protokoll nicht gefunden</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
-      <translation type="unfinished">No log file found for this game!</translation>
+      <translation>Kein Protokoll für dieses Spiel gefunden!</translation>
     </message>
     <message>
       <source>Open Log Folder</source>
-      <translation type="unfinished">Open Log Folder</translation>
+      <translation>Protokollordner öffnen</translation>
     </message>
     <message>
       <source>&amp;SFO viewer</source>
-      <translation type="unfinished">&amp;SFO viewer</translation>
+      <translation>&amp;SFO anzeigen</translation>
     </message>
     <message>
       <source>&amp;Create Desktop Shortcut</source>
-      <translation type="unfinished">&amp;Create Desktop Shortcut</translation>
+      <translation>&amp;Desktop-Verknüpfung erstellen</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Keine Version ausgewählt</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Wähle zuerst eine Version aus</translation>
     </message>
     <message>
       <source>&amp;npbind.dat viewer</source>
-      <translation type="unfinished">&amp;npbind.dat viewer</translation>
+      <translation>&amp;npbind.dat anzeigen</translation>
     </message>
     <message>
       <source>&amp;Cheats &amp; Patches</source>
-      <translation type="unfinished">&amp;Cheats &amp; Patches</translation>
+      <translation>&amp;Cheats &amp; Patches</translation>
     </message>
     <message>
       <source>&amp;Trophy Viewer</source>
-      <translation type="unfinished">&amp;Trophy Viewer</translation>
+      <translation>&amp;Trophäenansicht</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</translation>
+      <translation>Ein Trophäen-Schlüssel wird benötigt, um die Trophäenansicht verwenden zu können. Dies kann durch Klicken auf "Dienstprogramme" - "Kryptografie Schlüsselverwaltung" eingetragen werden</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Trophäenansicht</translation>
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
-      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
+      <translation>Keine Spiele gefunden. Bitte füge zuerst deine Spiele zu deiner Bibliothek hinzu.</translation>
     </message>
     <message>
       <source>&amp;Manage Game</source>
-      <translation type="unfinished">&amp;Manage Game</translation>
+      <translation>&amp;Spiel verwalten</translation>
     </message>
     <message>
       <source>&amp;Hide From Game List</source>
-      <translation type="unfinished">&amp;Hide From Game List</translation>
+      <translation>&amp;Von der Spieleliste verstecken</translation>
     </message>
     <message>
       <source>&amp;Add/Edit Tooltip Notes</source>
-      <translation type="unfinished">&amp;Add/Edit Tooltip Notes</translation>
+      <translation>&amp;Tooltip Notizen hinzufügen/bearbeiten</translation>
     </message>
     <message>
       <source>&amp;Convert to ZArchive (.zar)...</source>
-      <translation type="unfinished">&amp;Convert to ZArchive (.zar)...</translation>
+      <translation>&amp;Ins ZArchiv konvertieren...</translation>
     </message>
     <message>
       <source>Convert &amp;Update to ZArchive (.zar)...</source>
-      <translation type="unfinished">Convert &amp;Update to ZArchive (.zar)...</translation>
+      <translation>&amp;Update ins ZArchiv (.zar) konvertieren...</translation>
     </message>
     <message>
       <source>&amp;Extract from ZArchive (.zar)...</source>
-      <translation type="unfinished">&amp;Extract from ZArchive (.zar)...</translation>
+      <translation>&amp;Aus ZArchiv (.zar) extrahieren...</translation>
     </message>
     <message>
       <source>&amp;Browse ZArchive Contents...</source>
-      <translation type="unfinished">&amp;Browse ZArchive Contents...</translation>
+      <translation>&amp;ZArchiv-Inhalte durchsuchen...</translation>
     </message>
     <message>
       <source>Browse &amp;Update ZArchive Contents...</source>
-      <translation type="unfinished">Browse &amp;Update ZArchive Contents...</translation>
+      <translation>&amp;Update-ZArchiv-Inhalte durchsuchen…</translation>
     </message>
     <message>
       <source>&amp;Copy Info</source>
-      <translation type="unfinished">&amp;Copy Info</translation>
+      <translation>&amp;Info kopieren</translation>
     </message>
     <message>
       <source>&amp;Copy Name + Serial</source>
-      <translation type="unfinished">&amp;Copy Name + Serial</translation>
+      <translation>&amp;Name + Seriennummer kopieren</translation>
     </message>
     <message>
       <source>&amp;Copy Name</source>
-      <translation type="unfinished">&amp;Copy Name</translation>
+      <translation>&amp;Name kopieren</translation>
     </message>
     <message>
       <source>&amp;Copy Serial</source>
-      <translation type="unfinished">&amp;Copy Serial</translation>
+      <translation>&amp;Seriennummer kopieren</translation>
     </message>
     <message>
       <source>&amp;Delete...</source>
-      <translation type="unfinished">&amp;Delete...</translation>
+      <translation>&amp;Löschen...</translation>
     </message>
     <message>
       <source>&amp;Delete Game</source>
-      <translation type="unfinished">&amp;Delete Game</translation>
+      <translation>&amp;Spiel löschen</translation>
     </message>
     <message>
       <source>&amp;Delete Update</source>
-      <translation type="unfinished">&amp;Delete Update</translation>
+      <translation>&amp;Update löschen</translation>
     </message>
     <message>
       <source>Delete Game + &amp;Update</source>
-      <translation type="unfinished">Delete Game + &amp;Update</translation>
+      <translation>Spiel + &amp;Update löschen</translation>
     </message>
     <message>
       <source>&amp;Delete Save Data</source>
-      <translation type="unfinished">&amp;Delete Save Data</translation>
+      <translation>&amp;Speicherdaten löschen</translation>
     </message>
     <message>
       <source>&amp;Delete DLC </source>
-      <translation type="unfinished">&amp;Delete DLC </translation>
+      <translation>&amp;DLC löschen </translation>
     </message>
     <message>
       <source>&amp;Delete Trophy</source>
-      <translation type="unfinished">&amp;Delete Trophy</translation>
+      <translation>&amp;Trophäe löschen</translation>
     </message>
     <message>
       <source>&amp;Delete Shader Cache</source>
-      <translation type="unfinished">&amp;Delete Shader Cache</translation>
+      <translation>&amp;Shader Cache löschen</translation>
     </message>
     <message>
       <source>Clear &amp;Metadata Cache</source>
-      <translation type="unfinished">Clear &amp;Metadata Cache</translation>
+      <translation>&amp;Metadaten-Cache leeren</translation>
     </message>
     <message>
       <source>&amp;Compatibility</source>
-      <translation type="unfinished">&amp;Compatibility</translation>
+      <translation>&amp;Kompatibilität</translation>
     </message>
     <message>
       <source>&amp;View Report</source>
-      <translation type="unfinished">&amp;View Report</translation>
+      <translation>&amp;Bericht ansehen</translation>
     </message>
     <message>
       <source>&amp;Submit Report</source>
-      <translation type="unfinished">&amp;Submit Report</translation>
+      <translation>&amp;Bericht einreichen</translation>
     </message>
     <message>
       <source>&amp;Update Database</source>
-      <translation type="unfinished">&amp;Update Database</translation>
+      <translation>&amp;Datenbank updaten</translation>
     </message>
     <message>
       <source>&amp;Remove Custom Configuration</source>
@@ -1477,31 +1475,31 @@ Continue?</translation>
     </message>
     <message>
       <source>No Report Available</source>
-      <translation type="unfinished">No Report Available</translation>
+      <translation>Kein Bericht verfügbar</translation>
     </message>
     <message>
       <source>There is no compatibility report available for this game.</source>
-      <translation type="unfinished">There is no compatibility report available for this game.</translation>
+      <translation>Es ist kein Kompatibilitätsbericht verfügbar für dieses Spiel.</translation>
     </message>
     <message>
       <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
-      <translation type="unfinished">The log is invalid, it either doesn&apos;t exist or log filters were used.</translation>
+      <translation>Das Protokoll ist ungültig, es existiert entweder nicht oder es wurden Protokollfilter verwendet.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Dieser Bericht kann nicht eingereicht werden, da das neueste Protokoll für dieses Spiel an der folgenden Überprüfung gescheitert ist und daher der Bericht ungültig wäre:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>OK</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Info</translation>
     </message>
     <message>
       <source>Edit Tooltip Notes</source>
-      <translation type="unfinished">Edit Tooltip Notes</translation>
+      <translation>Tooltip Notizen bearbeiten</translation>
     </message>
   </context>
   <context>
@@ -1722,205 +1720,205 @@ Benutze lokale Datenbank.
     <name>HostOverridesDialog</name>
     <message>
       <source>Network Host Overrides</source>
-      <translation type="unfinished">Network Host Overrides</translation>
+      <translation>Netzwerk-Host Überschreibungen</translation>
     </message>
     <message>
       <source>Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</source>
-      <translation type="unfinished">Redirect a game&apos;s network requests to a different server (for example a local private server). Each row maps a &lt;b&gt;match&lt;/b&gt; to a &lt;b&gt;redirect target&lt;/b&gt;. Matches are tried most-specific first:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;scheme://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Targets look like &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt;, or &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Unchecked rows are saved but ignored by the emulator.</translation>
+      <translation>Leitet die Netzwerkanfrage eines Spieles an einen anderen Server (z.B. einen lokalen privaten Server). Jede Zeile ordnet einen &lt;b&gt;Treffer&lt;/b&gt; mit einem &lt;b&gt;Weitergeleiteten Ziel&lt;/b&gt; zu. Treffer nutzen die genaueste Übereinstimmung zuerst:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;tt&gt;host&lt;/tt&gt; &amp;middot; &lt;tt&gt;host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;Protokoll://host:port&lt;/tt&gt; &amp;middot; &lt;tt&gt;*&lt;/tt&gt; (catch-all)&lt;br&gt;Ziele können aussehen wie &lt;tt&gt;host&lt;/tt&gt;, &lt;tt&gt;host:port&lt;/tt&gt; oder &lt;tt&gt;http(s)://host[:port]&lt;/tt&gt;. Nicht markierte Zeilen sind gespeichert, werden aber vom Emulator ignoriert.</translation>
     </message>
     <message>
       <source>Enabled</source>
-      <translation type="unfinished">Enabled</translation>
+      <translation>Aktiviert</translation>
     </message>
     <message>
       <source>Match (host / endpoint)</source>
-      <translation type="unfinished">Match (host / endpoint)</translation>
+      <translation>Treffer (Host / Endpoint)</translation>
     </message>
     <message>
       <source>Redirect to</source>
-      <translation type="unfinished">Redirect to</translation>
+      <translation>Weiterleiten nach</translation>
     </message>
     <message>
       <source>&amp;Add</source>
-      <translation type="unfinished">&amp;Add</translation>
+      <translation>&amp;Hinzufügen</translation>
     </message>
     <message>
       <source>Add &amp;catch-all</source>
-      <translation type="unfinished">Add &amp;catch-all</translation>
+      <translation>&amp;Catch-All hinzufügen</translation>
     </message>
     <message>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;Entfernen</translation>
     </message>
     <message>
       <source>File: %1</source>
-      <translation type="unfinished">File: %1</translation>
+      <translation>Datei: %1</translation>
     </message>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>Ordner öffnen</translation>
     </message>
     <message>
       <source>Catch-all exists</source>
-      <translation type="unfinished">Catch-all exists</translation>
+      <translation>Catch-all existiert</translation>
     </message>
     <message>
       <source>A catch-all (*) row already exists.</source>
-      <translation type="unfinished">A catch-all (*) row already exists.</translation>
+      <translation>Eine Catch-all (*)-Zeile existiert bereits.</translation>
     </message>
     <message>
       <source>Parse error</source>
-      <translation type="unfinished">Parse error</translation>
+      <translation>Analysefehler</translation>
     </message>
     <message>
       <source>The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</source>
-      <translation type="unfinished">The existing host_overrides.json could not be parsed. Starting with an empty list; saving will overwrite the file.</translation>
+      <translation>Die vorhandene host_overrides.json konnte nicht analysiert werden. Es wird mit einer leeren Liste begonnen; das Speichern wird die Datei überschreiben.</translation>
     </message>
     <message>
       <source>Format error</source>
-      <translation type="unfinished">Format error</translation>
+      <translation>Formatfehler</translation>
     </message>
     <message>
       <source>host_overrides.json must be a JSON object. Starting empty.</source>
-      <translation type="unfinished">host_overrides.json must be a JSON object. Starting empty.</translation>
+      <translation>host_overrides.json muss ein JSON-Objekt sein. Wird leer gestartet.</translation>
     </message>
     <message>
       <source>Cannot save</source>
-      <translation type="unfinished">Cannot save</translation>
+      <translation>Speichern nicht möglich</translation>
     </message>
     <message>
       <source>Please fix the following before saving:
 
 %1</source>
-      <translation type="unfinished">Please fix the following before saving:
+      <translation>Bitte korrigiere folgende Dinge vor dem Speichern:
 
 %1</translation>
     </message>
     <message>
       <source>Save failed</source>
-      <translation type="unfinished">Save failed</translation>
+      <translation>Speichern fehlgeschlagen</translation>
     </message>
     <message>
       <source>Could not open the file for writing:
 %1</source>
-      <translation type="unfinished">Could not open the file for writing:
+      <translation>Datei konnte nicht zum Schreiben geöffnet werden
 %1</translation>
     </message>
     <message>
       <source>An error occurred while writing.</source>
-      <translation type="unfinished">An error occurred while writing.</translation>
+      <translation>Beim Schreiben ist ein Fehler aufgetreten.</translation>
     </message>
     <message>
       <source>&amp;Import...</source>
-      <translation type="unfinished">&amp;Import...</translation>
+      <translation>&amp;Importieren...</translation>
     </message>
     <message>
       <source>&amp;Export...</source>
-      <translation type="unfinished">&amp;Export...</translation>
+      <translation>&amp;Exportieren...</translation>
     </message>
     <message>
       <source>Import Host Overrides</source>
-      <translation type="unfinished">Import Host Overrides</translation>
+      <translation>Host-Überschreibungen importieren</translation>
     </message>
     <message>
       <source>JSON Files (*.json);;All Files (*)</source>
-      <translation type="unfinished">JSON Files (*.json);;All Files (*)</translation>
+      <translation>JSON-Dateien (*.json);;Alle Dateien (*)</translation>
     </message>
     <message>
       <source>Import failed</source>
-      <translation type="unfinished">Import failed</translation>
+      <translation>Importieren fehlgeschlagen</translation>
     </message>
     <message>
       <source>Could not open the selected file.</source>
-      <translation type="unfinished">Could not open the selected file.</translation>
+      <translation>Die ausgewählte Datei konnte nicht geöffnet werden.</translation>
     </message>
     <message>
       <source>The selected file could not be parsed as JSON.</source>
-      <translation type="unfinished">The selected file could not be parsed as JSON.</translation>
+      <translation>Die ausgewählte Datei konnte nicht als JSON verarbeitet werden.</translation>
     </message>
     <message>
       <source>The selected file must be a JSON object mapping match keys to redirect targets, like host_overrides.json.</source>
-      <translation type="unfinished">The selected file must be a JSON object mapping match keys to redirect targets, like host_overrides.json.</translation>
+      <translation>Die ausgewählte Datei muss ein JSON-Objekt sein, das eine Übereinstimmung mit einem Weiterleitungsziel zuordnet, um Ziele umzuleiten, wie host_overrides.json.</translation>
     </message>
     <message>
       <source>Nothing to import</source>
-      <translation type="unfinished">Nothing to import</translation>
+      <translation>Nichts zu importieren</translation>
     </message>
     <message>
       <source>The selected file doesn&apos;t contain any valid entries.</source>
-      <translation type="unfinished">The selected file doesn&apos;t contain any valid entries.</translation>
+      <translation>Die ausgewählte Datei enthält keine gültigen Einträge.</translation>
     </message>
     <message>
       <source>Found %1 entry/entries in the selected file.
 
 Replace the current list entirely, or append these entries to it (entries whose match already exists in the list will be skipped)?</source>
-      <translation type="unfinished">Found %1 entry/entries in the selected file.
+      <translation>%1 Eintrag/Einträge in der ausgewählten Datei gefunden.
 
-Replace the current list entirely, or append these entries to it (entries whose match already exists in the list will be skipped)?</translation>
+Soll die aktuelle Liste vollständig ersetzt werden oder sollen die Einträge nur hinzugefügt werden (Einträge deren Treffer in der Liste bereits vorhanden ist, werden übersprungen)?</translation>
     </message>
     <message>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Alles ersetzen</translation>
     </message>
     <message>
       <source>Append</source>
-      <translation type="unfinished">Append</translation>
+      <translation>Hinzufügen</translation>
     </message>
     <message>
       <source>Import complete</source>
-      <translation type="unfinished">Import complete</translation>
+      <translation>Importieren abgeschlossen</translation>
     </message>
     <message>
       <source>Replaced the list with %1 imported entry/entries.</source>
-      <translation type="unfinished">Replaced the list with %1 imported entry/entries.</translation>
+      <translation>Die Liste wurde durch %1 importierte/n Eintrag/Einträge ersetzt.</translation>
     </message>
     <message>
       <source>Added %1 new entry/entries. Skipped %2 already in the list.</source>
-      <translation type="unfinished">Added %1 new entry/entries. Skipped %2 already in the list.</translation>
+      <translation>%1 neue/r Eintrag/Einträge hinzugefügt. %2 wird/werden übersprungen, da die bereits in der Liste sind.</translation>
     </message>
     <message>
       <source>Added %1 new entry/entries.</source>
-      <translation type="unfinished">Added %1 new entry/entries.</translation>
+      <translation>%1 neue/r Eintrag/Einträge hinzugefügt.</translation>
     </message>
     <message>
       <source>Cannot export</source>
-      <translation type="unfinished">Cannot export</translation>
+      <translation>Kann nicht exportieren</translation>
     </message>
     <message>
       <source>Please fix the following before exporting:
 
 %1</source>
-      <translation type="unfinished">Please fix the following before exporting:
+      <translation>Bitte korrigiere folgende Dinge vor dem Exportieren:
 
 %1</translation>
     </message>
     <message>
       <source>Nothing to export</source>
-      <translation type="unfinished">Nothing to export</translation>
+      <translation>Nichts zum exportieren</translation>
     </message>
     <message>
       <source>The list doesn&apos;t have any entries yet.</source>
-      <translation type="unfinished">The list doesn&apos;t have any entries yet.</translation>
+      <translation>Die Liste hat noch keine Einträge.</translation>
     </message>
     <message>
       <source>Export Host Overrides</source>
-      <translation type="unfinished">Export Host Overrides</translation>
+      <translation>Host-Überschreibungen exportieren</translation>
     </message>
     <message>
       <source>Export failed</source>
-      <translation type="unfinished">Export failed</translation>
+      <translation>Exportieren fehlgeschlagen</translation>
     </message>
     <message>
       <source>Could not open the selected file for writing.</source>
-      <translation type="unfinished">Could not open the selected file for writing.</translation>
+      <translation>Ausgewählte Datei konnte nicht zum Schreiben geöffnet werden.</translation>
     </message>
     <message>
       <source>Export complete</source>
-      <translation type="unfinished">Export complete</translation>
+      <translation>Exportieren abgeschlossen</translation>
     </message>
     <message>
       <source>Exported %1 entry/entries.</source>
-      <translation type="unfinished">Exported %1 entry/entries.</translation>
+      <translation>%1 Eintrag/Einträge exportiert.</translation>
     </message>
   </context>
   <context>
@@ -2069,7 +2067,7 @@ Replace the current list entirely, or append these entries to it (entries whose 
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation type="unfinished">Left Analog Halfmode</translation>
+      <translation>Linker Analog-Halbmodus</translation>
     </message>
     <message>
       <source>hold to move left stick at half-speed</source>
@@ -2169,11 +2167,11 @@ Replace the current list entirely, or append these entries to it (entries whose 
     </message>
     <message>
       <source>Right Analog Halfmode</source>
-      <translation type="unfinished">Right Analog Halfmode</translation>
+      <translation>Rechter Analog-Halbmodus</translation>
     </message>
     <message>
       <source>hold to move right stick at half-speed</source>
-      <translation type="unfinished">hold to move right stick at half-speed</translation>
+      <translation>Halten, um den rechten Analogstick mit halber Geschwindigkeit zu bewegen</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -2789,15 +2787,15 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     </message>
     <message>
       <source>Network Host Overrides</source>
-      <translation type="unfinished">Network Host Overrides</translation>
+      <translation>Netzwerk-Host Überschreibungen</translation>
     </message>
     <message>
       <source>Redirect game network traffic to another server</source>
-      <translation type="unfinished">Redirect game network traffic to another server</translation>
+      <translation>Weiterleitung des Netzwerkverkehrs auf einen anderen Server</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Audio</translation>
     </message>
   </context>
   <context>
@@ -3063,51 +3061,51 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     </message>
     <message>
       <source>unknown</source>
-      <translation type="unfinished">unknown</translation>
+      <translation>unbekannt</translation>
     </message>
     <message>
       <source>Redirect target is empty.</source>
-      <translation type="unfinished">Redirect target is empty.</translation>
+      <translation>Das Weiterleitungsziel ist leer.</translation>
     </message>
     <message>
       <source>Target scheme must be http or https.</source>
-      <translation type="unfinished">Target scheme must be http or https.</translation>
+      <translation>Das Ziel-Protokoll muss http oder https sein.</translation>
     </message>
     <message>
       <source>Redirect target has no host.</source>
-      <translation type="unfinished">Redirect target has no host.</translation>
+      <translation>Das Weiterleitungsziel hat keinen Host.</translation>
     </message>
     <message>
       <source>Port must be a number between 1 and 65535.</source>
-      <translation type="unfinished">Port must be a number between 1 and 65535.</translation>
+      <translation>Port muss eine Zahl zwischen 1 und 65535 sein.</translation>
     </message>
     <message>
       <source>Match host is empty.</source>
-      <translation type="unfinished">Match host is empty.</translation>
+      <translation>Der Treffer-Host ist leer.</translation>
     </message>
     <message>
       <source>Match scheme must be http or https (or omit it).</source>
-      <translation type="unfinished">Match scheme must be http or https (or omit it).</translation>
+      <translation>Das Treffer-Protokoll muss http oder https sein (oder weglassen).</translation>
     </message>
     <message>
       <source>Match has no host.</source>
-      <translation type="unfinished">Match has no host.</translation>
+      <translation>Der Treffer hat keinen Host.</translation>
     </message>
     <message>
       <source>Match port must be a number between 1 and 65535.</source>
-      <translation type="unfinished">Match port must be a number between 1 and 65535.</translation>
+      <translation>Der Treffer-Port muss eine Zahl zwischen 1 und 65535 sein.</translation>
     </message>
     <message>
       <source>Row %1: %2</source>
-      <translation type="unfinished">Row %1: %2</translation>
+      <translation>Zeile %1: %2</translation>
     </message>
     <message>
       <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
-      <translation type="unfinished">Row %1: duplicate entry for &apos;%2&apos;.</translation>
+      <translation>Zeile %1: Duplikat von &apos;%2&apos;.</translation>
     </message>
     <message>
       <source>Extracting: %1</source>
-      <translation type="unfinished">Extracting: %1</translation>
+      <translation>Extrahiere: %1</translation>
     </message>
   </context>
   <context>
@@ -3841,7 +3839,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Camera Device</source>
-      <translation type="unfinished">Camera Device</translation>
+      <translation>Kamera</translation>
     </message>
     <message>
       <source>Log Sync</source>
@@ -3881,31 +3879,31 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Theme</source>
-      <translation type="unfinished">Theme</translation>
+      <translation>Design</translation>
     </message>
     <message>
       <source>Stylesheet:</source>
-      <translation type="unfinished">Stylesheet:</translation>
+      <translation>Formatvorlage:</translation>
     </message>
     <message>
       <source>Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</source>
-      <translation type="unfinished">Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</translation>
+      <translation>Ziehe .qss-Stylesheet-Dateien in den Ordner &quot;themes&quot; in Ihr Benutzerdatenverzeichnis, um benutzerdefinierte Designs hinzuzufügen.</translation>
     </message>
     <message>
       <source> (missing)</source>
-      <translation type="unfinished"> (missing)</translation>
+      <translation> (fehlt)</translation>
     </message>
     <message>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>Standard</translation>
     </message>
     <message>
       <source>Use Circle Button to Confirm</source>
-      <translation type="unfinished">Use Circle Button to Confirm</translation>
+      <translation>Nutze Kreisknopf zum Bestätigen.</translation>
     </message>
     <message>
       <source>IME</source>
-      <translation type="unfinished">IME</translation>
+      <translation>Eingabemethode</translation>
     </message>
     <message>
       <source>Enable IME Accessibility</source>
@@ -3917,31 +3915,31 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Enable ShadNet</source>
-      <translation type="unfinished">Enable ShadNet</translation>
+      <translation>ShadNet aktivieren</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>Server</translation>
     </message>
     <message>
       <source>Enable UPnP</source>
-      <translation type="unfinished">Enable UPnP</translation>
+      <translation>UPnP aktivieren</translation>
     </message>
     <message>
       <source>Use Mice as Mice</source>
-      <translation type="unfinished">Use Mice as Mice</translation>
+      <translation>Maus als Maus verwenden</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>WebAPI Server</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>Signalisierungsinformation</translation>
     </message>
   </context>
   <context>
@@ -4020,51 +4018,51 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</source>
-      <translation type="unfinished">Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</translation>
+      <translation>Discord Rich Presence aktivieren:\nZeigt das Emulator-Icon und relevante Informationen in deinem Discord-Profil an.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation type="unfinished">Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</translation>
+      <translation>Mikrofon:\nKeine: Es wird kein Mikrofon verwendet.\nStandardgerät: Verwendet das vom System festgelegte Mikrofon.\nOder wähle manuell ein Mikrofon aus der Liste aus.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Updates für Be­nut­zer­ober­flä­che:\nRelease: Offizielle Versionen, die jeden Monat veröffentlicht werden, dadurch ein wenig veraltet sein könnte, aber dafür zuverlässiger laufen und getestet wurden.\nNightly: Entwicklerversionen die neue Funktionen und Bugfixes beinhalten, können aber neue Bugs haben und laufen weniger stabil.\n\n*Diese Updates gelten nur für die Benutzeroberfläche. Um den Emulator selber zu updaten, nutze bitte die &apos;Versionsverwaltung&apos;.</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation type="unfinished">Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</translation>
+      <translation>Protokollierung aktivieren:\nAktiviert die Protokollierung.\nWenn Sie sich nicht sicher sind, dann ändern Sie diese Einstellung nicht!\nDiese Einstellung sollte AKTIVIERT sein, wenn Sie nach Hilfe fragen.</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>Protokollordner öffnen:\nÖffne den Ordner, in dem die Protokolldatei gespeichert wird.</translation>
     </message>
     <message>
       <source>Separate Log Files:\nWrites a separate logfile for each game.</source>
-      <translation type="unfinished">Separate Log Files:\nWrites a separate logfile for each game.</translation>
+      <translation>Separate Protokolldateien:\nSchreibt für jedes Spiel eine separate Logdatei.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+      <translation>Synchrones Protokoll:\nWechsel zwischen synchron (Reihenfolge) oder asynchron (Leistung).</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+      <translation>Doppelte Protokollzeilen überspringen:\nReduziert den Speicherbedarf, indem mehrere identische Protokollzeilen nicht geschrieben werden.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+      <translation>Max. Überspringdauer der Protokollzeilen:\nDie max. Dauer in der verhindert wird das dieselben Protokollzeilen geschrieben werden (ms) - nur wenn &apos;Doppelte Protokollzeilen überspringen&apos; aktiviert ist.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+      <translation>Protokollgrößenlimit:\nMaximale Größe der Protokolldateien (in Bytes).</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+      <translation>Protokoll anhängen:\nAn bereits vorhandenen Protokoll anhängen.</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
+      <translation>Protokoll-Typ:\nWähle zwischen wincolor und msvc aus.\nwincolor: Standard Protokollierung für Windows\nmsvc: Protokollierung für Debugging</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
@@ -4084,51 +4082,51 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</source>
-      <translation type="unfinished">Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</translation>
+      <translation>Grafikkarte:\nAuf Systemen mit mehreren Grafikkarten kann hier eine Grafikkarte ausgewählt werden, die der Emulator verwenden soll,\noder wählen Sie &quot;Auto Auswahl&quot;, um sie automatisch auszuwählen.</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>Präsentationsmodus:\nKonfiguriert, wie die Videoausgabe auf dem Bildschirm dargestellt werden soll.\n\nMailbox (Vsync): Die Frames werden mit der Aktualisierungsrate des Bildschirms synchronisiert. Neue Frames ersetzen alle ausstehenden Frames. Reduziert die Latenz, kann jedoch Frames überspringen, wenn es zu Verzögerungen kommt.\nFIFO (Vsync): Die Frames werden mit der Aktualisierungsrate des Bildschirms synchronisiert. Neue Frames werden hinter ausstehenden Frames in die Warteschlange gestellt. Stellt sicher, dass alle Frames angezeigt werden, kann jedoch die Latenz erhöhen.\nSofort (kein Vsync): Die Frames werden sofort auf dem Bildschirm angezeigt, sobald sie bereit sind. Kann zu Bildfehlern (Tearing) führen.</translation>
     </message>
     <message>
       <source>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</source>
-      <translation type="unfinished">Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</translation>
+      <translation>Fenstergröße:\nLegt die Größe des Emulator-Fensters zum Starten fest und kann während des Spielens angepasst werden.\nDiese Einstellung ist unabhängig von der In-Game-Auflösung.</translation>
     </message>
     <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
-      <translation type="unfinished">Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</translation>
+      <translation>HDR aktivieren:\nAktiviert HDR in Spielen, die es unterstützen.\nIhr Monitor muss Unterstützung für den BT2020 PQ Farbraum und das RGB10A2 Swapchain Format haben.</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>VBlank Frequenz:\nDie Bildrate, die der Emulator verwendet (60 Hz ist die Grundlage, ganz gleich, ob das Spiel mit 30 oder 60 FPS läuft). Dies zu ändern kann sich negativ auswirken, wie z.B. erhöhte Spielgeschwindigkeit oder fehlerhafte Spielfunktionen, die diese Änderung nicht erwarten.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation type="unfinished">Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</translation>
+      <translation>Readback Linear Images aktivieren:\nAktiviert das asynchrone Herunterladen von GPU-modifizierten linearen Bildern.\nKann Probleme in einigen Spielen beheben.</translation>
     </message>
     <message>
       <source>Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</source>
-      <translation type="unfinished">Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</translation>
+      <translation>Mauszeiger ausblenden:\nWähle wann der Mauszeiger verschwinden soll:\nNie: Der Mauszeiger ist immer sichtbar.\nBei Inaktivität: Der Mauszeiger verschwindet nach einer festgelegten Zeit bei Nichtnutzung.\nImmer: Der Mauszeiger ist nicht sichtbar.</translation>
     </message>
     <message>
       <source>Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</source>
-      <translation type="unfinished">Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</translation>
+      <translation>Zeit wann der Mauszeiger ausgeblendet werden soll:\nStelle eine Zeit (in Sekunden) ein, nach der die Maus bei nicht Benutzung verschwinden soll.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation type="unfinished">Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</translation>
+      <translation>Bewegungssteuerung aktivieren:\nWenn aktiviert, dann wird die Bewegungssteuerung des Controllers verwendet, falls unterstützt wird.</translation>
     </message>
     <message>
       <source>Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</source>
-      <translation type="unfinished">Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</translation>
+      <translation>Erkenne die Controller-Eingabe im Hintergrund:\nErlaubt shadPS4, die Controller-Eingaben zu erkennen, wenn das Fenster nicht mehr im Fokus steht.</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>USB-Gerät:\nEchtes USB-Gerät: Verwendet das echte USB-Gerät, das an das System angeschlossen ist.\nSkylander Portal: Emuliert ein Skylander Portal of Power.\nInfinity Base: Emuliert ein Disney Infinity Base.\nDimensions ToyPad: Emuliert ein Lego Dimensions ToyPad.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Shader-Dumping aktivieren:\nFür technisches Debugging werden Shaders, die während des Spielens erzeugt werden, in einem Ordner gespeichert.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
@@ -4148,7 +4146,7 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</translation>
+      <translation>Absturz-Diagnose aktivieren:\nErstellt eine .yaml-Datei mit Informationen über den Vulkan-Status zum Zeitpunkt des Absturzes.\nNützlich zum Debuggen von &apos;Device lost&apos;-Fehlern. Wenn dieser Punkt aktiviert wird, dann sollten auch Host UND Guest Debug Marker aktiviert werden.\nVulkan Validation Layers müssen aktiviert werden und Vulkan SDK wird benötigt.</translation>
     </message>
     <message>
       <source>Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
@@ -4160,51 +4158,51 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Vulkan Validation Layers aktivieren:\nAktiviert ein System, welches den Status des Vulkan-Renderers überprüft und Daten über den internen Zustand sammelt.\nDiese Funktion reduziert die Leistung und beeinflusst das Verhalten des Emulators.\nVulkan SDK wird benötigt.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Core Validation aktivieren:\nAktiviert die wichtigsten API-Validierungsfunktionen.\nDiese Funktion reduziert die Leistung und beeinflusst das Verhalten des Emulators.\nVulkan SDK wird benötigt.</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Sync Validation aktivieren:\nAktiviert ein System, welches das Timing der Vulkan-Renderer Aufgaben überprüft.\nDiese Funktion reduziert die Leistung und beeinflusst das Verhalten des Emulators.\nVulkan SDK wird benötigt.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>GPU-Assisted Validation aktivieren:\nInstrumentiert Shader mit Code, um das korrekte Verhalten zu überprüfen.\nDiese Funktion reduziert die Leistung und beeinflusst das Verhalten des Emulators.\nVulkan SDK wird benötigt.</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Direct Memory Access aktivieren:\nAktiviert die Möglichkeit der Grafikkarte, eigenständig auf den Prozessor-Speicher zuzugreifen.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Devkit-Konsolen-Modus aktivieren:\nAktiviert den Devkit-Modus mit mehr Speicher.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>PS4 Neo-Modus aktivieren:\nAktiviert die PS4-Pro-Emulation und erhöht den Speicher. Sorgt aktuell für Instabilität bei einer Vielzahl von getesteten Spielen.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Setze die Netzwerkverbindung als verbunden:\nErzwingt Spiele die Erkennung einer aktiven Netzwerkverbindung. Online-Funktionen werden noch nicht unterstützt.</translation>
     </message>
     <message>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
-      <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
+      <translation>ShadNet: \nDie Kompatibilität ist derzeit sehr begrenzt.\nEin Account kann hier erstellt werden: https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Shader Cache aktivieren:\nSpeichert kompilierte Shaders um Neukompilierung zu vermeiden und Stottern zu reduzieren.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Komprimiere Shader Cache-Dateien in eine Zip-Datei:\nDie Shader Cache-Dateien werden in eine einzige Zip-Datei gespeichert anstatt in mehreren separaten Dateien.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Zusätzliche DMem-Zuweisung:\nErzwingt eine Zuordnung zusätzlichen DMem mit der angegebenen Menge. Kann in einigen Spielen Abstürze oder sonstigen Probleme verursachen.</translation>
     </message>
     <message>
       <source>Check for Updates at Startup:\nAutomatically check for a new launcher version each time it starts.</source>
@@ -4486,51 +4484,51 @@ This will remove all game-specific overrides.</translation>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net...</translation>
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>Aktiv</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>Aktiv (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>Inaktiv</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>ShadNet-Einstellungen - %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>ShadNet für diesen Benutzer aktivieren</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>Account-ID (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Passwort</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>Passwort anzeigen</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>Account-ID (NPID):</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>Passwort:</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>Shad&amp;Net-Einstellungen …</translation>
     </message>
   </context>
   <context>
@@ -4924,97 +4922,97 @@ The version may not run correctly when launched.</translation>
     <name>ZArchiveViewerDialog</name>
     <message>
       <source>Failed to open archive.</source>
-      <translation type="unfinished">Failed to open archive.</translation>
+      <translation>Archiv konnte nicht geöffnet werden.</translation>
     </message>
     <message>
       <source>ZArchive Viewer - %1</source>
-      <translation type="unfinished">ZArchive Viewer - %1</translation>
+      <translation>ZArchivbetrachter - %1</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Name</translation>
     </message>
     <message>
       <source>Type</source>
-      <translation type="unfinished">Type</translation>
+      <translation>Typ</translation>
     </message>
     <message>
       <source>Select All</source>
-      <translation type="unfinished">Select All</translation>
+      <translation>Alle auswählen</translation>
     </message>
     <message>
       <source>Select None</source>
-      <translation type="unfinished">Select None</translation>
+      <translation>Keine auswählen</translation>
     </message>
     <message>
       <source>Extract Selected...</source>
-      <translation type="unfinished">Extract Selected...</translation>
+      <translation>Ausgewählte extrahieren...</translation>
     </message>
     <message>
       <source>Extract All...</source>
-      <translation type="unfinished">Extract All...</translation>
+      <translation>Alles extrahieren...</translation>
     </message>
     <message>
       <source>Folder</source>
-      <translation type="unfinished">Folder</translation>
+      <translation>Ordner</translation>
     </message>
     <message>
       <source>File</source>
-      <translation type="unfinished">File</translation>
+      <translation>Datei</translation>
     </message>
     <message>
       <source>Loading...</source>
-      <translation type="unfinished">Loading...</translation>
+      <translation>Lade...</translation>
     </message>
     <message>
       <source>No files selected.</source>
-      <translation type="unfinished">No files selected.</translation>
+      <translation>Keine Dateien ausgewählt.</translation>
     </message>
     <message>
       <source>%1 file(s) selected.</source>
-      <translation type="unfinished">%1 file(s) selected.</translation>
+      <translation>%1 Datei(en) ausgewählt</translation>
     </message>
     <message>
       <source>Extract Selected</source>
-      <translation type="unfinished">Extract Selected</translation>
+      <translation>Ausgewählte extrahieren</translation>
     </message>
     <message>
       <source>Select one or more files to extract first.</source>
-      <translation type="unfinished">Select one or more files to extract first.</translation>
+      <translation>Wählen eine oder mehrere Dateien aus, die zuerst extrahiert werden sollen.</translation>
     </message>
     <message>
       <source>Extract Selected Files To</source>
-      <translation type="unfinished">Extract Selected Files To</translation>
+      <translation>Ausgewählte Dateien extrahieren nach</translation>
     </message>
     <message>
       <source>Extract All Files To</source>
-      <translation type="unfinished">Extract All Files To</translation>
+      <translation>Alle Dateien extrahieren nach</translation>
     </message>
     <message>
       <source>Extract from ZArchive</source>
-      <translation type="unfinished">Extract from ZArchive</translation>
+      <translation>Aus ZArchiv extrahieren</translation>
     </message>
     <message>
       <source>Extracting all files...</source>
-      <translation type="unfinished">Extracting all files...</translation>
+      <translation>Alle Dateien werden extrahiert...</translation>
     </message>
     <message>
       <source>Extracting selected files...</source>
-      <translation type="unfinished">Extracting selected files...</translation>
+      <translation>Ausgewählte Dateien werden extrahiert...</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Abbrechen</translation>
     </message>
     <message>
       <source>Failed to extract files:
 %1</source>
-      <translation type="unfinished">Failed to extract files:
+      <translation>Fehler beim Extrahieren der Dateien:
 %1</translation>
     </message>
     <message>
       <source>Extraction finished.</source>
-      <translation type="unfinished">Extraction finished.</translation>
+      <translation>Extrahierung abgeschlossen.</translation>
     </message>
   </context>
 </TS>
