@@ -2541,10 +2541,6 @@ Replace the current list entirely, or append these entries to it (entries whose 
       <translation>Preferiraj Ikone Iz Podataka Igre</translation>
     </message>
     <message>
-      <source>shadLauncher4</source>
-      <translation>shadLauncher4</translation>
-    </message>
-    <message>
       <source>Exit shadLauncher4</source>
       <translation>Izlaz iz shadLauncher4</translation>
     </message>
