@@ -2533,10 +2533,6 @@ Erstatt den gjeldende lista i sin helhet, eller tilføy disse oppføringene til 
       <translation>Foretrekk spilldataikoner</translation>
     </message>
     <message>
-      <source>shadLauncher4</source>
-      <translation>shadLauncher4</translation>
-    </message>
-    <message>
       <source>Exit shadLauncher4</source>
       <translation>Avslutt shadLauncher4</translation>
     </message>
