@@ -174,6 +174,7 @@ set(CORE src/core/user_manager.cpp
           src/core/ipc/ipc_client.h
           src/core/loader.cpp
           src/core/loader.h
+          src/core/cpu_patches.h
 )
 
 set(FILEFORMAT src/core/file_format/psf.cpp
