@@ -81,30 +81,22 @@ bool MainWindow::init() {
 
     setMinimumSize(350, minimumSizeHint().height()); // seems fine on win 10
 
-    auto isUnavailable = [](const std::string& value) {
-        return value.empty() || value.find("NOTFOUND") != std::string::npos || value == "unknown";
-    };
-
+    std::string remote_url(Common::g_scm_remote_url);
     std::string remote_host = Common::GetRemoteNameFromLink();
-    if (isUnavailable(remote_host)) {
-        remote_host.clear();
-    }
-
-    std::string window_title = "shadLauncher4";
-    if (!remote_host.empty() && remote_host != "shadLaunchers") {
-        window_title += fmt::format(" {}/v{}", remote_host, APP_VERSION);
-    } else {
-        window_title += fmt::format(" v{}", APP_VERSION);
-    }
-
-    if (!Common::g_is_release) {
-        std::string branch(Common::g_scm_branch);
-        std::string desc(Common::g_scm_desc);
-        if (!isUnavailable(branch)) {
-            window_title += " " + branch;
+    std::string window_title;
+    if (Common::g_is_release) {
+        if (remote_host == "shadLaunchers" || remote_url.empty()) {
+            window_title = fmt::format("shadLauncher4 v{}", APP_VERSION);
+        } else {
+            window_title = fmt::format("shadLauncher4 {}/v{}", remote_host, APP_VERSION);
         }
-        if (!isUnavailable(desc)) {
-            window_title += " " + desc;
+    } else {
+        if (remote_host == "shadLaunchers" || remote_url.empty()) {
+            window_title = fmt::format("shadLauncher4 v{} {} {}", APP_VERSION, Common::g_scm_branch,
+                                       Common::g_scm_desc);
+        } else {
+            window_title = fmt::format("shadLauncher4 {}/v{} {} {}", remote_host, APP_VERSION,
+                                       Common::g_scm_branch, Common::g_scm_desc);
         }
     }
     setWindowTitle(QString::fromStdString(window_title));
@@ -517,7 +509,6 @@ void MainWindow::createDockWindows() {
     m_mw->addDockWidget(Qt::LeftDockWidgetArea, m_game_list_frame);
     m_mw->setDockNestingEnabled(true);
     setCentralWidget(m_mw);
-
     m_game_count_label = new QLabel(this);
     statusBar()->addPermanentWidget(m_game_count_label);
 }
