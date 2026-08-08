@@ -2798,16 +2798,16 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message numerus="yes">
       <source>%n game(s)</source>
-      <translation type="unfinished">
-        <numerusform>%n game(s)</numerusform>
-        <numerusform>%n game(s)</numerusform>
+      <translation>
+        <numerusform>%n jogo</numerusform>
+        <numerusform>%n jogos</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%1 of %n game(s)</source>
-      <translation type="unfinished">
-        <numerusform>%1 of %n game(s)</numerusform>
-        <numerusform>%1 of %n game(s)</numerusform>
+      <translation>
+        <numerusform>%1 de %n jogo</numerusform>
+        <numerusform>%1 de %n jogos</numerusform>
       </translation>
     </message>
   </context>
@@ -3486,7 +3486,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Logger</source>
-      <translation>Monitor</translation>
+      <translation>Log/Registro</translation>
     </message>
     <message>
       <source>Enable Logging</source>
@@ -3956,11 +3956,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <translation>Proteção da Zona Vermelha</translation>
     </message>
     <message>
       <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <translation>Correção Estática</translation>
     </message>
   </context>
   <context>
