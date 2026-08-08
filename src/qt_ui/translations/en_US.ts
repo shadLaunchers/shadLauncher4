@@ -2747,6 +2747,18 @@ Select an emulator version from the right panel.</source>
         <source>Audio</source>
         <translation type="unfinished"></translation>
     </message>
+    <message numerus="yes">
+        <source>%n game(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 of %n game(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>NpBindDialog</name>
@@ -3884,6 +3896,14 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
         <source>Signaling Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Red Zone Protection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Static Patching</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
