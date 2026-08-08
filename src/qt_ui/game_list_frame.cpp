@@ -1603,6 +1603,9 @@ void GameListFrame::requestShortcut(const GameInfo& currentInfo, QString emuPath
     QString targetPath;
     Common::FS::PathToQString(targetPath, currentInfo.path);
     QString ebootPath = targetPath + "/eboot.bin";
+    if (Core::FileSys::IsZArchiveFile(currentInfo.path)) {
+        ebootPath = targetPath;
+    }
 
     // Get the full path to the icon
     QString iconPath;
