@@ -51,6 +51,38 @@
 #include "trophy_viewer.h"
 #include "zarchive_viewer_dialog.h"
 
+// Returns true if path lives inside (or equals) any of dirs, resolving
+// symlinks/".."/"." first so this can't be fooled by a non-canonical path.
+bool IsPathWithinAnyDir(const std::filesystem::path& path,
+                        const std::vector<std::filesystem::path>& dirs) {
+    std::error_code ec;
+    const auto canonical_path = std::filesystem::weakly_canonical(path, ec);
+    if (ec) {
+        return false;
+    }
+
+    for (const auto& dir : dirs) {
+        const auto canonical_dir = std::filesystem::weakly_canonical(dir, ec);
+        if (ec) {
+            continue;
+        }
+
+        std::error_code rel_ec;
+        const auto rel = std::filesystem::relative(canonical_path, canonical_dir, rel_ec);
+        if (rel_ec || rel.empty()) {
+            continue;
+        }
+
+        // relative() returns a path starting with ".." when canonical_path
+        // isn't inside canonical_dir.
+        const auto rel_str = rel.generic_string();
+        if (rel_str != ".." && rel_str.rfind("../", 0) != 0) {
+            return true;
+        }
+    }
+    return false;
+}
+
 GameListContextMenu::GameListContextMenu(GameListFrame* frame) : QMenu(frame), m_frame(frame) {}
 
 void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_pos) {
@@ -416,8 +448,27 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         frame->Refresh(false);
     };
 
-    auto convertToZArchiveHandler = [frame, convertPathToZArchiveHandler,
-                                     refreshOneGameLight](const game_info& game) {
+    auto applyNewPathIfWatched = [frame](const std::filesystem::path& new_path,
+                                         const std::function<void()>& apply_and_refresh,
+                                         const QString& dialog_title) {
+        const auto install_dirs = frame->m_emu_settings
+                                      ? frame->m_emu_settings->GetGameInstallDirs()
+                                      : std::vector<std::filesystem::path>{};
+        if (IsPathWithinAnyDir(new_path.parent_path(), install_dirs)) {
+            apply_and_refresh();
+            return;
+        }
+
+        QMessageBox::information(
+            frame, dialog_title,
+            tr("The archive was saved to a folder that isn't one of your configured "
+               "game folders, so it won't show up in the game list. Move it into a "
+               "configured folder, or add this folder under Settings, if you'd like "
+               "it to appear."));
+    };
+
+    auto convertToZArchiveHandler = [frame, convertPathToZArchiveHandler, refreshOneGameLight,
+                                     applyNewPathIfWatched](const game_info& game) {
         const std::filesystem::path source_path(game->info.path);
         const QString game_name = QString::fromStdString(game->info.name);
 
@@ -429,16 +480,21 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                             "you'd like to archive it too.");
         }
 
-        convertPathToZArchiveHandler(
-            source_path, game_name, tr("Convert to ZArchive"), extra_note,
-            [game, refreshOneGameLight](const std::filesystem::path& new_path) {
-                game->info.path = new_path.string();
-                refreshOneGameLight(game);
-            });
+        convertPathToZArchiveHandler(source_path, game_name, tr("Convert to ZArchive"), extra_note,
+                                     [game, refreshOneGameLight, applyNewPathIfWatched](
+                                         const std::filesystem::path& new_path) {
+                                         applyNewPathIfWatched(
+                                             new_path,
+                                             [game, new_path, refreshOneGameLight] {
+                                                 game->info.path = new_path.string();
+                                                 refreshOneGameLight(game);
+                                             },
+                                             tr("Convert to ZArchive"));
+                                     });
     };
 
-    auto convertUpdateToZArchiveHandler = [frame, convertPathToZArchiveHandler,
-                                           refreshOneGameLight](const game_info& game) {
+    auto convertUpdateToZArchiveHandler = [frame, convertPathToZArchiveHandler, refreshOneGameLight,
+                                           applyNewPathIfWatched](const game_info& game) {
         if (game->info.update_path.empty()) {
             QMessageBox::information(
                 frame, tr("Convert Update to ZArchive"),
@@ -449,12 +505,18 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         const std::filesystem::path source_path(game->info.update_path);
         const QString display_name = tr("%1 Update").arg(QString::fromStdString(game->info.name));
 
-        convertPathToZArchiveHandler(
-            source_path, display_name, tr("Convert Update to ZArchive"), QString(),
-            [game, refreshOneGameLight](const std::filesystem::path& new_path) {
-                game->info.update_path = new_path.string();
-                refreshOneGameLight(game);
-            });
+        convertPathToZArchiveHandler(source_path, display_name, tr("Convert Update to ZArchive"),
+                                     QString(),
+                                     [game, refreshOneGameLight, applyNewPathIfWatched](
+                                         const std::filesystem::path& new_path) {
+                                         applyNewPathIfWatched(
+                                             new_path,
+                                             [game, new_path, refreshOneGameLight] {
+                                                 game->info.update_path = new_path.string();
+                                                 refreshOneGameLight(game);
+                                             },
+                                             tr("Convert Update to ZArchive"));
+                                     });
     };
 
     auto convertFromZArchiveHandler = [frame](const game_info& game) {
@@ -583,9 +645,21 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                         }
                     }
 
-                    game->info.path = output_path.string();
-                    game->info.size_on_disk = UINT64_MAX;
-                    frame->Refresh(false);
+                    const auto install_dirs = frame->m_emu_settings
+                                                  ? frame->m_emu_settings->GetGameInstallDirs()
+                                                  : std::vector<std::filesystem::path>{};
+                    if (IsPathWithinAnyDir(output_path.parent_path(), install_dirs)) {
+                        game->info.path = output_path.string();
+                        game->info.size_on_disk = UINT64_MAX;
+                        frame->Refresh(false);
+                    } else {
+                        QMessageBox::information(
+                            frame, tr("Convert from ZArchive"),
+                            tr("The folder was extracted, but it isn't inside one of your "
+                               "configured game folders, so it won't show up in the game "
+                               "list. Move it into a configured folder, or add this "
+                               "folder under Settings, if you'd like it to appear."));
+                    }
                 });
 
         auto future = QtConcurrent::run(
