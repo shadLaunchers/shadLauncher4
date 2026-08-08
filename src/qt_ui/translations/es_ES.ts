@@ -2796,6 +2796,20 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <source>Audio</source>
       <translation>Audio</translation>
     </message>
+    <message numerus="yes">
+      <source>%n game(s)</source>
+      <translation type="unfinished">
+        <numerusform>%n game(s)</numerusform>
+        <numerusform>%n game(s)</numerusform>
+      </translation>
+    </message>
+    <message numerus="yes">
+      <source>%1 of %n game(s)</source>
+      <translation type="unfinished">
+        <numerusform>%1 of %n game(s)</numerusform>
+        <numerusform>%1 of %n game(s)</numerusform>
+      </translation>
+    </message>
   </context>
   <context>
     <name>NpBindDialog</name>
@@ -3939,6 +3953,14 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     <message>
       <source>Signaling Info</source>
       <translation>Información de señalización</translation>
+    </message>
+    <message>
+      <source>Red Zone Protection</source>
+      <translation type="unfinished">Red Zone Protection</translation>
+    </message>
+    <message>
+      <source>Static Patching</source>
+      <translation type="unfinished">Static Patching</translation>
     </message>
   </context>
   <context>
