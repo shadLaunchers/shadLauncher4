@@ -7,8 +7,9 @@ cd "$GITHUB_WORKSPACE"
 # Ensure we have tags
 git fetch --tags --force
 
-# Get latest tag or default
-latest_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "0.0.0")
+# Get the latest *release* tag
+latest_tag=$(git describe --tags --abbrev=0 --match 'v[0-9]*.[0-9]*.[0-9]*' \
+             --match '[0-9]*.[0-9]*.[0-9]*' 2>/dev/null || echo "0.0.0")
 
 # Count commits since the latest tag
 if git rev-parse "$latest_tag" >/dev/null 2>&1; then

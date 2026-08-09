@@ -82,7 +82,8 @@ bool MainWindow::init() {
     setMinimumSize(350, minimumSizeHint().height()); // seems fine on win 10
 
     auto isUnavailable = [](const std::string& value) {
-        return value.empty() || value.find("NOTFOUND") != std::string::npos || value == "unknown";
+        return value.empty() || value.find("NOTFOUND") != std::string::npos || value == "unknown" ||
+               value == "HEAD";
     };
 
     std::string remote_host = Common::GetRemoteNameFromLink();
@@ -99,12 +100,8 @@ bool MainWindow::init() {
 
     if (!Common::g_is_release) {
         std::string branch(Common::g_scm_branch);
-        std::string desc(Common::g_scm_desc);
         if (!isUnavailable(branch)) {
             window_title += " " + branch;
-        }
-        if (!isUnavailable(desc)) {
-            window_title += " " + desc;
         }
     }
     setWindowTitle(QString::fromStdString(window_title));
