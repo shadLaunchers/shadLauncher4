@@ -4225,151 +4225,151 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Check for Updates at Startup:\nAutomatically check for a new launcher version each time it starts.</source>
-      <translation type="unfinished">Check for Updates at Startup:\nAutomatically check for a new launcher version each time it starts.</translation>
+      <translation>Buscar actualizaciones al iniciar:\nComprueba automáticamente si existen versiones nuevas del iniciador cada vez que se ejecute.</translation>
     </message>
     <message>
       <source>Always Show Changelog:\nDisplay the changelog dialog after installing an update, even for minor releases.</source>
-      <translation type="unfinished">Always Show Changelog:\nDisplay the changelog dialog after installing an update, even for minor releases.</translation>
+      <translation>Mostrar siempre el historial de cambios:\nMuestra la ventana del historial de cambios tras instalar una actualización, aunque sean cambios menores.</translation>
     </message>
     <message>
       <source>Check for Updates:\nManually check right now for a newer launcher version.</source>
-      <translation type="unfinished">Check for Updates:\nManually check right now for a newer launcher version.</translation>
+      <translation>Buscar actualizaciones:\nComprueba ahora si hay una versión nueva del iniciador.</translation>
     </message>
     <message>
       <source>Show Simple FPS Counter:\nDisplays a basic frames-per-second counter overlay while a game is running.</source>
-      <translation type="unfinished">Show Simple FPS Counter:\nDisplays a basic frames-per-second counter overlay while a game is running.</translation>
+      <translation>Mostrar contador sencillo de FPS:\nMuestra una superposición con un contador básico de fotogramas por segundo mientras se ejecute un juego.</translation>
     </message>
     <message>
       <source>Use Separate Update Folder:\nInstall PKG game updates to their own folder instead of merging them into the base game&apos;s install folder.</source>
-      <translation type="unfinished">Use Separate Update Folder:\nInstall PKG game updates to their own folder instead of merging them into the base game&apos;s install folder.</translation>
+      <translation>Utilizar carpeta independiente para actualizaciones:\nInstala los archivos PKG con actualizaciones de juegos en carpetas aparte en vez de fusionarlas con la carpeta de instalación del juego base.</translation>
     </message>
     <message>
       <source>Log:\nSettings that control what gets logged and how log files are written.</source>
-      <translation type="unfinished">Log:\nSettings that control what gets logged and how log files are written.</translation>
+      <translation>Registro:\nEstos ajustes controlan la forma de registrar elementos y de escribir los archivos de registro.</translation>
     </message>
     <message>
       <source>Load Presets...:\nChoose from a list of common log filter presets instead of typing one by hand.</source>
-      <translation type="unfinished">Load Presets...:\nChoose from a list of common log filter presets instead of typing one by hand.</translation>
+      <translation>Cargar preajustes...\nSelecciona los preajustes de filtros de registro más comunes en vez de tener que escribir los elementos de un filtro a mano.</translation>
     </message>
     <message>
       <source>Music Volume:\nAdjust the volume of the background/title music played in the GUI.</source>
-      <translation type="unfinished">Music Volume:\nAdjust the volume of the background/title music played in the GUI.</translation>
+      <translation>Volumen de música:\nAjusta el volumen de la música de fondo o de títulos que se reproduzca dentro de la interfaz.</translation>
     </message>
     <message>
       <source>Theme:\nChoose the stylesheet used for the launcher&apos;s interface. Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</source>
-      <translation type="unfinished">Theme:\nChoose the stylesheet used for the launcher&apos;s interface. Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</translation>
+      <translation>Tema:\nSelecciona la hoja de estilos a usar con la interfaz del iniciador. Si quieres añadir temas personalizados, puedes copiar archivos de hojas de estilos .qss a la carpeta &quot;themes&quot; de tu directorio de datos de usuario.</translation>
     </message>
     <message>
       <source>Show Background Image:\nDisplay a background image behind the game list. Use the Opacity slider below to control how visible it is.</source>
-      <translation type="unfinished">Show Background Image:\nDisplay a background image behind the game list. Use the Opacity slider below to control how visible it is.</translation>
+      <translation>Mostrar imagen de fondo:\nMuestra una imagen tras la lista de juegos. Utiliza el control deslizante de opacidad para ajustar su visibilidad.</translation>
     </message>
     <message>
       <source>Audio Backend:\nSelects the backend library used for audio output. SDL is recommended for most users.</source>
-      <translation type="unfinished">Audio Backend:\nSelects the backend library used for audio output. SDL is recommended for most users.</translation>
+      <translation>«Back-end» de audio:\nSelecciona la biblioteca «back-end» a usar para la salida de audio. Se recomienda elegir SDL para la mayoría de usuarios.</translation>
     </message>
     <message>
       <source>Audio Device (general):\nSelects which system audio output device the emulator uses for general game audio.</source>
-      <translation type="unfinished">Audio Device (general):\nSelects which system audio output device the emulator uses for general game audio.</translation>
+      <translation>Dispositivo de audio (general):\nSelecciona el dispositivo de salida de audio del sistema que utilizará el emulador para reproducir el audio general del juego.</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker):\nSelects which system audio output device is used for sound played through a connected DualShock 4/DualSense controller&apos;s built-in speaker.</source>
-      <translation type="unfinished">Audio Device (DS4 speaker):\nSelects which system audio output device is used for sound played through a connected DualShock 4/DualSense controller&apos;s built-in speaker.</translation>
+      <translation>Dispositivo de audio (altavoz de DS4):\nSelecciona el dispositivo de salida de audio del sistema que utilizará el emulador para reproducir los sonidos que sonarían por el altavoz integrado de un mando DualShock 4/DualSense.</translation>
     </message>
     <message>
       <source>Compatibility:\nSettings for displaying and updating the game compatibility database.</source>
-      <translation type="unfinished">Compatibility:\nSettings for displaying and updating the game compatibility database.</translation>
+      <translation>Compatibilidad:\nEstos ajustes cambian la forma de mostrar y actualizar la base de datos de compatibilidad de juegos.</translation>
     </message>
     <message>
       <source>Display Options:\nSettings that control how and where the emulator&apos;s video output is presented.</source>
-      <translation type="unfinished">Display Options:\nSettings that control how and where the emulator&apos;s video output is presented.</translation>
+      <translation>Opciones de vídeo:\nEstos ajustes controlan la forma de presentar la salida de vídeo del emulador.</translation>
     </message>
     <message>
       <source>Display Mode:\nChoose whether the game runs in a window, fullscreen, or borderless fullscreen.</source>
-      <translation type="unfinished">Display Mode:\nChoose whether the game runs in a window, fullscreen, or borderless fullscreen.</translation>
+      <translation>Modo de imagen:\nSelecciona si quieres ejecutar los juegos en una ventana, a pantalla completa, o a pantalla completa sin bordes.</translation>
     </message>
     <message>
       <source>FSR Settings:\nAMD FidelityFX Super Resolution upscaling and sharpening options.</source>
-      <translation type="unfinished">FSR Settings:\nAMD FidelityFX Super Resolution upscaling and sharpening options.</translation>
+      <translation>Configuración de FSR:\nLas opciones de escalado y realzado de imagen mediante FidelityFX Super Resolution de AMD.</translation>
     </message>
     <message>
       <source>Enable FSR:\nUses AMD FidelityFX Super Resolution to upscale the rendered image, which can improve performance at lower internal resolutions.</source>
-      <translation type="unfinished">Enable FSR:\nUses AMD FidelityFX Super Resolution to upscale the rendered image, which can improve performance at lower internal resolutions.</translation>
+      <translation>Habilitar FSR:\nUtiliza el sistema FidelityFX Super Resolution de AMD para reescalar la imagen renderizada, lo que podría mejorar el rendimiento utilizando resoluciones internas más bajas.</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening):\nApplies FSR&apos;s Robust Contrast Adaptive Sharpening pass to the image. Requires FSR to be enabled.</source>
-      <translation type="unfinished">Enable RCAS (sharpening):\nApplies FSR&apos;s Robust Contrast Adaptive Sharpening pass to the image. Requires FSR to be enabled.</translation>
+      <translation>Habilitar RCAS (realzado):\nAplica una pasada del Robust Contrast Adaptive Sharpening (realzado robusto por contraste adaptativo) del FSR a la imagen. Es necesario activar FSR.</translation>
     </message>
     <message>
       <source>RCAS Attenuation:\nControls the strength of the RCAS sharpening effect. Lower values sharpen the image more.</source>
-      <translation type="unfinished">RCAS Attenuation:\nControls the strength of the RCAS sharpening effect. Lower values sharpen the image more.</translation>
+      <translation>Atenuación del RCAS:\nControla la fuerza del efecto de realzado del RCAS. Un valor más bajo mostrará una imagen más definida.</translation>
     </message>
     <message>
       <source>Cursor:\nSettings that control when and how the mouse cursor is hidden.</source>
-      <translation type="unfinished">Cursor:\nSettings that control when and how the mouse cursor is hidden.</translation>
+      <translation>Cursor:\nEstos ajustes controlan cuándo se ocultará el cursor del ratón.</translation>
     </message>
     <message>
       <source>Controller:\nSettings related to gamepad and mouse input behavior.</source>
-      <translation type="unfinished">Controller:\nSettings related to gamepad and mouse input behavior.</translation>
+      <translation>Mando:\nEstos ajustes afectan al comportamiento de los mandos y del ratón.</translation>
     </message>
     <message>
       <source>Use Mice as Mice:\nLets the mouse behave as a regular mouse instead of being treated as an emulated controller input.</source>
-      <translation type="unfinished">Use Mice as Mice:\nLets the mouse behave as a regular mouse instead of being treated as an emulated controller input.</translation>
+      <translation>Utilizar ratones como tales:\nPermite que el ratón se comporte como un ratón convencional y no como una acción de entrada del mando emulado.</translation>
     </message>
     <message>
       <source>Use Circle Button to Confirm:\nSwaps the Circle and Cross buttons&apos; roles so Circle acts as the confirm/enter button, matching Japanese console conventions.</source>
-      <translation type="unfinished">Use Circle Button to Confirm:\nSwaps the Circle and Cross buttons&apos; roles so Circle acts as the confirm/enter button, matching Japanese console conventions.</translation>
+      <translation>Confirmar con el botón Círculo:\nIntercambia las acciones de los botones Círculo y Cruz/X para que Círculo sea el botón para confirmar/aceptar, siguiendo las convenciones japonesas de consolas.</translation>
     </message>
     <message>
       <source>IME:\nSettings for the on-screen keyboard/input method editor used by games for text entry.</source>
-      <translation type="unfinished">IME:\nSettings for the on-screen keyboard/input method editor used by games for text entry.</translation>
+      <translation>Editor de métodos de entrada (IME):\nEstos ajustes afectan al teclado en pantalla o al editor de métodos de entrada (IME) con el que introducir textos dentro de los juegos.</translation>
     </message>
     <message>
       <source>Enable IME Accessibility:\nEnables accessibility features for the on-screen keyboard, such as additional audio/visual cues.</source>
-      <translation type="unfinished">Enable IME Accessibility:\nEnables accessibility features for the on-screen keyboard, such as additional audio/visual cues.</translation>
+      <translation>Habilitar accesibilidad en IME:\nHabilita las características de accesibilidad en el teclado en pantalla, por ejemplo, más señales sonoras o visuales.</translation>
     </message>
     <message>
       <source>Enable IME URL/Email Short Panel:\nShows a shortened on-screen keyboard layout optimized for entering URLs and email addresses.</source>
-      <translation type="unfinished">Enable IME URL/Email Short Panel:\nShows a shortened on-screen keyboard layout optimized for entering URLs and email addresses.</translation>
+      <translation>Habilitar panel de direcciones URL/emails en el IME:\nMuestra un teclado en pantalla más pequeño, optimizado para introducir direcciones URL y de correos electrónicos.</translation>
     </message>
     <message>
       <source>Camera Device:\nSelects which connected camera device the emulator exposes to games as the PlayStation Camera.</source>
-      <translation type="unfinished">Camera Device:\nSelects which connected camera device the emulator exposes to games as the PlayStation Camera.</translation>
+      <translation>Dispositivo de cámara:\nSelecciona el dispositivo de cámara conectado que expondrá el emulador a los juegos como una PlayStation Camera.</translation>
     </message>
     <message>
       <source>Debug:\nTools for diagnosing crashes and inspecting emulator behavior. Intended for troubleshooting and development, not everyday use.</source>
-      <translation type="unfinished">Debug:\nTools for diagnosing crashes and inspecting emulator behavior. Intended for troubleshooting and development, not everyday use.</translation>
+      <translation>Depuración:\nHerramientas para diagnosticar fallos e inspeccionar el comportamiento del emulador. Están pensadas para resolver problemas y para desarrolladores, no para uso normal.</translation>
     </message>
     <message>
       <source>Advanced:\nLower-level debugging options for diagnosing rendering issues and crashes.</source>
-      <translation type="unfinished">Advanced:\nLower-level debugging options for diagnosing rendering issues and crashes.</translation>
+      <translation>Avanzado:\nOpciones de depuración a bajo nivel para diagnosticar problemas de renderizado y cuelgues.</translation>
     </message>
     <message>
       <source>Vulkan Validation:\nEnables Vulkan&apos;s built-in validation layers to catch incorrect API usage. Reduces performance; requires the Vulkan SDK to be installed.</source>
-      <translation type="unfinished">Vulkan Validation:\nEnables Vulkan&apos;s built-in validation layers to catch incorrect API usage. Reduces performance; requires the Vulkan SDK to be installed.</translation>
+      <translation>Validación para Vulkan:\nHabilita las capas de validación integradas de Vulkan para detectar usos incorrectos de la API. Reducirá el rendimiento y es necesario tener instalado el SDK de Vulkan.</translation>
     </message>
     <message>
       <source>Experimental:\nFeatures that are still in development or considered unstable. Use with caution - these can cause crashes or unexpected behavior.</source>
-      <translation type="unfinished">Experimental:\nFeatures that are still in development or considered unstable. Use with caution - these can cause crashes or unexpected behavior.</translation>
+      <translation>Experimental:\nCaracterísticas que aún se están desarrollando o que se consideran inestables. Utilízalas con cuidado: podrían provocar cuelgues o comportamientos inesperados.</translation>
     </message>
     <message>
       <source>ShadNet Server Settings:\nConfigure the server addresses used to connect to a ShadNet-compatible online service. Only used while ShadNet is enabled.</source>
-      <translation type="unfinished">ShadNet Server Settings:\nConfigure the server addresses used to connect to a ShadNet-compatible online service. Only used while ShadNet is enabled.</translation>
+      <translation>Configuración del servidor ShadNet:\nConfigura las direcciones de los servidores con los que conectarte a un servicio online compatible con ShadNet. Solo se utilizarán cuando ShadNet esté activado.</translation>
     </message>
     <message>
       <source>Server:\nThe address of the ShadNet server to connect to.</source>
-      <translation type="unfinished">Server:\nThe address of the ShadNet server to connect to.</translation>
+      <translation>Servidor:\nLa dirección del servidor ShadNet al que vas a conectarte.</translation>
     </message>
     <message>
       <source>WebAPI Server:\nThe address of the ShadNet WebAPI server used for account and session management.</source>
-      <translation type="unfinished">WebAPI Server:\nThe address of the ShadNet WebAPI server used for account and session management.</translation>
+      <translation>Servidor WebAPI:\nLa dirección del servidor WebAPI de ShadNet usado para la administración de cuentas y sesiones.</translation>
     </message>
     <message>
       <source>Signaling Info:\nConnection details used for ShadNet&apos;s peer-to-peer signaling/matchmaking.</source>
-      <translation type="unfinished">Signaling Info:\nConnection details used for ShadNet&apos;s peer-to-peer signaling/matchmaking.</translation>
+      <translation>Información de señalización:\nLos datos de conexión usados para la señalización y matchmaking P2P de ShadNet.</translation>
     </message>
     <message>
       <source>Enable UPnP:\nAutomatically configure port forwarding on your router via UPnP for ShadNet&apos;s networked features.</source>
-      <translation type="unfinished">Enable UPnP:\nAutomatically configure port forwarding on your router via UPnP for ShadNet&apos;s networked features.</translation>
+      <translation>Habilitar UPnP:\nConfigura automáticamente el desvío de puertos de tu router con UPnP para las características de red de ShadNet.</translation>
     </message>
   </context>
   <context>
@@ -5031,7 +5031,7 @@ Esta versión podría no ejecutarse correctamente.</translation>
     </message>
     <message>
       <source>Extraction finished.</source>
-      <translation type="unfinished">Extraction finished.</translation>
+      <translation>Extracción terminada.</translation>
     </message>
   </context>
 </TS>
