@@ -2796,6 +2796,20 @@ Selecione uma versão do emulador no painel direito.</translation>
       <source>Audio</source>
       <translation>Áudio</translation>
     </message>
+    <message numerus="yes">
+      <source>%n game(s)</source>
+      <translation>
+        <numerusform>%n jogo</numerusform>
+        <numerusform>%n jogos</numerusform>
+      </translation>
+    </message>
+    <message numerus="yes">
+      <source>%1 of %n game(s)</source>
+      <translation>
+        <numerusform>%1 de %n jogo</numerusform>
+        <numerusform>%1 de %n jogos</numerusform>
+      </translation>
+    </message>
   </context>
   <context>
     <name>NpBindDialog</name>
@@ -3472,7 +3486,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Logger</source>
-      <translation>Monitor</translation>
+      <translation>Log/Registro</translation>
     </message>
     <message>
       <source>Enable Logging</source>
@@ -3939,6 +3953,14 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     <message>
       <source>Signaling Info</source>
       <translation>Informações de Sinalização</translation>
+    </message>
+    <message>
+      <source>Red Zone Protection</source>
+      <translation>Proteção da Zona Vermelha</translation>
+    </message>
+    <message>
+      <source>Static Patching</source>
+      <translation>Correção Estática</translation>
     </message>
   </context>
   <context>
