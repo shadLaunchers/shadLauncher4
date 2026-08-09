@@ -1504,6 +1504,14 @@ Continuar?</translation>
       <source>Edit Tooltip Notes</source>
       <translation>Editar Observações do Balão de Ajuda</translation>
     </message>
+    <message>
+      <source>The archive was saved to a folder that isn&apos;t one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
+      <translation type="unfinished">The archive was saved to a folder that isn&apos;t one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</translation>
+    </message>
+    <message>
+      <source>The folder was extracted, but it isn&apos;t inside one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
+      <translation type="unfinished">The folder was extracted, but it isn&apos;t inside one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</translation>
+    </message>
   </context>
   <context>
     <name>GameListFrame</name>
