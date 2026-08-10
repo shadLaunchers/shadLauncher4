@@ -1504,11 +1504,11 @@ El archivo .zar original no se alterará hasta que la conversión haya terminado
     </message>
     <message>
       <source>The archive was saved to a folder that isn&apos;t one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
-      <translation type="unfinished">The archive was saved to a folder that isn&apos;t one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</translation>
+      <translation>Se ha guardado el archivo en una carpeta que no es una de las carpetas de juegos que tienes configuradas, así que no se mostrará en la lista de juegos. Llévalo a una carpeta que sí esté configurada o, si quieres que esta carpeta nueva aparezca, añádela desde dentro de la configuración.</translation>
     </message>
     <message>
       <source>The folder was extracted, but it isn&apos;t inside one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
-      <translation type="unfinished">The folder was extracted, but it isn&apos;t inside one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</translation>
+      <translation>Se ha extraído la carpeta, pero no es una de las carpetas de juegos que tienes configuradas, así que no se mostrará en la lista de juegos. Llévalo a una carpeta que sí esté configurada o, si quieres que esta carpeta nueva aparezca, añádela desde dentro de la configuración.</translation>
     </message>
   </context>
   <context>
