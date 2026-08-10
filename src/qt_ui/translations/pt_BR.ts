@@ -1490,7 +1490,7 @@ Continuar?</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation>Não foi possível enviar o relatório. Ocorreu a falha de verificação abaixo no registro mais recente do jogo e, portanto, resultaria em um relatório inválido:</translation>
+      <translation>Não foi possível enviar o relatório. Ocorreu a falha de verificação abaixo no log mais recente do jogo e, portanto, resultaria em um relatório inválido:</translation>
     </message>
     <message>
       <source>Ok</source>
