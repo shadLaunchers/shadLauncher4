@@ -454,7 +454,7 @@
     </message>
     <message>
       <source>D-Pad</source>
-      <translation>Navigasjonsknapper</translation>
+      <translation>Styrekors</translation>
     </message>
     <message>
       <source>Up</source>
@@ -478,11 +478,11 @@
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation>L1 og L2</translation>
+      <translation>Venstre skulder- og avtrekkerknapp</translation>
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation>Venstre analog dødsone</translation>
+      <translation>Venstre tommelspak dødsone</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
@@ -494,7 +494,7 @@
     </message>
     <message>
       <source>Left Stick</source>
-      <translation>Venstre analog</translation>
+      <translation>Venstre tommelspak</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -538,7 +538,7 @@
     </message>
     <message>
       <source>Options</source>
-      <translation>Innstillinger</translation>
+      <translation>Valg</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
@@ -582,7 +582,7 @@
     </message>
     <message>
       <source>Triangle</source>
-      <translation>Triangel</translation>
+      <translation>Trekant</translation>
     </message>
     <message>
       <source>Square</source>
@@ -598,15 +598,15 @@
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation>R1 og R2</translation>
+      <translation>Høyre skulder- og avtrekkerknapp</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation>Høyre analog dødsone</translation>
+      <translation>Høyre tommelspak dødsone</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation>Høyre analog</translation>
+      <translation>Høyre tommelspak</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
@@ -670,7 +670,7 @@
     </message>
     <message>
       <source>Move analog stick</source>
-      <translation>Flytt på analog stikke</translation>
+      <translation>Flytt på tommelspak</translation>
     </message>
   </context>
   <context>
@@ -1062,75 +1062,75 @@ Skriv inn nøklene og lagre dem.</translation>
     <name>GameListContextMenu</name>
     <message>
       <source>Game</source>
-      <translation type="unfinished">Game</translation>
+      <translation>Spill</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Feil</translation>
     </message>
     <message>
       <source>This game has no update to delete!</source>
-      <translation type="unfinished">This game has no update to delete!</translation>
+      <translation>Dette spillet har ingen oppdatering å slette!</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Oppdater</translation>
     </message>
     <message>
       <source>Delete Game + Update</source>
-      <translation type="unfinished">Delete Game + Update</translation>
+      <translation>Slett spill og oppdatering</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s game and update/patch directories? This cannot be undone.</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s game and update/patch directories? This cannot be undone.</translation>
+      <translation>Er du sikker på at du vil slette %1 spill og oppdateringer/rettelser? Dette kan ikke gjøres om.</translation>
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation type="unfinished">This game has no DLC to delete!</translation>
+      <translation>Dette spillet har intet nedlastbart innhold å slette!</translation>
     </message>
     <message>
       <source>DLC</source>
-      <translation type="unfinished">DLC</translation>
+      <translation>Nedlastbart innhold</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
-      <translation type="unfinished">This game has no save data to delete!</translation>
+      <translation>Dette spillet har ingen lagret data å slette!</translation>
     </message>
     <message>
       <source>Save Data</source>
-      <translation type="unfinished">Save Data</translation>
+      <translation>Lagret data</translation>
     </message>
     <message>
       <source>This game has no Shader Cache to delete!</source>
-      <translation type="unfinished">This game has no Shader Cache to delete!</translation>
+      <translation>Dette spillet har ingen skyggelegger hurtiglager å slette!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Skyggelegger hurtiglager</translation>
     </message>
     <message>
       <source>Shader cache deleted successfully.</source>
-      <translation type="unfinished">Shader cache deleted successfully.</translation>
+      <translation>Slettet skyggelegger hurtiglager på vellykket vis.</translation>
     </message>
     <message>
       <source>Clear Metadata Cache</source>
-      <translation type="unfinished">Clear Metadata Cache</translation>
+      <translation>Tøm metadata-hurtiglager</translation>
     </message>
     <message>
       <source>Clear the cached name/serial/icon/size info for %1?
 
 It will be re-read from disk on the next refresh.</source>
-      <translation type="unfinished">Clear the cached name/serial/icon/size info for %1?
+      <translation>Tøm mellomlagret navn, serienummer, ikon og størrelse informasjon for %1?
 
-It will be re-read from disk on the next refresh.</translation>
+Det vil bli gjenlest fra disken på neste oppdatering.</translation>
     </message>
     <message>
       <source>Delete %1</source>
-      <translation type="unfinished">Delete %1</translation>
+      <translation>Slett %1</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s %2 directory?</translation>
+      <translation>Er du sikker på at du vil slette %1s %2-mappa?</translation>
     </message>
     <message>
       <source>This is already packed as a ZArchive.</source>
@@ -1164,9 +1164,9 @@ The original folder is left untouched until conversion succeeds, you&apos;ll be 
       <source>
 
 Continue?</source>
-      <translation type="unfinished">
+      <translation>
 
-Continue?</translation>
+Fortsett?</translation>
     </message>
     <message>
       <source>Packing %1...</source>
@@ -1174,7 +1174,7 @@ Continue?</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Avbryt</translation>
     </message>
     <message>
       <source>Failed to convert to ZArchive:
@@ -1278,111 +1278,111 @@ Continue?</translation>
     </message>
     <message>
       <source>&amp;Launch game</source>
-      <translation type="unfinished">&amp;Launch game</translation>
+      <translation>&amp;Start spill</translation>
     </message>
     <message>
       <source>&amp;Launch game with current settings</source>
-      <translation type="unfinished">&amp;Launch game with current settings</translation>
+      <translation>&amp;Start spill med gjeldende innstillinger</translation>
     </message>
     <message>
       <source>&amp;Launch game with default settings</source>
-      <translation type="unfinished">&amp;Launch game with default settings</translation>
+      <translation>&amp;Start spill med standardinnstillinger</translation>
     </message>
     <message>
       <source>&amp;Launch game with global settings</source>
-      <translation type="unfinished">&amp;Launch game with global settings</translation>
+      <translation>&amp;Start spill med globale innstillinger</translation>
     </message>
     <message>
       <source>&amp;Change Custom Configuration</source>
-      <translation type="unfinished">&amp;Change Custom Configuration</translation>
+      <translation>&amp;Endre tilpasset oppsett</translation>
     </message>
     <message>
       <source>&amp;Create Custom Configuration From Global Settings</source>
-      <translation type="unfinished">&amp;Create Custom Configuration From Global Settings</translation>
+      <translation>&amp;Lag tilpasset oppsett fra globale innstillinger</translation>
     </message>
     <message>
       <source>&amp;View Changelog</source>
-      <translation type="unfinished">&amp;View Changelog</translation>
+      <translation>&amp;Vis endringslogg</translation>
     </message>
     <message>
       <source>&amp;Open Folder</source>
-      <translation type="unfinished">&amp;Open Folder</translation>
+      <translation>&amp;Åpne mappe</translation>
     </message>
     <message>
       <source>&amp;Open Game Folder</source>
-      <translation type="unfinished">&amp;Open Game Folder</translation>
+      <translation>&amp;Åpne spillmappe</translation>
     </message>
     <message>
       <source>&amp;Open Update Folder</source>
-      <translation type="unfinished">&amp;Open Update Folder</translation>
+      <translation>&amp;Åpne Oppdateringsmappe</translation>
     </message>
     <message>
       <source>&amp;Open Log Folder</source>
-      <translation type="unfinished">&amp;Open Log Folder</translation>
+      <translation>&amp;Åpne loggmappe</translation>
     </message>
     <message>
       <source>Log Not Found</source>
-      <translation type="unfinished">Log Not Found</translation>
+      <translation>Fant ingen logg</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
-      <translation type="unfinished">No log file found for this game!</translation>
+      <translation>Fant ingen loggfil for dette spillet!</translation>
     </message>
     <message>
       <source>Open Log Folder</source>
-      <translation type="unfinished">Open Log Folder</translation>
+      <translation>Åpne loggmappa</translation>
     </message>
     <message>
       <source>&amp;SFO viewer</source>
-      <translation type="unfinished">&amp;SFO viewer</translation>
+      <translation>&amp;SFO-viser</translation>
     </message>
     <message>
       <source>&amp;Create Desktop Shortcut</source>
-      <translation type="unfinished">&amp;Create Desktop Shortcut</translation>
+      <translation>&amp;Lag snarvei på skrivebordet</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Ingen versjon valgt</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Velg en versjon først</translation>
     </message>
     <message>
       <source>&amp;npbind.dat viewer</source>
-      <translation type="unfinished">&amp;npbind.dat viewer</translation>
+      <translation>&amp;npbind.dat-viser</translation>
     </message>
     <message>
       <source>&amp;Cheats &amp; Patches</source>
-      <translation type="unfinished">&amp;Cheats &amp; Patches</translation>
+      <translation>&amp;Juks og programrettelser</translation>
     </message>
     <message>
       <source>&amp;Trophy Viewer</source>
-      <translation type="unfinished">&amp;Trophy Viewer</translation>
+      <translation>&amp;Troféviser</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</translation>
+      <translation>En trofénøkkel er nødvendig for å bruke troféviseren. Du kan skrive inn dette ved å trykke «Verktøy» → «Kryptonøkkel-behandler».</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Troféviser</translation>
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
-      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
+      <translation>Fant ingen spill. Legg til spillene dine i biblioteket først.</translation>
     </message>
     <message>
       <source>&amp;Manage Game</source>
-      <translation type="unfinished">&amp;Manage Game</translation>
+      <translation>&amp;Håndter spill</translation>
     </message>
     <message>
       <source>&amp;Hide From Game List</source>
-      <translation type="unfinished">&amp;Hide From Game List</translation>
+      <translation>&amp;Skjul fra spilliste</translation>
     </message>
     <message>
       <source>&amp;Add/Edit Tooltip Notes</source>
-      <translation type="unfinished">&amp;Add/Edit Tooltip Notes</translation>
+      <translation>&amp;Legg til/rediger hjelpebobler</translation>
     </message>
     <message>
       <source>&amp;Convert to ZArchive (.zar)...</source>
@@ -1406,103 +1406,111 @@ Continue?</translation>
     </message>
     <message>
       <source>&amp;Copy Info</source>
-      <translation type="unfinished">&amp;Copy Info</translation>
+      <translation>&amp;Kopier info</translation>
     </message>
     <message>
       <source>&amp;Copy Name + Serial</source>
-      <translation type="unfinished">&amp;Copy Name + Serial</translation>
+      <translation>&amp;Kopier navn og serienummer</translation>
     </message>
     <message>
       <source>&amp;Copy Name</source>
-      <translation type="unfinished">&amp;Copy Name</translation>
+      <translation>&amp;Kopier navn</translation>
     </message>
     <message>
       <source>&amp;Copy Serial</source>
-      <translation type="unfinished">&amp;Copy Serial</translation>
+      <translation>&amp;Kopier serienummer</translation>
     </message>
     <message>
       <source>&amp;Delete...</source>
-      <translation type="unfinished">&amp;Delete...</translation>
+      <translation>&amp;Slett …</translation>
     </message>
     <message>
       <source>&amp;Delete Game</source>
-      <translation type="unfinished">&amp;Delete Game</translation>
+      <translation>&amp;Slett spill</translation>
     </message>
     <message>
       <source>&amp;Delete Update</source>
-      <translation type="unfinished">&amp;Delete Update</translation>
+      <translation>&amp;Slett oppdatering</translation>
     </message>
     <message>
       <source>Delete Game + &amp;Update</source>
-      <translation type="unfinished">Delete Game + &amp;Update</translation>
+      <translation>Slett spill og &amp;oppdatering</translation>
     </message>
     <message>
       <source>&amp;Delete Save Data</source>
-      <translation type="unfinished">&amp;Delete Save Data</translation>
+      <translation>&amp;Slett lagret data</translation>
     </message>
     <message>
       <source>&amp;Delete DLC </source>
-      <translation type="unfinished">&amp;Delete DLC </translation>
+      <translation>&amp;Slett nedlastbart innhold </translation>
     </message>
     <message>
       <source>&amp;Delete Trophy</source>
-      <translation type="unfinished">&amp;Delete Trophy</translation>
+      <translation>&amp;Slett trofé</translation>
     </message>
     <message>
       <source>&amp;Delete Shader Cache</source>
-      <translation type="unfinished">&amp;Delete Shader Cache</translation>
+      <translation>&amp;Slett skyggelegger hurtiglager</translation>
     </message>
     <message>
       <source>Clear &amp;Metadata Cache</source>
-      <translation type="unfinished">Clear &amp;Metadata Cache</translation>
+      <translation>Tøm metadata-hurtiglager</translation>
     </message>
     <message>
       <source>&amp;Compatibility</source>
-      <translation type="unfinished">&amp;Compatibility</translation>
+      <translation>&amp;Kompatibilitet</translation>
     </message>
     <message>
       <source>&amp;View Report</source>
-      <translation type="unfinished">&amp;View Report</translation>
+      <translation>&amp;Vis rapport</translation>
     </message>
     <message>
       <source>&amp;Submit Report</source>
-      <translation type="unfinished">&amp;Submit Report</translation>
+      <translation>&amp;Send inn rapport</translation>
     </message>
     <message>
       <source>&amp;Update Database</source>
-      <translation type="unfinished">&amp;Update Database</translation>
+      <translation>&amp;Oppdater database</translation>
     </message>
     <message>
       <source>&amp;Remove Custom Configuration</source>
-      <translation type="unfinished">&amp;Remove Custom Configuration</translation>
+      <translation>&amp;Fjern tilpasset oppsett</translation>
     </message>
     <message>
       <source>No Report Available</source>
-      <translation type="unfinished">No Report Available</translation>
+      <translation>Ingen rapport tilgjengelig</translation>
     </message>
     <message>
       <source>There is no compatibility report available for this game.</source>
-      <translation type="unfinished">There is no compatibility report available for this game.</translation>
+      <translation>Det er ingen kompatibilitets rapport tilgjengelig for dette spillet.</translation>
     </message>
     <message>
       <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
-      <translation type="unfinished">The log is invalid, it either doesn&apos;t exist or log filters were used.</translation>
+      <translation>Loggen er ugyldig, enten finnes den ikke, eller loggfilter ble tatt i bruk.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Klarte ikke sende rapport, fordi den nyeste loggen for spillet passerte ikke følgende kontroll, og derfor ville vært en ugyldig rapport:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Ok</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Info</translation>
     </message>
     <message>
       <source>Edit Tooltip Notes</source>
-      <translation type="unfinished">Edit Tooltip Notes</translation>
+      <translation>Rediger hjelpebobler</translation>
+    </message>
+    <message>
+      <source>The archive was saved to a folder that isn&apos;t one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
+      <translation type="unfinished">The archive was saved to a folder that isn&apos;t one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</translation>
+    </message>
+    <message>
+      <source>The folder was extracted, but it isn&apos;t inside one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
+      <translation type="unfinished">The folder was extracted, but it isn&apos;t inside one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</translation>
     </message>
   </context>
   <context>
@@ -2046,7 +2054,7 @@ Erstatt den gjeldende lista i sin helhet, eller tilføy disse oppføringene til 
     </message>
     <message>
       <source>D-Pad</source>
-      <translation>Navigasjonsknapper</translation>
+      <translation>Styrekors</translation>
     </message>
     <message>
       <source>Up</source>
@@ -2070,15 +2078,15 @@ Erstatt den gjeldende lista i sin helhet, eller tilføy disse oppføringene til 
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation>Venstre analog halvmodus</translation>
+      <translation>Venstre tommelspak halvmodus</translation>
     </message>
     <message>
       <source>hold to move left stick at half-speed</source>
-      <translation>Hold for å bevege venstre analog med halv hastighet</translation>
+      <translation>Hold for å bevege venstre tommelspak med halv hastighet</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation>Venstre analog</translation>
+      <translation>Venstre tommelspak</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -2106,7 +2114,7 @@ Erstatt den gjeldende lista i sin helhet, eller tilføy disse oppføringene til 
     </message>
     <message>
       <source>Options</source>
-      <translation>Innstillinger</translation>
+      <translation>Valg</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
@@ -2154,7 +2162,7 @@ Erstatt den gjeldende lista i sin helhet, eller tilføy disse oppføringene til 
     </message>
     <message>
       <source>Triangle</source>
-      <translation>Triangel</translation>
+      <translation>Trekant</translation>
     </message>
     <message>
       <source>Square</source>
@@ -2170,15 +2178,15 @@ Erstatt den gjeldende lista i sin helhet, eller tilføy disse oppføringene til 
     </message>
     <message>
       <source>Right Analog Halfmode</source>
-      <translation>Høyre analog halvmodus</translation>
+      <translation>Høyre tommelspak halvmodus</translation>
     </message>
     <message>
       <source>hold to move right stick at half-speed</source>
-      <translation>Hold for å bevege høyre analog med halv hastighet</translation>
+      <translation>Hold for å bevege høyre tommelspak med halv hastighet</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation>Høyre analog</translation>
+      <translation>Høyre tommelspak</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
@@ -2238,7 +2246,7 @@ Erstatt den gjeldende lista i sin helhet, eller tilføy disse oppføringene til 
     </message>
     <message>
       <source>Mousewheel cannot be mapped to stick outputs</source>
-      <translation>Musehjulet kan ikke tildeles analogstikkene</translation>
+      <translation>Musehjulet kan ikke tildeles tommelspakene</translation>
     </message>
   </context>
   <context>
@@ -2798,16 +2806,16 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message numerus="yes">
       <source>%n game(s)</source>
-      <translation type="unfinished">
-        <numerusform>%n game(s)</numerusform>
-        <numerusform>%n game(s)</numerusform>
+      <translation>
+        <numerusform>%n spill</numerusform>
+        <numerusform>%n spill</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%1 of %n game(s)</source>
-      <translation type="unfinished">
-        <numerusform>%1 of %n game(s)</numerusform>
-        <numerusform>%1 of %n game(s)</numerusform>
+      <translation>
+        <numerusform>%1 av %n spill</numerusform>
+        <numerusform>%1 av %n spill</numerusform>
       </translation>
     </message>
   </context>
@@ -3118,7 +3126,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Extracting: %1</source>
-      <translation type="unfinished">Extracting: %1</translation>
+      <translation>Pakker ut: %1</translation>
     </message>
   </context>
   <context>
@@ -3778,7 +3786,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Global Settings</source>
-      <translation>Globale-innstillinger</translation>
+      <translation>Globale innstillinger</translation>
     </message>
     <message>
       <source>Failed to save game settings.</source>
@@ -3956,11 +3964,11 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     </message>
     <message>
       <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <translation>Rød sone beskyttelse</translation>
     </message>
     <message>
       <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <translation>Statisk retting</translation>
     </message>
   </context>
   <context>
@@ -4951,19 +4959,19 @@ Versjonen fungerer kanskje ikke riktig ved oppstart.</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Navn</translation>
     </message>
     <message>
       <source>Type</source>
-      <translation type="unfinished">Type</translation>
+      <translation>Type</translation>
     </message>
     <message>
       <source>Select All</source>
-      <translation type="unfinished">Select All</translation>
+      <translation>Velg alle</translation>
     </message>
     <message>
       <source>Select None</source>
-      <translation type="unfinished">Select None</translation>
+      <translation>Velg ingen</translation>
     </message>
     <message>
       <source>Extract Selected...</source>
@@ -4975,23 +4983,23 @@ Versjonen fungerer kanskje ikke riktig ved oppstart.</translation>
     </message>
     <message>
       <source>Folder</source>
-      <translation type="unfinished">Folder</translation>
+      <translation>Mappe</translation>
     </message>
     <message>
       <source>File</source>
-      <translation type="unfinished">File</translation>
+      <translation>Fil</translation>
     </message>
     <message>
       <source>Loading...</source>
-      <translation type="unfinished">Loading...</translation>
+      <translation>Laster …</translation>
     </message>
     <message>
       <source>No files selected.</source>
-      <translation type="unfinished">No files selected.</translation>
+      <translation>Ingen filer valgt.</translation>
     </message>
     <message>
       <source>%1 file(s) selected.</source>
-      <translation type="unfinished">%1 file(s) selected.</translation>
+      <translation>%1 fil(er) valgt.</translation>
     </message>
     <message>
       <source>Extract Selected</source>
@@ -5023,7 +5031,7 @@ Versjonen fungerer kanskje ikke riktig ved oppstart.</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Avbryt</translation>
     </message>
     <message>
       <source>Failed to extract files:
@@ -5033,7 +5041,7 @@ Versjonen fungerer kanskje ikke riktig ved oppstart.</translation>
     </message>
     <message>
       <source>Extraction finished.</source>
-      <translation type="unfinished">Extraction finished.</translation>
+      <translation>Utpakking fullført.</translation>
     </message>
   </context>
 </TS>

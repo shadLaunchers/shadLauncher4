@@ -1318,19 +1318,19 @@ Continuar?</translation>
     </message>
     <message>
       <source>&amp;Open Log Folder</source>
-      <translation>&amp;Abrir Pasta de Registro</translation>
+      <translation>&amp;Abrir Pasta de Log</translation>
     </message>
     <message>
       <source>Log Not Found</source>
-      <translation>Registro Não Encontrado</translation>
+      <translation>Log Não Encontrado</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
-      <translation>Nenhum arquivo de registro foi encontrado para este jogo!</translation>
+      <translation>Nenhum arquivo de log foi encontrado para este jogo!</translation>
     </message>
     <message>
       <source>Open Log Folder</source>
-      <translation>Abrir Pasta de Registro</translation>
+      <translation>Abrir Pasta de Log</translation>
     </message>
     <message>
       <source>&amp;SFO viewer</source>
@@ -1486,11 +1486,11 @@ Continuar?</translation>
     </message>
     <message>
       <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
-      <translation>O registro é inválido, não existe ou foram utilizados filtros de registro.</translation>
+      <translation>O log é inválido, não existe ou foram utilizados filtros de log.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation>Não foi possível enviar o relatório. Ocorreu a falha de verificação abaixo no registro mais recente do jogo e, portanto, resultaria em um relatório inválido:</translation>
+      <translation>Não foi possível enviar o relatório. Ocorreu a falha de verificação abaixo no log mais recente do jogo e, portanto, resultaria em um relatório inválido:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -1503,6 +1503,14 @@ Continuar?</translation>
     <message>
       <source>Edit Tooltip Notes</source>
       <translation>Editar Observações do Balão de Ajuda</translation>
+    </message>
+    <message>
+      <source>The archive was saved to a folder that isn&apos;t one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
+      <translation>O arquivamento foi salvo em uma pasta que não é uma das suas pastas de jogos configuradas; portanto, ele não aparecerá na lista de jogos. Mova-o para uma pasta configurada ou adicione essa pasta em Configurações, caso queira que ele apareça.</translation>
+    </message>
+    <message>
+      <source>The folder was extracted, but it isn&apos;t inside one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
+      <translation>A pasta foi extraída, mas não está dentro de uma das suas pastas de jogos configuradas; portanto, ela não aparecerá na lista de jogos. Mova-a para uma pasta configurada ou adicione esta pasta em Configurações, caso queira que ela apareça.</translation>
     </message>
   </context>
   <context>
@@ -1631,7 +1639,7 @@ Utilizando o banco de dados local.
     </message>
     <message>
       <source>Game Log</source>
-      <translation>Registro do Jogo</translation>
+      <translation>Log do Jogo</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
@@ -2291,7 +2299,7 @@ Substituir a lista atual completamente ou adicionar estas entradas a ela (entrad
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation>Predefinições do Filtro de Registro</translation>
+      <translation>Predefinições do Filtro do Log</translation>
     </message>
     <message>
       <source>Comment</source>
@@ -2682,7 +2690,7 @@ Substituir a lista atual completamente ou adicionar estas entradas a ela (entrad
     </message>
     <message>
       <source>Could not read SFO. Check log for details.</source>
-      <translation>Não foi possível ler o SFO. Verifique o registro para detalhes.</translation>
+      <translation>Não foi possível ler o SFO. Verifique o log para detalhes.</translation>
     </message>
     <message>
       <source>Run Game</source>
@@ -2754,7 +2762,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation>Mostrar Registro do Jogo</translation>
+      <translation>Mostrar Log do Jogo</translation>
     </message>
     <message>
       <source>Keyboard</source>
@@ -3482,7 +3490,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation>Registro</translation>
+      <translation>Log</translation>
     </message>
     <message>
       <source>Logger</source>
@@ -3490,19 +3498,19 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
-      <translation>Habilitar Monitoramento</translation>
+      <translation>Habilitar Logging</translation>
     </message>
     <message>
       <source>Separate Log Files</source>
-      <translation>Arquivos de Registro Separados</translation>
+      <translation>Separar Arquivos de Log</translation>
     </message>
     <message>
       <source>Log Type</source>
-      <translation>Tipo de Registro</translation>
+      <translation>Tipo de Log</translation>
     </message>
     <message>
       <source>Log Filter</source>
-      <translation>Filtro do Registro</translation>
+      <translation>Filtro do Log</translation>
     </message>
     <message>
       <source>Load Presets...</source>
@@ -3510,7 +3518,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Open Log Location</source>
-      <translation>Abrir Local do Registro</translation>
+      <translation>Abrir Local do Log</translation>
     </message>
     <message>
       <source>Debug</source>
@@ -3856,15 +3864,15 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Log Sync</source>
-      <translation>Sincronização de Registro</translation>
+      <translation>Sincronização de Log</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation>Ignorar Registros Duplicados</translation>
+      <translation>Ignorar Duplicadas no Log</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation>Duração Máxima para Ignorar Registros</translation>
+      <translation>Duração Máxima para Ignorar Log</translation>
     </message>
     <message>
       <source> ms</source>
@@ -3872,7 +3880,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation>Tamanho Limite do Registro</translation>
+      <translation>Tamanho Limite do Log</translation>
     </message>
     <message>
       <source> B</source>
@@ -3880,7 +3888,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Log Append</source>
-      <translation>Anexar ao Registro</translation>
+      <translation>Anexar ao Log</translation>
     </message>
     <message>
       <source>wincolor</source>
@@ -4031,7 +4039,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Filtro do Registro:\nFiltra o registro para exibir apenas informações específicas.\nExemplos: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNíveis: trace, debug, info, warning, error, critical - nesta ordem, um nível específico silencia todos os níveis anteriores na lista e registra todos os níveis após este.</translation>
+      <translation>Filtro do Log:\nFiltra o log para exibir apenas informações específicas.\nExemplos: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNíveis: trace, debug, info, warning, error, critical - nesta ordem, um nível específico silencia todos os níveis anteriores na lista e registra todos os níveis após este.</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</source>
@@ -4055,35 +4063,35 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation>Abrir Local do Registro:\nAbre a pasta onde o arquivo de registro é salvo.</translation>
+      <translation>Abrir Local do Log:\nAbre a pasta onde o arquivo de log é salvo.</translation>
     </message>
     <message>
       <source>Separate Log Files:\nWrites a separate logfile for each game.</source>
-      <translation>Arquivos de Registro Separados:\nEscreve um arquivo de registro separado para cada jogo.</translation>
+      <translation>Separar Arquivos de Log:\nEscreve um arquivo de log separado para cada jogo.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation>Sincronização de Registro:\nAlternar entre síncrono (ordem) ou assíncrono (desempenho).</translation>
+      <translation>Sincronização de Log:\nAlternar entre síncrono (ordem) ou assíncrono (desempenho).</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation>Ignorar Registros Duplicados:\nEconomize espaço de armazenamento evitando gravar registros idênticos.</translation>
+      <translation>Ignorar Duplicadas no Log:\nEconomize espaço de armazenamento evitando gravar registros idênticos.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation>Duração Máxima para Ignorar Registros:\nIntervalo sem escrever as mesmas linhas (ms) - somente se &apos;Ignorar Registros Duplicados&apos; estiver ativado.</translation>
+      <translation>Duração Máxima para Ignorar Log:\nIntervalo sem escrever as mesmas linhas (ms) - somente se &apos;Ignorar Duplicadas no Log&apos; estiver ativado.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation>Tamanho Limite do Registro:\nTamanho máximo dos arquivos de registro (em bytes).</translation>
+      <translation>Tamanho Limite do Log:\nTamanho máximo dos arquivos de registro (em bytes).</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation>Anexar ao Registro:\nAdiciona aos registros existentes.</translation>
+      <translation>Anexar ao Log:\nAdiciona aos logs existentes.</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation>Tipo de Registro:\nEscolha entre os tipos de registro wincolor ou msvc.\nwincolor: O monitoramento padrão do Windows\nmsvc: Monitoramento para depuração</translation>
+      <translation>Tipo de Log:\nEscolha entre os tipos de registro wincolor ou msvc.\nwincolor: O monitoramento padrão do Windows\nmsvc: Monitoramento para depuração</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
@@ -4248,11 +4256,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Log:\nSettings that control what gets logged and how log files are written.</source>
-      <translation>Registro:\nConfigurações que controlam o que é monitorado e como os arquivos de registro são gravados.</translation>
+      <translation>Log:\nConfigurações que controlam o que é monitorado e como os arquivos de log são gravados.</translation>
     </message>
     <message>
       <source>Load Presets...:\nChoose from a list of common log filter presets instead of typing one by hand.</source>
-      <translation>Carregar Predefinições...:\nEscolha a partir de uma lista de predefinições de filtros de registros comuns, em vez de digitar uma manualmente.</translation>
+      <translation>Carregar Predefinições...:\nEscolha a partir de uma lista de predefinições de filtros de log comuns, em vez de digitar uma manualmente.</translation>
     </message>
     <message>
       <source>Music Volume:\nAdjust the volume of the background/title music played in the GUI.</source>
