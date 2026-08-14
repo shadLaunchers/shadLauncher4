@@ -33,6 +33,7 @@
 #include "core/file_sys/game_backend.h"
 #include "core/file_sys/zar_packer.h"
 #include "core/ipc/ipc_client.h"
+#include "game_categories.h"
 #include "game_list_context_menu.h"
 #include "game_list_frame.h"
 #include "gui_application.h"
@@ -81,6 +82,13 @@ bool IsPathWithinAnyDir(const std::filesystem::path& path,
         }
     }
     return false;
+}
+
+static void RetargetCategories(GameListFrame* frame, const std::string& old_path,
+                               const std::string& new_path) {
+    if (GameCategories* categories = frame ? frame->GetCategories() : nullptr) {
+        categories->Relocate(QString::fromStdString(old_path), QString::fromStdString(new_path));
+    }
 }
 
 GameListContextMenu::GameListContextMenu(GameListFrame* frame) : QMenu(frame), m_frame(frame) {}
@@ -481,11 +489,13 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         }
 
         convertPathToZArchiveHandler(source_path, game_name, tr("Convert to ZArchive"), extra_note,
-                                     [game, refreshOneGameLight, applyNewPathIfWatched](
+                                     [frame, game, refreshOneGameLight, applyNewPathIfWatched](
                                          const std::filesystem::path& new_path) {
                                          applyNewPathIfWatched(
                                              new_path,
-                                             [game, new_path, refreshOneGameLight] {
+                                             [frame, game, new_path, refreshOneGameLight] {
+                                                 RetargetCategories(frame, game->info.path,
+                                                                    new_path.string());
                                                  game->info.path = new_path.string();
                                                  refreshOneGameLight(game);
                                              },
@@ -649,6 +659,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                                                   ? frame->m_emu_settings->GetGameInstallDirs()
                                                   : std::vector<std::filesystem::path>{};
                     if (IsPathWithinAnyDir(output_path.parent_path(), install_dirs)) {
+                        RetargetCategories(frame, game->info.path, output_path.string());
                         game->info.path = output_path.string();
                         game->info.size_on_disk = UINT64_MAX;
                         frame->Refresh(false);
@@ -993,6 +1004,101 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
     browse_update_zar->setVisible(
         !current_game.update_path.empty() &&
         Core::FileSys::IsZArchiveFile(std::filesystem::path(current_game.update_path)));
+
+    // Categories menu
+    QMenu* category_menu = addMenu(tr("&Categories"));
+    if (GameCategories* categories = frame->GetCategories()) {
+        const GameKey game_key = GameCategories::KeyFor(current_game);
+        const QStringList category_names = categories->Names();
+        const QStringList current_categories = categories->CategoriesOf(game_key);
+        const QString active_tab = frame->CurrentCategory();
+        const bool move_from_tab = !active_tab.isEmpty() && current_categories.contains(active_tab);
+
+        auto escape_mnemonics = [](const QString& text) {
+            return QString(text).replace('&', "&&");
+        };
+
+        for (const QString& category : category_names) {
+            QAction* category_action = category_menu->addAction(escape_mnemonics(category));
+            category_action->setCheckable(true);
+            category_action->setChecked(current_categories.contains(category));
+            connect(category_action, &QAction::toggled, frame,
+                    [categories, game_key, category](bool checked) {
+                        categories->SetMembership(game_key, category, checked);
+                    });
+        }
+
+        if (!category_names.isEmpty()) {
+            category_menu->addSeparator();
+
+            QMenu* move_menu = category_menu->addMenu(
+                move_from_tab ? tr("&Move From \"%1\" To").arg(escape_mnemonics(active_tab))
+                              : tr("&Move To"));
+            move_menu->setToolTipsVisible(true);
+
+            for (const QString& category : category_names) {
+                if (move_from_tab && category == active_tab) {
+                    continue;
+                }
+
+                QAction* move_action = move_menu->addAction(escape_mnemonics(category));
+
+                if (move_from_tab) {
+                    move_action->setToolTip(tr("Take %1 out of \"%2\" and put it in \"%3\".")
+                                                .arg(name, active_tab, category));
+                    connect(move_action, &QAction::triggered, frame,
+                            [categories, game_key, active_tab, category] {
+                                categories->MoveBetween(game_key, active_tab, category);
+                            });
+                } else {
+                    // Already the game's one and only category, nothing to do.
+                    move_action->setEnabled(current_categories != QStringList{category});
+                    move_action->setToolTip(
+                        tr("Put %1 in \"%2\" only, removing it from its other categories.")
+                            .arg(name, category));
+                    connect(move_action, &QAction::triggered, frame,
+                            [categories, game_key, category] {
+                                categories->MoveTo(game_key, category);
+                            });
+                }
+            }
+
+            move_menu->addSeparator();
+
+            QAction* move_to_new = move_menu->addAction(tr("&New Category..."));
+            connect(move_to_new, &QAction::triggered, frame,
+                    [frame, categories, game_key, active_tab, move_from_tab] {
+                        const QString created = frame->PromptNewCategory();
+                        if (created.isEmpty()) {
+                            return;
+                        }
+                        if (move_from_tab) {
+                            categories->MoveBetween(game_key, active_tab, created);
+                        } else {
+                            categories->MoveTo(game_key, created);
+                        }
+                    });
+
+            QAction* uncategorize = move_menu->addAction(
+                move_from_tab ? tr("&Out Of \"%1\"").arg(escape_mnemonics(active_tab))
+                              : tr("&No Category"));
+            uncategorize->setEnabled(!current_categories.isEmpty());
+            connect(uncategorize, &QAction::triggered, frame,
+                    [categories, game_key, active_tab, move_from_tab] {
+                        if (move_from_tab) {
+                            categories->SetMembership(game_key, active_tab, false);
+                        } else {
+                            categories->MoveTo(game_key, QString());
+                        }
+                    });
+
+            category_menu->addSeparator();
+        }
+
+        QAction* new_category = category_menu->addAction(tr("&New Category..."));
+        connect(new_category, &QAction::triggered, frame,
+                [frame, game_key] { frame->PromptNewCategory(&game_key); });
+    }
 
     // Copy Info menu
     QMenu* info_menu = addMenu(tr("&Copy Info"));

@@ -22,6 +22,7 @@
 #include <QPointer>
 #include <QPushButton>
 #include <QScrollBar>
+#include <QVBoxLayout>
 #include <QtConcurrent>
 #include <core/user_settings.h>
 #include <fmt/core.h>
@@ -35,6 +36,7 @@
 #include "core/file_sys/game_backend.h"
 #include "core/file_sys/zar_packer.h"
 #include "core/ipc/ipc_client.h"
+#include "game_categories.h"
 #include "game_list_context_menu.h"
 #include "game_list_frame.h"
 #include "game_list_grid.h"
@@ -89,6 +91,10 @@ GameListFrame::GameListFrame(std::shared_ptr<GUISettings> gui_settings,
 
     m_old_layout_is_list = m_is_list_layout;
 
+    m_categories = std::make_shared<GameCategories>(m_gui_settings);
+    m_current_category =
+        m_categories->Resolve(m_gui_settings->GetValue(GUI::game_list_current_category).toString());
+
     m_info_cache = std::make_shared<GameInfoCache>(
         Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "game_info_cache.sqlite3");
     QThreadPool::globalInstance()->start([cache = m_info_cache]() { cache->WarmUp(); });
@@ -122,6 +128,25 @@ GameListFrame::GameListFrame(std::shared_ptr<GUISettings> gui_settings,
         m_central_widget->setCurrentWidget(m_game_grid);
     }
 
+    // One tab per category, sitting right above the list/grid.
+    m_category_tabs = new QTabBar(this);
+    m_category_tabs->setExpanding(false);
+    m_category_tabs->setDrawBase(false);
+    m_category_tabs->setUsesScrollButtons(true);
+    m_category_tabs->setElideMode(Qt::ElideRight);
+    m_category_tabs->setContextMenuPolicy(Qt::CustomContextMenu);
+    m_category_tabs->setToolTip(tr("Right click a tab to add, rename or delete a category.\n"
+                                   "Use the game's right click menu to put it into a category."));
+
+    QWidget* game_area = new QWidget(this);
+    QVBoxLayout* game_area_layout = new QVBoxLayout(game_area);
+    game_area_layout->setContentsMargins(0, 0, 0, 0);
+    game_area_layout->setSpacing(0);
+    game_area_layout->addWidget(m_category_tabs);
+    game_area_layout->addWidget(m_central_widget);
+
+    RebuildCategoryTabs();
+
     splitter = new QSplitter(Qt::Vertical);
     logDisplay = new QTextEdit(splitter);
 
@@ -132,7 +157,7 @@ GameListFrame::GameListFrame(std::shared_ptr<GUISettings> gui_settings,
     logDisplay->setText(tr("Game Log"));
     logDisplay->setReadOnly(true);
 
-    splitter->addWidget(m_central_widget);
+    splitter->addWidget(game_area);
     splitter->addWidget(logDisplay);
 
     QList<int> sizes =
@@ -199,6 +224,15 @@ void GameListFrame::LoadSettings() {
                            : Qt::DescendingOrder;
     m_sort_column = m_gui_settings->GetValue(GUI::game_list_sortCol).toInt();
     m_draw_compat_status_to_grid = m_gui_settings->GetValue(GUI::game_list_draw_compat).toBool();
+
+    // Categories live in the settings too, so pick up external changes (e.g. a
+    // settings reset) and rebuild the tabs from them.
+    if (m_categories) {
+        m_categories->Load();
+        m_current_category = m_categories->Resolve(
+            m_gui_settings->GetValue(GUI::game_list_current_category).toString());
+        RebuildCategoryTabs();
+    }
 
     m_game_list->SyncHeaderActions(m_columnActs, [this](int col) {
         return m_gui_settings->GetGamelistColVisibility(static_cast<GUI::GameListColumns>(col));
@@ -287,6 +321,15 @@ void GameListFrame::CreateConnections() {
                     m_progress_dialog->SetValue(value);
                 }
             });
+    // category tabs
+    connect(m_category_tabs, &QTabBar::currentChanged, this, &GameListFrame::OnCategoryTabChanged);
+    connect(m_category_tabs, &QWidget::customContextMenuRequested, this,
+            &GameListFrame::ShowCategoryTabContextMenu);
+    connect(m_categories.get(), &GameCategories::Changed, this, [this]() {
+        RebuildCategoryTabs();
+        Refresh(false, {}, false);
+    });
+
     // context menu and clicks
     connect(m_game_list, &QTableWidget::customContextMenuRequested, this,
             &GameListFrame::ShowContextMenu);
@@ -432,8 +475,181 @@ bool GameListFrame::SearchMatchesApp(const QString& name, const QString& serial,
 bool GameListFrame::IsEntryVisible(const game_info& game, bool search_fallback) const {
     const QString serial = QString::fromStdString(game->info.serial);
     const bool is_visible = m_show_hidden || !m_hidden_list.contains(serial);
-    return is_visible &&
+    return is_visible && MatchesCurrentCategory(game) &&
            SearchMatchesApp(QString::fromStdString(game->info.name), serial, search_fallback);
+}
+
+bool GameListFrame::MatchesCurrentCategory(const game_info& game) const {
+    // The "All" tab has no category attached to it and shows everything.
+    if (m_current_category.isEmpty() || !m_categories) {
+        return true;
+    }
+    if (!game) {
+        return false;
+    }
+    return m_categories->IsInCategory(GameCategories::KeyFor(game->info), m_current_category);
+}
+
+void GameListFrame::RebuildCategoryTabs() {
+    if (!m_category_tabs) {
+        return;
+    }
+
+    // A category may have been deleted or renamed under our feet.
+    if (!m_current_category.isEmpty() && !m_categories->Contains(m_current_category)) {
+        m_current_category.clear();
+        m_gui_settings->SetValue(GUI::game_list_current_category, m_current_category);
+    }
+
+    // Don't let the rebuild itself trigger a category change.
+    m_updating_category_tabs = true;
+
+    while (m_category_tabs->count() > 0) {
+        m_category_tabs->removeTab(0);
+    }
+
+    const int all_tab = m_category_tabs->addTab(tr("All"));
+    m_category_tabs->setTabData(all_tab, QString());
+    m_category_tabs->setTabToolTip(all_tab, tr("Every game found in your game folders"));
+
+    int index_to_select = all_tab;
+
+    for (const QString& category : m_categories->Names()) {
+        // Escape ampersands so they don't turn into a mnemonic.
+        const int tab = m_category_tabs->addTab(QString(category).replace('&', "&&"));
+        m_category_tabs->setTabData(tab, category);
+        m_category_tabs->setTabToolTip(
+            tab, tr("%n game(s) in this category", "", m_categories->CountIn(category)));
+
+        if (category == m_current_category) {
+            index_to_select = tab;
+        }
+    }
+
+    m_category_tabs->setCurrentIndex(index_to_select);
+
+    m_updating_category_tabs = false;
+}
+
+void GameListFrame::OnCategoryTabChanged(int index) {
+    if (m_updating_category_tabs || !m_category_tabs) {
+        return;
+    }
+
+    const QString category = index >= 0 ? m_category_tabs->tabData(index).toString() : QString();
+    if (category == m_current_category) {
+        return;
+    }
+
+    m_current_category = category;
+    m_gui_settings->SetValue(GUI::game_list_current_category, m_current_category);
+    Refresh(false, {}, false);
+}
+
+void GameListFrame::SetCurrentCategory(const QString& category) {
+    if (!m_category_tabs) {
+        return;
+    }
+
+    const QString resolved = m_categories->Resolve(category);
+    for (int i = 0; i < m_category_tabs->count(); ++i) {
+        if (m_category_tabs->tabData(i).toString() == resolved) {
+            m_category_tabs->setCurrentIndex(i);
+            return;
+        }
+    }
+}
+
+QString GameListFrame::PromptNewCategory(const GameKey* key) {
+    bool accepted = false;
+    const QString name = QInputDialog::getText(this, tr("New Category"), tr("Category name:"),
+                                               QLineEdit::Normal, QString(), &accepted)
+                             .trimmed();
+
+    if (!accepted || name.isEmpty()) {
+        return {};
+    }
+
+    if (m_categories->Contains(name)) {
+        const QString existing = m_categories->Resolve(name);
+        QMessageBox::information(this, tr("Category Already Exists"),
+                                 tr("A category named \"%1\" already exists.").arg(existing));
+        if (key && !key->IsNull()) {
+            m_categories->SetMembership(*key, existing, true);
+        }
+        return existing;
+    }
+
+    if (!m_categories->Create(name)) {
+        return {};
+    }
+
+    if (key && !key->IsNull()) {
+        m_categories->SetMembership(*key, name, true);
+    }
+    return name;
+}
+
+void GameListFrame::ShowCategoryTabContextMenu(const QPoint& pos) {
+    if (!m_category_tabs) {
+        return;
+    }
+
+    const int tab = m_category_tabs->tabAt(pos);
+    const QString category = tab >= 0 ? m_category_tabs->tabData(tab).toString() : QString();
+
+    QMenu menu(this);
+    QAction* new_category = menu.addAction(tr("&New Category..."));
+
+    QAction* rename_category = nullptr;
+    QAction* delete_category = nullptr;
+    if (!category.isEmpty()) {
+        menu.addSeparator();
+        rename_category = menu.addAction(tr("&Rename \"%1\"").arg(category));
+        delete_category = menu.addAction(tr("&Delete \"%1\"").arg(category));
+    }
+
+    QAction* chosen = menu.exec(m_category_tabs->mapToGlobal(pos));
+    if (!chosen) {
+        return;
+    }
+
+    if (chosen == new_category) {
+        PromptNewCategory();
+    } else if (chosen == rename_category) {
+        bool accepted = false;
+        const QString name =
+            QInputDialog::getText(this, tr("Rename Category"), tr("Category name:"),
+                                  QLineEdit::Normal, category, &accepted)
+                .trimmed();
+        if (!accepted || name.isEmpty() || name == category) {
+            return;
+        }
+        const bool was_current = m_current_category == category;
+        if (was_current) {
+            m_current_category = name;
+        }
+
+        if (m_categories->Rename(category, name)) {
+            if (was_current) {
+                m_gui_settings->SetValue(GUI::game_list_current_category, m_current_category);
+            }
+        } else {
+            if (was_current) {
+                m_current_category = category;
+            }
+            QMessageBox::information(this, tr("Category Already Exists"),
+                                     tr("A category named \"%1\" already exists.").arg(name));
+        }
+    } else if (chosen == delete_category) {
+        const QMessageBox::StandardButton reply = QMessageBox::question(
+            this, tr("Delete Category"),
+            tr("Delete the category \"%1\"? The games in it are not touched.").arg(category),
+            QMessageBox::Yes | QMessageBox::No);
+        if (reply == QMessageBox::Yes) {
+            m_categories->Remove(category);
+        }
+    }
 }
 
 void GameListFrame::SetShowHidden(bool show) {
