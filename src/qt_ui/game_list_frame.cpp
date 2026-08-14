@@ -266,6 +266,7 @@ void GameListFrame::CreateConnections() {
         m_game_keys.clear();
         m_game_data.clear();
         m_notes.clear();
+        m_titles.clear();
         m_games.pop_all();
         {
             std::lock_guard lock(m_pending_cache_puts_mutex);
@@ -403,18 +404,9 @@ void GameListFrame::OnColumnClicked(int col) {
     m_game_list->sort(m_game_data.size(), m_sort_column, m_col_sort_order);
 }
 
-bool GameListFrame::SearchMatchesApp(const game_info& game, bool fallback) const {
+bool GameListFrame::SearchMatchesTitle(QString title_name, bool fallback) const {
     if (!m_search_text.isEmpty()) {
-        const QString serial = QString::fromStdString(game->info.serial);
         QString search_text = m_search_text.toLower();
-        QString title_name;
-
-        if (const auto it = m_titles.find(GUI::Utils::GameKeyOf(game->info));
-            it != m_titles.cend()) {
-            title_name = it->second.toLower();
-        } else {
-            title_name = QString::fromStdString(game->info.name).toLower();
-        }
 
         // Ignore trademarks when no search results have been yielded by unmodified search
         static const QRegularExpression s_ignored_on_fallback(
@@ -468,9 +460,32 @@ bool GameListFrame::SearchMatchesApp(const game_info& game, bool fallback) const
             }
         }
 
-        return title_name.contains(search_text) || serial.toLower().contains(search_text);
+        return title_name.contains(search_text);
     }
     return true;
+}
+
+bool GameListFrame::SearchMatchesApp(const game_info& game, bool fallback) const {
+    if (m_search_text.isEmpty()) {
+        return true;
+    }
+
+    const QString original_title = QString::fromStdString(game->info.name).toLower();
+    if (SearchMatchesTitle(original_title, fallback)) {
+        return true;
+    }
+
+    // A renamed game has to stay findable under both names, so check the custom
+    // title as well as the one from param.sfo.
+    if (const auto it = m_titles.find(GUI::Utils::GameKeyOf(game->info));
+        it != m_titles.cend()) {
+        const QString custom_title = it->second.toLower();
+        if (custom_title != original_title && SearchMatchesTitle(custom_title, fallback)) {
+            return true;
+        }
+    }
+
+    return QString::fromStdString(game->info.serial).toLower().contains(m_search_text.toLower());
 }
 
 bool GameListFrame::IsEntryVisible(const game_info& game, bool search_fallback) const {
@@ -650,6 +665,19 @@ void GameListFrame::ShowCategoryTabContextMenu(const QPoint& pos) {
             m_categories->Remove(category);
         }
     }
+}
+
+void GameListFrame::ResetCustomTitles() {
+    if (m_titles.empty()) {
+        return;
+    }
+
+    m_titles.clear();
+    if (m_info_cache) {
+        m_info_cache->ClearTitles();
+    }
+
+    Refresh();
 }
 
 void GameListFrame::SetShowHidden(bool show) {
@@ -1073,6 +1101,10 @@ void GameListFrame::OnParsingFinished() {
 
         if (QString note = m_info_cache->GetNotes(game.info.path); !note.isEmpty()) {
             m_notes.insert_or_assign(game_key, std::move(note));
+        }
+
+        if (QString title = m_info_cache->GetTitle(game.info.path); !title.isEmpty()) {
+            m_titles.insert_or_assign(game_key, std::move(title));
         }
 
         m_games_mutex.unlock();
@@ -1547,6 +1579,7 @@ void GameListFrame::Refresh(const bool from_drive,
         m_game_keys.clear();
         m_game_data.clear();
         m_notes.clear();
+        m_titles.clear();
         m_games.pop_all();
         {
             std::lock_guard lock(m_pending_cache_puts_mutex);

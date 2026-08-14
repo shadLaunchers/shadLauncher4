@@ -99,6 +99,13 @@ public:
     /** Select a category tab by name. An unknown or empty name selects "All". */
     void SetCurrentCategory(const QString& category);
 
+    /** Number of games currently showing a user supplied title. */
+    int CustomTitleCount() const {
+        return static_cast<int>(m_titles.size());
+    }
+    /** Drops every custom title and goes back to the names from param.sfo. */
+    void ResetCustomTitles();
+
 public Q_SLOTS:
     void SetListMode(const bool& is_list);
     void SetSearchText(const QString& text);
@@ -138,6 +145,9 @@ private:
     void PushPath(const std::string& path, std::vector<std::string>& legit_paths);
     void CreateConnections();
     bool SearchMatchesApp(const game_info& game, bool fallback = false) const;
+    // Matches the search box against a single title. A game is checked against
+    // both its custom title and its original one.
+    bool SearchMatchesTitle(QString title_name, bool fallback) const;
     QStringList scanDirectories(const std::vector<std::filesystem::path>& baseDirs, int maxDepth,
                                 int currentDepth = 1);
     std::string CurrentSelectionPath();

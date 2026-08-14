@@ -65,7 +65,6 @@ void GameListGrid::Populate(const std::vector<game_info>& game_data,
     };
 
     for (const auto& game : game_data) {
-        const QString serial = QString::fromStdString(game->info.serial);
         const QString title = get_title(GUI::Utils::GameKeyOf(game->info), game->info.name);
 
         GameListGridItem* item = new GameListGridItem(this, game, title);
@@ -74,16 +73,13 @@ void GameListGrid::Populate(const std::vector<game_info>& game_data,
 
         game->item = item;
 
+        QString notes;
         if (const auto it = notes_map.find(GUI::Utils::GameKeyOf(game->info));
-            it != notes_map.cend() && !it->second.isEmpty()) {
-            item->setToolTip(QString("%0 [%1]\n\n%2\n%3")
-                                 .arg(title)
-                                 .arg(serial)
-                                 .arg(tr("Notes:"))
-                                 .arg(it->second));
-        } else {
-            item->setToolTip(QString("%0 [%1]").arg(title).arg(serial));
+            it != notes_map.cend()) {
+            notes = it->second;
         }
+
+        item->setToolTip(BuildToolTip(game, title, notes, true));
 
         item->setImageChangeCallback([this, item, game]() {
             if (!item || !game) {

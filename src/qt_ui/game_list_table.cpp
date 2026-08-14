@@ -368,13 +368,13 @@ void GameListTable::Populate(const std::vector<game_info>& game_data,
         // Serial
         CustomTableWidgetItem* serial_item = new CustomTableWidgetItem(game->info.serial);
 
+        QString notes;
         if (const auto it = notes_map.find(GUI::Utils::GameKeyOf(game->info));
-            it != notes_map.cend() && !it->second.isEmpty()) {
-            const QString tool_tip = QString("%0 [%1]\n\n%2\n%3")
-                                         .arg(title)
-                                         .arg(serial)
-                                         .arg(tr("Notes:"))
-                                         .arg(it->second);
+            it != notes_map.cend()) {
+            notes = it->second;
+        }
+
+        if (const QString tool_tip = BuildToolTip(game, title, notes, false); !tool_tip.isEmpty()) {
             title_item->setToolTip(tool_tip);
             serial_item->setToolTip(tool_tip);
         }

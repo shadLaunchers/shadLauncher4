@@ -5,6 +5,7 @@
 #include "game_list_base.h"
 
 #include <QBuffer>
+#include <QObject>
 #include <QDir>
 #include <QPainter>
 
@@ -223,4 +224,31 @@ QIcon GameListBase::GetCustomConfigIcon(const game_info& game) {
     }
 
     return {};
+}
+
+QString GameListBase::BuildToolTip(const game_info& game, const QString& title,
+                                   const QString& notes, bool always) {
+    if (!game) {
+        return {};
+    }
+
+    const QString original_name = QString::fromStdString(game->info.name).simplified();
+    const bool renamed = title.simplified() != original_name;
+
+    if (!always && !renamed && notes.isEmpty()) {
+        return {};
+    }
+
+    QString tool_tip =
+        QStringLiteral("%0 [%1]").arg(title, QString::fromStdString(game->info.serial));
+
+    if (renamed) {
+        tool_tip += QStringLiteral("\n") + QObject::tr("Original name: %1").arg(original_name);
+    }
+
+    if (!notes.isEmpty()) {
+        tool_tip += QStringLiteral("\n\n") + QObject::tr("Notes:") + QStringLiteral("\n") + notes;
+    }
+
+    return tool_tip;
 }

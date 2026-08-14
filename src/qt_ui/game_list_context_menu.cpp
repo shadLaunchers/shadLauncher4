@@ -7,6 +7,7 @@
 #include <memory>
 #include <regex>
 #include <set>
+#include <system_error>
 #include <unordered_map>
 #include <unordered_set>
 #include <QApplication>
@@ -84,6 +85,57 @@ bool IsPathWithinAnyDir(const std::filesystem::path& path,
     return false;
 }
 
+// Targets of the entries in the "Delete..." submenu.
+struct DeletePaths {
+    QString game;
+    QString update;
+    QString dlc;
+    QString save_data;
+    QString shader_cache_dir;
+    QString shader_cache_zip;
+};
+
+static DeletePaths ResolveDeletePaths(const std::filesystem::path& addon_install_dir,
+                                      const game_info& gameinfo) {
+    DeletePaths paths;
+
+    Common::FS::PathToQString(paths.game, gameinfo->info.path);
+    Common::FS::PathToQString(paths.update, gameinfo->info.update_path);
+
+    if (!addon_install_dir.empty()) {
+        Common::FS::PathToQString(
+            paths.dlc,
+            addon_install_dir / Common::FS::PathFromQString(paths.game).parent_path().filename());
+    }
+
+    const std::string default_user_id =
+        std::to_string(UserSettings.GetUserManager().GetDefaultUser().user_id);
+    Common::FS::PathToQString(paths.save_data, EmulatorSettings.GetHomeDir() / default_user_id /
+                                                   "savedata" / gameinfo->info.save_dir);
+
+    Common::FS::PathToQString(paths.shader_cache_dir,
+                              Common::FS::GetUserPath(Common::FS::PathType::CacheDir) /
+                                  gameinfo->info.serial);
+    Common::FS::PathToQString(paths.shader_cache_zip,
+                              Common::FS::GetUserPath(Common::FS::PathType::CacheDir) /
+                                  (gameinfo->info.serial + ".zip"));
+
+    // Trophies are not implemented yet, so there is no path to resolve for them.
+
+    return paths;
+}
+
+// True when the path is set and something is actually there. Used to keep the
+// "Delete..." submenu down to the entries that would do something.
+static bool DeleteTargetExists(const QString& path) {
+    if (path.isEmpty()) {
+        return false;
+    }
+
+    std::error_code ec;
+    return std::filesystem::exists(Common::FS::PathFromQString(path), ec) && !ec;
+}
+
 // Categories are keyed on the install path, so an operation that relocates a
 // game (the ZArchive conversions) has to carry its assignments over.
 static void RetargetCategories(GameListFrame* frame, const std::string& old_path,
@@ -98,33 +150,22 @@ GameListContextMenu::GameListContextMenu(GameListFrame* frame) : QMenu(frame), m
 void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_pos) {
     GameListFrame* frame = m_frame;
 
-    auto deleteHandler = [frame, gameinfo](GameListFrame::DeleteType type) {
+    // Where each "Delete..." entry points. Worked out once so the menu can hide
+    // the entries whose target isn't on disk and the handler can reuse them.
+    const DeletePaths delete_paths =
+        ResolveDeletePaths(frame->m_emu_settings ? frame->m_emu_settings->GetAddonInstallDir()
+                                                 : std::filesystem::path{},
+                           gameinfo);
+
+    auto deleteHandler = [frame, gameinfo, delete_paths](GameListFrame::DeleteType type) {
         bool error = false;
         QString folder_path;
         QString message_type;
 
-        QString game_path;
-        Common::FS::PathToQString(game_path, gameinfo->info.path);
-
-        QString update_path;
-        Common::FS::PathToQString(update_path, gameinfo->info.update_path);
-
-        QString dlc_path;
-        Common::FS::PathToQString(
-            dlc_path, frame->m_emu_settings->GetAddonInstallDir() /
-                          Common::FS::PathFromQString(game_path).parent_path().filename());
-
-        std::string default_user_id =
-            std::to_string(UserSettings.GetUserManager().GetDefaultUser().user_id);
-        QString save_data_path;
-        Common::FS::PathToQString(save_data_path, EmulatorSettings.GetHomeDir() / default_user_id /
-                                                      "savedata" / gameinfo->info.save_dir);
-
-        // QString trophy_path;
-        // Common::FS::PathToQString(trophy_path,
-        //                           Common::FS::GetUserPath(Common::FS::PathType::MetaDataDir)
-        //                           /
-        //                               gameinfo->info.serial / "TrophyFiles");
+        const QString& game_path = delete_paths.game;
+        const QString& update_path = delete_paths.update;
+        const QString& dlc_path = delete_paths.dlc;
+        const QString& save_data_path = delete_paths.save_data;
 
         switch (type) {
         case GameListFrame::DeleteType::Game:
@@ -211,19 +252,8 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
             break;
 
         case GameListFrame::DeleteType::ShaderCache: {
-            QString shader_cache_path;
-            QString shader_cache_zip;
-
-            Common::FS::PathToQString(shader_cache_path,
-                                      Common::FS::GetUserPath(Common::FS::PathType::CacheDir) /
-                                          gameinfo->info.serial);
-
-            Common::FS::PathToQString(shader_cache_zip,
-                                      Common::FS::GetUserPath(Common::FS::PathType::CacheDir) /
-                                          (gameinfo->info.serial + ".zip"));
-
-            const auto dir_path = Common::FS::PathFromQString(shader_cache_path);
-            const auto zip_path = Common::FS::PathFromQString(shader_cache_zip);
+            const auto dir_path = Common::FS::PathFromQString(delete_paths.shader_cache_dir);
+            const auto zip_path = Common::FS::PathFromQString(delete_paths.shader_cache_zip);
 
             bool has_dir = std::filesystem::exists(dir_path);
             bool has_zip = std::filesystem::exists(zip_path);
@@ -260,6 +290,13 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
             frame->Refresh(true);
             return;
         }
+        }
+
+        if (folder_path.isEmpty()) {
+            // Nothing was resolved (the trophy case below is not implemented
+            // yet). Bail out: QDir("").removeRecursively() would go after the
+            // working directory.
+            return;
         }
 
         QMessageBox::StandardButton reply = QMessageBox::question(
@@ -995,6 +1032,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
     hide_serial->setCheckable(true);
     hide_serial->setChecked(frame->m_hidden_list.contains(game_key));
     QAction* edit_notes = manage_game_menu->addAction(tr("&Add/Edit Tooltip Notes"));
+    QAction* edit_title = manage_game_menu->addAction(tr("&Rename in Game List..."));
     QAction* convert_to_zar = manage_game_menu->addAction(tr("&Convert to ZArchive (.zar)..."));
     convert_to_zar->setVisible(
         !Core::FileSys::IsZArchiveFile(std::filesystem::path(current_game.path)));
@@ -1120,14 +1158,25 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
 
     // Delete
     QMenu* delete_menu = addMenu(tr("&Delete..."));
+    // Only offer what is actually there: an entry whose directory is missing can
+    // do nothing but pop an error, so it stays hidden. The game directory always
+    // exists (it is what the row was built from) and the metadata cache is ours,
+    // so those two are always shown.
+    const bool has_update = DeleteTargetExists(delete_paths.update);
+
     QAction* delete_game = delete_menu->addAction(tr("&Delete Game"));
     QAction* delete_update = delete_menu->addAction(tr("&Delete Update"));
+    delete_update->setVisible(has_update);
     QAction* delete_game_and_update = delete_menu->addAction(tr("Delete Game + &Update"));
-    delete_game_and_update->setVisible(!current_game.update_path.empty());
+    delete_game_and_update->setVisible(has_update);
     QAction* delete_save_data = delete_menu->addAction(tr("&Delete Save Data"));
+    delete_save_data->setVisible(DeleteTargetExists(delete_paths.save_data));
     QAction* delete_DLC = delete_menu->addAction(tr("&Delete DLC "));
+    delete_DLC->setVisible(DeleteTargetExists(delete_paths.dlc));
     QAction* delete_trophy = delete_menu->addAction(tr("&Delete Trophy"));
     QAction* delete_shader_cache = delete_menu->addAction(tr("&Delete Shader Cache"));
+    delete_shader_cache->setVisible(DeleteTargetExists(delete_paths.shader_cache_dir) ||
+                                    DeleteTargetExists(delete_paths.shader_cache_zip));
     delete_menu->addSeparator();
     QAction* clear_metadata_cache = delete_menu->addAction(tr("Clear &Metadata Cache"));
     delete_trophy->setEnabled(false); // TODO: not implemented yet, kept visible-but-disabled
@@ -1308,6 +1357,44 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
 
             frame->Refresh();
         }
+    });
+    connect(edit_title, &QAction::triggered, frame, [frame, name, serial, game_key, game_path] {
+        // The name from param.sfo, shown as the placeholder and used to detect
+        // "the user typed the original name back in".
+        const QString original_title = name;
+        const QString old_title =
+            frame->GetInfoCache() ? frame->GetInfoCache()->GetTitle(game_path) : QString();
+
+        QInputDialog dlg(frame);
+        dlg.setWindowTitle(tr("Rename in Game List"));
+        dlg.setLabelText(tr("Shown instead of \"%1\" [%2].\nLeave empty to use the original name.")
+                             .arg(original_title, serial));
+        dlg.setTextValue(old_title);
+        dlg.setMinimumWidth(400);
+
+        if (dlg.exec() != QDialog::Accepted) {
+            return;
+        }
+
+        QString new_title = dlg.textValue().trimmed();
+        // Typing the original name back in is the same as clearing the override.
+        if (new_title == original_title) {
+            new_title.clear();
+        }
+        if (new_title == old_title) {
+            return;
+        }
+
+        if (new_title.isEmpty()) {
+            frame->m_titles.erase(game_key);
+        } else {
+            frame->m_titles.insert_or_assign(game_key, new_title);
+        }
+        if (frame->GetInfoCache()) {
+            frame->GetInfoCache()->SetTitle(game_path, new_title);
+        }
+
+        frame->Refresh();
     });
     auto configure_dialog = [frame, current_game, gameinfo](bool create_cfg_from_global_cfg) {
         SettingsDialog dlg(frame->m_gui_settings, frame->m_emu_settings, frame->m_ipc_client, 0,
