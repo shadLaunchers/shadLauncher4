@@ -263,7 +263,7 @@ void GameListFrame::CreateConnections() {
 
         m_path_entries.clear();
         m_path_list.clear();
-        m_serials.clear();
+        m_game_keys.clear();
         m_game_data.clear();
         m_notes.clear();
         m_games.pop_all();
@@ -282,7 +282,7 @@ void GameListFrame::CreateConnections() {
         m_path_entries.clear();
         m_path_list.clear();
         m_game_data.clear();
-        m_serials.clear();
+        m_game_keys.clear();
         m_games.pop_all();
         {
             std::lock_guard lock(m_pending_cache_puts_mutex);
@@ -298,7 +298,7 @@ void GameListFrame::CreateConnections() {
         m_path_entries.clear();
         m_path_list.clear();
         m_game_data.clear();
-        m_serials.clear();
+        m_game_keys.clear();
         m_games.pop_all();
         {
             std::lock_guard lock(m_pending_cache_puts_mutex);
@@ -403,16 +403,17 @@ void GameListFrame::OnColumnClicked(int col) {
     m_game_list->sort(m_game_data.size(), m_sort_column, m_col_sort_order);
 }
 
-bool GameListFrame::SearchMatchesApp(const QString& name, const QString& serial,
-                                     bool fallback) const {
+bool GameListFrame::SearchMatchesApp(const game_info& game, bool fallback) const {
     if (!m_search_text.isEmpty()) {
+        const QString serial = QString::fromStdString(game->info.serial);
         QString search_text = m_search_text.toLower();
         QString title_name;
 
-        if (const auto it = m_titles.find(serial); it != m_titles.cend()) {
+        if (const auto it = m_titles.find(GUI::Utils::GameKeyOf(game->info));
+            it != m_titles.cend()) {
             title_name = it->second.toLower();
         } else {
-            title_name = name.toLower();
+            title_name = QString::fromStdString(game->info.name).toLower();
         }
 
         // Ignore trademarks when no search results have been yielded by unmodified search
@@ -473,10 +474,9 @@ bool GameListFrame::SearchMatchesApp(const QString& name, const QString& serial,
 }
 
 bool GameListFrame::IsEntryVisible(const game_info& game, bool search_fallback) const {
-    const QString serial = QString::fromStdString(game->info.serial);
-    const bool is_visible = m_show_hidden || !m_hidden_list.contains(serial);
-    return is_visible && MatchesCurrentCategory(game) &&
-           SearchMatchesApp(QString::fromStdString(game->info.name), serial, search_fallback);
+    const bool is_visible =
+        m_show_hidden || !m_hidden_list.contains(GUI::Utils::GameKeyOf(game->info));
+    return is_visible && MatchesCurrentCategory(game) && SearchMatchesApp(game, search_fallback);
 }
 
 bool GameListFrame::MatchesCurrentCategory(const game_info& game) const {
@@ -1065,13 +1065,14 @@ void GameListFrame::OnParsingFinished() {
         }
 
         const QString serial = QString::fromStdString(game.info.serial);
+        const QString game_key = GUI::Utils::GameKeyOf(game.info);
 
         m_games_mutex.lock();
 
-        m_serials.insert(serial);
+        m_game_keys.insert(game_key);
 
-        if (QString note = m_info_cache->GetNotes(game.info.serial); !note.isEmpty()) {
-            m_notes.insert_or_assign(serial, std::move(note));
+        if (QString note = m_info_cache->GetNotes(game.info.path); !note.isEmpty()) {
+            m_notes.insert_or_assign(game_key, std::move(note));
         }
 
         m_games_mutex.unlock();
@@ -1197,19 +1198,19 @@ void GameListFrame::OnRefreshFinished() {
     // Sort alphabetically by title (localized if available)
     std::sort(m_game_data.begin(), m_game_data.end(),
               [&](const game_info& game1, const game_info& game2) {
-                  const QString serial1 = QString::fromStdString(game1->info.serial);
-                  const QString serial2 = QString::fromStdString(game2->info.serial);
-                  const QString& title1 = m_titles.contains(serial1)
-                                              ? m_titles.at(serial1)
-                                              : QString::fromStdString(game1->info.name);
-                  const QString& title2 = m_titles.contains(serial2)
-                                              ? m_titles.at(serial2)
-                                              : QString::fromStdString(game2->info.name);
+                  const QString key1 = GUI::Utils::GameKeyOf(game1->info);
+                  const QString key2 = GUI::Utils::GameKeyOf(game2->info);
+                  const QString title1 = m_titles.contains(key1)
+                                             ? m_titles.at(key1)
+                                             : QString::fromStdString(game1->info.name);
+                  const QString title2 = m_titles.contains(key2)
+                                             ? m_titles.at(key2)
+                                             : QString::fromStdString(game2->info.name);
                   return title1.toLower() < title2.toLower();
               });
 
     // Clean up hidden games list
-    m_hidden_list.intersect(m_serials);
+    m_hidden_list.intersect(m_game_keys);
     m_gui_settings->SetValue(GUI::game_list_hidden_list, QStringList(m_hidden_list.values()));
     {
         std::vector<std::pair<GameInfo, s64>> pending_puts;
@@ -1230,7 +1231,7 @@ void GameListFrame::OnRefreshFinished() {
         });
     }
 
-    m_serials.clear();
+    m_game_keys.clear();
     m_path_list.clear();
     m_path_entries.clear();
 
@@ -1543,7 +1544,7 @@ void GameListFrame::Refresh(const bool from_drive,
     if (from_drive) {
         m_path_entries.clear();
         m_path_list.clear();
-        m_serials.clear();
+        m_game_keys.clear();
         m_game_data.clear();
         m_notes.clear();
         m_games.pop_all();

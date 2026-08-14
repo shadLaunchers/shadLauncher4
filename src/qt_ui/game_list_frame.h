@@ -137,7 +137,7 @@ protected:
 private:
     void PushPath(const std::string& path, std::vector<std::string>& legit_paths);
     void CreateConnections();
-    bool SearchMatchesApp(const QString& name, const QString& serial, bool fallback = false) const;
+    bool SearchMatchesApp(const game_info& game, bool fallback = false) const;
     QStringList scanDirectories(const std::vector<std::filesystem::path>& baseDirs, int maxDepth,
                                 int currentDepth = 1);
     std::string CurrentSelectionPath();
@@ -183,7 +183,7 @@ private:
     QFutureWatcher<void> m_refresh_watcher;
     std::shared_mutex m_path_mutex;
     std::set<std::string> m_path_list;
-    QSet<QString> m_serials;
+    QSet<QString> m_game_keys;
     QMutex m_games_mutex;
     lf_queue<game_info> m_games;
     const std::array<int, 1> m_parsing_threads{0};
@@ -198,8 +198,8 @@ private:
     QList<QAction*> m_columnActs;
     Qt::SortOrder m_col_sort_order{};
     int m_sort_column{};
-    std::map<QString, QString> m_titles;
-    std::map<QString, QString> m_notes;
+    std::map<QString, QString> m_titles; // install path -> custom title
+    std::map<QString, QString> m_notes;  // install path -> notes
     bool m_initial_refresh_done = false;
     // Search
     QString m_search_text;

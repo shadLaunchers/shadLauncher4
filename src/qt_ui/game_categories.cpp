@@ -21,11 +21,13 @@ QString GameCategories::NormalizedPath(const QString& path) {
     if (path.isEmpty()) {
         return {};
     }
+    // Same normalization the game scanner applies, so a key built from a
+    // scanned game and one built from a raw path compare equal.
     return QString::fromStdString(GUI::Utils::NormalizePath(path.toStdString()));
 }
 
 GameKey GameCategories::KeyFor(const GameInfo& info) {
-    return GameKey{NormalizedPath(QString::fromStdString(info.path))};
+    return GameKey{GUI::Utils::GameKeyOf(info)};
 }
 
 void GameCategories::Load() {
@@ -234,7 +236,7 @@ bool GameCategories::MoveTo(const GameKey& key, const QString& category) {
         return false;
     }
 
-    // An empty target means no category
+    // An empty target means "no category at all".
     QString target;
     if (!category.trimmed().isEmpty()) {
         target = Resolve(category);

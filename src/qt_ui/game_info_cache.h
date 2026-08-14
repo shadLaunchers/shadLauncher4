@@ -40,9 +40,8 @@ public:
     void Prune(const std::vector<std::string>& known_paths);
     void Clear();
     void ClearGame(const std::string& game_path);
-
-    QString GetNotes(const std::string& serial);
-    void SetNotes(const std::string& serial, const QString& notes); // empty notes removes the row
+    QString GetNotes(const std::string& game_path);
+    void SetNotes(const std::string& game_path, const QString& notes); // empty notes removes row
 
     // Returns one GameInfo per distinct cached serial (deduped, and skipping DLC and
     // -UPDATE/-patch sub-folders so update/patch directories - which share their base game's

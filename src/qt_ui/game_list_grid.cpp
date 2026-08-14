@@ -8,6 +8,7 @@
 #include "game_list_grid.h"
 #include "game_list_grid_item.h"
 #include "gui_settings.h"
+#include "qt_utils.h"
 #include "stylesheets.h"
 
 GameListGrid::GameListGrid(GameListFrame* frame, std::shared_ptr<GUISettings> gui_settings)
@@ -55,8 +56,8 @@ void GameListGrid::Populate(const std::vector<game_info>& game_data,
 
     blockSignals(true);
 
-    const auto get_title = [&title_map](const QString& serial, const std::string& name) -> QString {
-        if (const auto it = title_map.find(serial); it != title_map.cend()) {
+    const auto get_title = [&title_map](const QString& key, const std::string& name) -> QString {
+        if (const auto it = title_map.find(key); it != title_map.cend()) {
             return it->second.simplified();
         }
 
@@ -65,7 +66,7 @@ void GameListGrid::Populate(const std::vector<game_info>& game_data,
 
     for (const auto& game : game_data) {
         const QString serial = QString::fromStdString(game->info.serial);
-        const QString title = get_title(serial, game->info.name);
+        const QString title = get_title(GUI::Utils::GameKeyOf(game->info), game->info.name);
 
         GameListGridItem* item = new GameListGridItem(this, game, title);
         item->installEventFilter(this);
@@ -73,7 +74,7 @@ void GameListGrid::Populate(const std::vector<game_info>& game_data,
 
         game->item = item;
 
-        if (const auto it = notes_map.find(serial);
+        if (const auto it = notes_map.find(GUI::Utils::GameKeyOf(game->info));
             it != notes_map.cend() && !it->second.isEmpty()) {
             item->setToolTip(QString("%0 [%1]\n\n%2\n%3")
                                  .arg(title)

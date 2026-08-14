@@ -84,6 +84,8 @@ bool IsPathWithinAnyDir(const std::filesystem::path& path,
     return false;
 }
 
+// Categories are keyed on the install path, so an operation that relocates a
+// game (the ZArchive conversions) has to carry its assignments over.
 static void RetargetCategories(GameListFrame* frame, const std::string& old_path,
                                const std::string& new_path) {
     if (GameCategories* categories = frame ? frame->GetCategories() : nullptr) {
@@ -488,19 +490,20 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                             "you'd like to archive it too.");
         }
 
-        convertPathToZArchiveHandler(source_path, game_name, tr("Convert to ZArchive"), extra_note,
-                                     [frame, game, refreshOneGameLight, applyNewPathIfWatched](
-                                         const std::filesystem::path& new_path) {
-                                         applyNewPathIfWatched(
-                                             new_path,
-                                             [frame, game, new_path, refreshOneGameLight] {
-                                                 RetargetCategories(frame, game->info.path,
-                                                                    new_path.string());
-                                                 game->info.path = new_path.string();
-                                                 refreshOneGameLight(game);
-                                             },
-                                             tr("Convert to ZArchive"));
-                                     });
+        convertPathToZArchiveHandler(
+            source_path, game_name, tr("Convert to ZArchive"), extra_note,
+            [frame, game, refreshOneGameLight,
+             applyNewPathIfWatched](const std::filesystem::path& new_path) {
+                applyNewPathIfWatched(
+                    new_path,
+                    [frame, game, new_path, refreshOneGameLight] {
+                        const std::string moved_path = GUI::Utils::NormalizePath(new_path);
+                        RetargetCategories(frame, game->info.path, moved_path);
+                        game->info.path = moved_path;
+                        refreshOneGameLight(game);
+                    },
+                    tr("Convert to ZArchive"));
+            });
     };
 
     auto convertUpdateToZArchiveHandler = [frame, convertPathToZArchiveHandler, refreshOneGameLight,
@@ -659,8 +662,9 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                                                   ? frame->m_emu_settings->GetGameInstallDirs()
                                                   : std::vector<std::filesystem::path>{};
                     if (IsPathWithinAnyDir(output_path.parent_path(), install_dirs)) {
-                        RetargetCategories(frame, game->info.path, output_path.string());
-                        game->info.path = output_path.string();
+                        const std::string moved_path = GUI::Utils::NormalizePath(output_path);
+                        RetargetCategories(frame, game->info.path, moved_path);
+                        game->info.path = moved_path;
                         game->info.size_on_disk = UINT64_MAX;
                         frame->Refresh(false);
                     } else {
@@ -709,6 +713,11 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
     GameInfo current_game = gameinfo->info;
     const QString serial = QString::fromStdString(current_game.serial);
     const QString name = QString::fromStdString(current_game.name).simplified();
+    // Per game data (hidden flag, notes, categories) is keyed on the install
+    // path: the same serial can be installed in several folders and each copy
+    // is its own row.
+    const QString game_key = GUI::Utils::GameKeyOf(current_game);
+    const std::string game_path = current_game.path;
 
     QMenu* launch_menu = addMenu(tr("&Launch game"));
     QAction* launch_default = launch_menu->addAction(tr("&Launch game with current settings"));
@@ -984,7 +993,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
 
     QAction* hide_serial = manage_game_menu->addAction(tr("&Hide From Game List"));
     hide_serial->setCheckable(true);
-    hide_serial->setChecked(frame->m_hidden_list.contains(serial));
+    hide_serial->setChecked(frame->m_hidden_list.contains(game_key));
     QAction* edit_notes = manage_game_menu->addAction(tr("&Add/Edit Tooltip Notes"));
     QAction* convert_to_zar = manage_game_menu->addAction(tr("&Convert to ZArchive (.zar)..."));
     convert_to_zar->setVisible(
@@ -1008,9 +1017,12 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
     // Categories menu
     QMenu* category_menu = addMenu(tr("&Categories"));
     if (GameCategories* categories = frame->GetCategories()) {
-        const GameKey game_key = GameCategories::KeyFor(current_game);
+        const GameKey category_key = GameCategories::KeyFor(current_game);
         const QStringList category_names = categories->Names();
-        const QStringList current_categories = categories->CategoriesOf(game_key);
+        const QStringList current_categories = categories->CategoriesOf(category_key);
+
+        // When a category tab is open, "moving" means moving out of that tab.
+        // Anywhere else it means "put the game in this category and nothing else".
         const QString active_tab = frame->CurrentCategory();
         const bool move_from_tab = !active_tab.isEmpty() && current_categories.contains(active_tab);
 
@@ -1023,8 +1035,8 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
             category_action->setCheckable(true);
             category_action->setChecked(current_categories.contains(category));
             connect(category_action, &QAction::toggled, frame,
-                    [categories, game_key, category](bool checked) {
-                        categories->SetMembership(game_key, category, checked);
+                    [categories, category_key, category](bool checked) {
+                        categories->SetMembership(category_key, category, checked);
                     });
         }
 
@@ -1047,8 +1059,8 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                     move_action->setToolTip(tr("Take %1 out of \"%2\" and put it in \"%3\".")
                                                 .arg(name, active_tab, category));
                     connect(move_action, &QAction::triggered, frame,
-                            [categories, game_key, active_tab, category] {
-                                categories->MoveBetween(game_key, active_tab, category);
+                            [categories, category_key, active_tab, category] {
+                                categories->MoveBetween(category_key, active_tab, category);
                             });
                 } else {
                     // Already the game's one and only category, nothing to do.
@@ -1057,8 +1069,8 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                         tr("Put %1 in \"%2\" only, removing it from its other categories.")
                             .arg(name, category));
                     connect(move_action, &QAction::triggered, frame,
-                            [categories, game_key, category] {
-                                categories->MoveTo(game_key, category);
+                            [categories, category_key, category] {
+                                categories->MoveTo(category_key, category);
                             });
                 }
             }
@@ -1067,15 +1079,15 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
 
             QAction* move_to_new = move_menu->addAction(tr("&New Category..."));
             connect(move_to_new, &QAction::triggered, frame,
-                    [frame, categories, game_key, active_tab, move_from_tab] {
+                    [frame, categories, category_key, active_tab, move_from_tab] {
                         const QString created = frame->PromptNewCategory();
                         if (created.isEmpty()) {
                             return;
                         }
                         if (move_from_tab) {
-                            categories->MoveBetween(game_key, active_tab, created);
+                            categories->MoveBetween(category_key, active_tab, created);
                         } else {
-                            categories->MoveTo(game_key, created);
+                            categories->MoveTo(category_key, created);
                         }
                     });
 
@@ -1084,11 +1096,11 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                               : tr("&No Category"));
             uncategorize->setEnabled(!current_categories.isEmpty());
             connect(uncategorize, &QAction::triggered, frame,
-                    [categories, game_key, active_tab, move_from_tab] {
+                    [categories, category_key, active_tab, move_from_tab] {
                         if (move_from_tab) {
-                            categories->SetMembership(game_key, active_tab, false);
+                            categories->SetMembership(category_key, active_tab, false);
                         } else {
-                            categories->MoveTo(game_key, QString());
+                            categories->MoveTo(category_key, QString());
                         }
                     });
 
@@ -1097,7 +1109,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
 
         QAction* new_category = category_menu->addAction(tr("&New Category..."));
         connect(new_category, &QAction::triggered, frame,
-                [frame, game_key] { frame->PromptNewCategory(&game_key); });
+                [frame, category_key] { frame->PromptNewCategory(&category_key); });
     }
 
     // Copy Info menu
@@ -1260,22 +1272,20 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         dialog->setAttribute(Qt::WA_DeleteOnClose);
         dialog->show();
     });
-    connect(hide_serial, &QAction::triggered, frame, [serial, frame](bool checked) {
+    connect(hide_serial, &QAction::triggered, frame, [game_key, frame](bool checked) {
         if (checked)
-            frame->m_hidden_list.insert(serial);
+            frame->m_hidden_list.insert(game_key);
         else
-            frame->m_hidden_list.remove(serial);
+            frame->m_hidden_list.remove(game_key);
 
         frame->m_gui_settings->SetValue(GUI::game_list_hidden_list,
                                         QStringList(frame->m_hidden_list.values()));
         frame->Refresh();
     });
-    connect(edit_notes, &QAction::triggered, frame, [frame, name, serial] {
-        bool accepted;
+    connect(edit_notes, &QAction::triggered, frame, [frame, name, serial, game_key, game_path] {
         // fetch old notes from the game info database
-        const QString old_notes = frame->GetInfoCache()
-                                      ? frame->GetInfoCache()->GetNotes(serial.toStdString())
-                                      : QString();
+        const QString old_notes =
+            frame->GetInfoCache() ? frame->GetInfoCache()->GetNotes(game_path) : QString();
 
         QInputDialog dlg(frame);
         dlg.setWindowTitle(tr("Edit Tooltip Notes"));
@@ -1288,12 +1298,12 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
             const QString new_notes = dlg.textValue().trimmed();
 
             if (new_notes.isEmpty()) {
-                frame->m_notes.erase(serial);
+                frame->m_notes.erase(game_key);
             } else {
-                frame->m_notes.insert_or_assign(serial, new_notes);
+                frame->m_notes.insert_or_assign(game_key, new_notes);
             }
             if (frame->GetInfoCache()) {
-                frame->GetInfoCache()->SetNotes(serial.toStdString(), new_notes);
+                frame->GetInfoCache()->SetNotes(game_path, new_notes);
             }
 
             frame->Refresh();
