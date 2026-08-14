@@ -5,8 +5,8 @@
 #include "game_list_base.h"
 
 #include <QBuffer>
-#include <QObject>
 #include <QDir>
+#include <QObject>
 #include <QPainter>
 
 #include <cmath>
