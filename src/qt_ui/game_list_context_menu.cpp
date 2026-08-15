@@ -30,6 +30,7 @@
 #include "common/singleton.h"
 #include "core/emulator_settings.h"
 #include "core/emulator_state.h"
+#include "core/file_format/npbind.h"
 #include "core/file_format/psf.h"
 #include "core/file_sys/game_backend.h"
 #include "core/file_sys/zar_packer.h"
@@ -93,6 +94,8 @@ struct DeletePaths {
     QString save_data;
     QString shader_cache_dir;
     QString shader_cache_zip;
+    QStringList trophy_dirs;
+    QStringList trophy_user_files;
 };
 
 static DeletePaths ResolveDeletePaths(const std::filesystem::path& addon_install_dir,
@@ -120,7 +123,37 @@ static DeletePaths ResolveDeletePaths(const std::filesystem::path& addon_install
                               Common::FS::GetUserPath(Common::FS::PathType::CacheDir) /
                                   (gameinfo->info.serial + ".zip"));
 
-    // Trophies are not implemented yet, so there is no path to resolve for them.
+    std::filesystem::path npbind_path =
+        std::filesystem::path(gameinfo->info.path) / "sce_sys" / "npbind.dat";
+    if (const auto resolved =
+            Core::FileSys::ResolveGameFilePath(gameinfo->info.path, "sce_sys/npbind.dat")) {
+        npbind_path = *resolved;
+    }
+
+    NPBindFile npbind;
+    if (npbind.Load(npbind_path.string())) {
+        const auto& users = UserSettings.GetUserManager().GetAllUsers();
+
+        for (const std::string& np_comm_id : npbind.GetNpCommIds()) {
+            if (np_comm_id.empty()) {
+                continue;
+            }
+
+            QString trophy_dir;
+            Common::FS::PathToQString(trophy_dir,
+                                      Common::FS::GetUserPath(Common::FS::PathType::UserDir) /
+                                          "trophy" / np_comm_id);
+            paths.trophy_dirs.append(trophy_dir);
+
+            for (const auto& user : users) {
+                QString user_file;
+                Common::FS::PathToQString(user_file, EmulatorSettings.GetHomeDir() /
+                                                         std::to_string(user.user_id) / "trophy" /
+                                                         (np_comm_id + ".xml"));
+                paths.trophy_user_files.append(user_file);
+            }
+        }
+    }
 
     return paths;
 }
@@ -167,15 +200,57 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         const QString& dlc_path = delete_paths.dlc;
         const QString& save_data_path = delete_paths.save_data;
 
+        auto remove_path = [](const QString& path) {
+            const std::filesystem::path path_to_delete = Common::FS::PathFromQString(path);
+            std::error_code remove_ec;
+            if (std::filesystem::is_regular_file(path_to_delete, remove_ec)) {
+                std::filesystem::remove(path_to_delete, remove_ec);
+            } else {
+                QDir(path).removeRecursively();
+            }
+        };
+
+        // Wipes the game together with its update. Shared by "Delete Game" and
+        // "Delete Game + Update" so the two can never drift apart.
+        auto remove_game_and_update = [&] {
+            BackgroundMusicPlayer::getInstance().StopMusic();
+
+            remove_path(update_path);
+            remove_path(game_path);
+
+            auto& game_data = frame->m_game_data;
+            game_data.erase(std::remove(game_data.begin(), game_data.end(), gameinfo),
+                            game_data.end());
+            frame->Refresh(false);
+        };
+
+        const bool has_update = !update_path.isEmpty() &&
+                                std::filesystem::exists(Common::FS::PathFromQString(update_path));
+
         switch (type) {
         case GameListFrame::DeleteType::Game:
+            if (has_update) {
+                const QMessageBox::StandardButton reply = QMessageBox::question(
+                    frame, tr("Delete Game"),
+                    tr("Are you sure you want to delete %1's game directory?\n\n"
+                       "Its update/patch directory will be deleted too.")
+                        .arg(QString::fromStdString(gameinfo->info.name)),
+                    QMessageBox::Yes | QMessageBox::No);
+                if (reply != QMessageBox::Yes) {
+                    return;
+                }
+
+                remove_game_and_update();
+                return;
+            }
+
             BackgroundMusicPlayer::getInstance().StopMusic();
             folder_path = game_path;
             message_type = tr("Game");
             break;
 
         case GameListFrame::DeleteType::Update:
-            if (!std::filesystem::exists(Common::FS::PathFromQString(update_path))) {
+            if (!has_update) {
                 QMessageBox::critical(frame, tr("Error"), tr("This game has no update to delete!"));
                 return;
             }
@@ -184,8 +259,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
             break;
 
         case GameListFrame::DeleteType::GameAndUpdate: {
-            if (update_path.isEmpty() ||
-                !std::filesystem::exists(Common::FS::PathFromQString(update_path))) {
+            if (!has_update) {
                 QMessageBox::critical(frame, tr("Error"), tr("This game has no update to delete!"));
                 return;
             }
@@ -200,25 +274,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                 return;
             }
 
-            BackgroundMusicPlayer::getInstance().StopMusic();
-
-            auto remove_path = [](const QString& path) {
-                const std::filesystem::path path_to_delete = Common::FS::PathFromQString(path);
-                std::error_code remove_ec;
-                if (std::filesystem::is_regular_file(path_to_delete, remove_ec)) {
-                    std::filesystem::remove(path_to_delete, remove_ec);
-                } else {
-                    QDir(path).removeRecursively();
-                }
-            };
-
-            remove_path(update_path);
-            remove_path(game_path);
-
-            auto& game_data = frame->m_game_data;
-            game_data.erase(std::remove(game_data.begin(), game_data.end(), gameinfo),
-                            game_data.end());
-            frame->Refresh(false);
+            remove_game_and_update();
             return;
         }
 
@@ -241,15 +297,64 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
             message_type = tr("Save Data");
             break;
 
-        case GameListFrame::DeleteType::Trophy:
-            //     if (!std::filesystem::exists(Common::FS::PathFromQString(trophy_path))) {
-            //         QMessageBox::critical(frame, tr("Error"),
-            //                               tr("This game has no saved trophies to delete!"));
-            //         return;
-            //     }
-            //     folder_path = trophy_path;
-            //     message_type = tr("Trophy");
-            break;
+        case GameListFrame::DeleteType::Trophy: {
+            QStringList existing_dirs;
+            for (const QString& dir : delete_paths.trophy_dirs) {
+                if (DeleteTargetExists(dir)) {
+                    existing_dirs.append(dir);
+                }
+            }
+
+            QStringList existing_files;
+            for (const QString& file : delete_paths.trophy_user_files) {
+                if (DeleteTargetExists(file)) {
+                    existing_files.append(file);
+                }
+            }
+
+            if (existing_dirs.isEmpty() && existing_files.isEmpty()) {
+                QMessageBox::critical(frame, tr("Error"),
+                                      tr("This game has no saved trophies to delete!"));
+                return;
+            }
+
+            const QMessageBox::StandardButton reply = QMessageBox::question(
+                frame, tr("Delete Trophy"),
+                tr("Are you sure you want to delete %1's trophy data?\n\n"
+                   "This removes the unpacked trophy files and the unlocked trophies of "
+                   "every user. Any other copy of this game shares the same trophy data "
+                   "and will lose it too. This cannot be undone.")
+                    .arg(QString::fromStdString(gameinfo->info.name)),
+                QMessageBox::Yes | QMessageBox::No);
+            if (reply != QMessageBox::Yes) {
+                return;
+            }
+
+            for (const QString& dir : existing_dirs) {
+                std::error_code trophy_ec;
+                std::filesystem::remove_all(Common::FS::PathFromQString(dir), trophy_ec);
+                if (trophy_ec) {
+                    error = true;
+                }
+            }
+
+            for (const QString& file : existing_files) {
+                std::error_code trophy_ec;
+                std::filesystem::remove(Common::FS::PathFromQString(file), trophy_ec);
+                if (trophy_ec) {
+                    error = true;
+                }
+            }
+
+            if (error) {
+                QMessageBox::critical(frame, tr("Error"),
+                                      tr("Some trophy data could not be deleted."));
+            } else {
+                QMessageBox::information(frame, tr("Trophy"),
+                                         tr("Trophy data deleted successfully."));
+            }
+            return;
+        }
 
         case GameListFrame::DeleteType::ShaderCache: {
             const auto dir_path = Common::FS::PathFromQString(delete_paths.shader_cache_dir);
@@ -293,9 +398,6 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         }
 
         if (folder_path.isEmpty()) {
-            // Nothing was resolved (the trophy case below is not implemented
-            // yet). Bail out: QDir("").removeRecursively() would go after the
-            // working directory.
             return;
         }
 
@@ -1168,19 +1270,24 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
     QAction* delete_update = delete_menu->addAction(tr("&Delete Update"));
     delete_update->setVisible(has_update);
     QAction* delete_game_and_update = delete_menu->addAction(tr("Delete Game + &Update"));
-    delete_game_and_update->setVisible(has_update);
+    // "Delete Game" now takes the update with it, so this entry would do exactly
+    // the same thing. Kept wired up but out of sight; flip this back to
+    // has_update to bring it back.
+    delete_game_and_update->setVisible(false);
     QAction* delete_save_data = delete_menu->addAction(tr("&Delete Save Data"));
     delete_save_data->setVisible(DeleteTargetExists(delete_paths.save_data));
     QAction* delete_DLC = delete_menu->addAction(tr("&Delete DLC "));
     delete_DLC->setVisible(DeleteTargetExists(delete_paths.dlc));
     QAction* delete_trophy = delete_menu->addAction(tr("&Delete Trophy"));
+    const bool has_trophies =
+        std::ranges::any_of(delete_paths.trophy_dirs, DeleteTargetExists) ||
+        std::ranges::any_of(delete_paths.trophy_user_files, DeleteTargetExists);
+    delete_trophy->setVisible(has_trophies);
     QAction* delete_shader_cache = delete_menu->addAction(tr("&Delete Shader Cache"));
     delete_shader_cache->setVisible(DeleteTargetExists(delete_paths.shader_cache_dir) ||
                                     DeleteTargetExists(delete_paths.shader_cache_zip));
     delete_menu->addSeparator();
     QAction* clear_metadata_cache = delete_menu->addAction(tr("Clear &Metadata Cache"));
-    delete_trophy->setEnabled(false); // TODO: not implemented yet, kept visible-but-disabled
-                                      // rather than hidden since that's true for every game
 
     // Compatibility
     QMenu* compatibility_menu = addMenu(tr("&Compatibility"));
