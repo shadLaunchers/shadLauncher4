@@ -479,8 +479,7 @@ bool GameListFrame::SearchMatchesApp(const game_info& game, bool fallback) const
 
     // A renamed game has to stay findable under both names, so check the custom
     // title as well as the one from param.sfo.
-    if (const auto it = m_titles.find(GUI::Utils::GameKeyOf(game->info));
-        it != m_titles.cend()) {
+    if (const auto it = m_titles.find(GUI::Utils::GameKeyOf(game->info)); it != m_titles.cend()) {
         const QString custom_title = it->second.toLower();
         if (custom_title != original_title && SearchMatchesTitle(custom_title, fallback)) {
             return true;
