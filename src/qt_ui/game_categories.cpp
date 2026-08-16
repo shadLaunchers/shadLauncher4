@@ -3,27 +3,14 @@
 
 #include <utility>
 
-#include <QJsonArray>
-#include <QJsonDocument>
-#include <QJsonObject>
-
 #include "game_categories.h"
 #include "game_info.h"
-#include "gui_settings.h"
+#include "game_info_cache.h"
 #include "qt_utils.h"
 
-GameCategories::GameCategories(std::shared_ptr<GUISettings> gui_settings, QObject* parent)
-    : QObject(parent), m_gui_settings(std::move(gui_settings)) {
+GameCategories::GameCategories(std::shared_ptr<GameInfoCache> info_cache, QObject* parent)
+    : QObject(parent), m_info_cache(std::move(info_cache)) {
     Load();
-}
-
-QString GameCategories::NormalizedPath(const QString& path) {
-    if (path.isEmpty()) {
-        return {};
-    }
-    // Same normalization the game scanner applies, so a key built from a
-    // scanned game and one built from a raw path compare equal.
-    return QString::fromStdString(GUI::Utils::NormalizePath(path.toStdString()));
 }
 
 GameKey GameCategories::KeyFor(const GameInfo& info) {
@@ -34,39 +21,21 @@ void GameCategories::Load() {
     m_order.clear();
     m_members.clear();
 
-    if (!m_gui_settings) {
+    if (!m_info_cache) {
         return;
     }
 
-    const QString raw = m_gui_settings->GetValue(GUI::game_list_categories).toString();
-    if (raw.isEmpty()) {
-        return;
-    }
-
-    QJsonParseError error{};
-    const QJsonDocument doc = QJsonDocument::fromJson(raw.toUtf8(), &error);
-    if (error.error != QJsonParseError::NoError || !doc.isArray()) {
-        return;
-    }
-
-    for (const QJsonValue& value : doc.array()) {
-        if (!value.isObject()) {
-            continue;
-        }
-
-        const QJsonObject entry = value.toObject();
-        const QString name = entry.value(QStringLiteral("name")).toString().trimmed();
+    for (const CategoryRecord& record : m_info_cache->LoadCategories()) {
+        const QString name = record.name.trimmed();
         if (name.isEmpty() || Contains(name)) {
             continue;
         }
 
         QSet<QString> paths;
-
-        const QJsonArray games = entry.value(QStringLiteral("games")).toArray();
-        for (const QJsonValue& game : games) {
-            const QString path = game.toObject().value(QStringLiteral("path")).toString().trimmed();
-            if (!path.isEmpty()) {
-                paths.insert(path);
+        for (const QString& path : record.game_paths) {
+            const QString trimmed = path.trimmed();
+            if (!trimmed.isEmpty()) {
+                paths.insert(trimmed);
             }
         }
 
@@ -76,33 +45,23 @@ void GameCategories::Load() {
 }
 
 void GameCategories::Save() const {
-    if (!m_gui_settings) {
+    if (!m_info_cache) {
         return;
     }
 
-    QJsonArray array;
+    std::vector<CategoryRecord> records;
+    records.reserve(m_order.size());
+
     for (const QString& name : m_order) {
-        // Sorted so the settings file stays stable between runs.
-        QStringList paths(m_members[name].values());
-        paths.sort();
-
-        QJsonArray games;
-        for (const QString& path : std::as_const(paths)) {
-            QJsonObject game;
-            game.insert(QStringLiteral("path"), path);
-            games.append(game);
-        }
-
-        QJsonObject entry;
-        entry.insert(QStringLiteral("name"), name);
-        entry.insert(QStringLiteral("games"), games);
-
-        array.append(entry);
+        CategoryRecord record;
+        record.name = name;
+        // Sorted so the stored rows stay stable between runs.
+        record.game_paths = QStringList(m_members[name].values());
+        record.game_paths.sort();
+        records.push_back(std::move(record));
     }
 
-    m_gui_settings->SetValue(
-        GUI::game_list_categories,
-        QString::fromUtf8(QJsonDocument(array).toJson(QJsonDocument::Compact)));
+    m_info_cache->SaveCategories(records);
 }
 
 QString GameCategories::Resolve(const QString& category) const {

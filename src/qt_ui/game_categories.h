@@ -12,7 +12,7 @@
 #include <memory>
 
 struct GameInfo;
-class GUISettings;
+class GameInfoCache;
 
 struct GameKey {
     QString path;
@@ -26,7 +26,8 @@ class GameCategories : public QObject {
     Q_OBJECT
 
 public:
-    explicit GameCategories(std::shared_ptr<GUISettings> gui_settings, QObject* parent = nullptr);
+    /** Categories are stored in the game info database. */
+    explicit GameCategories(std::shared_ptr<GameInfoCache> info_cache, QObject* parent = nullptr);
 
     /** Key of a scanned game. Paths are normalized the same way the game
      *  scanner normalizes them, so keys stay comparable. */
@@ -34,9 +35,9 @@ public:
     /** Normalizes a path the same way the game scanner does. */
     static QString NormalizedPath(const QString& path);
 
-    /** Reload the categories from the settings, discarding anything in memory. */
+    /** Reload the categories from the database, discarding anything in memory. */
     void Load();
-    /** Write the categories back to the settings. */
+    /** Write the categories back to the database. */
     void Save() const;
 
     /** Category names in user defined (insertion) order. */
@@ -82,7 +83,7 @@ private:
      *  notifying. Returns true when the category actually changed. */
     bool ApplyMembership(const GameKey& key, const QString& resolved_category, bool member);
 
-    std::shared_ptr<GUISettings> m_gui_settings;
+    std::shared_ptr<GameInfoCache> m_info_cache;
     QStringList m_order;                     // category names, ordered
     QHash<QString, QSet<QString>> m_members; // category name -> game paths
 };

@@ -116,7 +116,6 @@ const GUISave game_list_textFactor = GUISave(game_list, "textFactor", qreal{2.0}
 const GUISave game_list_marginFactor = GUISave(game_list, "marginFactor", qreal{0.09});
 const GUISave game_list_show_hidden = GUISave(game_list, "show_hidden", false);
 const GUISave game_list_hidden_list = GUISave(game_list, "hidden_list", QStringList());
-const GUISave game_list_categories = GUISave(game_list, "categories", QString());
 const GUISave game_list_current_category = GUISave(game_list, "current_category", QString());
 const GUISave game_list_draw_compat = GUISave(game_list, "draw_compat", false);
 const GUISave game_list_play_bg = GUISave(game_list, "play_bg", true);
