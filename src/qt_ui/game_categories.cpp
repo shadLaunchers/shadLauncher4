@@ -13,6 +13,15 @@ GameCategories::GameCategories(std::shared_ptr<GameInfoCache> info_cache, QObjec
     Load();
 }
 
+QString GameCategories::NormalizedPath(const QString& path) {
+    if (path.isEmpty()) {
+        return {};
+    }
+    // Same normalization the game scanner applies, so a key built from a
+    // scanned game and one built from a raw path compare equal.
+    return QString::fromStdString(GUI::Utils::NormalizePath(path.toStdString()));
+}
+
 GameKey GameCategories::KeyFor(const GameInfo& info) {
     return GameKey{GUI::Utils::GameKeyOf(info)};
 }
