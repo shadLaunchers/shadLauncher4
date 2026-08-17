@@ -22,6 +22,7 @@
 #include <QPointer>
 #include <QPushButton>
 #include <QScrollBar>
+#include <QVBoxLayout>
 #include <QtConcurrent>
 #include <core/user_settings.h>
 #include <fmt/core.h>
@@ -35,6 +36,7 @@
 #include "core/file_sys/game_backend.h"
 #include "core/file_sys/zar_packer.h"
 #include "core/ipc/ipc_client.h"
+#include "game_categories.h"
 #include "game_list_context_menu.h"
 #include "game_list_frame.h"
 #include "game_list_grid.h"
@@ -93,6 +95,12 @@ GameListFrame::GameListFrame(std::shared_ptr<GUISettings> gui_settings,
         Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "game_info_cache.sqlite3");
     QThreadPool::globalInstance()->start([cache = m_info_cache]() { cache->WarmUp(); });
 
+    // Categories are stored in the game info database, so this has to come
+    // after the cache is up.
+    m_categories = std::make_shared<GameCategories>(m_info_cache);
+    m_current_category =
+        m_categories->Resolve(m_gui_settings->GetValue(GUI::game_list_current_category).toString());
+
     // Save factors for first setup
     m_gui_settings->SetValue(GUI::game_list_iconColor, m_icon_color, false);
     m_gui_settings->SetValue(GUI::game_list_marginFactor, m_margin_factor, false);
@@ -122,6 +130,25 @@ GameListFrame::GameListFrame(std::shared_ptr<GUISettings> gui_settings,
         m_central_widget->setCurrentWidget(m_game_grid);
     }
 
+    // One tab per category, sitting right above the list/grid.
+    m_category_tabs = new QTabBar(this);
+    m_category_tabs->setExpanding(false);
+    m_category_tabs->setDrawBase(false);
+    m_category_tabs->setUsesScrollButtons(true);
+    m_category_tabs->setElideMode(Qt::ElideRight);
+    m_category_tabs->setContextMenuPolicy(Qt::CustomContextMenu);
+    m_category_tabs->setToolTip(tr("Right click a tab to add, rename or delete a category.\n"
+                                   "Use the game's right click menu to put it into a category."));
+
+    QWidget* game_area = new QWidget(this);
+    QVBoxLayout* game_area_layout = new QVBoxLayout(game_area);
+    game_area_layout->setContentsMargins(0, 0, 0, 0);
+    game_area_layout->setSpacing(0);
+    game_area_layout->addWidget(m_category_tabs);
+    game_area_layout->addWidget(m_central_widget);
+
+    RebuildCategoryTabs();
+
     splitter = new QSplitter(Qt::Vertical);
     logDisplay = new QTextEdit(splitter);
 
@@ -132,7 +159,7 @@ GameListFrame::GameListFrame(std::shared_ptr<GUISettings> gui_settings,
     logDisplay->setText(tr("Game Log"));
     logDisplay->setReadOnly(true);
 
-    splitter->addWidget(m_central_widget);
+    splitter->addWidget(game_area);
     splitter->addWidget(logDisplay);
 
     QList<int> sizes =
@@ -200,6 +227,15 @@ void GameListFrame::LoadSettings() {
     m_sort_column = m_gui_settings->GetValue(GUI::game_list_sortCol).toInt();
     m_draw_compat_status_to_grid = m_gui_settings->GetValue(GUI::game_list_draw_compat).toBool();
 
+    // Categories live in the settings too, so pick up external changes (e.g. a
+    // settings reset) and rebuild the tabs from them.
+    if (m_categories) {
+        m_categories->Load();
+        m_current_category = m_categories->Resolve(
+            m_gui_settings->GetValue(GUI::game_list_current_category).toString());
+        RebuildCategoryTabs();
+    }
+
     m_game_list->SyncHeaderActions(m_columnActs, [this](int col) {
         return m_gui_settings->GetGamelistColVisibility(static_cast<GUI::GameListColumns>(col));
     });
@@ -229,9 +265,10 @@ void GameListFrame::CreateConnections() {
 
         m_path_entries.clear();
         m_path_list.clear();
-        m_serials.clear();
+        m_game_keys.clear();
         m_game_data.clear();
         m_notes.clear();
+        m_titles.clear();
         m_games.pop_all();
         {
             std::lock_guard lock(m_pending_cache_puts_mutex);
@@ -248,7 +285,7 @@ void GameListFrame::CreateConnections() {
         m_path_entries.clear();
         m_path_list.clear();
         m_game_data.clear();
-        m_serials.clear();
+        m_game_keys.clear();
         m_games.pop_all();
         {
             std::lock_guard lock(m_pending_cache_puts_mutex);
@@ -264,7 +301,7 @@ void GameListFrame::CreateConnections() {
         m_path_entries.clear();
         m_path_list.clear();
         m_game_data.clear();
-        m_serials.clear();
+        m_game_keys.clear();
         m_games.pop_all();
         {
             std::lock_guard lock(m_pending_cache_puts_mutex);
@@ -287,6 +324,15 @@ void GameListFrame::CreateConnections() {
                     m_progress_dialog->SetValue(value);
                 }
             });
+    // category tabs
+    connect(m_category_tabs, &QTabBar::currentChanged, this, &GameListFrame::OnCategoryTabChanged);
+    connect(m_category_tabs, &QWidget::customContextMenuRequested, this,
+            &GameListFrame::ShowCategoryTabContextMenu);
+    connect(m_categories.get(), &GameCategories::Changed, this, [this]() {
+        RebuildCategoryTabs();
+        Refresh(false, {}, false);
+    });
+
     // context menu and clicks
     connect(m_game_list, &QTableWidget::customContextMenuRequested, this,
             &GameListFrame::ShowContextMenu);
@@ -360,17 +406,9 @@ void GameListFrame::OnColumnClicked(int col) {
     m_game_list->sort(m_game_data.size(), m_sort_column, m_col_sort_order);
 }
 
-bool GameListFrame::SearchMatchesApp(const QString& name, const QString& serial,
-                                     bool fallback) const {
+bool GameListFrame::SearchMatchesTitle(QString title_name, bool fallback) const {
     if (!m_search_text.isEmpty()) {
         QString search_text = m_search_text.toLower();
-        QString title_name;
-
-        if (const auto it = m_titles.find(serial); it != m_titles.cend()) {
-            title_name = it->second.toLower();
-        } else {
-            title_name = name.toLower();
-        }
 
         // Ignore trademarks when no search results have been yielded by unmodified search
         static const QRegularExpression s_ignored_on_fallback(
@@ -424,16 +462,223 @@ bool GameListFrame::SearchMatchesApp(const QString& name, const QString& serial,
             }
         }
 
-        return title_name.contains(search_text) || serial.toLower().contains(search_text);
+        return title_name.contains(search_text);
     }
     return true;
 }
 
+bool GameListFrame::SearchMatchesApp(const game_info& game, bool fallback) const {
+    if (m_search_text.isEmpty()) {
+        return true;
+    }
+
+    const QString original_title = QString::fromStdString(game->info.name).toLower();
+    if (SearchMatchesTitle(original_title, fallback)) {
+        return true;
+    }
+
+    // A renamed game has to stay findable under both names, so check the custom
+    // title as well as the one from param.sfo.
+    if (const auto it = m_titles.find(GUI::Utils::GameKeyOf(game->info)); it != m_titles.cend()) {
+        const QString custom_title = it->second.toLower();
+        if (custom_title != original_title && SearchMatchesTitle(custom_title, fallback)) {
+            return true;
+        }
+    }
+
+    return QString::fromStdString(game->info.serial).toLower().contains(m_search_text.toLower());
+}
+
 bool GameListFrame::IsEntryVisible(const game_info& game, bool search_fallback) const {
-    const QString serial = QString::fromStdString(game->info.serial);
-    const bool is_visible = m_show_hidden || !m_hidden_list.contains(serial);
-    return is_visible &&
-           SearchMatchesApp(QString::fromStdString(game->info.name), serial, search_fallback);
+    const bool is_visible =
+        m_show_hidden || !m_hidden_list.contains(GUI::Utils::GameKeyOf(game->info));
+    return is_visible && MatchesCurrentCategory(game) && SearchMatchesApp(game, search_fallback);
+}
+
+bool GameListFrame::MatchesCurrentCategory(const game_info& game) const {
+    // The "All" tab has no category attached to it and shows everything.
+    if (m_current_category.isEmpty() || !m_categories) {
+        return true;
+    }
+    if (!game) {
+        return false;
+    }
+    return m_categories->IsInCategory(GameCategories::KeyFor(game->info), m_current_category);
+}
+
+void GameListFrame::RebuildCategoryTabs() {
+    if (!m_category_tabs) {
+        return;
+    }
+
+    // A category may have been deleted or renamed under our feet.
+    if (!m_current_category.isEmpty() && !m_categories->Contains(m_current_category)) {
+        m_current_category.clear();
+        m_gui_settings->SetValue(GUI::game_list_current_category, m_current_category);
+    }
+
+    // Don't let the rebuild itself trigger a category change.
+    m_updating_category_tabs = true;
+
+    while (m_category_tabs->count() > 0) {
+        m_category_tabs->removeTab(0);
+    }
+
+    const int all_tab = m_category_tabs->addTab(tr("All"));
+    m_category_tabs->setTabData(all_tab, QString());
+    m_category_tabs->setTabToolTip(all_tab, tr("Every game found in your game folders"));
+
+    int index_to_select = all_tab;
+
+    for (const QString& category : m_categories->Names()) {
+        // Escape ampersands so they don't turn into a mnemonic.
+        const int tab = m_category_tabs->addTab(QString(category).replace('&', "&&"));
+        m_category_tabs->setTabData(tab, category);
+        m_category_tabs->setTabToolTip(
+            tab, tr("%n game(s) in this category", "", m_categories->CountIn(category)));
+
+        if (category == m_current_category) {
+            index_to_select = tab;
+        }
+    }
+
+    m_category_tabs->setCurrentIndex(index_to_select);
+
+    m_updating_category_tabs = false;
+}
+
+void GameListFrame::OnCategoryTabChanged(int index) {
+    if (m_updating_category_tabs || !m_category_tabs) {
+        return;
+    }
+
+    const QString category = index >= 0 ? m_category_tabs->tabData(index).toString() : QString();
+    if (category == m_current_category) {
+        return;
+    }
+
+    m_current_category = category;
+    m_gui_settings->SetValue(GUI::game_list_current_category, m_current_category);
+    Refresh(false, {}, false);
+}
+
+void GameListFrame::SetCurrentCategory(const QString& category) {
+    if (!m_category_tabs) {
+        return;
+    }
+
+    const QString resolved = m_categories->Resolve(category);
+    for (int i = 0; i < m_category_tabs->count(); ++i) {
+        if (m_category_tabs->tabData(i).toString() == resolved) {
+            m_category_tabs->setCurrentIndex(i);
+            return;
+        }
+    }
+}
+
+QString GameListFrame::PromptNewCategory(const GameKey* key) {
+    bool accepted = false;
+    const QString name = QInputDialog::getText(this, tr("New Category"), tr("Category name:"),
+                                               QLineEdit::Normal, QString(), &accepted)
+                             .trimmed();
+
+    if (!accepted || name.isEmpty()) {
+        return {};
+    }
+
+    if (m_categories->Contains(name)) {
+        const QString existing = m_categories->Resolve(name);
+        QMessageBox::information(this, tr("Category Already Exists"),
+                                 tr("A category named \"%1\" already exists.").arg(existing));
+        if (key && !key->IsNull()) {
+            m_categories->SetMembership(*key, existing, true);
+        }
+        return existing;
+    }
+
+    if (!m_categories->Create(name)) {
+        return {};
+    }
+
+    if (key && !key->IsNull()) {
+        m_categories->SetMembership(*key, name, true);
+    }
+    return name;
+}
+
+void GameListFrame::ShowCategoryTabContextMenu(const QPoint& pos) {
+    if (!m_category_tabs) {
+        return;
+    }
+
+    const int tab = m_category_tabs->tabAt(pos);
+    const QString category = tab >= 0 ? m_category_tabs->tabData(tab).toString() : QString();
+
+    QMenu menu(this);
+    QAction* new_category = menu.addAction(tr("&New Category..."));
+
+    QAction* rename_category = nullptr;
+    QAction* delete_category = nullptr;
+    if (!category.isEmpty()) {
+        menu.addSeparator();
+        rename_category = menu.addAction(tr("&Rename \"%1\"").arg(category));
+        delete_category = menu.addAction(tr("&Delete \"%1\"").arg(category));
+    }
+
+    QAction* chosen = menu.exec(m_category_tabs->mapToGlobal(pos));
+    if (!chosen) {
+        return;
+    }
+
+    if (chosen == new_category) {
+        PromptNewCategory();
+    } else if (chosen == rename_category) {
+        bool accepted = false;
+        const QString name =
+            QInputDialog::getText(this, tr("Rename Category"), tr("Category name:"),
+                                  QLineEdit::Normal, category, &accepted)
+                .trimmed();
+        if (!accepted || name.isEmpty() || name == category) {
+            return;
+        }
+        const bool was_current = m_current_category == category;
+        if (was_current) {
+            m_current_category = name;
+        }
+
+        if (m_categories->Rename(category, name)) {
+            if (was_current) {
+                m_gui_settings->SetValue(GUI::game_list_current_category, m_current_category);
+            }
+        } else {
+            if (was_current) {
+                m_current_category = category;
+            }
+            QMessageBox::information(this, tr("Category Already Exists"),
+                                     tr("A category named \"%1\" already exists.").arg(name));
+        }
+    } else if (chosen == delete_category) {
+        const QMessageBox::StandardButton reply = QMessageBox::question(
+            this, tr("Delete Category"),
+            tr("Delete the category \"%1\"? The games in it are not touched.").arg(category),
+            QMessageBox::Yes | QMessageBox::No);
+        if (reply == QMessageBox::Yes) {
+            m_categories->Remove(category);
+        }
+    }
+}
+
+void GameListFrame::ResetCustomTitles() {
+    if (m_titles.empty()) {
+        return;
+    }
+
+    m_titles.clear();
+    if (m_info_cache) {
+        m_info_cache->ClearTitles();
+    }
+
+    Refresh();
 }
 
 void GameListFrame::SetShowHidden(bool show) {
@@ -849,13 +1094,18 @@ void GameListFrame::OnParsingFinished() {
         }
 
         const QString serial = QString::fromStdString(game.info.serial);
+        const QString game_key = GUI::Utils::GameKeyOf(game.info);
 
         m_games_mutex.lock();
 
-        m_serials.insert(serial);
+        m_game_keys.insert(game_key);
 
-        if (QString note = m_info_cache->GetNotes(game.info.serial); !note.isEmpty()) {
-            m_notes.insert_or_assign(serial, std::move(note));
+        if (QString note = m_info_cache->GetNotes(game.info.path); !note.isEmpty()) {
+            m_notes.insert_or_assign(game_key, std::move(note));
+        }
+
+        if (QString title = m_info_cache->GetTitle(game.info.path); !title.isEmpty()) {
+            m_titles.insert_or_assign(game_key, std::move(title));
         }
 
         m_games_mutex.unlock();
@@ -981,19 +1231,19 @@ void GameListFrame::OnRefreshFinished() {
     // Sort alphabetically by title (localized if available)
     std::sort(m_game_data.begin(), m_game_data.end(),
               [&](const game_info& game1, const game_info& game2) {
-                  const QString serial1 = QString::fromStdString(game1->info.serial);
-                  const QString serial2 = QString::fromStdString(game2->info.serial);
-                  const QString& title1 = m_titles.contains(serial1)
-                                              ? m_titles.at(serial1)
-                                              : QString::fromStdString(game1->info.name);
-                  const QString& title2 = m_titles.contains(serial2)
-                                              ? m_titles.at(serial2)
-                                              : QString::fromStdString(game2->info.name);
+                  const QString key1 = GUI::Utils::GameKeyOf(game1->info);
+                  const QString key2 = GUI::Utils::GameKeyOf(game2->info);
+                  const QString title1 = m_titles.contains(key1)
+                                             ? m_titles.at(key1)
+                                             : QString::fromStdString(game1->info.name);
+                  const QString title2 = m_titles.contains(key2)
+                                             ? m_titles.at(key2)
+                                             : QString::fromStdString(game2->info.name);
                   return title1.toLower() < title2.toLower();
               });
 
     // Clean up hidden games list
-    m_hidden_list.intersect(m_serials);
+    m_hidden_list.intersect(m_game_keys);
     m_gui_settings->SetValue(GUI::game_list_hidden_list, QStringList(m_hidden_list.values()));
     {
         std::vector<std::pair<GameInfo, s64>> pending_puts;
@@ -1014,7 +1264,7 @@ void GameListFrame::OnRefreshFinished() {
         });
     }
 
-    m_serials.clear();
+    m_game_keys.clear();
     m_path_list.clear();
     m_path_entries.clear();
 
@@ -1327,9 +1577,10 @@ void GameListFrame::Refresh(const bool from_drive,
     if (from_drive) {
         m_path_entries.clear();
         m_path_list.clear();
-        m_serials.clear();
+        m_game_keys.clear();
         m_game_data.clear();
         m_notes.clear();
+        m_titles.clear();
         m_games.pop_all();
         {
             std::lock_guard lock(m_pending_cache_puts_mutex);

@@ -84,10 +84,31 @@ public:
                       setup.lastError().text().toStdString());
             return;
         }
-        if (!setup.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS game_notes ("
-                                       "serial TEXT PRIMARY KEY,"
+        if (!setup.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS game_notes_by_path ("
+                                       "path TEXT PRIMARY KEY,"
                                        "notes TEXT NOT NULL)"))) {
             LOG_ERROR(Frontend, "GameInfoCache: failed to create notes schema: {}",
+                      setup.lastError().text().toStdString());
+            return;
+        }
+        // Notes used to be keyed on the serial, which lumped together every
+        // install of the same game. That table is obsolete.
+        setup.exec(QStringLiteral("DROP TABLE IF EXISTS game_notes"));
+        if (!setup.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS categories ("
+                                       "name TEXT PRIMARY KEY,"
+                                       "position INTEGER NOT NULL)")) ||
+            !setup.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS category_games ("
+                                       "category TEXT NOT NULL,"
+                                       "path TEXT NOT NULL,"
+                                       "PRIMARY KEY (category, path))"))) {
+            LOG_ERROR(Frontend, "GameInfoCache: failed to create categories schema: {}",
+                      setup.lastError().text().toStdString());
+            return;
+        }
+        if (!setup.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS game_titles_by_path ("
+                                       "path TEXT PRIMARY KEY,"
+                                       "title TEXT NOT NULL)"))) {
+            LOG_ERROR(Frontend, "GameInfoCache: failed to create titles schema: {}",
                       setup.lastError().text().toStdString());
             return;
         }
@@ -306,15 +327,15 @@ void GameInfoCache::PutSize(const std::string& game_path, u64 size_on_disk, s64 
     }
 }
 
-QString GameInfoCache::GetNotes(const std::string& serial) {
+QString GameInfoCache::GetNotes(const std::string& game_path) {
     Connection& conn = ThreadConnection();
     if (!conn.IsValid()) {
         return QString();
     }
 
     QSqlQuery query(conn.Db());
-    query.prepare(QStringLiteral("SELECT notes FROM game_notes WHERE serial = ?"));
-    query.addBindValue(QString::fromStdString(serial));
+    query.prepare(QStringLiteral("SELECT notes FROM game_notes_by_path WHERE path = ?"));
+    query.addBindValue(QString::fromStdString(game_path));
 
     if (!query.exec() || !query.next()) {
         return QString();
@@ -322,7 +343,7 @@ QString GameInfoCache::GetNotes(const std::string& serial) {
     return query.value(0).toString();
 }
 
-void GameInfoCache::SetNotes(const std::string& serial, const QString& notes) {
+void GameInfoCache::SetNotes(const std::string& game_path, const QString& notes) {
     Connection& conn = ThreadConnection();
     if (!conn.IsValid()) {
         return;
@@ -330,18 +351,172 @@ void GameInfoCache::SetNotes(const std::string& serial, const QString& notes) {
 
     QSqlQuery query(conn.Db());
     if (notes.isEmpty()) {
-        query.prepare(QStringLiteral("DELETE FROM game_notes WHERE serial = ?"));
-        query.addBindValue(QString::fromStdString(serial));
+        query.prepare(QStringLiteral("DELETE FROM game_notes_by_path WHERE path = ?"));
+        query.addBindValue(QString::fromStdString(game_path));
     } else {
-        query.prepare(QStringLiteral("INSERT INTO game_notes (serial, notes) VALUES (?, ?)"
-                                     " ON CONFLICT(serial) DO UPDATE SET notes=excluded.notes"));
-        query.addBindValue(QString::fromStdString(serial));
+        query.prepare(QStringLiteral("INSERT INTO game_notes_by_path (path, notes) VALUES (?, ?)"
+                                     " ON CONFLICT(path) DO UPDATE SET notes=excluded.notes"));
+        query.addBindValue(QString::fromStdString(game_path));
         query.addBindValue(notes);
     }
 
     if (!query.exec()) {
-        LOG_ERROR(Frontend, "GameInfoCache: failed to save notes for '{}': {}", serial,
+        LOG_ERROR(Frontend, "GameInfoCache: failed to save notes for '{}': {}", game_path,
                   query.lastError().text().toStdString());
+    }
+}
+
+QString GameInfoCache::GetTitle(const std::string& game_path) {
+    Connection& conn = ThreadConnection();
+    if (!conn.IsValid()) {
+        return QString();
+    }
+
+    QSqlQuery query(conn.Db());
+    query.prepare(QStringLiteral("SELECT title FROM game_titles_by_path WHERE path = ?"));
+    query.addBindValue(QString::fromStdString(game_path));
+
+    if (!query.exec() || !query.next()) {
+        return QString();
+    }
+    return query.value(0).toString();
+}
+
+void GameInfoCache::SetTitle(const std::string& game_path, const QString& title) {
+    Connection& conn = ThreadConnection();
+    if (!conn.IsValid()) {
+        return;
+    }
+
+    QSqlQuery query(conn.Db());
+    if (title.isEmpty()) {
+        query.prepare(QStringLiteral("DELETE FROM game_titles_by_path WHERE path = ?"));
+        query.addBindValue(QString::fromStdString(game_path));
+    } else {
+        query.prepare(QStringLiteral("INSERT INTO game_titles_by_path (path, title) VALUES (?, ?)"
+                                     " ON CONFLICT(path) DO UPDATE SET title=excluded.title"));
+        query.addBindValue(QString::fromStdString(game_path));
+        query.addBindValue(title);
+    }
+
+    if (!query.exec()) {
+        LOG_ERROR(Frontend, "GameInfoCache: failed to save title for '{}': {}", game_path,
+                  query.lastError().text().toStdString());
+    }
+}
+
+void GameInfoCache::ClearTitles() {
+    Connection& conn = ThreadConnection();
+    if (!conn.IsValid()) {
+        return;
+    }
+
+    QSqlQuery query(conn.Db());
+    if (!query.exec(QStringLiteral("DELETE FROM game_titles_by_path"))) {
+        LOG_ERROR(Frontend, "GameInfoCache: failed to clear custom titles: {}",
+                  query.lastError().text().toStdString());
+    }
+}
+
+std::vector<CategoryRecord> GameInfoCache::LoadCategories() {
+    std::vector<CategoryRecord> categories;
+
+    Connection& conn = ThreadConnection();
+    if (!conn.IsValid()) {
+        return categories;
+    }
+
+    QSqlQuery names(conn.Db());
+    if (!names.exec(QStringLiteral("SELECT name FROM categories ORDER BY position"))) {
+        LOG_ERROR(Frontend, "GameInfoCache: failed to read categories: {}",
+                  names.lastError().text().toStdString());
+        return categories;
+    }
+
+    while (names.next()) {
+        CategoryRecord record;
+        record.name = names.value(0).toString();
+        categories.push_back(std::move(record));
+    }
+
+    QSqlQuery games(conn.Db());
+    games.prepare(QStringLiteral("SELECT path FROM category_games WHERE category = ?"));
+    for (CategoryRecord& record : categories) {
+        games.addBindValue(record.name);
+        if (!games.exec()) {
+            LOG_ERROR(Frontend, "GameInfoCache: failed to read category games for '{}': {}",
+                      record.name.toStdString(), games.lastError().text().toStdString());
+            continue;
+        }
+        while (games.next()) {
+            record.game_paths.append(games.value(0).toString());
+        }
+    }
+
+    return categories;
+}
+
+void GameInfoCache::SaveCategories(const std::vector<CategoryRecord>& categories) {
+    Connection& conn = ThreadConnection();
+    if (!conn.IsValid()) {
+        return;
+    }
+
+    // Rewritten wholesale: the list is small and a single transaction keeps the
+    // two tables from ever disagreeing.
+    QSqlDatabase db = conn.Db();
+    const bool in_transaction = db.transaction();
+
+    QSqlQuery query(db);
+    if (!query.exec(QStringLiteral("DELETE FROM category_games")) ||
+        !query.exec(QStringLiteral("DELETE FROM categories"))) {
+        LOG_ERROR(Frontend, "GameInfoCache: failed to clear categories: {}",
+                  query.lastError().text().toStdString());
+        if (in_transaction) {
+            db.rollback();
+        }
+        return;
+    }
+
+    QSqlQuery insert_category(db);
+    insert_category.prepare(
+        QStringLiteral("INSERT INTO categories (name, position) VALUES (?, ?)"));
+
+    QSqlQuery insert_game(db);
+    insert_game.prepare(
+        QStringLiteral("INSERT INTO category_games (category, path) VALUES (?, ?)"));
+
+    int position = 0;
+    for (const CategoryRecord& record : categories) {
+        insert_category.addBindValue(record.name);
+        insert_category.addBindValue(position++);
+        if (!insert_category.exec()) {
+            LOG_ERROR(Frontend, "GameInfoCache: failed to save category '{}': {}",
+                      record.name.toStdString(), insert_category.lastError().text().toStdString());
+            if (in_transaction) {
+                db.rollback();
+            }
+            return;
+        }
+
+        for (const QString& path : record.game_paths) {
+            insert_game.addBindValue(record.name);
+            insert_game.addBindValue(path);
+            if (!insert_game.exec()) {
+                LOG_ERROR(Frontend, "GameInfoCache: failed to save category game '{}': {}",
+                          path.toStdString(), insert_game.lastError().text().toStdString());
+                if (in_transaction) {
+                    db.rollback();
+                }
+                return;
+            }
+        }
+    }
+
+    if (in_transaction && !db.commit()) {
+        LOG_ERROR(Frontend, "GameInfoCache: failed to commit categories: {}",
+                  db.lastError().text().toStdString());
+        db.rollback();
     }
 }
 

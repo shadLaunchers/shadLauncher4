@@ -5,6 +5,7 @@
 #include <functional>
 #include <QMenu>
 #include <QMenuBar>
+#include <QMessageBox>
 #include <QPainter>
 #include <QPixmap>
 #include <QStatusBar>
@@ -187,6 +188,21 @@ void MainWindow::createConnects() {
     connect(ui->showToolBarAct, &QAction::triggered, this, [this](bool checked) {
         ui->toolBar->setVisible(checked);
         m_gui_settings->SetValue(GUI::main_window_toolBarVisible, checked);
+    });
+
+    connect(ui->actionReset_Custom_Titles, &QAction::triggered, this, [this] {
+        const int count = m_game_list_frame->CustomTitleCount();
+        if (count == 0) {
+            QMessageBox::information(this, tr("Reset All Custom Titles"),
+                                     tr("No game has been renamed."));
+            return;
+        }
+
+        if (QMessageBox::question(this, tr("Reset All Custom Titles"),
+                                  tr("Restore the original name of %n renamed game(s)?", "", count),
+                                  QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes) {
+            m_game_list_frame->ResetCustomTitles();
+        }
     });
 
     connect(ui->showHiddenEntriesAct, &QAction::triggered, this, [this](bool checked) {

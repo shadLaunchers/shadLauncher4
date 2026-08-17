@@ -208,6 +208,7 @@
      <string>Utilities</string>
     </property>
     <addaction name="actionExport_GameList"/>
+    <addaction name="actionReset_Custom_Titles"/>
     <addaction name="actionCrypto_Key_Manager"/>
     <addaction name="actionConfigure_Hotkeys"/>
     <addaction name="actionHostOverrides"/>
@@ -738,6 +739,14 @@
    </property>
    <property name="text">
     <string>Export GameList</string>
+   </property>
+  </action>
+  <action name="actionReset_Custom_Titles">
+   <property name="text">
+    <string>Reset All Custom Titles</string>
+   </property>
+   <property name="toolTip">
+    <string>Restores the original name of every game you renamed in the game list</string>
    </property>
   </action>
   <action name="actionConfigGeneral">

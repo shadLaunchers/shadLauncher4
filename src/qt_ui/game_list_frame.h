@@ -14,6 +14,7 @@
 #include <QSet>
 #include <QSplitter>
 #include <QStackedWidget>
+#include <QTabBar>
 #include <QTableWidgetItem>
 #include <QTextEdit>
 #include <QTimer>
@@ -29,6 +30,8 @@
 
 class GameListTable;
 class GameListGrid;
+class GameCategories;
+struct GameKey;
 class GUISettings;
 class EmulatorSettingsImpl;
 class ProgressDialog;
@@ -85,6 +88,24 @@ public:
 
     PlayTimeEntry GetPlayTimeEntry(const std::string& serial) const;
 
+    /** Category model shared with the context menu, never null. */
+    GameCategories* GetCategories() const {
+        return m_categories.get();
+    }
+    /** Name of the category tab currently selected, empty for the "All" tab. */
+    const QString& CurrentCategory() const {
+        return m_current_category;
+    }
+    /** Select a category tab by name. An unknown or empty name selects "All". */
+    void SetCurrentCategory(const QString& category);
+
+    /** Number of games currently showing a user supplied title. */
+    int CustomTitleCount() const {
+        return static_cast<int>(m_titles.size());
+    }
+    /** Drops every custom title and goes back to the names from param.sfo. */
+    void ResetCustomTitles();
+
 public Q_SLOTS:
     void SetListMode(const bool& is_list);
     void SetSearchText(const QString& text);
@@ -105,6 +126,8 @@ private Q_SLOTS:
     void DoubleClickedSlot(QTableWidgetItem* item);
     void DoubleClickedSlot(const game_info& game);
     void OnCompatFinished();
+    void OnCategoryTabChanged(int index);
+    void ShowCategoryTabContextMenu(const QPoint& pos);
 Q_SIGNALS:
     void FocusToSearchBar();
     void GameListFrameClosed();
@@ -121,7 +144,10 @@ protected:
 private:
     void PushPath(const std::string& path, std::vector<std::string>& legit_paths);
     void CreateConnections();
-    bool SearchMatchesApp(const QString& name, const QString& serial, bool fallback = false) const;
+    bool SearchMatchesApp(const game_info& game, bool fallback = false) const;
+    // Matches the search box against a single title. A game is checked against
+    // both its custom title and its original one.
+    bool SearchMatchesTitle(QString title_name, bool fallback) const;
     QStringList scanDirectories(const std::vector<std::filesystem::path>& baseDirs, int maxDepth,
                                 int currentDepth = 1);
     std::string CurrentSelectionPath();
@@ -132,14 +158,22 @@ private:
     static game_info GetGameInfoFromItem(const QTableWidgetItem* item);
     void PopulateFromCacheInstantly();
     void LoadPlayTimeData();
+    /** (Re)creates one tab per category, plus the leading "All" tab. */
+    void RebuildCategoryTabs();
+    /** Ask for a name and create a category, optionally putting a game in it.
+     *  Returns the created (or matched) category name, empty when cancelled. */
+    QString PromptNewCategory(const GameKey* key = nullptr);
+    bool MatchesCurrentCategory(const game_info& game) const;
     // Settings
     std::shared_ptr<GUISettings> m_gui_settings;
     std::shared_ptr<EmulatorSettingsImpl> m_emu_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
+    std::shared_ptr<GameCategories> m_categories;
     std::unordered_map<std::string, PlayTimeEntry> m_play_times;
     // Objects
     QMainWindow* m_game_dock = nullptr;
     QStackedWidget* m_central_widget = nullptr;
+    QTabBar* m_category_tabs = nullptr;
     GameListGrid* m_game_grid = nullptr;  // Game Grid
     GameListTable* m_game_list = nullptr; // Game List
     GameCompatibility* m_game_compat = nullptr;
@@ -152,12 +186,14 @@ private:
     std::vector<path_entry> m_path_entries;
     QSet<QString> m_hidden_list;
     bool m_show_hidden{false};
+    QString m_current_category;
+    bool m_updating_category_tabs = false;
     std::vector<game_info> m_game_data;
     QFutureWatcher<void> m_parsing_watcher;
     QFutureWatcher<void> m_refresh_watcher;
     std::shared_mutex m_path_mutex;
     std::set<std::string> m_path_list;
-    QSet<QString> m_serials;
+    QSet<QString> m_game_keys;
     QMutex m_games_mutex;
     lf_queue<game_info> m_games;
     const std::array<int, 1> m_parsing_threads{0};
@@ -172,8 +208,8 @@ private:
     QList<QAction*> m_columnActs;
     Qt::SortOrder m_col_sort_order{};
     int m_sort_column{};
-    std::map<QString, QString> m_titles;
-    std::map<QString, QString> m_notes;
+    std::map<QString, QString> m_titles; // install path -> custom title
+    std::map<QString, QString> m_notes;  // install path -> notes
     bool m_initial_refresh_done = false;
     // Search
     QString m_search_text;

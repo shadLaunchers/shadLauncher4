@@ -4,6 +4,7 @@
 #pragma once
 
 #include "common/types.h"
+#include "game_info.h"
 
 #include <QComboBox>
 #include <QDir>
@@ -97,6 +98,15 @@ static inline std::string NormalizePath(const std::filesystem::path& p) {
 #endif
 
     return s;
+}
+
+// Identity of a single game list entry.
+//
+// Serials are NOT unique: the same game can be installed in several game
+// folders and each copy is its own row, so anything stored per game (hidden
+// flag, notes, categories) has to be keyed on the install path instead.
+static inline QString GameKeyOf(const GameInfo& info) {
+    return QString::fromStdString(NormalizePath(info.path));
 }
 
 } // namespace Utils

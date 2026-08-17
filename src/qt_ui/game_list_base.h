@@ -40,6 +40,13 @@ public:
     /** Sets the custom config icon. */
     static QIcon GetCustomConfigIcon(const game_info& game);
 
+    /** Tooltip for one game: "Title [SERIAL]", plus the name from param.sfo
+     *  when the game was renamed, plus the notes when there are any. Returns an
+     *  empty string when there is nothing worth showing beyond title and
+     *  serial, so list mode can leave those rows without a tooltip. */
+    static QString BuildToolTip(const game_info& game, const QString& title, const QString& notes,
+                                bool always);
+
 protected:
     void IconLoadFunction(game_info game, GameItemBase* item, qreal device_pixel_ratio,
                           std::shared_ptr<std::atomic<bool>> cancel);
