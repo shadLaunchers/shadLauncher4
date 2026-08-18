@@ -742,6 +742,10 @@
    </property>
   </action>
   <action name="actionReset_Custom_Titles">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/reset-titles.svg</normaloff>:/images/menu/reset-titles.svg</iconset>
+   </property>
    <property name="text">
     <string>Reset All Custom Titles</string>
    </property>
