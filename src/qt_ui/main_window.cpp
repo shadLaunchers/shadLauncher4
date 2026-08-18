@@ -1011,13 +1011,21 @@ void MainWindow::InstallSinglePkg(std::filesystem::path file, int pkgNum, int nP
                                                       (std::string{pkg.GetTitleID()} + "-patch")
                                                 : game_folder_path;
         const int max_depth = 5;
+        const auto force_separate_update_for_archive = [&] {
+            if (Core::FileSys::IsZArchiveFile(game_folder_path)) {
+                use_game_update = true;
+            }
+        };
 
         if (pkgType.contains("PATCH")) {
             // For patches, try to find the game recursively
             auto found_game = Common::FS::FindGameByID(game_install_dir,
                                                        std::string{pkg.GetTitleID()}, max_depth);
             if (found_game.has_value()) {
-                game_folder_path = found_game.value().parent_path();
+                // FindGameByID returns the game root itself, which may be a
+                // folder or a "<id>.zar" archive.
+                game_folder_path = found_game.value();
+                force_separate_update_for_archive();
                 game_update_path = use_game_update ? game_folder_path.parent_path() /
                                                          (std::string{pkg.GetTitleID()} + "-patch")
                                                    : game_folder_path;
@@ -1027,12 +1035,13 @@ void MainWindow::InstallSinglePkg(std::filesystem::path file, int pkgNum, int nP
             auto found_game = Common::FS::FindGameByID(game_install_dir,
                                                        std::string{pkg.GetTitleID()}, max_depth);
             if (found_game.has_value()) {
-                game_folder_path = found_game.value().parent_path();
+                game_folder_path = found_game.value();
             }
             // If the game is not found, we install it in the game install directory
             else {
                 game_folder_path = game_install_dir / pkg.GetTitleID();
             }
+            force_separate_update_for_archive();
             game_update_path = use_game_update ? game_folder_path.parent_path() /
                                                      (std::string{pkg.GetTitleID()} + "-patch")
                                                : game_folder_path;
@@ -1041,7 +1050,7 @@ void MainWindow::InstallSinglePkg(std::filesystem::path file, int pkgNum, int nP
         QString gameDirPath;
         Common::FS::PathToQString(gameDirPath, game_folder_path);
         QDir game_dir(gameDirPath);
-        if (game_dir.exists()) {
+        if (game_dir.exists() || Core::FileSys::IsZArchiveFile(game_folder_path)) {
             QMessageBox msgBox;
             msgBox.setWindowTitle(tr("PKG Extraction"));
 
@@ -1068,11 +1077,18 @@ void MainWindow::InstallSinglePkg(std::filesystem::path file, int pkgNum, int nP
                     QMessageBox::critical(this, tr("PKG ERROR"), "PSF file there is no APP_VER");
                     return;
                 }
-                std::filesystem::path sce_folder_path =
-                    std::filesystem::exists(game_update_path / "sce_sys" / "param.sfo")
-                        ? game_update_path / "sce_sys" / "param.sfo"
-                        : game_folder_path / "sce_sys" / "param.sfo";
-                psf.Open(sce_folder_path);
+                auto installed_psf =
+                    Core::FileSys::ReadGameFile(game_update_path, "sce_sys/param.sfo");
+                if (!installed_psf.has_value()) {
+                    installed_psf =
+                        Core::FileSys::ReadGameFile(game_folder_path, "sce_sys/param.sfo");
+                }
+                if (!installed_psf.has_value() || !psf.Open(*installed_psf)) {
+                    QMessageBox::critical(
+                        this, tr("PKG ERROR"),
+                        tr("Couldn't read param.sfo of the installed game at %1").arg(gameDirPath));
+                    return;
+                }
                 QString game_app_version;
                 if (auto app_ver = psf.GetString("APP_VER"); app_ver.has_value()) {
                     game_app_version = QString::fromStdString(std::string{*app_ver});

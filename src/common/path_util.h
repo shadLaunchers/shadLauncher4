@@ -76,6 +76,14 @@ QString QStringFromPath(const std::filesystem::path& path);
 
 std::string PathToUTF8String(const std::filesystem::path& path);
 
+/**
+ * Searches dir, up to max_depth levels deep, for an installed copy of game_id.
+ *
+ * @return The game's root: either a directory named <game_id> or a
+ *         "<game_id>.zar" archive file. This is the root itself and not the
+ *         path of an executable inside it, so callers must not take
+ *         parent_path() of the result.
+ */
 [[nodiscard]] std::optional<std::filesystem::path> FindGameByID(const std::filesystem::path& dir,
                                                                 const std::string& game_id,
                                                                 int max_depth);

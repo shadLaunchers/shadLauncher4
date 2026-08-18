@@ -73,20 +73,23 @@ std::optional<fs::path> FindGameByID(const fs::path& dir, const std::string& gam
         return std::nullopt;
     }
 
-    // Check if this is the game we're looking for
-    if (dir.filename() == game_id && fs::exists(dir / "sce_sys" / "param.sfo")) {
-        auto eboot_path = dir / "eboot.bin";
-        if (fs::exists(eboot_path)) {
-            return eboot_path;
-        }
-    }
+    const auto is_game_root = [](const fs::path& root) {
+        return Core::FileSys::ReadGameFile(root, "sce_sys/param.sfo").has_value();
+    };
 
-    // Also check for a same-named ZArchive sibling ("<game_id>.zar"), which
-    // packs the whole game folder (including sce_sys/param.sfo) into a
-    // single read-only file instead of a directory.
-    if (const auto zar_candidate = dir / (game_id + ".zar");
-        Core::FileSys::IsZArchiveFile(zar_candidate)) {
-        if (Core::FileSys::ReadGameFile(zar_candidate, "sce_sys/param.sfo").has_value()) {
+    // Check if this is the game we're looking for
+    if (dir.filename() == game_id && is_game_root(dir)) {
+        return dir;
+    }
+    {
+        std::error_code dir_ec;
+        if (const auto folder_candidate = dir / game_id;
+            fs::is_directory(folder_candidate, dir_ec) && !dir_ec &&
+            is_game_root(folder_candidate)) {
+            return folder_candidate;
+        }
+        if (const auto zar_candidate = dir / (game_id + ".zar");
+            Core::FileSys::IsZArchiveFile(zar_candidate) && is_game_root(zar_candidate)) {
             return zar_candidate;
         }
     }
@@ -94,7 +97,8 @@ std::optional<fs::path> FindGameByID(const fs::path& dir, const std::string& gam
     // Recursively search subdirectories
     std::error_code ec;
     for (const auto& entry : fs::directory_iterator(dir, ec)) {
-        if (!entry.is_directory()) {
+        std::error_code entry_ec;
+        if (!entry.is_directory(entry_ec) || entry_ec) {
             continue;
         }
         if (auto found = FindGameByID(entry.path(), game_id, max_depth - 1)) {
