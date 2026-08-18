@@ -1483,6 +1483,87 @@ Continue?</source>
         <source>The folder was extracted, but it isn&apos;t inside one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Delete Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Are you sure you want to delete %1&apos;s game directory?
+
+Its update/patch directory will be deleted too.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This game has no saved trophies to delete!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete Trophy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Are you sure you want to delete %1&apos;s trophy data?
+
+This removes the unpacked trophy files and the unlocked trophies of every user. Any other copy of this game shares the same trophy data and will lose it too. This cannot be undone.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Some trophy data could not be deleted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy data deleted successfully.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Rename in Game List...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Categories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Move From &quot;%1&quot; To</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Move To</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Take %1 out of &quot;%2&quot; and put it in &quot;%3&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Put %1 in &quot;%2&quot; only, removing it from its other categories.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;New Category...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Out Of &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;No Category</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rename in Game List</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shown instead of &quot;%1&quot; [%2].
+Leave empty to use the original name.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GameListFrame</name>
@@ -1625,11 +1706,63 @@ Using local database.
         <source>Failed to convert icon.</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>GameListGrid</name>
     <message>
-        <source>Notes:</source>
+        <source>Right click a tab to add, rename or delete a category.
+Use the game&apos;s right click menu to put it into a category.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Every game found in your game folders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n game(s) in this category</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>New Category</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Category name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Category Already Exists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A category named &quot;%1&quot; already exists.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;New Category...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Rename &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Delete &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rename Category</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete Category</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete the category &quot;%1&quot;? The games in it are not touched.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1665,10 +1798,6 @@ Using local database.
     </message>
     <message>
         <source>Last updated</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Notes:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2767,6 +2896,24 @@ Select an emulator version from the right panel.</source>
             <numerusform></numerusform>
         </translation>
     </message>
+    <message>
+        <source>Reset All Custom Titles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restores the original name of every game you renamed in the game list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No game has been renamed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>Restore the original name of %n renamed game(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>NpBindDialog</name>
@@ -3072,6 +3219,14 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Extracting: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Original name: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Notes:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
