@@ -4,6 +4,7 @@
 
 #include <algorithm>
 #include <atomic>
+#include <chrono>
 #include <memory>
 #include <regex>
 #include <set>
@@ -21,6 +22,7 @@
 #include <QPointer>
 #include <QPushButton>
 #include <QScrollBar>
+#include <QTimer>
 #include <QtConcurrent>
 #include <core/user_settings.h>
 #include <fmt/core.h>
@@ -54,8 +56,6 @@
 #include "trophy_viewer.h"
 #include "zarchive_viewer_dialog.h"
 
-// Returns true if path lives inside (or equals) any of dirs, resolving
-// symlinks/".."/"." first so this can't be fooled by a non-canonical path.
 bool IsPathWithinAnyDir(const std::filesystem::path& path,
                         const std::vector<std::filesystem::path>& dirs) {
     std::error_code ec;
@@ -76,8 +76,6 @@ bool IsPathWithinAnyDir(const std::filesystem::path& path,
             continue;
         }
 
-        // relative() returns a path starting with ".." when canonical_path
-        // isn't inside canonical_dir.
         const auto rel_str = rel.generic_string();
         if (rel_str != ".." && rel_str.rfind("../", 0) != 0) {
             return true;
@@ -86,7 +84,232 @@ bool IsPathWithinAnyDir(const std::filesystem::path& path,
     return false;
 }
 
-// Targets of the entries in the "Delete..." submenu.
+struct DeleteProgress {
+    std::size_t items_done = 0;
+    std::size_t items_total = 0;
+    std::string current_item;
+    bool scanning = false;
+};
+
+static bool RemovePathsWithProgress(const std::vector<std::filesystem::path>& targets,
+                                    const std::function<bool(const DeleteProgress&)>& progress_cb,
+                                    std::string* error_message) {
+    namespace fs = std::filesystem;
+
+    const auto canceled = [&] {
+        if (error_message) {
+            *error_message = "Canceled";
+        }
+        return false;
+    };
+    DeleteProgress progress;
+    progress.scanning = true;
+
+    std::vector<fs::path> queue;
+    for (const auto& target : targets) {
+        std::error_code exists_ec;
+        if (target.empty() || !fs::exists(target, exists_ec) || exists_ec) {
+            continue;
+        }
+
+        std::error_code type_ec;
+        if (!fs::is_directory(target, type_ec) || type_ec) {
+            queue.push_back(target);
+            progress.items_done = queue.size();
+            progress.current_item = target.filename().string();
+            if (progress_cb && !progress_cb(progress)) {
+                return canceled();
+            }
+            continue;
+        }
+
+        std::vector<fs::path> children;
+        std::error_code walk_ec;
+        for (const auto& entry : fs::recursive_directory_iterator(
+                 target, fs::directory_options::skip_permission_denied, walk_ec)) {
+            if (walk_ec) {
+                break;
+            }
+            children.push_back(entry.path());
+
+            progress.items_done = queue.size() + children.size();
+            progress.current_item = entry.path().filename().string();
+            if (progress_cb && !progress_cb(progress)) {
+                return canceled();
+            }
+        }
+        queue.insert(queue.end(), children.rbegin(), children.rend());
+        queue.push_back(target);
+    }
+
+    // Phase 2: the actual removal.
+    progress.scanning = false;
+    progress.items_done = 0;
+    progress.items_total = queue.size();
+    bool had_error = false;
+
+    for (const auto& item : queue) {
+        if (progress_cb) {
+            progress.current_item = item.filename().string();
+            if (!progress_cb(progress)) {
+                return canceled();
+            }
+        }
+
+        std::error_code remove_ec;
+        fs::remove(item, remove_ec);
+        progress.items_done++;
+        if (remove_ec) {
+            had_error = true;
+            if (error_message && error_message->empty()) {
+                *error_message = remove_ec.message();
+            }
+        }
+    }
+
+    // Final tick so the bar lands on 100% instead of stopping one item short.
+    if (progress_cb) {
+        progress.current_item.clear();
+        progress_cb(progress);
+    }
+
+    return !had_error;
+}
+
+static void RunDeleteWithProgress(GameListFrame* frame, const QString& title,
+                                  std::vector<std::filesystem::path> targets,
+                                  const std::function<void()>& on_success) {
+    auto* progress = new ProgressDialog(title, QObject::tr("Scanning..."), QObject::tr("Cancel"), 0,
+                                        1000, /*delete_on_close=*/true, frame);
+    progress->setAutoReset(false);
+    progress->setAutoClose(false);
+    progress->setMinimumDuration(0);
+    progress->SetRange(0, 0); // indeterminate until the scan finishes
+    progress->show();
+
+    auto cancel_flag = std::make_shared<std::atomic<bool>>(false);
+    QObject::connect(progress, &QProgressDialog::canceled, frame,
+                     [cancel_flag] { *cancel_flag = true; });
+
+    struct DeleteResult {
+        bool success = false;
+        std::string error_message;
+    };
+
+    QPointer<ProgressDialog> progress_guard(progress);
+    auto* watcher = new QFutureWatcher<DeleteResult>(frame);
+    constexpr qint64 kMinVisibleMs = 700;
+    auto started =
+        std::make_shared<std::chrono::steady_clock::time_point>(std::chrono::steady_clock::now());
+
+    QObject::connect(watcher, &QFutureWatcher<DeleteResult>::finished, frame,
+                     [frame, watcher, progress_guard, title, on_success, started]() {
+                         const DeleteResult result = watcher->result();
+                         watcher->deleteLater();
+
+                         auto finish = [frame, progress_guard, title, on_success, result] {
+                             if (progress_guard) {
+                                 progress_guard->close();
+                             }
+
+                             if (!result.success) {
+                                 if (result.error_message != "Canceled") {
+                                     QMessageBox::critical(
+                                         frame, title,
+                                         QObject::tr("Some files could not be deleted:\n%1")
+                                             .arg(QString::fromStdString(result.error_message)));
+                                 }
+                                 return;
+                             }
+
+                             if (on_success) {
+                                 on_success();
+                             }
+                         };
+
+                         const auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(
+                                                  std::chrono::steady_clock::now() - *started)
+                                                  .count();
+                         if (result.success && elapsed < kMinVisibleMs) {
+                             if (progress_guard) {
+                                 progress_guard->SetRange(0, 1000);
+                                 progress_guard->SetValue(1000);
+                                 progress_guard->setLabelText(QObject::tr("Done."));
+                             }
+                             QTimer::singleShot(static_cast<int>(kMinVisibleMs - elapsed), frame,
+                                                finish);
+                             return;
+                         }
+
+                         finish();
+                     });
+    auto last_post = std::make_shared<std::chrono::steady_clock::time_point>();
+    auto posted_once = std::make_shared<bool>(false);
+    auto showing_scan_range = std::make_shared<bool>(true);
+
+    auto future = QtConcurrent::run([targets, cancel_flag, progress_guard, last_post, posted_once,
+                                     showing_scan_range]() -> DeleteResult {
+        std::string error_message;
+        const bool ok = RemovePathsWithProgress(
+            targets,
+            [cancel_flag, progress_guard, last_post, posted_once,
+             showing_scan_range](const DeleteProgress& p) {
+                if (cancel_flag->load()) {
+                    return false;
+                }
+                if (!progress_guard) {
+                    return true;
+                }
+                const auto now = std::chrono::steady_clock::now();
+                const bool is_final =
+                    !p.scanning && p.items_total > 0 && p.items_done == p.items_total;
+                if (*posted_once && !is_final &&
+                    now - *last_post < std::chrono::milliseconds(100)) {
+                    return true;
+                }
+                *posted_once = true;
+                *last_post = now;
+
+                const int percent = (!p.scanning && p.items_total > 0)
+                                        ? static_cast<int>((p.items_done * 1000) / p.items_total)
+                                        : 0;
+
+                QMetaObject::invokeMethod(
+                    progress_guard.data(),
+                    [progress_guard, showing_scan_range, scanning = p.scanning, percent,
+                     found = p.items_done, item = p.current_item] {
+                        if (!progress_guard) {
+                            return;
+                        }
+
+                        if (scanning) {
+                            progress_guard->setLabelText(
+                                QObject::tr("Scanning: %1 items...").arg(found));
+                            return;
+                        }
+
+                        if (*showing_scan_range) {
+                            *showing_scan_range = false;
+                            progress_guard->SetRange(0, 1000);
+                        }
+                        progress_guard->SetValue(percent);
+                        progress_guard->setLabelText(
+                            item.empty()
+                                ? QObject::tr("Deleting...")
+                                : QObject::tr("Deleting: %1").arg(QString::fromStdString(item)));
+                    },
+                    Qt::QueuedConnection);
+
+                return true;
+            },
+            &error_message);
+
+        return DeleteResult{ok, ok ? std::string() : error_message};
+    });
+
+    watcher->setFuture(future);
+}
+
 struct DeletePaths {
     QString game;
     QString update;
@@ -158,8 +381,6 @@ static DeletePaths ResolveDeletePaths(const std::filesystem::path& addon_install
     return paths;
 }
 
-// True when the path is set and something is actually there. Used to keep the
-// "Delete..." submenu down to the entries that would do something.
 static bool DeleteTargetExists(const QString& path) {
     if (path.isEmpty()) {
         return false;
@@ -169,8 +390,6 @@ static bool DeleteTargetExists(const QString& path) {
     return std::filesystem::exists(Common::FS::PathFromQString(path), ec) && !ec;
 }
 
-// Categories are keyed on the install path, so an operation that relocates a
-// game (the ZArchive conversions) has to carry its assignments over.
 static void RetargetCategories(GameListFrame* frame, const std::string& old_path,
                                const std::string& new_path) {
     if (GameCategories* categories = frame ? frame->GetCategories() : nullptr) {
@@ -182,9 +401,6 @@ GameListContextMenu::GameListContextMenu(GameListFrame* frame) : QMenu(frame), m
 
 void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_pos) {
     GameListFrame* frame = m_frame;
-
-    // Where each "Delete..." entry points. Worked out once so the menu can hide
-    // the entries whose target isn't on disk and the handler can reuse them.
     const DeletePaths delete_paths =
         ResolveDeletePaths(frame->m_emu_settings ? frame->m_emu_settings->GetAddonInstallDir()
                                                  : std::filesystem::path{},
@@ -200,28 +416,24 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         const QString& dlc_path = delete_paths.dlc;
         const QString& save_data_path = delete_paths.save_data;
 
-        auto remove_path = [](const QString& path) {
-            const std::filesystem::path path_to_delete = Common::FS::PathFromQString(path);
-            std::error_code remove_ec;
-            if (std::filesystem::is_regular_file(path_to_delete, remove_ec)) {
-                std::filesystem::remove(path_to_delete, remove_ec);
-            } else {
-                QDir(path).removeRecursively();
-            }
-        };
-
         // Wipes the game together with its update. Shared by "Delete Game" and
-        // "Delete Game + Update" so the two can never drift apart.
+        // "Delete Game + Update" so the two can never drift apart. Runs behind
+        // a progress dialog since a game install can be tens of gigabytes.
         auto remove_game_and_update = [&] {
             BackgroundMusicPlayer::getInstance().StopMusic();
 
-            remove_path(update_path);
-            remove_path(game_path);
+            std::vector<std::filesystem::path> targets;
+            if (!update_path.isEmpty()) {
+                targets.push_back(Common::FS::PathFromQString(update_path));
+            }
+            targets.push_back(Common::FS::PathFromQString(game_path));
 
-            auto& game_data = frame->m_game_data;
-            game_data.erase(std::remove(game_data.begin(), game_data.end(), gameinfo),
-                            game_data.end());
-            frame->Refresh(false);
+            RunDeleteWithProgress(frame, tr("Delete Game"), targets, [frame, gameinfo] {
+                auto& game_data = frame->m_game_data;
+                game_data.erase(std::remove(game_data.begin(), game_data.end(), gameinfo),
+                                game_data.end());
+                frame->Refresh(false);
+            });
         };
 
         const bool has_update = !update_path.isEmpty() &&
@@ -409,23 +621,22 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
 
         if (reply == QMessageBox::Yes) {
             const std::filesystem::path path_to_delete = Common::FS::PathFromQString(folder_path);
-            std::error_code remove_ec;
-            if (std::filesystem::is_regular_file(path_to_delete, remove_ec)) {
-                std::filesystem::remove(path_to_delete, remove_ec);
-            } else {
-                QDir(folder_path).removeRecursively();
-            }
+            const GameListFrame::DeleteType delete_type = type;
 
-            if (type == GameListFrame::DeleteType::Game) {
-                auto& game_data = frame->m_game_data;
-                game_data.erase(std::remove(game_data.begin(), game_data.end(), gameinfo),
-                                game_data.end());
-                frame->Refresh(false);
-            } else if (type == GameListFrame::DeleteType::Update) {
-                gameinfo->info.update_path.clear();
-                gameinfo->info.size_on_disk = UINT64_MAX;
-                frame->Refresh(false);
-            }
+            RunDeleteWithProgress(
+                frame, tr("Delete %1").arg(message_type), {path_to_delete},
+                [frame, gameinfo, delete_type] {
+                    if (delete_type == GameListFrame::DeleteType::Game) {
+                        auto& game_data = frame->m_game_data;
+                        game_data.erase(std::remove(game_data.begin(), game_data.end(), gameinfo),
+                                        game_data.end());
+                        frame->Refresh(false);
+                    } else if (delete_type == GameListFrame::DeleteType::Update) {
+                        gameinfo->info.update_path.clear();
+                        gameinfo->info.size_on_disk = UINT64_MAX;
+                        frame->Refresh(false);
+                    }
+                });
         }
     };
 
@@ -614,6 +825,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                "game folders, so it won't show up in the game list. Move it into a "
                "configured folder, or add this folder under Settings, if you'd like "
                "it to appear."));
+        frame->Refresh(true);
     };
 
     auto convertToZArchiveHandler = [frame, convertPathToZArchiveHandler, refreshOneGameLight,
@@ -671,7 +883,7 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                                      });
     };
 
-    auto convertFromZArchiveHandler = [frame](const game_info& game) {
+    auto convertFromZArchiveHandler = [frame, applyNewPathIfWatched](const game_info& game) {
         const std::filesystem::path source_path(game->info.path);
 
         if (!Core::FileSys::IsZArchiveFile(source_path)) {
@@ -758,7 +970,8 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         auto* watcher = new QFutureWatcher<UnpackZarResult>(frame);
 
         connect(watcher, &QFutureWatcher<UnpackZarResult>::finished, frame,
-                [frame, watcher, progress_guard, source_path, output_path, game]() {
+                [frame, watcher, progress_guard, source_path, output_path, game,
+                 applyNewPathIfWatched]() {
                     const UnpackZarResult result = watcher->result();
                     watcher->deleteLater();
 
@@ -797,23 +1010,16 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
                         }
                     }
 
-                    const auto install_dirs = frame->m_emu_settings
-                                                  ? frame->m_emu_settings->GetGameInstallDirs()
-                                                  : std::vector<std::filesystem::path>{};
-                    if (IsPathWithinAnyDir(output_path.parent_path(), install_dirs)) {
-                        const std::string moved_path = GUI::Utils::NormalizePath(output_path);
-                        RetargetCategories(frame, game->info.path, moved_path);
-                        game->info.path = moved_path;
-                        game->info.size_on_disk = UINT64_MAX;
-                        frame->Refresh(false);
-                    } else {
-                        QMessageBox::information(
-                            frame, tr("Convert from ZArchive"),
-                            tr("The folder was extracted, but it isn't inside one of your "
-                               "configured game folders, so it won't show up in the game "
-                               "list. Move it into a configured folder, or add this "
-                               "folder under Settings, if you'd like it to appear."));
-                    }
+                    applyNewPathIfWatched(
+                        output_path,
+                        [frame, game, output_path] {
+                            const std::string moved_path = GUI::Utils::NormalizePath(output_path);
+                            RetargetCategories(frame, game->info.path, moved_path);
+                            game->info.path = moved_path;
+                            game->info.size_on_disk = UINT64_MAX;
+                            frame->Refresh(false);
+                        },
+                        tr("Convert from ZArchive"));
                 });
 
         auto future = QtConcurrent::run(
