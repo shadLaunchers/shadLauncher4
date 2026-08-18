@@ -59,6 +59,15 @@ std::optional<std::vector<u8>> ReadGameFile(const std::filesystem::path& game_ro
     return backend->ReadFile(rel_path);
 }
 
+std::vector<DirEntry> ListGameDir(const std::filesystem::path& game_root,
+                                  std::string_view rel_path) {
+    const auto backend = OpenGameBackend(game_root);
+    if (!backend) {
+        return {};
+    }
+    return backend->ListDir(rel_path);
+}
+
 std::optional<std::filesystem::path> ResolveGameFilePath(const std::filesystem::path& game_root,
                                                          std::string_view rel_path) {
     const auto backend = OpenGameBackend(game_root);

@@ -1,11 +1,72 @@
 // SPDX-FileCopyrightText: Copyright 2024-2026 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <algorithm>
+#include <cctype>
+#include <map>
+#include <optional>
+#include <string>
+#include <utility>
+#include <vector>
+
 #include "common/aes.h"
 #include "common/key_manager.h"
 #include "common/logging/log.h"
 #include "common/path_util.h"
 #include "core/file_format/trp.h"
+#include "core/file_sys/game_backend.h"
+
+namespace {
+
+std::string RootNameForSuffixMatch(const std::filesystem::path& root) {
+    std::string name = root.string();
+    if (root.extension() == ".zar" && name.size() >= 4) {
+        name.erase(name.size() - 4);
+    }
+    return name;
+}
+
+std::optional<int> TrophyIndexFromName(const std::string& name) {
+    if (name.size() < 8) {
+        return std::nullopt;
+    }
+    const char hi = name[6];
+    const char lo = name[7];
+    if (!std::isdigit(static_cast<unsigned char>(hi)) ||
+        !std::isdigit(static_cast<unsigned char>(lo))) {
+        return std::nullopt;
+    }
+    return (hi - '0') * 10 + (lo - '0');
+}
+
+std::vector<std::pair<std::string, std::filesystem::path>> CollectTrpFiles(
+    const std::filesystem::path& game_root) {
+    std::vector<std::pair<std::string, std::filesystem::path>> files;
+
+    for (const auto& entry : Core::FileSys::ListGameDir(game_root, Core::FileSys::TrophyRelDir)) {
+        if (entry.is_directory) {
+            continue;
+        }
+        if (std::filesystem::path(entry.name).extension() != ".trp") {
+            continue;
+        }
+
+        const std::string rel = std::string(Core::FileSys::TrophyRelDir) + "/" + entry.name;
+        if (const auto resolved = Core::FileSys::ResolveGameFilePath(game_root, rel)) {
+            files.emplace_back(entry.name, *resolved);
+        } else {
+            LOG_WARNING(Common_Filesystem, "Failed to resolve trophy file {} in {}", rel,
+                        game_root.string());
+        }
+    }
+
+    // ListDir order is backend-defined, so sort to keep indices stable.
+    std::sort(files.begin(), files.end(),
+              [](const auto& a, const auto& b) { return a.first < b.first; });
+    return files;
+}
+
+} // namespace
 
 static void DecryptEFSM(std::span<const u8, 16> trophyKey, std::span<const u8, 16> NPcommID,
                         std::span<const u8, 16> efsmIv, std::span<const u8> ciphertext,
@@ -44,54 +105,43 @@ static void hexToBytes(const char* hex, unsigned char* dst) {
 
 bool TRP::Extract(const std::filesystem::path& trophyPath, int index, std::string npCommId,
                   const std::filesystem::path& outputPath, bool mergeBasePath) {
-    std::filesystem::path trophyDir = trophyPath / "sce_sys/trophy";
-    if (!std::filesystem::exists(trophyDir) && !mergeBasePath) {
-        LOG_WARNING(Common_Filesystem, "Trophy directory doesn't exist: {}", trophyDir.string());
+    // Enumerated through the game backend, so this works whether the game is a
+    // plain folder or packed into a .zar archive.
+    const auto ownTrpFiles = CollectTrpFiles(trophyPath);
+    if (ownTrpFiles.empty() && !mergeBasePath) {
+        LOG_WARNING(Common_Filesystem, "No trophy files under {}/{}", trophyPath.string(),
+                    Core::FileSys::TrophyRelDir);
         return false;
     }
 
     // Collect all .trp files in the directory
     std::vector<std::filesystem::path> trpFiles;
-    if (mergeBasePath &&
-        (trophyPath.string().ends_with("-patch") || trophyPath.string().ends_with("-UPDATE"))) {
+    const std::string rootName = RootNameForSuffixMatch(trophyPath);
+    if (mergeBasePath && (rootName.ends_with("-patch") || rootName.ends_with("-UPDATE"))) {
         std::map<int, std::filesystem::path> trophyFileMap;
-        std::filesystem::path trophyBaseDir;
 
-        if (std::filesystem::exists(trophyDir)) {
-            for (const auto& entry : std::filesystem::directory_iterator(trophyDir)) {
-                if (entry.is_regular_file() && entry.path().extension() == ".trp") {
-                    // standard filename: trophyXX.trp
-                    int fileIndex = std::stoi(entry.path().filename().string().substr(6, 2));
-                    trophyFileMap.insert({fileIndex, entry.path()});
-                }
+        for (const auto& [name, host_path] : ownTrpFiles) {
+            // standard filename: trophyXX.trp
+            if (const auto fileIndex = TrophyIndexFromName(name)) {
+                trophyFileMap.insert({*fileIndex, host_path});
             }
         }
 
-        if (trophyPath.string().ends_with("-patch")) {
-            trophyBaseDir = trophyPath.string().erase(trophyPath.string().length() - 6);
-        } else if (trophyPath.string().ends_with("-UPDATE")) {
-            trophyBaseDir = trophyPath.string().erase(trophyPath.string().length() - 7);
+        std::string baseName = rootName;
+        if (rootName.ends_with("-patch")) {
+            baseName.erase(baseName.length() - 6);
+        } else {
+            baseName.erase(baseName.length() - 7);
         }
 
-        trophyBaseDir = trophyBaseDir / "sce_sys/trophy";
-        if (std::filesystem::exists(trophyBaseDir)) {
-            for (const auto& entry : std::filesystem::directory_iterator(trophyBaseDir)) {
-                if (entry.is_regular_file() && entry.path().extension() == ".trp") {
-                    // standard filename: trophyXX.trp
-                    bool skip = false;
-                    int fileIndex = std::stoi(entry.path().filename().string().substr(6, 2));
-
-                    // file already mapped
-                    for (auto const& [key, value] : trophyFileMap) {
-                        if (key == fileIndex) {
-                            skip = true;
-                            break;
-                        }
-                    }
-
-                    if (!skip) {
-                        trophyFileMap.insert({fileIndex, entry.path()});
-                    }
+        // The base game may itself be a folder or a .zar, so let ResolveGameRoot
+        // work out which one is actually there.
+        if (const auto baseRoot = Core::FileSys::ResolveGameRoot(baseName)) {
+            for (const auto& [name, host_path] : CollectTrpFiles(*baseRoot)) {
+                const auto fileIndex = TrophyIndexFromName(name);
+                // the update's own file for this index wins
+                if (fileIndex && !trophyFileMap.contains(*fileIndex)) {
+                    trophyFileMap.insert({*fileIndex, host_path});
                 }
             }
         }
@@ -100,19 +150,14 @@ bool TRP::Extract(const std::filesystem::path& trophyPath, int index, std::strin
             trpFiles.push_back(value);
         }
     } else {
-        for (const auto& entry : std::filesystem::directory_iterator(trophyDir)) {
-            if (entry.is_regular_file() && entry.path().extension() == ".trp") {
-                trpFiles.push_back(entry.path());
-            }
+        for (const auto& [name, host_path] : ownTrpFiles) {
+            trpFiles.push_back(host_path);
         }
-
-        // Sort files to ensure consistent ordering
-        std::sort(trpFiles.begin(), trpFiles.end());
     }
 
     if (trpFiles.size() == 0) {
-        LOG_WARNING(Common_Filesystem, "No trophy file in game folder or base folder from ",
-                    trophyDir.string());
+        LOG_WARNING(Common_Filesystem, "No trophy file in game folder or base folder from {}",
+                    trophyPath.string());
         return false;
     }
 
@@ -163,9 +208,14 @@ bool TRP::Extract(const std::filesystem::path& trophyPath, int index, std::strin
         }
 
         s64 seekPos = sizeof(TrpHeader);
-        // Create output directories
-        if (!std::filesystem::create_directories(outputPath / "Icons") ||
-            !std::filesystem::create_directories(outputPath / "Xml")) {
+        // Create output directories. create_directories() reports false when the
+        // directory already exists, which is not an error here - a previous
+        // attempt that got this far would otherwise be unable to ever retry.
+        std::error_code mkdir_ec;
+        std::filesystem::create_directories(outputPath / "Icons", mkdir_ec);
+        std::filesystem::create_directories(outputPath / "Xml", mkdir_ec);
+        if (!std::filesystem::is_directory(outputPath / "Icons", mkdir_ec) ||
+            !std::filesystem::is_directory(outputPath / "Xml", mkdir_ec)) {
             LOG_ERROR(Common_Filesystem, "Failed to create output directories for {}", npCommId);
             return false;
         }

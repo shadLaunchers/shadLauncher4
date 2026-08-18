@@ -667,25 +667,32 @@ void TrophyViewer::SetTableItem(QTableWidget* parent, int row, int column, QStri
 }
 
 std::filesystem::path TrophyViewer::GetTrpFilesPath(std::filesystem::path gamePath) {
-    if (!gamePath.string().ends_with("-patch") && !gamePath.string().ends_with("-Update")) {
+    std::string gameName = gamePath.string();
+    if (gamePath.extension() == ".zar" && gameName.size() >= 4) {
+        gameName.erase(gameName.size() - 4);
+    }
+
+    if (!gameName.ends_with("-patch") && !gameName.ends_with("-UPDATE")) {
         return gamePath;
     }
 
-    std::string basePath = gamePath.string();
-    if (gamePath.string().ends_with("-patch")) {
+    std::string basePath = gameName;
+    if (gameName.ends_with("-patch")) {
         basePath.erase(basePath.length() - 6);
-    } else if (gamePath.string().ends_with("-UDPATE")) {
+    } else {
         basePath.erase(basePath.length() - 7);
     }
 
-    if (std::filesystem::exists(gamePath / "sce_sys" / "trophy")) {
-        for (const auto& entry :
-             std::filesystem::directory_iterator(gamePath / "sce_sys" / "trophy")) {
-            if (entry.path().filename().string().ends_with(".trp")) {
-                return gamePath;
-            }
+    // Listed through the game backend so a .zar update is inspected too.
+    for (const auto& entry : Core::FileSys::ListGameDir(gamePath, Core::FileSys::TrophyRelDir)) {
+        if (!entry.is_directory && entry.name.ends_with(".trp")) {
+            return gamePath;
         }
     }
 
+    // The base game may be a folder or a .zar of the same name.
+    if (const auto baseRoot = Core::FileSys::ResolveGameRoot(basePath)) {
+        return *baseRoot;
+    }
     return basePath;
 }

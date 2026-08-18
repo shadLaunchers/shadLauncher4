@@ -41,6 +41,9 @@ public:
     [[nodiscard]] virtual bool IsOpen() const = 0;
 };
 
+// Relative path of the trophy directory inside a game root.
+inline constexpr std::string_view TrophyRelDir = "sce_sys/trophy";
+
 // True if path is a regular file with a ".zar" extension
 [[nodiscard]] bool IsZArchiveFile(const std::filesystem::path& path);
 
@@ -57,5 +60,11 @@ public:
 
 [[nodiscard]] std::optional<std::filesystem::path> ResolveGameFilePath(
     const std::filesystem::path& game_root, std::string_view rel_path);
+
+// Lists the immediate children of rel_path inside game_root, working for both
+// directory- and archive-backed games. Empty if rel_path doesn't exist or
+// isn't a directory.
+[[nodiscard]] std::vector<DirEntry> ListGameDir(const std::filesystem::path& game_root,
+                                                std::string_view rel_path);
 
 } // namespace Core::FileSys
