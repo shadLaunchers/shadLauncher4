@@ -3289,29 +3289,29 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Scanning...</source>
-      <translation type="unfinished">Scanning...</translation>
+      <translation>Verificando...</translation>
     </message>
     <message>
       <source>Some files could not be deleted:
 %1</source>
-      <translation type="unfinished">Some files could not be deleted:
+      <translation>Não foi possível excluir alguns arquivos:
 %1</translation>
     </message>
     <message>
       <source>Done.</source>
-      <translation type="unfinished">Done.</translation>
+      <translation>Concluído.</translation>
     </message>
     <message>
       <source>Scanning: %1 items...</source>
-      <translation type="unfinished">Scanning: %1 items...</translation>
+      <translation>Verificando: %1 itens...</translation>
     </message>
     <message>
       <source>Deleting...</source>
-      <translation type="unfinished">Deleting...</translation>
+      <translation>Excluindo...</translation>
     </message>
     <message>
       <source>Deleting: %1</source>
-      <translation type="unfinished">Deleting: %1</translation>
+      <translation>Excluindo: %1</translation>
     </message>
   </context>
   <context>
