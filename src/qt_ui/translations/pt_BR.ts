@@ -1514,89 +1514,89 @@ Continuar?</translation>
     </message>
     <message>
       <source>Delete Game</source>
-      <translation type="unfinished">Delete Game</translation>
+      <translation>Excluir Jogo</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s game directory?
 
 Its update/patch directory will be deleted too.</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s game directory?
+      <translation>Tem certeza que deseja excluir o diretório do jogo %1?
 
-Its update/patch directory will be deleted too.</translation>
+Seu diretório atualização/patch também será removido.</translation>
     </message>
     <message>
       <source>This game has no saved trophies to delete!</source>
-      <translation type="unfinished">This game has no saved trophies to delete!</translation>
+      <translation>Este jogo não possui troféus salvos para excluir!</translation>
     </message>
     <message>
       <source>Delete Trophy</source>
-      <translation type="unfinished">Delete Trophy</translation>
+      <translation>Excluir Troféu</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s trophy data?
 
 This removes the unpacked trophy files and the unlocked trophies of every user. Any other copy of this game shares the same trophy data and will lose it too. This cannot be undone.</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s trophy data?
+      <translation>Tem certeza que deseja excluir os dados do troféu de %1?
 
-This removes the unpacked trophy files and the unlocked trophies of every user. Any other copy of this game shares the same trophy data and will lose it too. This cannot be undone.</translation>
+Isso remove os arquivos troféus não empacotados e troféus desbloqueados de cada usuário. Qualquer outra cópia deste jogo que compartilha os mesmos dados de troféu também será perdida. Isto não pode ser desfeito.</translation>
     </message>
     <message>
       <source>Some trophy data could not be deleted.</source>
-      <translation type="unfinished">Some trophy data could not be deleted.</translation>
+      <translation>Não foi possível excluir alguns dados de troféus.</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation type="unfinished">Trophy</translation>
+      <translation>Troféu</translation>
     </message>
     <message>
       <source>Trophy data deleted successfully.</source>
-      <translation type="unfinished">Trophy data deleted successfully.</translation>
+      <translation>Dados de troféus excluídos com sucesso.</translation>
     </message>
     <message>
       <source>&amp;Rename in Game List...</source>
-      <translation type="unfinished">&amp;Rename in Game List...</translation>
+      <translation>&amp;Renomear na Lista de Jogos...</translation>
     </message>
     <message>
       <source>&amp;Categories</source>
-      <translation type="unfinished">&amp;Categories</translation>
+      <translation>&amp;Categorias</translation>
     </message>
     <message>
       <source>&amp;Move From &quot;%1&quot; To</source>
-      <translation type="unfinished">&amp;Move From &quot;%1&quot; To</translation>
+      <translation>&amp;Mover De &quot;%1&quot; Para</translation>
     </message>
     <message>
       <source>&amp;Move To</source>
-      <translation type="unfinished">&amp;Move To</translation>
+      <translation>&amp;Mover Para</translation>
     </message>
     <message>
       <source>Take %1 out of &quot;%2&quot; and put it in &quot;%3&quot;.</source>
-      <translation type="unfinished">Take %1 out of &quot;%2&quot; and put it in &quot;%3&quot;.</translation>
+      <translation>Retire %1 de &quot;%2&quot; e coloque-o em &quot;%3&quot;.</translation>
     </message>
     <message>
       <source>Put %1 in &quot;%2&quot; only, removing it from its other categories.</source>
-      <translation type="unfinished">Put %1 in &quot;%2&quot; only, removing it from its other categories.</translation>
+      <translation>Coloque %1 somente em &quot;%2&quot;, removendo-o de suas outras categorias.</translation>
     </message>
     <message>
       <source>&amp;New Category...</source>
-      <translation type="unfinished">&amp;New Category...</translation>
+      <translation>&amp;Nova Categoria...</translation>
     </message>
     <message>
       <source>&amp;Out Of &quot;%1&quot;</source>
-      <translation type="unfinished">&amp;Out Of &quot;%1&quot;</translation>
+      <translation>&amp;Retirar de &quot;%1&quot;</translation>
     </message>
     <message>
       <source>&amp;No Category</source>
-      <translation type="unfinished">&amp;No Category</translation>
+      <translation>&amp;Nenhuma Categoria</translation>
     </message>
     <message>
       <source>Rename in Game List</source>
-      <translation type="unfinished">Rename in Game List</translation>
+      <translation>Renomear na Lista de Jogos</translation>
     </message>
     <message>
       <source>Shown instead of &quot;%1&quot; [%2].
 Leave empty to use the original name.</source>
-      <translation type="unfinished">Shown instead of &quot;%1&quot; [%2].
-Leave empty to use the original name.</translation>
+      <translation>Exibido em vez de &quot;%1&quot; [%2].
+Deixe em branco para usar o nome original.</translation>
     </message>
   </context>
   <context>
@@ -1746,63 +1746,63 @@ Utilizando o banco de dados local.
     <message>
       <source>Right click a tab to add, rename or delete a category.
 Use the game&apos;s right click menu to put it into a category.</source>
-      <translation type="unfinished">Right click a tab to add, rename or delete a category.
-Use the game&apos;s right click menu to put it into a category.</translation>
+      <translation>Clique com o botão direito em uma aba para adicionar, renomear ou excluir uma categoria.
+Use o menu do clique com o botão direito do jogo para colocá-lo em uma categoria.</translation>
     </message>
     <message>
       <source>All</source>
-      <translation type="unfinished">All</translation>
+      <translation>Todos</translation>
     </message>
     <message>
       <source>Every game found in your game folders</source>
-      <translation type="unfinished">Every game found in your game folders</translation>
+      <translation>Todos os jogos encontrados nas pastas de jogos</translation>
     </message>
     <message numerus="yes">
       <source>%n game(s) in this category</source>
-      <translation type="unfinished">
-        <numerusform>%n game(s) in this category</numerusform>
-        <numerusform>%n game(s) in this category</numerusform>
+      <translation>
+        <numerusform>%n jogo nesta categoria</numerusform>
+        <numerusform>%n jogos nesta categoria</numerusform>
       </translation>
     </message>
     <message>
       <source>New Category</source>
-      <translation type="unfinished">New Category</translation>
+      <translation>Nova Categoria</translation>
     </message>
     <message>
       <source>Category name:</source>
-      <translation type="unfinished">Category name:</translation>
+      <translation>Nome da categoria:</translation>
     </message>
     <message>
       <source>Category Already Exists</source>
-      <translation type="unfinished">Category Already Exists</translation>
+      <translation>Categoria Já Existente</translation>
     </message>
     <message>
       <source>A category named &quot;%1&quot; already exists.</source>
-      <translation type="unfinished">A category named &quot;%1&quot; already exists.</translation>
+      <translation>Já existe uma categoria chamada &quot;%1&quot;.</translation>
     </message>
     <message>
       <source>&amp;New Category...</source>
-      <translation type="unfinished">&amp;New Category...</translation>
+      <translation>&amp;Nova Categoria...</translation>
     </message>
     <message>
       <source>&amp;Rename &quot;%1&quot;</source>
-      <translation type="unfinished">&amp;Rename &quot;%1&quot;</translation>
+      <translation>&amp; Renomear &quot;%1&quot;</translation>
     </message>
     <message>
       <source>&amp;Delete &quot;%1&quot;</source>
-      <translation type="unfinished">&amp;Delete &quot;%1&quot;</translation>
+      <translation>&amp;Excluir &quot;%1&quot;</translation>
     </message>
     <message>
       <source>Rename Category</source>
-      <translation type="unfinished">Rename Category</translation>
+      <translation>Renomear Categoria</translation>
     </message>
     <message>
       <source>Delete Category</source>
-      <translation type="unfinished">Delete Category</translation>
+      <translation>Excluir Categoria</translation>
     </message>
     <message>
       <source>Delete the category &quot;%1&quot;? The games in it are not touched.</source>
-      <translation type="unfinished">Delete the category &quot;%1&quot;? The games in it are not touched.</translation>
+      <translation>Excluir a categoria &quot;%1&quot;? Os jogos contidos nela não serão tocados.</translation>
     </message>
   </context>
   <context>
@@ -2714,7 +2714,7 @@ Substituir a lista atual completamente ou adicionar estas entradas a ela (entrad
     </message>
     <message>
       <source>Log</source>
-      <translation>Registro</translation>
+      <translation>Log</translation>
     </message>
     <message>
       <source>Crypto Key Manager</source>
@@ -2956,21 +2956,21 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Reset All Custom Titles</source>
-      <translation type="unfinished">Reset All Custom Titles</translation>
+      <translation>Redefinir Todos os Títulos Personalizados</translation>
     </message>
     <message>
       <source>Restores the original name of every game you renamed in the game list</source>
-      <translation type="unfinished">Restores the original name of every game you renamed in the game list</translation>
+      <translation>Restaura o nome original de cada jogo que você renomeou na lista de jogos</translation>
     </message>
     <message>
       <source>No game has been renamed.</source>
-      <translation type="unfinished">No game has been renamed.</translation>
+      <translation>Nenhum jogo foi renomeado.</translation>
     </message>
     <message numerus="yes">
       <source>Restore the original name of %n renamed game(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore the original name of %n renamed game(s)?</numerusform>
-        <numerusform>Restore the original name of %n renamed game(s)?</numerusform>
+      <translation>
+        <numerusform>Restaurar o nome original de %n jogo renomeado?</numerusform>
+        <numerusform>Restaurar os nomes originais de %n jogos renomeados?</numerusform>
       </translation>
     </message>
   </context>
@@ -3285,11 +3285,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Original name: %1</source>
-      <translation type="unfinished">Original name: %1</translation>
+      <translation>Nome original: %1</translation>
     </message>
     <message>
       <source>Notes:</source>
-      <translation type="unfinished">Notes:</translation>
+      <translation>Observações:</translation>
     </message>
   </context>
   <context>
@@ -3737,11 +3737,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation>Habilitar Camadas de Validação do Vulkan</translation>
+      <translation>Habilitar Validação de Núcleo</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation>Habilitar Camadas de Validação do Vulkan</translation>
+      <translation>Habilitar Validação de Sincronização</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
@@ -5057,8 +5057,8 @@ Isso substituirá o executável do emulador existente e copiará todos os arquiv
     <message>
       <source>Some files could not be copied to the application directory.
 The version may not run correctly.</source>
-      <translation>Alguns arquivos não puderam ser copiados para o diretório do aplicativo.
-A versão pode não funcionar corretamente.</translation>
+      <translation>Não foi possível copiar alguns arquivos para o diretório do aplicativo.
+A versão pode não executar corretamente.</translation>
     </message>
     <message>
       <source>Version %1 has been installed with all files to:
