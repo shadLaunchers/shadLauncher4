@@ -74,16 +74,23 @@ jobs:
         with:
           arch: x64
 
-      - name: Setup Qt
-        uses: jurplel/install-qt-action@v4
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4.3.1
         with:
-          version: 6.10.0
+          version: 6.11.1
           host: windows
           target: desktop
           arch: win64_msvc2022_64
           archives: qtbase qttools qtsvg
           modules: qtmultimedia
-
+          cache: true
+          cache-key-prefix: install-qt-action-qt611
+          setup-python: true
+          install-deps: true
+          add-tools-to-path: true
+          set-env: true
+          aqtsource: 'git+https://github.com/miurahr/aqtinstall.git@16db45a70b5905ad596941b223469bc86a56901e'
+          
       - name: Run version script
         shell: bash
         run: .github/workflows/scripts/update_version.sh
