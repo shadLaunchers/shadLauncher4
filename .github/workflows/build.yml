@@ -184,7 +184,7 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
-          version: 6.10.0
+          version: 6.11.1
           arch: linux_gcc_64
           modules: "qtmultimedia"
           tools: 'tools_generic'
