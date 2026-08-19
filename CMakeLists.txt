@@ -174,6 +174,8 @@ set(CORE src/core/user_manager.cpp
           src/core/ipc/ipc_client.h
           src/core/loader.cpp
           src/core/loader.h
+          src/core/shadnet_login_check.cpp
+          src/core/shadnet_login_check.h
           src/core/cpu_patches.h
 )
 
