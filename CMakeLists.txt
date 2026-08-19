@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 if(DEFINED APP_VERSION)
     set(APP_VERSION ${APP_VERSION})
 else()
-    set(APP_VERSION "0.0.1")
+    set(APP_VERSION "0.1.0")
 endif()
 
 message(STATUS "Building shadLauncher4 version: ${APP_VERSION}")
