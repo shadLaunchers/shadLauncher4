@@ -7,6 +7,7 @@
 #include <common/path_util.h>
 #include <core/user_settings.h>
 #include "core/emulator_settings.h"
+#include "core/shadnet_login_check.h"
 #include "gui_settings.h"
 #include "table_item_delegate.h"
 #include "user_manager_dialog.h"
@@ -387,6 +388,21 @@ void UserManagerDialog::OnUserEditShadNet() {
         password->setEchoMode(on ? QLineEdit::Normal : QLineEdit::Password);
     });
 
+    // Credential check against the configured ShadNet server.
+    auto* test_button = new QPushButton(tr("Check Login"), &dialog);
+    test_button->setAutoDefault(false);
+    test_button->setDefault(false);
+
+    auto* test_status = new QLabel(&dialog);
+    test_status->setWordWrap(true);
+    test_status->setTextInteractionFlags(Qt::TextSelectableByMouse);
+
+    auto* test_row = new QWidget(&dialog);
+    auto* test_layout = new QHBoxLayout(test_row);
+    test_layout->setContentsMargins(0, 0, 0, 0);
+    test_layout->addWidget(test_button);
+    test_layout->addWidget(test_status, 1);
+
     // NPID/password only make sense when ShadNet is enabled.
     auto* form_host = new QWidget(&dialog);
     auto* form = new QFormLayout(form_host);
@@ -394,6 +410,47 @@ void UserManagerDialog::OnUserEditShadNet() {
     form->addRow(tr("Account ID (NPID):"), npid);
     form->addRow(tr("Password:"), password);
     form->addRow(QString(), show_pw);
+    form->addRow(QString(), test_row);
+
+    const QString server = QString::fromStdString(m_emu_settings->GetShadNetServer());
+    const QString stored_token = QString::fromStdString(user->shadnet_token);
+
+    auto set_status = [test_status](const QString& text, const QString& color) {
+        test_status->setText(text);
+        test_status->setStyleSheet(color.isEmpty() ? QString()
+                                                   : QStringLiteral("color: %1;").arg(color));
+    };
+
+    // Clear a stale result as soon as the credentials are edited again.
+    auto clear_status = [set_status]() { set_status(QString(), QString()); };
+    connect(npid, &QLineEdit::textEdited, &dialog, clear_status);
+    connect(password, &QLineEdit::textEdited, &dialog, clear_status);
+
+    connect(test_button, &QPushButton::clicked, &dialog, [=, &dialog]() {
+        const QString id = npid->text().trimmed();
+        if (id.isEmpty()) {
+            set_status(tr("Enter an account ID first."), QStringLiteral("#c0392b"));
+            return;
+        }
+        if (server.trimmed().isEmpty()) {
+            set_status(tr("No ShadNet server is configured. Set one in Settings."),
+                       QStringLiteral("#c0392b"));
+            return;
+        }
+
+        test_button->setEnabled(false);
+        set_status(tr("Checking %1...").arg(server), QString());
+
+        auto* checker = new ShadNet::LoginChecker(&dialog);
+        connect(checker, &ShadNet::LoginChecker::Finished, &dialog,
+                [=](const ShadNet::LoginCheckResult& result) {
+                    test_button->setEnabled(true);
+                    const QString color = result.credentials_valid() ? QStringLiteral("#27ae60")
+                                                                     : QStringLiteral("#c0392b");
+                    set_status(result.message, color);
+                });
+        checker->Start(server, id, password->text(), stored_token);
+    });
 
     auto sync_enabled = [form_host](bool on) { form_host->setEnabled(on); };
     sync_enabled(enabled->isChecked());

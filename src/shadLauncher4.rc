@@ -1,2 +1,9 @@
 // ICON
 IDI_ICON1 ICON "images/shadLauncher4.ico"
+
+// MANIFEST
+// 1  = CREATEPROCESS_MANIFEST_RESOURCE_ID
+// 24 = RT_MANIFEST
+// Numeric IDs are used so the .rc does not need to #include <windows.h>,
+// which llvm-rc does not always resolve the same way as rc.exe.
+1 24 "shadLauncher4.manifest"
