@@ -1507,94 +1507,90 @@ El archivo .zar original no se alterará hasta que la conversión haya terminado
       <translation>Se ha guardado el archivo en una carpeta que no es una de las carpetas de juegos que tienes configuradas, así que no se mostrará en la lista de juegos. Llévalo a una carpeta que sí esté configurada o, si quieres que esta carpeta nueva aparezca, añádela desde dentro de la configuración.</translation>
     </message>
     <message>
-      <source>The folder was extracted, but it isn&apos;t inside one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
-      <translation>Se ha extraído la carpeta, pero no es una de las carpetas de juegos que tienes configuradas, así que no se mostrará en la lista de juegos. Llévalo a una carpeta que sí esté configurada o, si quieres que esta carpeta nueva aparezca, añádela desde dentro de la configuración.</translation>
-    </message>
-    <message>
       <source>Delete Game</source>
-      <translation type="unfinished">Delete Game</translation>
+      <translation>Eliminar juego</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s game directory?
 
 Its update/patch directory will be deleted too.</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s game directory?
+      <translation>¿Seguro que quieres eliminar el directorio de juego de %1?
 
-Its update/patch directory will be deleted too.</translation>
+También se eliminará su directorio de actualizaciones/parches.</translation>
     </message>
     <message>
       <source>This game has no saved trophies to delete!</source>
-      <translation type="unfinished">This game has no saved trophies to delete!</translation>
+      <translation>¡Este juego no tiene trofeos guardados!</translation>
     </message>
     <message>
       <source>Delete Trophy</source>
-      <translation type="unfinished">Delete Trophy</translation>
+      <translation>Eliminar trofeos</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s trophy data?
 
 This removes the unpacked trophy files and the unlocked trophies of every user. Any other copy of this game shares the same trophy data and will lose it too. This cannot be undone.</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s trophy data?
+      <translation>¿Seguro que quieres eliminar los datos de trofeos de %1?
 
-This removes the unpacked trophy files and the unlocked trophies of every user. Any other copy of this game shares the same trophy data and will lose it too. This cannot be undone.</translation>
+Se eliminarán los datos de trofeos desempaquetados y los trofeos desbloqueados para todos los usuarios. Cualquier otra copia de este juego comparte los mismos datos de trofeos y también los perderá. Esta acción no se puede deshacer.</translation>
     </message>
     <message>
       <source>Some trophy data could not be deleted.</source>
-      <translation type="unfinished">Some trophy data could not be deleted.</translation>
+      <translation>No se han podido eliminar algunos datos de trofeos.</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation type="unfinished">Trophy</translation>
+      <translation>Trofeos</translation>
     </message>
     <message>
       <source>Trophy data deleted successfully.</source>
-      <translation type="unfinished">Trophy data deleted successfully.</translation>
+      <translation>Se han eliminado los datos de trofeos.</translation>
     </message>
     <message>
       <source>&amp;Rename in Game List...</source>
-      <translation type="unfinished">&amp;Rename in Game List...</translation>
+      <translation>&amp;Renombrar en la lista de juegos...</translation>
     </message>
     <message>
       <source>&amp;Categories</source>
-      <translation type="unfinished">&amp;Categories</translation>
+      <translation>&amp;Categorías</translation>
     </message>
     <message>
       <source>&amp;Move From &quot;%1&quot; To</source>
-      <translation type="unfinished">&amp;Move From &quot;%1&quot; To</translation>
+      <translation>&amp;Mover de &quot;%1&quot; a...</translation>
     </message>
     <message>
       <source>&amp;Move To</source>
-      <translation type="unfinished">&amp;Move To</translation>
+      <translation>&amp;Mover</translation>
     </message>
     <message>
       <source>Take %1 out of &quot;%2&quot; and put it in &quot;%3&quot;.</source>
-      <translation type="unfinished">Take %1 out of &quot;%2&quot; and put it in &quot;%3&quot;.</translation>
+      <translation>Reubica %1 de &quot;%2&quot; a &quot;%3&quot;.</translation>
     </message>
     <message>
       <source>Put %1 in &quot;%2&quot; only, removing it from its other categories.</source>
-      <translation type="unfinished">Put %1 in &quot;%2&quot; only, removing it from its other categories.</translation>
+      <translation>Mueve %1 solo a &quot;%2&quot; y lo elimina del resto de categorías.</translation>
     </message>
     <message>
       <source>&amp;New Category...</source>
-      <translation type="unfinished">&amp;New Category...</translation>
+      <translation>&amp;Nueva categoría...</translation>
     </message>
     <message>
       <source>&amp;Out Of &quot;%1&quot;</source>
-      <translation type="unfinished">&amp;Out Of &quot;%1&quot;</translation>
+      <translation>&amp;Sacar de &quot;%1&quot;</translation>
     </message>
     <message>
       <source>&amp;No Category</source>
-      <translation type="unfinished">&amp;No Category</translation>
+      <translation>&amp;Sin categoría</translation>
     </message>
     <message>
       <source>Rename in Game List</source>
-      <translation type="unfinished">Rename in Game List</translation>
+      <translation>Renombrar en la lista de juegos</translation>
     </message>
     <message>
       <source>Shown instead of &quot;%1&quot; [%2].
 Leave empty to use the original name.</source>
-      <translation type="unfinished">Shown instead of &quot;%1&quot; [%2].
-Leave empty to use the original name.</translation>
+      <translation>Se mostrará en lugar de &quot;%1&quot; [%2].
+Para utilizar el nombre original, deja este cuadro en blanco.</translation>
     </message>
   </context>
   <context>
@@ -1744,63 +1740,63 @@ Se va a utilizar la base de datos local.
     <message>
       <source>Right click a tab to add, rename or delete a category.
 Use the game&apos;s right click menu to put it into a category.</source>
-      <translation type="unfinished">Right click a tab to add, rename or delete a category.
-Use the game&apos;s right click menu to put it into a category.</translation>
+      <translation>Haz clic derecho en una pestaña para añadir, renombrar o eliminar una categoría.
+Utiliza el menú de clic derecho de cada juego para ponerlo en una categoría.</translation>
     </message>
     <message>
       <source>All</source>
-      <translation type="unfinished">All</translation>
+      <translation>Todos</translation>
     </message>
     <message>
       <source>Every game found in your game folders</source>
-      <translation type="unfinished">Every game found in your game folders</translation>
+      <translation>Todos los juegos encontrados en tus carpetas de juego.</translation>
     </message>
     <message numerus="yes">
       <source>%n game(s) in this category</source>
-      <translation type="unfinished">
-        <numerusform>%n game(s) in this category</numerusform>
-        <numerusform>%n game(s) in this category</numerusform>
+      <translation>
+        <numerusform>%n juego en esta categoría</numerusform>
+        <numerusform>%n juegos en esta categoría</numerusform>
       </translation>
     </message>
     <message>
       <source>New Category</source>
-      <translation type="unfinished">New Category</translation>
+      <translation>Nueva categoría</translation>
     </message>
     <message>
       <source>Category name:</source>
-      <translation type="unfinished">Category name:</translation>
+      <translation>Nombre de categoría:</translation>
     </message>
     <message>
       <source>Category Already Exists</source>
-      <translation type="unfinished">Category Already Exists</translation>
+      <translation>La categoría ya existe</translation>
     </message>
     <message>
       <source>A category named &quot;%1&quot; already exists.</source>
-      <translation type="unfinished">A category named &quot;%1&quot; already exists.</translation>
+      <translation>Ya existe una categoría con el nombre &quot;%1&quot;.</translation>
     </message>
     <message>
       <source>&amp;New Category...</source>
-      <translation type="unfinished">&amp;New Category...</translation>
+      <translation>&amp;Nueva categoría...</translation>
     </message>
     <message>
       <source>&amp;Rename &quot;%1&quot;</source>
-      <translation type="unfinished">&amp;Rename &quot;%1&quot;</translation>
+      <translation>&amp;Renombrar &quot;%1&quot;</translation>
     </message>
     <message>
       <source>&amp;Delete &quot;%1&quot;</source>
-      <translation type="unfinished">&amp;Delete &quot;%1&quot;</translation>
+      <translation>&amp;Eliminar &quot;%1&quot;</translation>
     </message>
     <message>
       <source>Rename Category</source>
-      <translation type="unfinished">Rename Category</translation>
+      <translation>Renombrar categoría</translation>
     </message>
     <message>
       <source>Delete Category</source>
-      <translation type="unfinished">Delete Category</translation>
+      <translation>Eliminar categoría</translation>
     </message>
     <message>
       <source>Delete the category &quot;%1&quot;? The games in it are not touched.</source>
-      <translation type="unfinished">Delete the category &quot;%1&quot;? The games in it are not touched.</translation>
+      <translation>¿Eliminar la categoría &quot;%1&quot;? No se tocarán los juegos que contenga.</translation>
     </message>
   </context>
   <context>
@@ -2954,21 +2950,21 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Reset All Custom Titles</source>
-      <translation type="unfinished">Reset All Custom Titles</translation>
+      <translation>Restablecer todos los títulos personalizados</translation>
     </message>
     <message>
       <source>Restores the original name of every game you renamed in the game list</source>
-      <translation type="unfinished">Restores the original name of every game you renamed in the game list</translation>
+      <translation>Recupera los nombres originales de todos los juegos a los que hayas cambiado su nombre dentro de la lista de juegos</translation>
     </message>
     <message>
       <source>No game has been renamed.</source>
-      <translation type="unfinished">No game has been renamed.</translation>
+      <translation>No se ha cambiado el nombre de ningún juego.</translation>
     </message>
     <message numerus="yes">
       <source>Restore the original name of %n renamed game(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore the original name of %n renamed game(s)?</numerusform>
-        <numerusform>Restore the original name of %n renamed game(s)?</numerusform>
+      <translation>
+        <numerusform>¿Recuperar el nombre original de %1 juego renombrado?</numerusform>
+        <numerusform>¿Recuperar el nombre original de %1 juegos renombrados?</numerusform>
       </translation>
     </message>
   </context>
@@ -3275,7 +3271,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Row %1: duplicate entry for &apos;%2&apos;.</source>
-      <translation>Fila %1: entrada duplicada para «%2».</translation>
+      <translation>Fila %1: entrada duplicada para &quot;%2&quot;.</translation>
     </message>
     <message>
       <source>Extracting: %1</source>
@@ -3283,11 +3279,37 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Original name: %1</source>
-      <translation type="unfinished">Original name: %1</translation>
+      <translation>Nombre original: %1</translation>
     </message>
     <message>
       <source>Notes:</source>
-      <translation type="unfinished">Notes:</translation>
+      <translation>Notas:</translation>
+    </message>
+    <message>
+      <source>Scanning...</source>
+      <translation>Buscando...</translation>
+    </message>
+    <message>
+      <source>Some files could not be deleted:
+%1</source>
+      <translation>No se han podido eliminar algunos archivos:
+%1</translation>
+    </message>
+    <message>
+      <source>Done.</source>
+      <translation>Terminado.</translation>
+    </message>
+    <message>
+      <source>Scanning: %1 items...</source>
+      <translation>Buscando: %1 elementos...</translation>
+    </message>
+    <message>
+      <source>Deleting...</source>
+      <translation>Eliminando...</translation>
+    </message>
+    <message>
+      <source>Deleting: %1</source>
+      <translation>Eliminando: %1</translation>
     </message>
   </context>
   <context>
@@ -3499,7 +3521,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
-      <translation>«Mailbox» (con sincronía vertical)</translation>
+      <translation>Tipo mailbox (con sincronía vertical)</translation>
     </message>
     <message>
       <source>Fifo (Vsync)</source>
@@ -3771,7 +3793,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Cambia la opción «Conexión a red» a verdadero</translation>
+      <translation>Cambia la opción Conexión a red a verdadero</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
@@ -4017,7 +4039,7 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation>«Back-end» de audio</translation>
+      <translation>Back-end de audio</translation>
     </message>
     <message>
       <source>Camera Device</source>
@@ -4069,7 +4091,7 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</source>
-      <translation>Para añadir temas personalizados, arrastra archivos de hoja de estilos .qss a la carpeta «themes», dentro de tu directorio de datos de usuario.</translation>
+      <translation>Para añadir temas personalizados, arrastra archivos de hoja de estilos .qss a la carpeta &quot;themes&quot;, dentro de tu directorio de datos de usuario.</translation>
     </message>
     <message>
       <source> (missing)</source>
@@ -4216,7 +4238,7 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation>Actualizaciones de la interfaz:\nPrincipal: las versiones oficiales mensuales podrían estar muy obsoletas, pero son más fiables y han sido más testadas.\n«Nightly»: versiones de desarrollo con las últimas características y correcciones, pero que pueden contener fallos y ser menos estables.\n\n* Esta actualización solo se aplica a la interfaz de usuario Qt. Para actualizar el núcleo del emulador debes utilizar el gestor de versiones.</translation>
+      <translation>Actualizaciones de la interfaz:\nPrincipal: las versiones oficiales mensuales podrían estar muy obsoletas, pero son más fiables y han sido más testadas.\nNightly: versiones de desarrollo con las últimas características y correcciones, pero que pueden contener fallos y ser menos estables.\n\n* Esta actualización solo se aplica a la interfaz de usuario Qt. Para actualizar el núcleo del emulador debes utilizar el gestor de versiones.</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
@@ -4272,11 +4294,11 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</source>
-      <translation>Dispositivo de gráficos:\nSi tienes un equipo con varias GPU, selecciona en la lista desplegable la GPU que uitilizará el emulador o «Selección automática» para elegirla automáticamente.</translation>
+      <translation>Dispositivo de gráficos:\nSi tienes un equipo con varias GPU, selecciona en la lista desplegable la GPU que uitilizará el emulador o &quot;Selección automática&quot; para elegirla automáticamente.</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation>Modo de presentación:\nConfigura la presentación de la salida de vídeo en tu pantalla.\n\n«Mailbox»: los fotogramas se sincronizarán con la frecuencia de actualización de tu pantalla. Los fotogramas nuevos sustituirán a cualquier fotograma que esté pendiente de mostrar. Reducirá la latencia, pero podría omitir fotogramas si el renderizado se retrasa.\nFIFO: los fotogramas se sincronizarán con la frecuencia de actualización de tu pantalla. Los fotogramas nuevos se mostrarán después de los fotogramas que queden pendientes. Garantizará que se muestren todos los fotogramas, pero podría aumentar la latencia.\nInmediata: los fotogramas se mostrarán en pantalla en cuanto estén listos. Podría provocar fragmentación en la imagen.</translation>
+      <translation>Modo de presentación:\nConfigura la presentación de la salida de vídeo en tu pantalla.\n\nTipo mailbox: los fotogramas se sincronizarán con la frecuencia de actualización de tu pantalla. Los fotogramas nuevos sustituirán a cualquier fotograma que esté pendiente de mostrar. Reducirá la latencia, pero podría omitir fotogramas si el renderizado se retrasa.\nFIFO: los fotogramas se sincronizarán con la frecuencia de actualización de tu pantalla. Los fotogramas nuevos se mostrarán después de los fotogramas que queden pendientes. Garantizará que se muestren todos los fotogramas, pero podría aumentar la latencia.\nInmediata: los fotogramas se mostrarán en pantalla en cuanto estén listos. Podría provocar fragmentación en la imagen.</translation>
     </message>
     <message>
       <source>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</source>
@@ -4336,7 +4358,7 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation>Diagnóstico de fallos:\nCrea un archivo .yaml con información sobre el estado de Vulkan en el momento del cuelgue.\nÚtil para depurar errores de tipo «Dispositivo perdido». Si activas esta opción, deberías habilitar los marcadores de depuración de host Y TAMBIÉN de invitado.\nNecesitas activar las capas de validación de Vulkan y el SDK de Vulkan para que funcione.</translation>
+      <translation>Diagnóstico de fallos:\nCrea un archivo .yaml con información sobre el estado de Vulkan en el momento del cuelgue.\nÚtil para depurar errores de tipo &apos;Dispositivo perdido&apos;. Si activas esta opción, deberías habilitar los marcadores de depuración de host Y TAMBIÉN de invitado.\nNecesitas activar las capas de validación de Vulkan y el SDK de Vulkan para que funcione.</translation>
     </message>
     <message>
       <source>Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
@@ -4376,7 +4398,7 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation>Cambia la opción «Conexión a red» a verdadero:\nFuerza a los juegos a detectar una conexión de red activa. Las funciones reales de red aún no están soportadas.</translation>
+      <translation>Cambia la opción Conexión a red a verdadero:\nFuerza a los juegos a detectar una conexión de red activa. Las funciones reales de red aún no están soportadas.</translation>
     </message>
     <message>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
@@ -4436,7 +4458,7 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Audio Backend:\nSelects the backend library used for audio output. SDL is recommended for most users.</source>
-      <translation>«Back-end» de audio:\nSelecciona la biblioteca «back-end» a usar para la salida de audio. Se recomienda elegir SDL para la mayoría de usuarios.</translation>
+      <translation>Back-end de audio:\nSelecciona la biblioteca «back-end» a usar para la salida de audio. Se recomienda elegir SDL para la mayoría de usuarios.</translation>
     </message>
     <message>
       <source>Audio Device (general):\nSelects which system audio output device the emulator uses for general game audio.</source>
@@ -4843,7 +4865,7 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
       <translation>Debes elegir una ubicación para guardar las versiones
-en «Ruta de versiones guardadas»</translation>
+en &quot;Ruta de versiones guardadas&quot;</translation>
     </message>
     <message>
       <source>Confirm Download</source>
@@ -4879,7 +4901,7 @@ en «Ruta de versiones guardadas»</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation>No se ha podido obtener el «hash» de la última versión prelanzamiento.</translation>
+      <translation>No se ha podido obtener el hash de la última versión prelanzamiento.</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
@@ -4935,7 +4957,7 @@ en «Ruta de versiones guardadas»</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly)</source>
-      <translation>Descargando versión prelanzamiento («Nightly»)</translation>
+      <translation>Descargando versión prelanzamiento (&quot;Nightly&quot;)</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
@@ -5015,7 +5037,7 @@ Se ha guardado la versión prelanzamiento en: %1</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) has been:</source>
-      <translation>La versión prelanzamiento («Nightly») ha sido:</translation>
+      <translation>La versión prelanzamiento (&quot;Nightly&quot;) ha sido:</translation>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
@@ -5083,7 +5105,7 @@ Esta versión podría no ejecutarse correctamente.</translation>
     </message>
     <message>
       <source>4. Build hash:</source>
-      <translation>4. «Hash» de compilación:</translation>
+      <translation>4. Hash de compilación:</translation>
     </message>
     <message>
       <source>

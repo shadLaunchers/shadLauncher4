@@ -1509,10 +1509,6 @@ Continuar?</translation>
       <translation>O arquivamento foi salvo em uma pasta que não é uma das suas pastas de jogos configuradas; portanto, ele não aparecerá na lista de jogos. Mova-o para uma pasta configurada ou adicione essa pasta em Configurações, caso queira que ele apareça.</translation>
     </message>
     <message>
-      <source>The folder was extracted, but it isn&apos;t inside one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
-      <translation>A pasta foi extraída, mas não está dentro de uma das suas pastas de jogos configuradas; portanto, ela não aparecerá na lista de jogos. Mova-a para uma pasta configurada ou adicione esta pasta em Configurações, caso queira que ela apareça.</translation>
-    </message>
-    <message>
       <source>Delete Game</source>
       <translation>Excluir Jogo</translation>
     </message>
@@ -3290,6 +3286,32 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Notes:</source>
       <translation>Observações:</translation>
+    </message>
+    <message>
+      <source>Scanning...</source>
+      <translation>Verificando...</translation>
+    </message>
+    <message>
+      <source>Some files could not be deleted:
+%1</source>
+      <translation>Não foi possível excluir alguns arquivos:
+%1</translation>
+    </message>
+    <message>
+      <source>Done.</source>
+      <translation>Concluído.</translation>
+    </message>
+    <message>
+      <source>Scanning: %1 items...</source>
+      <translation>Verificando: %1 itens...</translation>
+    </message>
+    <message>
+      <source>Deleting...</source>
+      <translation>Excluindo...</translation>
+    </message>
+    <message>
+      <source>Deleting: %1</source>
+      <translation>Excluindo: %1</translation>
     </message>
   </context>
   <context>
