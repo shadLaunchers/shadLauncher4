@@ -1507,10 +1507,6 @@ El archivo .zar original no se alterará hasta que la conversión haya terminado
       <translation>Se ha guardado el archivo en una carpeta que no es una de las carpetas de juegos que tienes configuradas, así que no se mostrará en la lista de juegos. Llévalo a una carpeta que sí esté configurada o, si quieres que esta carpeta nueva aparezca, añádela desde dentro de la configuración.</translation>
     </message>
     <message>
-      <source>The folder was extracted, but it isn&apos;t inside one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
-      <translation>Se ha extraído la carpeta, pero no es una de las carpetas de juegos que tienes configuradas, así que no se mostrará en la lista de juegos. Llévalo a una carpeta que sí esté configurada o, si quieres que esta carpeta nueva aparezca, añádela desde dentro de la configuración.</translation>
-    </message>
-    <message>
       <source>Delete Game</source>
       <translation type="unfinished">Delete Game</translation>
     </message>
@@ -3288,6 +3284,32 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     <message>
       <source>Notes:</source>
       <translation type="unfinished">Notes:</translation>
+    </message>
+    <message>
+      <source>Scanning...</source>
+      <translation type="unfinished">Scanning...</translation>
+    </message>
+    <message>
+      <source>Some files could not be deleted:
+%1</source>
+      <translation type="unfinished">Some files could not be deleted:
+%1</translation>
+    </message>
+    <message>
+      <source>Done.</source>
+      <translation type="unfinished">Done.</translation>
+    </message>
+    <message>
+      <source>Scanning: %1 items...</source>
+      <translation type="unfinished">Scanning: %1 items...</translation>
+    </message>
+    <message>
+      <source>Deleting...</source>
+      <translation type="unfinished">Deleting...</translation>
+    </message>
+    <message>
+      <source>Deleting: %1</source>
+      <translation type="unfinished">Deleting: %1</translation>
     </message>
   </context>
   <context>
