@@ -1480,10 +1480,6 @@ Continue?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The folder was extracted, but it isn&apos;t inside one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Delete Game</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3227,6 +3223,31 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Notes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scanning...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Some files could not be deleted:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Done.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scanning: %1 items...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deleting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deleting: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
