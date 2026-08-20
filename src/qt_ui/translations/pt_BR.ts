@@ -3289,7 +3289,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Scanning...</source>
-      <translation>Verificando...</translation>
+      <translation>Explorando...</translation>
     </message>
     <message>
       <source>Some files could not be deleted:
@@ -3303,7 +3303,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Scanning: %1 items...</source>
-      <translation>Verificando: %1 itens...</translation>
+      <translation>Explorando: %1 itens...</translation>
     </message>
     <message>
       <source>Deleting...</source>
@@ -4572,51 +4572,51 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     <name>ShadNet::LoginChecker</name>
     <message>
       <source>Login successful.</source>
-      <translation type="unfinished">Login successful.</translation>
+      <translation>Login bem-sucedido.</translation>
     </message>
     <message>
       <source>Credentials are valid, but this account is already signed in somewhere else.</source>
-      <translation type="unfinished">Credentials are valid, but this account is already signed in somewhere else.</translation>
+      <translation>As credenciais são válidas, mas esta conta já está atribuída em algum outro lugar.</translation>
     </message>
     <message>
       <source>Invalid account ID or password.</source>
-      <translation type="unfinished">Invalid account ID or password.</translation>
+      <translation>ID de conta ou senha inválidos.</translation>
     </message>
     <message>
       <source>This server requires an e-mail validation token for this account.</source>
-      <translation type="unfinished">This server requires an e-mail validation token for this account.</translation>
+      <translation>Este servidor requer um token de validação do e-mail para esta conta.</translation>
     </message>
     <message>
       <source>This account is banned on this server.</source>
-      <translation type="unfinished">This account is banned on this server.</translation>
+      <translation>Esta conta foi banida neste servidor.</translation>
     </message>
     <message>
       <source>The ShadNet server address is not valid. Check it in Settings.</source>
-      <translation type="unfinished">The ShadNet server address is not valid. Check it in Settings.</translation>
+      <translation>O endereço do servidor ShadNet não é válido. Verifique-o nas Configurações.</translation>
     </message>
     <message>
       <source>Could not reach the ShadNet server: %1</source>
-      <translation type="unfinished">Could not reach the ShadNet server: %1</translation>
+      <translation>Não foi possível alcançar o servidor ShadNet: %1</translation>
     </message>
     <message>
       <source>Could not reach the ShadNet server.</source>
-      <translation type="unfinished">Could not reach the ShadNet server.</translation>
+      <translation>Não foi possível alcançar o servidor ShadNet.</translation>
     </message>
     <message>
       <source>The server speaks a different protocol version than this launcher.</source>
-      <translation type="unfinished">The server speaks a different protocol version than this launcher.</translation>
+      <translation>O servidor declara uma versão de protocolo diferente deste launcher.</translation>
     </message>
     <message>
       <source>The server sent an unexpected response.</source>
-      <translation type="unfinished">The server sent an unexpected response.</translation>
+      <translation>O servidor enviou uma resposta inesperada.</translation>
     </message>
     <message>
       <source>The ShadNet server did not respond in time.</source>
-      <translation type="unfinished">The ShadNet server did not respond in time.</translation>
+      <translation>O servidor ShadNet não respondeu a tempo.</translation>
     </message>
     <message>
       <source>The server rejected the login (error code %1).</source>
-      <translation type="unfinished">The server rejected the login (error code %1).</translation>
+      <translation>O servidor rejeitou o acesso (código de erro %1).</translation>
     </message>
   </context>
   <context>
@@ -4798,19 +4798,19 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Check Login</source>
-      <translation type="unfinished">Check Login</translation>
+      <translation>Verificar Login</translation>
     </message>
     <message>
       <source>Enter an account ID first.</source>
-      <translation type="unfinished">Enter an account ID first.</translation>
+      <translation>Digite o ID da conta primeiro.</translation>
     </message>
     <message>
       <source>No ShadNet server is configured. Set one in Settings.</source>
-      <translation type="unfinished">No ShadNet server is configured. Set one in Settings.</translation>
+      <translation>Nenhum servidor ShadNet configurado. Defina um em Configurações.</translation>
     </message>
     <message>
       <source>Checking %1...</source>
-      <translation type="unfinished">Checking %1...</translation>
+      <translation>Verificando %1...</translation>
     </message>
   </context>
   <context>
