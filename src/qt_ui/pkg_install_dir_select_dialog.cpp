@@ -7,6 +7,7 @@
 
 #include "common/path_util.h"
 #include "core/emulator_settings.h"
+#include "gui_settings.h"
 
 #include <QCheckBox>
 #include <QComboBox>
@@ -20,12 +21,10 @@
 #include <QVBoxLayout>
 
 PkgInstallDirSelectDialog::PkgInstallDirSelectDialog(
-    std::shared_ptr<EmulatorSettingsImpl> emu_settings, QWidget* parent)
-    : QDialog(parent), m_emu_settings(std::move(emu_settings)) {
-
-    const auto install_dirs = m_emu_settings->GetGameInstallDirs();
-    if (!install_dirs.empty())
-        m_selected_dir = install_dirs.front();
+    std::shared_ptr<EmulatorSettingsImpl> emu_settings, std::shared_ptr<GUISettings> gui_settings,
+    QWidget* parent)
+    : QDialog(parent), m_emu_settings(std::move(emu_settings)),
+      m_gui_settings(std::move(gui_settings)) {
 
     auto* main_layout = new QVBoxLayout(this);
 
@@ -36,6 +35,17 @@ PkgInstallDirSelectDialog::PkgInstallDirSelectDialog(
     main_layout->addWidget(SetupInstallDirSelection(okButton));
     main_layout->addStretch();
     main_layout->addWidget(buttons);
+
+    // DLC always installs to the addon (DLC) folder configured in emulator Settings -
+    // never to the game install directory chosen below
+    connect(m_model, &QAbstractItemModel::dataChanged, this, [this, okButton] {
+        UpdateInstallDirForSelection();
+        UpdateOkButtonState(okButton);
+    });
+    connect(m_model, &QAbstractItemModel::modelReset, this, [this, okButton] {
+        UpdateInstallDirForSelection();
+        UpdateOkButtonState(okButton);
+    });
 
     setWindowTitle(tr("shadLauncher4 - Install PKG Files"));
     setWindowIcon(QIcon(":images/shadLauncher4.ico"));
@@ -104,24 +114,37 @@ QWidget* PkgInstallDirSelectDialog::SetupInstallDirSelection(QPushButton* okButt
     auto* layout = new QVBoxLayout(group);
 
     auto* dirLayout = new QHBoxLayout();
-    auto* dirCombo = new QComboBox();
-    auto* browseBtn = new QPushButton(tr("Browse..."));
-    browseBtn->setFixedWidth(80);
+    m_dir_combo = new QComboBox();
+    m_browse_button = new QPushButton(tr("Browse..."));
+    m_browse_button->setFixedWidth(80);
 
-    dirLayout->addWidget(dirCombo);
-    dirLayout->addWidget(browseBtn);
+    dirLayout->addWidget(m_dir_combo);
+    dirLayout->addWidget(m_browse_button);
     layout->addLayout(dirLayout);
 
     const auto& dirs = m_emu_settings->GetGameInstallDirs();
     for (const auto& dir : dirs) {
         QString qDir;
         Common::FS::PathToQString(qDir, dir);
-        dirCombo->addItem(qDir);
+        m_dir_combo->addItem(qDir);
     }
 
     if (!dirs.empty()) {
-        dirCombo->setCurrentIndex(0);
-        SetSelectedDirectory(dirCombo->currentText());
+        // Prefer the last directory picked in this dialog (if it's still one of the
+        // configured game install directories) over always defaulting to the first one.
+        int initial_index = 0;
+        if (m_gui_settings) {
+            const QString last_dir =
+                m_gui_settings->GetValue(GUI::general_last_pkg_install_dir).toString();
+            if (!last_dir.isEmpty()) {
+                const int found = m_dir_combo->findText(last_dir);
+                if (found >= 0) {
+                    initial_index = found;
+                }
+            }
+        }
+        m_dir_combo->setCurrentIndex(initial_index);
+        SetSelectedDirectory(m_dir_combo->currentText());
     }
 
     auto* deleteCheck = new QCheckBox(tr("Delete PKG files after successful installation"));
@@ -131,12 +154,13 @@ QWidget* PkgInstallDirSelectDialog::SetupInstallDirSelection(QPushButton* okButt
     connect(deleteCheck, &QCheckBox::toggled, this,
             &PkgInstallDirSelectDialog::SetDeleteFileOnInstall);
 
-    connect(dirCombo, &QComboBox::currentTextChanged, this, [this, okButton](const QString& text) {
-        SetSelectedDirectory(text);
-        UpdateOkButtonState(okButton);
-    });
+    connect(m_dir_combo, &QComboBox::currentTextChanged, this,
+            [this, okButton](const QString& text) {
+                SetSelectedDirectory(text);
+                UpdateOkButtonState(okButton);
+            });
 
-    connect(browseBtn, &QPushButton::clicked, this, [this, dirCombo, okButton]() {
+    connect(m_browse_button, &QPushButton::clicked, this, [this, okButton]() {
         QString current;
         Common::FS::PathToQString(current, m_selected_dir);
 
@@ -145,13 +169,13 @@ QWidget* PkgInstallDirSelectDialog::SetupInstallDirSelection(QPushButton* okButt
         if (dir.isEmpty())
             return;
 
-        if (dirCombo->findText(dir) == -1) {
-            dirCombo->addItem(dir);
+        if (m_dir_combo->findText(dir) == -1) {
+            m_dir_combo->addItem(dir);
             m_emu_settings->AddGameInstallDir(Common::FS::PathFromQString(dir));
             m_emu_settings->Save();
         }
 
-        dirCombo->setCurrentText(dir);
+        m_dir_combo->setCurrentText(dir);
         UpdateOkButtonState(okButton);
     });
 
@@ -172,7 +196,8 @@ QDialogButtonBox* PkgInstallDirSelectDialog::SetupDialogActions() {
             return;
         }
 
-        if (m_selected_dir.empty()) {
+        // DLC-only selections never need a game install directory
+        if (!SelectionIsDlcOnly() && m_selected_dir.empty()) {
             QMessageBox::warning(this, tr("No Directory"),
                                  tr("Please select an installation directory."));
             return;
@@ -201,10 +226,14 @@ std::vector<PkgInfo> PkgInstallDirSelectDialog::GetSelectedPkgs() const {
 
 void PkgInstallDirSelectDialog::SetSelectedDirectory(const QString& dir) {
     auto path = Common::FS::PathFromQString(dir);
-    if (!path.empty() && std::filesystem::exists(path))
+    if (!path.empty() && std::filesystem::exists(path)) {
         m_selected_dir = path;
-    else
+        if (!m_locked_for_dlc && m_gui_settings) {
+            m_gui_settings->SetValue(GUI::general_last_pkg_install_dir, dir);
+        }
+    } else {
         m_selected_dir.clear();
+    }
 }
 
 void PkgInstallDirSelectDialog::SetDeleteFileOnInstall(bool enabled) {
@@ -212,7 +241,62 @@ void PkgInstallDirSelectDialog::SetDeleteFileOnInstall(bool enabled) {
 }
 
 void PkgInstallDirSelectDialog::UpdateOkButtonState(QPushButton* okButton) {
-    const bool hasDir = !m_selected_dir.empty();
     const bool hasSelection = m_model && m_model->hasSelection();
+    const bool hasDir = SelectionIsDlcOnly() || !m_selected_dir.empty();
+
     okButton->setEnabled(hasDir && hasSelection);
+}
+
+bool PkgInstallDirSelectDialog::SelectionIsDlcOnly() const {
+    if (!m_model || !m_model->hasSelection()) {
+        return false;
+    }
+    for (const auto& pkg : m_model->selectedPkgs()) {
+        if (pkg.category != QStringLiteral("ac")) {
+            return false;
+        }
+    }
+    return true;
+}
+
+void PkgInstallDirSelectDialog::UpdateInstallDirForSelection() {
+    if (!m_dir_combo || !m_browse_button) {
+        return;
+    }
+
+    const bool dlcOnly = SelectionIsDlcOnly();
+
+    if (dlcOnly && !m_locked_for_dlc) {
+        m_locked_for_dlc = true;
+        m_saved_dir_combo_index = m_dir_combo->currentIndex();
+
+        QString addonDirQt;
+        Common::FS::PathToQString(addonDirQt, m_emu_settings->GetAddonInstallDir());
+
+        int idx = m_dir_combo->findText(addonDirQt);
+        if (idx < 0) {
+            m_dir_combo->addItem(addonDirQt);
+            idx = m_dir_combo->count() - 1;
+            m_dlc_addon_item_index = idx;
+        } else {
+            m_dlc_addon_item_index = -1; // already present - nothing to clean up later
+        }
+        m_dir_combo->setCurrentIndex(idx);
+
+        m_dir_combo->setEnabled(false);
+        m_browse_button->setEnabled(false);
+    } else if (!dlcOnly && m_locked_for_dlc) {
+        m_locked_for_dlc = false;
+        m_dir_combo->setEnabled(true);
+        m_browse_button->setEnabled(true);
+
+        if (m_dlc_addon_item_index >= 0) {
+            m_dir_combo->removeItem(m_dlc_addon_item_index);
+            m_dlc_addon_item_index = -1;
+        }
+        if (m_saved_dir_combo_index >= 0 && m_saved_dir_combo_index < m_dir_combo->count()) {
+            m_dir_combo->setCurrentIndex(m_saved_dir_combo_index);
+        }
+        m_saved_dir_combo_index = -1;
+    }
 }
