@@ -4565,6 +4565,57 @@ This will remove all game-specific overrides.</translation>
     </message>
   </context>
   <context>
+    <name>ShadNet::LoginChecker</name>
+    <message>
+      <source>Login successful.</source>
+      <translation type="unfinished">Login successful.</translation>
+    </message>
+    <message>
+      <source>Credentials are valid, but this account is already signed in somewhere else.</source>
+      <translation type="unfinished">Credentials are valid, but this account is already signed in somewhere else.</translation>
+    </message>
+    <message>
+      <source>Invalid account ID or password.</source>
+      <translation type="unfinished">Invalid account ID or password.</translation>
+    </message>
+    <message>
+      <source>This server requires an e-mail validation token for this account.</source>
+      <translation type="unfinished">This server requires an e-mail validation token for this account.</translation>
+    </message>
+    <message>
+      <source>This account is banned on this server.</source>
+      <translation type="unfinished">This account is banned on this server.</translation>
+    </message>
+    <message>
+      <source>The ShadNet server address is not valid. Check it in Settings.</source>
+      <translation type="unfinished">The ShadNet server address is not valid. Check it in Settings.</translation>
+    </message>
+    <message>
+      <source>Could not reach the ShadNet server: %1</source>
+      <translation type="unfinished">Could not reach the ShadNet server: %1</translation>
+    </message>
+    <message>
+      <source>Could not reach the ShadNet server.</source>
+      <translation type="unfinished">Could not reach the ShadNet server.</translation>
+    </message>
+    <message>
+      <source>The server speaks a different protocol version than this launcher.</source>
+      <translation type="unfinished">The server speaks a different protocol version than this launcher.</translation>
+    </message>
+    <message>
+      <source>The server sent an unexpected response.</source>
+      <translation type="unfinished">The server sent an unexpected response.</translation>
+    </message>
+    <message>
+      <source>The ShadNet server did not respond in time.</source>
+      <translation type="unfinished">The ShadNet server did not respond in time.</translation>
+    </message>
+    <message>
+      <source>The server rejected the login (error code %1).</source>
+      <translation type="unfinished">The server rejected the login (error code %1).</translation>
+    </message>
+  </context>
+  <context>
     <name>TrophyViewer</name>
     <message>
       <source>Progress</source>
@@ -4740,6 +4791,22 @@ This will remove all game-specific overrides.</translation>
     <message>
       <source>Shad&amp;Net Settings...</source>
       <translation>Shad&amp;Net-Einstellungen …</translation>
+    </message>
+    <message>
+      <source>Check Login</source>
+      <translation type="unfinished">Check Login</translation>
+    </message>
+    <message>
+      <source>Enter an account ID first.</source>
+      <translation type="unfinished">Enter an account ID first.</translation>
+    </message>
+    <message>
+      <source>No ShadNet server is configured. Set one in Settings.</source>
+      <translation type="unfinished">No ShadNet server is configured. Set one in Settings.</translation>
+    </message>
+    <message>
+      <source>Checking %1...</source>
+      <translation type="unfinished">Checking %1...</translation>
     </message>
   </context>
   <context>
