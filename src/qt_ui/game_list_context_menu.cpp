@@ -51,6 +51,7 @@
 #include "common/log_analyzer.h"
 #include "common/path_util.h"
 #include "core/ipc/ipc_client.h"
+#include "dlc_viewer_dialog.h"
 #include "settings_dialog.h"
 #include "sfo_viewer_dialog.h"
 #include "trophy_viewer.h"
@@ -1319,6 +1320,23 @@ void GameListContextMenu::Show(const game_info& gameinfo, const QPoint& global_p
         TrophyViewer* trophyViewer = new TrophyViewer(frame->m_gui_settings, trophyPath,
                                                       gameTrpPath, gameName, allTrophyGames);
         trophyViewer->show();
+    });
+
+    QAction* dlc_viewer = addAction(tr("&DLC Viewer"));
+    connect(dlc_viewer, &QAction::triggered, frame, [frame, current_game] {
+        const std::filesystem::path addon_install_dir =
+            frame->m_emu_settings ? frame->m_emu_settings->GetAddonInstallDir()
+                                  : std::filesystem::path{};
+
+        QString gameName = QString::fromStdString(current_game.name);
+        QString gameSerial = QString::fromStdString(current_game.serial);
+        const std::filesystem::path gameRootPath = current_game.path;
+        const std::filesystem::path gameUpdatePath = current_game.update_path;
+
+        DlcViewerDialog* dlcViewer = new DlcViewerDialog(frame, gameName, gameSerial, gameRootPath,
+                                                         gameUpdatePath, addon_install_dir);
+        dlcViewer->setAttribute(Qt::WA_DeleteOnClose);
+        dlcViewer->show();
     });
 
     /* TODO

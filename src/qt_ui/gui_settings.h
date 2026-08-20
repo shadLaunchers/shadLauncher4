@@ -77,6 +77,7 @@ const GUISave general_show_changelog = GUISave(general, "show_changelog", false)
 const GUISave general_check_gui_updates = GUISave(general, "check_gui_updates", false);
 const GUISave general_directory_depth_scanning = GUISave(general, "directory_depth_scanning", 1);
 const GUISave general_separate_update_folder = GUISave(general, "separate_update_folder", false);
+const GUISave general_last_pkg_install_dir = GUISave(general, "last_pkg_install_dir", "");
 
 // compatibility settings
 const GUISave compatibility_check_on_startup = GUISave(compatibility, "check_on_startup", true);
