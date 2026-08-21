@@ -11,6 +11,7 @@ path = [
     ".github/workflows/scripts/update_translation.sh",
     ".github/workflows/scripts/update_version.sh",
     ".github/workflows/update_translation.yml",
+    ".github/workflows/sync-emulator-settings.yml",
     ".gitignore",
     ".gitmodules",
     "README.md",
