@@ -848,6 +848,86 @@ Please enter your keys and save them.</source>
     </message>
 </context>
 <context>
+    <name>DlcViewerDialog</name>
+    <message>
+        <source>DLC Viewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Addon Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open DLC Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete DLC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Content ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shared (label %1, %2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 DLC(s) installed, %2 total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No addon (DLC) install directory is configured. Set one in Settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No installed DLC found for %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not open or create the addon folder:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select a DLC first.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Are you sure you want to delete this DLC?
+
+%1
+%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to delete DLC folder:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Downloader</name>
     <message>
         <source>Please wait...</source>
@@ -1558,6 +1638,10 @@ This removes the unpacked trophy files and the unlocked trophies of every user. 
     <message>
         <source>Shown instead of &quot;%1&quot; [%2].
 Leave empty to use the original name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;DLC Viewer</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2731,10 +2815,6 @@ Replace the current list entirely, or append these entries to it (entries whose 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>PKG is a patch or DLC, please install the game first!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Extracting PKG %1/%2</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2909,6 +2989,14 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
+    </message>
+    <message>
+        <source>PSF CONTENT_ID has an unexpected format: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PKG is a patch, please install the game first!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
