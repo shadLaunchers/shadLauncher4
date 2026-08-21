@@ -200,6 +200,7 @@ struct GeneralSettings {
     Setting<bool> neo_mode{false};
     Setting<bool> dev_kit_mode{false};
     Setting<int> extra_dmem_in_mbytes{0};
+    Setting<int> extra_fmem_in_mbytes{0};
     Setting<bool> shad_net_enabled{false};
     Setting<bool> trophy_popup_disabled{false};
     Setting<double> trophy_notification_duration{6.0};
@@ -223,6 +224,8 @@ struct GeneralSettings {
             make_override<GeneralSettings>("dev_kit_mode", &GeneralSettings::dev_kit_mode),
             make_override<GeneralSettings>("extra_dmem_in_mbytes",
                                            &GeneralSettings::extra_dmem_in_mbytes),
+            make_override<GeneralSettings>("extra_fmem_in_mbytes",
+                                           &GeneralSettings::extra_fmem_in_mbytes),
             make_override<GeneralSettings>("shad_net_enabled", &GeneralSettings::shad_net_enabled),
             make_override<GeneralSettings>("trophy_popup_disabled",
                                            &GeneralSettings::trophy_popup_disabled),
@@ -233,6 +236,7 @@ struct GeneralSettings {
                                            &GeneralSettings::trophy_notification_side),
             make_override<GeneralSettings>("connected_to_network",
                                            &GeneralSettings::connected_to_network),
+            make_override<GeneralSettings>("console_language", &GeneralSettings::console_language),
             make_override<GeneralSettings>("shadnet_server", &GeneralSettings::shadnet_server),
             make_override<GeneralSettings>("shadnet_webapi_server",
                                            &GeneralSettings::shadnet_webapi_server),
@@ -243,8 +247,8 @@ struct GeneralSettings {
 
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(GeneralSettings, install_dirs, addon_install_dir, home_dir,
                                    sys_modules_dir, font_dir, volume_slider, neo_mode, dev_kit_mode,
-                                   extra_dmem_in_mbytes, shad_net_enabled, trophy_popup_disabled,
-                                   trophy_notification_duration, show_splash,
+                                   extra_dmem_in_mbytes, extra_fmem_in_mbytes, shad_net_enabled,
+                                   trophy_popup_disabled, trophy_notification_duration, show_splash,
                                    trophy_notification_side, connected_to_network,
                                    discord_rpc_enabled, show_fps_counter, console_language,
                                    big_picture_scale, shadnet_server, shadnet_webapi_server,
@@ -519,6 +523,7 @@ public:
     bool Save(const std::string& serial = "");
     bool Load(const std::string& serial = "");
     void SetDefaultValues();
+    bool TransferSettings();
 
     // Config mode
     ConfigMode GetConfigMode() const {
@@ -605,24 +610,6 @@ private:
     static void PrintChangedSummary(const std::vector<std::string>& changed);
 
 public:
-    EmulatorSettingsImpl& operator=(const EmulatorSettingsImpl& other) {
-        if (this != &other) {
-            m_shadnet_session_disabled.store(other.m_shadnet_session_disabled.load());
-            m_general = other.m_general;
-            m_log = other.m_log;
-            m_debug = other.m_debug;
-            m_input = other.m_input;
-            m_audio = other.m_audio;
-            m_windows_guest_red_zone_protection = other.m_windows_guest_red_zone_protection;
-            m_gpu = other.m_gpu;
-            m_vulkan = other.m_vulkan;
-            m_configMode = other.m_configMode;
-            m_loaded = other.m_loaded;
-            s_instance = other.s_instance;
-        }
-        return *this;
-    }
-
     // Add these getters to access overrideable fields
     std::vector<OverrideItem> GetGeneralOverrideableFields() const {
         return m_general.GetOverrideableFields();
@@ -672,6 +659,7 @@ public:
     SETTING_FORWARD_BOOL(m_general, Neo, neo_mode)
     SETTING_FORWARD_BOOL(m_general, DevKit, dev_kit_mode)
     SETTING_FORWARD(m_general, ExtraDmemInMBytes, extra_dmem_in_mbytes)
+    SETTING_FORWARD(m_general, ExtraFmemInMBytes, extra_fmem_in_mbytes)
     bool IsShadNetEnabled() const {
         return m_general.shad_net_enabled.get(m_configMode) &&
                !m_shadnet_session_disabled.load(std::memory_order_relaxed);
