@@ -328,6 +328,8 @@ set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/trophy_viewer.h
           src/qt_ui/dlc_viewer_dialog.cpp
           src/qt_ui/dlc_viewer_dialog.h
+          src/qt_ui/setup_wizard.cpp
+          src/qt_ui/setup_wizard.h
           src/qt_ui/zarchive_viewer_dialog.cpp
           src/qt_ui/zarchive_viewer_dialog.h
           ${UPDATER}

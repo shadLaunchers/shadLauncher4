@@ -22,6 +22,7 @@
 #include "gui_application.h"
 #include "gui_settings.h"
 #include "main_window.h"
+#include "setup_wizard.h"
 #include "stylesheets.h"
 
 s32 GUIApplication::m_language_id =
@@ -64,9 +65,13 @@ bool GUIApplication::init(QString emulator_arg, QString game_arg, QStringList pa
     // Create connects to propagate events throughout Gui.
     InitializeConnects();
 
-    if (m_emu_settings->GetGameInstallDirs().empty()) {
-        GameInstallDialog dlg(m_gui_settings, m_emu_settings);
-        dlg.exec();
+    if (!SetupWizard::IsSetupCompleted(m_gui_settings) ||
+        m_emu_settings->GetGameInstallDirs().empty()) {
+        SetupWizard wizard(m_gui_settings, m_emu_settings);
+        connect(&wizard, &SetupWizard::requestLanguageChange, this, &GUIApplication::loadLanguage);
+        connect(&wizard, &SetupWizard::requestThemeChange, this,
+                &GUIApplication::OnChangeStyleSheetRequest);
+        wizard.exec();
     }
 
     if (!emulator_arg.isEmpty() && !game_arg.isEmpty()) {

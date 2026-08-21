@@ -207,6 +207,8 @@
     <property name="title">
      <string>Utilities</string>
     </property>
+    <addaction name="actionSetup_Wizard"/>
+    <addaction name="separator"/>
     <addaction name="actionExport_GameList"/>
     <addaction name="actionReset_Custom_Titles"/>
     <addaction name="actionCrypto_Key_Manager"/>
@@ -819,6 +821,15 @@
    </property>
    <property name="text">
     <string>Crypto Key Manager</string>
+   </property>
+  </action>
+  <action name="actionSetup_Wizard">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/cfg-general.svg</normaloff>:/images/menu/cfg-general.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Setup Wizard</string>
    </property>
   </action>
   <action name="showLogAct">

@@ -39,6 +39,7 @@
 #include "progress_dialog.h"
 #include "qt_ui/check_update.h"
 #include "settings_dialog.h"
+#include "setup_wizard.h"
 #include "ui_main_window.h"
 #include "user_manager_dialog.h"
 #include "version.h"
@@ -386,6 +387,21 @@ void MainWindow::createConnects() {
     connect(ui->actionCrypto_Key_Manager, &QAction::triggered, this, [this] {
         CryptoManagerDialog dialog(this);
         dialog.exec();
+    });
+
+    connect(ui->actionSetup_Wizard, &QAction::triggered, this, [this] {
+        SetupWizard wizard(m_gui_settings, m_emu_settings, this);
+        // Signal-to-signal: GUIApplication already listens on both of these.
+        connect(&wizard, &SetupWizard::requestLanguageChange, this,
+                &MainWindow::requestLanguageChange);
+        connect(&wizard, &SetupWizard::requestThemeChange, this,
+                &MainWindow::RequestGlobalStylesheetChange);
+        if (wizard.exec() == QDialog::Accepted) {
+            LoadVersionComboBox();
+            if (m_game_list_frame) {
+                m_game_list_frame->Refresh(true);
+            }
+        }
     });
 
     connect(ui->install_pkg_act, &QAction::triggered, this, &MainWindow::InstallPkg);
@@ -1075,8 +1091,8 @@ void MainWindow::InstallSinglePkg(std::filesystem::path file, int pkgNum, int nP
             } else {
                 QMessageBox msgBox;
                 msgBox.setWindowTitle(tr("PKG Extraction"));
-                msgBox.setText(QString(tr("DLC already installed:") + "\n" + addonDirPath +
-                                       "\n\n" + tr("Would you like to overwrite?")));
+                msgBox.setText(QString(tr("DLC already installed:") + "\n" + addonDirPath + "\n\n" +
+                                       tr("Would you like to overwrite?")));
                 msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
                 msgBox.setDefaultButton(QMessageBox::No);
                 if (msgBox.exec() != QMessageBox::Yes) {
@@ -1119,24 +1135,23 @@ void MainWindow::InstallSinglePkg(std::filesystem::path file, int pkgNum, int nP
                     double appD = game_app_version.toDouble();
                     double pkgD = pkg_app_version.toDouble();
                     if (pkgD == appD) {
-                        msgBox.setText(
-                            QString(tr("Patch detected!") + "\n" +
-                                   tr("PKG and Game versions match: ") + pkg_app_version + "\n" +
-                                   tr("Would you like to overwrite?")));
+                        msgBox.setText(QString(
+                            tr("Patch detected!") + "\n" + tr("PKG and Game versions match: ") +
+                            pkg_app_version + "\n" + tr("Would you like to overwrite?")));
                         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
                         msgBox.setDefaultButton(QMessageBox::No);
                     } else if (pkgD < appD) {
                         msgBox.setText(
                             QString(tr("Patch detected!") + "\n" +
-                                   tr("PKG Version %1 is older than installed version: ")
-                                       .arg(pkg_app_version) +
-                                   game_app_version + "\n" + tr("Would you like to overwrite?")));
+                                    tr("PKG Version %1 is older than installed version: ")
+                                        .arg(pkg_app_version) +
+                                    game_app_version + "\n" + tr("Would you like to overwrite?")));
                         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
                         msgBox.setDefaultButton(QMessageBox::No);
                     } else {
                         msgBox.setText(QString(tr("Patch detected!") + "\n" +
-                                               tr("Game is installed: ") + game_app_version +
-                                               "\n" + tr("Would you like to install Patch: ") +
+                                               tr("Game is installed: ") + game_app_version + "\n" +
+                                               tr("Would you like to install Patch: ") +
                                                pkg_app_version + " ?"));
                         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
                         msgBox.setDefaultButton(QMessageBox::No);
