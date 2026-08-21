@@ -1,0 +1,114 @@
+name: Sync emulator_settings from shadPS4 upstream
+
+# Watches shadps4-emu/shadPS4's src/core/emulator_settings.{h,cpp} for upstream commits in the
+# last day and, when there are any, opens a PR here with the fresh upstream content.
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-emulator-settings
+  cancel-in-progress: false
+
+env:
+  UPSTREAM_REPO: shadps4-emu/shadPS4
+  UPSTREAM_REF: main
+  # Same path in both repos, per upstream note: keep it that way.
+  TARGET_FILES: >-
+    src/core/emulator_settings.h
+    src/core/emulator_settings.cpp
+
+jobs:
+  sync:
+    name: Check upstream and open PR if changed
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout shadLauncher4
+        uses: actions/checkout@v4
+
+      - name: Check upstream commit history for the last day
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.SHADLAUNCHER4_TOKEN_REPO }}
+        run: |
+          set -euo pipefail
+
+          since=$(date -u --date="24 hours ago" +%Y-%m-%dT%H:%M:%SZ)
+          echo "Checking commits since $since"
+
+          changed=false
+          for f in $TARGET_FILES; do
+            count=$(curl -sS --fail \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              "https://api.github.com/repos/${UPSTREAM_REPO}/commits?path=${f}&sha=${UPSTREAM_REF}&since=${since}" \
+              | jq 'length')
+            echo "commits touching $f since $since: $count"
+            if [ "$count" -gt 0 ]; then
+              changed=true
+            fi
+          done
+
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout shadPS4 upstream (sparse - settings files only)
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.UPSTREAM_REPO }}
+          ref: ${{ env.UPSTREAM_REF }}
+          path: upstream-shadps4
+          sparse-checkout: |
+            src/core/emulator_settings.h
+            src/core/emulator_settings.cpp
+          sparse-checkout-cone-mode: false
+          fetch-depth: 1
+
+      - name: Copy upstream files over ours
+        if: steps.check.outputs.changed == 'true'
+        id: sync
+        run: |
+          set -euo pipefail
+
+          upstream_sha=$(git -C upstream-shadps4 rev-parse HEAD)
+          upstream_short=$(git -C upstream-shadps4 rev-parse --short HEAD)
+          echo "upstream_sha=$upstream_sha" >> "$GITHUB_OUTPUT"
+          echo "upstream_short=$upstream_short" >> "$GITHUB_OUTPUT"
+
+          for f in $TARGET_FILES; do
+            if [ ! -f "upstream-shadps4/$f" ]; then
+              echo "::error::upstream is missing $f - did it move?"
+              exit 1
+            fi
+            mkdir -p "$(dirname "$f")"
+            cp "upstream-shadps4/$f" "$f"
+          done
+
+      - name: Create Pull Request
+        if: steps.check.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: sync/emulator-settings-upstream
+          delete-branch: true
+          add-paths: |
+            src/core/emulator_settings.h
+            src/core/emulator_settings.cpp
+          commit-message: |
+            sync: update emulator_settings from shadPS4 upstream (${{ steps.sync.outputs.upstream_short }})
+          title: >-
+            Sync emulator_settings.{h,cpp} from shadPS4 upstream
+            (${{ steps.sync.outputs.upstream_short }})
+          labels: |
+            upstream-sync
+          body: |
+            Automated sync: shadps4-emu/shadPS4 had a commit touching
+            `src/core/emulator_settings.h` and/or `src/core/emulator_settings.cpp` in the last
+            24 hours, most recently [`${{ steps.sync.outputs.upstream_short }}`](https://github.com/shadps4-emu/shadPS4/commit/${{ steps.sync.outputs.upstream_sha }}).
+
