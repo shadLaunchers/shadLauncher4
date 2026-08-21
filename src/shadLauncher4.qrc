@@ -48,5 +48,6 @@
         <file>images/menu/size-medium.svg</file>
         <file>images/menu/size-large.svg</file>
         <file>images/menu/network.svg</file>
+        <file>images/menu/reset.svg</file>
     </qresource>
 </RCC>
