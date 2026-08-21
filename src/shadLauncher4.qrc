@@ -49,5 +49,6 @@
         <file>images/menu/size-large.svg</file>
         <file>images/menu/network.svg</file>
         <file>images/menu/reset.svg</file>
+        <file>images/menu/figures.svg</file>
     </qresource>
 </RCC>

@@ -27,11 +27,13 @@
 #include "core/emulator_state.h"
 #include "core/loader.h"
 #include "crypto_key_dialog.h"
+#include "dimensions_dialog.h"
 #include "game_list_exporter.h"
 #include "game_list_frame.h"
 #include "gui_settings.h"
 #include "host_overrides_dialog.h"
 #include "hotkeys.h"
+#include "infinity_dialog.h"
 #include "kbm_gui.h"
 #include "main_window.h"
 #include "pkg_install_dir_select_dialog.h"
@@ -40,6 +42,7 @@
 #include "qt_ui/check_update.h"
 #include "settings_dialog.h"
 #include "setup_wizard.h"
+#include "skylander_dialog.h"
 #include "ui_main_window.h"
 #include "user_manager_dialog.h"
 #include "version.h"
@@ -402,6 +405,21 @@ void MainWindow::createConnects() {
                 m_game_list_frame->Refresh(true);
             }
         }
+    });
+
+    connect(ui->actionManage_Skylanders, &QAction::triggered, this, [this]() {
+        skylander_dialog* sky_diag = skylander_dialog::get_dlg(this, m_ipc_client);
+        sky_diag->show();
+    });
+
+    connect(ui->actionManage_Infinity_Figures, &QAction::triggered, this, [this]() {
+        infinity_dialog* inf_diag = infinity_dialog::get_dlg(this, m_ipc_client);
+        inf_diag->show();
+    });
+
+    connect(ui->actionManage_Dimensions_Toypad, &QAction::triggered, this, [this]() {
+        dimensions_dialog* dim_diag = dimensions_dialog::get_dlg(this, m_ipc_client);
+        dim_diag->show();
     });
 
     connect(ui->install_pkg_act, &QAction::triggered, this, &MainWindow::InstallPkg);
@@ -1350,7 +1368,6 @@ void MainWindow::onGameClosed() {
         m_game_list_frame->Refresh(false);
     }
 
-    /* TODO
     // clear dialogs when game closed
     skylander_dialog* sky_diag = skylander_dialog::get_dlg(this, m_ipc_client);
     sky_diag->clear_all();
@@ -1358,7 +1375,6 @@ void MainWindow::onGameClosed() {
     dim_diag->clear_all();
     infinity_dialog* inf_diag = infinity_dialog::get_dlg(this, m_ipc_client);
     inf_diag->clear_all();
-    */
 }
 
 void MainWindow::RestartEmulator() {
