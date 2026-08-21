@@ -194,6 +194,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->logSizeLimitGroupBox, helptexts.settings.log_size_limit);
     SubscribeHelpText(ui->logSizeLimitLineEdit, helptexts.settings.log_size_limit);
     SubscribeHelpText(ui->logAppendCheckBox, helptexts.settings.log_append);
+    SubscribeHelpText(ui->logFlushLevelGroupBox, helptexts.settings.log_flush_level);
+    SubscribeHelpText(ui->logFlushLevelComboBox, helptexts.settings.log_flush_level);
     SubscribeHelpText(ui->logTypeGroupBox, helptexts.settings.log_type);
     SubscribeHelpText(ui->logTypeComboBox, helptexts.settings.log_type);
 
@@ -205,6 +207,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->GUIMusicGroupBox, helptexts.settings.gui_music);
     SubscribeHelpText(ui->playBGMCheckBox, helptexts.settings.gui_music);
     SubscribeHelpText(ui->BGMVolumeSlider, helptexts.settings.gui_music_volume);
+    SubscribeHelpText(ui->bigPictureScaleGroupBox, helptexts.settings.gui_big_picture_scale);
+    SubscribeHelpText(ui->bigPictureScaleSpinBox, helptexts.settings.gui_big_picture_scale);
     SubscribeHelpText(ui->themeGroupBox, helptexts.settings.gui_theme);
     SubscribeHelpText(ui->themeComboBox, helptexts.settings.gui_theme);
 
@@ -305,6 +309,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
                       helptexts.settings.experimental_shader_cache_archive);
     SubscribeHelpText(ui->dmemGroupBox, helptexts.settings.experimental_dmem);
     SubscribeHelpText(ui->dmemSpinBox, helptexts.settings.experimental_dmem);
+    SubscribeHelpText(ui->fmemGroupBox, helptexts.settings.experimental_fmem);
+    SubscribeHelpText(ui->fmemSpinBox, helptexts.settings.experimental_fmem);
 
     PopulateComboBoxes();
     PathTabConnections();
@@ -675,6 +681,7 @@ void SettingsDialog::LoadValuesFromConfig() {
 
     // ------------------ GUI tab --------------------------------------------------------
     ui->discordRPCCheckbox->setChecked(m_emu_settings->IsDiscordRPCEnabled());
+    ui->bigPictureScaleSpinBox->setValue(m_emu_settings->GetBigPictureScale());
     {
         const QString current_theme =
             m_gui_settings->GetValue(GUI::meta_currentStylesheet).toString();
@@ -763,6 +770,15 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->logSkipDuplicateCheckBox->setChecked(m_emu_settings->IsLogSkipDuplicate());
     ui->logMaxSkipDurationGroupBox->setVisible(ui->logSkipDuplicateCheckBox->isChecked());
     ui->logMaxSkipDurationLineEdit->setValue(m_emu_settings->GetLogMaxSkipDuration());
+    {
+        const QString flush_level =
+            QString::fromStdString(m_emu_settings->GetLogFlushLevel()).trimmed();
+        const int row =
+            flush_level.isEmpty()
+                ? 0
+                : ui->logFlushLevelComboBox->findText(flush_level, Qt::MatchFixedString);
+        ui->logFlushLevelComboBox->setCurrentIndex(row >= 0 ? row : 0);
+    }
 
 #ifdef _WIN32
     std::string logType = m_emu_settings->GetLogType();
@@ -813,6 +829,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->enableShaderCacheCheckBox->setChecked(m_emu_settings->IsPipelineCacheEnabled());
     ui->archiveShaderCacheCheckBox->setChecked(m_emu_settings->IsPipelineCacheArchived());
     ui->dmemSpinBox->setValue(m_emu_settings->GetExtraDmemInMBytes());
+    ui->fmemSpinBox->setValue(m_emu_settings->GetExtraFmemInMBytes());
     ui->vblankSpinBox->setValue(m_emu_settings->GetVblankFrequency());
 
     // ------------------ Games Folder --------------------------------------------------------
@@ -992,6 +1009,7 @@ void SettingsDialog::ApplyValuesToBackend() {
         row >= 0 && row < consoleLanguageIds.size()) {
         m_emu_settings->SetConsoleLanguage(consoleLanguageIds[row], is_specific);
     }
+    m_emu_settings->SetBigPictureScale(ui->bigPictureScaleSpinBox->value(), is_specific);
     m_emu_settings->SetUsbDeviceBackend(ui->usbComboBox->currentIndex(), is_specific);
     m_emu_settings->SetMotionControlsEnabled(ui->motionControlsCheckBox->isChecked(), is_specific);
     m_emu_settings->SetBackgroundControllerInput(ui->backgroundControllerCheckBox->isChecked(),
@@ -1013,6 +1031,10 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetLogSizeLimit(ui->logSizeLimitLineEdit->value(), is_specific);
     m_emu_settings->SetLogSkipDuplicate(ui->logSkipDuplicateCheckBox->isChecked(), is_specific);
     m_emu_settings->SetLogSync(ui->logSyncCheckBox->isChecked(), is_specific);
+    m_emu_settings->SetLogFlushLevel(ui->logFlushLevelComboBox->currentIndex() == 0
+                                         ? std::string{}
+                                         : ui->logFlushLevelComboBox->currentText().toStdString(),
+                                     is_specific);
 
 #ifdef _WIN32
     m_emu_settings->SetLogType(logTypeMap.value(ui->logTypeComboBox->currentText()).toStdString(),
@@ -1062,6 +1084,7 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetPipelineCacheArchived(ui->archiveShaderCacheCheckBox->isChecked(),
                                              is_specific);
     m_emu_settings->SetExtraDmemInMBytes(ui->dmemSpinBox->value(), is_specific);
+    m_emu_settings->SetExtraFmemInMBytes(ui->fmemSpinBox->value(), is_specific);
     m_emu_settings->SetVblankFrequency(ui->vblankSpinBox->value(), is_specific);
     m_emu_settings->SetWindowsGuestRedZoneProtectionMode(
         static_cast<WindowsGuestRedZoneProtectionMode>(ui->redZoneComboBox->currentIndex()),
@@ -1430,6 +1453,7 @@ void SettingsDialog::MapUIControls() {
     m_uiSettingMap[ui->showFpsCounterCheckBox] = {"show_fps_counter", "General"};
     m_uiSettingMap[ui->discordRPCCheckbox] = {"discord_rpc_enabled", "General"};
     m_uiSettingMap[ui->consoleLanguageComboBox] = {"console_language", "General"};
+    m_uiSettingMap[ui->bigPictureScaleSpinBox] = {"big_picture_scale", "General"};
 
     // Audio Settings
     m_uiSettingMap[ui->GenAudioComboBox] = {"main_output_device", "Audio"};
@@ -1475,6 +1499,7 @@ void SettingsDialog::MapUIControls() {
     m_uiSettingMap[ui->logAppendCheckBox] = {"append", "Log"};
 
 #ifdef WIN32
+    m_uiSettingMap[ui->logFlushLevelComboBox] = {"flush_level", "Log"};
     m_uiSettingMap[ui->logTypeComboBox] = {"type", "Log"};
 #endif
 
@@ -1500,6 +1525,7 @@ void SettingsDialog::MapUIControls() {
     m_uiSettingMap[ui->psnSignInCheckBox] = {"shad_net_enabled", "General"};
     m_uiSettingMap[ui->networkConnectedCheckBox] = {"connected_to_network", "General"};
     m_uiSettingMap[ui->dmemSpinBox] = {"extra_dmem_in_mbytes", "General"};
+    m_uiSettingMap[ui->fmemSpinBox] = {"extra_fmem_in_mbytes", "General"};
     m_uiSettingMap[ui->vblankSpinBox] = {"vblank_frequency", "GPU"};
 }
 

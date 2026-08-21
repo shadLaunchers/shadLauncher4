@@ -50,6 +50,7 @@ public:
         const QString log_max_skip_duration = tr("Log Max Skip Duration:\\nInterval without writing same lines (ms) - only if 'Log Skip Duplicate' enabled.");
         const QString log_size_limit = tr("Log Size Limit:\\nMaximum size of log files (bytes).");
         const QString log_append = tr("Log Append:\\nAppend to existing logs.");
+        const QString log_flush_level = tr("Log Flush Level:\\nSets the log level for which logs at or above will be flushed.");
         const QString log_type = tr("Log Type:\\nChoose between wincolor or msvc log types.\\nwincolor: Default logging for Windows\\nmsvc: Logging for debugging");
         const QString log_section = tr("Log:\\nSettings that control what gets logged and how log files are written.");
         const QString log_presets = tr("Load Presets...:\\nChoose from a list of common log filter presets instead of typing one by hand.");
@@ -58,6 +59,7 @@ public:
         const QString gui_background_image = tr("Background Image:\\nControl the opacity of the game background image.");
         const QString gui_music = tr("Play Title Music:\\nIf a game supports it, enable playing special music when selecting the game in the GUI.");
         const QString gui_music_volume = tr("Music Volume:\\nAdjust the volume of the background/title music played in the GUI.");
+        const QString gui_big_picture_scale = tr("Big Picture Scale:\\nScales the Big Picture interface, in percent of its normal size.");
         const QString gui_theme = tr("Theme:\\nChoose the stylesheet used for the launcher's interface. Drop .qss stylesheet files into the \"themes\" folder inside your user data directory to add custom themes.");
         const QString gui_show_background_image = tr("Show Background Image:\\nDisplay a background image behind the game list. Use the Opacity slider below to control how visible it is.");
         //audio
@@ -120,6 +122,7 @@ public:
         const QString experimental_shadnet = tr("shadNet:\\nCompatibility is very limited at the moment.\\nYou can register at https://www.shadps4.net/shadnet/register/.");
         const QString experimental_shader_cache = tr("Enable Shader Cache:\\nStoring compiled shaders to avoid recompilations, reduce stuttering.");
         const QString experimental_shader_cache_archive = tr("Compress the Shader Cache files into a zip file:\\nThe shader cache files are stored within a single zip file instead of multiple separate files.");
+        const QString experimental_fmem = tr("Additional FMem Allocation:\\nForces allocation of the specified amount of additional FMem. Crashes or causes issues in some games.");
         const QString experimental_dmem = tr("Additional DMem Allocation:\\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.");
         const QString experimental_section = tr("Experimental:\\nFeatures that are still in development or considered unstable. Use with caution - these can cause crashes or unexpected behavior.");
         const QString experimental_shadnet_config = tr("ShadNet Server Settings:\\nConfigure the server addresses used to connect to a ShadNet-compatible online service. Only used while ShadNet is enabled.");
