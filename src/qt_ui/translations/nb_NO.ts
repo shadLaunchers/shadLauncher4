@@ -859,6 +859,91 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
   </context>
   <context>
+    <name>DlcViewerDialog</name>
+    <message>
+      <source>DLC Viewer</source>
+      <translation type="unfinished">DLC Viewer</translation>
+    </message>
+    <message>
+      <source>Reload</source>
+      <translation type="unfinished">Reload</translation>
+    </message>
+    <message>
+      <source>Open Addon Folder</source>
+      <translation type="unfinished">Open Addon Folder</translation>
+    </message>
+    <message>
+      <source>Open DLC Folder</source>
+      <translation type="unfinished">Open DLC Folder</translation>
+    </message>
+    <message>
+      <source>Delete DLC</source>
+      <translation type="unfinished">Delete DLC</translation>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation type="unfinished">Name</translation>
+    </message>
+    <message>
+      <source>Content ID</source>
+      <translation type="unfinished">Content ID</translation>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation type="unfinished">Size</translation>
+    </message>
+    <message>
+      <source>Source</source>
+      <translation type="unfinished">Source</translation>
+    </message>
+    <message>
+      <source>This game</source>
+      <translation type="unfinished">This game</translation>
+    </message>
+    <message>
+      <source>Shared (label %1, %2)</source>
+      <translation type="unfinished">Shared (label %1, %2)</translation>
+    </message>
+    <message>
+      <source>%1 DLC(s) installed, %2 total</source>
+      <translation type="unfinished">%1 DLC(s) installed, %2 total</translation>
+    </message>
+    <message>
+      <source>No addon (DLC) install directory is configured. Set one in Settings.</source>
+      <translation type="unfinished">No addon (DLC) install directory is configured. Set one in Settings.</translation>
+    </message>
+    <message>
+      <source>No installed DLC found for %1.</source>
+      <translation type="unfinished">No installed DLC found for %1.</translation>
+    </message>
+    <message>
+      <source>Could not open or create the addon folder:
+%1</source>
+      <translation type="unfinished">Could not open or create the addon folder:
+%1</translation>
+    </message>
+    <message>
+      <source>Select a DLC first.</source>
+      <translation type="unfinished">Select a DLC first.</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to delete this DLC?
+
+%1
+%2</source>
+      <translation type="unfinished">Are you sure you want to delete this DLC?
+
+%1
+%2</translation>
+    </message>
+    <message>
+      <source>Failed to delete DLC folder:
+%1</source>
+      <translation type="unfinished">Failed to delete DLC folder:
+%1</translation>
+    </message>
+  </context>
+  <context>
     <name>Downloader</name>
     <message>
       <source>Please wait...</source>
@@ -1593,6 +1678,10 @@ This removes the unpacked trophy files and the unlocked trophies of every user. 
 Leave empty to use the original name.</source>
       <translation type="unfinished">Shown instead of &quot;%1&quot; [%2].
 Leave empty to use the original name.</translation>
+    </message>
+    <message>
+      <source>&amp;DLC Viewer</source>
+      <translation type="unfinished">&amp;DLC Viewer</translation>
     </message>
   </context>
   <context>
@@ -2785,10 +2874,6 @@ Erstatt den gjeldende lista i sin helhet, eller tilføy disse oppføringene til 
       <translation>Spillet er allerede installert</translation>
     </message>
     <message>
-      <source>PKG is a patch or DLC, please install the game first!</source>
-      <translation>PKG er en programrettelse eller nedlastbart innhold. Installer spillet først!</translation>
-    </message>
-    <message>
       <source>Extracting PKG %1/%2</source>
       <translation>Pakker ut PKG %1/%2</translation>
     </message>
@@ -2968,6 +3053,14 @@ Velg en emulatorversjon fra høyre panel.</translation>
         <numerusform>Restore the original name of %n renamed game(s)?</numerusform>
         <numerusform>Restore the original name of %n renamed game(s)?</numerusform>
       </translation>
+    </message>
+    <message>
+      <source>PSF CONTENT_ID has an unexpected format: %1</source>
+      <translation type="unfinished">PSF CONTENT_ID has an unexpected format: %1</translation>
+    </message>
+    <message>
+      <source>PKG is a patch, please install the game first!</source>
+      <translation type="unfinished">PKG is a patch, please install the game first!</translation>
     </message>
   </context>
   <context>
