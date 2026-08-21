@@ -39,7 +39,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          since=$(date -u --date="24 hours ago" +%Y-%m-%dT%H:%M:%SZ)
+          since=$(date -u --date="400 hours ago" +%Y-%m-%dT%H:%M:%SZ)
           echo "Checking commits since $since"
 
           changed=false
