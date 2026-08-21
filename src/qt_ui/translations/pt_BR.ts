@@ -862,76 +862,76 @@ Por favor, digite suas chaves e salve-as.</translation>
     <name>DlcViewerDialog</name>
     <message>
       <source>DLC Viewer</source>
-      <translation type="unfinished">DLC Viewer</translation>
+      <translation>Visualizador de DLC</translation>
     </message>
     <message>
       <source>Reload</source>
-      <translation type="unfinished">Reload</translation>
+      <translation>Recarregar</translation>
     </message>
     <message>
       <source>Open Addon Folder</source>
-      <translation type="unfinished">Open Addon Folder</translation>
+      <translation>Abrir Pasta de Complemento</translation>
     </message>
     <message>
       <source>Open DLC Folder</source>
-      <translation type="unfinished">Open DLC Folder</translation>
+      <translation>Abrir Pasta de DLC</translation>
     </message>
     <message>
       <source>Delete DLC</source>
-      <translation type="unfinished">Delete DLC</translation>
+      <translation>Excluir DLC</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Nome</translation>
     </message>
     <message>
       <source>Content ID</source>
-      <translation type="unfinished">Content ID</translation>
+      <translation>ID do Conteúdo</translation>
     </message>
     <message>
       <source>Size</source>
-      <translation type="unfinished">Size</translation>
+      <translation>Tamanho</translation>
     </message>
     <message>
       <source>Source</source>
-      <translation type="unfinished">Source</translation>
+      <translation>Origem</translation>
     </message>
     <message>
       <source>This game</source>
-      <translation type="unfinished">This game</translation>
+      <translation>Este jogo</translation>
     </message>
     <message>
       <source>Shared (label %1, %2)</source>
-      <translation type="unfinished">Shared (label %1, %2)</translation>
+      <translation>Compartilhado (etiqueta %1, %2)</translation>
     </message>
     <message>
       <source>%1 DLC(s) installed, %2 total</source>
-      <translation type="unfinished">%1 DLC(s) installed, %2 total</translation>
+      <translation>%1 DLC(s) instalada(s), %2 no total</translation>
     </message>
     <message>
       <source>No addon (DLC) install directory is configured. Set one in Settings.</source>
-      <translation type="unfinished">No addon (DLC) install directory is configured. Set one in Settings.</translation>
+      <translation>Nenhum diretório de instalação de complemento (DLC) foi configurado. Defina um em Configurações.</translation>
     </message>
     <message>
       <source>No installed DLC found for %1.</source>
-      <translation type="unfinished">No installed DLC found for %1.</translation>
+      <translation>Nenhuma DLC instalada foi encontrada para %1.</translation>
     </message>
     <message>
       <source>Could not open or create the addon folder:
 %1</source>
-      <translation type="unfinished">Could not open or create the addon folder:
+      <translation>Não foi possível abrir ou criar a pasta de complementos:
 %1</translation>
     </message>
     <message>
       <source>Select a DLC first.</source>
-      <translation type="unfinished">Select a DLC first.</translation>
+      <translation>Selecione uma DLC primeiro.</translation>
     </message>
     <message>
       <source>Are you sure you want to delete this DLC?
 
 %1
 %2</source>
-      <translation type="unfinished">Are you sure you want to delete this DLC?
+      <translation>Tem certeza que deseja excluir esta DLC?
 
 %1
 %2</translation>
@@ -939,7 +939,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     <message>
       <source>Failed to delete DLC folder:
 %1</source>
-      <translation type="unfinished">Failed to delete DLC folder:
+      <translation>Falha ao excluir pasta de DLC:
 %1</translation>
     </message>
   </context>
@@ -1681,7 +1681,7 @@ Deixe em branco para usar o nome original.</translation>
     </message>
     <message>
       <source>&amp;DLC Viewer</source>
-      <translation type="unfinished">&amp;DLC Viewer</translation>
+      <translation>&amp;Visualizador de DLC</translation>
     </message>
   </context>
   <context>
@@ -3056,11 +3056,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>PSF CONTENT_ID has an unexpected format: %1</source>
-      <translation type="unfinished">PSF CONTENT_ID has an unexpected format: %1</translation>
+      <translation>O CONTENT_ID do PSF possui um formato inesperado: %1</translation>
     </message>
     <message>
       <source>PKG is a patch, please install the game first!</source>
-      <translation type="unfinished">PKG is a patch, please install the game first!</translation>
+      <translation>O PKG é um patch. Por favor, instale o jogo primeiro!</translation>
     </message>
   </context>
   <context>
