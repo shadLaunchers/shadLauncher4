@@ -27,11 +27,13 @@
 #include "core/emulator_state.h"
 #include "core/loader.h"
 #include "crypto_key_dialog.h"
+#include "dimensions_dialog.h"
 #include "game_list_exporter.h"
 #include "game_list_frame.h"
 #include "gui_settings.h"
 #include "host_overrides_dialog.h"
 #include "hotkeys.h"
+#include "infinity_dialog.h"
 #include "kbm_gui.h"
 #include "main_window.h"
 #include "pkg_install_dir_select_dialog.h"
@@ -39,6 +41,8 @@
 #include "progress_dialog.h"
 #include "qt_ui/check_update.h"
 #include "settings_dialog.h"
+#include "setup_wizard.h"
+#include "skylander_dialog.h"
 #include "ui_main_window.h"
 #include "user_manager_dialog.h"
 #include "version.h"
@@ -386,6 +390,36 @@ void MainWindow::createConnects() {
     connect(ui->actionCrypto_Key_Manager, &QAction::triggered, this, [this] {
         CryptoManagerDialog dialog(this);
         dialog.exec();
+    });
+
+    connect(ui->actionSetup_Wizard, &QAction::triggered, this, [this] {
+        SetupWizard wizard(m_gui_settings, m_emu_settings, this);
+        // Signal-to-signal: GUIApplication already listens on both of these.
+        connect(&wizard, &SetupWizard::requestLanguageChange, this,
+                &MainWindow::requestLanguageChange);
+        connect(&wizard, &SetupWizard::requestThemeChange, this,
+                &MainWindow::RequestGlobalStylesheetChange);
+        if (wizard.exec() == QDialog::Accepted) {
+            LoadVersionComboBox();
+            if (m_game_list_frame) {
+                m_game_list_frame->Refresh(true);
+            }
+        }
+    });
+
+    connect(ui->actionManage_Skylanders, &QAction::triggered, this, [this]() {
+        skylander_dialog* sky_diag = skylander_dialog::get_dlg(this, m_ipc_client);
+        sky_diag->show();
+    });
+
+    connect(ui->actionManage_Infinity_Figures, &QAction::triggered, this, [this]() {
+        infinity_dialog* inf_diag = infinity_dialog::get_dlg(this, m_ipc_client);
+        inf_diag->show();
+    });
+
+    connect(ui->actionManage_Dimensions_Toypad, &QAction::triggered, this, [this]() {
+        dimensions_dialog* dim_diag = dimensions_dialog::get_dlg(this, m_ipc_client);
+        dim_diag->show();
     });
 
     connect(ui->install_pkg_act, &QAction::triggered, this, &MainWindow::InstallPkg);
@@ -1075,8 +1109,8 @@ void MainWindow::InstallSinglePkg(std::filesystem::path file, int pkgNum, int nP
             } else {
                 QMessageBox msgBox;
                 msgBox.setWindowTitle(tr("PKG Extraction"));
-                msgBox.setText(QString(tr("DLC already installed:") + "\n" + addonDirPath +
-                                       "\n\n" + tr("Would you like to overwrite?")));
+                msgBox.setText(QString(tr("DLC already installed:") + "\n" + addonDirPath + "\n\n" +
+                                       tr("Would you like to overwrite?")));
                 msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
                 msgBox.setDefaultButton(QMessageBox::No);
                 if (msgBox.exec() != QMessageBox::Yes) {
@@ -1119,24 +1153,23 @@ void MainWindow::InstallSinglePkg(std::filesystem::path file, int pkgNum, int nP
                     double appD = game_app_version.toDouble();
                     double pkgD = pkg_app_version.toDouble();
                     if (pkgD == appD) {
-                        msgBox.setText(
-                            QString(tr("Patch detected!") + "\n" +
-                                   tr("PKG and Game versions match: ") + pkg_app_version + "\n" +
-                                   tr("Would you like to overwrite?")));
+                        msgBox.setText(QString(
+                            tr("Patch detected!") + "\n" + tr("PKG and Game versions match: ") +
+                            pkg_app_version + "\n" + tr("Would you like to overwrite?")));
                         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
                         msgBox.setDefaultButton(QMessageBox::No);
                     } else if (pkgD < appD) {
                         msgBox.setText(
                             QString(tr("Patch detected!") + "\n" +
-                                   tr("PKG Version %1 is older than installed version: ")
-                                       .arg(pkg_app_version) +
-                                   game_app_version + "\n" + tr("Would you like to overwrite?")));
+                                    tr("PKG Version %1 is older than installed version: ")
+                                        .arg(pkg_app_version) +
+                                    game_app_version + "\n" + tr("Would you like to overwrite?")));
                         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
                         msgBox.setDefaultButton(QMessageBox::No);
                     } else {
                         msgBox.setText(QString(tr("Patch detected!") + "\n" +
-                                               tr("Game is installed: ") + game_app_version +
-                                               "\n" + tr("Would you like to install Patch: ") +
+                                               tr("Game is installed: ") + game_app_version + "\n" +
+                                               tr("Would you like to install Patch: ") +
                                                pkg_app_version + " ?"));
                         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
                         msgBox.setDefaultButton(QMessageBox::No);
@@ -1335,7 +1368,6 @@ void MainWindow::onGameClosed() {
         m_game_list_frame->Refresh(false);
     }
 
-    /* TODO
     // clear dialogs when game closed
     skylander_dialog* sky_diag = skylander_dialog::get_dlg(this, m_ipc_client);
     sky_diag->clear_all();
@@ -1343,7 +1375,6 @@ void MainWindow::onGameClosed() {
     dim_diag->clear_all();
     infinity_dialog* inf_diag = infinity_dialog::get_dlg(this, m_ipc_client);
     inf_diag->clear_all();
-    */
 }
 
 void MainWindow::RestartEmulator() {

@@ -78,6 +78,8 @@ const GUISave general_check_gui_updates = GUISave(general, "check_gui_updates", 
 const GUISave general_directory_depth_scanning = GUISave(general, "directory_depth_scanning", 1);
 const GUISave general_separate_update_folder = GUISave(general, "separate_update_folder", false);
 const GUISave general_last_pkg_install_dir = GUISave(general, "last_pkg_install_dir", "");
+// Set once the first-run setup wizard has been completed end to end.
+const GUISave general_setup_completed = GUISave(general, "setup_completed", false);
 
 // compatibility settings
 const GUISave compatibility_check_on_startup = GUISave(compatibility, "check_on_startup", true);

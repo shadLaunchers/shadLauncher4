@@ -270,8 +270,7 @@ void IpcClient::onProcessClosed() {
 
 void IpcClient::writeLine(const QString& text) {
     if (process == nullptr) {
-        QMessageBox::critical(nullptr, "ShadPS4",
-                              QString(tr("Could not find the emulator executable")));
+        QMessageBox::critical(nullptr, "ShadPS4", QString(tr("No game is running")));
         return;
     }
 

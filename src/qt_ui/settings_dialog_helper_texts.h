@@ -25,6 +25,7 @@ public:
         const QString general_updater_check_startup = tr("Check for Updates at Startup:\\nAutomatically check for a new launcher version each time it starts.");
         const QString general_updater_changelog = tr("Always Show Changelog:\\nDisplay the changelog dialog after installing an update, even for minor releases.");
         const QString general_updater_check_now = tr("Check for Updates:\\nManually check right now for a newer launcher version.");
+        const QString general_console_language = tr("Console Language:\\nSets the language that PS4 games run in - localized titles, icons and changelogs follow it.\\nThis is separate from the launcher's own interface language.\\nIt is best set to a language the game actually supports, which varies by region.");
         const QString general_fps_counter = tr("Show Simple FPS Counter:\\nDisplays a basic frames-per-second counter overlay while a game is running.");
         const QString general_pkg_separate_update = tr("Use Separate Update Folder:\\nInstall PKG game updates to their own folder instead of merging them into the base game's install folder.");
         //paths

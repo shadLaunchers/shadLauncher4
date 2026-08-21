@@ -150,6 +150,7 @@ set(COMMON src/common/types.h
            src/common/crypto.cpp
            src/common/crypto.h
            src/common/picosha2.h
+           src/common/sha1.h
            src/common/zip_util.cpp
            src/common/zip_util.h
            src/common/input.cpp
@@ -328,6 +329,14 @@ set(QT_UI src/qt_ui/settings.cpp
           src/qt_ui/trophy_viewer.h
           src/qt_ui/dlc_viewer_dialog.cpp
           src/qt_ui/dlc_viewer_dialog.h
+          src/qt_ui/setup_wizard.cpp
+          src/qt_ui/setup_wizard.h
+          src/qt_ui/skylander_dialog.cpp
+          src/qt_ui/skylander_dialog.h
+          src/qt_ui/infinity_dialog.cpp
+          src/qt_ui/infinity_dialog.h
+          src/qt_ui/dimensions_dialog.cpp
+          src/qt_ui/dimensions_dialog.h
           src/qt_ui/zarchive_viewer_dialog.cpp
           src/qt_ui/zarchive_viewer_dialog.h
           ${UPDATER}

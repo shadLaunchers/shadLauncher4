@@ -207,11 +207,17 @@
     <property name="title">
      <string>Utilities</string>
     </property>
+    <addaction name="actionSetup_Wizard"/>
+    <addaction name="separator"/>
     <addaction name="actionExport_GameList"/>
     <addaction name="actionReset_Custom_Titles"/>
     <addaction name="actionCrypto_Key_Manager"/>
     <addaction name="actionConfigure_Hotkeys"/>
     <addaction name="actionHostOverrides"/>
+    <addaction name="separator"/>
+    <addaction name="actionManage_Skylanders"/>
+    <addaction name="actionManage_Infinity_Figures"/>
+    <addaction name="actionManage_Dimensions_Toypad"/>
    </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
@@ -742,6 +748,10 @@
    </property>
   </action>
   <action name="actionReset_Custom_Titles">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/reset.svg</normaloff>:/images/menu/reset.svg</iconset>
+   </property>
    <property name="text">
     <string>Reset All Custom Titles</string>
    </property>
@@ -819,6 +829,51 @@
    </property>
    <property name="text">
     <string>Crypto Key Manager</string>
+   </property>
+  </action>
+  <action name="actionSetup_Wizard">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/cfg-general.svg</normaloff>:/images/menu/cfg-general.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Setup Wizard</string>
+   </property>
+  </action>
+  <action name="actionManage_Skylanders">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/figures.svg</normaloff>:/images/menu/figures.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Manage Skylanders</string>
+   </property>
+   <property name="toolTip">
+    <string>Load and manage figures on the emulated Skylanders Portal of Power</string>
+   </property>
+  </action>
+  <action name="actionManage_Infinity_Figures">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/figures.svg</normaloff>:/images/menu/figures.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Manage Infinity Figures</string>
+   </property>
+   <property name="toolTip">
+    <string>Load and manage figures on the emulated Disney Infinity Base</string>
+   </property>
+  </action>
+  <action name="actionManage_Dimensions_Toypad">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/images/menu/figures.svg</normaloff>:/images/menu/figures.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Manage Dimensions Toypad</string>
+   </property>
+   <property name="toolTip">
+    <string>Load and manage minifigures on the emulated Lego Dimensions Toypad</string>
    </property>
   </action>
   <action name="showLogAct">
