@@ -255,6 +255,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
                       helptexts.settings.input_background_controller);
     SubscribeHelpText(ui->USBDeviceGroupBox, helptexts.settings.input_usb_device);
     SubscribeHelpText(ui->usbComboBox, helptexts.settings.input_usb_device);
+    SubscribeHelpText(ui->consoleLanguageGroupBox, helptexts.settings.general_console_language);
+    SubscribeHelpText(ui->consoleLanguageComboBox, helptexts.settings.general_console_language);
     SubscribeHelpText(ui->cursorGroupBox, helptexts.settings.input_cursor_section);
     SubscribeHelpText(ui->ControllerGroupBox, helptexts.settings.input_controller_section);
     SubscribeHelpText(ui->miceUsedAsMiceCheckBox, helptexts.settings.input_mice_as_mice);
@@ -733,6 +735,13 @@ void SettingsDialog::LoadValuesFromConfig() {
     }
 
     ui->idleTimeoutSpinBox->setValue(m_emu_settings->GetCursorHideTimeout());
+
+    {
+        const int stored_id = m_emu_settings->GetConsoleLanguage();
+        const int row = static_cast<int>(consoleLanguageIds.indexOf(stored_id));
+        ui->consoleLanguageComboBox->setCurrentIndex(row >= 0 ? row : 0);
+    }
+
     ui->usbComboBox->setCurrentIndex(m_emu_settings->GetUsbDeviceBackend());
     ui->micComboBox->setCurrentText(QString::fromStdString(m_emu_settings->GetSDLMicDevice()));
     ui->motionControlsCheckBox->setChecked(m_emu_settings->IsMotionControlsEnabled());
@@ -979,6 +988,10 @@ void SettingsDialog::ApplyValuesToBackend() {
                                    is_specific);
     m_emu_settings->SetCursorHideTimeout(ui->idleTimeoutSpinBox->value(), is_specific);
     m_emu_settings->SetSDLMicDevice(ui->micComboBox->currentText().toStdString(), is_specific);
+    if (const int row = ui->consoleLanguageComboBox->currentIndex();
+        row >= 0 && row < consoleLanguageIds.size()) {
+        m_emu_settings->SetConsoleLanguage(consoleLanguageIds[row], is_specific);
+    }
     m_emu_settings->SetUsbDeviceBackend(ui->usbComboBox->currentIndex(), is_specific);
     m_emu_settings->SetMotionControlsEnabled(ui->motionControlsCheckBox->isChecked(), is_specific);
     m_emu_settings->SetBackgroundControllerInput(ui->backgroundControllerCheckBox->isChecked(),
@@ -1239,6 +1252,13 @@ void SettingsDialog::PopulateComboBoxes() {
     ui->usbComboBox->addItem(tr("Infinity Base"));
     ui->usbComboBox->addItem(tr("Dimensions Toypad"));
 
+    // Console language - the language games run in, independent of the UI language.
+    // Searchable, since the list is long.
+    ui->consoleLanguageComboBox->addItems(consoleLanguageNames);
+    auto* console_language_completer = new QCompleter(consoleLanguageNames, this);
+    console_language_completer->setCaseSensitivity(Qt::CaseInsensitive);
+    ui->consoleLanguageComboBox->setCompleter(console_language_completer);
+
     // Themes / stylesheets
     ui->themeComboBox->addItem(tr("Default"), GUI::DefaultStylesheet);
     ui->themeComboBox->addItem(tr("None"), GUI::NoStylesheet);
@@ -1409,6 +1429,7 @@ void SettingsDialog::MapUIControls() {
     m_uiSettingMap[ui->radioButton_Bottom] = {"trophy_notification_side", "General"};
     m_uiSettingMap[ui->showFpsCounterCheckBox] = {"show_fps_counter", "General"};
     m_uiSettingMap[ui->discordRPCCheckbox] = {"discord_rpc_enabled", "General"};
+    m_uiSettingMap[ui->consoleLanguageComboBox] = {"console_language", "General"};
 
     // Audio Settings
     m_uiSettingMap[ui->GenAudioComboBox] = {"main_output_device", "Audio"};

@@ -17,6 +17,7 @@
 #include "core/file_format/npbind.h"
 #include "core/file_sys/game_backend.h"
 #include "core/user_settings.h"
+#include "gui_application.h"
 #include "trophy_viewer.h"
 
 static constexpr std::array<std::string_view, 31> s_language_xml_names = {
@@ -501,7 +502,7 @@ void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
 
         std::filesystem::path path = GetTrophyXmlPath(
             Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "trophy" / npCommId / "Xml",
-            EmulatorSettings.GetConsoleLanguage());
+            GUIApplication::getLanguageId());
         QString xmlPath;
         Common::FS::PathToQString(xmlPath, path);
 

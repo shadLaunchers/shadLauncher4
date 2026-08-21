@@ -142,8 +142,6 @@ void GUIApplication::loadLanguage(const QString& language_code) {
     m_gui_settings->SetValue(GUI::localization_language, m_language_code);
 
     qDebug() << "Current language changed to" << locale_name << "(" << language_code << ")";
-    EmulatorSettings.SetConsoleLanguage(m_language_id);
-    EmulatorSettings.Save();
 }
 
 QStringList GUIApplication::getAvailableLanguageCodes() {
