@@ -862,76 +862,76 @@ Please enter your keys and save them.</source>
     <name>DlcViewerDialog</name>
     <message>
       <source>DLC Viewer</source>
-      <translation type="unfinished">DLC Viewer</translation>
+      <translation>Переглядач доповнень</translation>
     </message>
     <message>
       <source>Reload</source>
-      <translation type="unfinished">Reload</translation>
+      <translation>Перезавантажити</translation>
     </message>
     <message>
       <source>Open Addon Folder</source>
-      <translation type="unfinished">Open Addon Folder</translation>
+      <translation>Відкрити теку доповнень</translation>
     </message>
     <message>
       <source>Open DLC Folder</source>
-      <translation type="unfinished">Open DLC Folder</translation>
+      <translation>Відкрити теку доповнень</translation>
     </message>
     <message>
       <source>Delete DLC</source>
-      <translation type="unfinished">Delete DLC</translation>
+      <translation>Видалити доповнення</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Назва</translation>
     </message>
     <message>
       <source>Content ID</source>
-      <translation type="unfinished">Content ID</translation>
+      <translation>Ідентифікатор вмісту</translation>
     </message>
     <message>
       <source>Size</source>
-      <translation type="unfinished">Size</translation>
+      <translation>Розмір</translation>
     </message>
     <message>
       <source>Source</source>
-      <translation type="unfinished">Source</translation>
+      <translation>Джерело</translation>
     </message>
     <message>
       <source>This game</source>
-      <translation type="unfinished">This game</translation>
+      <translation>Ця гра</translation>
     </message>
     <message>
       <source>Shared (label %1, %2)</source>
-      <translation type="unfinished">Shared (label %1, %2)</translation>
+      <translation>Спільний (мітка %1, %2)</translation>
     </message>
     <message>
       <source>%1 DLC(s) installed, %2 total</source>
-      <translation type="unfinished">%1 DLC(s) installed, %2 total</translation>
+      <translation>Встановлено %1 доповнення (-нь), загалом %2</translation>
     </message>
     <message>
       <source>No addon (DLC) install directory is configured. Set one in Settings.</source>
-      <translation type="unfinished">No addon (DLC) install directory is configured. Set one in Settings.</translation>
+      <translation>Каталог для встановлення доповнень не вказано. Вкажіть його в налаштуваннях.</translation>
     </message>
     <message>
       <source>No installed DLC found for %1.</source>
-      <translation type="unfinished">No installed DLC found for %1.</translation>
+      <translation>Для %1 не знайдено встановлених доповнень.</translation>
     </message>
     <message>
       <source>Could not open or create the addon folder:
 %1</source>
-      <translation type="unfinished">Could not open or create the addon folder:
+      <translation>Не вдалося відкрити або створити теку доповнень:
 %1</translation>
     </message>
     <message>
       <source>Select a DLC first.</source>
-      <translation type="unfinished">Select a DLC first.</translation>
+      <translation>Спочатку виберіть доповнення.</translation>
     </message>
     <message>
       <source>Are you sure you want to delete this DLC?
 
 %1
 %2</source>
-      <translation type="unfinished">Are you sure you want to delete this DLC?
+      <translation>Упевнені, що хочете видалити це доповнення?
 
 %1
 %2</translation>
@@ -939,7 +939,7 @@ Please enter your keys and save them.</source>
     <message>
       <source>Failed to delete DLC folder:
 %1</source>
-      <translation type="unfinished">Failed to delete DLC folder:
+      <translation>Не вдалося видалити теку доповнень:
 %1</translation>
     </message>
   </context>
@@ -1147,181 +1147,179 @@ Please enter your keys and save them.</source>
     <name>GameListContextMenu</name>
     <message>
       <source>Game</source>
-      <translation type="unfinished">Game</translation>
+      <translation>Гра</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>This game has no update to delete!</source>
-      <translation type="unfinished">This game has no update to delete!</translation>
+      <translation>Ця гра не має оновлень для видалення!</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Оновити</translation>
     </message>
     <message>
       <source>Delete Game + Update</source>
-      <translation type="unfinished">Delete Game + Update</translation>
+      <translation>Видалити гру + оновлення</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s game and update/patch directories? This cannot be undone.</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s game and update/patch directories? This cannot be undone.</translation>
+      <translation>Упевнені, що хочете видалити ігрові каталоги та каталоги оновлень/виправлень користувача %1? Цю дію неможливо скасувати.</translation>
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation type="unfinished">This game has no DLC to delete!</translation>
+      <translation>Ця гра не має доповнень для видалення!</translation>
     </message>
     <message>
       <source>DLC</source>
-      <translation type="unfinished">DLC</translation>
+      <translation>Доповнення</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
-      <translation type="unfinished">This game has no save data to delete!</translation>
+      <translation>Ця гра не містить збережень, які можна видалити!</translation>
     </message>
     <message>
       <source>Save Data</source>
-      <translation type="unfinished">Save Data</translation>
+      <translation>Зберегти дані</translation>
     </message>
     <message>
       <source>This game has no Shader Cache to delete!</source>
-      <translation type="unfinished">This game has no Shader Cache to delete!</translation>
+      <translation>У цій грі немає кешу шейдерів для видалення!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Кеш шейдерів</translation>
     </message>
     <message>
       <source>Shader cache deleted successfully.</source>
-      <translation type="unfinished">Shader cache deleted successfully.</translation>
+      <translation>Кеш шейдерів успішно видалено.</translation>
     </message>
     <message>
       <source>Clear Metadata Cache</source>
-      <translation type="unfinished">Clear Metadata Cache</translation>
+      <translation>Очистити кеш метаданих</translation>
     </message>
     <message>
       <source>Clear the cached name/serial/icon/size info for %1?
 
 It will be re-read from disk on the next refresh.</source>
-      <translation type="unfinished">Clear the cached name/serial/icon/size info for %1?
+      <translation>Очистити кешовані дані про назву/серійний номер/піктограму/розмір для %1?
 
-It will be re-read from disk on the next refresh.</translation>
+Їх буде повторно зчитано з диска під час наступного оновлення.</translation>
     </message>
     <message>
       <source>Delete %1</source>
-      <translation type="unfinished">Delete %1</translation>
+      <translation>Видалити %1</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s %2 directory?</translation>
+      <translation>Упевнені, що хочете видалити %1 з каталогу %2?</translation>
     </message>
     <message>
       <source>This is already packed as a ZArchive.</source>
-      <translation type="unfinished">This is already packed as a ZArchive.</translation>
+      <translation>Це вже запаковано як ZArchive.</translation>
     </message>
     <message>
       <source>This folder could not be found on disk.</source>
-      <translation type="unfinished">This folder could not be found on disk.</translation>
+      <translation>Цю теку не знайдено на диску.</translation>
     </message>
     <message>
       <source>Convert %1 to ZArchive</source>
-      <translation type="unfinished">Convert %1 to ZArchive</translation>
+      <translation>Конвертувати %1 в ZArchive</translation>
     </message>
     <message>
       <source>ZArchive Files (*.zar)</source>
-      <translation type="unfinished">ZArchive Files (*.zar)</translation>
+      <translation>Файли ZArchive (*.zar)</translation>
     </message>
     <message>
       <source>%1 already exists. Overwrite it?</source>
-      <translation type="unfinished">%1 already exists. Overwrite it?</translation>
+      <translation>%1 вже існує. Перезаписати його?</translation>
     </message>
     <message>
       <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
 
 The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
-      <translation type="unfinished">This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
-
-The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</translation>
+      <translation>Це запакує «%1» в один архів .zar лише для читання. Залежно від розміру це може зайняти певний час, а для створення архіву тимчасово знадобиться стільки ж вільного місця на диску, скільки займає оригінал.</translation>
     </message>
     <message>
       <source>
 
 Continue?</source>
-      <translation type="unfinished">
+      <translation>
 
-Continue?</translation>
+Продовжити?</translation>
     </message>
     <message>
       <source>Packing %1...</source>
-      <translation type="unfinished">Packing %1...</translation>
+      <translation>Пакування %1...</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Скасувати</translation>
     </message>
     <message>
       <source>Failed to convert to ZArchive:
 %1</source>
-      <translation type="unfinished">Failed to convert to ZArchive:
+      <translation>Не вдалося конвертувати в ZArchive:
 %1</translation>
     </message>
     <message>
       <source>Conversion finished. Delete the original folder now to free up disk space?
 
 %1</source>
-      <translation type="unfinished">Conversion finished. Delete the original folder now to free up disk space?
+      <translation>Конвертацію завершено. Видалити вихідну теку зараз, щоб звільнити місце на диску?
 
 %1</translation>
     </message>
     <message>
       <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
-      <translation type="unfinished">The archive was created, but the original folder could not be fully deleted. You can remove it manually.</translation>
+      <translation>Архів було створено, але вихідну теку не вдалося повністю видалити. Ви можете видалити її вручну.</translation>
     </message>
     <message>
       <source>Packing: %1</source>
-      <translation type="unfinished">Packing: %1</translation>
+      <translation>Пакування: %1</translation>
     </message>
     <message>
       <source>
 
 This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
-      <translation type="unfinished">
+      <translation>
 
-This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</translation>
+Ця гра має окрему теку для оновлень/виправлень. Буде архівовано лише базову гру; теку з оновленнями/виправленнями не буде включено і залишиться без змін. Скористайтеся функцією «Конвертувати оновлення в ZArchive» окремо, якщо ви також хочете її архівувати.</translation>
     </message>
     <message>
       <source>Convert to ZArchive</source>
-      <translation type="unfinished">Convert to ZArchive</translation>
+      <translation>Конвертувати в ZArchive</translation>
     </message>
     <message>
       <source>Convert Update to ZArchive</source>
-      <translation type="unfinished">Convert Update to ZArchive</translation>
+      <translation>Конвертувати оновлення в ZArchive</translation>
     </message>
     <message>
       <source>This game has no separate update/patch folder to archive.</source>
-      <translation type="unfinished">This game has no separate update/patch folder to archive.</translation>
+      <translation>У цієї гри немає окремої теки з оновленнями/виправленнями для архівації.</translation>
     </message>
     <message>
       <source>%1 Update</source>
-      <translation type="unfinished">%1 Update</translation>
+      <translation>%1 оновлення</translation>
     </message>
     <message>
       <source>Convert from ZArchive</source>
-      <translation type="unfinished">Convert from ZArchive</translation>
+      <translation>Конвертувати із ZArchive</translation>
     </message>
     <message>
       <source>This game is not packed as a ZArchive.</source>
-      <translation type="unfinished">This game is not packed as a ZArchive.</translation>
+      <translation>Ця гра не запакована як ZArchive.</translation>
     </message>
     <message>
       <source>Extract %1 to Folder</source>
-      <translation type="unfinished">Extract %1 to Folder</translation>
+      <translation>Видобути %1 у теку</translation>
     </message>
     <message>
       <source>The destination folder &quot;%1&quot; already exists and is not empty.</source>
-      <translation type="unfinished">The destination folder &quot;%1&quot; already exists and is not empty.</translation>
+      <translation>Цільова тека «%1» вже існує та не порожня.</translation>
     </message>
     <message>
       <source>This will extract &quot;%1&quot; into a regular folder. Depending on the game&apos;s size this can take a while, and the folder will need as much free disk space as the game itself.
