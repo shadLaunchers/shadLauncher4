@@ -862,76 +862,76 @@ Please enter your keys and save them.</source>
     <name>DlcViewerDialog</name>
     <message>
       <source>DLC Viewer</source>
-      <translation type="unfinished">DLC Viewer</translation>
+      <translation>Переглядач доповнень</translation>
     </message>
     <message>
       <source>Reload</source>
-      <translation type="unfinished">Reload</translation>
+      <translation>Перезавантажити</translation>
     </message>
     <message>
       <source>Open Addon Folder</source>
-      <translation type="unfinished">Open Addon Folder</translation>
+      <translation>Відкрити теку доповнень</translation>
     </message>
     <message>
       <source>Open DLC Folder</source>
-      <translation type="unfinished">Open DLC Folder</translation>
+      <translation>Відкрити теку доповнень</translation>
     </message>
     <message>
       <source>Delete DLC</source>
-      <translation type="unfinished">Delete DLC</translation>
+      <translation>Видалити доповнення</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Назва</translation>
     </message>
     <message>
       <source>Content ID</source>
-      <translation type="unfinished">Content ID</translation>
+      <translation>Ідентифікатор вмісту</translation>
     </message>
     <message>
       <source>Size</source>
-      <translation type="unfinished">Size</translation>
+      <translation>Розмір</translation>
     </message>
     <message>
       <source>Source</source>
-      <translation type="unfinished">Source</translation>
+      <translation>Джерело</translation>
     </message>
     <message>
       <source>This game</source>
-      <translation type="unfinished">This game</translation>
+      <translation>Ця гра</translation>
     </message>
     <message>
       <source>Shared (label %1, %2)</source>
-      <translation type="unfinished">Shared (label %1, %2)</translation>
+      <translation>Спільний (мітка %1, %2)</translation>
     </message>
     <message>
       <source>%1 DLC(s) installed, %2 total</source>
-      <translation type="unfinished">%1 DLC(s) installed, %2 total</translation>
+      <translation>Встановлено %1 доповнення (-нь), загалом %2</translation>
     </message>
     <message>
       <source>No addon (DLC) install directory is configured. Set one in Settings.</source>
-      <translation type="unfinished">No addon (DLC) install directory is configured. Set one in Settings.</translation>
+      <translation>Каталог для встановлення доповнень не вказано. Вкажіть його в налаштуваннях.</translation>
     </message>
     <message>
       <source>No installed DLC found for %1.</source>
-      <translation type="unfinished">No installed DLC found for %1.</translation>
+      <translation>Для %1 не знайдено встановлених доповнень.</translation>
     </message>
     <message>
       <source>Could not open or create the addon folder:
 %1</source>
-      <translation type="unfinished">Could not open or create the addon folder:
+      <translation>Не вдалося відкрити або створити теку доповнень:
 %1</translation>
     </message>
     <message>
       <source>Select a DLC first.</source>
-      <translation type="unfinished">Select a DLC first.</translation>
+      <translation>Спочатку виберіть доповнення.</translation>
     </message>
     <message>
       <source>Are you sure you want to delete this DLC?
 
 %1
 %2</source>
-      <translation type="unfinished">Are you sure you want to delete this DLC?
+      <translation>Упевнені, що хочете видалити це доповнення?
 
 %1
 %2</translation>
@@ -939,7 +939,7 @@ Please enter your keys and save them.</source>
     <message>
       <source>Failed to delete DLC folder:
 %1</source>
-      <translation type="unfinished">Failed to delete DLC folder:
+      <translation>Не вдалося видалити теку доповнень:
 %1</translation>
     </message>
   </context>
@@ -1147,181 +1147,179 @@ Please enter your keys and save them.</source>
     <name>GameListContextMenu</name>
     <message>
       <source>Game</source>
-      <translation type="unfinished">Game</translation>
+      <translation>Гра</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>This game has no update to delete!</source>
-      <translation type="unfinished">This game has no update to delete!</translation>
+      <translation>Ця гра не має оновлень для видалення!</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Оновити</translation>
     </message>
     <message>
       <source>Delete Game + Update</source>
-      <translation type="unfinished">Delete Game + Update</translation>
+      <translation>Видалити гру + оновлення</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s game and update/patch directories? This cannot be undone.</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s game and update/patch directories? This cannot be undone.</translation>
+      <translation>Упевнені, що хочете видалити ігрові каталоги та каталоги оновлень/виправлень користувача %1? Цю дію неможливо скасувати.</translation>
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation type="unfinished">This game has no DLC to delete!</translation>
+      <translation>Ця гра не має доповнень для видалення!</translation>
     </message>
     <message>
       <source>DLC</source>
-      <translation type="unfinished">DLC</translation>
+      <translation>Доповнення</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
-      <translation type="unfinished">This game has no save data to delete!</translation>
+      <translation>Ця гра не містить збережень, які можна видалити!</translation>
     </message>
     <message>
       <source>Save Data</source>
-      <translation type="unfinished">Save Data</translation>
+      <translation>Зберегти дані</translation>
     </message>
     <message>
       <source>This game has no Shader Cache to delete!</source>
-      <translation type="unfinished">This game has no Shader Cache to delete!</translation>
+      <translation>У цій грі немає кешу шейдерів для видалення!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Кеш шейдерів</translation>
     </message>
     <message>
       <source>Shader cache deleted successfully.</source>
-      <translation type="unfinished">Shader cache deleted successfully.</translation>
+      <translation>Кеш шейдерів успішно видалено.</translation>
     </message>
     <message>
       <source>Clear Metadata Cache</source>
-      <translation type="unfinished">Clear Metadata Cache</translation>
+      <translation>Очистити кеш метаданих</translation>
     </message>
     <message>
       <source>Clear the cached name/serial/icon/size info for %1?
 
 It will be re-read from disk on the next refresh.</source>
-      <translation type="unfinished">Clear the cached name/serial/icon/size info for %1?
+      <translation>Очистити кешовані дані про назву/серійний номер/піктограму/розмір для %1?
 
-It will be re-read from disk on the next refresh.</translation>
+Їх буде повторно зчитано з диска під час наступного оновлення.</translation>
     </message>
     <message>
       <source>Delete %1</source>
-      <translation type="unfinished">Delete %1</translation>
+      <translation>Видалити %1</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s %2 directory?</translation>
+      <translation>Упевнені, що хочете видалити %1 з каталогу %2?</translation>
     </message>
     <message>
       <source>This is already packed as a ZArchive.</source>
-      <translation type="unfinished">This is already packed as a ZArchive.</translation>
+      <translation>Це вже запаковано як ZArchive.</translation>
     </message>
     <message>
       <source>This folder could not be found on disk.</source>
-      <translation type="unfinished">This folder could not be found on disk.</translation>
+      <translation>Цю теку не знайдено на диску.</translation>
     </message>
     <message>
       <source>Convert %1 to ZArchive</source>
-      <translation type="unfinished">Convert %1 to ZArchive</translation>
+      <translation>Конвертувати %1 в ZArchive</translation>
     </message>
     <message>
       <source>ZArchive Files (*.zar)</source>
-      <translation type="unfinished">ZArchive Files (*.zar)</translation>
+      <translation>Файли ZArchive (*.zar)</translation>
     </message>
     <message>
       <source>%1 already exists. Overwrite it?</source>
-      <translation type="unfinished">%1 already exists. Overwrite it?</translation>
+      <translation>%1 вже існує. Перезаписати його?</translation>
     </message>
     <message>
       <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
 
 The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
-      <translation type="unfinished">This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
-
-The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</translation>
+      <translation>Це запакує «%1» в один архів .zar лише для читання. Залежно від розміру це може зайняти певний час, а для створення архіву тимчасово знадобиться стільки ж вільного місця на диску, скільки займає оригінал.</translation>
     </message>
     <message>
       <source>
 
 Continue?</source>
-      <translation type="unfinished">
+      <translation>
 
-Continue?</translation>
+Продовжити?</translation>
     </message>
     <message>
       <source>Packing %1...</source>
-      <translation type="unfinished">Packing %1...</translation>
+      <translation>Пакування %1...</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Скасувати</translation>
     </message>
     <message>
       <source>Failed to convert to ZArchive:
 %1</source>
-      <translation type="unfinished">Failed to convert to ZArchive:
+      <translation>Не вдалося конвертувати в ZArchive:
 %1</translation>
     </message>
     <message>
       <source>Conversion finished. Delete the original folder now to free up disk space?
 
 %1</source>
-      <translation type="unfinished">Conversion finished. Delete the original folder now to free up disk space?
+      <translation>Конвертацію завершено. Видалити вихідну теку зараз, щоб звільнити місце на диску?
 
 %1</translation>
     </message>
     <message>
       <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
-      <translation type="unfinished">The archive was created, but the original folder could not be fully deleted. You can remove it manually.</translation>
+      <translation>Архів було створено, але вихідну теку не вдалося повністю видалити. Ви можете видалити її вручну.</translation>
     </message>
     <message>
       <source>Packing: %1</source>
-      <translation type="unfinished">Packing: %1</translation>
+      <translation>Пакування: %1</translation>
     </message>
     <message>
       <source>
 
 This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
-      <translation type="unfinished">
+      <translation>
 
-This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</translation>
+Ця гра має окрему теку для оновлень/виправлень. Буде архівовано лише базову гру; теку з оновленнями/виправленнями не буде включено і залишиться без змін. Скористайтеся функцією «Конвертувати оновлення в ZArchive» окремо, якщо ви також хочете її архівувати.</translation>
     </message>
     <message>
       <source>Convert to ZArchive</source>
-      <translation type="unfinished">Convert to ZArchive</translation>
+      <translation>Конвертувати в ZArchive</translation>
     </message>
     <message>
       <source>Convert Update to ZArchive</source>
-      <translation type="unfinished">Convert Update to ZArchive</translation>
+      <translation>Конвертувати оновлення в ZArchive</translation>
     </message>
     <message>
       <source>This game has no separate update/patch folder to archive.</source>
-      <translation type="unfinished">This game has no separate update/patch folder to archive.</translation>
+      <translation>У цієї гри немає окремої теки з оновленнями/виправленнями для архівації.</translation>
     </message>
     <message>
       <source>%1 Update</source>
-      <translation type="unfinished">%1 Update</translation>
+      <translation>%1 оновлення</translation>
     </message>
     <message>
       <source>Convert from ZArchive</source>
-      <translation type="unfinished">Convert from ZArchive</translation>
+      <translation>Конвертувати із ZArchive</translation>
     </message>
     <message>
       <source>This game is not packed as a ZArchive.</source>
-      <translation type="unfinished">This game is not packed as a ZArchive.</translation>
+      <translation>Ця гра не запакована як ZArchive.</translation>
     </message>
     <message>
       <source>Extract %1 to Folder</source>
-      <translation type="unfinished">Extract %1 to Folder</translation>
+      <translation>Видобути %1 у теку</translation>
     </message>
     <message>
       <source>The destination folder &quot;%1&quot; already exists and is not empty.</source>
-      <translation type="unfinished">The destination folder &quot;%1&quot; already exists and is not empty.</translation>
+      <translation>Цільова тека «%1» вже існує та не порожня.</translation>
     </message>
     <message>
       <source>This will extract &quot;%1&quot; into a regular folder. Depending on the game&apos;s size this can take a while, and the folder will need as much free disk space as the game itself.
@@ -1329,181 +1327,182 @@ This game has a separate update/patch folder. Only the base game will be archive
 The original .zar archive is left untouched until extraction succeeds, you&apos;ll be asked afterward whether to delete it.
 
 Continue?</source>
-      <translation type="unfinished">This will extract &quot;%1&quot; into a regular folder. Depending on the game&apos;s size this can take a while, and the folder will need as much free disk space as the game itself.
+      <translation>Це розпакує «%1» у звичайну теку. Залежно від розміру гри це може зайняти певний час, і теці знадобиться стільки ж вільного місця на диску, скільки займає сама гра.
 
-The original .zar archive is left untouched until extraction succeeds, you&apos;ll be asked afterward whether to delete it.
+Оригінальний архів .zar залишиться недоторканим до успішного завершення розпакування, після чого вас запитають, чи потрібно його видалити.
 
-Continue?</translation>
+Продовжити?
+</translation>
     </message>
     <message>
       <source>Extracting %1...</source>
-      <translation type="unfinished">Extracting %1...</translation>
+      <translation>Видобування %1...</translation>
     </message>
     <message>
       <source>Failed to extract game from ZArchive:
 %1</source>
-      <translation type="unfinished">Failed to extract game from ZArchive:
+      <translation>Не вдалося витягти гру з ZArchive:
 %1</translation>
     </message>
     <message>
       <source>Extraction finished. Delete the original .zar archive now to free up disk space?
 
 %1</source>
-      <translation type="unfinished">Extraction finished. Delete the original .zar archive now to free up disk space?
+      <translation>Видобування завершено. Видалити оригінальний архів .zar зараз, щоб звільнити місце на диску?
 
 %1</translation>
     </message>
     <message>
       <source>The game was extracted, but the original .zar archive could not be deleted. You can remove it manually.</source>
-      <translation type="unfinished">The game was extracted, but the original .zar archive could not be deleted. You can remove it manually.</translation>
+      <translation>Гру було розпаковано, але оригінальний .zar-архів не вдалося видалити. Ви можете видалити його вручну.</translation>
     </message>
     <message>
       <source>Extracting: %1</source>
-      <translation type="unfinished">Extracting: %1</translation>
+      <translation>Видобування: %1</translation>
     </message>
     <message>
       <source>&amp;Launch game</source>
-      <translation type="unfinished">&amp;Launch game</translation>
+      <translation>&amp;Запустити гру</translation>
     </message>
     <message>
       <source>&amp;Launch game with current settings</source>
-      <translation type="unfinished">&amp;Launch game with current settings</translation>
+      <translation>&amp;Запустити гру з поточними параметрами</translation>
     </message>
     <message>
       <source>&amp;Launch game with default settings</source>
-      <translation type="unfinished">&amp;Launch game with default settings</translation>
+      <translation>&amp;Запустити гру з типовими параметрами</translation>
     </message>
     <message>
       <source>&amp;Launch game with global settings</source>
-      <translation type="unfinished">&amp;Launch game with global settings</translation>
+      <translation>&amp;Запустити гру з глобальними параметрами</translation>
     </message>
     <message>
       <source>&amp;Change Custom Configuration</source>
-      <translation type="unfinished">&amp;Change Custom Configuration</translation>
+      <translation>&amp;Змінити користувацьку конфігурацію</translation>
     </message>
     <message>
       <source>&amp;Create Custom Configuration From Global Settings</source>
-      <translation type="unfinished">&amp;Create Custom Configuration From Global Settings</translation>
+      <translation>&amp;Створити користувацьку конфігурацію із глобальними налаштуваннями</translation>
     </message>
     <message>
       <source>&amp;View Changelog</source>
-      <translation type="unfinished">&amp;View Changelog</translation>
+      <translation>&amp;Переглянути журнал змін</translation>
     </message>
     <message>
       <source>&amp;Open Folder</source>
-      <translation type="unfinished">&amp;Open Folder</translation>
+      <translation>&amp;Відкрити теку</translation>
     </message>
     <message>
       <source>&amp;Open Game Folder</source>
-      <translation type="unfinished">&amp;Open Game Folder</translation>
+      <translation>&amp;Відкрити теку гри</translation>
     </message>
     <message>
       <source>&amp;Open Update Folder</source>
-      <translation type="unfinished">&amp;Open Update Folder</translation>
+      <translation>&amp;Відкрити теку оновлень</translation>
     </message>
     <message>
       <source>&amp;Open Log Folder</source>
-      <translation type="unfinished">&amp;Open Log Folder</translation>
+      <translation>&amp;Відкрити теку журналів</translation>
     </message>
     <message>
       <source>Log Not Found</source>
-      <translation type="unfinished">Log Not Found</translation>
+      <translation>Журнал не знайдено</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
-      <translation type="unfinished">No log file found for this game!</translation>
+      <translation>Файл журналу для цієї гри не знайдено!</translation>
     </message>
     <message>
       <source>Open Log Folder</source>
-      <translation type="unfinished">Open Log Folder</translation>
+      <translation>Відкрити теку журналів</translation>
     </message>
     <message>
       <source>&amp;SFO viewer</source>
-      <translation type="unfinished">&amp;SFO viewer</translation>
+      <translation>&amp;SFO-переглядач</translation>
     </message>
     <message>
       <source>&amp;Create Desktop Shortcut</source>
-      <translation type="unfinished">&amp;Create Desktop Shortcut</translation>
+      <translation>&amp;Створити ярлик на робочому столі</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Не вибрано жодної версії</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Спочатку виберіть версію</translation>
     </message>
     <message>
       <source>&amp;npbind.dat viewer</source>
-      <translation type="unfinished">&amp;npbind.dat viewer</translation>
+      <translation>&amp;npbind.dat-переглядач</translation>
     </message>
     <message>
       <source>&amp;Cheats &amp; Patches</source>
-      <translation type="unfinished">&amp;Cheats &amp; Patches</translation>
+      <translation>&amp;Чити та виправлення</translation>
     </message>
     <message>
       <source>&amp;Trophy Viewer</source>
-      <translation type="unfinished">&amp;Trophy Viewer</translation>
+      <translation>&amp;Переглядач трофеїв</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Utilities - Crypto Key Manager</translation>
+      <translation>Для використання Переглядача трофеїв потрібен ключ трофеїв. Його можна ввести, натиснувши Утиліти — Крипто-ключовий менеджер</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Переглядач трофеїв</translation>
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
-      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
+      <translation>Не знайдено жодної гри. Спочатку додайте свої ігри до бібліотеки.</translation>
     </message>
     <message>
       <source>&amp;Manage Game</source>
-      <translation type="unfinished">&amp;Manage Game</translation>
+      <translation>&amp;Керувати грою</translation>
     </message>
     <message>
       <source>&amp;Hide From Game List</source>
-      <translation type="unfinished">&amp;Hide From Game List</translation>
+      <translation>&amp;Приховати зі списку ігор</translation>
     </message>
     <message>
       <source>&amp;Add/Edit Tooltip Notes</source>
-      <translation type="unfinished">&amp;Add/Edit Tooltip Notes</translation>
+      <translation>&amp;Додати / Редагувати нотатки щодо підказок</translation>
     </message>
     <message>
       <source>&amp;Convert to ZArchive (.zar)...</source>
-      <translation type="unfinished">&amp;Convert to ZArchive (.zar)...</translation>
+      <translation>&amp;Конвертувати в ZArchive (.zar)...</translation>
     </message>
     <message>
       <source>Convert &amp;Update to ZArchive (.zar)...</source>
-      <translation type="unfinished">Convert &amp;Update to ZArchive (.zar)...</translation>
+      <translation>Конвертувати &amp;оновлення в ZArchive (.zar)...</translation>
     </message>
     <message>
       <source>&amp;Extract from ZArchive (.zar)...</source>
-      <translation type="unfinished">&amp;Extract from ZArchive (.zar)...</translation>
+      <translation>&amp;Видобути з ZArchive (.zar)...</translation>
     </message>
     <message>
       <source>&amp;Browse ZArchive Contents...</source>
-      <translation type="unfinished">&amp;Browse ZArchive Contents...</translation>
+      <translation>&amp;Переглянути вміст ZArchive...</translation>
     </message>
     <message>
       <source>Browse &amp;Update ZArchive Contents...</source>
-      <translation type="unfinished">Browse &amp;Update ZArchive Contents...</translation>
+      <translation>Переглянути вміст &amp;оновлення ZArchive...</translation>
     </message>
     <message>
       <source>&amp;Copy Info</source>
-      <translation type="unfinished">&amp;Copy Info</translation>
+      <translation>&amp;Копіювати інформацію</translation>
     </message>
     <message>
       <source>&amp;Copy Name + Serial</source>
-      <translation type="unfinished">&amp;Copy Name + Serial</translation>
+      <translation>&amp;Копіювати назву + серійний номер</translation>
     </message>
     <message>
       <source>&amp;Copy Name</source>
-      <translation type="unfinished">&amp;Copy Name</translation>
+      <translation>&amp;Копіювати назву</translation>
     </message>
     <message>
       <source>&amp;Copy Serial</source>
-      <translation type="unfinished">&amp;Copy Serial</translation>
+      <translation>&amp;Копіювати серійний номер</translation>
     </message>
     <message>
       <source>&amp;Delete...</source>
@@ -1869,27 +1868,27 @@ Use the game&apos;s right click menu to put it into a category.</translation>
     </message>
     <message>
       <source>&amp;New Category...</source>
-      <translation type="unfinished">&amp;New Category...</translation>
+      <translation>&amp;Нова категорія...</translation>
     </message>
     <message>
       <source>&amp;Rename &quot;%1&quot;</source>
-      <translation type="unfinished">&amp;Rename &quot;%1&quot;</translation>
+      <translation>&amp;Перейменувати «%1»</translation>
     </message>
     <message>
       <source>&amp;Delete &quot;%1&quot;</source>
-      <translation type="unfinished">&amp;Delete &quot;%1&quot;</translation>
+      <translation>&amp;Видалити «%1»</translation>
     </message>
     <message>
       <source>Rename Category</source>
-      <translation type="unfinished">Rename Category</translation>
+      <translation>Перейменувати категорію</translation>
     </message>
     <message>
       <source>Delete Category</source>
-      <translation type="unfinished">Delete Category</translation>
+      <translation>Видалити категорію</translation>
     </message>
     <message>
       <source>Delete the category &quot;%1&quot;? The games in it are not touched.</source>
-      <translation type="unfinished">Delete the category &quot;%1&quot;? The games in it are not touched.</translation>
+      <translation>Видалити категорію «%1»? Ігри в ній не будуть зачеплені.</translation>
     </message>
   </context>
   <context>
@@ -2266,7 +2265,7 @@ Replace the current list entirely, or append these entries to it (entries whose 
     <name>IpcClient</name>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>Немає запущеної гри</translation>
     </message>
   </context>
   <context>
@@ -3033,78 +3032,78 @@ Select an emulator version from the right panel.</source>
     </message>
     <message numerus="yes">
       <source>%n game(s)</source>
-      <translation type="unfinished">
-        <numerusform>%n game(s)</numerusform>
-        <numerusform>%n game(s)</numerusform>
-        <numerusform>%n game(s)</numerusform>
-        <numerusform>%n game(s)</numerusform>
+      <translation>
+        <numerusform>%n гра</numerusform>
+        <numerusform>%n гри</numerusform>
+        <numerusform>%n ігор</numerusform>
+        <numerusform>%n гри</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <source>%1 of %n game(s)</source>
-      <translation type="unfinished">
-        <numerusform>%1 of %n game(s)</numerusform>
-        <numerusform>%1 of %n game(s)</numerusform>
-        <numerusform>%1 of %n game(s)</numerusform>
-        <numerusform>%1 of %n game(s)</numerusform>
+      <translation>
+        <numerusform>%1 з %n гри</numerusform>
+        <numerusform>%1 з %n ігор</numerusform>
+        <numerusform>%1 з %n ігор</numerusform>
+        <numerusform>%1 з %n ігор</numerusform>
       </translation>
     </message>
     <message>
       <source>Reset All Custom Titles</source>
-      <translation type="unfinished">Reset All Custom Titles</translation>
+      <translation>Скинути всі користувацькі назви</translation>
     </message>
     <message>
       <source>Restores the original name of every game you renamed in the game list</source>
-      <translation type="unfinished">Restores the original name of every game you renamed in the game list</translation>
+      <translation>Відновлює оригінальну назву кожної гри, яку ви перейменували у списку ігор</translation>
     </message>
     <message>
       <source>No game has been renamed.</source>
-      <translation type="unfinished">No game has been renamed.</translation>
+      <translation>Жодної гри не було перейменовано.</translation>
     </message>
     <message numerus="yes">
       <source>Restore the original name of %n renamed game(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore the original name of %n renamed game(s)?</numerusform>
-        <numerusform>Restore the original name of %n renamed game(s)?</numerusform>
-        <numerusform>Restore the original name of %n renamed game(s)?</numerusform>
-        <numerusform>Restore the original name of %n renamed game(s)?</numerusform>
+      <translation>
+        <numerusform>Відновити оригінальну назву %n перейменованої гри?</numerusform>
+        <numerusform>Відновити оригінальну назву %n перейменованих ігор?</numerusform>
+        <numerusform>Відновити оригінальну назву %n перейменованих ігор?</numerusform>
+        <numerusform>Відновити оригінальну назву %n перейменованих ігор?</numerusform>
       </translation>
     </message>
     <message>
       <source>PSF CONTENT_ID has an unexpected format: %1</source>
-      <translation type="unfinished">PSF CONTENT_ID has an unexpected format: %1</translation>
+      <translation>PSF CONTENT_ID має неочікуваний формат: %1</translation>
     </message>
     <message>
       <source>PKG is a patch, please install the game first!</source>
-      <translation type="unfinished">PKG is a patch, please install the game first!</translation>
+      <translation>PKG — це виправлення. Спочатку встановіть гру!</translation>
     </message>
     <message>
       <source>Setup Wizard</source>
-      <translation type="unfinished">Setup Wizard</translation>
+      <translation>Майстер налаштування</translation>
     </message>
     <message>
       <source>Manage Skylanders</source>
-      <translation type="unfinished">Manage Skylanders</translation>
+      <translation>Керувати Skylanders</translation>
     </message>
     <message>
       <source>Load and manage figures on the emulated Skylanders Portal of Power</source>
-      <translation type="unfinished">Load and manage figures on the emulated Skylanders Portal of Power</translation>
+      <translation>Завантажуйте та керуйте фігурками на емульованому порталі Skylanders Portal of Power</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation type="unfinished">Manage Infinity Figures</translation>
+      <translation>Керувати фігурами Infinity</translation>
     </message>
     <message>
       <source>Load and manage figures on the emulated Disney Infinity Base</source>
-      <translation type="unfinished">Load and manage figures on the emulated Disney Infinity Base</translation>
+      <translation>Завантажуйте та керуйте фігурками на емульованому порталі Disney Infinity Base</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation type="unfinished">Manage Dimensions Toypad</translation>
+      <translation>Керувати Dimensions Toypad</translation>
     </message>
     <message>
       <source>Load and manage minifigures on the emulated Lego Dimensions Toypad</source>
-      <translation type="unfinished">Load and manage minifigures on the emulated Lego Dimensions Toypad</translation>
+      <translation>Завантажуйте та керуйте мініфігурками на емульованому порталі Toypad для Lego Dimensions</translation>
     </message>
   </context>
   <context>
@@ -3414,41 +3413,41 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Extracting: %1</source>
-      <translation type="unfinished">Extracting: %1</translation>
+      <translation>Видобування: %1</translation>
     </message>
     <message>
       <source>Original name: %1</source>
-      <translation type="unfinished">Original name: %1</translation>
+      <translation>Оригінальна назва: %1</translation>
     </message>
     <message>
       <source>Notes:</source>
-      <translation type="unfinished">Notes:</translation>
+      <translation>Примітки:</translation>
     </message>
     <message>
       <source>Scanning...</source>
-      <translation type="unfinished">Scanning...</translation>
+      <translation>Сканування...</translation>
     </message>
     <message>
       <source>Some files could not be deleted:
 %1</source>
-      <translation type="unfinished">Some files could not be deleted:
+      <translation>Не вдалося видалити деякі файли:
 %1</translation>
     </message>
     <message>
       <source>Done.</source>
-      <translation type="unfinished">Done.</translation>
+      <translation>Готово.</translation>
     </message>
     <message>
       <source>Scanning: %1 items...</source>
-      <translation type="unfinished">Scanning: %1 items...</translation>
+      <translation>Сканування: %1 елементів...</translation>
     </message>
     <message>
       <source>Deleting...</source>
-      <translation type="unfinished">Deleting...</translation>
+      <translation>Видалення...</translation>
     </message>
     <message>
       <source>Deleting: %1</source>
-      <translation type="unfinished">Deleting: %1</translation>
+      <translation>Видалення: %1</translation>
     </message>
   </context>
   <context>
@@ -4286,27 +4285,27 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <translation>Захист червоної зони</translation>
     </message>
     <message>
       <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <translation>Статичне виправлення</translation>
     </message>
     <message>
       <source>Console Language</source>
-      <translation type="unfinished">Console Language</translation>
+      <translation>Мова консолі</translation>
     </message>
     <message>
       <source>Big Picture Scale</source>
-      <translation type="unfinished">Big Picture Scale</translation>
+      <translation>Масштаб загальної картини</translation>
     </message>
     <message>
       <source>Log Flush Level</source>
-      <translation type="unfinished">Log Flush Level</translation>
+      <translation>Рівень запису журналів</translation>
     </message>
     <message>
       <source>Additional FMem Allocation</source>
-      <translation type="unfinished">Additional FMem Allocation</translation>
+      <translation>Додаткове виділення пам’яті FMem</translation>
     </message>
   </context>
   <context>
@@ -4574,95 +4573,95 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Check for Updates at Startup:\nAutomatically check for a new launcher version each time it starts.</source>
-      <translation type="unfinished">Check for Updates at Startup:\nAutomatically check for a new launcher version each time it starts.</translation>
+      <translation>Перевіряти наявність оновлень під час запуску:\nАвтоматично перевіряти наявність нової версії лаунчера під час кожного запуску.</translation>
     </message>
     <message>
       <source>Always Show Changelog:\nDisplay the changelog dialog after installing an update, even for minor releases.</source>
-      <translation type="unfinished">Always Show Changelog:\nDisplay the changelog dialog after installing an update, even for minor releases.</translation>
+      <translation>Завжди показувати список змін:\nПоказувати діалогове вікно зі списком змін після встановлення оновлення, навіть для незначних випусків.</translation>
     </message>
     <message>
       <source>Check for Updates:\nManually check right now for a newer launcher version.</source>
-      <translation type="unfinished">Check for Updates:\nManually check right now for a newer launcher version.</translation>
+      <translation>Перевірити наявність оновлень:\nПеревірити вручну прямо зараз, чи є новіша версія лаунчера.</translation>
     </message>
     <message>
       <source>Show Simple FPS Counter:\nDisplays a basic frames-per-second counter overlay while a game is running.</source>
-      <translation type="unfinished">Show Simple FPS Counter:\nDisplays a basic frames-per-second counter overlay while a game is running.</translation>
+      <translation>Показувати простий лічильник к/с:\nПоказує базовий лічильник кадрів за секунду поверх вікна гри під час її роботи.</translation>
     </message>
     <message>
       <source>Use Separate Update Folder:\nInstall PKG game updates to their own folder instead of merging them into the base game&apos;s install folder.</source>
-      <translation type="unfinished">Use Separate Update Folder:\nInstall PKG game updates to their own folder instead of merging them into the base game&apos;s install folder.</translation>
+      <translation>Використовувати окрему теку для оновлень:\nВстановлює оновлення ігор у форматі PKG у власну теку замість того, щоб об’єднувати їх із текою встановлення основної гри.</translation>
     </message>
     <message>
       <source>Log:\nSettings that control what gets logged and how log files are written.</source>
-      <translation type="unfinished">Log:\nSettings that control what gets logged and how log files are written.</translation>
+      <translation>Журнал:\nНалаштування, які керують тим, що саме реєструється та як записуються файли журналів.</translation>
     </message>
     <message>
       <source>Load Presets...:\nChoose from a list of common log filter presets instead of typing one by hand.</source>
-      <translation type="unfinished">Load Presets...:\nChoose from a list of common log filter presets instead of typing one by hand.</translation>
+      <translation>Завантажити передустановки...:\nВиберіть зі списку поширених передустановок фільтрації журналів замість того, щоби вводити їх вручну.</translation>
     </message>
     <message>
       <source>Music Volume:\nAdjust the volume of the background/title music played in the GUI.</source>
-      <translation type="unfinished">Music Volume:\nAdjust the volume of the background/title music played in the GUI.</translation>
+      <translation>Гучність музики:\nНалаштуйте гучність фонової музики або музики головного меню в інтерфейсі користувача.</translation>
     </message>
     <message>
       <source>Theme:\nChoose the stylesheet used for the launcher&apos;s interface. Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</source>
-      <translation type="unfinished">Theme:\nChoose the stylesheet used for the launcher&apos;s interface. Drop .qss stylesheet files into the &quot;themes&quot; folder inside your user data directory to add custom themes.</translation>
+      <translation>Тема:\nВиберіть таблицю стилів для інтерфейсу лаунчера. Щоби додати власні теми, перетягніть файли таблиць стилів .qss у теку «themes» у вашому каталозі даних користувача.</translation>
     </message>
     <message>
       <source>Show Background Image:\nDisplay a background image behind the game list. Use the Opacity slider below to control how visible it is.</source>
-      <translation type="unfinished">Show Background Image:\nDisplay a background image behind the game list. Use the Opacity slider below to control how visible it is.</translation>
+      <translation>Показувати фонове зображення:\nПоказує фонове зображення за списком ігор. Використовуйте повзунок «Непрозорість» нижче, щоб налаштувати рівень його видимості.</translation>
     </message>
     <message>
       <source>Audio Backend:\nSelects the backend library used for audio output. SDL is recommended for most users.</source>
-      <translation type="unfinished">Audio Backend:\nSelects the backend library used for audio output. SDL is recommended for most users.</translation>
+      <translation>Метод виводу звуку:\nВиберіть метод для виводу звуку. Більшість людей вибирає SDL.</translation>
     </message>
     <message>
       <source>Audio Device (general):\nSelects which system audio output device the emulator uses for general game audio.</source>
-      <translation type="unfinished">Audio Device (general):\nSelects which system audio output device the emulator uses for general game audio.</translation>
+      <translation>Аудіопристрій (загальний):\nВибирає, який системний пристрій виведення звуку емулятор використовує для загального ігрового аудіо.</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker):\nSelects which system audio output device is used for sound played through a connected DualShock 4/DualSense controller&apos;s built-in speaker.</source>
-      <translation type="unfinished">Audio Device (DS4 speaker):\nSelects which system audio output device is used for sound played through a connected DualShock 4/DualSense controller&apos;s built-in speaker.</translation>
+      <translation>Аудіопристрій (динамік DS4):\nВибирає системний пристрій виведення аудіо, який використовуватиметься для відтворення звуку через вбудований динамік під’єднаного контролера DualShock 4/DualSense.</translation>
     </message>
     <message>
       <source>Compatibility:\nSettings for displaying and updating the game compatibility database.</source>
-      <translation type="unfinished">Compatibility:\nSettings for displaying and updating the game compatibility database.</translation>
+      <translation>Сумісність:\nНалаштування для показу та оновлення бази даних сумісності ігор.</translation>
     </message>
     <message>
       <source>Display Options:\nSettings that control how and where the emulator&apos;s video output is presented.</source>
-      <translation type="unfinished">Display Options:\nSettings that control how and where the emulator&apos;s video output is presented.</translation>
+      <translation>Параметри показу:\nНалаштування, що керують тим, як і де показується відеовихід емулятора.</translation>
     </message>
     <message>
       <source>Display Mode:\nChoose whether the game runs in a window, fullscreen, or borderless fullscreen.</source>
-      <translation type="unfinished">Display Mode:\nChoose whether the game runs in a window, fullscreen, or borderless fullscreen.</translation>
+      <translation>Режим дисплея:\nВиберіть, як запускати гру: у вікні, на весь екран або у вікні без рамок.</translation>
     </message>
     <message>
       <source>FSR Settings:\nAMD FidelityFX Super Resolution upscaling and sharpening options.</source>
-      <translation type="unfinished">FSR Settings:\nAMD FidelityFX Super Resolution upscaling and sharpening options.</translation>
+      <translation>Налаштування FSR:\nПараметри масштабування та різкості AMD FidelityFX Super Resolution.</translation>
     </message>
     <message>
       <source>Enable FSR:\nUses AMD FidelityFX Super Resolution to upscale the rendered image, which can improve performance at lower internal resolutions.</source>
-      <translation type="unfinished">Enable FSR:\nUses AMD FidelityFX Super Resolution to upscale the rendered image, which can improve performance at lower internal resolutions.</translation>
+      <translation>Увімкнути FSR:\nВикористовує AMD FidelityFX Super Resolution для масштабування відрендереного зображення, що може підвищити продуктивність при нижчій внутрішній роздільності.</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening):\nApplies FSR&apos;s Robust Contrast Adaptive Sharpening pass to the image. Requires FSR to be enabled.</source>
-      <translation type="unfinished">Enable RCAS (sharpening):\nApplies FSR&apos;s Robust Contrast Adaptive Sharpening pass to the image. Requires FSR to be enabled.</translation>
+      <translation>Увімкнути RCAS (різкість):\nЗастосовує прохід Robust Contrast Adaptive Sharpening від FSR до зображення. Потребує увімкненого FSR.</translation>
     </message>
     <message>
       <source>RCAS Attenuation:\nControls the strength of the RCAS sharpening effect. Lower values sharpen the image more.</source>
-      <translation type="unfinished">RCAS Attenuation:\nControls the strength of the RCAS sharpening effect. Lower values sharpen the image more.</translation>
+      <translation>Зменшення RCAS:\nКерує інтенсивністю ефекту різкості RCAS. Нижчі значення сильніше підвищують різкість зображення.</translation>
     </message>
     <message>
       <source>Cursor:\nSettings that control when and how the mouse cursor is hidden.</source>
-      <translation type="unfinished">Cursor:\nSettings that control when and how the mouse cursor is hidden.</translation>
+      <translation>Вказівник:\nНалаштування, що керують тим, коли та як приховується вказівник миші.</translation>
     </message>
     <message>
       <source>Controller:\nSettings related to gamepad and mouse input behavior.</source>
-      <translation type="unfinished">Controller:\nSettings related to gamepad and mouse input behavior.</translation>
+      <translation>Контролер:\nНалаштування поведінки введення з ґеймпада та миші.</translation>
     </message>
     <message>
       <source>Use Mice as Mice:\nLets the mouse behave as a regular mouse instead of being treated as an emulated controller input.</source>
-      <translation type="unfinished">Use Mice as Mice:\nLets the mouse behave as a regular mouse instead of being treated as an emulated controller input.</translation>
+      <translation>Використовувати миші як миші:\nДозволяє миші працювати як звичайна миша, а не як емульований контролер.</translation>
     </message>
     <message>
       <source>Use Circle Button to Confirm:\nSwaps the Circle and Cross buttons&apos; roles so Circle acts as the confirm/enter button, matching Japanese console conventions.</source>
