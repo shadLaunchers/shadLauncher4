@@ -2210,7 +2210,7 @@ Replace the current list entirely, or append these entries to it (entries whose 
 <context>
     <name>IpcClient</name>
     <message>
-        <source>Could not find the emulator executable</source>
+        <source>No game is running</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2996,6 +2996,34 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>PKG is a patch, please install the game first!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Setup Wizard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Manage Skylanders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load and manage figures on the emulated Skylanders Portal of Power</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Manage Infinity Figures</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load and manage figures on the emulated Disney Infinity Base</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Manage Dimensions Toypad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load and manage minifigures on the emulated Lego Dimensions Toypad</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4178,6 +4206,22 @@ This will remove all game-specific overrides.</source>
         <source>Static Patching</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Console Language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Big Picture Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log Flush Level</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Additional FMem Allocation</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsDialogHelperTexts</name>
@@ -4587,6 +4631,211 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
         <source>Enable UPnP:\nAutomatically configure port forwarding on your router via UPnP for ShadNet&apos;s networked features.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Console Language:\nSets the language that PS4 games run in - localized titles, icons and changelogs follow it.\nThis is separate from the launcher&apos;s own interface language.\nIt is best set to a language the game actually supports, which varies by region.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log Flush Level:\nSets the log level for which logs at or above will be flushed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Big Picture Scale:\nScales the Big Picture interface, in percent of its normal size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Additional FMem Allocation:\nForces allocation of the specified amount of additional FMem. Crashes or causes issues in some games.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SetupWizard</name>
+    <message>
+        <source>shadLauncher4 Setup</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SetupWizardConclusionPage</name>
+    <message>
+        <source>All set</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Review your choices and finish.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>shadLauncher4 is ready to use. Everything below can be changed later in Settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>(none)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>(none selected)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Games:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DLC:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Emulator versions:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selected version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SetupWizardFoldersPage</name>
+    <message>
+        <source>Directory with your dumped games</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Directory with your dumped DLCs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Directory to install emulator versions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The chosen location for dumped games is not valid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The chosen location for dumped DLCs is not valid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The DLC dump location could not be created.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The location for installing emulator versions is not valid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The emulator version location could not be created.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Folders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tell shadLauncher4 where to find your games and where to put everything else.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Games:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DLC:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Emulator versions:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Browse...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The games folder must already exist. The DLC and emulator version folders are created if they are missing. More library folders can be added later under Settings - Paths.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SetupWizardIntroPage</name>
+    <message>
+        <source>Default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> (missing)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Welcome to shadLauncher4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This short setup gets your library and emulator ready.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>shadLauncher4 manages your PS4 game library and launches it with shadPS4.
+
+The next steps ask where your games live and which emulator version to use. You can change any of this later in Settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Language:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Theme:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SetupWizardVersionPage</name>
+    <message>
+        <source>Release</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pre-release</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Local</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Emulator version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>shadLauncher4 runs your games with shadPS4. Pick the version to use.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select an installed version below, or open the Version Manager to download one.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No emulator versions are installed yet. Open the Version Manager to download one - you can also do this later from the main window.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Version Manager...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5301,6 +5550,408 @@ The version may not run correctly when launched.</source>
     </message>
     <message>
         <source>Extraction finished.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>dimensions_dialog</name>
+    <message>
+        <source>Dimensions Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active Dimensions Figures:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Move</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown Figure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Dimensions File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dimensions Figure (*.bin);;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to open the figure file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to read the figure file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to read the figure file(%1)!
+File was too small.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>figure_creator_dialog</name>
+    <message>
+        <source>Figure Creator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter by Series:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>--Unknown--</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Figure Number:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Series:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error converting value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Figure number entered is invalid!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Series number entered is invalid!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create Figure File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Infinity Figure (*.bin);;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create figure file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create figure file:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>infinity_dialog</name>
+    <message>
+        <source>Infinity Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active Infinity Figures:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Play Set/Power Disc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Power Disc Two</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Power Disc Three</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player One</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player One Ability One</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player One Ability Two</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player Two</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player Two Ability One</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player Two Ability Two</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown Figure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Infinity File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Infinity Figure (*.bin);;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to open the figure file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to read the figure file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to read the figure file(%1)!
+File was too small.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>minifig_creator_dialog</name>
+    <message>
+        <source>Figure Creator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>--Unknown--</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Figure Number:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error converting value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Figure number entered is invalid!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create Figure File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dimensions Figure (*.bin);;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create minifig file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create minifig file:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>minifig_move_dialog</name>
+    <message>
+        <source>Figure Mover</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Move Here</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pick up and Place</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>skylander_creator_dialog</name>
+    <message>
+        <source>Skylander Creator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>--Unknown--</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ID:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Variant:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error converting value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ID entered is invalid!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Variant entered is invalid!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create Skylander File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skylander Object (*.sky);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create skylander file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create skylander file:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>skylander_dialog</name>
+    <message>
+        <source>Skylanders Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active Portal Skylanders:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skylander %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Skylander File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to open the skylander file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to open the skylander file(%1)!
+File may already be in use on the portal.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to read the skylander file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to read the skylander file(%1)!
+File was too small.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown (Id:%1 Var:%2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
