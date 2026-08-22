@@ -4282,11 +4282,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Big Picture Scale</source>
-      <translation>Escala do Big Picture</translation>
+      <translation>Resolução do Big Picture</translation>
     </message>
     <message>
       <source>Log Flush Level</source>
-      <translation type="unfinished">Log Flush Level</translation>
+      <translation>Nível de Descarga do Log</translation>
     </message>
     <message>
       <source>Additional FMem Allocation</source>
@@ -4710,15 +4710,15 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Log Flush Level:\nSets the log level for which logs at or above will be flushed.</source>
-      <translation type="unfinished">Log Flush Level:\nSets the log level for which logs at or above will be flushed.</translation>
+      <translation>Nível de Descarga do Log:\nDefine o nível a partir do qual os logs serão descarregados.</translation>
     </message>
     <message>
       <source>Big Picture Scale:\nScales the Big Picture interface, in percent of its normal size.</source>
-      <translation type="unfinished">Big Picture Scale:\nScales the Big Picture interface, in percent of its normal size.</translation>
+      <translation>Resolução do Big Picture:\nDefine a resolução da interface do Big Picture em percentual do seu tamanho normal.</translation>
     </message>
     <message>
       <source>Additional FMem Allocation:\nForces allocation of the specified amount of additional FMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional FMem Allocation:\nForces allocation of the specified amount of additional FMem. Crashes or causes issues in some games.</translation>
+      <translation>Alocação Adicional de FMem:\nForça a alocação da quantidade especificada adicional de FMem. Causa travamentos ou problemas em alguns jogos.</translation>
     </message>
   </context>
   <context>
@@ -4732,15 +4732,15 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     <name>SetupWizardConclusionPage</name>
     <message>
       <source>All set</source>
-      <translation type="unfinished">All set</translation>
+      <translation>Todos definidos</translation>
     </message>
     <message>
       <source>Review your choices and finish.</source>
-      <translation type="unfinished">Review your choices and finish.</translation>
+      <translation>Revise suas escolhas e finalize.</translation>
     </message>
     <message>
       <source>shadLauncher4 is ready to use. Everything below can be changed later in Settings.</source>
-      <translation type="unfinished">shadLauncher4 is ready to use. Everything below can be changed later in Settings.</translation>
+      <translation>shadLauncher4 está pronto para uso. Tudo o que está abaixo pode ser alterado posteriormente em Configurações.</translation>
     </message>
     <message>
       <source>(none)</source>
@@ -4771,11 +4771,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     <name>SetupWizardFoldersPage</name>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Diretório com seus jogos extraídos</translation>
     </message>
     <message>
       <source>Directory with your dumped DLCs</source>
-      <translation type="unfinished">Directory with your dumped DLCs</translation>
+      <translation>Diretório com suas DLCs extraídas</translation>
     </message>
     <message>
       <source>Directory to install emulator versions</source>
@@ -4787,23 +4787,23 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>The chosen location for dumped games is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped games is not valid.</translation>
+      <translation>O local escolhido para os jogos extraídos não é válido.</translation>
     </message>
     <message>
       <source>The chosen location for dumped DLCs is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped DLCs is not valid.</translation>
+      <translation>O local escolhido para os DLCs extraídos não é válido.</translation>
     </message>
     <message>
       <source>The DLC dump location could not be created.</source>
-      <translation type="unfinished">The DLC dump location could not be created.</translation>
+      <translation>Não foi possível criar o local de extração da DLC.</translation>
     </message>
     <message>
       <source>The location for installing emulator versions is not valid.</source>
-      <translation type="unfinished">The location for installing emulator versions is not valid.</translation>
+      <translation>O local para a instalação de versões do emulador é inválido.</translation>
     </message>
     <message>
       <source>The emulator version location could not be created.</source>
-      <translation type="unfinished">The emulator version location could not be created.</translation>
+      <translation>Não foi possível criar o local da versão do emulador.</translation>
     </message>
     <message>
       <source>Folders</source>
@@ -4811,7 +4811,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Tell shadLauncher4 where to find your games and where to put everything else.</source>
-      <translation type="unfinished">Tell shadLauncher4 where to find your games and where to put everything else.</translation>
+      <translation>Informe ao shadLauncher4 onde encontrar seus jogos e onde colocar todo o resto.</translation>
     </message>
     <message>
       <source>Games:</source>
@@ -4823,22 +4823,22 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Emulator versions:</source>
-      <translation type="unfinished">Emulator versions:</translation>
+      <translation>Versões do emulador:</translation>
     </message>
     <message>
       <source>Browse...</source>
-      <translation type="unfinished">Browse...</translation>
+      <translation>Procurar...</translation>
     </message>
     <message>
       <source>The games folder must already exist. The DLC and emulator version folders are created if they are missing. More library folders can be added later under Settings - Paths.</source>
-      <translation type="unfinished">The games folder must already exist. The DLC and emulator version folders are created if they are missing. More library folders can be added later under Settings - Paths.</translation>
+      <translation>A pasta de jogos já deve existir. As pastas de DLC e de versões do emulador são criadas caso não existam. Mais pastas da biblioteca podem ser adicionadas posteriormente em Configurações > Caminhos.</translation>
     </message>
   </context>
   <context>
     <name>SetupWizardIntroPage</name>
     <message>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>Padrão</translation>
     </message>
     <message>
       <source>None</source>
@@ -4850,23 +4850,23 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Welcome to shadLauncher4</source>
-      <translation type="unfinished">Welcome to shadLauncher4</translation>
+      <translation>Bem-vindo ao shadLauncher4</translation>
     </message>
     <message>
       <source>This short setup gets your library and emulator ready.</source>
-      <translation type="unfinished">This short setup gets your library and emulator ready.</translation>
+      <translation>Esta configuração rápida deixa sua biblioteca e o emulador prontos.</translation>
     </message>
     <message>
       <source>shadLauncher4 manages your PS4 game library and launches it with shadPS4.
 
 The next steps ask where your games live and which emulator version to use. You can change any of this later in Settings.</source>
-      <translation type="unfinished">shadLauncher4 manages your PS4 game library and launches it with shadPS4.
+      <translation>O shadLauncher4 gerencia sua biblioteca de jogos de PS4 e os inicia com o shadPS4.
 
-The next steps ask where your games live and which emulator version to use. You can change any of this later in Settings.</translation>
+As próximas etapas solicitam a localização dos seus jogos e qual versão do emulador utilizar. Você pode alterar posteriormente qualquer uma nas Configurações.</translation>
     </message>
     <message>
       <source>Language:</source>
-      <translation type="unfinished">Language:</translation>
+      <translation>Idioma:</translation>
     </message>
     <message>
       <source>Theme:</source>
@@ -4897,19 +4897,19 @@ The next steps ask where your games live and which emulator version to use. You 
     </message>
     <message>
       <source>shadLauncher4 runs your games with shadPS4. Pick the version to use.</source>
-      <translation type="unfinished">shadLauncher4 runs your games with shadPS4. Pick the version to use.</translation>
+      <translation>O shadLauncher4 executa seus jogos com o shadPS4. Escolha a versão a ser utilizada.</translation>
     </message>
     <message>
       <source>Select an installed version below, or open the Version Manager to download one.</source>
-      <translation type="unfinished">Select an installed version below, or open the Version Manager to download one.</translation>
+      <translation>Selecione uma versão instalada abaixo ou abra o Gerenciador de Versões para baixar uma.</translation>
     </message>
     <message>
       <source>No emulator versions are installed yet. Open the Version Manager to download one - you can also do this later from the main window.</source>
-      <translation type="unfinished">No emulator versions are installed yet. Open the Version Manager to download one - you can also do this later from the main window.</translation>
+      <translation>Ainda não há versões de emulador instaladas. Abra o Gerenciador de Versões para baixar uma - você também pode fazer isso mais tarde, a partir da janela principal.</translation>
     </message>
     <message>
       <source>Open Version Manager...</source>
-      <translation type="unfinished">Open Version Manager...</translation>
+      <translation>Abrir Gerenciador de Versões...</translation>
     </message>
   </context>
   <context>
@@ -5645,11 +5645,11 @@ A versão pode não funcionar corretamente ao ser iniciada.</translation>
     <name>dimensions_dialog</name>
     <message>
       <source>Dimensions Manager</source>
-      <translation type="unfinished">Dimensions Manager</translation>
+      <translation>Gerenciador de Dimensions</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation type="unfinished">Active Dimensions Figures:</translation>
+      <translation>Colecionáveis Dimensions Ativos:</translation>
     </message>
     <message>
       <source>None</source>
@@ -5673,99 +5673,99 @@ A versão pode não funcionar corretamente ao ser iniciada.</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Colecionável Desconhecido</translation>
     </message>
     <message>
       <source>Select Dimensions File</source>
-      <translation type="unfinished">Select Dimensions File</translation>
+      <translation>Selecionar Arquivo de Dimensions</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Colecionável Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Falha ao abrir o arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Falha ao abrir o arquivo de colecionável(%1)! 
+O arquivo pode estar em uso na base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Falha ao ler o arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Falha ao ler o arquivo de colecionável(%1)! 
+O arquivo é muito pequeno.</translation>
     </message>
   </context>
   <context>
     <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Criador de Colecionável</translation>
     </message>
     <message>
       <source>Filter by Series:</source>
-      <translation type="unfinished">Filter by Series:</translation>
+      <translation>Filtrar por Série:</translation>
     </message>
     <message>
       <source>All</source>
-      <translation type="unfinished">All</translation>
+      <translation>Todos</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Desconhecido--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Número do Colecionável:</translation>
     </message>
     <message>
       <source>Series:</source>
-      <translation type="unfinished">Series:</translation>
+      <translation>Série:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Erro ao converter valor</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>O número do colecionável inserido é inválido!</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
-      <translation type="unfinished">Series number entered is invalid!</translation>
+      <translation>O número de série inserido é inválido!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Criar Arquivo de Colecionável</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Colecionável Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation type="unfinished">Failed to create figure file!</translation>
+      <translation>Falha ao criar arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to create figure file:
 %1</source>
-      <translation type="unfinished">Failed to create figure file:
+      <translation>Falha ao criar arquivo de colecionável:
 %1</translation>
     </message>
   </context>
@@ -5773,23 +5773,23 @@ File was too small.</translation>
     <name>infinity_dialog</name>
     <message>
       <source>Infinity Manager</source>
-      <translation type="unfinished">Infinity Manager</translation>
+      <translation>Gerenciador de Infinity</translation>
     </message>
     <message>
       <source>Active Infinity Figures:</source>
-      <translation type="unfinished">Active Infinity Figures:</translation>
+      <translation>Colecionáveis Infinity Ativos:</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation type="unfinished">Play Set/Power Disc</translation>
+      <translation>Conjunto/Power Disc</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation type="unfinished">Power Disc Two</translation>
+      <translation>Power Disc Dois</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation type="unfinished">Power Disc Three</translation>
+      <translation>Power Disc Três</translation>
     </message>
     <message>
       <source>Player One</source>
@@ -5833,50 +5833,50 @@ File was too small.</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Colecionável Desconhecido</translation>
     </message>
     <message>
       <source>Select Infinity File</source>
-      <translation type="unfinished">Select Infinity File</translation>
+      <translation>Selecionar Arquivo Infinity</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Colecionável Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Falha ao abrir o arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Falha ao abrir o arquivo de colecionável(%1)! 
+O arquivo pode estar em uso na base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Falha ao ler o arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Falha ao ler o arquivo de colecionável(%1)! 
+O arquivo é muito pequeno.</translation>
     </message>
   </context>
   <context>
     <name>minifig_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Criador de Colecionável</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Desconhecido--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Número do Colecionável:</translation>
     </message>
     <message>
       <source>Create</source>
@@ -5892,24 +5892,24 @@ File was too small.</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>Número do colecionável inserido é inválido!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Criar Arquivo de Colecionável</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Colecionável Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation type="unfinished">Failed to create minifig file!</translation>
+      <translation>Falha ao criar arquivo de minifigura!</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
 %1</source>
-      <translation type="unfinished">Failed to create minifig file:
+      <translation>Falha ao criar arquivo de minifigura: 
 %1</translation>
     </message>
   </context>
@@ -5917,7 +5917,7 @@ File was too small.</translation>
     <name>minifig_move_dialog</name>
     <message>
       <source>Figure Mover</source>
-      <translation type="unfinished">Figure Mover</translation>
+      <translation>Transportador do Colecionável</translation>
     </message>
     <message>
       <source>None</source>
@@ -5925,18 +5925,18 @@ File was too small.</translation>
     </message>
     <message>
       <source>Move Here</source>
-      <translation type="unfinished">Move Here</translation>
+      <translation>Mover Para Cá</translation>
     </message>
     <message>
       <source>Pick up and Place</source>
-      <translation type="unfinished">Pick up and Place</translation>
+      <translation>Pegar e Posicionar</translation>
     </message>
   </context>
   <context>
     <name>skylander_creator_dialog</name>
     <message>
       <source>Skylander Creator</source>
-      <translation type="unfinished">Skylander Creator</translation>
+      <translation>Criador de Skylanders</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -5960,32 +5960,32 @@ File was too small.</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Erro ao converter valor</translation>
     </message>
     <message>
       <source>ID entered is invalid!</source>
-      <translation type="unfinished">ID entered is invalid!</translation>
+      <translation>O ID inserido é inválido!</translation>
     </message>
     <message>
       <source>Variant entered is invalid!</source>
-      <translation type="unfinished">Variant entered is invalid!</translation>
+      <translation>A variante inserida é inválida!</translation>
     </message>
     <message>
       <source>Create Skylander File</source>
-      <translation type="unfinished">Create Skylander File</translation>
+      <translation>Criar Arquivo de Skylander</translation>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+      <translation>Objeto Skylander (*.sky);;Todos os Arquivos (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
-      <translation type="unfinished">Failed to create skylander file!</translation>
+      <translation>Falha ao criar arquivo de skylander!</translation>
     </message>
     <message>
       <source>Failed to create skylander file:
 %1</source>
-      <translation type="unfinished">Failed to create skylander file:
+      <translation>Falha ao criar arquivo skylander:
 %1</translation>
     </message>
   </context>
@@ -5993,11 +5993,11 @@ File was too small.</translation>
     <name>skylander_dialog</name>
     <message>
       <source>Skylanders Manager</source>
-      <translation type="unfinished">Skylanders Manager</translation>
+      <translation>Gerenciador de Skylanders</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation type="unfinished">Active Portal Skylanders:</translation>
+      <translation>Portal Skylanders Ativo:</translation>
     </message>
     <message>
       <source>Skylander %1</source>
@@ -6021,27 +6021,27 @@ File was too small.</translation>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
-      <translation type="unfinished">Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</translation>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;Todos os Arquivos (*)</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
-      <translation type="unfinished">Failed to open the skylander file!</translation>
+      <translation>Falha ao abrir o arquivo de skylander!</translation>
     </message>
     <message>
       <source>Failed to open the skylander file(%1)!
 File may already be in use on the portal.</source>
-      <translation type="unfinished">Failed to open the skylander file(%1)!
-File may already be in use on the portal.</translation>
+      <translation>Falha ao abrir o arquivo skylander (%1)!
+O arquivo pode estar em uso no portal.</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
-      <translation type="unfinished">Failed to read the skylander file!</translation>
+      <translation>Falha ao ler o arquivo skylander!</translation>
     </message>
     <message>
       <source>Failed to read the skylander file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the skylander file(%1)!
-File was too small.</translation>
+      <translation>Falha ao ler o arquivo skylander (%1)! 
+O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
