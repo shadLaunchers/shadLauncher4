@@ -2264,7 +2264,7 @@ Substituir a lista atual completamente ou adicionar estas entradas a ela (entrad
     <name>IpcClient</name>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>Nenhum jogo em execução</translation>
     </message>
   </context>
   <context>
@@ -3064,31 +3064,31 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Setup Wizard</source>
-      <translation type="unfinished">Setup Wizard</translation>
+      <translation>Assistente de Configuração</translation>
     </message>
     <message>
       <source>Manage Skylanders</source>
-      <translation type="unfinished">Manage Skylanders</translation>
+      <translation>Gerenciar Skylanders</translation>
     </message>
     <message>
       <source>Load and manage figures on the emulated Skylanders Portal of Power</source>
-      <translation type="unfinished">Load and manage figures on the emulated Skylanders Portal of Power</translation>
+      <translation>Carregar e gerenciar figuras no Portal do Poder emulado do Skylanders</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation type="unfinished">Manage Infinity Figures</translation>
+      <translation>Gerenciar Colecionáveis Infinity</translation>
     </message>
     <message>
       <source>Load and manage figures on the emulated Disney Infinity Base</source>
-      <translation type="unfinished">Load and manage figures on the emulated Disney Infinity Base</translation>
+      <translation>Carregar e gerenciar figuras no Disney Infinity de base emulado</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation type="unfinished">Manage Dimensions Toypad</translation>
+      <translation>Gerenciar Toypad Dimensions</translation>
     </message>
     <message>
       <source>Load and manage minifigures on the emulated Lego Dimensions Toypad</source>
-      <translation type="unfinished">Load and manage minifigures on the emulated Lego Dimensions Toypad</translation>
+      <translation>Carregar e gerenciar minifiguras no Lego Dimensions Toypad emulado</translation>
     </message>
   </context>
   <context>
@@ -4278,11 +4278,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Console Language</source>
-      <translation type="unfinished">Console Language</translation>
+      <translation>Idioma do Console</translation>
     </message>
     <message>
       <source>Big Picture Scale</source>
-      <translation type="unfinished">Big Picture Scale</translation>
+      <translation>Escala do Big Picture</translation>
     </message>
     <message>
       <source>Log Flush Level</source>
@@ -4290,7 +4290,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Additional FMem Allocation</source>
-      <translation type="unfinished">Additional FMem Allocation</translation>
+      <translation>Alocação Adicional de FMem</translation>
     </message>
   </context>
   <context>
@@ -4706,7 +4706,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Console Language:\nSets the language that PS4 games run in - localized titles, icons and changelogs follow it.\nThis is separate from the launcher&apos;s own interface language.\nIt is best set to a language the game actually supports, which varies by region.</source>
-      <translation type="unfinished">Console Language:\nSets the language that PS4 games run in - localized titles, icons and changelogs follow it.\nThis is separate from the launcher&apos;s own interface language.\nIt is best set to a language the game actually supports, which varies by region.</translation>
+      <translation>Idioma do Console:\nEscolhe o idioma em que os jogos de PS4 rodarão - títulos, ícones e notas de versão localizadas seguem essa configuração.\nIsto é separado do idioma da interface do launcher.\nÉ aconselhado escolher um idioma que o jogo tem suporte, o que varia por região.</translation>
     </message>
     <message>
       <source>Log Flush Level:\nSets the log level for which logs at or above will be flushed.</source>
@@ -4752,11 +4752,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Games:</source>
-      <translation type="unfinished">Games:</translation>
+      <translation>Jogos:</translation>
     </message>
     <message>
       <source>DLC:</source>
-      <translation type="unfinished">DLC:</translation>
+      <translation>DLC:</translation>
     </message>
     <message>
       <source>Emulator versions:</source>
@@ -4764,7 +4764,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Selected version:</source>
-      <translation type="unfinished">Selected version:</translation>
+      <translation>Versão Selecionada:</translation>
     </message>
   </context>
   <context>
@@ -4779,11 +4779,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Diretório para instalar as versões do emulador</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>The chosen location for dumped games is not valid.</source>
