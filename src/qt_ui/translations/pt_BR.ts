@@ -4725,7 +4725,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     <name>SetupWizard</name>
     <message>
       <source>shadLauncher4 Setup</source>
-      <translation type="unfinished">shadLauncher4 Setup</translation>
+      <translation>Configuração do shadLauncher4</translation>
     </message>
   </context>
   <context>
@@ -4744,11 +4744,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>(none)</source>
-      <translation type="unfinished">(none)</translation>
+      <translation>(nenhum)</translation>
     </message>
     <message>
       <source>(none selected)</source>
-      <translation type="unfinished">(none selected)</translation>
+      <translation>(nenhum selecionado)</translation>
     </message>
     <message>
       <source>Games:</source>
@@ -4760,7 +4760,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Emulator versions:</source>
-      <translation type="unfinished">Emulator versions:</translation>
+      <translation>Versões do emulador:</translation>
     </message>
     <message>
       <source>Selected version:</source>
@@ -4807,7 +4807,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Folders</source>
-      <translation type="unfinished">Folders</translation>
+      <translation>Pastas</translation>
     </message>
     <message>
       <source>Tell shadLauncher4 where to find your games and where to put everything else.</source>
@@ -4815,11 +4815,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Games:</source>
-      <translation type="unfinished">Games:</translation>
+      <translation>Jogos:</translation>
     </message>
     <message>
       <source>DLC:</source>
-      <translation type="unfinished">DLC:</translation>
+      <translation>DLC:</translation>
     </message>
     <message>
       <source>Emulator versions:</source>
@@ -4842,11 +4842,11 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
     <message>
       <source> (missing)</source>
-      <translation type="unfinished"> (missing)</translation>
+      <translation> (ausente)</translation>
     </message>
     <message>
       <source>Welcome to shadLauncher4</source>
@@ -4870,30 +4870,30 @@ The next steps ask where your games live and which emulator version to use. You 
     </message>
     <message>
       <source>Theme:</source>
-      <translation type="unfinished">Theme:</translation>
+      <translation>Tema:</translation>
     </message>
   </context>
   <context>
     <name>SetupWizardVersionPage</name>
     <message>
       <source>Release</source>
-      <translation type="unfinished">Release</translation>
+      <translation>Release</translation>
     </message>
     <message>
       <source>Pre-release</source>
-      <translation type="unfinished">Pre-release</translation>
+      <translation>Pre-release</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Local</translation>
     </message>
     <message>
       <source>Unknown</source>
-      <translation type="unfinished">Unknown</translation>
+      <translation>Desconhecido</translation>
     </message>
     <message>
       <source>Emulator version</source>
-      <translation type="unfinished">Emulator version</translation>
+      <translation>Versão do emulador</translation>
     </message>
     <message>
       <source>shadLauncher4 runs your games with shadPS4. Pick the version to use.</source>
@@ -5653,23 +5653,23 @@ A versão pode não funcionar corretamente ao ser iniciada.</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Limpar</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carregar</translation>
     </message>
     <message>
       <source>Move</source>
-      <translation type="unfinished">Move</translation>
+      <translation>Mover</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
@@ -5793,43 +5793,43 @@ File was too small.</translation>
     </message>
     <message>
       <source>Player One</source>
-      <translation type="unfinished">Player One</translation>
+      <translation>Jogador Um</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation type="unfinished">Player One Ability One</translation>
+      <translation>Habilidade Um do Jogador Um</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation type="unfinished">Player One Ability Two</translation>
+      <translation>Habilidade Dois do Jogador Um</translation>
     </message>
     <message>
       <source>Player Two</source>
-      <translation type="unfinished">Player Two</translation>
+      <translation>Jogador Dois</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation type="unfinished">Player Two Ability One</translation>
+      <translation>Habilidade Um do Jogador Dois</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation type="unfinished">Player Two Ability Two</translation>
+      <translation>Habilidade Dois do Jogador Dois</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Limpar</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carregar</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
@@ -5880,15 +5880,15 @@ File was too small.</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Erro ao converter valor</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
@@ -5921,7 +5921,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
     <message>
       <source>Move Here</source>
@@ -5940,23 +5940,23 @@ File was too small.</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Desconhecido--</translation>
     </message>
     <message>
       <source>ID:</source>
-      <translation type="unfinished">ID:</translation>
+      <translation>ID:</translation>
     </message>
     <message>
       <source>Variant:</source>
-      <translation type="unfinished">Variant:</translation>
+      <translation>Variante:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Error converting value</source>
@@ -6001,23 +6001,23 @@ File was too small.</translation>
     </message>
     <message>
       <source>Skylander %1</source>
-      <translation type="unfinished">Skylander %1</translation>
+      <translation>Skylander %1</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Limpar</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carregar</translation>
     </message>
     <message>
       <source>Select Skylander File</source>
-      <translation type="unfinished">Select Skylander File</translation>
+      <translation>Selecionar Arquivo de Skylander</translation>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
@@ -6045,11 +6045,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
-      <translation type="unfinished">Unknown (Id:%1 Var:%2)</translation>
+      <translation>Desconhecido (Id:%1 Var:%2)</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
   </context>
 </TS>
