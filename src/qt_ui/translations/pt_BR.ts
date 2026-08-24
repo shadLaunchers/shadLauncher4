@@ -4333,7 +4333,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Directory Scan Depth:\nSet the maximum depth when scanning for games in the specified game folders.\n1 means one level of subfolders is scanned, and so on.</source>
-      <translation>Profundidade da Varredura de Diretórios:\nDefine a profundidade máxima ao escanear jogos nas pastas de jogos especificadas.\n1 significa um nível de subpastas será verificado e assim por diante.</translation>
+      <translation>Profundidade da Exploração de Diretórios:\nDefine a profundidade máxima ao explorar jogos nas pastas de jogos especificadas.\n1 significa um nível de subpastas será verificado e assim por diante.</translation>
     </message>
     <message>
       <source>Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</source>
