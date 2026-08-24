@@ -4282,7 +4282,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Big Picture Scale</source>
-      <translation>Resolução do Big Picture</translation>
+      <translation>Escala do Big Picture</translation>
     </message>
     <message>
       <source>Log Flush Level</source>
