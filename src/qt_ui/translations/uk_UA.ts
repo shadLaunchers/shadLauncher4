@@ -1518,169 +1518,169 @@ Continue?</source>
     </message>
     <message>
       <source>Delete Game + &amp;Update</source>
-      <translation type="unfinished">Delete Game + &amp;Update</translation>
+      <translation>Видалити гру + &amp;оновлення</translation>
     </message>
     <message>
       <source>&amp;Delete Save Data</source>
-      <translation type="unfinished">&amp;Delete Save Data</translation>
+      <translation>&amp;Видалити збереження</translation>
     </message>
     <message>
       <source>&amp;Delete DLC </source>
-      <translation type="unfinished">&amp;Delete DLC </translation>
+      <translation>&amp;Видалити доповнення </translation>
     </message>
     <message>
       <source>&amp;Delete Trophy</source>
-      <translation type="unfinished">&amp;Delete Trophy</translation>
+      <translation>&amp;Видалити трофей</translation>
     </message>
     <message>
       <source>&amp;Delete Shader Cache</source>
-      <translation type="unfinished">&amp;Delete Shader Cache</translation>
+      <translation>&amp;Видалити кеш шейдерів</translation>
     </message>
     <message>
       <source>Clear &amp;Metadata Cache</source>
-      <translation type="unfinished">Clear &amp;Metadata Cache</translation>
+      <translation>Очистити кеш &amp;метаданих</translation>
     </message>
     <message>
       <source>&amp;Compatibility</source>
-      <translation type="unfinished">&amp;Compatibility</translation>
+      <translation>&amp;Сумісність</translation>
     </message>
     <message>
       <source>&amp;View Report</source>
-      <translation type="unfinished">&amp;View Report</translation>
+      <translation>&amp;Переглянути звіт</translation>
     </message>
     <message>
       <source>&amp;Submit Report</source>
-      <translation type="unfinished">&amp;Submit Report</translation>
+      <translation>&amp;Надіслати звіт</translation>
     </message>
     <message>
       <source>&amp;Update Database</source>
-      <translation type="unfinished">&amp;Update Database</translation>
+      <translation>&amp;Оновити базу даних</translation>
     </message>
     <message>
       <source>&amp;Remove Custom Configuration</source>
-      <translation type="unfinished">&amp;Remove Custom Configuration</translation>
+      <translation>&amp;Видалити користувацьку конфігурацію</translation>
     </message>
     <message>
       <source>No Report Available</source>
-      <translation type="unfinished">No Report Available</translation>
+      <translation>Немає доступних звітів</translation>
     </message>
     <message>
       <source>There is no compatibility report available for this game.</source>
-      <translation type="unfinished">There is no compatibility report available for this game.</translation>
+      <translation>Для цієї гри немає звіту про сумісність.</translation>
     </message>
     <message>
       <source>The log is invalid, it either doesn&apos;t exist or log filters were used.</source>
-      <translation type="unfinished">The log is invalid, it either doesn&apos;t exist or log filters were used.</translation>
+      <translation>Журнал недійсний: він або не існує, або були використані фільтри журналів.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Не вдалося надіслати звіт, оскільки останній журнал гри не пройшов наступну перевірку, і тому вважатиметься недійсним звітом:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Гаразд</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Інформація</translation>
     </message>
     <message>
       <source>Edit Tooltip Notes</source>
-      <translation type="unfinished">Edit Tooltip Notes</translation>
+      <translation>Редагувати нотатки щодо підказок</translation>
     </message>
     <message>
       <source>The archive was saved to a folder that isn&apos;t one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</source>
-      <translation type="unfinished">The archive was saved to a folder that isn&apos;t one of your configured game folders, so it won&apos;t show up in the game list. Move it into a configured folder, or add this folder under Settings, if you&apos;d like it to appear.</translation>
+      <translation>Архів було збережено в теку, яка не входить до списку налаштованих ігрових тек, тому він не показуватиметься у списку ігор. Перемістіть його в налаштовану теку або додайте цю теку в «Налаштуваннях», якщо хочете, щоб він там з’явився.</translation>
     </message>
     <message>
       <source>Delete Game</source>
-      <translation type="unfinished">Delete Game</translation>
+      <translation>Видалити гру</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s game directory?
 
 Its update/patch directory will be deleted too.</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s game directory?
+      <translation>Упевнені, що хочете видалити ігровий каталог %1?
 
-Its update/patch directory will be deleted too.</translation>
+Його каталог оновлень/виправлень також буде видалено.</translation>
     </message>
     <message>
       <source>This game has no saved trophies to delete!</source>
-      <translation type="unfinished">This game has no saved trophies to delete!</translation>
+      <translation>У цій грі немає збережених трофеїв для видалення!</translation>
     </message>
     <message>
       <source>Delete Trophy</source>
-      <translation type="unfinished">Delete Trophy</translation>
+      <translation>Видалити трофей</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s trophy data?
 
 This removes the unpacked trophy files and the unlocked trophies of every user. Any other copy of this game shares the same trophy data and will lose it too. This cannot be undone.</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s trophy data?
+      <translation>Упевнені, що хочете видалити дані про трофеї користувача %1?
 
-This removes the unpacked trophy files and the unlocked trophies of every user. Any other copy of this game shares the same trophy data and will lose it too. This cannot be undone.</translation>
+Це призведе до видалення розпакованих файлів трофеїв та розблокованих трофеїв усіх користувачів. Будь-яка інша копія цієї гри використовує ті самі дані про трофеї, тому вони також будуть втрачені. Цю дію неможливо скасувати.</translation>
     </message>
     <message>
       <source>Some trophy data could not be deleted.</source>
-      <translation type="unfinished">Some trophy data could not be deleted.</translation>
+      <translation>Деякі дані про трофеї не вдалося видалити.</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation type="unfinished">Trophy</translation>
+      <translation>Трофей</translation>
     </message>
     <message>
       <source>Trophy data deleted successfully.</source>
-      <translation type="unfinished">Trophy data deleted successfully.</translation>
+      <translation>Дані про трофеї успішно видалено.</translation>
     </message>
     <message>
       <source>&amp;Rename in Game List...</source>
-      <translation type="unfinished">&amp;Rename in Game List...</translation>
+      <translation>&amp;Перейменувати у списку ігор...</translation>
     </message>
     <message>
       <source>&amp;Categories</source>
-      <translation type="unfinished">&amp;Categories</translation>
+      <translation>&amp;Категорії</translation>
     </message>
     <message>
       <source>&amp;Move From &quot;%1&quot; To</source>
-      <translation type="unfinished">&amp;Move From &quot;%1&quot; To</translation>
+      <translation>&amp;Перемістити з «%1» до</translation>
     </message>
     <message>
       <source>&amp;Move To</source>
-      <translation type="unfinished">&amp;Move To</translation>
+      <translation>&amp;Перемістити до</translation>
     </message>
     <message>
       <source>Take %1 out of &quot;%2&quot; and put it in &quot;%3&quot;.</source>
-      <translation type="unfinished">Take %1 out of &quot;%2&quot; and put it in &quot;%3&quot;.</translation>
+      <translation>Вийміть %1 із «%2» і покладіть у «%3».</translation>
     </message>
     <message>
       <source>Put %1 in &quot;%2&quot; only, removing it from its other categories.</source>
-      <translation type="unfinished">Put %1 in &quot;%2&quot; only, removing it from its other categories.</translation>
+      <translation>Помістіть %1 лише в «%2», видаливши з інших категорій.</translation>
     </message>
     <message>
       <source>&amp;New Category...</source>
-      <translation type="unfinished">&amp;New Category...</translation>
+      <translation>&amp;Нова категорія...</translation>
     </message>
     <message>
       <source>&amp;Out Of &quot;%1&quot;</source>
-      <translation type="unfinished">&amp;Out Of &quot;%1&quot;</translation>
+      <translation>&amp;Вилучити з «%1»</translation>
     </message>
     <message>
       <source>&amp;No Category</source>
-      <translation type="unfinished">&amp;No Category</translation>
+      <translation>&amp;Немає категорії</translation>
     </message>
     <message>
       <source>Rename in Game List</source>
-      <translation type="unfinished">Rename in Game List</translation>
+      <translation>Перейменувати у списку ігор</translation>
     </message>
     <message>
       <source>Shown instead of &quot;%1&quot; [%2].
 Leave empty to use the original name.</source>
-      <translation type="unfinished">Shown instead of &quot;%1&quot; [%2].
-Leave empty to use the original name.</translation>
+      <translation>Показується замість «%1» [%2].
+Залиште порожнім, щоб використовувати оригінальну назву.</translation>
     </message>
     <message>
       <source>&amp;DLC Viewer</source>
-      <translation type="unfinished">&amp;DLC Viewer</translation>
+      <translation>&amp;Переглядач доповнень</translation>
     </message>
   </context>
   <context>
@@ -1830,41 +1830,41 @@ Using local database.
     <message>
       <source>Right click a tab to add, rename or delete a category.
 Use the game&apos;s right click menu to put it into a category.</source>
-      <translation type="unfinished">Right click a tab to add, rename or delete a category.
-Use the game&apos;s right click menu to put it into a category.</translation>
+      <translation>Клацніть правою кнопкою миші на вкладку, щоб додати, перейменувати або видалити категорію.
+Використовуйте ігрове контекстне меню, щоб додати гру до категорії.</translation>
     </message>
     <message>
       <source>All</source>
-      <translation type="unfinished">All</translation>
+      <translation>Усі</translation>
     </message>
     <message>
       <source>Every game found in your game folders</source>
-      <translation type="unfinished">Every game found in your game folders</translation>
+      <translation>Кожна гра, знайдена у ваших теках з іграми</translation>
     </message>
     <message numerus="yes">
       <source>%n game(s) in this category</source>
-      <translation type="unfinished">
-        <numerusform>%n game(s) in this category</numerusform>
-        <numerusform>%n game(s) in this category</numerusform>
-        <numerusform>%n game(s) in this category</numerusform>
-        <numerusform>%n game(s) in this category</numerusform>
+      <translation>
+        <numerusform>У цій категорії %n гра</numerusform>
+        <numerusform>У цій категорії %n гри</numerusform>
+        <numerusform>У цій категорії %n ігор</numerusform>
+        <numerusform>У цій категорії %n ігор</numerusform>
       </translation>
     </message>
     <message>
       <source>New Category</source>
-      <translation type="unfinished">New Category</translation>
+      <translation>Нова категорія</translation>
     </message>
     <message>
       <source>Category name:</source>
-      <translation type="unfinished">Category name:</translation>
+      <translation>Назва категорії:</translation>
     </message>
     <message>
       <source>Category Already Exists</source>
-      <translation type="unfinished">Category Already Exists</translation>
+      <translation>Категорія вже існує</translation>
     </message>
     <message>
       <source>A category named &quot;%1&quot; already exists.</source>
-      <translation type="unfinished">A category named &quot;%1&quot; already exists.</translation>
+      <translation>Категорія з назвою «%1» вже існує.</translation>
     </message>
     <message>
       <source>&amp;New Category...</source>
@@ -4881,101 +4881,101 @@ The next steps ask where your games live and which emulator version to use. You 
     </message>
     <message>
       <source>Language:</source>
-      <translation type="unfinished">Language:</translation>
+      <translation>Мова:</translation>
     </message>
     <message>
       <source>Theme:</source>
-      <translation type="unfinished">Theme:</translation>
+      <translation>Тема:</translation>
     </message>
   </context>
   <context>
     <name>SetupWizardVersionPage</name>
     <message>
       <source>Release</source>
-      <translation type="unfinished">Release</translation>
+      <translation>Реліз</translation>
     </message>
     <message>
       <source>Pre-release</source>
-      <translation type="unfinished">Pre-release</translation>
+      <translation>Передреліз</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Локальна</translation>
     </message>
     <message>
       <source>Unknown</source>
-      <translation type="unfinished">Unknown</translation>
+      <translation>Невідомо</translation>
     </message>
     <message>
       <source>Emulator version</source>
-      <translation type="unfinished">Emulator version</translation>
+      <translation>Версія емулятора</translation>
     </message>
     <message>
       <source>shadLauncher4 runs your games with shadPS4. Pick the version to use.</source>
-      <translation type="unfinished">shadLauncher4 runs your games with shadPS4. Pick the version to use.</translation>
+      <translation>shadLauncher4 запускає ваші ігри за допомогою shadPS4. Оберіть версію для використання.</translation>
     </message>
     <message>
       <source>Select an installed version below, or open the Version Manager to download one.</source>
-      <translation type="unfinished">Select an installed version below, or open the Version Manager to download one.</translation>
+      <translation>Виберіть встановлену версію нижче або відкрийте Менеджер версій, щоб завантажити її.</translation>
     </message>
     <message>
       <source>No emulator versions are installed yet. Open the Version Manager to download one - you can also do this later from the main window.</source>
-      <translation type="unfinished">No emulator versions are installed yet. Open the Version Manager to download one - you can also do this later from the main window.</translation>
+      <translation>Версії емулятора ще не встановлені. Відкрийте Менеджер версій, щоб завантажити одну з них — ви також зможете зробити це пізніше в головному вікні.</translation>
     </message>
     <message>
       <source>Open Version Manager...</source>
-      <translation type="unfinished">Open Version Manager...</translation>
+      <translation>Відкрити Менеджер версій...</translation>
     </message>
   </context>
   <context>
     <name>ShadNet::LoginChecker</name>
     <message>
       <source>Login successful.</source>
-      <translation type="unfinished">Login successful.</translation>
+      <translation>Ви успішно увійшли.</translation>
     </message>
     <message>
       <source>Credentials are valid, but this account is already signed in somewhere else.</source>
-      <translation type="unfinished">Credentials are valid, but this account is already signed in somewhere else.</translation>
+      <translation>Облікові дані дійсні, але цей обліковий запис уже використовується на іншому пристрої.</translation>
     </message>
     <message>
       <source>Invalid account ID or password.</source>
-      <translation type="unfinished">Invalid account ID or password.</translation>
+      <translation>Хибний ідентифікатор облікового запису або пароль.</translation>
     </message>
     <message>
       <source>This server requires an e-mail validation token for this account.</source>
-      <translation type="unfinished">This server requires an e-mail validation token for this account.</translation>
+      <translation>Цей сервер потребує токен підтвердження пошти для цього облікового запису.</translation>
     </message>
     <message>
       <source>This account is banned on this server.</source>
-      <translation type="unfinished">This account is banned on this server.</translation>
+      <translation>Цей обліковий запис заблоковано на цьому сервері.</translation>
     </message>
     <message>
       <source>The ShadNet server address is not valid. Check it in Settings.</source>
-      <translation type="unfinished">The ShadNet server address is not valid. Check it in Settings.</translation>
+      <translation>Адреса сервера ShadNet недійсна. Перевірте її в налаштуваннях.</translation>
     </message>
     <message>
       <source>Could not reach the ShadNet server: %1</source>
-      <translation type="unfinished">Could not reach the ShadNet server: %1</translation>
+      <translation>Не вдалося з’єднатися із сервером ShadNet: %1</translation>
     </message>
     <message>
       <source>Could not reach the ShadNet server.</source>
-      <translation type="unfinished">Could not reach the ShadNet server.</translation>
+      <translation>Не вдалося з’єднатися із сервером ShadNet.</translation>
     </message>
     <message>
       <source>The server speaks a different protocol version than this launcher.</source>
-      <translation type="unfinished">The server speaks a different protocol version than this launcher.</translation>
+      <translation>Сервер використовує іншу версію протоколу, ніж цей лаунчер.</translation>
     </message>
     <message>
       <source>The server sent an unexpected response.</source>
-      <translation type="unfinished">The server sent an unexpected response.</translation>
+      <translation>Сервер надіслав неочікувану відповідь.</translation>
     </message>
     <message>
       <source>The ShadNet server did not respond in time.</source>
-      <translation type="unfinished">The ShadNet server did not respond in time.</translation>
+      <translation>Сервер ShadNet не відповів вчасно.</translation>
     </message>
     <message>
       <source>The server rejected the login (error code %1).</source>
-      <translation type="unfinished">The server rejected the login (error code %1).</translation>
+      <translation>Сервер відхилив вхід (код помилки %1).</translation>
     </message>
   </context>
   <context>
@@ -5157,19 +5157,19 @@ The next steps ask where your games live and which emulator version to use. You 
     </message>
     <message>
       <source>Check Login</source>
-      <translation type="unfinished">Check Login</translation>
+      <translation>Перевірити логін</translation>
     </message>
     <message>
       <source>Enter an account ID first.</source>
-      <translation type="unfinished">Enter an account ID first.</translation>
+      <translation>Спочатку введіть ідентифікатор облікового запису.</translation>
     </message>
     <message>
       <source>No ShadNet server is configured. Set one in Settings.</source>
-      <translation type="unfinished">No ShadNet server is configured. Set one in Settings.</translation>
+      <translation>Сервер ShadNet не налаштовано. Вкажіть його в налаштуваннях.</translation>
     </message>
     <message>
       <source>Checking %1...</source>
-      <translation type="unfinished">Checking %1...</translation>
+      <translation>Перевірка %1...</translation>
     </message>
   </context>
   <context>
@@ -5563,97 +5563,97 @@ The version may not run correctly when launched.</source>
     <name>ZArchiveViewerDialog</name>
     <message>
       <source>Failed to open archive.</source>
-      <translation type="unfinished">Failed to open archive.</translation>
+      <translation>Не вдалося відкрити архів.</translation>
     </message>
     <message>
       <source>ZArchive Viewer - %1</source>
-      <translation type="unfinished">ZArchive Viewer - %1</translation>
+      <translation>Переглядач ZArchive: %1</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Назва</translation>
     </message>
     <message>
       <source>Type</source>
-      <translation type="unfinished">Type</translation>
+      <translation>Тип</translation>
     </message>
     <message>
       <source>Select All</source>
-      <translation type="unfinished">Select All</translation>
+      <translation>Виділити все</translation>
     </message>
     <message>
       <source>Select None</source>
-      <translation type="unfinished">Select None</translation>
+      <translation>Зняти виділення</translation>
     </message>
     <message>
       <source>Extract Selected...</source>
-      <translation type="unfinished">Extract Selected...</translation>
+      <translation>Видобути виділене…</translation>
     </message>
     <message>
       <source>Extract All...</source>
-      <translation type="unfinished">Extract All...</translation>
+      <translation>Видобути все…</translation>
     </message>
     <message>
       <source>Folder</source>
-      <translation type="unfinished">Folder</translation>
+      <translation>Тека</translation>
     </message>
     <message>
       <source>File</source>
-      <translation type="unfinished">File</translation>
+      <translation>Файл</translation>
     </message>
     <message>
       <source>Loading...</source>
-      <translation type="unfinished">Loading...</translation>
+      <translation>Завантаження…</translation>
     </message>
     <message>
       <source>No files selected.</source>
-      <translation type="unfinished">No files selected.</translation>
+      <translation>Файли не вибрані.</translation>
     </message>
     <message>
       <source>%1 file(s) selected.</source>
-      <translation type="unfinished">%1 file(s) selected.</translation>
+      <translation>Вибрано %1 файл(-ів).</translation>
     </message>
     <message>
       <source>Extract Selected</source>
-      <translation type="unfinished">Extract Selected</translation>
+      <translation>Видобути виділене</translation>
     </message>
     <message>
       <source>Select one or more files to extract first.</source>
-      <translation type="unfinished">Select one or more files to extract first.</translation>
+      <translation>Спочатку виберіть один або кілька файлів для видобування.</translation>
     </message>
     <message>
       <source>Extract Selected Files To</source>
-      <translation type="unfinished">Extract Selected Files To</translation>
+      <translation>Видобути вибрані файли до</translation>
     </message>
     <message>
       <source>Extract All Files To</source>
-      <translation type="unfinished">Extract All Files To</translation>
+      <translation>Видобути всі файли до</translation>
     </message>
     <message>
       <source>Extract from ZArchive</source>
-      <translation type="unfinished">Extract from ZArchive</translation>
+      <translation>Видобути з ZArchive</translation>
     </message>
     <message>
       <source>Extracting all files...</source>
-      <translation type="unfinished">Extracting all files...</translation>
+      <translation>Видобування всіх файлів…</translation>
     </message>
     <message>
       <source>Extracting selected files...</source>
-      <translation type="unfinished">Extracting selected files...</translation>
+      <translation>Видобування вибраних файлів…</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Скасувати</translation>
     </message>
     <message>
       <source>Failed to extract files:
 %1</source>
-      <translation type="unfinished">Failed to extract files:
+      <translation>Не вдалося видобути файли:
 %1</translation>
     </message>
     <message>
       <source>Extraction finished.</source>
-      <translation type="unfinished">Extraction finished.</translation>
+      <translation>Розпакування завершено.</translation>
     </message>
   </context>
   <context>
