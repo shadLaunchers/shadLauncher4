@@ -4706,7 +4706,7 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
     </message>
     <message>
       <source>Console Language:\nSets the language that PS4 games run in - localized titles, icons and changelogs follow it.\nThis is separate from the launcher&apos;s own interface language.\nIt is best set to a language the game actually supports, which varies by region.</source>
-      <translation>Idioma do Console:\nEscolhe o idioma em que os jogos de PS4 rodarão - títulos, ícones e notas de versão localizadas seguem essa configuração.\nIsto é separado do idioma da interface do launcher.\nÉ aconselhado escolher um idioma que o jogo tem suporte, o que varia por região.</translation>
+      <translation>Idioma do Console:\nDefine o idioma em que os jogos de PS4 são executados - títulos localizados, ícones e histórico de alterações seguem essa configuração.\nEssa configuração é independente do idioma da interface do próprio launcher.\nÉ aconselhável selecionar um idioma que o jogo realmente tenha suporte, o que varia de acordo com a região.</translation>
     </message>
     <message>
       <source>Log Flush Level:\nSets the log level for which logs at or above will be flushed.</source>
