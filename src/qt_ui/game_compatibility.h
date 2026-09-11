@@ -34,12 +34,12 @@ private:
     /* clang-format off */
     const std::map<QString, Compat::Status> m_status_data =
 	{
-		{ "Playable", { 0, "", "#47D35C", tr("Playable"),         tr("Games that can be run without any major issues") } },
-		{ "Ingame",   { 1, "", "#F2D624", tr("Ingame"),           tr("Games that can reach gameplay but have issues") } },
-		{ "Menus",    { 2, "", "#FF0000", tr("Menus"),            tr("Games that can reach the menu but freeze/crash when trying to proceed further") } },
-		{ "Boots",    { 3, "", "#828282", tr("Boots"),            tr("Games that show any visual/audio output but freeze/crash before reaching the menu") } },
-		{ "Nothing",  { 4, "", "#212121", tr("Nothing"),          tr("Games that crash when trying to launch or only show a black screen") } },
-		{ "NoResult", { 5, "", "",        tr("No results found"), tr("There is no entry for this game or application in the compatibility database yet.") } },
+		{ "Playable", { 0, "", "#00C950", tr("Playable"),         tr("Games that can be run without any major issues") } },
+		{ "Ingame",   { 1, "", "#2B7FFF", tr("Ingame"),           tr("Games that can reach gameplay but have issues") } },
+		{ "Menus",    { 2, "", "#8E51FF", tr("Menus"),            tr("Games that can reach the menu but freeze/crash when trying to proceed further") } },
+		{ "Boots",    { 3, "", "#F0B100", tr("Boots"),            tr("Games that show any visual/audio output but freeze/crash before reaching the menu") } },
+		{ "Nothing",  { 4, "", "#FB2C36", tr("Nothing"),          tr("Games that crash when trying to launch or only show a black screen") } },
+		{ "NoResult", { 5, "", "#000000", tr("No results found"), tr("There is no entry for this game or application in the compatibility database yet.") } },
 		{ "NoData",   { 6, "", "",        tr("Database missing"), tr("Right click here and choose Compatibility -> Update Database.") } },
 		{ "Download", { 7, "", "",        tr("Retrieving..."),    tr("Downloading the compatibility database. Please wait...") } }
 	};
