@@ -653,17 +653,6 @@ void TrophyViewer::SetTableItem(QTableWidget* parent, int row, int column, QStri
     f.setPointSize(12);
     f.setBold(true);
     item->setFont(f);
-
-    /* Theme theme = static_cast<Theme>(m_gui_settings->GetValue(gui::gen_theme).toInt());
-
-    if (theme == Theme::Light) {
-        item->setForeground(QBrush(Qt::black));
-    } else {
-        item->setForeground(QBrush(Qt::white));
-    }
-    */
-    item->setForeground(QBrush(Qt::black));
-
     parent->setItem(row, column, item);
 }
 
