@@ -45,6 +45,8 @@ bool GUIApplication::init(QString emulator_arg, QString game_arg, QStringList pa
 
     const bool is_first_run = !QFile::exists(m_gui_settings->GetSettingsFilePath());
 
+    OnChangeStyleSheetRequest();
+
     m_emu_settings = std::make_shared<EmulatorSettingsImpl>();
     m_emu_settings->Load();
     m_ipc_client = std::make_shared<IpcClient>();
