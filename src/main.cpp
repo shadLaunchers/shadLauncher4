@@ -2,12 +2,10 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <iostream>
-#include <QApplication>
 #include <QMessageBox>
 
 #include "common/logging/log.h"
 #include "qt_ui/gui_application.h"
-#include "qt_ui/stylesheets.h"
 
 int main(int argc, char* argv[]) {
     // Start default log
@@ -83,7 +81,6 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    qApp->setStyleSheet(GUI::Stylesheets::default_style_sheet);
     gui_app->init(emulator_arg, game_arg);
     return app->exec();
 }
