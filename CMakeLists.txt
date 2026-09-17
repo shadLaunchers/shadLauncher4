@@ -413,7 +413,7 @@ if (WIN32)
         target_link_libraries(shadLauncher4 PRIVATE clang_rt.builtins-x86_64.lib)
     endif()
 else ()
-    target_link_libraries(shadLauncher4 PRIVATE OpenSSL::Crypto atomic)
+    target_link_libraries(shadLauncher4 PRIVATE OpenSSL::SSL OpenSSL::Crypto atomic)
 endif()
 
 set_target_properties(shadLauncher4 PROPERTIES
