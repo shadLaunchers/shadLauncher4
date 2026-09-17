@@ -54,7 +54,7 @@ struct PKGHeader {
 
     u32_be pkg_0x400;
 
-    u32_be pfs_image_count;  // count of PFS images
+    u32_be pfs_image_count;  // count of PFS assets
     u64_be pfs_image_flags;  // PFS flags
     u64_be pfs_image_offset; // offset to start of external PFS image
     u64_be pfs_image_size;   // size of external PFS image

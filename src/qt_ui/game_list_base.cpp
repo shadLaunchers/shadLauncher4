@@ -160,11 +160,11 @@ QPixmap GameListBase::PaintedPixmap(const QPixmap& icon, qreal device_pixel_rati
         QString icon_path;
 
         if (paint_config_icon && paint_pad_config_icon) {
-            icon_path = ":/images/controllers_config_combo.png";
+            icon_path = ":/assets/controllers_config_combo.png";
         } else if (paint_config_icon) {
-            icon_path = ":/images/custom_config.png";
+            icon_path = ":/assets/settings/custom_config.png";
         } else if (paint_pad_config_icon) {
-            icon_path = ":/images/controllers.png";
+            icon_path = ":/assets/toolbar/controllers.png";
         }
 
         QPixmap custom_config_icon(icon_path);
@@ -207,9 +207,9 @@ QIcon GameListBase::GetCustomConfigIcon(const game_info& game) {
     if (!game)
         return {};
 
-    static const QIcon icon_combo_config_bordered(":/images/controllers_config_combo.png");
-    static const QIcon icon_custom_config(":/images/custom_config.png");
-    static const QIcon icon_controllers(":/images/controllers.png");
+    static const QIcon icon_combo_config_bordered(":/assets/controllers_config_combo.png");
+    static const QIcon icon_custom_config(":/assets/settings/custom_config.png");
+    static const QIcon icon_controllers(":/assets/toolbar/controllers.png");
 
     if (game->has_custom_config && game->has_custom_pad_config) {
         return icon_combo_config_bordered;

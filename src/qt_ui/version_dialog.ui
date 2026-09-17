@@ -17,7 +17,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>:/images/shadps4.ico</normaloff>:/images/shadps4.ico</iconset>
+    <normaloff>:/assets/logo/shadLauncher4.ico</normaloff>:/assets/logo/shadLauncher4.ico</iconset>
   </property>
   <widget class="QScrollArea" name="versionTab">
    <property name="geometry">

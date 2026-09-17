@@ -262,8 +262,13 @@ void MainWindow::createConnects() {
     });
 
     // toolbar actions
-    connect(ui->toolbar_start, &QAction::triggered, this,
-            [this] { MainWindow::StartGameWithArgs({}); });
+    connect(ui->toolbar_start, &QAction::triggered, this, [this] {
+        if (EmulatorState::GetInstance()->IsGameRunning()) {
+            PauseGame();
+        } else {
+            StartGameWithArgs({});
+        }
+    });
     connect(ui->toolbar_stop, &QAction::triggered, this, &MainWindow::StopGame);
     connect(ui->toolbar_refresh, &QAction::triggered, this,
             [this]() { m_game_list_frame->Refresh(true); });
@@ -576,6 +581,7 @@ void MainWindow::retranslateUI(const QStringList& language_codes, const QString&
     updateLanguageActions(language_codes, language_code);
 
     ui->retranslateUi(this);
+    UpdateToolbarButtons();
 
     if (m_game_list_frame) {
         m_game_list_frame->Refresh(true);
@@ -696,6 +702,21 @@ void MainWindow::saveWindowState() const {
 
 void MainWindow::closeEvent(QCloseEvent* closeEvent) {
     saveWindowState();
+}
+
+void MainWindow::UpdateToolbarButtons() {
+    const bool running = EmulatorState::GetInstance()->IsGameRunning();
+    const bool can_pause = running && !is_paused;
+    ui->toolbar_start->setText(!running ? tr("Start") : (is_paused ? tr("Resume") : tr("Pause")));
+    ui->toolbar_start->setToolTip(!running ? tr("Start emulation")
+                                         : (is_paused ? tr("Resume emulation") : tr("Pause emulation")));
+    m_original_toolbar_icons[ui->toolbar_start] =
+        QIcon(can_pause ? ":/assets/menubar/emulation/pause.png"
+                        : ":/assets/menubar/emulation/start.png");
+    RepaintToolbarIcons();
+
+    ui->sysPauseAct->setText(is_paused ? tr("Resume") : tr("Pause"));
+    ui->sysPauseAct->setToolTip(is_paused ? tr("Resume emulation") : tr("Pause emulation"));
 }
 
 void MainWindow::RepaintGUI() {
@@ -1283,7 +1304,6 @@ void MainWindow::StartGameWithArgs(const game_info& game, QStringList args) {
         StartEmulator(ebootPath, args);
         last_game_info = selected_game_info;
 
-        // UpdateToolbarButtons();
     }
 }
 
@@ -1317,10 +1337,14 @@ void MainWindow::StartEmulator(std::filesystem::path path, QStringList args) {
     final_args.append(args);
 
     EmulatorState::GetInstance()->SetGameRunning(true);
+    is_paused = false;
+    UpdateToolbarButtons();
 
     QString workDir = QDir::currentPath();
     m_ipc_client->startEmulator(fileInfo, final_args, workDir);
-    m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
+    if (EmulatorState::GetInstance()->IsGameRunning()) {
+        m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
+    }
 }
 
 void MainWindow::RunGame() {
@@ -1340,6 +1364,7 @@ void MainWindow::RunGame() {
 void MainWindow::onGameClosed() {
     EmulatorState::GetInstance()->SetGameRunning(false);
     is_paused = false;
+    UpdateToolbarButtons();
 
     if (m_game_list_frame) {
         m_game_list_frame->Refresh(false);
@@ -1370,6 +1395,9 @@ void MainWindow::RestartEmulator() {
     QFileInfo fileInfo(exe);
     QString workDir = QDir::currentPath();
 
+    EmulatorState::GetInstance()->SetGameRunning(true);
+    is_paused = false;
+    UpdateToolbarButtons();
     m_ipc_client->startEmulator(fileInfo, args, workDir);
 }
 
@@ -1392,15 +1420,12 @@ void MainWindow::PauseGame() {
 
     if (is_paused) {
         m_ipc_client->resumeGame();
-        ui->sysPauseAct->setText(tr("Pause"));
-        ui->sysPauseAct->setToolTip(tr("Pause emulation"));
         is_paused = false;
     } else {
         m_ipc_client->pauseGame();
-        ui->sysPauseAct->setText(tr("Resume"));
-        ui->sysPauseAct->setToolTip(tr("Resume emulation"));
         is_paused = true;
     }
+    UpdateToolbarButtons();
 }
 
 void MainWindow::StopGame() {
@@ -1508,6 +1533,8 @@ void MainWindow::StartEmulatorExecutable(QString emulatorArg, QString gameArg,
     }
 
     EmulatorState::GetInstance()->SetGameRunning(true);
+    is_paused = false;
+    UpdateToolbarButtons();
     QString workDir = QDir::currentPath();
     m_ipc_client->startEmulator(fileInfo, args, workDir);
 

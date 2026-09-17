@@ -57,9 +57,9 @@ SetupWizard::SetupWizard(std::shared_ptr<GUISettings> gui_settings,
     setOption(QWizard::NoBackButtonOnStartPage, true);
     setOption(QWizard::NoCancelButtonOnLastPage, true);
     setPixmap(QWizard::LogoPixmap,
-              QPixmap(":/images/shadLauncher4.png")
+              QPixmap(":/assets/logo/shadLauncher4.png")
                   .scaled(48, 48, Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    setWindowIcon(QIcon(":/images/shadLauncher4.ico"));
+    setWindowIcon(QIcon(":/assets/logo/shadLauncher4.ico"));
 
     setPage(Page_Intro, new SetupWizardIntroPage(this, m_gui_settings));
     setPage(Page_Folders, new SetupWizardFoldersPage(m_gui_settings, m_emu_settings));

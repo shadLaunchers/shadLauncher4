@@ -61,7 +61,7 @@ fi
     --appdir AppDir \
     -d "$GITHUB_WORKSPACE/dist/net.shadps4.shadLauncher4.desktop" \
     -e "$GITHUB_WORKSPACE/build/shadLauncher4" \
-    -i "$GITHUB_WORKSPACE/src/images/shadLauncher4.png" \
+    -i "$GITHUB_WORKSPACE/src/assets/logo/shadLauncher4.png" \
     --plugin qt
 
 # Optional multimedia plugin removal

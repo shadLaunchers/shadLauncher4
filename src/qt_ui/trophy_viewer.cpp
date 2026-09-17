@@ -572,7 +572,7 @@ void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
                 }
             } else {
                 auto resource = cmrc::res::get_filesystem();
-                std::string resourceString = "src/images/" + filename;
+                std::string resourceString = "src/assets/trophies/" + filename;
                 auto file = resource.open(resourceString);
                 imgdata = std::vector<char>(file.begin(), file.end());
             }

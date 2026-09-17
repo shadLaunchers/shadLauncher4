@@ -916,7 +916,7 @@
                  </size>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="../shadLauncher4.qrc">:/images/ps4_controller.png</pixmap>
+                 <pixmap resource="../shadLauncher4.qrc">:/assets/settings/ps4_controller.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>true</bool>
