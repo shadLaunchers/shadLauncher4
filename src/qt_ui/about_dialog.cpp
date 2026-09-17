@@ -54,7 +54,7 @@ AboutDialog::AboutDialog(QWidget* parent) : QDialog(parent) {
     // --- Header: logo + name/version --------------------------------------
     auto* logo = new QLabel(this);
     logo->setObjectName("AboutDialog_logo");
-    QPixmap pix(":/assets/shadLauncher4.png");
+    QPixmap pix(":/assets/logo/shadLauncher4.png");
     if (pix.isNull()) {
         logo->hide();
     } else {

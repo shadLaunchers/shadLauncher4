@@ -403,22 +403,22 @@ void GameListTable::Populate(const std::vector<game_info>& game_data,
         CustomTableWidgetItem* region_item = new CustomTableWidgetItem;
         QImage scaledPixmap;
         if (game->info.region == "Japan") {
-            scaledPixmap = QImage(":assets/flag_jp.png");
+            scaledPixmap = QImage(":/assets/flags/flag_jp.png");
             region_item->setToolTip(tr("Japan"));
         } else if (game->info.region == "Europe") {
-            scaledPixmap = QImage(":assets/flag_eu.png");
+            scaledPixmap = QImage(":/assets/flags/flag_eu.png");
             region_item->setToolTip(tr("Europe"));
         } else if (game->info.region == "USA") {
-            scaledPixmap = QImage(":assets/flag_us.png");
+            scaledPixmap = QImage(":/assets/flags/flag_us.png");
             region_item->setToolTip(tr("USA"));
         } else if (game->info.region == "Asia") {
-            scaledPixmap = QImage(":assets/flag_china.png");
+            scaledPixmap = QImage(":/assets/flags/flag_china.png");
             region_item->setToolTip(tr("Asia"));
         } else if (game->info.region == "World") {
-            scaledPixmap = QImage(":assets/flag_world.png");
+            scaledPixmap = QImage(":/assets/flags/flag_world.png");
             region_item->setToolTip(tr("World"));
         } else {
-            scaledPixmap = QImage(":assets/flag_unk.png");
+            scaledPixmap = QImage(":/assets/flags/flag_unk.png");
             region_item->setToolTip(tr("Unknown"));
         }
         QPixmap pixmap = QPixmap::fromImage(

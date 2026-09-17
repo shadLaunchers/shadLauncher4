@@ -48,7 +48,7 @@ PkgInstallDirSelectDialog::PkgInstallDirSelectDialog(
     });
 
     setWindowTitle(tr("shadLauncher4 - Install PKG Files"));
-    setWindowIcon(QIcon(":assets/shadLauncher4.ico"));
+    setWindowIcon(QIcon(":/assets/logo/shadLauncher4.ico"));
     resize(700, 400);
 }
 

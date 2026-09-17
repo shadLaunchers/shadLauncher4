@@ -1105,7 +1105,7 @@
                  </size>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="../shadLauncher4.qrc">:/images/KBM.png</pixmap>
+                 <pixmap resource="../shadLauncher4.qrc">:/assets/settings/KBM.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>true</bool>
