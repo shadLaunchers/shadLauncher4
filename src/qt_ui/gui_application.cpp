@@ -6,6 +6,7 @@
 #include <QDir>
 #include <QFile>
 #include <QFileInfo>
+#include <QIcon>
 #include <QStyleHints>
 #include <core/libraries/system/system_service.h>
 #include <core/user_settings.h>
@@ -29,6 +30,7 @@ s32 GUIApplication::m_language_id =
     static_cast<s32>(Libraries::SystemService::ORBIS_SYSTEM_PARAM_LANG_ENGLISH_US);
 
 GUIApplication::GUIApplication(int& argc, char** argv) : QApplication(argc, argv) {
+    setWindowIcon(QIcon(":/assets/logo/shadLauncher4.ico"));
     std::setlocale(LC_NUMERIC,
                    "C"); // On linux Qt changes to system locale while initializing QCoreApplication
 }
