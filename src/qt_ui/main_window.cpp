@@ -517,37 +517,14 @@ void MainWindow::LoadVersionComboBox() {
     ui->versionComboBox->setCurrentIndex(selectedIndex >= 0 ? selectedIndex : 0);
 
     // Disconnect previous connections to prevent duplicate execution
-    ui->versionComboBox->disconnect();
+    disconnect(ui->versionComboBox, QOverload<int>::of(&QComboBox::activated), this,
+               nullptr);
 
     // Connect activated signal
     connect(
         ui->versionComboBox, QOverload<int>::of(&QComboBox::activated), this, [this](int index) {
             QString fullPath = ui->versionComboBox->itemData(index).toString();
             m_gui_settings->SetValue(GUI::version_manager_versionSelected, fullPath);
-
-            QString rootFolder = QCoreApplication::applicationDirPath();
-            QString destExe = rootFolder + "/shadPS4.exe";
-
-            auto future = QtConcurrent::run([fullPath, destExe]() {
-                if (QFile::exists(destExe))
-                    QFile::remove(destExe);
-                return QFile::copy(fullPath, destExe);
-            });
-
-            auto watcher = new QFutureWatcher<bool>();
-            connect(watcher, &QFutureWatcher<bool>::finished, this, [watcher]() {
-                bool success = watcher->result();
-                watcher->deleteLater();
-
-                if (success) {
-                    QMessageBox::information(nullptr, QObject::tr("Version Activated"),
-                                             QObject::tr("The selected version is now active."));
-                } else {
-                    QMessageBox::critical(nullptr, QObject::tr("Copy Failed"),
-                                          QObject::tr("Unable to activate selected version."));
-                }
-            });
-            watcher->setFuture(future);
         });
 
     ui->versionComboBox->adjustSize();

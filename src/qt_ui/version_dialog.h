@@ -27,7 +27,6 @@ public:
     void checkUpdatePre(const bool showMessage);
     void DownloadListVersion();
     void InstallSelectedVersion();
-    void CopySelectedVersionToAppDir();
 
 private Q_SLOTS:
     void HandleResize(QResizeEvent* event);
@@ -47,7 +46,6 @@ private:
     void installPreReleaseByTag(const QString& tagName);
     void showDownloadDialog(const QString& tagName, const QString& downloadUrl);
     void AddCustomExecutable(const QString& exePath);
-    bool CopyExecutableToAppDir(const QString& sourceExe, QWidget* parent);
     Downloader* m_downloader = nullptr;
 
 protected:
