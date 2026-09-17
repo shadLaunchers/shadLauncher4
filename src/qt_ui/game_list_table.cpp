@@ -403,26 +403,28 @@ void GameListTable::Populate(const std::vector<game_info>& game_data,
         CustomTableWidgetItem* region_item = new CustomTableWidgetItem;
         QImage scaledPixmap;
         if (game->info.region == "Japan") {
-            scaledPixmap = QImage(":/assets/flags/flag_jp.png");
+            scaledPixmap = QImage(":/assets/flags/jp.svg");
             region_item->setToolTip(tr("Japan"));
         } else if (game->info.region == "Europe") {
-            scaledPixmap = QImage(":/assets/flags/flag_eu.png");
+            scaledPixmap = QImage(":/assets/flags/eu.svg");
             region_item->setToolTip(tr("Europe"));
         } else if (game->info.region == "USA") {
-            scaledPixmap = QImage(":/assets/flags/flag_us.png");
+            scaledPixmap = QImage(":/assets/flags/us.svg");
             region_item->setToolTip(tr("USA"));
         } else if (game->info.region == "Asia") {
-            scaledPixmap = QImage(":/assets/flags/flag_china.png");
+            scaledPixmap = QImage(":/assets/flags/cn.svg");
             region_item->setToolTip(tr("Asia"));
         } else if (game->info.region == "World") {
-            scaledPixmap = QImage(":/assets/flags/flag_world.png");
+            scaledPixmap = QImage(":/assets/flags/wr.svg");
             region_item->setToolTip(tr("World"));
         } else {
-            scaledPixmap = QImage(":/assets/flags/flag_unk.png");
+            scaledPixmap = QImage(":/assets/flags/xx.svg");
             region_item->setToolTip(tr("Unknown"));
         }
+        constexpr qreal flagScale = 0.8;
         QPixmap pixmap = QPixmap::fromImage(
-            scaledPixmap.scaled(64 * devicePixelRatioF(), 44 * devicePixelRatioF(),
+            scaledPixmap.scaled(qRound(64 * flagScale * devicePixelRatioF()),
+                                qRound(44 * flagScale * devicePixelRatioF()),
                                 Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
         pixmap.setDevicePixelRatio(devicePixelRatioF());

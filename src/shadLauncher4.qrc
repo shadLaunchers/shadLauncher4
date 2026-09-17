@@ -11,12 +11,12 @@
         <file>assets/toolbar/controllers.png</file>
         <file>assets/menubar/emulation/restart.png</file>
         <file>assets/menubar/emulation/pause.png</file>
-        <file>assets/flags/flag_jp.png</file>
-        <file>assets/flags/flag_eu.png</file>
-        <file>assets/flags/flag_unk.png</file>
-        <file>assets/flags/flag_us.png</file>
-        <file>assets/flags/flag_world.png</file>
-        <file>assets/flags/flag_china.png</file>
+        <file>assets/flags/jp.svg</file>
+        <file>assets/flags/eu.svg</file>
+        <file>assets/flags/us.svg</file>
+        <file>assets/flags/cn.svg</file>
+        <file>assets/flags/wr.svg</file>
+        <file>assets/flags/xx.svg</file>
         <file>assets/logo/shadLauncher4.png</file>
         <file>assets/settings/hotkey.png</file>
         <file>assets/settings/KBM.png</file>
