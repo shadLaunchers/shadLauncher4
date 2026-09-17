@@ -1104,7 +1104,7 @@ void VersionDialog::showPreReleaseUpdateDialog(const QString& localHash, const Q
 
     QHBoxLayout* headerLayout = new QHBoxLayout();
     QLabel* imageLabel = new QLabel(&dialog);
-    QPixmap pixmap(":/images/shadLauncher4.png");
+    QPixmap pixmap(":/assets/shadLauncher4.png");
     imageLabel->setPixmap(pixmap);
     imageLabel->setScaledContents(true);
     imageLabel->setFixedSize(50, 50);

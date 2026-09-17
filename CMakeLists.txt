@@ -358,10 +358,10 @@ include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/CMakeRC.cmake")
 cmrc_add_resource_library(embedded-resources
         ALIAS res::embedded
         NAMESPACE res
-        src/images/bronze.png
-        src/images/gold.png
-        src/images/platinum.png
-        src/images/silver.png)
+        src/assets/trophies/bronze.png
+        src/assets/trophies/gold.png
+        src/assets/trophies/platinum.png
+        src/assets/trophies/silver.png)
 
 target_link_libraries(shadLauncher4 PRIVATE res::embedded)
 target_link_libraries(shadLauncher4 PRIVATE Vulkan::Headers fmt::fmt SDL3::SDL3 volk_headers spdlog::spdlog)

@@ -34,12 +34,12 @@ Hotkeys::Hotkeys(std::shared_ptr<EmulatorSettingsImpl> emu_settings,
 
     ui->setupUi(this);
 
-    QPixmap controllerPixmap(":/images/controllers.png");
+    QPixmap controllerPixmap(":/assets/controllers.png");
     QPixmap scaledController =
         controllerPixmap.scaled(70, 70, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     SetTextColoredPixmap(ui->controllerLabel, scaledController);
 
-    QPixmap KBPixmap(":/images/keyboard_icon.png");
+    QPixmap KBPixmap(":/assets/keyboard.png");
     QPixmap scaledKB = KBPixmap.scaled(70, 70, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     SetTextColoredPixmap(ui->keyboardLabel, scaledKB);
 
