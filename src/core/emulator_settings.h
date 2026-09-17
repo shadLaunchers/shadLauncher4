@@ -434,6 +434,7 @@ struct GPUSettings {
     Setting<bool> fsr_enabled{false};
     Setting<bool> rcas_enabled{true};
     Setting<int> rcas_attenuation{250};
+    Setting<bool> userfaultfd{false};
     // TODO add overrides
     std::vector<OverrideItem> GetOverrideableFields() const {
         return std::vector<OverrideItem>{
@@ -523,6 +524,7 @@ public:
     bool Save(const std::string& serial = "");
     bool Load(const std::string& serial = "");
     void SetDefaultValues();
+    bool TransferSettings();
 
     // Config mode
     ConfigMode GetConfigMode() const {
@@ -609,24 +611,6 @@ private:
     static void PrintChangedSummary(const std::vector<std::string>& changed);
 
 public:
-    EmulatorSettingsImpl& operator=(const EmulatorSettingsImpl& other) {
-        if (this != &other) {
-            m_shadnet_session_disabled.store(other.m_shadnet_session_disabled.load());
-            m_general = other.m_general;
-            m_log = other.m_log;
-            m_debug = other.m_debug;
-            m_input = other.m_input;
-            m_audio = other.m_audio;
-            m_windows_guest_red_zone_protection = other.m_windows_guest_red_zone_protection;
-            m_gpu = other.m_gpu;
-            m_vulkan = other.m_vulkan;
-            m_configMode = other.m_configMode;
-            m_loaded = other.m_loaded;
-            s_instance = other.s_instance;
-        }
-        return *this;
-    }
-
     // Add these getters to access overrideable fields
     std::vector<OverrideItem> GetGeneralOverrideableFields() const {
         return m_general.GetOverrideableFields();
@@ -760,6 +744,7 @@ public:
     SETTING_FORWARD_BOOL(m_gpu, ReadbackLinearImagesEnabled, readback_linear_images_enabled)
     SETTING_FORWARD_BOOL(m_gpu, DirectMemoryAccessEnabled, direct_memory_access_enabled)
     SETTING_FORWARD_BOOL_READONLY(m_gpu, PatchShaders, patch_shaders)
+    SETTING_FORWARD_BOOL(m_gpu, UserfaultfdTracking, userfaultfd)
 
     u32 GetVblankFrequency() {
         if (m_gpu.vblank_frequency.value < 30) {
