@@ -83,6 +83,7 @@ private:
     void RunGame();
     void onGameClosed();
     void RestartEmulator();
+    void UpdateToolbarButtons();
 
     void CacheOriginalToolbarIcons();
     void RepaintToolbarIcons();
@@ -105,5 +106,5 @@ private:
 
     // IPC things
     game_info last_game_info;
-    bool is_paused;
+    bool is_paused = false;
 };

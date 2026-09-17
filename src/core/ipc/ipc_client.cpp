@@ -23,6 +23,12 @@ void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args, con
     connect(process, &QProcess::readyReadStandardError, this, [this] { onStderr(); });
     connect(process, &QProcess::readyReadStandardOutput, this, [this] { onStdout(); });
     connect(process, &QProcess::finished, this, [this] { onProcessClosed(); });
+    connect(process, &QProcess::errorOccurred, this, [this](QProcess::ProcessError error) {
+        if (error == QProcess::FailedToStart) {
+            LOG_ERROR(Frontend, "Failed to start emulator: {}", process->errorString().toStdString());
+            onProcessClosed();
+        }
+    });
 
     process->setProcessChannelMode(QProcess::SeparateChannels);
 
@@ -89,7 +95,9 @@ void IpcClient::reloadInputs(std::string config) {
 
 void IpcClient::setActiveController(std::string GUID) {
     writeLine("SET_ACTIVE_CONTROLLER");
-    writeLine(QString::fromStdString(GUID));
+    if (process) {
+        writeLine(QString::fromStdString(GUID));
+    }
 }
 
 void IpcClient::sendMemoryPatches(std::string modNameStr, std::string offsetStr,
