@@ -438,8 +438,9 @@ void CheckUpdate::Install() {
     const QFileInfo appImage(qEnvironmentVariable("APPIMAGE"));
     if (qEnvironmentVariableIsEmpty("APPIMAGE") || !appImage.isFile() ||
         !QFileInfo(appImage.absolutePath()).isWritable()) {
-        QMessageBox::warning(this, tr("Error"),
-                             tr("The AppImage directory is not writable or the AppImage is missing."));
+        QMessageBox::warning(
+            this, tr("Error"),
+            tr("The AppImage directory is not writable or the AppImage is missing."));
         return;
     }
 
