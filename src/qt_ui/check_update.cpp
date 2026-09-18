@@ -2,9 +2,11 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <filesystem>
+#include <QCoreApplication>
 #include <QDateTime>
 #include <QDir>
 #include <QFile>
+#include <QFileInfo>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -16,6 +18,7 @@
 #include <QProcess>
 #include <QProgressBar>
 #include <QPushButton>
+#include <QSaveFile>
 #include <QStandardPaths>
 #include <QString>
 #include <QStringList>
@@ -95,7 +98,7 @@ tr("The Auto Updater allows up to 60 update checks per hour.\\nYou have reached 
 #ifdef Q_OS_WIN
         platformString = "win64-qt";
 #elif defined(Q_OS_LINUX)
-        platformString = "linux-qt";
+        platformString = "shadLauncher4.AppImage";
 #elif defined(Q_OS_MAC)
         platformString = "macos-qt";
 #endif
@@ -124,7 +127,12 @@ tr("The Auto Updater allows up to 60 update checks per hour.\\nYou have reached 
 
         for (const QJsonValue& assetValue : assets) {
             QJsonObject assetObj = assetValue.toObject();
-            if (assetObj["name"].toString().contains(platformString)) {
+#ifdef Q_OS_LINUX
+            const bool matchesPlatform = assetObj["name"].toString() == platformString;
+#else
+            const bool matchesPlatform = assetObj["name"].toString().contains(platformString);
+#endif
+            if (matchesPlatform) {
                 downloadUrl = assetObj["browser_download_url"].toString();
                 found = true;
                 break;
@@ -351,6 +359,14 @@ void CheckUpdate::requestChangelog(const QString& currentRev, const QString& lat
 }
 
 void CheckUpdate::DownloadUpdate(const QString& url) {
+#ifdef Q_OS_LINUX
+    if (qEnvironmentVariableIsEmpty("APPIMAGE")) {
+        QMessageBox::warning(this, tr("Auto Updater"),
+                             tr("Automatic updates on Linux require running the AppImage."));
+        noButton->setEnabled(true);
+        return;
+    }
+#endif
     QProgressBar* progressBar = new QProgressBar(this);
     progressBar->setRange(0, 100);
     progressBar->setTextVisible(true);
@@ -394,11 +410,15 @@ void CheckUpdate::DownloadUpdate(const QString& url) {
             dir.mkpath(".");
         }
 
+#ifdef Q_OS_LINUX
+        QString downloadPath = tempDownloadPath + "/shadLauncher4.AppImage";
+#else
         QString downloadPath = tempDownloadPath + "/temp_download_update.zip";
-        QFile file(downloadPath);
-        if (file.open(QIODevice::WriteOnly)) {
-            file.write(reply->readAll());
-            file.close();
+#endif
+        QSaveFile file(downloadPath);
+        const QByteArray updateData = reply->readAll();
+        if (!updateData.isEmpty() && file.open(QIODevice::WriteOnly) &&
+            file.write(updateData) == updateData.size() && file.commit()) {
             QMessageBox::information(this, tr("Download Complete"),
                                      tr("The update has been downloaded, press OK to install."));
             Install();
@@ -414,6 +434,58 @@ void CheckUpdate::DownloadUpdate(const QString& url) {
 }
 
 void CheckUpdate::Install() {
+#ifdef Q_OS_LINUX
+    const QFileInfo appImage(qEnvironmentVariable("APPIMAGE"));
+    if (qEnvironmentVariableIsEmpty("APPIMAGE") || !appImage.isFile() ||
+        !QFileInfo(appImage.absolutePath()).isWritable()) {
+        QMessageBox::warning(
+            this, tr("Error"),
+            tr("The AppImage directory is not writable or the AppImage is missing."));
+        return;
+    }
+
+    QString userPath;
+    Common::FS::PathToQString(userPath, Common::FS::GetUserPath(Common::FS::PathType::UserDir));
+    const QString tempDirPath = userPath + "/temp_download_update_gui";
+    const QString downloadPath = tempDirPath + "/shadLauncher4.AppImage";
+    const QString scriptFileName = tempDirPath + "/update.sh";
+    const QString scriptContent = QStringLiteral(
+        "#!/bin/bash\n"
+        "set -e\n"
+        "download=$1\n"
+        "target=$2\n"
+        "launcher_pid=$3\n"
+        "while kill -0 \"$launcher_pid\" 2>/dev/null; do sleep 0.1; done\n"
+        // Replace the file with a new inode instead of overwriting a running AppImage.
+        "replacement=$(mktemp \"${target}.update.XXXXXX\")\n"
+        "trap 'rm -f -- \"$replacement\"' EXIT\n"
+        "cp -- \"$download\" \"$replacement\"\n"
+        "chmod --reference=\"$target\" \"$replacement\"\n"
+        "chmod u+x \"$replacement\"\n"
+        "mv -f -- \"$replacement\" \"$target\"\n"
+        "rm -f -- \"$download\" \"$0\"\n"
+        "exec \"$target\"\n");
+
+    QFile scriptFile(scriptFileName);
+    if (!scriptFile.open(QIODevice::WriteOnly | QIODevice::Text) ||
+        scriptFile.write(scriptContent.toUtf8()) != scriptContent.toUtf8().size()) {
+        QMessageBox::warning(this, tr("Error"),
+                             tr("Failed to create update script:\n") + scriptFileName);
+        return;
+    }
+    scriptFile.close();
+
+    QProcess updater;
+    updater.setProgram("bash");
+    updater.setArguments({scriptFileName, downloadPath, appImage.absoluteFilePath(),
+                          QString::number(QCoreApplication::applicationPid())});
+    updater.setWorkingDirectory(QDir::currentPath());
+    if (!updater.startDetached()) {
+        QMessageBox::warning(this, tr("Error"), tr("Failed to start update process."));
+        return;
+    }
+    exit(EXIT_SUCCESS);
+#else
     QString tempDirPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) +
                           "/Temp/temp_download_update_gui";
 
@@ -461,7 +533,7 @@ void CheckUpdate::Install() {
     arguments << "-ExecutionPolicy" << "Bypass" << "-File" << scriptFileName;
     QString processCommand = "powershell.exe";
 
-#elif defined(Q_OS_LINUX) || defined(Q_OS_MAC)
+#elif defined(Q_OS_MAC)
     // Unix-like (Linux/macOS)
     scriptFileName = tempDirPath + "/update.sh";
     scriptContent = QString("#!/bin/bash\n"
@@ -497,4 +569,5 @@ void CheckUpdate::Install() {
     }
 
     exit(EXIT_SUCCESS);
+#endif
 }
