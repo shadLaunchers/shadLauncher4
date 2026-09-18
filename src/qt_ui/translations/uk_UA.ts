@@ -3342,32 +3342,6 @@ Select an emulator version from the right panel.</source>
       <translation>Тип</translation>
     </message>
     <message>
-      <source>Version Activated</source>
-      <translation>Версія активована</translation>
-    </message>
-    <message>
-      <source>The selected version is now active.</source>
-      <translation>Обрана версія активна.</translation>
-    </message>
-    <message>
-      <source>Copy Failed</source>
-      <translation>Не вдалося скопіювати</translation>
-    </message>
-    <message>
-      <source>Unable to activate selected version.</source>
-      <translation>Не вдалося активувати вибрану версію.</translation>
-    </message>
-    <message>
-      <source>Executable does not exist:
-%1</source>
-      <translation>Виконуваний файл не існує:
-%1</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.</source>
-      <translation>Помилка копіювання виконуваного файлу до каталогу застосунків.</translation>
-    </message>
-    <message>
       <source>unknown</source>
       <translation>невідомо</translation>
     </message>
@@ -4775,109 +4749,109 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Emulator versions:</source>
-      <translation type="unfinished">Emulator versions:</translation>
+      <translation>Версії емулятора:</translation>
     </message>
     <message>
       <source>Selected version:</source>
-      <translation type="unfinished">Selected version:</translation>
+      <translation>Обрана версія:</translation>
     </message>
   </context>
   <context>
     <name>SetupWizardFoldersPage</name>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Каталог з вашими скинутими іграми</translation>
     </message>
     <message>
       <source>Directory with your dumped DLCs</source>
-      <translation type="unfinished">Directory with your dumped DLCs</translation>
+      <translation>Каталог з вашими скинутими доповненнями</translation>
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Каталог для встановлення версій емулятора</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>The chosen location for dumped games is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped games is not valid.</translation>
+      <translation>Неправильне вибране місце для скидання ігор.</translation>
     </message>
     <message>
       <source>The chosen location for dumped DLCs is not valid.</source>
-      <translation type="unfinished">The chosen location for dumped DLCs is not valid.</translation>
+      <translation>Неправильне вибране місце для скидання доповнень.</translation>
     </message>
     <message>
       <source>The DLC dump location could not be created.</source>
-      <translation type="unfinished">The DLC dump location could not be created.</translation>
+      <translation>Не вдалося створити місце для скидання доповнень.</translation>
     </message>
     <message>
       <source>The location for installing emulator versions is not valid.</source>
-      <translation type="unfinished">The location for installing emulator versions is not valid.</translation>
+      <translation>Неприпустиме місце для встановлення емулятора.</translation>
     </message>
     <message>
       <source>The emulator version location could not be created.</source>
-      <translation type="unfinished">The emulator version location could not be created.</translation>
+      <translation>Не вдалося створити розташування версії емулятора.</translation>
     </message>
     <message>
       <source>Folders</source>
-      <translation type="unfinished">Folders</translation>
+      <translation>Теки</translation>
     </message>
     <message>
       <source>Tell shadLauncher4 where to find your games and where to put everything else.</source>
-      <translation type="unfinished">Tell shadLauncher4 where to find your games and where to put everything else.</translation>
+      <translation>Укажіть shadLauncher4, де знаходяться ваші ігри та куди класти все інше.</translation>
     </message>
     <message>
       <source>Games:</source>
-      <translation type="unfinished">Games:</translation>
+      <translation>Ігри:</translation>
     </message>
     <message>
       <source>DLC:</source>
-      <translation type="unfinished">DLC:</translation>
+      <translation>Доповнення:</translation>
     </message>
     <message>
       <source>Emulator versions:</source>
-      <translation type="unfinished">Emulator versions:</translation>
+      <translation>Версії емулятора:</translation>
     </message>
     <message>
       <source>Browse...</source>
-      <translation type="unfinished">Browse...</translation>
+      <translation>Огляд...</translation>
     </message>
     <message>
       <source>The games folder must already exist. The DLC and emulator version folders are created if they are missing. More library folders can be added later under Settings - Paths.</source>
-      <translation type="unfinished">The games folder must already exist. The DLC and emulator version folders are created if they are missing. More library folders can be added later under Settings - Paths.</translation>
+      <translation>Тека з іграми вже має існувати. Теки для доповнень та версій емулятора будуть створені автоматично, якщо вони відсутні. Додаткові теки бібліотеки можна додати пізніше в меню Налаштування — Шляхи.</translation>
     </message>
   </context>
   <context>
     <name>SetupWizardIntroPage</name>
     <message>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>Типово</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Немає</translation>
     </message>
     <message>
       <source> (missing)</source>
-      <translation type="unfinished"> (missing)</translation>
+      <translation> (відсутній)</translation>
     </message>
     <message>
       <source>Welcome to shadLauncher4</source>
-      <translation type="unfinished">Welcome to shadLauncher4</translation>
+      <translation>Вітаємо в shadLauncher4</translation>
     </message>
     <message>
       <source>This short setup gets your library and emulator ready.</source>
-      <translation type="unfinished">This short setup gets your library and emulator ready.</translation>
+      <translation>Це коротке налаштування підготує вашу бібліотеку та емулятор.</translation>
     </message>
     <message>
       <source>shadLauncher4 manages your PS4 game library and launches it with shadPS4.
 
 The next steps ask where your games live and which emulator version to use. You can change any of this later in Settings.</source>
-      <translation type="unfinished">shadLauncher4 manages your PS4 game library and launches it with shadPS4.
+      <translation>shadLauncher4 керує вашою бібліотекою ігор для PS4 та запускає їх за допомогою shadPS4.
 
-The next steps ask where your games live and which emulator version to use. You can change any of this later in Settings.</translation>
+На наступних етапах потрібно вказати, де зберігаються ваші ігри та яку версію емулятора використовувати. Ви зможете змінити ці параметри пізніше в Налаштуваннях.</translation>
     </message>
     <message>
       <source>Language:</source>
@@ -5405,32 +5379,8 @@ The next steps ask where your games live and which emulator version to use. You 
       <translation>Не вдалося скопіювати виконуваний файл у теку версій.</translation>
     </message>
     <message>
-      <source>Warning</source>
-      <translation>Попередження</translation>
-    </message>
-    <message>
-      <source>Failed to install executable into application directory.
-The custom build is still available under:
-%1</source>
-      <translation>Не вдалося встановити виконуваний файл у каталог застосунку.
-Спеціальна збірка все ще доступна за шляхом:
-%1</translation>
-    </message>
-    <message>
       <source>Could not find executable in extracted files.</source>
       <translation>Не вдалося знайти виконуваний файл у витягнутих файлах.</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.
-The version has been saved to: %1</source>
-      <translation>Не вдалося скопіювати виконуваний файл до каталогу застосунку.
-Версію було збережено за шляхом: %1</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.
-The pre-release version has been saved to: %1</source>
-      <translation>Не вдалося скопіювати виконуваний файл до каталогу застосунку.
-Попередню версію було збережено за шляхом: %1</translation>
     </message>
     <message>
       <source>Custom version installed successfully:</source>
@@ -5453,20 +5403,8 @@ The pre-release version has been saved to: %1</source>
       <translation>Виконуваний файл не знайдено у витягнутих файлах.</translation>
     </message>
     <message>
-      <source>Version %1 has been:</source>
-      <translation>Версію %1 було:</translation>
-    </message>
-    <message>
-      <source>1. Downloaded to:</source>
-      <translation>1. Завантажено до:</translation>
-    </message>
-    <message>
       <source>Extraction failure:</source>
       <translation>Помилка видобування:</translation>
-    </message>
-    <message>
-      <source>Pre-release (Nightly) has been:</source>
-      <translation>Попередній реліз (Нічний) був:</translation>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
@@ -5493,34 +5431,6 @@ The pre-release version has been saved to: %1</source>
       <translation>Не вдалося розпакувати zip-файл:</translation>
     </message>
     <message>
-      <source>Install as Current Version</source>
-      <translation>Встановити як поточну версію</translation>
-    </message>
-    <message>
-      <source>Do you want to install this version as the current version?
-This will replace the existing emulator executable and copy all necessary files.</source>
-      <translation>Бажаєте встановити цю версію як поточну?
-Це замінить наявний виконуваний файл емулятора та скопіює всі необхідні файли.</translation>
-    </message>
-    <message>
-      <source>Some files could not be copied to the application directory.
-The version may not run correctly.</source>
-      <translation>Деякі файли не вдалося скопіювати до каталогу застосунку.
-Можливо, ця версія працюватиме некоректно.</translation>
-    </message>
-    <message>
-      <source>Version %1 has been installed with all files to:
-%2</source>
-      <translation>Версію %1 було встановлено з усіма файлами до:
-%2</translation>
-    </message>
-    <message>
-      <source>Version %1 has been installed to:
-%2</source>
-      <translation>Версію %1 було встановлено до:
-%2</translation>
-    </message>
-    <message>
       <source>Custom (ZIP)</source>
       <translation>Користувацький (ZIP)</translation>
     </message>
@@ -5539,24 +5449,38 @@ The version may not run correctly.</source>
     <message>
       <source>
 
-Set as current version with all files copied to app directory.</source>
-      <translation>
-
-Встановити як поточну версію з копіюванням усіх файлів до каталогу застосунку.</translation>
-    </message>
-    <message>
-      <source>
-
 To use this version, select it from the installed list.</source>
       <translation>
 
 Щоби використовувати цю версію, виберіть її зі встановленого списку.</translation>
     </message>
     <message>
-      <source>Failed to copy the selected version to the application directory.
-The version may not run correctly when launched.</source>
-      <translation>Не вдалося скопіювати вибрану версію до каталогу застосунку.
-Можливо, версія працюватиме некоректно після запуску.</translation>
+      <source>Use as Current Version</source>
+      <translation type="unfinished">Use as Current Version</translation>
+    </message>
+    <message>
+      <source>Do you want to use this version as the current version?</source>
+      <translation type="unfinished">Do you want to use this version as the current version?</translation>
+    </message>
+    <message>
+      <source>
+
+Set as current version.</source>
+      <translation type="unfinished">
+
+Set as current version.</translation>
+    </message>
+    <message>
+      <source>Version %1 downloaded and selected.
+Saved to: %2</source>
+      <translation type="unfinished">Version %1 downloaded and selected.
+Saved to: %2</translation>
+    </message>
+    <message>
+      <source>Pre-release (Nightly) downloaded and selected.
+Saved to: %1</source>
+      <translation type="unfinished">Pre-release (Nightly) downloaded and selected.
+Saved to: %1</translation>
     </message>
   </context>
   <context>
@@ -5660,127 +5584,127 @@ The version may not run correctly when launched.</source>
     <name>dimensions_dialog</name>
     <message>
       <source>Dimensions Manager</source>
-      <translation type="unfinished">Dimensions Manager</translation>
+      <translation>Керування Dimensions</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation type="unfinished">Active Dimensions Figures:</translation>
+      <translation>Активні фігури Dimensions:</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Немає</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Очистити</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Створити</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Завантажити</translation>
     </message>
     <message>
       <source>Move</source>
-      <translation type="unfinished">Move</translation>
+      <translation>Перемістити</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Невідома фігура</translation>
     </message>
     <message>
       <source>Select Dimensions File</source>
-      <translation type="unfinished">Select Dimensions File</translation>
+      <translation>Виберіть файл Dimensions</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Фігура Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Не вдалося відкрити файл фігури!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Не вдалося відкрити файл фігури (%1)!
+Файл може бути вже використаний на базі.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Не вдалося прочитати файл фігури!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Не вдалося прочитати файл фігури (%1)!
+Файл був замалим.</translation>
     </message>
   </context>
   <context>
     <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Творець фігур</translation>
     </message>
     <message>
       <source>Filter by Series:</source>
-      <translation type="unfinished">Filter by Series:</translation>
+      <translation>Фільтрувати за серією:</translation>
     </message>
     <message>
       <source>All</source>
-      <translation type="unfinished">All</translation>
+      <translation>Усі</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Невідомо--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Номер фігури:</translation>
     </message>
     <message>
       <source>Series:</source>
-      <translation type="unfinished">Series:</translation>
+      <translation>Серії:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Створити</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Скасувати</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Помилка конвертування значення</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>Введено недійсний номер фігури!</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
-      <translation type="unfinished">Series number entered is invalid!</translation>
+      <translation>Введено недійсний номер серії!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Створити файл фігури</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Фігура Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation type="unfinished">Failed to create figure file!</translation>
+      <translation>Не вдалося створити файл фігури!</translation>
     </message>
     <message>
       <source>Failed to create figure file:
 %1</source>
-      <translation type="unfinished">Failed to create figure file:
+      <translation>Не вдалося створити файл фігури:
 %1</translation>
     </message>
   </context>
@@ -5788,143 +5712,143 @@ File was too small.</translation>
     <name>infinity_dialog</name>
     <message>
       <source>Infinity Manager</source>
-      <translation type="unfinished">Infinity Manager</translation>
+      <translation>Керування Infinity</translation>
     </message>
     <message>
       <source>Active Infinity Figures:</source>
-      <translation type="unfinished">Active Infinity Figures:</translation>
+      <translation>Активні фігури Infinity:</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation type="unfinished">Play Set/Power Disc</translation>
+      <translation>Ігровий набір / Силовий диск</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation type="unfinished">Power Disc Two</translation>
+      <translation>Силовий диск 2</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation type="unfinished">Power Disc Three</translation>
+      <translation>Силовий диск 3</translation>
     </message>
     <message>
       <source>Player One</source>
-      <translation type="unfinished">Player One</translation>
+      <translation>Перший гравець</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation type="unfinished">Player One Ability One</translation>
+      <translation>1 здібність першого гравця</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation type="unfinished">Player One Ability Two</translation>
+      <translation>2 здібність першого гравця</translation>
     </message>
     <message>
       <source>Player Two</source>
-      <translation type="unfinished">Player Two</translation>
+      <translation>Другий гравець</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation type="unfinished">Player Two Ability One</translation>
+      <translation>1 здібність другого гравця</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation type="unfinished">Player Two Ability Two</translation>
+      <translation>2 здібність другого гравця</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Немає</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Очистити</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Створити</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Завантажити</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Невідома фігура</translation>
     </message>
     <message>
       <source>Select Infinity File</source>
-      <translation type="unfinished">Select Infinity File</translation>
+      <translation>Обрати файл Infinity</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Фігура Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Не вдалося відкрити файл фігури!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Не вдалося відкрити файл фігури (%1)!
+Файл може бути вже використаний на базі.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Не вдалося прочитати файл фігури!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Не вдалося прочитати файл зображення (%1)!
+Файл занадто малий.</translation>
     </message>
   </context>
   <context>
     <name>minifig_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Творець фігур</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Невідомо--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Номер фігури:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Створити</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Скасувати</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Помилка конвертування значення</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>Введено недійсний номер фігури!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Створити файл фігури</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Фігура Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation type="unfinished">Failed to create minifig file!</translation>
+      <translation>Не вдалося створити файл мініфігури!</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
 %1</source>
-      <translation type="unfinished">Failed to create minifig file:
+      <translation>Не вдалося створити файл мініфігури:
 %1</translation>
     </message>
   </context>
@@ -5932,75 +5856,75 @@ File was too small.</translation>
     <name>minifig_move_dialog</name>
     <message>
       <source>Figure Mover</source>
-      <translation type="unfinished">Figure Mover</translation>
+      <translation>Переміщення фігури</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Немає</translation>
     </message>
     <message>
       <source>Move Here</source>
-      <translation type="unfinished">Move Here</translation>
+      <translation>Перемістити сюди</translation>
     </message>
     <message>
       <source>Pick up and Place</source>
-      <translation type="unfinished">Pick up and Place</translation>
+      <translation>Підняти та поставити</translation>
     </message>
   </context>
   <context>
     <name>skylander_creator_dialog</name>
     <message>
       <source>Skylander Creator</source>
-      <translation type="unfinished">Skylander Creator</translation>
+      <translation>Творець Skylander</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Невідомо--</translation>
     </message>
     <message>
       <source>ID:</source>
-      <translation type="unfinished">ID:</translation>
+      <translation>ID:</translation>
     </message>
     <message>
       <source>Variant:</source>
-      <translation type="unfinished">Variant:</translation>
+      <translation>Варіант:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Створити</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Скасувати</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Помилка конвертування значення</translation>
     </message>
     <message>
       <source>ID entered is invalid!</source>
-      <translation type="unfinished">ID entered is invalid!</translation>
+      <translation>Введено невірний ідентифікатор!</translation>
     </message>
     <message>
       <source>Variant entered is invalid!</source>
-      <translation type="unfinished">Variant entered is invalid!</translation>
+      <translation>Введено невірний варіант!</translation>
     </message>
     <message>
       <source>Create Skylander File</source>
-      <translation type="unfinished">Create Skylander File</translation>
+      <translation>Створити файл Skylander</translation>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+      <translation>Об’єкт Skylander (*.sky);Усі файли (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
-      <translation type="unfinished">Failed to create skylander file!</translation>
+      <translation>Не вдалося створити файл skylander!</translation>
     </message>
     <message>
       <source>Failed to create skylander file:
 %1</source>
-      <translation type="unfinished">Failed to create skylander file:
+      <translation>Не вдалося створити файл skylander:
 %1</translation>
     </message>
   </context>
@@ -6008,63 +5932,63 @@ File was too small.</translation>
     <name>skylander_dialog</name>
     <message>
       <source>Skylanders Manager</source>
-      <translation type="unfinished">Skylanders Manager</translation>
+      <translation>Керування Skylanders</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation type="unfinished">Active Portal Skylanders:</translation>
+      <translation>Активні портали Skylanders:</translation>
     </message>
     <message>
       <source>Skylander %1</source>
-      <translation type="unfinished">Skylander %1</translation>
+      <translation>Skylander %1</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Очистити</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Створити</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Завантажити</translation>
     </message>
     <message>
       <source>Select Skylander File</source>
-      <translation type="unfinished">Select Skylander File</translation>
+      <translation>Оберіть файл Skylander</translation>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
-      <translation type="unfinished">Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</translation>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);Усі файли (*)</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
-      <translation type="unfinished">Failed to open the skylander file!</translation>
+      <translation>Не вдалося відкрити файл skylander!</translation>
     </message>
     <message>
       <source>Failed to open the skylander file(%1)!
 File may already be in use on the portal.</source>
-      <translation type="unfinished">Failed to open the skylander file(%1)!
-File may already be in use on the portal.</translation>
+      <translation>Не вдалося відкрити файл skylander (%1)!
+Файл уже використовується на порталі.</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
-      <translation type="unfinished">Failed to read the skylander file!</translation>
+      <translation>Не вдалося прочитати файл skylander!</translation>
     </message>
     <message>
       <source>Failed to read the skylander file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the skylander file(%1)!
-File was too small.</translation>
+      <translation>Не вдалося прочитати файл skylander (%1)!
+Файл був замалим.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
-      <translation type="unfinished">Unknown (Id:%1 Var:%2)</translation>
+      <translation>Невідомо (Id:%1 Вар:%2)</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Немає</translation>
     </message>
   </context>
 </TS>
