@@ -3324,32 +3324,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Typ</translation>
     </message>
     <message>
-      <source>Version Activated</source>
-      <translation>Version aktiviert</translation>
-    </message>
-    <message>
-      <source>The selected version is now active.</source>
-      <translation>Die ausgewählte Version ist jetzt aktiv.</translation>
-    </message>
-    <message>
-      <source>Copy Failed</source>
-      <translation>Kopieren fehlgeschlagen</translation>
-    </message>
-    <message>
-      <source>Unable to activate selected version.</source>
-      <translation>Die ausgewählte Version konnte nicht aktiviert werden.</translation>
-    </message>
-    <message>
-      <source>Executable does not exist:
-%1</source>
-      <translation>Ausführbare Datei existiert nicht:
-%1</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.</source>
-      <translation>Fehler beim Kopieren der ausführbaren Datei in das Anwendungsverzeichnis.</translation>
-    </message>
-    <message>
       <source>unknown</source>
       <translation>unbekannt</translation>
     </message>
@@ -5386,32 +5360,8 @@ The next steps ask where your games live and which emulator version to use. You 
       <translation type="unfinished">Failed to copy executable into versions folder.</translation>
     </message>
     <message>
-      <source>Warning</source>
-      <translation>Warnung</translation>
-    </message>
-    <message>
-      <source>Failed to install executable into application directory.
-The custom build is still available under:
-%1</source>
-      <translation type="unfinished">Failed to install executable into application directory.
-The custom build is still available under:
-%1</translation>
-    </message>
-    <message>
       <source>Could not find executable in extracted files.</source>
       <translation>Konnte die ausführbare Datei nicht in den extrahierten Dateien finden.</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.
-The version has been saved to: %1</source>
-      <translation type="unfinished">Failed to copy executable to application directory.
-The version has been saved to: %1</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.
-The pre-release version has been saved to: %1</source>
-      <translation type="unfinished">Failed to copy executable to application directory.
-The pre-release version has been saved to: %1</translation>
     </message>
     <message>
       <source>Custom version installed successfully:</source>
@@ -5434,20 +5384,8 @@ The pre-release version has been saved to: %1</translation>
       <translation>Ausführbare Datei wurde nicht in extrahierten Dateien gefunden.</translation>
     </message>
     <message>
-      <source>Version %1 has been:</source>
-      <translation>Version %1 wurde:</translation>
-    </message>
-    <message>
-      <source>1. Downloaded to:</source>
-      <translation>1. Downgeloadet nach:</translation>
-    </message>
-    <message>
       <source>Extraction failure:</source>
       <translation>Entpacken fehlgeschlagen:</translation>
-    </message>
-    <message>
-      <source>Pre-release (Nightly) has been:</source>
-      <translation>Vorabversion (Nightly) wurde:</translation>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
@@ -5474,34 +5412,6 @@ The pre-release version has been saved to: %1</translation>
       <translation>Entpacken der Zip-Datei fehlgeschlagen:</translation>
     </message>
     <message>
-      <source>Install as Current Version</source>
-      <translation>Als aktuelle Version installieren</translation>
-    </message>
-    <message>
-      <source>Do you want to install this version as the current version?
-This will replace the existing emulator executable and copy all necessary files.</source>
-      <translation type="unfinished">Do you want to install this version as the current version?
-This will replace the existing emulator executable and copy all necessary files.</translation>
-    </message>
-    <message>
-      <source>Some files could not be copied to the application directory.
-The version may not run correctly.</source>
-      <translation type="unfinished">Some files could not be copied to the application directory.
-The version may not run correctly.</translation>
-    </message>
-    <message>
-      <source>Version %1 has been installed with all files to:
-%2</source>
-      <translation>Version %1 wurde mit allen Dateien installiert nach:
-%2</translation>
-    </message>
-    <message>
-      <source>Version %1 has been installed to:
-%2</source>
-      <translation>Version %1 wurde installiert nach:
-%2</translation>
-    </message>
-    <message>
       <source>Custom (ZIP)</source>
       <translation>Benutzerdefiniert (ZIP)</translation>
     </message>
@@ -5520,24 +5430,38 @@ The version may not run correctly.</translation>
     <message>
       <source>
 
-Set as current version with all files copied to app directory.</source>
-      <translation type="unfinished">
-
-Set as current version with all files copied to app directory.</translation>
-    </message>
-    <message>
-      <source>
-
 To use this version, select it from the installed list.</source>
       <translation type="unfinished">
 
 To use this version, select it from the installed list.</translation>
     </message>
     <message>
-      <source>Failed to copy the selected version to the application directory.
-The version may not run correctly when launched.</source>
-      <translation type="unfinished">Failed to copy the selected version to the application directory.
-The version may not run correctly when launched.</translation>
+      <source>Use as Current Version</source>
+      <translation type="unfinished">Use as Current Version</translation>
+    </message>
+    <message>
+      <source>Do you want to use this version as the current version?</source>
+      <translation type="unfinished">Do you want to use this version as the current version?</translation>
+    </message>
+    <message>
+      <source>
+
+Set as current version.</source>
+      <translation type="unfinished">
+
+Set as current version.</translation>
+    </message>
+    <message>
+      <source>Version %1 downloaded and selected.
+Saved to: %2</source>
+      <translation type="unfinished">Version %1 downloaded and selected.
+Saved to: %2</translation>
+    </message>
+    <message>
+      <source>Pre-release (Nightly) downloaded and selected.
+Saved to: %1</source>
+      <translation type="unfinished">Pre-release (Nightly) downloaded and selected.
+Saved to: %1</translation>
     </message>
   </context>
   <context>

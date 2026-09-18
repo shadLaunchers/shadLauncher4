@@ -3313,32 +3313,6 @@ Select an emulator version from the right panel.</source>
       <translation>类型</translation>
     </message>
     <message>
-      <source>Version Activated</source>
-      <translation>版本已激活</translation>
-    </message>
-    <message>
-      <source>The selected version is now active.</source>
-      <translation>选定的版本已激活。</translation>
-    </message>
-    <message>
-      <source>Copy Failed</source>
-      <translation>复制失败</translation>
-    </message>
-    <message>
-      <source>Unable to activate selected version.</source>
-      <translation>无法激活选定版本。</translation>
-    </message>
-    <message>
-      <source>Executable does not exist:
-%1</source>
-      <translation>可执行文件不存在：
-%1</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.</source>
-      <translation type="unfinished">Failed to copy executable to application directory.</translation>
-    </message>
-    <message>
       <source>unknown</source>
       <translation>未知</translation>
     </message>
@@ -5378,32 +5352,8 @@ The next steps ask where your games live and which emulator version to use. You 
       <translation>无法将可执行文件复制到版本文件夹。</translation>
     </message>
     <message>
-      <source>Warning</source>
-      <translation>警告</translation>
-    </message>
-    <message>
-      <source>Failed to install executable into application directory.
-The custom build is still available under:
-%1</source>
-      <translation>无法将可执行文件安装到应用程序目录。
-自定义构建依然可用于：
-%1</translation>
-    </message>
-    <message>
       <source>Could not find executable in extracted files.</source>
       <translation>无法在已提取的文件中找到可执行文件。</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.
-The version has been saved to: %1</source>
-      <translation>复制可执行文件到应用程序目录失败。
-当前版本文件已保存到: %1</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.
-The pre-release version has been saved to: %1</source>
-      <translation>复制可执行文件到应用程序目录失败。
-当前预发布版本文件已保存到: %1</translation>
     </message>
     <message>
       <source>Custom version installed successfully:</source>
@@ -5426,20 +5376,8 @@ The pre-release version has been saved to: %1</source>
       <translation>在提取的文件中无法找到可执行文件。</translation>
     </message>
     <message>
-      <source>Version %1 has been:</source>
-      <translation>版本 %1 已：</translation>
-    </message>
-    <message>
-      <source>1. Downloaded to:</source>
-      <translation>1. 下载到：</translation>
-    </message>
-    <message>
       <source>Extraction failure:</source>
       <translation>解压失败：</translation>
-    </message>
-    <message>
-      <source>Pre-release (Nightly) has been:</source>
-      <translation>预发布（夜间）版已：</translation>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
@@ -5466,33 +5404,6 @@ The pre-release version has been saved to: %1</source>
       <translation type="unfinished">Failed to extract zip file:</translation>
     </message>
     <message>
-      <source>Install as Current Version</source>
-      <translation>安装为当前版本</translation>
-    </message>
-    <message>
-      <source>Do you want to install this version as the current version?
-This will replace the existing emulator executable and copy all necessary files.</source>
-      <translation>您想要将此版本安装为当前版本吗？
-这将替换现有的模拟器可执行文件并复制所有必要的文件。</translation>
-    </message>
-    <message>
-      <source>Some files could not be copied to the application directory.
-The version may not run correctly.</source>
-      <translation>某些文件无法复制到应用程序目录。
-此版本可能无法正常运行。</translation>
-    </message>
-    <message>
-      <source>Version %1 has been installed with all files to:
-%2</source>
-      <translation>版本%1的所有文件已经被安装到：%2</translation>
-    </message>
-    <message>
-      <source>Version %1 has been installed to:
-%2</source>
-      <translation>版本 %1 已经安装到:
-%2</translation>
-    </message>
-    <message>
       <source>Custom (ZIP)</source>
       <translation type="unfinished">Custom (ZIP)</translation>
     </message>
@@ -5511,24 +5422,38 @@ The version may not run correctly.</source>
     <message>
       <source>
 
-Set as current version with all files copied to app directory.</source>
-      <translation type="unfinished">
-
-Set as current version with all files copied to app directory.</translation>
-    </message>
-    <message>
-      <source>
-
 To use this version, select it from the installed list.</source>
       <translation type="unfinished">
 
 To use this version, select it from the installed list.</translation>
     </message>
     <message>
-      <source>Failed to copy the selected version to the application directory.
-The version may not run correctly when launched.</source>
-      <translation type="unfinished">Failed to copy the selected version to the application directory.
-The version may not run correctly when launched.</translation>
+      <source>Use as Current Version</source>
+      <translation type="unfinished">Use as Current Version</translation>
+    </message>
+    <message>
+      <source>Do you want to use this version as the current version?</source>
+      <translation type="unfinished">Do you want to use this version as the current version?</translation>
+    </message>
+    <message>
+      <source>
+
+Set as current version.</source>
+      <translation type="unfinished">
+
+Set as current version.</translation>
+    </message>
+    <message>
+      <source>Version %1 downloaded and selected.
+Saved to: %2</source>
+      <translation type="unfinished">Version %1 downloaded and selected.
+Saved to: %2</translation>
+    </message>
+    <message>
+      <source>Pre-release (Nightly) downloaded and selected.
+Saved to: %1</source>
+      <translation type="unfinished">Pre-release (Nightly) downloaded and selected.
+Saved to: %1</translation>
     </message>
   </context>
   <context>
