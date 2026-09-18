@@ -4665,113 +4665,113 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
       <source>Use Circle Button to Confirm:\nSwaps the Circle and Cross buttons&apos; roles so Circle acts as the confirm/enter button, matching Japanese console conventions.</source>
-      <translation type="unfinished">Use Circle Button to Confirm:\nSwaps the Circle and Cross buttons&apos; roles so Circle acts as the confirm/enter button, matching Japanese console conventions.</translation>
+      <translation>Використовувати кнопку «Коло» для підтвердження:\nЗмінює ролі кнопок «Коло» та «Хрестик» так, щоб «Коло» слугувало кнопкою підтвердження/вводу, що відповідає стандартам японських консолей.</translation>
     </message>
     <message>
       <source>IME:\nSettings for the on-screen keyboard/input method editor used by games for text entry.</source>
-      <translation type="unfinished">IME:\nSettings for the on-screen keyboard/input method editor used by games for text entry.</translation>
+      <translation>IME:\nНалаштування екранної клавіатури / редактора методів вводу, які використовуються в іграх для введення тексту.</translation>
     </message>
     <message>
       <source>Enable IME Accessibility:\nEnables accessibility features for the on-screen keyboard, such as additional audio/visual cues.</source>
-      <translation type="unfinished">Enable IME Accessibility:\nEnables accessibility features for the on-screen keyboard, such as additional audio/visual cues.</translation>
+      <translation>Увімкнути спеціальні можливості IME:\nВмикає функції доступності для екранної клавіатури, як-от додаткові аудіо- та візуальні підказки.</translation>
     </message>
     <message>
       <source>Enable IME URL/Email Short Panel:\nShows a shortened on-screen keyboard layout optimized for entering URLs and email addresses.</source>
-      <translation type="unfinished">Enable IME URL/Email Short Panel:\nShows a shortened on-screen keyboard layout optimized for entering URLs and email addresses.</translation>
+      <translation>Увімкнути коротку панель IME для URL / пошти:\nПоказує скорочену розкладку екранної клавіатури, оптимізовану для введення URL-адрес та поштових адрес.</translation>
     </message>
     <message>
       <source>Camera Device:\nSelects which connected camera device the emulator exposes to games as the PlayStation Camera.</source>
-      <translation type="unfinished">Camera Device:\nSelects which connected camera device the emulator exposes to games as the PlayStation Camera.</translation>
+      <translation>Камера:\nВибір під’єднаної камери, яку емулятор представлятиме в іграх як PlayStation Camera.</translation>
     </message>
     <message>
       <source>Debug:\nTools for diagnosing crashes and inspecting emulator behavior. Intended for troubleshooting and development, not everyday use.</source>
-      <translation type="unfinished">Debug:\nTools for diagnosing crashes and inspecting emulator behavior. Intended for troubleshooting and development, not everyday use.</translation>
+      <translation>Налагодження:\nІнструменти для діагностики збоїв та перевірки поведінки емулятора. Призначені для усунення несправностей і розробки, а не для повсякденного використання.</translation>
     </message>
     <message>
       <source>Advanced:\nLower-level debugging options for diagnosing rendering issues and crashes.</source>
-      <translation type="unfinished">Advanced:\nLower-level debugging options for diagnosing rendering issues and crashes.</translation>
+      <translation>Додатково:\nПараметри налагодження нижнього рівня для діагностики проблем із візуалізацією та збоїв.</translation>
     </message>
     <message>
       <source>Vulkan Validation:\nEnables Vulkan&apos;s built-in validation layers to catch incorrect API usage. Reduces performance; requires the Vulkan SDK to be installed.</source>
-      <translation type="unfinished">Vulkan Validation:\nEnables Vulkan&apos;s built-in validation layers to catch incorrect API usage. Reduces performance; requires the Vulkan SDK to be installed.</translation>
+      <translation>Перевірка Vulkan:\nВмикає вбудовані шари перевірки Vulkan для виявлення некоректного використання API. Знижує продуктивність; потребує встановленого Vulkan SDK.</translation>
     </message>
     <message>
       <source>Experimental:\nFeatures that are still in development or considered unstable. Use with caution - these can cause crashes or unexpected behavior.</source>
-      <translation type="unfinished">Experimental:\nFeatures that are still in development or considered unstable. Use with caution - these can cause crashes or unexpected behavior.</translation>
+      <translation>Експериментальні:\nФункції, які все ще перебувають у стадії розробки або вважаються нестабільними. Використовуйте з обережністю — вони можуть спричинити збої або неочікувану поведінку.</translation>
     </message>
     <message>
       <source>ShadNet Server Settings:\nConfigure the server addresses used to connect to a ShadNet-compatible online service. Only used while ShadNet is enabled.</source>
-      <translation type="unfinished">ShadNet Server Settings:\nConfigure the server addresses used to connect to a ShadNet-compatible online service. Only used while ShadNet is enabled.</translation>
+      <translation>Налаштування сервера ShadNet:\nНалаштуйте адреси серверів, які використовуються для з’єднання з онлайн-сервісом, сумісного з ShadNet. Використовується лише тоді, коли ShadNet увімкнено.</translation>
     </message>
     <message>
       <source>Server:\nThe address of the ShadNet server to connect to.</source>
-      <translation type="unfinished">Server:\nThe address of the ShadNet server to connect to.</translation>
+      <translation>Сервер:\nАдреса сервера ShadNet для з’єднання.</translation>
     </message>
     <message>
       <source>WebAPI Server:\nThe address of the ShadNet WebAPI server used for account and session management.</source>
-      <translation type="unfinished">WebAPI Server:\nThe address of the ShadNet WebAPI server used for account and session management.</translation>
+      <translation>Сервер WebAPI:\nАдреса сервера ShadNet WebAPI, що використовується для керування обліковими записами та сеансами.</translation>
     </message>
     <message>
       <source>Signaling Info:\nConnection details used for ShadNet&apos;s peer-to-peer signaling/matchmaking.</source>
-      <translation type="unfinished">Signaling Info:\nConnection details used for ShadNet&apos;s peer-to-peer signaling/matchmaking.</translation>
+      <translation>Інформація про сигналізацію:\nДані з’єднання, що використовуються для пірингової сигналізації / підбору гравців у ShadNet.</translation>
     </message>
     <message>
       <source>Enable UPnP:\nAutomatically configure port forwarding on your router via UPnP for ShadNet&apos;s networked features.</source>
-      <translation type="unfinished">Enable UPnP:\nAutomatically configure port forwarding on your router via UPnP for ShadNet&apos;s networked features.</translation>
+      <translation>Увімкнути UPnP:\nАвтоматично налаштовувати переадресацію портів на вашому роутері через UPnP для мережевих функцій ShadNet.</translation>
     </message>
     <message>
       <source>Console Language:\nSets the language that PS4 games run in - localized titles, icons and changelogs follow it.\nThis is separate from the launcher&apos;s own interface language.\nIt is best set to a language the game actually supports, which varies by region.</source>
-      <translation type="unfinished">Console Language:\nSets the language that PS4 games run in - localized titles, icons and changelogs follow it.\nThis is separate from the launcher&apos;s own interface language.\nIt is best set to a language the game actually supports, which varies by region.</translation>
+      <translation>Мова консолі:\nВстановлює мову, якою запускаються ігри для PS4 — відповідно до неї показуються локалізовані назви, значки та списки змін.\nЦей параметр не залежить від мови інтерфейсу самого лаунчера.\nНайкраще вибрати мову, яку гра підтримує фактично, що залежить від регіону.</translation>
     </message>
     <message>
       <source>Log Flush Level:\nSets the log level for which logs at or above will be flushed.</source>
-      <translation type="unfinished">Log Flush Level:\nSets the log level for which logs at or above will be flushed.</translation>
+      <translation>Рівень скидання журналів:\nВстановлює рівень журналювання, при досягненні або перевищенні якого файли журналу будуть примусово записані на диск.</translation>
     </message>
     <message>
       <source>Big Picture Scale:\nScales the Big Picture interface, in percent of its normal size.</source>
-      <translation type="unfinished">Big Picture Scale:\nScales the Big Picture interface, in percent of its normal size.</translation>
+      <translation>Масштаб Big Picture:\nМасштабує інтерфейс Big Picture у відсотках від його звичайного розміру.</translation>
     </message>
     <message>
       <source>Additional FMem Allocation:\nForces allocation of the specified amount of additional FMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional FMem Allocation:\nForces allocation of the specified amount of additional FMem. Crashes or causes issues in some games.</translation>
+      <translation>Додаткове виділення FMem:\nПримусово виділяє вказаний обсяг додаткової пам’яті FMem. У деяких іграх це призводить до збоїв або проблем.</translation>
     </message>
   </context>
   <context>
     <name>SetupWizard</name>
     <message>
       <source>shadLauncher4 Setup</source>
-      <translation type="unfinished">shadLauncher4 Setup</translation>
+      <translation>Налаштування shadLauncher4</translation>
     </message>
   </context>
   <context>
     <name>SetupWizardConclusionPage</name>
     <message>
       <source>All set</source>
-      <translation type="unfinished">All set</translation>
+      <translation>Все готово</translation>
     </message>
     <message>
       <source>Review your choices and finish.</source>
-      <translation type="unfinished">Review your choices and finish.</translation>
+      <translation>Перегляньте свій вибір і завершіть.</translation>
     </message>
     <message>
       <source>shadLauncher4 is ready to use. Everything below can be changed later in Settings.</source>
-      <translation type="unfinished">shadLauncher4 is ready to use. Everything below can be changed later in Settings.</translation>
+      <translation>shadLauncher4 готовий до використання. Усе, що наведено нижче, можна змінити пізніше в Налаштуваннях.</translation>
     </message>
     <message>
       <source>(none)</source>
-      <translation type="unfinished">(none)</translation>
+      <translation>(немає)</translation>
     </message>
     <message>
       <source>(none selected)</source>
-      <translation type="unfinished">(none selected)</translation>
+      <translation>(нічого не вибрано)</translation>
     </message>
     <message>
       <source>Games:</source>
-      <translation type="unfinished">Games:</translation>
+      <translation>Ігри:</translation>
     </message>
     <message>
       <source>DLC:</source>
-      <translation type="unfinished">DLC:</translation>
+      <translation>Доповнення:</translation>
     </message>
     <message>
       <source>Emulator versions:</source>
