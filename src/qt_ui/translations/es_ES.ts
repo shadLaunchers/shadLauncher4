@@ -5438,31 +5438,31 @@ Para utilizar esta versión, debes seleccionarla en la lista de versiones instal
     </message>
     <message>
       <source>Use as Current Version</source>
-      <translation type="unfinished">Use as Current Version</translation>
+      <translation>Utilizar como versión actual</translation>
     </message>
     <message>
       <source>Do you want to use this version as the current version?</source>
-      <translation type="unfinished">Do you want to use this version as the current version?</translation>
+      <translation>¿Deseas utilizar esta versión como la actual?</translation>
     </message>
     <message>
       <source>
 
 Set as current version.</source>
-      <translation type="unfinished">
+      <translation>
 
-Set as current version.</translation>
+Utilizar como versión actual.</translation>
     </message>
     <message>
       <source>Version %1 downloaded and selected.
 Saved to: %2</source>
-      <translation type="unfinished">Version %1 downloaded and selected.
-Saved to: %2</translation>
+      <translation>Versión %1 descargada y seleccionada.
+Guardada en: %2</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) downloaded and selected.
 Saved to: %1</source>
-      <translation type="unfinished">Pre-release (Nightly) downloaded and selected.
-Saved to: %1</translation>
+      <translation>Versión prelanzamiento (&quot;Nightly&quot;) descargada y seleccionada.
+Guardada en: %1</translation>
     </message>
   </context>
   <context>
