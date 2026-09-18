@@ -363,7 +363,7 @@
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation>Nenhum pre-release encontrado.</translation>
+      <translation>Nenhuma pre-release encontrada.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
@@ -5441,31 +5441,31 @@ Para usar esta versão, selecione-a na lista de versões instaladas.</translatio
     </message>
     <message>
       <source>Use as Current Version</source>
-      <translation type="unfinished">Use as Current Version</translation>
+      <translation>Usar como Versão Atual</translation>
     </message>
     <message>
       <source>Do you want to use this version as the current version?</source>
-      <translation type="unfinished">Do you want to use this version as the current version?</translation>
+      <translation>Deseja usar esta versão como a versão atual?</translation>
     </message>
     <message>
       <source>
 
 Set as current version.</source>
-      <translation type="unfinished">
+      <translation>
 
-Set as current version.</translation>
+Definir como versão atual.</translation>
     </message>
     <message>
       <source>Version %1 downloaded and selected.
 Saved to: %2</source>
-      <translation type="unfinished">Version %1 downloaded and selected.
-Saved to: %2</translation>
+      <translation>Versão %1 baixada e selecionada.
+Salva em: %2</translation>
     </message>
     <message>
       <source>Pre-release (Nightly) downloaded and selected.
 Saved to: %1</source>
-      <translation type="unfinished">Pre-release (Nightly) downloaded and selected.
-Saved to: %1</translation>
+      <translation>Pre-release (Nightly) baixada e selecionada.
+Salva em: %1</translation>
     </message>
   </context>
   <context>
