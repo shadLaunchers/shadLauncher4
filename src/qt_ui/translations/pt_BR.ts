@@ -3327,32 +3327,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Tipo</translation>
     </message>
     <message>
-      <source>Version Activated</source>
-      <translation>Versão Ativada</translation>
-    </message>
-    <message>
-      <source>The selected version is now active.</source>
-      <translation>A versão selecionada agora está ativa.</translation>
-    </message>
-    <message>
-      <source>Copy Failed</source>
-      <translation>Falha ao Copiar</translation>
-    </message>
-    <message>
-      <source>Unable to activate selected version.</source>
-      <translation>Não foi possível ativar a versão selecionada.</translation>
-    </message>
-    <message>
-      <source>Executable does not exist:
-%1</source>
-      <translation>Executável não existe:
-%1</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.</source>
-      <translation>Falha ao copiar o executável para o diretório da aplicação.</translation>
-    </message>
-    <message>
       <source>unknown</source>
       <translation>desconhecido</translation>
     </message>
@@ -5390,32 +5364,8 @@ As próximas etapas solicitam a localização dos seus jogos e qual versão do e
       <translation>Falha ao copiar o executável para a pasta de versões.</translation>
     </message>
     <message>
-      <source>Warning</source>
-      <translation>Aviso</translation>
-    </message>
-    <message>
-      <source>Failed to install executable into application directory.
-The custom build is still available under:
-%1</source>
-      <translation>Falha ao instalar o executável no diretório da aplicação.
-A compilação personalizada ainda está disponível em:
-%1</translation>
-    </message>
-    <message>
       <source>Could not find executable in extracted files.</source>
       <translation>Não foi possível encontrar o executável nos arquivos extraídos.</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.
-The version has been saved to: %1</source>
-      <translation>Falha ao copiar o executável para o diretório da aplicação.
-A versão de pré-lançamento foi salva em: %1</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.
-The pre-release version has been saved to: %1</source>
-      <translation>Falha ao copiar o executável para o diretório da aplicação.
-A versão de pre-release foi salva em: %1</translation>
     </message>
     <message>
       <source>Custom version installed successfully:</source>
@@ -5438,20 +5388,8 @@ A versão de pre-release foi salva em: %1</translation>
       <translation>Executável não encontrado nos arquivos extraídos.</translation>
     </message>
     <message>
-      <source>Version %1 has been:</source>
-      <translation>Versão %1 foi:</translation>
-    </message>
-    <message>
-      <source>1. Downloaded to:</source>
-      <translation>1. Baixado em:</translation>
-    </message>
-    <message>
       <source>Extraction failure:</source>
       <translation>Falha na extração:</translation>
-    </message>
-    <message>
-      <source>Pre-release (Nightly) has been:</source>
-      <translation>Pre-release (Nightly) foi:</translation>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
@@ -5478,34 +5416,6 @@ A versão de pre-release foi salva em: %1</translation>
       <translation>Falha ao extrair arquivo zip:</translation>
     </message>
     <message>
-      <source>Install as Current Version</source>
-      <translation>Instalar como Versão Atual</translation>
-    </message>
-    <message>
-      <source>Do you want to install this version as the current version?
-This will replace the existing emulator executable and copy all necessary files.</source>
-      <translation>Deseja instalar esta versão como a versão atual?
-Isso substituirá o executável do emulador existente e copiará todos os arquivos necessários.</translation>
-    </message>
-    <message>
-      <source>Some files could not be copied to the application directory.
-The version may not run correctly.</source>
-      <translation>Não foi possível copiar alguns arquivos para o diretório do aplicativo.
-A versão pode não executar corretamente.</translation>
-    </message>
-    <message>
-      <source>Version %1 has been installed with all files to:
-%2</source>
-      <translation>A versão %1 foi instalada com todos os arquivos em:
-%2</translation>
-    </message>
-    <message>
-      <source>Version %1 has been installed to:
-%2</source>
-      <translation>A versão %1 foi instalada em:
-%2</translation>
-    </message>
-    <message>
       <source>Custom (ZIP)</source>
       <translation>Personalizado (ZIP)</translation>
     </message>
@@ -5524,24 +5434,38 @@ A versão pode não executar corretamente.</translation>
     <message>
       <source>
 
-Set as current version with all files copied to app directory.</source>
-      <translation>
-
-Define a versão atual com todos os arquivos copiados para o diretório do aplicativo.</translation>
-    </message>
-    <message>
-      <source>
-
 To use this version, select it from the installed list.</source>
       <translation>
 
 Para usar esta versão, selecione-a na lista de versões instaladas.</translation>
     </message>
     <message>
-      <source>Failed to copy the selected version to the application directory.
-The version may not run correctly when launched.</source>
-      <translation>Falha ao copiar a versão selecionada para o diretório do aplicativo.
-A versão pode não funcionar corretamente ao ser iniciada.</translation>
+      <source>Use as Current Version</source>
+      <translation type="unfinished">Use as Current Version</translation>
+    </message>
+    <message>
+      <source>Do you want to use this version as the current version?</source>
+      <translation type="unfinished">Do you want to use this version as the current version?</translation>
+    </message>
+    <message>
+      <source>
+
+Set as current version.</source>
+      <translation type="unfinished">
+
+Set as current version.</translation>
+    </message>
+    <message>
+      <source>Version %1 downloaded and selected.
+Saved to: %2</source>
+      <translation type="unfinished">Version %1 downloaded and selected.
+Saved to: %2</translation>
+    </message>
+    <message>
+      <source>Pre-release (Nightly) downloaded and selected.
+Saved to: %1</source>
+      <translation type="unfinished">Pre-release (Nightly) downloaded and selected.
+Saved to: %1</translation>
     </message>
   </context>
   <context>
