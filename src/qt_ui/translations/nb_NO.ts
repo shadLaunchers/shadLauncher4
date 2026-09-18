@@ -3327,32 +3327,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Type</translation>
     </message>
     <message>
-      <source>Version Activated</source>
-      <translation>Versjon i bruk</translation>
-    </message>
-    <message>
-      <source>The selected version is now active.</source>
-      <translation>Den valgte versjonen er nå i bruk.</translation>
-    </message>
-    <message>
-      <source>Copy Failed</source>
-      <translation>Feil ved kopiering</translation>
-    </message>
-    <message>
-      <source>Unable to activate selected version.</source>
-      <translation>Klarte ikke ta i bruk valgt versjon.</translation>
-    </message>
-    <message>
-      <source>Executable does not exist:
-%1</source>
-      <translation>Programfila finnes ikke:
-%1</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.</source>
-      <translation>Klarte ikke kopiere programfila til programmappa.</translation>
-    </message>
-    <message>
       <source>unknown</source>
       <translation>ukjent</translation>
     </message>
@@ -5389,32 +5363,8 @@ The next steps ask where your games live and which emulator version to use. You 
       <translation>Klarte ikke kopiere programfila til versjonsmappa.</translation>
     </message>
     <message>
-      <source>Warning</source>
-      <translation>Advarsel</translation>
-    </message>
-    <message>
-      <source>Failed to install executable into application directory.
-The custom build is still available under:
-%1</source>
-      <translation>Klarte ikke installere programfila til programmappa.
-Den tilpassede versjonen er fremdeles tilgjengelig under:
-%1</translation>
-    </message>
-    <message>
       <source>Could not find executable in extracted files.</source>
       <translation>Klarte ikke finne programfila i de utpakkede filene.</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.
-The version has been saved to: %1</source>
-      <translation>Klarte ikke kopiere programfila til programmappa.
-Versjonen har blitt lagret til: %1</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable to application directory.
-The pre-release version has been saved to: %1</source>
-      <translation>Klarte ikke kopiere programfila til programmappa.
-Forhåndsutgivelsen har blitt lagret til: %1</translation>
     </message>
     <message>
       <source>Custom version installed successfully:</source>
@@ -5437,20 +5387,8 @@ Forhåndsutgivelsen har blitt lagret til: %1</translation>
       <translation>Fant ikke programfila i de utpakkede filene.</translation>
     </message>
     <message>
-      <source>Version %1 has been:</source>
-      <translation>Versjon %1 har blitt:</translation>
-    </message>
-    <message>
-      <source>1. Downloaded to:</source>
-      <translation>1. lastet ned til:</translation>
-    </message>
-    <message>
       <source>Extraction failure:</source>
       <translation>Feil ved utpakking:</translation>
-    </message>
-    <message>
-      <source>Pre-release (Nightly) has been:</source>
-      <translation>Forhåndsutgivelsen (nattlig) har blitt:</translation>
     </message>
     <message>
       <source>Executable (*.exe);;Zip Archive (*.zip)</source>
@@ -5477,34 +5415,6 @@ Forhåndsutgivelsen har blitt lagret til: %1</translation>
       <translation>Klarte ikke pakke ut ZIP-fil:</translation>
     </message>
     <message>
-      <source>Install as Current Version</source>
-      <translation>Installer som gjeldende versjon</translation>
-    </message>
-    <message>
-      <source>Do you want to install this version as the current version?
-This will replace the existing emulator executable and copy all necessary files.</source>
-      <translation>Vil du installere denne versjonen som gjeldende versjon?
-Dette erstatter den eksisterende emulator programfila og kopierer alle nødvendige filer.</translation>
-    </message>
-    <message>
-      <source>Some files could not be copied to the application directory.
-The version may not run correctly.</source>
-      <translation>Klarte ikke kopiere noen filer til programmappa.
-Versjonen fungerer kanskje ikke riktig.</translation>
-    </message>
-    <message>
-      <source>Version %1 has been installed with all files to:
-%2</source>
-      <translation>Versjon %1 har blitt installert med alle filer til:
-%2</translation>
-    </message>
-    <message>
-      <source>Version %1 has been installed to:
-%2</source>
-      <translation>Versjon %1 har blitt installert til:
-%2</translation>
-    </message>
-    <message>
       <source>Custom (ZIP)</source>
       <translation>Tilpasset (ZIP)</translation>
     </message>
@@ -5523,24 +5433,38 @@ Versjonen fungerer kanskje ikke riktig.</translation>
     <message>
       <source>
 
-Set as current version with all files copied to app directory.</source>
-      <translation>
-
-Velg som gjeldende versjon med alle filer kopiert til programmappa.</translation>
-    </message>
-    <message>
-      <source>
-
 To use this version, select it from the installed list.</source>
       <translation>
 
 For å bruke denne versjonen, velg den fra lista over installeringer.</translation>
     </message>
     <message>
-      <source>Failed to copy the selected version to the application directory.
-The version may not run correctly when launched.</source>
-      <translation>Klarte ikke kopiere den valgte versjonen fra programmappa.
-Versjonen fungerer kanskje ikke riktig ved oppstart.</translation>
+      <source>Use as Current Version</source>
+      <translation type="unfinished">Use as Current Version</translation>
+    </message>
+    <message>
+      <source>Do you want to use this version as the current version?</source>
+      <translation type="unfinished">Do you want to use this version as the current version?</translation>
+    </message>
+    <message>
+      <source>
+
+Set as current version.</source>
+      <translation type="unfinished">
+
+Set as current version.</translation>
+    </message>
+    <message>
+      <source>Version %1 downloaded and selected.
+Saved to: %2</source>
+      <translation type="unfinished">Version %1 downloaded and selected.
+Saved to: %2</translation>
+    </message>
+    <message>
+      <source>Pre-release (Nightly) downloaded and selected.
+Saved to: %1</source>
+      <translation type="unfinished">Pre-release (Nightly) downloaded and selected.
+Saved to: %1</translation>
     </message>
   </context>
   <context>
