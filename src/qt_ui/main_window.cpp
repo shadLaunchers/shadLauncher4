@@ -1274,7 +1274,6 @@ void MainWindow::InstallSinglePkg(std::filesystem::path file, int pkgNum, int nP
 }
 
 void MainWindow::StartGameWithArgs(const game_info& game, QStringList args) {
-    BackgroundMusicPlayer::getInstance().StopMusic();
     QString gamePath = "";
     game_info selected_game_info;
 
@@ -1337,6 +1336,7 @@ void MainWindow::StartEmulator(std::filesystem::path path, QStringList args) {
     final_args.append(args);
 
     EmulatorState::GetInstance()->SetGameRunning(true);
+    BackgroundMusicPlayer::getInstance().StopMusic();
     is_paused = false;
     UpdateToolbarButtons();
 
@@ -1396,6 +1396,7 @@ void MainWindow::RestartEmulator() {
     QString workDir = QDir::currentPath();
 
     EmulatorState::GetInstance()->SetGameRunning(true);
+    BackgroundMusicPlayer::getInstance().StopMusic();
     is_paused = false;
     UpdateToolbarButtons();
     m_ipc_client->startEmulator(fileInfo, args, workDir);
@@ -1533,6 +1534,7 @@ void MainWindow::StartEmulatorExecutable(QString emulatorArg, QString gameArg,
     }
 
     EmulatorState::GetInstance()->SetGameRunning(true);
+    BackgroundMusicPlayer::getInstance().StopMusic();
     is_paused = false;
     UpdateToolbarButtons();
     QString workDir = QDir::currentPath();
