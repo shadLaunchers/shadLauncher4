@@ -441,6 +441,14 @@
         <source>Failed to start update process.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Automatic updates on Linux require running the AppImage.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The AppImage directory is not writable or the AppImage is missing.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ControlSettings</name>
