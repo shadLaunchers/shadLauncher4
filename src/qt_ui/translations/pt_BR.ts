@@ -538,7 +538,7 @@
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation>Defina o Controle Ativo como Padrão</translation>
+      <translation>Definir Controle Ativo como Padrão</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>

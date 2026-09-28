@@ -447,11 +447,11 @@
     </message>
     <message>
       <source>Automatic updates on Linux require running the AppImage.</source>
-      <translation type="unfinished">Automatic updates on Linux require running the AppImage.</translation>
+      <translation>Para hacer actualizaciones automáticas en Linux, es necesario ejecutar el AppImage.</translation>
     </message>
     <message>
       <source>The AppImage directory is not writable or the AppImage is missing.</source>
-      <translation type="unfinished">The AppImage directory is not writable or the AppImage is missing.</translation>
+      <translation>El directorio de AppImage no tiene permisos de escritura o no se encuentra el AppImage.</translation>
     </message>
   </context>
   <context>
