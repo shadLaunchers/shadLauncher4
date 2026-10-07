@@ -375,6 +375,30 @@ QSpinBox::down-button:hover, QDoubleSpinBox::down-button:hover {
 	background-color: #0070CC;
 }
 
+/* Styling the buttons above removes Qt's native arrows, so draw themed ones.
+   Same url("./") rewrite convention as the combo box arrows. */
+QSpinBox::up-arrow, QDoubleSpinBox::up-arrow {
+	image: url("./icons/arrow-up-dark.svg");
+	width: 8px;
+	height: 6px;
+}
+
+QSpinBox::down-arrow, QDoubleSpinBox::down-arrow {
+	image: url("./icons/arrow-down-dark.svg");
+	width: 8px;
+	height: 6px;
+}
+
+QSpinBox::up-arrow:disabled, QSpinBox::up-arrow:off,
+QDoubleSpinBox::up-arrow:disabled, QDoubleSpinBox::up-arrow:off {
+	image: url("./icons/arrow-up-dark-disabled.svg");
+}
+
+QSpinBox::down-arrow:disabled, QSpinBox::down-arrow:off,
+QDoubleSpinBox::down-arrow:disabled, QDoubleSpinBox::down-arrow:off {
+	image: url("./icons/arrow-down-dark-disabled.svg");
+}
+
 /* ============================================================
    LINE EDIT (general)
    ============================================================ */

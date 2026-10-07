@@ -50,10 +50,7 @@ void EmulatorSettingsImpl::PrintChangedSummary(const std::vector<std::string>& c
 // ── Singleton ────────────────────────────────────────────────────────
 EmulatorSettingsImpl::EmulatorSettingsImpl() = default;
 
-EmulatorSettingsImpl::~EmulatorSettingsImpl() {
-    if (m_loaded)
-        Save();
-}
+EmulatorSettingsImpl::~EmulatorSettingsImpl() {}
 
 std::shared_ptr<EmulatorSettingsImpl> EmulatorSettingsImpl::GetInstance() {
     std::lock_guard lock(s_mutex);
@@ -176,45 +173,13 @@ void EmulatorSettingsImpl::SetAddonInstallDir(const std::filesystem::path& dir) 
 // ── Game-specific override management ────────────────────────────────
 void EmulatorSettingsImpl::ClearGameSpecificOverrides() {
     ClearGroupOverrides(m_general);
+    ClearGroupOverrides(m_network);
     ClearGroupOverrides(m_log);
     ClearGroupOverrides(m_debug);
     ClearGroupOverrides(m_input);
     ClearGroupOverrides(m_audio);
-    // Windows static guest red-zone protection
-    ClearGroupOverrides(m_windows_guest_red_zone_protection);
     ClearGroupOverrides(m_gpu);
     ClearGroupOverrides(m_vulkan);
-}
-
-void EmulatorSettingsImpl::ResetGameSpecificValue(const std::string& key) {
-    // Walk every overrideable group until we find the matching key.
-    auto tryGroup = [&key](auto& group) {
-        for (auto& item : group.GetOverrideableFields()) {
-            if (key == item.key) {
-                item.reset_game_specific(&group);
-                return true;
-            }
-        }
-        return false;
-    };
-    if (tryGroup(m_general))
-        return;
-    if (tryGroup(m_log))
-        return;
-    if (tryGroup(m_debug))
-        return;
-    if (tryGroup(m_input))
-        return;
-    if (tryGroup(m_audio))
-        return;
-    // Windows static guest red-zone protection
-    if (tryGroup(m_windows_guest_red_zone_protection))
-        return;
-    if (tryGroup(m_gpu))
-        return;
-    if (tryGroup(m_vulkan))
-        return;
-    LOG_WARNING(Config, "ResetGameSpecificValue: key '{}' not found", key);
 }
 
 bool EmulatorSettingsImpl::Save(const std::string& serial) {
@@ -228,6 +193,22 @@ bool EmulatorSettingsImpl::Save(const std::string& serial) {
 
             json generalObj = json::object();
             SaveGroupGameSpecific(m_general, generalObj);
+
+            json networkObj = json::object();
+            SaveGroupGameSpecific(m_network, networkObj);
+            j["Network"] = networkObj;
+
+            json existing = json::object();
+            if (std::ifstream existingIn{path}; existingIn.good()) {
+                try {
+                    existingIn >> existing;
+                } catch (...) {
+                    existing = json::object();
+                }
+            }
+            if (existing.contains("General") && existing["General"].is_object()) {
+                SyncLegacyNetworkKeys(existing["General"], generalObj, networkObj);
+            }
             j["General"] = generalObj;
 
             json logObj = json::object();
@@ -245,12 +226,6 @@ bool EmulatorSettingsImpl::Save(const std::string& serial) {
             json audioObj = json::object();
             SaveGroupGameSpecific(m_audio, audioObj);
             j["Audio"] = audioObj;
-
-            // Windows static guest red-zone protection
-            json windowsGuestRedZoneProtectionObj = json::object();
-            SaveGroupGameSpecific(m_windows_guest_red_zone_protection,
-                                  windowsGuestRedZoneProtectionObj);
-            j["WindowsGuestRedZoneProtection"] = windowsGuestRedZoneProtectionObj;
 
             json gpuObj = json::object();
             SaveGroupGameSpecific(m_gpu, gpuObj);
@@ -277,6 +252,7 @@ bool EmulatorSettingsImpl::Save(const std::string& serial) {
 
             json j;
             j["General"] = m_general;
+            j["Network"] = m_network;
             j["Log"] = m_log;
             j["Debug"] = m_debug;
             j["Input"] = m_input;
@@ -301,6 +277,9 @@ bool EmulatorSettingsImpl::Save(const std::string& serial) {
                 else
                     existing[section] = val;
             }
+            if (existing["General"].is_object()) {
+                SyncLegacyNetworkKeys(existing["General"], existing["General"], j["Network"]);
+            }
 
             std::ofstream out(path);
             if (!out) {
@@ -316,11 +295,34 @@ bool EmulatorSettingsImpl::Save(const std::string& serial) {
     }
 }
 
+void EmulatorSettingsImpl::ApplyLegacyNetworkKeys(const json& general) {
+    json current = m_network;
+    bool found = false;
+    for (const auto& item : m_network.GetOverrideableFields()) {
+        if (general.contains(item.key)) {
+            current[item.key] = general.at(item.key);
+            found = true;
+        }
+    }
+    if (found) {
+        m_network = current.get<NetworkSettings>();
+    }
+}
+
+void EmulatorSettingsImpl::SyncLegacyNetworkKeys(const json& old_general, json& general,
+                                                 const json& network) {
+    for (const auto& [key, value] : network.items()) {
+        if (old_general.contains(key)) {
+            general[key] = value;
+        }
+    }
+}
+
 // ── Load ──────────────────────────────────────────────────────────────
 
 bool EmulatorSettingsImpl::Load(const std::string& serial) {
     // A newly loaded profile replaces, rather than extends, the previous profile.
-    ClearGameSpecificOverrides(); // Windows static guest red-zone protection
+    ClearGameSpecificOverrides();
 
     try {
         if (serial.empty()) {
@@ -341,6 +343,10 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
                 };
 
                 mergeGroup(m_general, "General");
+                mergeGroup(m_network, "Network");
+                if (gj.contains("General") && gj["General"].is_object()) {
+                    ApplyLegacyNetworkKeys(gj["General"]);
+                }
                 mergeGroup(m_log, "Log");
                 mergeGroup(m_debug, "Debug");
                 mergeGroup(m_input, "Input");
@@ -354,7 +360,6 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
             if (GetConfigVersion() != Common::g_scm_rev) {
                 Save();
             }
-            m_loaded = true;
             return true;
         } else {
             // ── Per-game override file ─────────────────────────────────
@@ -378,12 +383,12 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
 
             std::vector<std::string> changed;
 
-            // ApplyGroupOverrides now correctly stores values as
-            // game_specific_value (see make_override in the header).
-            // ConfigMode::Default will then resolve them at getter call
-            // time without ever touching the base values.
             if (gj.contains("General"))
                 ApplyGroupOverrides(m_general, gj.at("General"), changed);
+            if (gj.contains("Network"))
+                ApplyGroupOverrides(m_network, gj.at("Network"), changed);
+            if (gj.contains("General"))
+                ApplyGroupOverrides(m_network, gj.at("General"), changed);
             if (gj.contains("Log"))
                 ApplyGroupOverrides(m_log, gj.at("Log"), changed);
             if (gj.contains("Debug"))
@@ -392,14 +397,19 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
                 ApplyGroupOverrides(m_input, gj.at("Input"), changed);
             if (gj.contains("Audio"))
                 ApplyGroupOverrides(m_audio, gj.at("Audio"), changed);
-            // Windows static guest red-zone protection
-            if (gj.contains("WindowsGuestRedZoneProtection"))
-                ApplyGroupOverrides(m_windows_guest_red_zone_protection,
-                                    gj.at("WindowsGuestRedZoneProtection"), changed);
             if (gj.contains("GPU"))
                 ApplyGroupOverrides(m_gpu, gj.at("GPU"), changed);
             if (gj.contains("Vulkan"))
                 ApplyGroupOverrides(m_vulkan, gj.at("Vulkan"), changed);
+
+            // Backwards compat for red-zone setting
+            if (gj.contains("WindowsGuestRedZoneProtection") &&
+                gj["WindowsGuestRedZoneProtection"].contains(
+                    "windows_guest_red_zone_protection_mode")) {
+                m_general.redzone_patches = static_cast<bool>(
+                    gj["WindowsGuestRedZoneProtection"]["windows_guest_red_zone_protection_mode"] ==
+                    "StaticPatching");
+            }
 
             PrintChangedSummary(changed);
             EmulatorState::GetInstance()->SetGameSpecifigConfigUsed(true);
@@ -413,12 +423,11 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
 
 void EmulatorSettingsImpl::SetDefaultValues() {
     m_general = GeneralSettings{};
+    m_network = NetworkSettings{};
     m_log = LogSettings{};
     m_debug = DebugSettings{};
     m_input = InputSettings{};
     m_audio = AudioSettings{};
-    // Windows static guest red-zone protection
-    m_windows_guest_red_zone_protection = WindowsGuestRedZoneProtectionSettings{};
     m_gpu = GPUSettings{};
     m_vulkan = VulkanSettings{};
 }
@@ -430,12 +439,11 @@ std::vector<std::string> EmulatorSettingsImpl::GetAllOverrideableKeys() const {
             keys.push_back(item.key);
     };
     addGroup(m_general.GetOverrideableFields());
+    addGroup(m_network.GetOverrideableFields());
     addGroup(m_log.GetOverrideableFields());
     addGroup(m_debug.GetOverrideableFields());
     addGroup(m_input.GetOverrideableFields());
     addGroup(m_audio.GetOverrideableFields());
-    // Windows static guest red-zone protection
-    addGroup(m_windows_guest_red_zone_protection.GetOverrideableFields());
     addGroup(m_gpu.GetOverrideableFields());
     addGroup(m_vulkan.GetOverrideableFields());
     return keys;

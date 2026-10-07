@@ -36,6 +36,7 @@
         <file>assets/menubar/configuration/cfg-paths.svg</file>
         <file>assets/menubar/configuration/cfg-log.svg</file>
         <file>assets/menubar/configuration/cfg-debug.svg</file>
+        <file>assets/menubar/configuration/cfg-network.svg</file>
         <file>assets/menubar/configuration/cfg-experimental.svg</file>
         <file>assets/menubar/view/show-list.svg</file>
         <file>assets/menubar/view/toolbar.svg</file>

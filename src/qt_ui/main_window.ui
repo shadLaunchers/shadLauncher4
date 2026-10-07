@@ -195,6 +195,7 @@
     <addaction name="actionConfigPaths"/>
     <addaction name="actionConfigLog"/>
     <addaction name="actionConfigDebug"/>
+    <addaction name="actionConfigNetwork"/>
     <addaction name="actionConfigExperimental"/>
    </widget>
    <widget class="QMenu" name="menuManage">
@@ -802,6 +803,15 @@
    </property>
    <property name="text">
     <string>Debug</string>
+   </property>
+  </action>
+  <action name="actionConfigNetwork">
+   <property name="icon">
+    <iconset resource="../shadLauncher4.qrc">
+     <normaloff>:/assets/menubar/configuration/cfg-network.svg</normaloff>:/assets/menubar/configuration/cfg-network.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Network</string>
    </property>
   </action>
   <action name="actionConfigExperimental">

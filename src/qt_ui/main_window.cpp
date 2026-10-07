@@ -375,8 +375,10 @@ void MainWindow::createConnects() {
             [open_settings]() { open_settings(6); });
     connect(ui->actionConfigDebug, &QAction::triggered, this,
             [open_settings]() { open_settings(7); });
-    connect(ui->actionConfigExperimental, &QAction::triggered, this,
+    connect(ui->actionConfigNetwork, &QAction::triggered, this,
             [open_settings]() { open_settings(8); });
+    connect(ui->actionConfigExperimental, &QAction::triggered, this,
+            [open_settings]() { open_settings(9); });
 
     connect(ui->bootGameAct, &QAction::triggered, this,
             [this] { MainWindow::StartGameWithArgs({}); });

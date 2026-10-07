@@ -59,6 +59,7 @@ public:
         const QString gui_background_image = tr("Background Image:\\nControl the opacity of the game background image.");
         const QString gui_music = tr("Play Title Music:\\nIf a game supports it, enable playing special music when selecting the game in the GUI.");
         const QString gui_music_volume = tr("Music Volume:\\nAdjust the volume of the background/title music played in the GUI.");
+        const QString gui_big_picture_folder_depth = tr("Big Picture Folder Scan Depth:\\nHow many subfolder levels the emulator's Big Picture mode searches for games inside each game folder.");
         const QString gui_big_picture_scale = tr("Big Picture Scale:\\nScales the Big Picture interface, in percent of its normal size.");
         const QString gui_theme = tr("Theme:\\nChoose the stylesheet used for the launcher's interface. Drop .qss stylesheet files into the \"themes\" folder inside your user data directory to add custom themes.");
         const QString gui_show_background_image = tr("Show Background Image:\\nDisplay a background image behind the game list. Use the Opacity slider below to control how visible it is.");
@@ -97,6 +98,7 @@ public:
         const QString input_ime_section = tr("IME:\\nSettings for the on-screen keyboard/input method editor used by games for text entry.");
         const QString input_ime_accessibility = tr("Enable IME Accessibility:\\nEnables accessibility features for the on-screen keyboard, such as additional audio/visual cues.");
         const QString input_ime_url_mail_panel = tr("Enable IME URL/Email Short Panel:\\nShows a shortened on-screen keyboard layout optimized for entering URLs and email addresses.");
+        const QString input_keyboard_as_keyboard = tr("Use Keyboard as Keyboard:\\nPasses your keyboard through to games as a PS4 keyboard, for games that support keyboard input.");
         const QString input_camera_device = tr("Camera Device:\\nSelects which connected camera device the emulator exposes to games as the PlayStation Camera.");
         //debug
         const QString debug_dump_shaders = tr("Enable Shaders Dumping:\\nFor the sake of technical debugging, saves the game's shaders to a folder as they render.");
@@ -114,22 +116,28 @@ public:
         const QString debug_section = tr("Debug:\\nTools for diagnosing crashes and inspecting emulator behavior. Intended for troubleshooting and development, not everyday use.");
         const QString debug_advanced_section = tr("Advanced:\\nLower-level debugging options for diagnosing rendering issues and crashes.");
         const QString debug_vk_validation_section = tr("Vulkan Validation:\\nEnables Vulkan's built-in validation layers to catch incorrect API usage. Reduces performance; requires the Vulkan SDK to be installed.");
+        //network
+        const QString network_connected = tr("Enable Network Connection:\\nMakes games detect an active network connection.");
+        const QString network_shadnet = tr("shadNet:\\nCompatibility is very limited at the moment.\\nYou can register at https://www.shadps4.net/shadnet/register/.");
+        const QString network_shadnet_config = tr("ShadNet Server Settings:\\nConfigure the server addresses used to connect to a ShadNet-compatible online service. Only used while ShadNet is enabled.");
+        const QString network_shadnet_server = tr("Server:\\nThe address of the ShadNet server to connect to.");
+        const QString network_shadnet_webapi = tr("WebAPI Server:\\nThe address of the ShadNet WebAPI server used for account and session management.");
+        const QString network_shadnet_signaling = tr("Signaling Info:\\nConnection details used for ShadNet's peer-to-peer signaling/matchmaking.");
+        const QString network_upnp = tr("Enable UPnP:\\nAutomatically configure port forwarding on your router via UPnP for ShadNet's networked features.");
+        const QString network_section = tr("Network:\\nNetworking options for the emulated console, including ShadNet online service and peer-to-peer settings.");
+        const QString network_disable_https = tr("Disable HTTPS:\\nWhen a game turns on HTTPS security options (such as server certificate verification), the emulator turns them off instead.\\nUseful when connecting to custom servers with self-signed or invalid certificates.");
+        const QString network_p2p_port = tr("P2P Port:\\nThe local port used for peer-to-peer connections. 3658 is the default PS4 port,set it to 0 to use any free port.\\nWhen UPnP is enabled, this port is forwarded on your router.");
         //experimental
         const QString experimental_dma = tr("Enable Direct Memory Access:\\nEnables arbitrary memory access from the GPU to CPU memory.");
         const QString experimental_devkit = tr("Enable Devkit Console Mode:\\nAdds support for Devkit console memory size.");
         const QString experimental_neo = tr("Enable PS4 Neo Mode:\\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.");
-        const QString experimental_network_connected = tr("Set Network Connected to True:\\nForces games to detect an active network connection. Actual online capabilities are not yet supported.");
-        const QString experimental_shadnet = tr("shadNet:\\nCompatibility is very limited at the moment.\\nYou can register at https://www.shadps4.net/shadnet/register/.");
         const QString experimental_shader_cache = tr("Enable Shader Cache:\\nStoring compiled shaders to avoid recompilations, reduce stuttering.");
         const QString experimental_shader_cache_archive = tr("Compress the Shader Cache files into a zip file:\\nThe shader cache files are stored within a single zip file instead of multiple separate files.");
         const QString experimental_fmem = tr("Additional FMem Allocation:\\nForces allocation of the specified amount of additional FMem. Crashes or causes issues in some games.");
         const QString experimental_dmem = tr("Additional DMem Allocation:\\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.");
+        const QString experimental_redzone = tr("Enable Red Zone Patching:\\nStatically patches game code to protect the guest stack red zone on Windows. Requires restarting the game.");
+        const QString experimental_userfaultfd = tr("Enable userfaultfd Memory Tracking:\\nUses the Linux userfaultfd feature to track GPU memory changes instead of signal handlers. Falls back to signals if your system does not support it.");
         const QString experimental_section = tr("Experimental:\\nFeatures that are still in development or considered unstable. Use with caution - these can cause crashes or unexpected behavior.");
-        const QString experimental_shadnet_config = tr("ShadNet Server Settings:\\nConfigure the server addresses used to connect to a ShadNet-compatible online service. Only used while ShadNet is enabled.");
-        const QString experimental_shadnet_server = tr("Server:\\nThe address of the ShadNet server to connect to.");
-        const QString experimental_shadnet_webapi = tr("WebAPI Server:\\nThe address of the ShadNet WebAPI server used for account and session management.");
-        const QString experimental_shadnet_signaling = tr("Signaling Info:\\nConnection details used for ShadNet's peer-to-peer signaling/matchmaking.");
-        const QString experimental_upnp = tr("Enable UPnP:\\nAutomatically configure port forwarding on your router via UPnP for ShadNet's networked features.");
         // clang-format on
     } settings;
 };

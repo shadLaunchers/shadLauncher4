@@ -137,7 +137,10 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     }
 
 #ifndef _WIN32
-    ui->redZoneGroupBox->setVisible(false);
+    ui->redZoneCheckBox->setVisible(false);
+#endif
+#ifndef __linux__
+    ui->userfaultfdCheckBox->setVisible(false);
 #endif
 
     const SettingsDialogHelperTexts helptexts;
@@ -209,6 +212,10 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->BGMVolumeSlider, helptexts.settings.gui_music_volume);
     SubscribeHelpText(ui->bigPictureScaleGroupBox, helptexts.settings.gui_big_picture_scale);
     SubscribeHelpText(ui->bigPictureScaleSpinBox, helptexts.settings.gui_big_picture_scale);
+    SubscribeHelpText(ui->bigPictureFolderDepthGroupBox,
+                      helptexts.settings.gui_big_picture_folder_depth);
+    SubscribeHelpText(ui->bigPictureFolderDepthSpinBox,
+                      helptexts.settings.gui_big_picture_folder_depth);
     SubscribeHelpText(ui->themeGroupBox, helptexts.settings.gui_theme);
     SubscribeHelpText(ui->themeComboBox, helptexts.settings.gui_theme);
 
@@ -264,6 +271,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->cursorGroupBox, helptexts.settings.input_cursor_section);
     SubscribeHelpText(ui->ControllerGroupBox, helptexts.settings.input_controller_section);
     SubscribeHelpText(ui->miceUsedAsMiceCheckBox, helptexts.settings.input_mice_as_mice);
+    SubscribeHelpText(ui->keyboardAsKeyboardCheckBox,
+                      helptexts.settings.input_keyboard_as_keyboard);
     SubscribeHelpText(ui->circleEnterCheckBox, helptexts.settings.input_circle_confirm);
     SubscribeHelpText(ui->imeGroupBox, helptexts.settings.input_ime_section);
     SubscribeHelpText(ui->imeAccessibilityCheckBox, helptexts.settings.input_ime_accessibility);
@@ -294,15 +303,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->dmaCheckBox, helptexts.settings.experimental_dma);
     SubscribeHelpText(ui->devkitCheckBox, helptexts.settings.experimental_devkit);
     SubscribeHelpText(ui->neoCheckBox, helptexts.settings.experimental_neo);
-    SubscribeHelpText(ui->psnSignInCheckBox, helptexts.settings.experimental_shadnet);
-    SubscribeHelpText(ui->networkConnectedCheckBox,
-                      helptexts.settings.experimental_network_connected);
-    SubscribeHelpText(ui->shadNetGroupBox, helptexts.settings.experimental_shadnet_config);
-    SubscribeHelpText(ui->shadNetServerLineEdit, helptexts.settings.experimental_shadnet_server);
-    SubscribeHelpText(ui->shadNetWebApiServerLineEdit,
-                      helptexts.settings.experimental_shadnet_webapi);
-    SubscribeHelpText(ui->signalingInfoLineEdit, helptexts.settings.experimental_shadnet_signaling);
-    SubscribeHelpText(ui->upnpCheckBox, helptexts.settings.experimental_upnp);
+    SubscribeHelpText(ui->redZoneCheckBox, helptexts.settings.experimental_redzone);
+    SubscribeHelpText(ui->userfaultfdCheckBox, helptexts.settings.experimental_userfaultfd);
     SubscribeHelpText(ui->shaderCacheGroupBox, helptexts.settings.experimental_shader_cache);
     SubscribeHelpText(ui->enableShaderCacheCheckBox, helptexts.settings.experimental_shader_cache);
     SubscribeHelpText(ui->archiveShaderCacheCheckBox,
@@ -311,6 +313,19 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->dmemSpinBox, helptexts.settings.experimental_dmem);
     SubscribeHelpText(ui->fmemGroupBox, helptexts.settings.experimental_fmem);
     SubscribeHelpText(ui->fmemSpinBox, helptexts.settings.experimental_fmem);
+
+    // Network
+    SubscribeHelpText(ui->networkGroupBox, helptexts.settings.network_section);
+    SubscribeHelpText(ui->networkConnectedCheckBox, helptexts.settings.network_connected);
+    SubscribeHelpText(ui->psnSignInCheckBox, helptexts.settings.network_shadnet);
+    SubscribeHelpText(ui->upnpCheckBox, helptexts.settings.network_upnp);
+    SubscribeHelpText(ui->disableHttpsCheckBox, helptexts.settings.network_disable_https);
+    SubscribeHelpText(ui->p2pPortGroupBox, helptexts.settings.network_p2p_port);
+    SubscribeHelpText(ui->p2pPortSpinBox, helptexts.settings.network_p2p_port);
+    SubscribeHelpText(ui->shadNetGroupBox, helptexts.settings.network_shadnet_config);
+    SubscribeHelpText(ui->shadNetServerLineEdit, helptexts.settings.network_shadnet_server);
+    SubscribeHelpText(ui->shadNetWebApiServerLineEdit, helptexts.settings.network_shadnet_webapi);
+    SubscribeHelpText(ui->signalingInfoLineEdit, helptexts.settings.network_shadnet_signaling);
 
     PopulateComboBoxes();
     PathTabConnections();
@@ -682,6 +697,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     // ------------------ GUI tab --------------------------------------------------------
     ui->discordRPCCheckbox->setChecked(m_emu_settings->IsDiscordRPCEnabled());
     ui->bigPictureScaleSpinBox->setValue(m_emu_settings->GetBigPictureScale());
+    ui->bigPictureFolderDepthSpinBox->setValue(m_emu_settings->GetBigPictureFolderDepth());
     {
         const QString current_theme =
             m_gui_settings->GetValue(GUI::meta_currentStylesheet).toString();
@@ -757,6 +773,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->imeUrlMailShortPanelCheckBox->setChecked(m_emu_settings->IsImeUrlMailShortPanel());
     ui->circleEnterCheckBox->setChecked(m_emu_settings->IsCircleEnter());
     ui->miceUsedAsMiceCheckBox->setChecked(m_emu_settings->IsMiceUsedAsMice());
+    ui->keyboardAsKeyboardCheckBox->setChecked(m_emu_settings->IsKeyboardUsedAsKeyboard());
     ui->cameraComboBox->setCurrentIndex(EmulatorSettings.GetCameraId() + 1);
 
     // ------------------ Log tab --------------------------------------------------------
@@ -815,23 +832,26 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->dmaCheckBox->setChecked(m_emu_settings->IsDirectMemoryAccessEnabled());
     ui->devkitCheckBox->setChecked(m_emu_settings->IsDevKit());
     ui->neoCheckBox->setChecked(m_emu_settings->IsNeo());
-    ui->psnSignInCheckBox->setChecked(m_emu_settings->IsShadNetEnabled());
-    ui->networkConnectedCheckBox->setChecked(m_emu_settings->IsConnectedToNetwork());
-    ui->redZoneComboBox->setCurrentIndex(
-        static_cast<int>(m_emu_settings->GetWindowsGuestRedZoneProtectionMode()));
-
-    // ShadNet
-    ui->shadNetServerLineEdit->setText(QString::fromStdString(m_emu_settings->GetShadNetServer()));
-    ui->shadNetWebApiServerLineEdit->setText(
-        QString::fromStdString(m_emu_settings->GetShadNetWebApiServer()));
-    ui->signalingInfoLineEdit->setText(QString::fromStdString(m_emu_settings->GetSignalingInfo()));
-    ui->upnpCheckBox->setChecked(m_emu_settings->IsUPnPEnabled());
+    ui->redZoneCheckBox->setChecked(m_emu_settings->IsRedZonePatchingEnabled());
+    ui->userfaultfdCheckBox->setChecked(m_emu_settings->IsUserfaultfdTracking());
 
     ui->enableShaderCacheCheckBox->setChecked(m_emu_settings->IsPipelineCacheEnabled());
     ui->archiveShaderCacheCheckBox->setChecked(m_emu_settings->IsPipelineCacheArchived());
     ui->dmemSpinBox->setValue(m_emu_settings->GetExtraDmemInMBytes());
     ui->fmemSpinBox->setValue(m_emu_settings->GetExtraFmemInMBytes());
     ui->vblankSpinBox->setValue(m_emu_settings->GetVblankFrequency());
+
+    // ------------------ Network tab --------------------------------------------------------
+    ui->networkConnectedCheckBox->setChecked(m_emu_settings->IsConnectedToNetwork());
+    // Use the persisted value, not the session-adjusted one, so the checkbox reflects the config
+    ui->psnSignInCheckBox->setChecked(m_emu_settings->IsShadNetEnabledSetting());
+    ui->upnpCheckBox->setChecked(m_emu_settings->IsUPnPEnabled());
+    ui->disableHttpsCheckBox->setChecked(m_emu_settings->IsForcedHttpsDisabled());
+    ui->p2pPortSpinBox->setValue(m_emu_settings->GetP2PPort());
+    ui->shadNetServerLineEdit->setText(QString::fromStdString(m_emu_settings->GetShadNetServer()));
+    ui->shadNetWebApiServerLineEdit->setText(
+        QString::fromStdString(m_emu_settings->GetShadNetWebApiServer()));
+    ui->signalingInfoLineEdit->setText(QString::fromStdString(m_emu_settings->GetSignalingInfo()));
 
     // ------------------ Games Folder --------------------------------------------------------
     ui->gameFoldersListWidget->clear();
@@ -1011,6 +1031,8 @@ void SettingsDialog::ApplyValuesToBackend() {
         m_emu_settings->SetConsoleLanguage(consoleLanguageIds[row], is_specific);
     }
     m_emu_settings->SetBigPictureScale(ui->bigPictureScaleSpinBox->value(), is_specific);
+    m_emu_settings->SetBigPictureFolderDepth(ui->bigPictureFolderDepthSpinBox->value(),
+                                             is_specific);
     m_emu_settings->SetUsbDeviceBackend(ui->usbComboBox->currentIndex(), is_specific);
     m_emu_settings->SetMotionControlsEnabled(ui->motionControlsCheckBox->isChecked(), is_specific);
     m_emu_settings->SetBackgroundControllerInput(ui->backgroundControllerCheckBox->isChecked(),
@@ -1021,6 +1043,8 @@ void SettingsDialog::ApplyValuesToBackend() {
                                             is_specific);
     m_emu_settings->SetCircleEnter(ui->circleEnterCheckBox->isChecked(), is_specific);
     m_emu_settings->SetMiceUsedAsMice(ui->miceUsedAsMiceCheckBox->isChecked(), is_specific);
+    m_emu_settings->SetKeyboardUsedAsKeyboard(ui->keyboardAsKeyboardCheckBox->isChecked(),
+                                              is_specific);
     EmulatorSettings.SetCameraId(ui->cameraComboBox->currentIndex() - 1, is_specific);
 
     // ------------------ Log tab --------------------------------------------------------
@@ -1069,17 +1093,6 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetDirectMemoryAccessEnabled(ui->dmaCheckBox->isChecked(), is_specific);
     m_emu_settings->SetDevKit(ui->devkitCheckBox->isChecked(), is_specific);
     m_emu_settings->SetNeo(ui->neoCheckBox->isChecked(), is_specific);
-    m_emu_settings->SetShadNetEnabled(ui->psnSignInCheckBox->isChecked(), is_specific);
-    m_emu_settings->SetConnectedToNetwork(ui->networkConnectedCheckBox->isChecked(), is_specific);
-
-    // ShadNet (signaling_info / shadnet_server / shadnet_webapi_server are global-only;
-    // set with the same flag for consistency)
-    m_emu_settings->SetShadNetServer(ui->shadNetServerLineEdit->text().toStdString(), is_specific);
-    m_emu_settings->SetShadNetWebApiServer(ui->shadNetWebApiServerLineEdit->text().toStdString(),
-                                           is_specific);
-    m_emu_settings->SetSignalingInfo(ui->signalingInfoLineEdit->text().toStdString(), is_specific);
-    m_emu_settings->SetUPnPEnabled(ui->upnpCheckBox->isChecked(), is_specific);
-
     m_emu_settings->SetPipelineCacheEnabled(ui->enableShaderCacheCheckBox->isChecked(),
                                             is_specific);
     m_emu_settings->SetPipelineCacheArchived(ui->archiveShaderCacheCheckBox->isChecked(),
@@ -1087,9 +1100,19 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetExtraDmemInMBytes(ui->dmemSpinBox->value(), is_specific);
     m_emu_settings->SetExtraFmemInMBytes(ui->fmemSpinBox->value(), is_specific);
     m_emu_settings->SetVblankFrequency(ui->vblankSpinBox->value(), is_specific);
-    m_emu_settings->SetWindowsGuestRedZoneProtectionMode(
-        static_cast<WindowsGuestRedZoneProtectionMode>(ui->redZoneComboBox->currentIndex()),
-        is_specific);
+    m_emu_settings->SetRedZonePatchingEnabled(ui->redZoneCheckBox->isChecked(), is_specific);
+    m_emu_settings->SetUserfaultfdTracking(ui->userfaultfdCheckBox->isChecked(), is_specific);
+
+    // ------------------ Network tab --------------------------------------------------------
+    m_emu_settings->SetConnectedToNetwork(ui->networkConnectedCheckBox->isChecked(), is_specific);
+    m_emu_settings->SetShadNetEnabled(ui->psnSignInCheckBox->isChecked(), is_specific);
+    m_emu_settings->SetUPnPEnabled(ui->upnpCheckBox->isChecked(), is_specific);
+    m_emu_settings->SetForcedHttpsDisabled(ui->disableHttpsCheckBox->isChecked(), is_specific);
+    m_emu_settings->SetP2PPort(ui->p2pPortSpinBox->value(), is_specific);
+    m_emu_settings->SetShadNetServer(ui->shadNetServerLineEdit->text().toStdString(), is_specific);
+    m_emu_settings->SetShadNetWebApiServer(ui->shadNetWebApiServerLineEdit->text().toStdString(),
+                                           is_specific);
+    m_emu_settings->SetSignalingInfo(ui->signalingInfoLineEdit->text().toStdString(), is_specific);
 
     // ------------------ Paths tab --------------------------------------------------------
     for (int i = 0; i < ui->gameFoldersListWidget->count(); ++i) {
@@ -1406,6 +1429,12 @@ bool SettingsDialog::IsSettingOverrideable(const char* setting_key,
                 return true;
             }
         }
+    } else if (setting_group == "Network") {
+        for (const auto& item : m_emu_settings->GetNetworkOverrideableFields()) {
+            if (std::string(item.key) == setting_key) {
+                return true;
+            }
+        }
     } else if (setting_group == "Debug") {
         for (const auto& item : m_emu_settings->GetDebugOverrideableFields()) {
             if (std::string(item.key) == setting_key) {
@@ -1455,6 +1484,7 @@ void SettingsDialog::MapUIControls() {
     m_uiSettingMap[ui->discordRPCCheckbox] = {"discord_rpc_enabled", "General"};
     m_uiSettingMap[ui->consoleLanguageComboBox] = {"console_language", "General"};
     m_uiSettingMap[ui->bigPictureScaleSpinBox] = {"big_picture_scale", "General"};
+    m_uiSettingMap[ui->bigPictureFolderDepthSpinBox] = {"big_picture_folder_depth", "General"};
 
     // Audio Settings
     m_uiSettingMap[ui->GenAudioComboBox] = {"main_output_device", "Audio"};
@@ -1488,6 +1518,7 @@ void SettingsDialog::MapUIControls() {
     m_uiSettingMap[ui->imeUrlMailShortPanelCheckBox] = {"ime_url_mail_short_panel", "Input"};
     m_uiSettingMap[ui->circleEnterCheckBox] = {"is_circle_enter", "Input"};
     m_uiSettingMap[ui->miceUsedAsMiceCheckBox] = {"use_mice_as_mice", "Input"};
+    m_uiSettingMap[ui->keyboardAsKeyboardCheckBox] = {"use_keyboard_as_keyboard", "Input"};
 
     // Log Settings
     m_uiSettingMap[ui->enableLoggingCheckBox] = {"enable", "Log"};
@@ -1523,11 +1554,21 @@ void SettingsDialog::MapUIControls() {
     // Experimental/Other Settings
     m_uiSettingMap[ui->devkitCheckBox] = {"dev_kit_mode", "General"};
     m_uiSettingMap[ui->neoCheckBox] = {"neo_mode", "General"};
-    m_uiSettingMap[ui->psnSignInCheckBox] = {"shad_net_enabled", "General"};
-    m_uiSettingMap[ui->networkConnectedCheckBox] = {"connected_to_network", "General"};
+    m_uiSettingMap[ui->redZoneCheckBox] = {"redzone_patches", "General"};
+    m_uiSettingMap[ui->userfaultfdCheckBox] = {"userfaultfd", "GPU"};
     m_uiSettingMap[ui->dmemSpinBox] = {"extra_dmem_in_mbytes", "General"};
     m_uiSettingMap[ui->fmemSpinBox] = {"extra_fmem_in_mbytes", "General"};
     m_uiSettingMap[ui->vblankSpinBox] = {"vblank_frequency", "GPU"};
+
+    // Network Settings
+    m_uiSettingMap[ui->networkConnectedCheckBox] = {"connected_to_network", "Network"};
+    m_uiSettingMap[ui->psnSignInCheckBox] = {"shad_net_enabled", "Network"};
+    m_uiSettingMap[ui->upnpCheckBox] = {"enable_upnp", "Network"};
+    m_uiSettingMap[ui->disableHttpsCheckBox] = {"disable_https", "Network"};
+    m_uiSettingMap[ui->p2pPortSpinBox] = {"p2p_port", "Network"};
+    m_uiSettingMap[ui->shadNetServerLineEdit] = {"shadnet_server", "Network"};
+    m_uiSettingMap[ui->shadNetWebApiServerLineEdit] = {"shadnet_webapi_server", "Network"};
+    m_uiSettingMap[ui->signalingInfoLineEdit] = {"signaling_info", "Network"};
 }
 
 void SettingsDialog::DisableNonOverrideableSettings() {
