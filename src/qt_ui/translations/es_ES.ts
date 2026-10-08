@@ -3098,7 +3098,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Network</source>
-      <translation type="unfinished">Network</translation>
+      <translation>Red</translation>
     </message>
   </context>
   <context>
@@ -4266,39 +4266,39 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Big Picture Folder Scan Depth</source>
-      <translation type="unfinished">Big Picture Folder Scan Depth</translation>
+      <translation>Profundidad de búsqueda de carpetas en Big Picture</translation>
     </message>
     <message>
       <source>Use Keyboard as Keyboard</source>
-      <translation type="unfinished">Use Keyboard as Keyboard</translation>
+      <translation>Utilizar el teclado como tal</translation>
     </message>
     <message>
       <source>Network</source>
-      <translation type="unfinished">Network</translation>
+      <translation>Red</translation>
     </message>
     <message>
       <source>Enable Network Connection</source>
-      <translation type="unfinished">Enable Network Connection</translation>
+      <translation>Activar conexión a red</translation>
     </message>
     <message>
       <source>Disable HTTPS</source>
-      <translation type="unfinished">Disable HTTPS</translation>
+      <translation>Desactivar HTTPS</translation>
     </message>
     <message>
       <source>P2P Port</source>
-      <translation type="unfinished">P2P Port</translation>
+      <translation>Puerto P2P</translation>
     </message>
     <message>
       <source>Any free port</source>
-      <translation type="unfinished">Any free port</translation>
+      <translation>Cualquier puerto libre</translation>
     </message>
     <message>
       <source>Enable Red Zone Patching</source>
-      <translation type="unfinished">Enable Red Zone Patching</translation>
+      <translation>Activar parches para zona roja</translation>
     </message>
     <message>
       <source>Enable userfaultfd Memory Tracking</source>
-      <translation type="unfinished">Enable userfaultfd Memory Tracking</translation>
+      <translation>Activar seguimiento de memoria userfaultfd</translation>
     </message>
   </context>
   <context>
@@ -4725,35 +4725,35 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>Big Picture Folder Scan Depth:\nHow many subfolder levels the emulator&apos;s Big Picture mode searches for games inside each game folder.</source>
-      <translation type="unfinished">Big Picture Folder Scan Depth:\nHow many subfolder levels the emulator&apos;s Big Picture mode searches for games inside each game folder.</translation>
+      <translation>Profundidad de búsqueda de carpetas en Big Picture:\nIndica el número de niveles de subcarpetas en los que el modo Big Picture del emulador buscará juegos.</translation>
     </message>
     <message>
       <source>Use Keyboard as Keyboard:\nPasses your keyboard through to games as a PS4 keyboard, for games that support keyboard input.</source>
-      <translation type="unfinished">Use Keyboard as Keyboard:\nPasses your keyboard through to games as a PS4 keyboard, for games that support keyboard input.</translation>
+      <translation>Utilizar el teclado como tal:\nTransmite las pulsaciones de tu teclado a los juegos en forma de teclado de PS4, para aquellos juegos compatibles con teclados.</translation>
     </message>
     <message>
       <source>Enable Network Connection:\nMakes games detect an active network connection.</source>
-      <translation type="unfinished">Enable Network Connection:\nMakes games detect an active network connection.</translation>
+      <translation>Activar conexión a red:\nHace que los juegos detecten que existe una conexión de red activa.</translation>
     </message>
     <message>
       <source>Network:\nNetworking options for the emulated console, including ShadNet online service and peer-to-peer settings.</source>
-      <translation type="unfinished">Network:\nNetworking options for the emulated console, including ShadNet online service and peer-to-peer settings.</translation>
+      <translation>Red:\nLas opciones de red para la consola emulada, que incluyen el servicio online ShadNet y la configuración de P2P.</translation>
     </message>
     <message>
       <source>Disable HTTPS:\nWhen a game turns on HTTPS security options (such as server certificate verification), the emulator turns them off instead.\nUseful when connecting to custom servers with self-signed or invalid certificates.</source>
-      <translation type="unfinished">Disable HTTPS:\nWhen a game turns on HTTPS security options (such as server certificate verification), the emulator turns them off instead.\nUseful when connecting to custom servers with self-signed or invalid certificates.</translation>
+      <translation>Desactivar HTTPS:\nSi un juego activa las opciones de seguridad HTTPS (como la verificación de certificados del servidor), el emulador las desactivará.\nEs ideal para conectarse a servidores personalizados con certificados autofirmados o no válidos.</translation>
     </message>
     <message>
       <source>P2P Port:\nThe local port used for peer-to-peer connections. 3658 is the default PS4 port,set it to 0 to use any free port.\nWhen UPnP is enabled, this port is forwarded on your router.</source>
-      <translation type="unfinished">P2P Port:\nThe local port used for peer-to-peer connections. 3658 is the default PS4 port,set it to 0 to use any free port.\nWhen UPnP is enabled, this port is forwarded on your router.</translation>
+      <translation>Puerto P2P:\nEl puerto local para las conexiones P2P. 3658 es el puerto predeterminado de PS4, introduce 0 para utilizar cualquier puerto libre que haya.\nSi activas UPnP, se redirigirá este puerto a tu router.</translation>
     </message>
     <message>
       <source>Enable Red Zone Patching:\nStatically patches game code to protect the guest stack red zone on Windows. Requires restarting the game.</source>
-      <translation type="unfinished">Enable Red Zone Patching:\nStatically patches game code to protect the guest stack red zone on Windows. Requires restarting the game.</translation>
+      <translation>Activar parches para zona roja:\nAplica parches estáticos al código del juego para proteger la zona roja de la pila de invitado de Windows. Es necesario reiniciar el juego.</translation>
     </message>
     <message>
       <source>Enable userfaultfd Memory Tracking:\nUses the Linux userfaultfd feature to track GPU memory changes instead of signal handlers. Falls back to signals if your system does not support it.</source>
-      <translation type="unfinished">Enable userfaultfd Memory Tracking:\nUses the Linux userfaultfd feature to track GPU memory changes instead of signal handlers. Falls back to signals if your system does not support it.</translation>
+      <translation>Activar seguimiento de memoria userfaultfd:\nUtiliza la función userfaultfd de Linux en vez de los controladores de señales para localizar los cambios en la memoria de la GPU. Si tu sistema no es compatible con esta opción, se seguirán usando las señales.</translation>
     </message>
   </context>
   <context>
