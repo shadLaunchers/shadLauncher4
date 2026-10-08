@@ -1,4 +1,4 @@
-﻿// SPDX-FileCopyrightText: Copyright 2025-2026 shadPS4 Emulator Project
+// SPDX-FileCopyrightText: Copyright 2025-2026 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
@@ -604,9 +604,7 @@ private:
     }
 
     static void PrintChangedSummary(const std::vector<std::string>& changed);
-    void ApplyLegacyNetworkKeys(const nlohmann::json& general);
-    static void SyncLegacyNetworkKeys(const nlohmann::json& old_general, nlohmann::json& general,
-                                      const nlohmann::json& network);
+    void MigrateNetworkKeys(const nlohmann::json& general, const nlohmann::json& network);
 
 public:
     // Used by the launcher to back up / restore settings (e.g. per-game settings dialog)
