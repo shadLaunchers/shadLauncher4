@@ -3098,6 +3098,10 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <source>Load and manage minifigures on the emulated Lego Dimensions Toypad</source>
       <translation type="unfinished">Load and manage minifigures on the emulated Lego Dimensions Toypad</translation>
     </message>
+    <message>
+      <source>Network</source>
+      <translation type="unfinished">Network</translation>
+    </message>
   </context>
   <context>
     <name>NpBindDialog</name>
@@ -3897,10 +3901,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Bruk PS4 Neo-modus</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Bruk emulering av nettverkstilgang</translation>
-    </message>
-    <message>
       <source>Additional DMem Allocation</source>
       <translation>Ytterligere direkte-minne tildeling</translation>
     </message>
@@ -4251,14 +4251,6 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
       <translation>Signalinformasjon</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation>Rød sone beskyttelse</translation>
-    </message>
-    <message>
-      <source>Static Patching</source>
-      <translation>Statisk retting</translation>
-    </message>
-    <message>
       <source>Console Language</source>
       <translation type="unfinished">Console Language</translation>
     </message>
@@ -4273,6 +4265,42 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     <message>
       <source>Additional FMem Allocation</source>
       <translation type="unfinished">Additional FMem Allocation</translation>
+    </message>
+    <message>
+      <source>Big Picture Folder Scan Depth</source>
+      <translation type="unfinished">Big Picture Folder Scan Depth</translation>
+    </message>
+    <message>
+      <source>Use Keyboard as Keyboard</source>
+      <translation type="unfinished">Use Keyboard as Keyboard</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation type="unfinished">Network</translation>
+    </message>
+    <message>
+      <source>Enable Network Connection</source>
+      <translation type="unfinished">Enable Network Connection</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation type="unfinished">Disable HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation type="unfinished">P2P Port</translation>
+    </message>
+    <message>
+      <source>Any free port</source>
+      <translation type="unfinished">Any free port</translation>
+    </message>
+    <message>
+      <source>Enable Red Zone Patching</source>
+      <translation type="unfinished">Enable Red Zone Patching</translation>
+    </message>
+    <message>
+      <source>Enable userfaultfd Memory Tracking</source>
+      <translation type="unfinished">Enable userfaultfd Memory Tracking</translation>
     </message>
   </context>
   <context>
@@ -4518,10 +4546,6 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
       <translation>Bruk PS4 Neo-modus:\nTar i bruk emulering av PS4 Pro-modus og økt minnestørrelse. Forårsaker for tiden ustabilitet i et stort antall testede spill.</translation>
     </message>
     <message>
-      <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation>Bruk emulering av nettverkstilgang:\nTvinger spill å oppdage nettverkstilgang. Faktisk funksjonalitet støttes ikke.</translation>
-    </message>
-    <message>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
       <translation>ShadNet:\nKompatibilitet er veldig begrenset for øyeblikket.\nDu kan registrere deg på https://www.shadps4.net/shadnet/register/.</translation>
     </message>
@@ -4700,6 +4724,38 @@ Dette vil fjerne alle overstyringer for enkelte spill.</translation>
     <message>
       <source>Additional FMem Allocation:\nForces allocation of the specified amount of additional FMem. Crashes or causes issues in some games.</source>
       <translation type="unfinished">Additional FMem Allocation:\nForces allocation of the specified amount of additional FMem. Crashes or causes issues in some games.</translation>
+    </message>
+    <message>
+      <source>Big Picture Folder Scan Depth:\nHow many subfolder levels the emulator&apos;s Big Picture mode searches for games inside each game folder.</source>
+      <translation type="unfinished">Big Picture Folder Scan Depth:\nHow many subfolder levels the emulator&apos;s Big Picture mode searches for games inside each game folder.</translation>
+    </message>
+    <message>
+      <source>Use Keyboard as Keyboard:\nPasses your keyboard through to games as a PS4 keyboard, for games that support keyboard input.</source>
+      <translation type="unfinished">Use Keyboard as Keyboard:\nPasses your keyboard through to games as a PS4 keyboard, for games that support keyboard input.</translation>
+    </message>
+    <message>
+      <source>Enable Network Connection:\nMakes games detect an active network connection.</source>
+      <translation type="unfinished">Enable Network Connection:\nMakes games detect an active network connection.</translation>
+    </message>
+    <message>
+      <source>Network:\nNetworking options for the emulated console, including ShadNet online service and peer-to-peer settings.</source>
+      <translation type="unfinished">Network:\nNetworking options for the emulated console, including ShadNet online service and peer-to-peer settings.</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS:\nWhen a game turns on HTTPS security options (such as server certificate verification), the emulator turns them off instead.\nUseful when connecting to custom servers with self-signed or invalid certificates.</source>
+      <translation type="unfinished">Disable HTTPS:\nWhen a game turns on HTTPS security options (such as server certificate verification), the emulator turns them off instead.\nUseful when connecting to custom servers with self-signed or invalid certificates.</translation>
+    </message>
+    <message>
+      <source>P2P Port:\nThe local port used for peer-to-peer connections. 3658 is the default PS4 port,set it to 0 to use any free port.\nWhen UPnP is enabled, this port is forwarded on your router.</source>
+      <translation type="unfinished">P2P Port:\nThe local port used for peer-to-peer connections. 3658 is the default PS4 port,set it to 0 to use any free port.\nWhen UPnP is enabled, this port is forwarded on your router.</translation>
+    </message>
+    <message>
+      <source>Enable Red Zone Patching:\nStatically patches game code to protect the guest stack red zone on Windows. Requires restarting the game.</source>
+      <translation type="unfinished">Enable Red Zone Patching:\nStatically patches game code to protect the guest stack red zone on Windows. Requires restarting the game.</translation>
+    </message>
+    <message>
+      <source>Enable userfaultfd Memory Tracking:\nUses the Linux userfaultfd feature to track GPU memory changes instead of signal handlers. Falls back to signals if your system does not support it.</source>
+      <translation type="unfinished">Enable userfaultfd Memory Tracking:\nUses the Linux userfaultfd feature to track GPU memory changes instead of signal handlers. Falls back to signals if your system does not support it.</translation>
     </message>
   </context>
   <context>
