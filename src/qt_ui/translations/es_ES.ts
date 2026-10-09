@@ -3096,6 +3096,10 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <source>Load and manage minifigures on the emulated Lego Dimensions Toypad</source>
       <translation>Carga y administra las figuras de tu Toypad emulado de Lego Dimensions</translation>
     </message>
+    <message>
+      <source>Network</source>
+      <translation>Red</translation>
+    </message>
   </context>
   <context>
     <name>NpBindDialog</name>
@@ -3895,10 +3899,6 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <translation>Habilitar modo PS4 Neo</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Cambia la opción Conexión a red a verdadero</translation>
-    </message>
-    <message>
       <source>Additional DMem Allocation</source>
       <translation>Asignación adicional de DMem</translation>
     </message>
@@ -4249,14 +4249,6 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
       <translation>Información de señalización</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation>Protección de zona roja</translation>
-    </message>
-    <message>
-      <source>Static Patching</source>
-      <translation>Parches estáticos</translation>
-    </message>
-    <message>
       <source>Console Language</source>
       <translation>Idioma de la consola</translation>
     </message>
@@ -4271,6 +4263,42 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     <message>
       <source>Additional FMem Allocation</source>
       <translation>Asignación adicional de FMem</translation>
+    </message>
+    <message>
+      <source>Big Picture Folder Scan Depth</source>
+      <translation>Profundidad de búsqueda de carpetas en Big Picture</translation>
+    </message>
+    <message>
+      <source>Use Keyboard as Keyboard</source>
+      <translation>Utilizar el teclado como tal</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation>Red</translation>
+    </message>
+    <message>
+      <source>Enable Network Connection</source>
+      <translation>Activar conexión a red</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation>Desactivar HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation>Puerto P2P</translation>
+    </message>
+    <message>
+      <source>Any free port</source>
+      <translation>Cualquier puerto libre</translation>
+    </message>
+    <message>
+      <source>Enable Red Zone Patching</source>
+      <translation>Activar parches para zona roja</translation>
+    </message>
+    <message>
+      <source>Enable userfaultfd Memory Tracking</source>
+      <translation>Activar seguimiento de memoria userfaultfd</translation>
     </message>
   </context>
   <context>
@@ -4516,10 +4544,6 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
       <translation>Habilitar modo PS4 Neo:\nAñade soporte para la emulación y el tamaño de memoria de una PS4 Pro. Ahora mismo provoca inestabilidades en una gran cantidad de juegos probados.</translation>
     </message>
     <message>
-      <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation>Cambia la opción Conexión a red a verdadero:\nFuerza a los juegos a detectar una conexión de red activa. Las funciones reales de red aún no están soportadas.</translation>
-    </message>
-    <message>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
       <translation>shadNet:\nEn estos momentos, su compatibilidad es muy limitada.\nPuedes registrarte en https://www.shadps4.net/shadnet/register/.</translation>
     </message>
@@ -4698,6 +4722,38 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     <message>
       <source>Additional FMem Allocation:\nForces allocation of the specified amount of additional FMem. Crashes or causes issues in some games.</source>
       <translation>Asignación adicional de FMem:\nFuerza la asignación de la cantidad especificada de FMem adicional. Provoca cuelgues o problemas en algunos juegos.</translation>
+    </message>
+    <message>
+      <source>Big Picture Folder Scan Depth:\nHow many subfolder levels the emulator&apos;s Big Picture mode searches for games inside each game folder.</source>
+      <translation>Profundidad de búsqueda de carpetas en Big Picture:\nIndica el número de niveles de subcarpetas en los que el modo Big Picture del emulador buscará juegos.</translation>
+    </message>
+    <message>
+      <source>Use Keyboard as Keyboard:\nPasses your keyboard through to games as a PS4 keyboard, for games that support keyboard input.</source>
+      <translation>Utilizar el teclado como tal:\nTransmite las pulsaciones de tu teclado a los juegos en forma de teclado de PS4, para aquellos juegos compatibles con teclados.</translation>
+    </message>
+    <message>
+      <source>Enable Network Connection:\nMakes games detect an active network connection.</source>
+      <translation>Activar conexión a red:\nHace que los juegos detecten que existe una conexión de red activa.</translation>
+    </message>
+    <message>
+      <source>Network:\nNetworking options for the emulated console, including ShadNet online service and peer-to-peer settings.</source>
+      <translation>Red:\nLas opciones de red para la consola emulada, que incluyen el servicio online ShadNet y la configuración de P2P.</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS:\nWhen a game turns on HTTPS security options (such as server certificate verification), the emulator turns them off instead.\nUseful when connecting to custom servers with self-signed or invalid certificates.</source>
+      <translation>Desactivar HTTPS:\nSi un juego activa las opciones de seguridad HTTPS (como la verificación de certificados del servidor), el emulador las desactivará.\nEs ideal para conectarse a servidores personalizados con certificados autofirmados o no válidos.</translation>
+    </message>
+    <message>
+      <source>P2P Port:\nThe local port used for peer-to-peer connections. 3658 is the default PS4 port,set it to 0 to use any free port.\nWhen UPnP is enabled, this port is forwarded on your router.</source>
+      <translation>Puerto P2P:\nEl puerto local para las conexiones P2P. 3658 es el puerto predeterminado de PS4, introduce 0 para utilizar cualquier puerto libre que haya.\nSi activas UPnP, se redirigirá este puerto a tu router.</translation>
+    </message>
+    <message>
+      <source>Enable Red Zone Patching:\nStatically patches game code to protect the guest stack red zone on Windows. Requires restarting the game.</source>
+      <translation>Activar parches para zona roja:\nAplica parches estáticos al código del juego para proteger la zona roja de la pila de invitado de Windows. Es necesario reiniciar el juego.</translation>
+    </message>
+    <message>
+      <source>Enable userfaultfd Memory Tracking:\nUses the Linux userfaultfd feature to track GPU memory changes instead of signal handlers. Falls back to signals if your system does not support it.</source>
+      <translation>Activar seguimiento de memoria userfaultfd:\nUtiliza la función userfaultfd de Linux en vez de los controladores de señales para localizar los cambios en la memoria de la GPU. Si tu sistema no es compatible con esta opción, se seguirán usando las señales.</translation>
     </message>
   </context>
   <context>
