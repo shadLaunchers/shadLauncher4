@@ -31,6 +31,7 @@ find_package(OpenAL CONFIG)
 find_package(VulkanHeaders 1.4.329 CONFIG)
 find_package(fmt 10.2.0 CONFIG)
 find_package(SDL3 3.1.2 CONFIG)
+find_package(toml11 4.2.0 CONFIG)
 find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Xml Network Multimedia Svg Sql)
 if (UNIX)
     find_package(OpenSSL REQUIRED)
@@ -364,7 +365,7 @@ cmrc_add_resource_library(embedded-resources
         src/assets/trophies/silver.png)
 
 target_link_libraries(shadLauncher4 PRIVATE res::embedded)
-target_link_libraries(shadLauncher4 PRIVATE Vulkan::Headers fmt::fmt SDL3::SDL3 volk_headers spdlog::spdlog)
+target_link_libraries(shadLauncher4 PRIVATE Vulkan::Headers fmt::fmt SDL3::SDL3 volk_headers spdlog::spdlog toml11::toml11)
 target_link_libraries(shadLauncher4 PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Svg Qt6::Multimedia Qt6::Sql nlohmann_json::nlohmann_json libdeflate_static OpenAL::OpenAL ZArchive::zarchive)
 
 if (ENABLE_UPDATER)

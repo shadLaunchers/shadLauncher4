@@ -127,3 +127,16 @@ if (NOT TARGET zarchive)
     target_compile_features(zarchive PRIVATE cxx_std_20)
     add_library(ZArchive::zarchive ALIAS zarchive)
 endif()
+
+# Toml11
+if (NOT TARGET toml11::toml11)
+    add_subdirectory(toml11)
+
+    if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+      if (CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC")
+        get_target_property(_toml11_compile_options toml11 INTERFACE_COMPILE_OPTIONS)
+        list(REMOVE_ITEM _toml11_compile_options "/Zc:preprocessor")
+        set_target_properties(toml11 PROPERTIES INTERFACE_COMPILE_OPTIONS ${_toml11_compile_options})
+      endif()
+    endif()
+endif()

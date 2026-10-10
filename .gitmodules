@@ -35,3 +35,6 @@
 [submodule "externals/zarchive"]
 	path = externals/zarchive
 	url = https://github.com/shadexternals/ZArchive.git
+[submodule "externals/toml11"]
+	path = externals/toml11
+	url = https://github.com/ToruNiina/toml11.git
