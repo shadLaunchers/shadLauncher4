@@ -35,7 +35,7 @@
    <string>Settings</string>
   </property>
   <property name="windowIcon">
-   <iconset>
+   <iconset resource="../shadLauncher4.qrc">
     <normaloff>:/assets/logo/shadLauncher4.ico</normaloff>:/assets/logo/shadLauncher4.ico</iconset>
   </property>
   <property name="sizeGripEnabled">
@@ -85,7 +85,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>8</number>
+      <number>0</number>
      </property>
      <property name="usesScrollButtons">
       <bool>true</bool>
@@ -248,6 +248,22 @@
               <layout class="QVBoxLayout" name="verticalLayout_consoleLanguage">
                <item>
                 <widget class="QComboBox" name="consoleLanguageComboBox"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_2">
+              <property name="title">
+               <string>System</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_22">
+               <item>
+                <widget class="QCheckBox" name="redZoneCheckBox">
+                 <property name="text">
+                  <string>Enable Red Zone Patching</string>
+                 </property>
+                </widget>
                </item>
               </layout>
              </widget>
@@ -526,7 +542,7 @@
          <x>0</x>
          <y>0</y>
          <width>932</width>
-         <height>521</height>
+         <height>685</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -1498,7 +1514,7 @@
          <x>0</x>
          <y>0</y>
          <width>932</width>
-         <height>504</height>
+         <height>535</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="inputTabVLayout" stretch="0,0">
@@ -2570,7 +2586,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>460</height>
+         <height>479</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="networkTabVLayout" stretch="0,1">
@@ -2627,11 +2643,11 @@
                   <property name="alignment">
                    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
                   </property>
-                  <property name="keyboardTracking">
-                   <bool>false</bool>
-                  </property>
                   <property name="specialValueText">
                    <string>Any free port</string>
+                  </property>
+                  <property name="keyboardTracking">
+                   <bool>false</bool>
                   </property>
                   <property name="minimum">
                    <number>0</number>
@@ -2733,7 +2749,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>460</height>
+         <height>479</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2827,13 +2843,6 @@
                 <widget class="QCheckBox" name="neoCheckBox">
                  <property name="text">
                   <string>Enable PS4 Neo Mode</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QCheckBox" name="redZoneCheckBox">
-                 <property name="text">
-                  <string>Enable Red Zone Patching</string>
                  </property>
                 </widget>
                </item>
@@ -3001,7 +3010,6 @@
                 </layout>
                </widget>
               </item>
-
              </layout>
             </item>
            </layout>
@@ -3085,6 +3093,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../shadLauncher4.qrc"/>
+ </resources>
  <connections/>
 </ui>
