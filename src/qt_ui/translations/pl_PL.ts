@@ -4318,6 +4318,10 @@ This will remove all game-specific overrides.</translation>
       <source>Enable userfaultfd Memory Tracking</source>
       <translation type="unfinished">Enable userfaultfd Memory Tracking</translation>
     </message>
+    <message>
+      <source>System</source>
+      <translation type="unfinished">System</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
