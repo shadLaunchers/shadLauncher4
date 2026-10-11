@@ -4300,6 +4300,10 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
       <source>Enable userfaultfd Memory Tracking</source>
       <translation>Activar seguimiento de memoria userfaultfd</translation>
     </message>
+    <message>
+      <source>System</source>
+      <translation type="unfinished">System</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
