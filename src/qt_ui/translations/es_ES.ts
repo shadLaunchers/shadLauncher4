@@ -4302,7 +4302,7 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     </message>
     <message>
       <source>System</source>
-      <translation type="unfinished">System</translation>
+      <translation>Sistema</translation>
     </message>
   </context>
   <context>
