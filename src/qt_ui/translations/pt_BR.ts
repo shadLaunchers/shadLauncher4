@@ -4302,6 +4302,10 @@ Isso irá sobrescrever todas as configurações específicas do jogo.</translati
       <source>Enable userfaultfd Memory Tracking</source>
       <translation>Habilitar Rastreamento de Memória userfaultfd</translation>
     </message>
+    <message>
+      <source>System</source>
+      <translation type="unfinished">System</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialogHelperTexts</name>
