@@ -325,7 +325,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<GUISettings> gui_settings,
     SubscribeHelpText(ui->shadNetGroupBox, helptexts.settings.network_shadnet_config);
     SubscribeHelpText(ui->shadNetServerLineEdit, helptexts.settings.network_shadnet_server);
     SubscribeHelpText(ui->shadNetWebApiServerLineEdit, helptexts.settings.network_shadnet_webapi);
-    SubscribeHelpText(ui->signalingInfoLineEdit, helptexts.settings.network_shadnet_signaling);
 
     PopulateComboBoxes();
     PathTabConnections();
@@ -1566,7 +1565,6 @@ void SettingsDialog::MapUIControls() {
     m_uiSettingMap[ui->p2pPortSpinBox] = {"p2p_port", "Network"};
     m_uiSettingMap[ui->shadNetServerLineEdit] = {"shadnet_server", "Network"};
     m_uiSettingMap[ui->shadNetWebApiServerLineEdit] = {"shadnet_webapi_server", "Network"};
-    m_uiSettingMap[ui->signalingInfoLineEdit] = {"signaling_info", "Network"};
 }
 
 void SettingsDialog::DisableNonOverrideableSettings() {

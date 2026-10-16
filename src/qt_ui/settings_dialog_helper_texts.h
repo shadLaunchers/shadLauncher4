@@ -122,7 +122,6 @@ public:
         const QString network_shadnet_config = tr("ShadNet Server Settings:\\nConfigure the server addresses used to connect to a ShadNet-compatible online service. Only used while ShadNet is enabled.");
         const QString network_shadnet_server = tr("Server:\\nThe address of the ShadNet server to connect to.");
         const QString network_shadnet_webapi = tr("WebAPI Server:\\nThe address of the ShadNet WebAPI server used for account and session management.");
-        const QString network_shadnet_signaling = tr("Signaling Info:\\nConnection details used for ShadNet's peer-to-peer signaling/matchmaking.");
         const QString network_upnp = tr("Enable UPnP:\\nAutomatically configure port forwarding on your router via UPnP for ShadNet's networked features.");
         const QString network_section = tr("Network:\\nNetworking options for the emulated console, including ShadNet online service and peer-to-peer settings.");
         const QString network_disable_https = tr("Disable HTTPS:\\nWhen a game turns on HTTPS security options (such as server certificate verification), the emulator turns them off instead.\\nUseful when connecting to custom servers with self-signed or invalid certificates.");
