@@ -851,7 +851,6 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->shadNetServerLineEdit->setText(QString::fromStdString(m_emu_settings->GetShadNetServer()));
     ui->shadNetWebApiServerLineEdit->setText(
         QString::fromStdString(m_emu_settings->GetShadNetWebApiServer()));
-    ui->signalingInfoLineEdit->setText(QString::fromStdString(m_emu_settings->GetSignalingInfo()));
 
     // ------------------ Games Folder --------------------------------------------------------
     ui->gameFoldersListWidget->clear();
@@ -1112,7 +1111,6 @@ void SettingsDialog::ApplyValuesToBackend() {
     m_emu_settings->SetShadNetServer(ui->shadNetServerLineEdit->text().toStdString(), is_specific);
     m_emu_settings->SetShadNetWebApiServer(ui->shadNetWebApiServerLineEdit->text().toStdString(),
                                            is_specific);
-    m_emu_settings->SetSignalingInfo(ui->signalingInfoLineEdit->text().toStdString(), is_specific);
 
     // ------------------ Paths tab --------------------------------------------------------
     for (int i = 0; i < ui->gameFoldersListWidget->count(); ++i) {
