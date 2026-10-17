@@ -4245,10 +4245,6 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
       <translation>Servidor WebAPI</translation>
     </message>
     <message>
-      <source>Signaling Info</source>
-      <translation>Información de señalización</translation>
-    </message>
-    <message>
       <source>Console Language</source>
       <translation>Idioma de la consola</translation>
     </message>
@@ -4702,10 +4698,6 @@ Se eliminarán todos los ajustes específicos para cada juego.</translation>
     <message>
       <source>WebAPI Server:\nThe address of the ShadNet WebAPI server used for account and session management.</source>
       <translation>Servidor WebAPI:\nLa dirección del servidor WebAPI de ShadNet usado para la administración de cuentas y sesiones.</translation>
-    </message>
-    <message>
-      <source>Signaling Info:\nConnection details used for ShadNet&apos;s peer-to-peer signaling/matchmaking.</source>
-      <translation>Información de señalización:\nLos datos de conexión usados para la señalización y matchmaking P2P de ShadNet.</translation>
     </message>
     <message>
       <source>Enable UPnP:\nAutomatically configure port forwarding on your router via UPnP for ShadNet&apos;s networked features.</source>
