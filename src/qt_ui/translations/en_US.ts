@@ -4178,10 +4178,6 @@ This will remove all game-specific overrides.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Signaling Info</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Console Language</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4634,10 +4630,6 @@ This will remove all game-specific overrides.</source>
     </message>
     <message>
         <source>WebAPI Server:\nThe address of the ShadNet WebAPI server used for account and session management.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Signaling Info:\nConnection details used for ShadNet&apos;s peer-to-peer signaling/matchmaking.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
