@@ -4244,10 +4244,6 @@ This will remove all game-specific overrides.</translation>
       <translation>WebAPI Server</translation>
     </message>
     <message>
-      <source>Signaling Info</source>
-      <translation>Signalisierungsinformation</translation>
-    </message>
-    <message>
       <source>Console Language</source>
       <translation type="unfinished">Console Language</translation>
     </message>
@@ -4701,10 +4697,6 @@ This will remove all game-specific overrides.</translation>
     <message>
       <source>WebAPI Server:\nThe address of the ShadNet WebAPI server used for account and session management.</source>
       <translation type="unfinished">WebAPI Server:\nThe address of the ShadNet WebAPI server used for account and session management.</translation>
-    </message>
-    <message>
-      <source>Signaling Info:\nConnection details used for ShadNet&apos;s peer-to-peer signaling/matchmaking.</source>
-      <translation type="unfinished">Signaling Info:\nConnection details used for ShadNet&apos;s peer-to-peer signaling/matchmaking.</translation>
     </message>
     <message>
       <source>Enable UPnP:\nAutomatically configure port forwarding on your router via UPnP for ShadNet&apos;s networked features.</source>
